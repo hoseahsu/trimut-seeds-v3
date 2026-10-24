@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "rectangle_add_point_get",
+  "seed_id": "TM257",
+  "changes": {
+    "Q_MAX": {
+      "native": 100000,
+      "expanded": 200000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rectangle_add_point_get/gen/max_random.cpp",
+      "generator_sha256": "53b02c2b4596da50a7b1053c1eb31afbb62cdd0cbb5649f19450e29f45df3618",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 100000,
+        "Q": 200000,
+        "M": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM257/tests/l2/expanded_00.in",
+      "input_sha256": "4e02fa8b4f71addf71d223dd53aee4f6df138f6313e1d0a4fbff49b0db94aa85",
+      "expected_path": "tasks/TM257/tests/l2/expanded_00.out",
+      "expected_sha256": "dbce8d4cc6d86e66054a74efe213995b1ddbe94bcb7f6d64dff5c1499a8a9497",
+      "source_reference_run": "validation/library_l2_expanded/rectangle_add_point_get/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 1.95,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 2.25,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rectangle_add_point_get/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rectangle_add_point_get/gen/max_random.cpp",
+      "generator_sha256": "53b02c2b4596da50a7b1053c1eb31afbb62cdd0cbb5649f19450e29f45df3618",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 100000,
+        "Q": 200000,
+        "M": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM257/tests/l2/expanded_01.in",
+      "input_sha256": "2587d75f432c53381f7244be5595f944adcde72967559c67d57d20e920ea66c7",
+      "expected_path": "tasks/TM257/tests/l2/expanded_01.out",
+      "expected_sha256": "a1f5e4036edf859d40440a59f11128bd90bf2b4716e907a4467e7db54457be5d",
+      "source_reference_run": "validation/library_l2_expanded/rectangle_add_point_get/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 2.01,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 2.24,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rectangle_add_point_get/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

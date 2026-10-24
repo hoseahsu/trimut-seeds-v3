@@ -1,0 +1,127 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "rectangle_sum",
+  "seed_id": "TM255",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "N,Q",
+      "native": 200000,
+      "expanded": 400000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rectangle_sum/gen/max_random.cpp",
+      "generator_sha256": "e693d55d96e6d1428ea31feaf98fc0c5b9ec5a010c07fc7c6a5795b4358288f0",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        },
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM255/tests/l2/expanded_00.in",
+      "input_sha256": "844b29739dcab738fd403e860afb54ce9eca2ba979e87b5693d609ee0ed6a714",
+      "expected_path": "tasks/TM255/tests/l2/expanded_00.out",
+      "expected_sha256": "7dd3b275f1a4b06d8c148ea957466814b58fde121ba81459ea7dce49b3e123f8",
+      "source_reference_run": "validation/library_l2_expanded/rectangle_sum/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.6,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 3.43,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rectangle_sum/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rectangle_sum/gen/max_random.cpp",
+      "generator_sha256": "e693d55d96e6d1428ea31feaf98fc0c5b9ec5a010c07fc7c6a5795b4358288f0",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        },
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM255/tests/l2/expanded_01.in",
+      "input_sha256": "c848c3b5261795161319f7dc66ea4c4a9ddb486a8ec9dbfe55b6232d01d71af6",
+      "expected_path": "tasks/TM255/tests/l2/expanded_01.out",
+      "expected_sha256": "080068d788c669a4cf8725f5d9c4d5612f9e71c412a16211e0581b76d0530d2f",
+      "source_reference_run": "validation/library_l2_expanded/rectangle_sum/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.6,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 3.27,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rectangle_sum/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/rectangle_sum/verifier.cpp",
+      "replace": "200'000",
+      "with": "400000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/rectangle_sum/gen/max_random.cpp",
+      "replace": "200'000",
+      "with": "400000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/rectangle_sum/gen/random.cpp",
+      "replace": "200'000",
+      "with": "400000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/rectangle_sum/gen/xy_concentrate.cpp",
+      "replace": "200'000",
+      "with": "400000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}

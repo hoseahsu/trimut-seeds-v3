@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "static_convex_hull",
+  "seed_id": "TM268",
+  "changes": {
+    "SUM_N_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/static_convex_hull/gen/max_random.cpp",
+      "generator_sha256": "5a602472d0ce8af739d995d23b0b0ca1af42483689c2da6513d212b99212343e",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "T": 1,
+        "SUM_N": 1000000,
+        "MAX_CASE_N": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "SUM_N_MAX",
+          "dimension": "SUM_N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM268/tests/l2/expanded_00.in",
+      "input_sha256": "64a3b4293dcabb9667b0f104f920a7d785f9583edd909639cb976673e57eaaee",
+      "expected_path": "tasks/TM268/tests/l2/expanded_00.out",
+      "expected_sha256": "a5bcc82bc08ff6d5c5e26a897fc910efa6c23dff2348afd5465314db64249f9a",
+      "source_reference_run": "validation/library_l2_expanded/static_convex_hull/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.22,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.22,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/static_convex_hull/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/static_convex_hull/gen/max_random.cpp",
+      "generator_sha256": "5a602472d0ce8af739d995d23b0b0ca1af42483689c2da6513d212b99212343e",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "T": 1,
+        "SUM_N": 1000000,
+        "MAX_CASE_N": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "SUM_N_MAX",
+          "dimension": "SUM_N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM268/tests/l2/expanded_01.in",
+      "input_sha256": "c1b3e20a0372932a8d4baaeb50c12013c03086c0f5f987d8373287093164c94d",
+      "expected_path": "tasks/TM268/tests/l2/expanded_01.out",
+      "expected_sha256": "dc1e8e04fb5e8d2e7da04c81b233c6beb3ae039eaffdb748f225b82d7f69ec68",
+      "source_reference_run": "validation/library_l2_expanded/static_convex_hull/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.16,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.16,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/static_convex_hull/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

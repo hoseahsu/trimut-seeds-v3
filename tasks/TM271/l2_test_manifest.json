@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "lca",
+  "seed_id": "TM271",
+  "changes": {
+    "Q_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/lca/gen/max_random.cpp",
+      "generator_sha256": "d28bce7596b41abb6536143734e265bacfd94eb7a68ea8751e21031c992904cf",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 500000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM271/tests/l2/expanded_00.in",
+      "input_sha256": "cd78ee9f48034d58b7200e74ab273081f6df1a58a61654894301f0b9205048dd",
+      "expected_path": "tasks/TM271/tests/l2/expanded_00.out",
+      "expected_sha256": "459f5e2a9f3c8eefafd3167b832b9163f327724045f448e0aa3bd7366a352dc5",
+      "source_reference_run": "validation/library_l2_expanded/lca/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.49,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.61,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/lca/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/lca/gen/max_random.cpp",
+      "generator_sha256": "d28bce7596b41abb6536143734e265bacfd94eb7a68ea8751e21031c992904cf",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 500000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM271/tests/l2/expanded_01.in",
+      "input_sha256": "0eb31afba4ea98cce3494553b288181264e9895249a7dc7a2bd2d44b4ee2785f",
+      "expected_path": "tasks/TM271/tests/l2/expanded_01.out",
+      "expected_sha256": "25ecb8aba7e25603581a486d268a4daa6f62b5d22206affd4ff5056147ae8609",
+      "source_reference_run": "validation/library_l2_expanded/lca/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.52,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.58,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/lca/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

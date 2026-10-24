@@ -1,0 +1,115 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "number_of_substrings",
+  "seed_id": "TM258",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "|S|",
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 1000000,
+        "S_LEN": 1000000,
+        "T_LEN": 0
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM258/tests/l2/expanded_00.in",
+      "input_sha256": "52470d15827f02881792660fa56ceaeca35d96b19ac8685c622e28bf7cc019df",
+      "expected_path": "tasks/TM258/tests/l2/expanded_00.out",
+      "expected_sha256": "7cae778d26fcf60cae336a2b504e9491b9ff431fc546dd583e1e1e13569a9482",
+      "source_reference_run": "validation/library_l2_expanded/number_of_substrings/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.05,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.25,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/number_of_substrings/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 1000000,
+        "S_LEN": 1000000,
+        "T_LEN": 0
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM258/tests/l2/expanded_01.in",
+      "input_sha256": "8befb5d3c3fb8f44aabb64345be13c9f117a585db79a51a0913e232dd5349321",
+      "expected_path": "tasks/TM258/tests/l2/expanded_01.out",
+      "expected_sha256": "6f44483316d996ae4001bd5a36b851ee3e677705c6e5d9d237d2817cee22e418",
+      "source_reference_run": "validation/library_l2_expanded/number_of_substrings/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.06,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.24,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/number_of_substrings/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/number_of_substrings/verifier.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/number_of_substrings/gen/max_random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/number_of_substrings/gen/all_same.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/number_of_substrings/gen/random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/number_of_substrings/gen/fib_str.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}

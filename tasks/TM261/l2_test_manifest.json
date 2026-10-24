@@ -1,0 +1,83 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "area_of_union_of_rectangles",
+  "seed_id": "TM261",
+  "changes": {
+    "N_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/area_of_union_of_rectangles/gen/max_random.cpp",
+      "generator_sha256": "2737a1a481865f066ad718a776b97c7902a4764ba3e353c19979a6a135b67e97",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM261/tests/l2/expanded_00.in",
+      "input_sha256": "af44373ffc3b0e40c62c02f5c0184885bd10a2d2406e61293f455d04a52a2b01",
+      "expected_path": "tasks/TM261/tests/l2/expanded_00.out",
+      "expected_sha256": "569b02ceb10eb48b412e8dd512b9c8fa69c41e6c27a830912025f13485bd10ab",
+      "source_reference_run": "validation/library_l2_expanded/area_of_union_of_rectangles/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 2.43,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 3.05,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/area_of_union_of_rectangles/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/area_of_union_of_rectangles/gen/max_random.cpp",
+      "generator_sha256": "2737a1a481865f066ad718a776b97c7902a4764ba3e353c19979a6a135b67e97",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM261/tests/l2/expanded_01.in",
+      "input_sha256": "ff3a0bc248c8af9d1b96d7c7917a00b36489df44ea59e0db010612a2fc99ed94",
+      "expected_path": "tasks/TM261/tests/l2/expanded_01.out",
+      "expected_sha256": "45ba2d8ae192337b805cf7618874f69b0b444b01c9779a6877948462c8cff12f",
+      "source_reference_run": "validation/library_l2_expanded/area_of_union_of_rectangles/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 2.34,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 2.87,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/area_of_union_of_rectangles/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

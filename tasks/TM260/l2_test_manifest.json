@@ -1,0 +1,83 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "lyndon_factorization",
+  "seed_id": "TM260",
+  "changes": {
+    "N_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 1000000,
+        "S_LEN": 1000000,
+        "T_LEN": 0
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM260/tests/l2/expanded_00.in",
+      "input_sha256": "52470d15827f02881792660fa56ceaeca35d96b19ac8685c622e28bf7cc019df",
+      "expected_path": "tasks/TM260/tests/l2/expanded_00.out",
+      "expected_sha256": "de130229504adec85044e6040ed810b36e1fc99b68d7a672e79fb850778eeba5",
+      "source_reference_run": "validation/library_l2_expanded/lyndon_factorization/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.00272,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.0018459999999999996,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/lyndon_factorization/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 1000000,
+        "S_LEN": 1000000,
+        "T_LEN": 0
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM260/tests/l2/expanded_01.in",
+      "input_sha256": "8befb5d3c3fb8f44aabb64345be13c9f117a585db79a51a0913e232dd5349321",
+      "expected_path": "tasks/TM260/tests/l2/expanded_01.out",
+      "expected_sha256": "6b484895410d29e01d6fa172cda2dce7b26e6f388f98b7b3eb9f6026787e47e5",
+      "source_reference_run": "validation/library_l2_expanded/lyndon_factorization/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.0017260000000000053,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.0017399999999999985,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/lyndon_factorization/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

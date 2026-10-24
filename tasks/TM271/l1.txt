@@ -1,0 +1,57 @@
+# Hierarchy units
+
+The rooted tree is a hierarchy of numbered units.
+
+
+## Problem Statement
+
+
+
+Given a rooted tree with $N$ hierarchy units. The root is hierarchy unit $0$ and a parent of a hierarchy unit $i$ is $p_i$. Process $Q$ queries as follows:
+
+- `$u$ $v$`: Print LCA of hierarchy unit $u$ and $v$.
+
+
+
+
+## Constraints
+
+- $2 \leq N \leq 500000$
+- $1 \leq Q \leq 500000$
+- $0 \leq p_i < i$
+- $0 \leq u < v \leq N - 1$
+
+## Input
+
+~~~
+$N$ $Q$
+$p_1$ $p_2$ ... $p_{N-1}$
+$u_0$ $v_0$
+$u_1$ $v_1$
+:
+$u_{Q - 1}$ $v_{Q - 1}$
+~~~
+
+## Sample
+
+## Sample Input 1
+
+```
+5 5
+0 0 2 2
+0 1
+0 4
+1 2
+2 3
+3 4
+```
+
+## Sample Output 1
+
+```
+0
+0
+0
+2
+2
+```

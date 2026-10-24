@@ -1,0 +1,55 @@
+# Wildcard Pattern Matching
+
+## Problem Statement
+
+
+Given strings $S$ and $T$ consisting of lowercase English letters and asterisks (`*`).
+
+We say that strings $S'$ and $T'$ are matched if $|S'|=|T'|$ and they satisfy one of:
+
+* $S'_i$ = $T'_i$
+* $S'_i$ = `*`
+* $T'_i$ = `*`
+
+for each $0\leq i<|S'|$.
+
+For each $0\leq i\leq|S|-|T|$, find if $S[i,i+|T|)$ and $T$ are matched.
+
+
+
+## Constraints
+
+
+- $1 \leq |T| \leq |S| \leq 1048576$
+- Each character of $S$ and $T$ is lowercase English letters or asterisks.
+
+
+
+## Input
+
+```
+$S,T$
+```
+
+## Output
+
+```
+$W_0, W_1, \dots, W_{|S|-|T|}$
+```
+Here, $W_i$ is $1$ if $S[i,i+|T|)$ and $T$ are matched, $0$ otherwise.
+
+
+## Sample
+
+## Sample Input 1
+
+```
+abc*b*a***a
+*b*a
+```
+
+## Sample Output 1
+
+```
+10111011
+```

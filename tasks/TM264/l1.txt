@@ -1,0 +1,85 @@
+# Encoded record
+
+The string is an encoded record whose suffix prefixes are compared.
+
+
+## Problem Statement
+
+
+
+Given a length $N$ encoded record $S$. Calculate array $a_0, a_1, ..., a_{N - 1}$ as follows:
+
+- $a_i$ is the LCP(longest common prefix) of $S$ and $S.substr(i)$.
+
+
+
+## Constraints
+
+
+
+- $1 \leq N \leq 500000$
+- Each character of $S$ is lowercase English letters.
+
+
+
+## Input
+
+~~~
+$S$
+~~~
+
+## Output
+
+~~~
+$a_0$ $a_1$ $a_2$ ... $a_{N-1}$
+~~~
+
+## Sample
+
+## Sample Input 1
+
+```
+abcbcba
+```
+
+## Sample Output 1
+
+```
+7 0 0 0 0 0 1
+```
+
+## Sample Input 2
+
+```
+mississippi
+```
+
+## Sample Output 2
+
+```
+11 0 0 0 0 0 0 0 0 0 0
+```
+
+## Sample Input 3
+
+```
+ababacaca
+```
+
+## Sample Output 3
+
+```
+9 0 3 0 1 0 1 0 1
+```
+
+## Sample Input 4
+
+```
+aaaaa
+```
+
+## Sample Output 4
+
+```
+5 4 3 2 1
+```

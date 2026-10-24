@@ -1,0 +1,47 @@
+# Static Range Mode Query
+
+## Problem Statement
+
+
+You are given an integer sequence $a_0, a_1, \ldots, a_{N-1}$ with the length $N$. Process the following $Q$ queries in order:
+
+- $l$ $r$ : Print a mode of $a_{l}, a_{l+1}, \ldots, a_{r-1}$, and the number of the occurrence of it. If there exists multiple modes, print any of them. 
+
+
+
+## Constraints
+
+- $1 \leq N \leq 100000$
+- $0 \leq Q \leq 100000$
+- $0 \leq a_i \leq 1000000000$
+- $0 \leq l \lt r \leq N$
+
+## Input
+
+```
+$N$ $Q$
+$a_0$ $a_1$ $\cdots$ $a_{N-1}$
+$l_0$ $r_0$
+$\vdots$
+$l_{Q-1}$ $r_{Q-1}$
+```
+
+## Sample
+
+## Sample Input 1
+
+```
+5 3
+3 7 1 2 1
+1 5
+3 4
+0 4
+```
+
+## Sample Output 1
+
+```
+1 2
+2 1
+3 1
+```

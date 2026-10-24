@@ -1,0 +1,79 @@
+# Jump on Tree
+
+## Problem Statement
+
+
+
+Given a tree with $N$ vertices, where the $i$-th edge connects vertex $a_i$ and $b_i$. Process $Q$ queries as follows:
+
+- `$s$ $t$ $i$`: Print $v_i$, where the shortest path on the tree from $s$ to $t$ is $(v_0, v_1, \ldots, v_k)$ ($v_0 = s$, $v_k = t$). If $i>k$, print `-1`.
+
+
+
+
+## Constraints
+
+- $2 \leq N \leq 500000$
+- $1 \leq Q \leq 1000000$
+- $0 \leq a_i, b_i \leq N-1$
+- $a_i \neq b_i$
+- $0 \leq s, t \leq N - 1$
+- $0 \leq i \leq N - 1$
+
+## Input
+
+~~~
+$N$ $Q$
+$a_0$ $b_0$
+$\vdots$
+$a_{N-2}$ $b_{N-2}$
+$s_0$ $t_0$ $i_0$
+$\vdots$
+$s_{Q-1}$ $t_{Q-1}$ $i_{Q-1}$
+~~~
+
+## Sample
+
+## Sample Input 1
+
+```
+8 13
+0 1
+1 2
+2 3
+1 4
+4 7
+1 5
+2 6
+5 5 0
+5 5 1
+4 3 0
+4 3 1
+4 3 2
+4 3 3
+4 3 4
+6 7 0
+6 7 1
+6 7 2
+6 7 3
+6 7 4
+6 7 5
+```
+
+## Sample Output 1
+
+```
+5
+-1
+4
+1
+2
+3
+-1
+6
+2
+1
+4
+7
+-1
+```

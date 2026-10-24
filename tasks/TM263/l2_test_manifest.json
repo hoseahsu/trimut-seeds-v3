@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "enumerate_palindromes",
+  "seed_id": "TM263",
+  "changes": {
+    "N_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/enumerate_palindromes/gen/max_random.cpp",
+      "generator_sha256": "4bc584688e219df5f545f5b2985bc4c35048f6766efbaf3ab84fbed6872a3482",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "S_LEN": 1000000,
+        "T_LEN": 0
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM263/tests/l2/expanded_00.in",
+      "input_sha256": "3463e5f25e6dffd19ca4737c270466492d78e323274328ec4d35df806c14476d",
+      "expected_path": "tasks/TM263/tests/l2/expanded_00.out",
+      "expected_sha256": "0c2c49207e390a93449a3e5ac5d2cc69882067679a8d89fe323e94cff0b9a707",
+      "source_reference_run": "validation/library_l2_expanded/enumerate_palindromes/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.05,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.03,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/enumerate_palindromes/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/enumerate_palindromes/gen/max_random.cpp",
+      "generator_sha256": "4bc584688e219df5f545f5b2985bc4c35048f6766efbaf3ab84fbed6872a3482",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "S_LEN": 1000000,
+        "T_LEN": 0
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM263/tests/l2/expanded_01.in",
+      "input_sha256": "a488a4490cc36ea4e72c6258a02714b93f34f06cd1cf4b7ed40048257e11b22c",
+      "expected_path": "tasks/TM263/tests/l2/expanded_01.out",
+      "expected_sha256": "919efc7794f6767df393612eb79d16a789b5a817129521a96c4c74c6ed606b0e",
+      "source_reference_run": "validation/library_l2_expanded/enumerate_palindromes/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.05,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.03,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/enumerate_palindromes/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "minimum_enclosing_circle",
+  "seed_id": "TM270",
+  "changes": {
+    "N_MAX": {
+      "native": 100000,
+      "expanded": 200000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM270/tests/l2/expanded_00.in",
+      "input_sha256": "ee849a9139d2a85c97fb8d6d6bd5770c2490c85f4a844e2b0e5d1b3e22e1e8d5",
+      "expected_path": "tasks/TM270/tests/l2/expanded_00.out",
+      "expected_sha256": "e789424cfacfd6e57b337f93d7d5a5639be53df46c855f41dde10a3d9a229bbf",
+      "source_reference_run": "validation/library_l2_expanded/minimum_enclosing_circle/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.01,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.01,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/minimum_enclosing_circle/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM270/tests/l2/expanded_01.in",
+      "input_sha256": "ee849a9139d2a85c97fb8d6d6bd5770c2490c85f4a844e2b0e5d1b3e22e1e8d5",
+      "expected_path": "tasks/TM270/tests/l2/expanded_01.out",
+      "expected_sha256": "e789424cfacfd6e57b337f93d7d5a5639be53df46c855f41dde10a3d9a229bbf",
+      "source_reference_run": "validation/library_l2_expanded/minimum_enclosing_circle/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.01,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.01,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/minimum_enclosing_circle/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

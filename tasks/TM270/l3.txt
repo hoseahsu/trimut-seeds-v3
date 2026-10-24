@@ -1,0 +1,68 @@
+# axis-aligned enclosing rectangle
+
+## Problem Statement
+
+
+Given $N$ 2D points $p_i(x_i , y_i)$ ($0\leq i\leq N - 1$).
+
+Let $C$ be the smallest axis-aligned enclosing rectangle of the $N$ points.
+
+For each $i = 0, 1, \dots, N-1$, determine whether $p_i$ lies on the boundary of $C$.
+
+
+
+Explicitly, the rectangle is $[\min_i x_i,\max_i x_i]\times[\min_i y_i,\max_i y_i]$. A point is on its boundary exactly when either coordinate is an endpoint of the corresponding interval; this definition includes degenerate rectangles.
+
+## Constraints
+
+
+- $2 \leq N \leq 100000$
+- $|x_i|, |y_i| \leq 10000$
+- $N$ points are all different.
+- The values in input are all integers．
+
+
+
+## Input
+
+~~~
+$N$
+$x_0$ $y_0$
+$x_1$ $y_1$
+:
+$x_{N - 1}$ $y_{N - 1}$
+~~~
+
+## Output
+
+~~~
+$T$
+~~~
+
+
+Output a 0/1 string $T$ of length $N$.
+
+For each $i = 0, 1, \dots, N-1$, set $T[i] = 1$ if $p_i$ lies on the boundary of $C$; otherwise set $T[i] = 0$.
+
+
+
+
+## Sample Input 1
+
+```
+8
+-1 1
+0 0
+0 -1
+1 3
+1 -2
+2 0
+3 2
+4 1
+```
+
+## Sample Output 1
+
+```
+10011001
+```
