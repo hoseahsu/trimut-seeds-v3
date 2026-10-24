@@ -1,0 +1,102 @@
+{
+  "public_tests": {
+    "input": [
+      "4\nsword weapon 10 2 3 2\npagstarmor armor 0 15 3 1\niceorb orb 3 2 13 2\nlongbow weapon 9 1 2 1\n6\nmike gladiator 5 longbow\nbobby sentry 6 pagstarmor\npetr gladiator 7 iceorb\nteddy physician 6 sword\nblackjack sentry 8 sword\njoe physician 6 iceorb\n",
+      "4\nsword weapon 10 2 3 2\npagstarmor armor 0 15 3 1\niceorb orb 3 2 13 2\nlongbow weapon 9 1 2 1\n5\nmike gladiator 5 longbow\nbobby sentry 6 pagstarmor\npetr gladiator 7 iceorb\nteddy physician 6 sword\nblackjack sentry 8 sword\n"
+    ],
+    "output": [
+      "longbow 1 mike\npagstarmor 1 bobby\niceorb 2 petr joe\n",
+      "sword 2 petr mike \npagstarmor 1 blackjack \niceorb 2 teddy bobby \n"
+    ]
+  },
+  "private_tests": {
+    "input": [
+      "6\nc armor 0 13 0 3\na weapon 23 0 0 3\nb weapon 20 0 0 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 4 e\ni gladiator 7 a\nk gladiator 1 b\n",
+      "6\nc armor 0 13 0 3\na weapon 23 0 0 3\nb weapon 10 0 0 4\ne orb 0 0 19 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 e\nh gladiator 5 f\ng gladiator 4 c\ni gladiator 7 b\nk gladiator 1 d\n",
+      "4\nsword weapon 0 0 0 2\npagstarmor armor 0 0 0 1\niceorb orb 0 0 0 2\nlongbow weapon 0 0 0 1\n1\nteddy physician 1 iceorb\n",
+      "5\npixiebow weapon 10 0 7 2\nlance weapon 12 4 2 1\nbushido armor 0 14 1 4\nstarorb orb 2 3 16 3\nmoonorb orb 3 4 8 1\n11\nste gladiator 10 moonorb\nphi gladiator 8 starorb\nhjk gladiator 5 starorb\npoi gladiator 7 starorb\njor gladiator 4 lance\npui gladiator 6 bushido\nzea gladiator 1 bushido\nqwe gladiator 2 pixiebow\nkkk physician 20 bushido\nlkh sentry 4 pixiebow\noop sentry 8 bushido\n",
+      "5\naxgovq orb 75 830 793 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 69 zeckskde\njackbeadx sentry 90 zeckskde\nvuhpq gladiator 23 nrtbk\nvfhyjtps physician 88 nhjodogdd\nrb gladiator 90 nhjodogdd\n",
+      "3\nhcyc weapon 646 755 45 5\nhfh armor 556 875 434 6\njkob orb 654 0 65 7\n1\njhcytccc sentry 76 jkob\n",
+      "5\npixiebow weapon 10 0 7 2\nlance weapon 12 4 2 1\nbushido armor 0 14 1 4\nstarorb orb 2 3 16 3\nmoonorb orb 3 4 8 1\n8\nste gladiator 10 moonorb\nphi gladiator 8 starorb\nhjk gladiator 5 starorb\npoi gladiator 7 starorb\njor gladiator 4 lance\npui gladiator 6 bushido\nzea gladiator 1 bushido\nqwe gladiator 2 pixiebow\n",
+      "5\nhs orb 830 875 879 3\nfudflb weapon 13 854 317 1\nwwvhixixe armor 500 285 382 2\nh orb 58 57 409 2\ny weapon 734 408 297 4\n12\nwvxwgjoera physician 55 hs\nusukedr sentry 41 hs\niu physician 100 hs\ngixlx gladiator 42 fudflb\nrd sentry 95 wwvhixixe\nbaff sentry 6 wwvhixixe\nwkhxoubhy sentry 73 h\niat physician 3 h\nc sentry 24 y\noveuaziss gladiator 54 y\nbyfhpjezzv sentry 18 y\njxnpuofle gladiator 65 y\n",
+      "3\nweapon weapon 10 5 2 4\narmor armor 0 20 0 6\norb orb 3 4 25 3\n3\nx gladiator 12 armor\ny sentry 13 orb\nz physician 5 weapon\n",
+      "5\nxx weapon 15 0 0 2\nyy armor 0 14 0 2\nzz orb 0 0 16 2\npp weapon 1 0 0 5\nqq armor 0 1 0 4\n9\na gladiator 2 pp\nb gladiator 3 pp\nc gladiator 4 pp\nd sentry 1 pp\ne sentry 2 pp\nf sentry 3 qq\ng physician 2 qq\nh physician 3 qq\ni physician 3 qq\n",
+      "6\nc armor 0 14 0 3\na weapon 23 0 0 3\nb weapon 21 0 0 4\ne orb 0 0 13 3\nd armor 0 5 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 f\nh gladiator 5 a\ng gladiator 6 c\ni gladiator 7 d\nk gladiator 1 d\n"
+    ],
+    "output": [
+      "a 3 j i g \nd 2 h k \nf 0 \n",
+      "a 3 j i h \nd 2 g k \ne 0 \n",
+      "sword 0 \npagstarmor 0 \niceorb 1 teddy \n",
+      "lance 1 jor\nbushido 4 pui zea kkk oop\nstarorb 3 phi hjk poi\n",
+      "dxrgvjhvhg 3 rb rq vuhpq \nnhjodogdd 2 jackbeadx zvi \naxgovq 2 vfhyjtps jlr \n",
+      "hcyc 0\nhfh 1 jhcytccc\njkob 0\n",
+      "pixiebow 2 ste phi\nbushido 4 poi pui hjk jor\nstarorb 2 qwe zea\n",
+      "y 4 c oveuaziss byfhpjezzv jxnpuofle\nwwvhixixe 2 rd baff\nhs 3 wvxwgjoera usukedr iu\n",
+      "weapon 1 x\narmor 1 y\norb 1 z\n",
+      "xx 2 c b\nyy 2 f e\nzz 2 h i\n",
+      "b 4 j i g h \nc 1 k \nf 0 \n"
+    ]
+  },
+  "generated_tests": {
+    "input": [
+      "6\nc armor 0 13 0 3\na weapon 23 0 0 3\nb weapon 20 0 0 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 4 e\ni gladiator 7 a\nk gladiator 1 b\n",
+      "6\nc armor 0 13 0 3\na weapon 23 0 0 3\nb weapon 10 0 0 4\ne orb 0 0 19 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 e\nh gladiator 5 f\ng gladiator 4 c\ni gladiator 10 b\nk gladiator 1 d\n",
+      "5\naxgovq orb 75 830 793 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 90 zeckskde\nvuhpq gladiator 23 nrtbk\nvfhyjtps physician 88 nhjodogdd\nrb gladiator 90 nhjodogdd\n",
+      "3\nhcyc weapon 646 1055 45 5\nhfh armor 556 875 434 6\njkob orb 654 0 65 7\n1\njhcytccc sentry 76 jkob\n",
+      "5\npixiebow weapon 10 0 7 2\nlance weapon 12 4 2 1\nbushido armor 0 14 0 4\nstarorb orb 2 3 16 3\nmoonorb orb 3 4 8 1\n8\nste gladiator 10 moonorb\nphi gladiator 8 starorb\nhjk gladiator 5 starorb\npoi gladiator 7 starorb\njor gladiator 4 lance\npui gladiator 6 bushido\nzea gladiator 1 bushido\nqwe gladiator 2 pixiebow\n",
+      "5\nhs orb 830 875 879 3\nfudflb weapon 13 854 317 1\nwwvhixixe armor 500 285 382 2\nh orb 58 57 409 2\ny weapon 734 408 297 4\n12\nwvxwgjoera physician 55 hs\nusukedr sentry 41 hs\niu physician 100 hs\ngixlx gladiator 42 fudflb\nrd sentry 95 wwvhixixe\nbaff sentry 6 wwvhixixe\nwkhxoubhy sentry 73 h\niat physician 3 h\nc sentry 24 y\noveuaziss gladiator 54 y\nbyfhpjezzv sentry 18 y\njxnpoufle gladiator 65 y\n",
+      "5\nxx weapon 15 0 0 2\nyy armor 0 14 0 2\nzz orb 0 0 8 2\npp weapon 1 0 0 5\nqq armor 0 1 0 4\n9\na gladiator 2 pp\nb gladiator 3 pp\nc gladiator 4 pp\nd sentry 1 pp\ne sentry 2 pp\nf sentry 3 qq\ng physician 2 qq\nh physician 3 qq\ni physician 3 qq\n",
+      "6\nc armor 0 14 0 5\na weapon 23 0 0 3\nb weapon 21 0 0 4\ne orb 0 0 13 3\nd armor 0 5 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 f\nh gladiator 5 a\ng gladiator 6 c\ni gladiator 7 d\nk gladiator 1 d\n",
+      "6\nc armor 0 25 0 3\na weapon 23 0 0 3\nb weapon 20 0 0 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 4 e\ni gladiator 7 a\nk gladiator 1 b\n",
+      "6\nc armor 0 13 0 3\na weapon 23 0 0 3\nb weapon 10 0 0 4\ne orb 0 0 10 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 e\nh gladiator 5 f\ng gladiator 4 c\ni gladiator 10 b\nk gladiator 1 d\n",
+      "5\naxgovq orb 75 830 793 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 90 zeckskde\nvuhpq gladiator 23 nrtbk\nvfhyjtps physician 88 nhjodogdd\nsb gladiator 90 nhjodogdd\n",
+      "3\nhczc weapon 646 1055 45 5\nhfh armor 556 875 434 6\njkob orb 654 0 65 7\n1\njhcytccc sentry 76 jkob\n",
+      "5\npixiebow weapon 10 0 7 2\nlance weapon 12 4 2 1\nbushido armor 0 14 0 4\nstarorb orb 2 3 16 1\nmoonorb orb 3 4 8 1\n8\nste gladiator 10 moonorb\nphi gladiator 8 starorb\nhjk gladiator 5 starorb\npoi gladiator 7 starorb\njor gladiator 4 lance\npui gladiator 6 bushido\nzea gladiator 1 bushido\nqwe gladiator 2 pixiebow\n",
+      "5\npixiebow weapon 10 0 7 2\nlance weapon 12 4 2 1\nbushido armor 0 14 0 6\nstarorb orb 2 3 16 1\nmoonorb orb 3 4 8 1\n8\nste gladiator 10 moonorb\nphi gladiator 8 starorb\nhjk gladiator 5 starorb\npoi gladiator 7 starorb\njor gladiator 4 lance\npui gladiator 6 bushido\nzea gladiator 1 bushido\nqwe gladiator 2 pixiebow\n",
+      "5\naxgovq orb 75 830 352 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 90 zeckskde\nvuhpq gladiator 22 nrtbk\nvfhyjtps physician 88 nhjodogdd\nsb gladiator 6 nhjodogdd\n",
+      "6\nc armor 0 25 0 3\na weapon 23 0 0 3\nb weapon 20 0 0 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 7 e\ni gladiator 7 a\nk gladiator 1 b\n",
+      "6\nc armor 0 13 0 3\na weapon 23 0 0 3\nb weapon 11 0 0 4\ne orb 0 0 10 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n5\nj gladiator 7 e\nh gladiator 5 f\ng gladiator 4 c\ni gladiator 10 b\nk gladiator 1 d\n",
+      "5\naxgovq orb 75 830 793 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 90 zeckskde\nvuhpq gladiator 22 nrtbk\nvfhyjtps physician 88 nhjodogdd\nsb gladiator 90 nhjodogdd\n",
+      "3\nhczc weapon 646 1055 45 5\nhfh armor 556 875 434 6\njkob orb 654 0 65 7\n1\njhcytccc sentry 14 jkob\n",
+      "6\nc armor 0 25 0 3\na weapon 23 0 0 3\nb weapon 20 0 -1 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 7 e\ni gladiator 7 a\nk gladiator 1 b\n",
+      "5\naxgovq orb 75 830 352 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 90 zeckskde\nvuhpq gladiator 22 nrtbk\nvfhyjtps physician 88 nhjodogdd\nsb gladiator 90 nhjodogdd\n",
+      "3\nhczc weapon 646 1055 45 5\nhfh armor 419 875 434 6\njkob orb 654 0 65 7\n1\njhcytccc sentry 14 jkob\n",
+      "6\nc armor 0 25 0 3\na weapon 23 0 0 3\nb weapon 20 0 -1 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 7 e\ni gladiator 7 b\nk gladiator 1 b\n",
+      "6\nc armor 0 42 0 3\na weapon 23 0 0 3\nb weapon 20 0 -1 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 7 e\ni gladiator 7 b\nk gladiator 1 b\n",
+      "5\naxgovq orb 75 830 352 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 453 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 176 zeckskde\nvuhpq gladiator 22 nrtbk\nvfhyjtps physician 88 nhjodogdd\nsb gladiator 6 nhjodogdd\n",
+      "6\nc armor 0 42 0 3\na weapon 23 0 0 3\nb weapon 20 0 -1 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 7 e\ni gladiator 7 a\nk gladiator 1 b\n",
+      "5\naxgovq orb 75 830 352 3\nzeckskde weapon 316 351 917 2\nnrtbk armor 540 178 332 2\nnhjodogdd armor 880 252 186 2\ndxrgvjhvhg weapon 961 616 561 3\n7\nzvi gladiator 16 axgovq\nrq gladiator 52 axgovq\njlr physician 4 zeckskde\njackbeadx sentry 176 zeckskde\nvuhpq gladiator 22 nrtbk\nvfhyjtps physician 88 nhjodogdd\nsb gladiator 6 nhjodogdd\n",
+      "6\nc armor 0 42 0 3\na weapon 23 0 0 3\nb weapon 20 0 -1 4\ne orb 0 0 13 3\nd armor 0 15 0 4\nf orb 0 0 17 5\n2\nj gladiator 7 a\nh gladiator 3 f\ng gladiator 7 e\ni gladiator 8 a\nk gladiator 1 b\n"
+    ],
+    "output": [
+      "a 2 j h \nd 0 \nf 0 \n",
+      "a 3 i j h \nd 2 g k \ne 0 \n",
+      "dxrgvjhvhg 3 rb rq vuhpq \nnhjodogdd 2 jackbeadx zvi \naxgovq 2 vfhyjtps jlr \n",
+      "hcyc 0 \nhfh 1 jhcytccc \njkob 0 \n",
+      "pixiebow 2 ste phi \nbushido 4 poi pui hjk jor \nstarorb 2 qwe zea \n",
+      "y 4 c oveuaziss byfhpjezzv jxnpoufle \nwwvhixixe 2 rd baff \nhs 3 wvxwgjoera usukedr iu \n",
+      "xx 2 c b \nyy 2 f e \nzz 2 h i \n",
+      "b 4 j i g h \nc 1 k \nf 0 \n",
+      "a 2 j h \nc 0 \nf 0 \n",
+      "a 3 i j h \nd 2 g k \nf 0 \n",
+      "dxrgvjhvhg 3 sb rq vuhpq \nnhjodogdd 2 jackbeadx zvi \naxgovq 2 vfhyjtps jlr \n",
+      "hczc 0 \nhfh 1 jhcytccc \njkob 0 \n",
+      "pixiebow 2 ste phi \nbushido 4 poi pui hjk jor \nstarorb 1 qwe \n",
+      "pixiebow 2 ste phi \nbushido 6 poi pui hjk jor qwe zea \nstarorb 0 \n",
+      "dxrgvjhvhg 3 rq vuhpq zvi \nnhjodogdd 2 jackbeadx sb \naxgovq 2 vfhyjtps jlr \n",
+      "a 2 j h \nc 0 \nf 0 \n",
+      "a 3 i j h \nd 2 g k \nf 0 \n",
+      "dxrgvjhvhg 3 sb rq vuhpq \nnhjodogdd 2 jackbeadx zvi \naxgovq 2 vfhyjtps jlr \n",
+      "hczc 0 \nhfh 1 jhcytccc \njkob 0 \n",
+      "a 2 j h \nc 0 \nf 0 \n",
+      "dxrgvjhvhg 3 sb rq vuhpq \nnhjodogdd 2 jackbeadx zvi \naxgovq 2 vfhyjtps jlr \n",
+      "hczc 0 \nhfh 1 jhcytccc \njkob 0 \n",
+      "a 2 j h \nc 0 \nf 0 \n",
+      "a 2 j h \nc 0 \nf 0 \n",
+      "dxrgvjhvhg 3 rq vuhpq zvi \nnhjodogdd 2 jackbeadx sb \naxgovq 2 vfhyjtps jlr \n",
+      "a 2 j h \nc 0 \nf 0 \n",
+      "dxrgvjhvhg 3 rq vuhpq zvi \nnhjodogdd 2 jackbeadx sb \naxgovq 2 vfhyjtps jlr \n",
+      "a 2 j h \nc 0 \nf 0 \n"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "p01811 ABC Gene",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "ABC Gene\n\n文字列 `ABC` で表される遺伝子配列がある。あなたは次の操作を何回か行い、この遺伝子配列を書き換えていくことができる。\n\n* 文字 `A`，`B`，`C` のうち 1 つを選ぶ。これを x とおく。遺伝子配列に含まれるすべての x をそれぞれ `ABC` へ同時に置き換える。\n\n\n\n`A`，`B`，`C` だけからなる文字列 S が与えられる。遺伝子配列を S に一致させられるか判定せよ。\n\nConstraints\n\n* 1 ≤ |S| ≤ 5,000\n* S は `A`，`B`，`C` だけからなる。\n\n\n\nInput Format\n\n入力は以下の形式で標準入力から与えられる。\n\n\nS\n\n\nOutput Format\n\n遺伝子配列を S に一致させられるならば `Yes` を、一致させられないならば `No` を一行に出力せよ。\n\nSample Input 1\n\n\nABC\n\n\nSample Output 1\n\n\nYes\n\n\n遺伝子配列ははじめから `ABC` である。\n\nSample Input 2\n\n\nAABCC\n\n\nSample Output 2\n\n\nYes\n\n\n`B` を選んで操作を行うと `ABC` → `AABCC` となる。\n\nSample Input 3\n\n\nAABCABC\n\n\nSample Output 3\n\n\nNo\n\n\n例えば、`C` を選んで操作を行っても `AABCC` → `AABCABC` とはならない。すべての `C` をそれぞれ `ABC` へ同時に置き換えるので、実際は `AABCC` → `AABABCABC` となる。\n\n\n\n",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1977,
+  "source_response_sha256": "cfc44760d45d602e1978c7b7514a84a6090942216716fbbfffe95eedabe4e608",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

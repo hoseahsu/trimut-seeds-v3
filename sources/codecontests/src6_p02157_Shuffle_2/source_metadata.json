@@ -1,0 +1,25 @@
+{
+  "name": "p02157 Shuffle 2",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Problem\n\n$n$枚のカードからなる束があり、下から$i$番目のカードには$i$が書かれている。この束に対して、以下のように定義されるシャッフルを$q$回行う。\n\n\n* 束を下から見たとき、奇数番目のカードを上に重ねていって作られる束$x$、偶数番目のカードを上に重ねていって作られる束$y$を考える。その後以下の$2$つのうち、好きな操作を行う。\n* 操作 $0$： 束$x$の上に束$y$をのせて$1$つの束にする。\n* 操作 $1$： 束$y$の上に束$x$をのせて$1$つの束にする。\n\n\n\n例えば、$6$枚のカードからなる束(下から123456)に対して$1$回のシャッフルを行うことを考えたとき、操作$0$を行った場合に得られる束は下から ~~246135~~ 135246、操作$1$を行った場合に得られる束は下から ~~135246~~ 246135である。(14:52修正)\n\n$q$回のシャッフルの後、$k$の書かれたカードが束の下から$d$番目にあるようにしたい。\n可能であるなら$q$回のシャッフルの操作を順番に出力し、不可能ならば$-1$を出力せよ。\n\nConstraints\n\n入力は以下の条件を満たす。\n\n* $2 \\le n \\le 10^{15}$\n* $1 \\le q \\le 10^6$\n* $1 \\le k,d \\le n$\n* $n$は偶数\n\nInput\n\n入力は以下の形式で与えられる。\n\n\n$n$ $q$ $k$ $d$\n\n\nOutput\n\n条件を満たすシャッフルが可能なら$q$行にシャッフルの操作を出力せよ。\n\n不可能なら$-1$を出力せよ。",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 205,
+  "source_response_sha256": "9b61177b33ed239c7017af19631abde2a1a7a07d23f78e9d2b7078f72267bc1a",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

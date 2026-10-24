@@ -1,0 +1,25 @@
+{
+  "name": "p01007 Matrix Operations",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Problem\n\n要素が1と0からなるn×nの行列に対して、以下の種類の操作を行うプログラムを作成せよ。\n\n<image>\n部分行列と角度(0,90,180,270,360)が与えられるのでその分だけ時計回りに回転させる。\n<image>\n部分行列が与えられるので値を反転させる。\n<image>\n行が与えられるので左に1個シフトし、はみ出た分は右端に移動する。\n<image>\n行が与えられるので右に１個シフトし、はみ出た分は左端に移動する。\n<image>\n行(r),列(c)が与えられる。\nStep1：現在のセルを(r,c)にする。\nStep2：現在のセルの値を反転する。\nStep3：隣接するセルのうち、値が現在のセルの反転前の値と等しいセルに対し、Step2とStep3の処理を行う。\nここで、セル(i,j)に隣接するセルとは、(i-1,j), (i+1,j),(i,j-1),(i,j+1)の４つである。\n\nConstraints\n\n入力は以下の条件を満たす。\n\n* 1 ≤ n,r,c,size ≤ 15\n* 1 ≤ m ≤ 100\n* 0 ≤ o ≤ 4\n* 1 ≤ r+size-1,c+size-1 ≤ 15\n* 0 ≤ angle ≤ 360\n\nInput\n\n\nn m\na1,1 a1,2 ... a1,n\na2,1 a2,2 ... a2,n\n:\nan,1 an,2 ... an,n\nOperation1\nOperation2\n:\nOperationm\n\n\n入力の最初に2つの整数nとmが空白区切りで与えられる。 nは行列のサイズ、mは操作の数を表している。\n\n次にグリッドの情報がn行で与えられ、グリッドの情報のi行目にはn個の整数 ai,jが空白区切りで与えられる。ai,jには0か1が与えられる。\n\n次に1行で表される各Operationiがm個与えられる。 Operationi の最初の入力はo(操作の種類)が入力される。\n\noが0のときは回転(Rotate)を表している。 続く入力は、r c size angle(行、列、サイズ、角度) が空白区切りで与えられる。 左上(r,c)から右下(r+size-1,c+size-1)が部分行列となる。 正方行列になることは保証されている。\n\noが1のときは反転(Reversal)を表している。 また、続く入力は、r c size (行、列、サイズ) が空白区切りで与えられる。 左上(r,c)から右下(r+size-1,c+size-1)が部分行列となる。 正方行列になることは保証されている。\n\noが2のときは左シフト(Left shift)を表している。 また、続く入力は r(行) が与えられる。\n\noが3のときは右シフト(Right shift)を表している。 また、続く入力は r(行) が与えられる。\n\noが4のときは島反転(Island reversal)を表している。 また、続く入力は r c(行、列) が空白区切りで与えられる。\n\nOutput\n\n生成された行列を出力して下さい。",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1032,
+  "source_response_sha256": "0ed25795eadf5445f0477fb952842bd712dd813cd657ffd428386e35e278a2d6",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

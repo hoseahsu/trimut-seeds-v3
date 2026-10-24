@@ -1,0 +1,25 @@
+{
+  "name": "p00669 K Cards",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "ある日、先生は次のようなゲームを思いついた。\nゲームは 1 から 10 までの数がひとつ書かれたカードを n 枚使用し、以下のように進む。\n\n\n1. 先生が n 枚のカードを数が見えるようにして横一列に黒板に貼り付け、ある整数 k (k ≥ 1) を生徒に宣言する。横一列に並べられた n 枚のカードについて、連続した k 枚のカードの積の最大値を Ck とする。また、先生が並べた時点での Ck を Ck' とおく。\n2. 生徒は 1. で貼られたカードの列を見て Ck を大きくすることを考える。ある 2 枚を入れ替えることで Ck をより大きくすることができた場合、生徒の成績は Ck - Ck' 点上がる。誰かが成績点を得たらゲームを終了する。\n\n\n\nあなたの仕事は先生が並べたカードの列を入力し、生徒が得られる最大の成績点を出力するプログラムを書くことである。ただし、そこからどの 2 枚を選んで交換してもCkを下げることしかできない (Ck - Ck' < 0) 場合、文字列 \"NO GAME\" (引用符を含まない)を出力せよ。\n<image>\n先生が並べたカードが7, 2, 3, 5の場合。このとき 7 と 3 を交換することで生徒は最大で 35 - 15 = 20 成績点を得る。\n\nHint\n\nサンプルにおいて C2' = 35 であり、ここからどの 2 枚を並び替えても C2 の最大値は 35 より大きくならない。したがって生徒が得られる成績点は最大 0 点である。\n\nConstraints\n\n* 入力はすべて整数\n* 2 ≤n ≤ 100\n* 1 ≤k ≤ 5\n* k ≤ n\n* 1 ≤ ci ≤ 10 (1 ≤ i ≤ n)\n* テストケースの数は 100 を超えない。\n\nInput\n\n入力は複数のテストケースからなる。ひとつのテストケースは以下の形式に従う。\n\n\nn k\nc1\nc2\nc3\n…\ncn\n\n\nn は先生が並べるカードの枚数、k は宣言する整数である。 また ci (1 ≤ i ≤ n) はカードに書かれた数を示す。また、この順で先生が横に黒板に貼り付けるとする。入力の終わりは、ふたつの0が一文字の空白で区切られる一行で示される。\n\nOutput\n\n生徒が得られる成績点の最大値あるいは文字列 \"NO GAME\" (引用符を含まない)を各テストケースに付き 1 行で出力せよ。",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 612,
+  "source_response_sha256": "442af4ceb39b0d651d28e9065d757dbc29f7d2cc849cb814468adb7abe943947",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

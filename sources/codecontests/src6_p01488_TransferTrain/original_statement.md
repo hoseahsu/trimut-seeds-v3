@@ -1,0 +1,17 @@
+Example
+
+Input
+
+2 10
+Warsaw Petersburg
+3
+Kiev Moscow Petersburg
+150 120
+3
+Moscow Minsk Warsaw
+100 150
+
+
+Output
+
+380 1

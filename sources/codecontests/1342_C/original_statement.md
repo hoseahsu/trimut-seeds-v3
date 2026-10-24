@@ -1,0 +1,38 @@
+You are given two integers a and b, and q queries. The i-th query consists of two numbers l_i and r_i, and the answer to it is the number of integers x such that l_i ≤ x ≤ r_i, and ((x mod a) mod b) ≠ ((x mod b) mod a). Calculate the answer for each query.
+
+Recall that y mod z is the remainder of the division of y by z. For example, 5 mod 3 = 2, 7 mod 8 = 7, 9 mod 4 = 1, 9 mod 9 = 0.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 100) — the number of test cases. Then the test cases follow.
+
+The first line of each test case contains three integers a, b and q (1 ≤ a, b ≤ 200; 1 ≤ q ≤ 500).
+
+Then q lines follow, each containing two integers l_i and r_i (1 ≤ l_i ≤ r_i ≤ 10^{18}) for the corresponding query.
+
+Output
+
+For each test case, print q integers — the answers to the queries of this test case in the order they appear.
+
+Example
+
+Input
+
+
+2
+4 6 5
+1 1
+1 3
+1 5
+1 7
+1 9
+7 10 2
+7 8
+100 200
+
+
+Output
+
+
+0 0 0 2 4 
+0 91 

@@ -1,0 +1,25 @@
+{
+  "name": "p01896 Folding Paper",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "問題文\n\n高さ $H$ マス、幅 $W$ マスの格子状に区切られた長方形の紙がある。 $0$ から数えて上から $i$ 行目、左から $j$ 列目のマスには整数 $i \\times W+j$ が書かれている。 $H=2, W=3$ の例を下の図に示す。\n\n<image>\n\nAOR イカちゃんは、この紙に対して次のような操作を順に行った。\n\n1. $1$ マス分の面積になるまでマスの区切り線に沿って繰り返し折る。この時の折る線や山谷、順番などは任意である。紙を破らない任意の折り方ができる。\n2. $4$ 辺を切り落として $H \\times W$ 枚の紙に分割する。\n3. 上から順にめくっていき、書かれていた整数を並べた数列 $S$ を作る。\n\n\n\n例えば、下の図のように折った後切った場合、$S$ として $4, 3, 0, 5, 2, 1$ が得られる。このように、間に差し込むような折り方も可能である。\n\n<image>\n<image>\n\nあなたは AOR イカちゃんから数列 $S$ を受け取った。 しかし、AOR イカちゃんのことを信用していないので、これが本物か確かめたい。 $S$ と一致するような紙の折り方が存在するなら \"YES\" を、しないなら \"NO\" を出力するプログラムを書け。\n\n入力の制約\n\n$1 \\le H, W \\le 500$\n$S$ は $0$ から $H \\times W - 1$ までの整数を $1$ つずつ含む\n\nサンプル\n\nサンプル入力1\n\n\n1 4\n0 1 2 3\n\n\nサンプル出力1\n\n\nYES\n\n\n<image>\n\nサンプル入力2\n\n\n2 3\n4 3 0 5 2 1\n\n\nサンプル出力2\n\n\nYES\n\n\n問題文中の例である。\n\nサンプル入力3\n\n\n1 4\n0 2 1 3\n\n\nサンプル出力3\n\n\nNO\n\n\nサンプル入力4\n\n\n2 2\n0 1 3 2\n\n\nサンプル出力4\n\n\nYES\n\n\n$2$ 回半分に折る。\n\n\n\n入力\n\n$H \\ W$\n$S_0 \\cdots S_{HW-1}$\n\n出力\n\n\"YES\" または \"NO\" を $1$ 行で出力せよ。",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 933,
+  "source_response_sha256": "30e57f40e331408eb3eb510349ca146239eec5d87b053e4316640c052653e692",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

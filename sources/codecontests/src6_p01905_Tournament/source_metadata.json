@@ -1,0 +1,25 @@
+{
+  "name": "p01905 Tournament",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "\n\n問題\n\nAOR イカちゃんとあなたは、トーナメント形式の卓球大会シングルスの部に偵察に来た。 全ての試合を録画したい AOR イカちゃんのために、あなたはこの大会で行われる試合数を求めてあげることにした。\n\nこの大会には $N$ 人の選手が参加しており、それぞれ $0, \\dots , N - 1$ の背番号を持っている。 そのうち、 $M$ 人の選手が棄権し、試合には出場しなかった。\n\nこの大会の試合数は、以下のルールに基いて決定される。\n\n* シード選手は存在せず、任意の出場者が優勝するために必要な勝利回数は一定である。\n* 対戦相手が不在の場合は試合を行わず、出場した選手が勝利する。試合数にはカウントされない。\n* 優勝者が決まった段階で大会は終了する。\n* 一度試合に負けた人が再び試合をすることはない。つまり敗者復活戦や 3 位決定戦などは行わない。\n* なお、卓球台が 1 台しか無いため異なる試合が同時に行われることはなく、また各試合では必ず勝者が決まる (引き分けとなることはない)。\n\n\n\nなお、トーナメントの定義は次のとおりである。 トーナメントは高さ $L = \\log_2 N$ の完全二分木で表され、葉にあたる各頂点には参加者の背番号が書き込まれている。 根の深さを 0 とすると、 $i$ 回戦 ($1 \\le i \\le L$) では、 深さ $L - i$ の各頂点の子に書かれた番号の選手同士が試合を行い、その勝者の背番号をその頂点に書き込む。\n\n<image>\n\n\n\n出力\n\nこの大会が終了するまでに行われる試合数を 1 行で出力せよ。また、末尾に改行も出力せよ。",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1143,
+  "source_response_sha256": "51f87be6d201d6f1ea2708c0f606d813a416e22f52e879076ed2f2e787b74033",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

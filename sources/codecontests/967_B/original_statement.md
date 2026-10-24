@@ -1,0 +1,57 @@
+Arkady wants to water his only flower. Unfortunately, he has a very poor watering system that was designed for n flowers and so it looks like a pipe with n holes. Arkady can only use the water that flows from the first hole.
+
+Arkady can block some of the holes, and then pour A liters of water into the pipe. After that, the water will flow out from the non-blocked holes proportionally to their sizes s_1, s_2, …, s_n. In other words, if the sum of sizes of non-blocked holes is S, and the i-th hole is not blocked, (s_i ⋅ A)/(S) liters of water will flow out of it.
+
+What is the minimum number of holes Arkady should block to make at least B liters of water flow out of the first hole?
+
+Input
+
+The first line contains three integers n, A, B (1 ≤ n ≤ 100 000, 1 ≤ B ≤ A ≤ 10^4) — the number of holes, the volume of water Arkady will pour into the system, and the volume he wants to get out of the first hole.
+
+The second line contains n integers s_1, s_2, …, s_n (1 ≤ s_i ≤ 10^4) — the sizes of the holes.
+
+Output
+
+Print a single integer — the number of holes Arkady should block.
+
+Examples
+
+Input
+
+4 10 3
+2 2 2 2
+
+
+Output
+
+1
+
+
+Input
+
+4 80 20
+3 2 1 4
+
+
+Output
+
+0
+
+
+Input
+
+5 10 10
+1000 1 1 1 1
+
+
+Output
+
+4
+
+Note
+
+In the first example Arkady should block at least one hole. After that, (10 ⋅ 2)/(6) ≈ 3.333 liters of water will flow out of the first hole, and that suits Arkady.
+
+In the second example even without blocking any hole, (80 ⋅ 3)/(10) = 24 liters will flow out of the first hole, that is not less than 20.
+
+In the third example Arkady has to block all holes except the first to make all water flow out of the first hole.

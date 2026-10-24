@@ -1,0 +1,28 @@
+Write a program which reads an integer n and prints the number of prime numbers which are less than or equal to n. A prime number is a natural number which has exactly two distinct natural number divisors: 1 and itself. For example, the first four prime numbers are: 2, 3, 5 and 7.
+
+
+
+Input
+
+Input consists of several datasets. Each dataset has an integer n (1 ≤ n ≤ 999,999) in a line.
+
+The number of datasets is less than or equal to 30.
+
+Output
+
+For each dataset, prints the number of prime numbers.
+
+Example
+
+Input
+
+10
+3
+11
+
+
+Output
+
+4
+2
+5

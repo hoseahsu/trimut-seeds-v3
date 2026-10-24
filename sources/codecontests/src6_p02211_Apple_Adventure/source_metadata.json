@@ -1,0 +1,25 @@
+{
+  "name": "p02211 Apple Adventure",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "りんごだいぼうけん\n\nsquare1001君とE869120君は縦 $H$ 行、横 $W$ 列のグリッドの世界に迷い込んでしまいました!\n\nこの世界の神は言いました。\n\n「リンゴを $K$ 個集めて二人が出会ったとき、さすれば元の世界に帰れるであろう。」\n\nこの言葉を聞いたsquare1001君は、リンゴを $K$ 個以上集めてE869120君がいるマスへ向かうことにしました。\n\n\n\n\nここで、グリッドの各マスは次のように表されます。\n\n's'：square1001君がいるマスです。\n\n'e'：E869120君がいるマスです。\n\n'a'：リンゴが1つ落ちているマスです。このマスを初めて訪れたときにリンゴを1つ得ることができます。このグリッド上にこのマスは20個以下しかありません。\n\n'#'：壁です。このマスに訪れることはできません。\n\n'.'：何もないマスです。このマスに訪れることができます。\n\n\n\n\nsquare1001君は自分がいるマスから上下左右に隣り合うマスへの移動を繰り返すことで、目的を達成しようとします。ただし、グリッドから外に出ることはできません。\n\nsquare1001君が目的を達成するために必要な移動回数の最小値を求めてください。\n\nただし、E869120君が動くことはないものとします。また、square1001君はリンゴを $K$ 個以上持ち運ぶ能力があるものとします。\n\nまた、目標が達成できないときは「-1」を出力してください。\n\n入力\n\n入力は以下の形式で標準入力から与えられる。\n\nグリッドの上から $i$ マス目、左から $j$ マス目の文字を $A_{i, j}$ とする。\n\n\n$H$ $W$ $K$\n$A_{1,1} A_{1,2} A_{1,3} \\cdots A_{1,W}$\n$A_{2,1} A_{2,2} A_{2,3} \\cdots A_{2,W}$\n$A_{3,1} A_{3,2} A_{3,3} \\cdots A_{3,W}$\n$\\ldots$\n$A_{H,1} A_{H,2} A_{H,3} \\cdots A_{H,W}$\n\n\n出力\n\nsquare1001君が目的を達成するまでに必要な移動回数の最小値を求めてください。ただし、不可能な場合は「-1」を出力してください。\n\nただし、最後には改行を入れること。\n\n制約\n\n* $1 \\leq H \\leq 1000$\n* $1 \\leq W \\leq 1000$\n* $1 \\leq K \\leq 20$\n* $H, W, K$ は整数である。\n* $A_{i, j}$ は 's'、'e'、'a'、'#'、'.'のいずれかである。\n* グリッドに 's'、'e'はそれぞれただ 1 つのみ含まれる。\n* グリッドに含まれる 'a' の数は $K$ 個以上 $20$ 個以下である。\n\n\n\n入力例1\n\n\n5 5 2\ns..#a\n.#...\na#e.#\n...#a\n.#...\n\n\n出力例1\n\n\n14\n\n\n入力例2\n\n\n7 7 3\n.......\n.s...a.\na##...a\n..###..\n.a#e#.a\n.###..\na..#..a\n\n\n出力例2\n\n\n-1\n\n\n目的が達成不可能な場合は「-1」を出力してください。\n\n入力例3\n\n\n12 12 10\n.#####......\n.##.....#...\n....a.a#a..#\n.#..#a......\n.....a#s..\n..a###.##.#\n.e#.#.#.#a..\n..#a#.....#.\n..##a......\n.a...a.a..#.\na....#a.aa..\n...a.#...#a.\n\n\n出力例3\n\n\n30\n\n\n\n\n",
+  "time_limit": {
+    "seconds": 3,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 536870912,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 414,
+  "source_response_sha256": "84ee51817d6d3dd9ad3e6735e7e4fb3c1f10f5a4f33e4fa830c8e5497d366f8e",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

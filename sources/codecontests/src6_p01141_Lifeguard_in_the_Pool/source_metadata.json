@@ -1,0 +1,25 @@
+{
+  "name": "p01141 Lifeguard in the Pool",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Lifeguard in the Pool\n\nプールの監視員\n\nEnglish text is not available in this practice contest.\n\nHorton Moore はプールの監視員として働いている．彼が見回りのためにプールの縁を歩いていたところ，プールの中で一人の少女がおぼれていることに気づいた．もちろん，彼は直ちに救助に向かわなければならない．しかも，少女の身に何かあっては大変であるから，少しでも早く少女のもとにたどり着きたい．\n\nあなたの仕事は，プールの形状（頂点数が 3〜10 の凸多角形），地上および水中における監視員の単位距離あたりの移動時間，そして監視員と少女の初期位置が与えられたときに，監視員が少女のところに到着するまでにかかる最短の時間を求めるプログラムを書くことである．\n\nInput\n\n入力は複数のデータセットの並びからなる．入力の終わりは 1 つの 0 だけを含む行によって示される．\n\n各データセットは次の形式になっている．\n\n> n\n>  x1 y1 x2 y2 ... xn yn\n>  tg\n>  tw\n>  xs ys\n>  xt yt\n\nそれぞれの記号の意味は次のとおりである．\n\n* n は凸多角形をしたプールの頂点数を示す．これは 3 以上 10 以下の整数である．\n\n* (xi, yi) はプールの i 番目の頂点の座標を示す．それぞれの座標値は絶対値が 100 以下の整数である．頂点は反時計回りの順番で与えられる．\n\n* tg は監視員が地上において移動するときにかかる単位距離あたりの時間を表す．tw は監視員が水中において移動するときにかかる単位距離あたりの時間を表す．これらはいずれも整数であり，さらに 1 ≦ tg < tw ≦ 100 を満たす．\n\n* (xs, ys) は監視員の初期位置の座標を表す．この座標はプールのちょうど辺上にある．\n\n* (xt, yt) は少女の初期位置の座標を表す．この座標はプールの内側にある．\n\n\n\n\n同一の行にある数値と数値の間は 1 個の空白で区切られている．\n\nこの問題において，監視員および少女は点であるとみなす．また，監視員がプールの辺に沿って移動するときは地上を移動しているとみなす．監視員は，地上から水中に一瞬で入ることが，また水中から地上に一瞬で出ることができると仮定して構わない．監視員が地上から水中に，あるいは水中から地上に移るとき，監視員は同じ座標にとどまると考えること．したがって，たとえばプールの縁から離れたところに飛び込むことによって水中での移動距離を減らすことはできない．\n\nOutput\n\n各データセットに対して，監視員が少女の元に到着するまでにかかる最短の時間を 1 行に出力しなさい．解答の誤差は 0.00000001 (10−8) を超えてはならない．精度に関する条件を満たしていれば，小数点以下は何桁数字を出力しても構わない．\n\nSample Input\n\n\n4\n0 0 10 0 10 10 0 10\n10\n12\n0 5\n9 5\n4\n0 0 10 0 10 10 0 10\n10\n12\n0 0\n9 1\n4\n0 0 10 0 10 10 0 10\n10\n12\n0 1\n9 1\n8\n2 0 4 0 6 2 6 4 4 6 2 6 0 4 0 2\n10\n12\n3 0\n3 5\n0\n\n\nOutput for the Sample Input\n\n\n108.0\n96.63324958071081\n103.2664991614216\n60.0\n\n\n\n\n",
+  "time_limit": {
+    "seconds": 8,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 928,
+  "source_response_sha256": "30e57f40e331408eb3eb510349ca146239eec5d87b053e4316640c052653e692",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

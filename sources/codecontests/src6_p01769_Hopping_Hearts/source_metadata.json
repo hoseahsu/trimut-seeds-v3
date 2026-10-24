@@ -1,0 +1,25 @@
+{
+  "name": "p01769 Hopping Hearts",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "問題文\n\nN 羽のうさぎが長さ L−1 の平均台の上にいる。 i 番目のうさぎの初期位置は整数 x_iであり、 0 ≤ x_{i} \\lt x_{i+1} ≤ L−1 を満たす。座標は右に進むほど大きくなる。任意の i 番目のうさぎは、任意の回数だけ、ちょうど距離 a_i だけ右方向にジャンプ(すなわち、x_i から x_i+a_i へ移動)することができる。ただし別のうさぎを飛び越えること、−1 以下または L 以上の位置に入ることはできない。また、同時にジャンプしていられるのは高々 1 羽であり、ある座標に存在できるうさぎの数も高々 1 羽である。\n\n初期状態から始めてジャンプを任意の回数繰り返したあとの x_{0}, …, x_{N−1} の状態として、あり得るものは何通りあるか。1\\,000\\,000\\,007 で割った余りで求めよ。\n\n入力\n\n入力は以下の形式で与えられる。\n\n\nN L\nx_{0} … x_{N−1}\na_{0} … a_{N−1}\n\n\n制約\n\n* 入力はすべて整数である\n* 1 \\≤ N \\≤ 5\\,000\n* N \\≤ L \\≤ 5\\,000\n* 0 \\≤ x_{i} \\lt x_{i+1} \\≤ L−1\n* 0 \\≤ a_{i} \\≤ L−1\n\n\n\n出力\n\n答えを1行で出力せよ。\n\nサンプル\n\nサンプル入力1\n\n\n1 3\n0\n1\n\n\nサンプル出力1\n\n\n3\n\n\n1/0でうさぎがいる/いないを表現すれば、100, 010, 001 の 3 通りである。\n\nサンプル入力2\n\n\n2 4\n0 1\n1 2\n\n\nサンプル出力2\n\n\n4\n\n\n1100, 1001, 0101, 0011 の 4 通りである。\n\nサンプル入力3\n\n\n10 50\n0 1 2 3 4 5 6 7 8 9\n1 1 1 1 1 1 1 1 1 1\n\n\nサンプル出力3\n\n\n272278100\n\n\n二項係数 C(50,10) = 10\\,272\\,278\\,170 であり、それを 1\\,000\\,000\\,007 で割ったあまりは 272\\,278\\,100 である。\n\n\n\n",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1456,
+  "source_response_sha256": "746883a6c3869b65411528bd350c8d3a5bec71eaf10262586090e60a32090b23",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

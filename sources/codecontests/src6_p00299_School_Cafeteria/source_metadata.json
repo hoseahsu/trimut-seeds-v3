@@ -1,0 +1,25 @@
+{
+  "name": "p00299 School Cafeteria",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "今日はＺ大学のオープンキャンパスです。毎年この日の昼休みには、大勢の高校生たちが学食に列をつくります。そこでＺ大学の事務局は、行列の長さが最大でどのくらいの距離になるかを予測することにしました。事前調査の結果で、以下のことが分かっています。\n\n* 行列にはそれぞれ 1 から N までの番号が振られた N 人が並びます。\n* C 個の高校生のペア (ai, bi) それぞれについて、以下の２種類の制約があります：\n* １つ目の制約は順序に関するもので以下のいずれかです：\nai は bi よりも先、または同じ位置に並ばなくてはならない\nai は bi よりも後、または同じ位置に並ばなくてはならない\nai は bi より先でも、同じ位置でも、後でもよい\n\n* ２つ目の制約は距離に関するもので以下のいずれかです：\nai と bi は di メートル以上離れなければならない\nai と bi は di メートル以内に並ばなければならない\n\n\n\n\nまた、先頭から同じ距離の場所に複数の人が並ぶことができ、行列の先頭には常に番号 1 の人が並ぶことが分かっています。\n\n与えられた C 個の制約をすべて満たす行列について、先頭から最後尾までの距離が最大となるような並び方をした場合の距離を求めるプログラムを作成してください。ただし、どこまでも離れることができる場合は inf と、制約を満たす並び方が不可能な場合は -1 と出力してください。\n\n\n\n入力\n\n入力は以下の形式で与えられる。\n\n\nN C\nconstraint1\nconstraint2\n:\nconstraintC\n\n\n1 行目に行列に並ぶ高校生の人数 N (2 ≤ N ≤ 100) と制約の数 C (0 ≤ C ≤ 200) が与えられる。続く C 行に各制約 constrainti が次の形式で与えられる。\n\n\naioibisidi\n\n\n制約には空白は含まれない。ai, oi, bi, si, di の意味を以下に示す。\n\n* ai と bi (1 ≤ ai, bi ≤ N かつ ai ≠ bi ) は高校生の番号、di は距離 (0 ≤ d ≤ 10000) を表す整数である。\n* oi は順序の制約を指定する <=、>=、* のいずれかの文字列であり、<= の場合「ai は bi よりも先、または同じ位置に並ばなくてはならない」、>= の場合「ai は bi よりも後、または同じ位置に並ばなくてはならない」、* の場合「ai は bi より先でも、同じ位置でも、後でもよい」ことを意味する。ただし oi が * となる制約は７個以上与えられることはない。\n* si は距離の制約を指定する + または - の文字であり、+ の場合「ai と bi は di メートル以上離れなければならない」、- の場合「ai と bi は di メートル以内に並ばなければならない」ことを意味する。\n\n\n\nただし、あるペアに対して複数の制約が与えられることはないものとする。\n\n出力\n\n先頭から最後尾までの距離を１行に出力する。",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1863,
+  "source_response_sha256": "321cbb89036354c4ebecd3249ab17e662b4f3c95dc5b14fed64c76f9f7e3021b",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

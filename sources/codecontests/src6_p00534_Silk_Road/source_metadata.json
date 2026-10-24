@@ -1,0 +1,25 @@
+{
+  "name": "p00534 Silk Road",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "\n\n問題\n\n現在カザフスタンがある地域には，古くは「シルクロード」と呼ばれる交易路があった．\n\nシルクロード上には N + 1 個の都市があり，西から順に都市 0, 都市 1, ... , 都市 N と番号がつけられている．都市 i - 1 と都市 i の間の距離 (1 ≤ i ≤ N) は Di である．\n\n貿易商である JOI 君は，都市 0 から出発して，都市を順番に経由し，都市 N まで絹を運ぶことになった．都市 0 から都市 N まで M 日以内に移動しなければならない．JOI 君は，それぞれの日の行動として，以下の 2 つのうちいずれか 1 つを選ぶ．\n\n* 移動： 現在の都市から 1 つ東の都市へ 1 日かけて移動する．現在都市 i - 1 (1 ≤ i ≤ N) にいる場合は，都市 i に移動する．\n* 待機： 移動を行わず，現在いる都市で 1 日待機する．\n\n\n\n移動は大変であり，移動するたびに疲労度が溜まっていく．シルクロードでは日毎に天候の変動があり，天候が悪い日ほど移動には苦労を要する．\n\nJOI 君が絹を運ぶのに使える M 日間のうち j 日目 (1 ≤ j ≤ M) の天候の悪さは Cj であることが分かっている．都市 i - 1 から都市 i (1 ≤ i ≤ N) に j 日目 (1 ≤ j ≤ M) に移動する場合，疲労度が Di × Cj だけ溜まってしまう．移動を行わず待機している日は疲労度は溜まらない．\n\nJOI 君は，それぞれの日の行動をうまく選ぶことで，できるだけ疲労度を溜めずに移動したい．JOI 君が M 日以内に都市 N に移動するときの，移動を開始してから終了するまでに溜まる疲労度の合計の最小値を求めよ．\n\n\n\n入力\n\n入力は 1 + N + M 行からなる．\n\n1 行目には，2 つの整数 N, M (1 ≤ N ≤ M ≤ 1000) が空白を区切りとして書かれている．これは，シルクロードが N + 1 個の都市からなり，JOI 君が絹を都市 0 から都市 N まで M 日以内に運ばなければならないことを表す．\n\n続く N 行のうちの i 行目 (1 ≤ i ≤ N) には，整数 Di (1 ≤ Di ≤ 1000) が書かれている．これは，都市 i - 1 と都市 i の間の距離が Di であることを表す．\n\n続く M 行のうちの j 行目 (1 ≤ j ≤ M) には，整数 Cj (1 ≤ Cj ≤ 1000) が書かれている．これは，j 日目の天候の悪さが Cj であることを表す．\n\n出力\n\nJOI 君が M 日以内に都市 N に移動するときの，移動を開始してから終了するまでに溜まる疲労度の合計の最小値を 1 行で出力せよ．",
+  "time_limit": {
+    "seconds": 8,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 715,
+  "source_response_sha256": "8914d592ce77b0a81bc74d37b474708410451842ae2a90c18059229f456c779d",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

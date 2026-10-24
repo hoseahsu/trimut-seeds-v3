@@ -1,0 +1,25 @@
+{
+  "name": "p02186 Cutting Subarray",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "E: 総和の切り取り\n\n問題\n\nえびちゃんは数列 (a_1, a_2, ..., a_n) を持っています。 えびちゃんは（空でもよい）部分配列の総和の最大値が気になるので、それを求めてください。 ここで、部分配列とは連続する部分列を指します。なお、空列の総和は 0 とします。\n\nさらに、えびちゃんがこの数列を q 回書き換えるので、各書き換えの直後にこの値を求めてください。\n\n入力形式\n\n\nn q\na_1 a_2 ... a_n\nk_1 x_1\n...\nk_q x_q\n\n\n各 k_j, x_j (1 \\leq j \\leq q) は、a_{k_j} を x_j に書き換えることを意味します。 各書き換えは独立ではなく、その後の処理において配列は書き換えられたままであることに注意してください。\n\n制約\n\n* 1\\leq n\\leq 10^5\n* 1\\leq q\\leq 10^5\n* 1\\leq k_j\\leq n\n* |a_i|, |x_j| \\leq 10^9\n\n\n\n出力形式\n\nq+1 行出力してください。1 行目には書き換えを行う前の、1+i 行目には i 回目の書き換えの直後の部分配列の総和の最大値を出力してください。\n\n入力例1\n\n\n5 2\n1 2 -3 4 -5\n3 3\n2 -6\n\n\n出力例1\n\n\n4\n10\n7\n\n\n部分配列 (a_l, …, a_r) を a[l, r] と表すことにすると、書き換え前は a[1, 4] および a[4, 4] の総和が 4 で、これが最大です。\n\n1 回目の書き換えの後、数列は (1, 2, 3, 4, -5) となり、総和の最大値は a[1, 4] の 10 です。\n\n2 回目の書き換えの後、数列は (1, -6, 3, 4, -5) となり、総和の最大値は a[3, 4] の 7 です。\n\n入力例2\n\n\n3 1\n-1 -2 -3\n1 1\n\n\n出力例2\n\n\n0\n1\n\n\n空列の総和は 0 であり、書き換え前はそれが最大です。\n\n\n\n",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1145,
+  "source_response_sha256": "51f87be6d201d6f1ea2708c0f606d813a416e22f52e879076ed2f2e787b74033",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

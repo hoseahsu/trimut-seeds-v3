@@ -1,0 +1,40 @@
+
+
+Input
+
+The input contains two integers a1, a2 (0 ≤ ai ≤ 109), separated by a single space.
+
+Output
+
+Output a single integer.
+
+Examples
+
+Input
+
+3 14
+
+
+Output
+
+44
+
+
+Input
+
+27 12
+
+
+Output
+
+48
+
+
+Input
+
+100 200
+
+
+Output
+
+102

@@ -1,0 +1,25 @@
+{
+  "name": "p02031 Parentheses Number",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "B: 括弧を語る数 / Parentheses Number\n\n問題\n\n以下のように 正しい括弧列 を定めます。\n\n* 空文字列は正しい括弧列である\n* 正しい括弧列 S に対して `(` S `)` は正しい括弧列である\n* 正しい括弧列 S, T に対して ST は正しい括弧列である\n\n\n\nここで、正しい括弧列に対して以下のような規則で順列を対応付けます。\n\n* i 番目の閉じ括弧が j 番目の開き括弧に対応しているとき、 数列の i 番目の値は j である。\n\n\n\n長さ n の順列 P = ( p_1, p_2, $\\ldots$, p_n ) が与えられるので、 それに対応する括弧列を復元してください。\n\nただし、順列に対応する括弧列が存在しない場合は `:(` を出力してください。\n\n入力形式\n\n\nn\np_1 p_2 $\\ldots$ p_n\n\n\n1 行目に順列の項数 n が与えられる。\n\n2 行目に順列 p_1, p_2, $\\ldots$, p_i, $\\ldots$, p_n が空白区切りで与えられる。\n\n制約\n\n* 1 \\leq n \\leq 10^5\n* 1 \\leq p_i \\leq n\n* 入力は全て整数である。\n* P = ( p_1, p_2, $\\ldots$, p_n ) は順列である。\n\n\n\n出力形式\n\n順列に対応する括弧列を出力してください。\n\nそのような括弧列が存在しない場合は `:(` を出力してください。\n\n入力例1\n\n\n2\n2 1\n\n\n出力例1\n\n\n(())\n\n入力例2\n\n\n10\n1 2 3 4 5 6 7 8 9 10\n\n\n出力例2\n\n\n()()()()()()()()()()\n\n入力例3\n\n\n3\n3 1 2\n\n\n出力例3\n\n\n:(\n\n\n\n",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1039,
+  "source_response_sha256": "0ed25795eadf5445f0477fb952842bd712dd813cd657ffd428386e35e278a2d6",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

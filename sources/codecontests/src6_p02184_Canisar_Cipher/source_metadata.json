@@ -1,0 +1,25 @@
+{
+  "name": "p02184 Canisar Cipher",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "C: カニサル暗号\n\n問題\n\nえびちゃんは、ある非負整数 D を「カニサル暗号」で暗号化して得られた文字列 C を与えられました。この暗号は、非負整数を 10 進法で表したときの各数字をある（元と異なるとは限らない）決められた数字で置き換えるものです。異なる数字が同じ数字に置き換えられたり、同じ数字が出現位置によって異なる数字に書き換えられることはありません。\n\nたとえば、この暗号化方式によって 2646 が 0545 になることはありますが、3456 が 1333 になったり 1333 が 3456 になることはありません。\n\nいま、えびちゃんは D を 10^9+7 で割った余りが M になることを教えてもらいました。このとき、D として考えられるものを一つ出力してください。複数考えられる場合はどれを出力しても構いません。ただし、D の先頭には余分な `0` はついていないものとします。\n\n入力形式\n\n\nM\nC\n\n\n制約\n\n* 0\\leq M < 10^9+7\n* 1\\leq |C| \\leq 10^5\n\n\n\n出力形式\n\nD として考えられる非負整数を一行に出力してください。存在しない場合は `-1` を出力してください。\n\n入力例1\n\n\n2\n1000000007\n\n\n出力例1\n\n\n1000000009\n\n今回の暗号化方式は、0 を 0 に、1 を 1 に、9 を 7 に置き換えるものでした。\n\n入力例2\n\n\n3\n1000000007\n\n\n出力例2\n\n\n-1\n\n入力例3\n\n\n1\n01\n\n\n出力例3\n\n\n-1\n\nD の先頭に余分な `0` がついていることはありません。\n\n入力例4\n\n\n45\n1000000023\n\n\n出力例4\n\n\n6000000087\n\n`1000000052` や `2000000059` なども条件を満たすので、それを出力してもかまいません。\n\n入力例5\n\n\n0\n940578326285963740\n\n\n出力例5\n\n\n123456789864197523\n\n\n\n",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1459,
+  "source_response_sha256": "746883a6c3869b65411528bd350c8d3a5bec71eaf10262586090e60a32090b23",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

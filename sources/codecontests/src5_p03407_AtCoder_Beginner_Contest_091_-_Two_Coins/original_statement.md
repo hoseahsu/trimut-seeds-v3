@@ -1,0 +1,64 @@
+An elementary school student Takahashi has come to a variety store.
+
+He has two coins, A-yen and B-yen coins (yen is the currency of Japan), and wants to buy a toy that costs C yen. Can he buy it?
+
+Note that he lives in Takahashi Kingdom, and may have coins that do not exist in Japan.
+
+Constraints
+
+* All input values are integers.
+* 1 \leq A, B \leq 500
+* 1 \leq C \leq 1000
+
+Input
+
+Input is given from Standard Input in the following format:
+
+
+A B C
+
+
+Output
+
+If Takahashi can buy the toy, print `Yes`; if he cannot, print `No`.
+
+Examples
+
+Input
+
+50 100 120
+
+
+Output
+
+Yes
+
+
+Input
+
+500 100 1000
+
+
+Output
+
+No
+
+
+Input
+
+19 123 143
+
+
+Output
+
+No
+
+
+Input
+
+19 123 142
+
+
+Output
+
+Yes

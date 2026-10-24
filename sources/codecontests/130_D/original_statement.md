@@ -1,0 +1,34 @@
+You are given integers a, b and c. Calculate ab modulo c.
+
+Input
+
+Input data contains numbers a, b and c, one number per line. Each number is an integer between 1 and 100, inclusive.
+
+Output
+
+Output ab mod c.
+
+Examples
+
+Input
+
+2
+5
+40
+
+
+Output
+
+32
+
+
+Input
+
+2
+5
+26
+
+
+Output
+
+6

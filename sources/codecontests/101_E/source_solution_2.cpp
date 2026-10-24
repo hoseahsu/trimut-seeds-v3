@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using std::max;
+const int fin = 0, maxn = 20010;
+int n, m, MC;
+int X[maxn], Y[maxn];
+int f[maxn], g[maxn];
+void sol(int x0, int y0, int x1, int y1) {
+  if (x1 - x0 + y1 - y0 == 1) return (void)printf(x0 == x1 ? "S" : "C");
+  int i, j, k = x0 + y0 + x1 + y1 >> 1;
+  memset(g, 0, sizeof(g));
+  for (memset(f, 0, sizeof(f)), i = x0; i <= x1; ++i)
+    for (j = y0; j <= y1 && i + j <= k; ++j) {
+      if (j != y0) f[j] = max(f[j], f[j - 1]);
+      if (i + j == k) g[i] = f[j];
+      f[j] += ((X[i] + Y[j]) % MC);
+    }
+  for (memset(f, 0, sizeof(f)), i = x1; i >= x0; --i)
+    for (j = y1; j >= y0 && i + j >= k; --j) {
+      if (j != y1) f[j] = max(f[j], f[j + 1]);
+      f[j] += ((X[i] + Y[j]) % MC);
+      if (i + j == k) g[i] += f[j];
+    }
+  int p, ts = -1;
+  for (i = x0; i <= x1; ++i)
+    if (j = k - i, y0 <= j && j <= y1)
+      if (g[i] > ts) p = i, ts = g[i];
+  if (x0 == 0 && y0 == 0 && x1 == n - 1 && y1 == m - 1) printf("%d\n", ts);
+  sol(x0, y0, p, k - p);
+  sol(p, k - p, x1, y1);
+}
+int main() {
+  if (fin) {
+    freopen("t.in", "r", stdin);
+    freopen("t.out", "w", stdout);
+  }
+  int i, s = 0;
+  scanf("%d%d%d", &n, &m, &MC);
+  for (i = 0; i < n; ++i) scanf("%d", X + i);
+  for (i = 0; i < m; ++i) scanf("%d", Y + i);
+  if (n == 1 || m == 1) {
+    if (n == 1) {
+      for (i = 0; i < m; ++i) s += ((X[0] + Y[i]) % MC);
+      printf("%d\n", s);
+      for (i = 1; i < m; ++i) printf("S");
+    } else {
+      for (i = 0; i < n; ++i) s += ((X[i] + Y[0]) % MC);
+      printf("%d\n", s);
+      for (i = 1; i < n; ++i) printf("C");
+    }
+    return 0;
+  }
+  sol(0, 0, n - 1, m - 1);
+  return 0;
+}

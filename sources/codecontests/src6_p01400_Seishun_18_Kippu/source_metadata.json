@@ -1,0 +1,25 @@
+{
+  "name": "p01400 Seishun 18 Kippu",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Problem C: Seishun 18 Kippu\n\nR大学のとある学生sirokurostoneはA津大学で行われる合宿に参加しようとしていた。 他のメンバーは新幹線を使用する予定なのだが、sirokurostoneは青春18切符を使って向かおうとしていた。 同じく青春18切符使いのとある2D好きな人物も合宿に参加しようとしていた。\n\nどうせならと一緒に行こうと考えたsirokurostoneは途中の駅で2D好きな彼を拾って向かおうと考えた。 sirokurostoneはR大学を出る前に遅延状況を確認してすこしでも時間のかからないルートを通ってA津大学のある駅に着きたいと考えている。 sirokurostoneはルートが確定した後に2D好きな彼にもその情報を伝えるつもりである。 しかし、sirokurostoneは遅延状況を見てもどのルートを通れば早くA津大学のある駅に到着できるか分からず困っている。\n\nそこで、あなたの仕事はsirokurostoneに代わって遅延状況からどれくらいでA津大学のある駅に着くのかを求めることである。\n\n各駅間には、駅間の距離と遅延予想時間がある。 電車は動き始めてから40km/hを維持するものとする。 地点aと地点bの間の移動時間は、\n\n* 距離/40+遅延予想時間\n\nで求めることができる。 各駅での停車時間は無視してよいものとする。\n\nInput\n\n複数のデータセットの並びが入力として与えられる。 データセット数は50以下であることが保障されている。 各データセットは、次の形式をしている。\n\n\nn m\ns p g\na1 b1 d1 t1\n...\nai bi di ti\n...\nam bm dm tm\n\n\n整数n(3 ≤ n ≤ 500)とm(2 ≤ m ≤ 5000)は、それぞれ駅の数、各駅間の線路の数の合計を表す。 s、p、gは、それぞれsirokurostoneが乗る駅、2D好きな人物が乗る駅、A津大学がある駅の場所を示す文字列である。 s、p、gはそれぞれ違う文字列である。\n\n続くm行は、駅間情報を表す。 ai、biは、線路がつなぐ駅を示す文字列である。 aiとbiは、双方向に行き来することができる。 aiとbiが一致することはない。 整数di(40 ≤ di ≤ 10000)は、aiとbiの距離を表す。 diは40の倍数であることが保証されている。 整数ti(0 ≤ ti ≤ 20)は、aiとbiの間の遅延予想時間を示す。\n\n駅名を表す文字列は、全てアルファベットの小文字および大文字からなる20文字以下の文字列であらわされる。 駅と駅の間の線路は高々1本である。\n\n入力の終わりは2つのゼロを含む行で表される。\n\nOutput\n\n入力データセットごとに、A津大学がある駅への到達時間(単位:時間)を出力せよ。 sirokurostoneが乗る駅から2D好きな人が乗る駅までの経路と、2D好きな人物が乗る駅からA津大学がある駅の場所までの経路があることが保証されている。\n\nSample Input\n\n\n4 4\nA B G\nA B 40 3\nB C 80 0\nA G 40 0\nB G 80 0\n5 6\nKusatsu Tokyo Aizu\nTokyo Nagoya 120 3\nKusatsu Nagoya 40 0\nKusatsu Kanazawa 40 0\nKanazawa Aizu 40 0\nTokyo Kanazawa 40 0\nTokyo Aizu 80 4\n0 0\n\n\n\nOutput for Sample Input\n\n\n5\n4\n\n\n\n\n",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1244,
+  "source_response_sha256": "0c01fa75f92d53bd7ff402ad8f4fde7a9abcecaefa0cb7874fd6c2c8a1655219",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

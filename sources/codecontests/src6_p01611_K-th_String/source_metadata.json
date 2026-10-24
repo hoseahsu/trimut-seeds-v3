@@ -1,0 +1,25 @@
+{
+  "name": "p01611 K-th String",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "K-th String\n\nProblem Statement\n\n長さNの文字列Sに対する接尾辞配列SAを，以下の手順で得られるN以下の正整数の順列として定義する．\nSのi文字目からj文字目までの部分文字列をS[i..j]と表す．ただし添字は1-indexedである．\n\n1. 各接尾辞S[i..N] (i=1,2,...,N)を辞書式順序（昇順）で整列する．\n2. 整列した各接尾辞の開始位置iを順に並べる．\n\n\n\nたとえば，S=\"mississippi\"の接尾辞配列SAは，以下のようになる．\n\n<image>\n\n\n\n入力として，長さNの文字列に対する接尾辞配列SAが与えられる．\nSAが得られるような文字列のうち，辞書式順序でK番目(1-indexed)のものを求めよ．\nただし，元の文字列は，アルファベット順に'a'から数えて高々A個の文字のみからなる．\n\nConstraints\n\n* 1≦N≦10^5\n* 1≦A≦26\n* 1≦K≦10^{18}\n* 1≦SA_i≦N\n* i \\neq j ならば SA_i \\neq SA_j\n\nInput\n\n入力は以下の形式に従う．与えられる数は全て整数である．\n\n\nN A K\nSA_1\nSA_2\n...\nSA_N\n\nOutput\n\nSAが得られるような辞書式順序でK番目の文字列を1行に出力せよ．\nK番目の文字列が存在しない場合，\"Impossible\"と出力せよ．",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1141,
+  "source_response_sha256": "51f87be6d201d6f1ea2708c0f606d813a416e22f52e879076ed2f2e787b74033",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

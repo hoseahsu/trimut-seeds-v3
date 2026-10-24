@@ -1,0 +1,25 @@
+{
+  "name": "p01643 Avant-garde Art",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "ICPC World Finals 6日目\n\nロシア構成主義とは、1910年代半ばに始まったソ連における芸術運動である。 R国に長く滞在していたティー氏は、 そのようなものに感化され、 ICPC World Finalsのリハーサル中にも関わらず、 クールなデザインを作ることにした。 ティー氏は語る： 「記号は円と線分だけで充分だ。 線分をいかに美しく交差させるかが重要である。」\n\n問題\n\n円周に\\\\(n\\\\)個の座標\\\\( 1, 2, …, n \\\\)を等間隔に割り当てる。 各座標からはちょうど1本の線分が出ており、 座標\\\\( i \\\\)の線分は異なる座標\\\\( a_{i} \\\\)に結ばれている。 （逆に、座標\\\\( a_{i} \\\\)の線分は座標\\\\( a_{a_{i}} = i \\\\)に結ばれている。） この状態から高々\\\\( k \\\\)本の線分を（座標・長さに関係なく自由に）円周上に結び直すことが出来る。 互いに交差している線分の集合の最大サイズを答えよ。\n\n入力\n\n\nn k\na1 a2 … an\n\n\n1行目に座標の数\\\\(n\\\\)、結び直すことのできる線分の数\\\\(k\\\\)が空白区切りで与えられる。 2行目に座標\\\\(i\\\\)の線分が結ばれる座標を表す\\\\( a_{i} \\\\)が空白区切りで与えられる。\n\n出力\n\n高々\\\\(k\\\\)本の線分を結び直した後に 互いに交差している線分の集合の最大サイズを1行に出力せよ。\n\n制約\n\n* \\\\( 2 \\leq n \\leq 8000 \\\\)\n* \\\\(n\\\\)は偶数\n* \\\\( 0 \\leq k \\leq \\min(n/2, 20) \\\\)\n* \\\\( 1 \\leq a_{i} \\leq n \\\\)\n* \\\\( a_{i} \\not = i \\\\)\n* 線分を自分自身に結ぶことは無い\n* \\\\( a_{i} \\not = a_{j} (i \\not = j) \\\\)\n* 同じ座標に2本以上の線分が結ばれることは無い\n* \\\\( a_{a_{i}} = i \\\\)\n* \\\\(i\\\\)から\\\\(j\\\\)に線分が結ばれているならば、\\\\(j\\\\)から\\\\(i\\\\)に線分が結ばれている\n\n\n\n入出力例\n\n入力1\n\n\n8 0\n7 4 6 2 8 3 1 5\n\n\n出力1\n\n\n2\n\n\n互いに交差する線分は下図の赤い線分で表される。\n\nhttp://k-operafan.info/static/uecpc2013/files/art_sample_1.png\n\n入力2\n\n\n8 1\n7 4 6 2 8 3 1 5\n\n\n出力2\n\n\n3\n\n\n1,7を結ぶ線分を下図のように結び直せば互いに交差する3つの線分が得られる。\n\nhttp://k-operafan.info/static/uecpc2013/files/art_sample_2.png\n\n入力3\n\n\n8 0\n5 6 7 8 1 2 3 4\n\n\n出力3\n\n\n4\n\n\n全ての線分は互いに交差しているため、交差する最大の線分の数は4となる。\n\nhttp://k-operafan.info/static/uecpc2013/files/art_sample_3.png\n\n\n\n",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 134217728,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 2184,
+  "source_response_sha256": "93b6476df95172c723d027b1b46e8461ca11cbce5cd4bc40ef8a8522538504de",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

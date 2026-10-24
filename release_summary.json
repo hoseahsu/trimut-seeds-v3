@@ -1,0 +1,53 @@
+{
+  "schema": "trimut.release.v2",
+  "seed_count": 300,
+  "distinct_public_original_count": 300,
+  "prompt_count": 1200,
+  "conditions": [
+    "raw",
+    "l1",
+    "l2",
+    "l3"
+  ],
+  "raw_l1_identical_test_manifest_count": 300,
+  "l1_kinds": {
+    "narrative_entity_relabel": 153,
+    "formal_object_reinterpretation": 147
+  },
+  "l2_actual_expansion_count": 300,
+  "l2_algorithm_separation_count": 5,
+  "l3_independent_oracle_and_witness_seed_count": 300,
+  "test_occurrences_by_condition": {
+    "raw": 11325,
+    "l1": 11325,
+    "l2": 11705,
+    "l3": 11325
+  },
+  "l3_independent_small_case_total": 6977,
+  "l3_distinguishing_witness_total": 4573,
+  "source_datasets": {
+    "Codeforces official": 2,
+    "CodeContests": 215,
+    "AtCoder official": 3,
+    "Library Checker": 80
+  },
+  "seeds": {
+    "path": "seeds.jsonl",
+    "sha256": "2276dcf4665952e28c07a0f0fd5be2e91db10117bee48adde4be1a9c85fda2a5"
+  },
+  "prompts": {
+    "path": "prompts.jsonl",
+    "sha256": "8d78a9db49f49f150f11a2a70fcfba62326c9606230f5bc454eff280f314696e"
+  },
+  "release_status": "validated_finite_cases_integrity_passed",
+  "limitations": [
+    "Finite empirical validation; no universal correctness guarantee.",
+    "L2 genuine scale expansion does not generally prove forced algorithm change.",
+    "300 different public source identities need not be 300 independent mathematical problem families.",
+    "No human blind review or target-model performance result is claimed."
+  ],
+  "integrity_audit": {
+    "path": "validation/release_integrity.json",
+    "sha256": "61fd51a28180136fd07631dcc0ba43ecd5cb4f9bfb33b5905779c2383aa2c2d1"
+  }
+}

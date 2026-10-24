@@ -1,0 +1,25 @@
+{
+  "name": "p01017 Yu-kun Likes Rectangles",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Background\n\n会津大学付属幼稚園はプログラミングが大好きな子供が集まる幼稚園である。園児の一人であるゆう君は、プログラミングと同じくらい長方形が大好きだ。そんなゆう君は３つの長方形を使って得点を得る新たな遊びを考え、得られる最大の得点を計算するためのプログラムを書くことにした。\n\nProblem\n\nH × W マスの長方形 A , B とh × w マスの長方形 C が与えられる。 ( H, Wはそれぞれ長方形A, Bの縦, 横のマスの数を, h, wはそれぞれ長方形Cの縦, 横のマスの数を表す )\n\n図１のように A の各マスには整数が書かれており、Bの各マスには白または黒の色がついている。 Cの各マスにも同様に白または黒の色がついている。\n\n\n図１\n図1\n\n\nB の中に C と全く同じ模様の長方形があった場合、A の中でその長方形内に対応するマスに書かれている整数の和が得点として手に入る。\n\n例えば図１のような長方形 A, B, C を使う場合、図２の赤線で示すように B の中に C と同じ模様が含まれているので、その場所から193点が得られる。\n\n\n図２\n図2\n\n\nB の中に C と全く同じ模様の長方形が１つ以上存在する場合、そのような長方形の中で最大何点を得ることができるだろうか？\n\nただし、B の中に C と同じ模様の長方形が存在しない場合は\"NA” ( “ は除く ) と出力すること。 また、長方形を回転したり反転することはできない。\n\nConstraints\n\n入力は以下の条件を満たす。\n\n* 入力は全て整数\n* 1 ≤ H,W ≤ 50\n* 1 ≤ h ≤ H\n* 1 ≤ w ≤ W\n* -100 ≤ a(i, j) ≤ 100\n* b(i, j),c(i, j) は0か1\n\nInput\n\n入力の形式は以下の通りである。\n\n\nH W\na(1,1) a(1,2) ... a(1,W)\na(2,1) a(2,2) ... a(2,W)\n:\na(H,1) a(H,2) ... a(H,W)\nb(1,1) b(1,2) ... b(1,W)\nb(2,1) b(2,2) ... b(2,W)\n:\nb(H,1) b(H,2) ... b(H,W)\nh w\nc(1,1) c(1,2) ... c(1,w)\nc(2,1) c(2,2) ... c(2,w)\n:\nc(h,1) c(h,2) ... c(h,w)\n\n\na(i,j) は長方形 A のマス (i, j) に書かれている整数を、b(i,j)は長方形 B のマス(i,j)の色を、c(i,j) は長方形 C のマス(i,j)の色を表す。 マスの色は0 が白、１ が黒を表す。\n\nOutput\n\n長方形Bの中に長方形Cと全く同じ模様の場所が存在する場合、そのような場所の中でもっとも得点が高いものを出力せよ。\n\nそのような場所が存在しない場合, “NA” ( “ は除く ) と出力せよ。",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 510,
+  "source_response_sha256": "7a462efa0e17a98a44e22117d924c2d2e604cdf8882635a7dbc4aeb6c573ec86",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

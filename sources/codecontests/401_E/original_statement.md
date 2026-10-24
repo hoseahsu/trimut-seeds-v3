@@ -1,0 +1,17 @@
+This problem was deleted from the contest, because it was used previously at another competition.
+
+Input
+
+Output
+
+Examples
+
+Input
+
+1 1
+1 2 100
+
+
+Output
+
+6

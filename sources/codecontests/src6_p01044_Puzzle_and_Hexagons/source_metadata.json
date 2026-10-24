@@ -1,0 +1,25 @@
+{
+  "name": "p01044 Puzzle and Hexagons",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Backgorund\n\n超大人気ゲーム「パズル&ヘキサゴンズ」がついにリリースされた。このゲームは超面白すぎてドハマりする人が続出。あまりの熱中度に医師から中毒認定を受ける者も続出した。世界各国の有志達はこのゲームの中毒者達を助けるために「パズル&ヘキサゴンズ」のシミュレータを作り、危険な実機でのプレイを避けるよう促そうとした。あなたにはシミュレータ作りに協力して欲しい。\n\nProblem\n\n正六角形のマスを縦にH個、横にW個敷き詰めた盤面が与えられる。 Fig.1はH=4,W=7の時の盤面とそれに対応するマスの座標(x,y)を示す。\n\n<image>\nFig.1\n\n初期状態で各マスには色のついたブロックが存在する。 ブロックの色は以下のようにアルファベット一文字で表現される。\n\n* 'R' ・・・赤\n* 'G' ・・・緑\n* 'B' ・・・青\n* 'P' ・・・紫\n* 'Y' ・・・黄\n* 'E' ・・・水\n\n\n\n次に操作の数Qが与えられる。\n\n各操作では回転の中心座標(x,y)が与えられ、そのマスの周囲にある6つのブロックを時計回りに一つ回転させることを示す。(Fig.2 参照)。 このとき、ブロックが存在しないマスも空のブロックが存在すると考えて時計回りに一つ回転させる。 ただし、指定された座標とその周辺の６つのマスの内いずれか一つでもH×Wの盤面の中に存在していない場合は回転を行わない。\n\n<image>\nFig.2\n\n次に以下の処理ができなくなるまで繰り返す。\n\n1. Fig.3において、ブロックAの位置からB, C, Dの位置のいずれのマスにもブロックが存在しないとき、ブロックAはCの位置に落下する。マスB, Dが存在しない場合はブロックも存在しないと考え、マスCが存在しない場合は落下の処理を行わない。\n2. 1の処理が可能なブロックが存在する場合は1に戻る。\n3. 同じ色のブロックが3つ以上繋がっている場合、そのブロックは全て消滅する。 2つのブロックが繋がるとはマスの一辺を共有することである。\n\n\n\n注意：この一連の処理は、操作が一つも与えられていない状態（初期状態）でも行われる。\n\n<image>\nFig.3\n\n全ての操作を実行した後の最終的な盤面を出力せよ。\n\nConstraints\n\n* 3 ≤ H ≤ 50\n* 3 ≤ W ≤ 50\n* 0 ≤ x < W\n* 0 ≤ y < H\n* 1 ≤ Q ≤ 100\n* Fi,j ( 0 ≤ i < W , 0 ≤ j < H ) は'R','G','B','P','Y','E'のいずれかである。\n\nInput\n\n入力は以下の形式で与えられる。\n\n\nH W\nF0,H−1 F1,H−1 … FW−1,H−1\nF0,H−2 F1,H−2 … FW−1,H−2\n.\n.\n.\nF0,0 F1,0 … FW−1,0\nQ\nx0 y0\nx1 y1\n.\n.\n.\nxQ−1 yQ−1\n\n\n1行目に、盤面の縦と横のサイズを表す2つの整数HとWが与えられる。 2行目からH+1行目に、各添字に対応する盤面の色を表す文字列が与えられる。 H+2行目に、操作の数Qが与えられる。 続くQ行に回転の中心のマスの座標を表すxとyが与えられる。\n\nOutput\n\n全ての操作を行った後の盤面をH行で出力せよ。 ただし、ブロックが無いマスは'.'で表すこと。",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 2180,
+  "source_response_sha256": "93b6476df95172c723d027b1b46e8461ca11cbce5cd4bc40ef8a8522538504de",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

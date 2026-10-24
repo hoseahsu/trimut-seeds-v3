@@ -1,0 +1,25 @@
+{
+  "name": "p02185 Many Decimal Integers",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "D: Many Decimal Integers\n\n問題\n\n数字 (0 から 9) のみからなる文字列 S と、数字 と `?` のみからなる文字列 T が与えられます。S と T は同じ長さです。\n\nT 内に存在するそれぞれの `?` について、0 から 9 までの数字のいずれか 1 つに変更し、数字のみからなる文字列 T' を作ることを考えます。このとき、f(T') \\leq f(S) である必要があります。ここで f(t) は、文字列 t を 10 進数として読んだときの整数値を返す関数とします。 また、T' の最上位の桁にある数字は 0 であってもよいものとします。\n\nあり得る文字列 T' すべてについて、f(T') の値の総和を 10^9+7 で割った余りを求めてください。なお、条件を満たす T' がひとつも存在しない場合は 0 と答えてください。\n\n入力形式\n\n\nS\nT\n\n\n制約\n\n* 1 \\leq |S| = |T| \\leq 2 \\times 10^5\n* S は数字 (0 から 9) のみからなる文字列\n* T は数字と `?` のみからなる文字列\n\n\n\n出力形式\n\n条件を満たす T' の総和を 10^9+7 で割った余りを一行に出力してください。\n\n入力例1\n\n\n73\n6?\n\n\n出力例1\n\n\n645\n\nT' としてあり得る文字列は、60 から 69 までの 10 通りあります。これらの合計は 645 です。\n\n入力例2\n\n\n42\n?1\n\n\n出力例2\n\n\n105\n\nT' の最上位の桁にある数字は 0 でもよいため、01 も条件を満たします。\n\n入力例3\n\n\n1730597319\n16??35??8?\n\n\n出力例3\n\n\n502295105\n\n10^9 + 7 で割った余りを求めてください。\n\n\n\n",
+  "time_limit": {
+    "seconds": 1,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 518,
+  "source_response_sha256": "7a462efa0e17a98a44e22117d924c2d2e604cdf8882635a7dbc4aeb6c573ec86",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

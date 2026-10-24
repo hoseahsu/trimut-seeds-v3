@@ -1,0 +1,25 @@
+{
+  "name": "p02216 Array Game",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "問題文\n\n長さ $N$ の正整数列 $a_1, a_2, \\ldots, a_N$ があります。\n\nこの数列を用いた、$2$ 人のプレイヤーが先手と後手に分かれて行う以下のゲームを考えます。\n\n* 先手と後手は交互に、以下の操作のどちらかを選んで行う。\n* 数列の正の項を $1$ つ選び、その値を $1$ 減らす。\n* 数列の全ての項が正のとき、全ての項の値を $1$ ずつ減らす。\n\n\n\n先に操作を行えなくなったほうが負けです。\n\n$2$ 人のプレイヤーが最適に行動したとき、先手と後手どちらが勝つかを求めてください。\n\n制約\n\n* $1 \\leq N \\leq 2 \\times 10^5$\n* $1 \\leq a_i \\leq 10^9$\n* 入力は全て整数である\n\n\n\n* * *\n\n入力\n\n入力は以下の形式で標準入力から与えられる。\n\n\n$N$\n$a_1$ $a_2$ $...$ $a_N$\n\n\n出力\n\n先手が勝つときは `First` を、後手が勝つときは `Second` を出力せよ。\n\n* * *\n\n入力例 1\n\n\n2\n1 2\n\n\n出力例 1\n\n\nFirst\n\n\n先手が最初に第 $1$ 項の値を $1$ 減らすと、次に後手は第 $2$ 項の値を $1$ 減らすしかありません。\n\nそのあとで先手が第 $2$ 項の値を $1$ 減らすと、数列の全ての項の値は $0$ になり、 後手は操作を行うことができなくなります。\n\n* * *\n\n入力例 2\n\n\n5\n3 1 4 1 5\n\n\n出力例 2\n\n\nSecond\n\n\n* * *\n\n入力例 3\n\n\n8\n2 4 8 16 32 64 128 256\n\n\n出力例 3\n\n\nSecond\n\n\n* * *\n\n入力例 4\n\n\n3\n999999999 1000000000 1000000000\n\n\n出力例 4\n\n\nFirst\n\n\n\n\n",
+  "time_limit": {
+    "seconds": 2,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 268435456,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 831,
+  "source_response_sha256": "71759bc9e60515e4270d12124e4cc71421604a8d5ef8e612da8579cae7dadd48",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}

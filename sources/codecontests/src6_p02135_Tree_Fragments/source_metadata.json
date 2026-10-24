@@ -1,0 +1,25 @@
+{
+  "name": "p02135 Tree Fragments",
+  "source": 6,
+  "difficulty": 0,
+  "cf_contest_id": 0,
+  "cf_index": "",
+  "cf_points": 0.0,
+  "cf_rating": 0,
+  "cf_tags": [
+    ""
+  ],
+  "is_description_translated": true,
+  "untranslated_description": "Problem\n\nあいちゃんは、$N$個の頂点と$N-1$本の辺からなる木$T$を持っている。各頂点には$1$から$N$までの番号と、正の整数の重みがついている。\n\n次の$Q$回のクエリに順に答えよ。\n\n* $1 \\le a_i,b_i \\le N$($a_i \\ne b_i$)が与えられるので、$T$の$a_i$-$b_i$パス上の頂点とそれに接続する辺を取り除いてできる、いくつかの連結成分の中で、重みが最大となる連結成分の重みを出力する。そのような連結成分が1つもない場合、0と出力する。\n\n\n\nただし、連結成分の重みはその連結成分に含まれる頂点の重みの和で定義される。\n\nOuput\n\nクエリ毎に、0または重みが最大となる連結成分の重みを1行に出力する。\n\nConstraints\n\n入力は以下の条件を満たす。\n\n* $2 \\le N \\le 10^5$\n* $1 \\le Q \\le 10^5$\n* $1 \\le w_i \\le 10^8$($1 \\le i \\le N$)\n* $1 \\le u_i,v_i \\le N$($1 \\le i \\le N-1$)\n* $u_i \\ne v_i$\n* $i \\ne j$なら$(u_i,v_i) \\ne (u_j,v_j)$かつ$(u_i,v_i) \\ne (v_j, u_j)$\n* $1 \\le a_i,b_i \\le N$($1 \\le i \\le Q$)\n* $a_i \\ne b_i$\n\nInput\n\n入力は以下の形式で与えられる。\n\n\n$N$\n$w_1$ $w_2$ ... $w_N$\n$u_1$ $v_1$\n$u_2$ $v_2$\n...\n$u_{N-1}$ $v_{N-1}$\n$Q$\n$a_1$ $b_1$\n$a_2$ $b_2$\n...\n$a_Q$ $b_Q$\n\n\n入力はすべて整数で与えられる。\n\n1行目に$T$の頂点数$N$が与えられる。\n2行目に頂点$i$($1 \\le i \\le N$)の重み$w_i$が空白区切りで与えられる。\n3行目以降の$N$-1行に辺$_i$($1 \\le i \\le N-1$)の端点$u_i,v_i$が空白区切りで与えられる。\n$N$+2行目にクエリの数$Q$が与えられる。\n$N$+3行目以降の$Q$行に、クエリ$_i$($1 \\le i \\le Q$)を表す$a_i,b_i$が空白区切りで与えられる。",
+  "time_limit": {
+    "seconds": 5,
+    "nanos": 0
+  },
+  "memory_limit_bytes": 536870912,
+  "input_file": "",
+  "output_file": "",
+  "origin_row_index": 1249,
+  "source_response_sha256": "0c01fa75f92d53bd7ff402ad8f4fde7a9abcecaefa0cb7874fd6c2c8a1655219",
+  "reference_selection": "first three distinct C++ submissions, or first available other-language submission; not independently certified",
+  "fallback_reference_language_enum": null
+}
