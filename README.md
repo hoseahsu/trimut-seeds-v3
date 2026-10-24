@@ -1,69 +1,69 @@
-# TriMut-300 Strict：300 道公开原题及三层变异
+# TriMut-300 Strict: 300 Public Source Problems and Three Mutation Axes
 
-本包包含 **300 道不同公开原题、1200 份完整题面**，每道题有 Raw、L1、L2、L3。机读入口是 [prompts.jsonl](prompts.jsonl)，逐题目录见 [INDEX.md](INDEX.md)，程序、测试和证据索引见 [seeds.jsonl](seeds.jsonl)。
+Each of the **300 public source problems** in this package exists in four versions — Raw, L1, L2, and L3 — which gives **1,200 statements** in total. The machine-readable entry point is [prompts.jsonl](prompts.jsonl). For a per-seed listing, see [INDEX.md](INDEX.md); programs, tests, and the evidence index are in [seeds.jsonl](seeds.jsonl).
 
-## 四种条件的精确定义
+## Exact Definitions of the Four Conditions
 
-| 条件 | 题面与数学任务 | 数据约束 | 正式测试 |
+| Condition | Statement and mathematical task | Data constraints | Official tests |
 |---|---|---|---|
-| Raw | 未变异的公开原题；保留原始规则、I/O、样例 | 原题原生约束 | 原样例、合法边界、小规模差分、原上界案例及精选来源测试 |
-| L1 | 保持数学语义的叙事、实体或形式对象解释变异 | 与 Raw 完全相同 | **直接引用 Raw 的同一测试清单、输入、答案和资源预算** |
-| L2 | 原规则不变，修改规模上限及必要联动约束 | 相对真正原题扩大 | Raw 全集 + 至少一条确实超出原界的合法扩大域测试 |
-| L3 | 修改比较、逻辑、聚合、状态转移等算子；同步更新相关解释和样例答案 | 原题输入域保持不变 | 与 Raw 相同的输入列表，按新逻辑生成答案 |
+| Raw | Unmutated public source problem; original rules, I/O, and samples preserved | Native constraints of the source problem | Original samples, legal boundaries, small-scale differential tests, original upper-bound cases, and selected source tests |
+| L1 | Narrative, entity, or formal-object reinterpretation that preserves the mathematical semantics | Exactly the same as Raw | **Raw's own test list, inputs, answers, and resource budgets, referenced directly** |
+| L2 | Original rule unchanged; the scale upper bound and the dependent constraints it forces are modified | Widened relative to the true source problem | The full Raw set, plus at least one legal expanded-domain test that really does exceed the original bound |
+| L3 | Comparison, logic, aggregation, and state-transition operators modified, with dependent explanations and sample answers updated to match | Source input domain unchanged | The same input list as Raw, with answers regenerated under the new logic |
 
-Raw 的“未变异”指不改题目语义和原生约束。CodeContests 中排版丢失的上标、公式和插图链接按公开来源恢复；Library Checker 的原文模板用官方参数和样例展开。所有恢复操作保存在每题 `raw_provenance.json`，不将这些格式恢复算成变异。原始来源快照另存于 `sources/`。
+For Raw, "unmutated" means we leave the semantics and the native constraints alone. Where CodeContests typesetting had dropped a superscript, a formula, or an illustration link, we restored it from the public source; we expanded Library Checker's source template with its official parameters and samples. Each repair is logged in the per-seed `raw_provenance.json`, and we do not count a format repair as a mutation. The snapshots themselves are stored unchanged in `sources/`.
 
-L1 共 153 题叙事/实体替换、147 题形式对象重释。每题有可逆编辑证书，核对数字、数学符号、受保护样例以及源文重建；形式题不冒称拥有完整故事换皮。
+L1 splits into 153 narrative/entity substitutions and 147 formal-object reinterpretations. Every seed carries a reversible edit certificate, and that certificate checks four things: numerals, mathematical symbols, protected samples, and reconstruction of the source text. A formal problem in this group is not presented as though it had received a full story rewrite.
 
-## 已完成的验证与边界
+## Verification Completed, and Its Boundaries
 
-300 题均有真实扩大域见证、L3 独立小规模判定程序及至少一个能区分 Raw/L3 的输入；参考程序在冻结预算内通过所记录的合法测试。L3 独立小用例累计 **6977**，记录的区分见证累计 **4573**。计数是各题执行案例数，并非彼此独立的统计样本。
+Three things hold across all 300 seeds: an expanded-domain witness that is real, a small-domain L3 decision program kept independent of the reference, and at least one input on which Raw and L3 disagree. The reference programs pass the recorded legal tests inside the frozen budgets. Independent L3 small cases total **6,977**, and recorded distinguishing witnesses total **4,573**. Both figures count executed cases per seed, so read them as execution counts rather than independent statistical samples.
 
-正式评测用例出现次数：Raw **11325**，L1 **11325**，L2 **11705**，L3 **11325**。Raw/L1 完全共享数据，Raw/L3 共享输入，这些数字不能相加称为独立输入数。
+Official evaluation case occurrences run to **11,325** for Raw, **11,325** for L1, **11,705** for L2, and **11,325** for L3. Raw and L1 use the same data; Raw and L3 use the same inputs. Adding the four figures together yields nothing meaningful, because the sum is not a count of independent inputs.
 
-**L2 的 300/300 指真实规模扩大、合法输入和参考解执行通过。只有 5 题额外验证了“同一慢程序原界通过、扩大域超时”。** 其余题不能直接用于宣称必然发生算法范式迁移；这一状态逐题保存在 `l2_algorithm_resource_separation_validated`。若论文分析 PSR/算法跃迁，请单独使用已校准子集或补充基线校准。
+**The 300/300 for L2 covers three things only: the scale really is expanded, the inputs are legal, and the reference solution runs through. On 5 seeds we went further and confirmed that "the same slow program passes the original bound and times out on the expanded domain."** On the remaining seeds that confirmation was not made, so they do not support a claim that an algorithmic paradigm shift will occur. The per-seed flag `l2_algorithm_resource_separation_validated` records where it was made. If you are analyzing PSR or an algorithmic transition, work from the calibrated subset alone, or add your own baseline calibration.
 
-验证采用有限测试、独立小域对拍、结构案例数学期望和构造性论证，不能保证所有合法输入永无错误。部分大型 L3 答案由经过小域独立验证的高效参考解生成，未逐一独立穷举；每例元数据区分实际证据。上游损坏测试、失败尝试、参考程序容量和平台兼容修复均保留记录。没有填入目标模型准确率、人工盲审或未经执行的实验结果。
+The verification used finite tests, small-domain differential comparison against an independent program, structural-case expectations worked out mathematically, and constructive arguments. None of this guarantees an error-free result on every legal input. Some large L3 answers came from efficient reference solutions that we had verified independently on small domains; we did not enumerate those answers case by case. The per-case metadata states which kind of evidence a case actually carries. Records of upstream corrupted tests, failed attempts, reference-program capacity, and platform compatibility fixes are all retained. You will not find target-model accuracy, human blind review, or unexecuted experimental results filled in anywhere.
 
-## 开始实验
+## Getting Started
 
-`prompts.jsonl` 每行只有 `seed_id`、`condition`、完整 `prompt` 和题面哈希。调用被测模型时，只发送 `prompt` 内容，统一附加输出代码的指令；不要发送答案、变异解释、程序或验证报告。
+Every line of `prompts.jsonl` carries four fields and nothing else: `seed_id`, `condition`, the full `prompt`, and the statement hash. Send the `prompt` content to the model under test, and append the same code-output instruction to every request. Leave out the answers, the mutation explanations, the programs, and the verification reports.
 
-从本目录运行，环境要求 Linux、Python 3、g++、bubblewrap：
+Run these from inside this directory. The environment needs Linux, Python 3, g++, and bubblewrap:
 
 ```bash
-# 核对全部题面、程序、输入、答案与测试清单的完整性
+# Check the integrity of all statements, programs, inputs, answers, and test lists
 python3 tools/audit_release.py
 
-# 对一个模型生成的 C++17 或 Python 文件评测
+# Evaluate one C++17 or Python file produced by a model
 python3 tools/judge.py --seed TM002 --condition l3 --source /absolute/path/answer.cpp
 
-# 使用内置参考程序检查入口；--limit 2 只用于快速试运行
+# Use the built-in reference program to check the entry point; --limit 2 is only for a quick trial run
 python3 tools/judge.py --seed TM002 --condition l3 --reference --limit 2
 ```
 
-去掉 `--limit` 评测该条件全部正式用例。`--case NAME` 可复跑一个用例。程序编译和执行均进入无网络 bubblewrap 沙箱；资源上限读取逐题冻结元数据。输出含 AC/WA/TLE/RE 等逐例结果，完整日志写入 `runs/`。自定义答案题由相应 checker 判定，不用字符串相等强行比较不同合法构造。
+Drop `--limit` and you evaluate every official case of that condition; `--case NAME` reruns a single case. Compilation and execution happen inside a bubblewrap sandbox with no network, and resource limits come from the frozen per-seed metadata. Per-case results, among them AC/WA/TLE/RE, are printed, and the full logs go to `runs/`. Tasks whose answers are not unique are judged by their own checker — string equality is not applied where two different constructions are both legal.
 
-Raw/L1/L2/L3 的模型输出应分别生成；L1 共用 Raw 测试不等于复用 Raw 的模型答案。每道种子作为配对分析单位，**1200 份题面不等于 1200 道独立原题**。同一原题四个版本及相近题族不得跨训练/测试划分；`family_split_groups` 给出已知分组，默认 `unsplit`，不声称穷尽所有语义相似关系。
+Generate the four conditions separately: Raw, L1, L2, and L3 each get their own run. L1 borrows Raw's tests; its answers do not come from Raw's run. For paired analysis the seed is the unit, and **1,200 statements are not 1,200 independent source problems**. Keep all four versions of one source problem on the same side of a train/test split, and keep related problem families together as well. The `family_split_groups` field lists the groupings we know about and defaults to `unsplit`; it does not claim to have found every semantic similarity in the set.
 
-## 文件组织
+## File Layout
 
-- `tasks/TM001/` … `tasks/TM300/`：四份完整题面、来源/编辑证书、冻结输入与答案。
-- `evaluation/TMxxx/`：**统一评测入口**的 Raw、L2、L3 清单；L1 引用 Raw。L2 在这里合并原域和扩大域。
-- `contracts/`：逐题原界、扩大轴、L3 规则、证明思路、执行预算、程序和证据绑定。
-- `validation/`：真实运行记录、独立核验、失败历史与整包完整性审计。
-- `sources/`：公开原题、来源测试、上游参考代码及许可说明；原始快照不被覆盖。
-- `assets/`、`native/`、`library_work/`、`replacements/`：标程、独立判定程序、严格输入校验器、生成器及重建工具。
-- `recipes/`：复用的实现/比较器辅助模块，其中旧版弱约束实验字段是历史实现元数据，**不用于本包题面、约束、预算或评测选择**。这些以 `seeds.jsonl → evaluation/、contracts/` 为准。
-- `release_summary.json`：实际计数、发布状态与校验哈希。
+- `tasks/TM001/` … `tasks/TM300/` — four complete statements per seed, plus its provenance and edit certificates, frozen inputs, and answers.
+- `evaluation/TMxxx/` — the **unified evaluation entry point**: Raw, L2, and L3 manifests. L1 points at Raw, and L2 merges the original domain with the expanded one here.
+- `contracts/` — per-seed original bounds, expansion axes, L3 rules, proof sketches, execution budgets, and the bindings between programs and evidence.
+- `validation/` — real execution records, independent verification, the failure history, and the whole-package integrity audit.
+- `sources/` — public source problems, source tests, upstream reference code, and license notes. Snapshots here are never overwritten.
+- `assets/`, `native/`, `library_work/`, `replacements/` — reference solutions, independent decision programs, strict input validators, generators, and reconstruction tools.
+- `recipes/` — reused implementation and comparator helpers. The legacy weak-constraint experiment fields there are historical implementation metadata, and **this package draws nothing from them for statements, constraints, budgets, or evaluation choices**. Those are governed by `seeds.jsonl → evaluation/, contracts/`.
+- `release_summary.json` — actual counts, release status, and verification hashes.
 
-逐题来源保留原平台题号、CodeContests 行索引或 Library Checker 标识。部分 CodeContests 原平台链接无法确认，明确只给数据集链接与来源快照，不将通用数据集主页冒称原题专属链接。公开题面、图像及上游代码的原许可/版权各自保留；本地研究包不赋予额外的统一转载许可。
+Provenance per seed keeps whatever the source gave us: the platform problem ID, the CodeContests row index, or the Library Checker identifier. Where a CodeContests platform link could not be confirmed, we give the dataset link and the source snapshot rather than a guess; a generic dataset homepage is not presented as a link to the specific problem. Each upstream item — statements, images, code — keeps its own original license and copyright, and this local research package adds no blanket redistribution permission on top.
 
-13 道原题引用的 24 张原始插图已归档在 `sources/original_illustrations/`，URL 与本地路径及哈希映射见 `url_map.json`。19 张已目视检查；5 张 BMP 因预览工具不支持，仅核对原文件与哈希，明确保留这一检查限制。原图对应 Raw，不作为其他变体已完成图文适配认证的依据。
+Thirteen source problems refer to 24 original illustrations, archived in `sources/original_illustrations/`, with the URL-to-local-path and hash mapping in `url_map.json`. We opened 19 of them. The other five are BMPs the preview tool cannot open, so for those we only compared file bytes against the recorded hash; the visual check was not done. These images belong to Raw, and their presence says nothing about whether the other variants have been adapted to match their figures.
 
-## 导出包
+## Export Packages
 
-`trimut_seed300_strict_prompts.zip` 用于查看、导入 1200 份题面，包含逐题文本及 `prompts.jsonl`；它不包含判题数据。完整实验与重现使用 `trimut_seed300_strict_full.tar.zst`，解压命令：
+Use `trimut_seed300_strict_prompts.zip` to view or import the 1,200 statements. It carries the per-seed text and `prompts.jsonl`, and no judging data. For full experiments and reproduction, take `trimut_seed300_strict_full.tar.zst` instead:
 
 ```bash
 tar --zstd -xf trimut_seed300_strict_full.tar.zst
@@ -71,6 +71,6 @@ cd trimut_seed300_strict
 python3 tools/audit_release.py
 ```
 
-完整包保留源代码、输入/答案、合同与运行报告；排除可重新编译的临时程序和 Python 缓存。包外 `trimut_seed300_strict_artifacts.json` 提供导出包大小、哈希与打包核验结果。
+That package keeps source code, inputs and answers, contracts, and run reports, and leaves out recompilable temporary programs and Python caches. Beside it, `trimut_seed300_strict_artifacts.json` records the export sizes, hashes, and packaging verification results.
 
-5 道存在未解决原始描述歧义的候选被不同公开原题替换，记录见 `replacements/index.json`。TM101 的官方样例特意缩短每日字符串，保留为说明用例并单独执行；正式输入域仍要求每天 1440 字符。详细例外见逐题合同。
+Five candidates had source descriptions with ambiguity we could not resolve, and each was replaced by a different public source problem — see `replacements/index.json`. TM101 keeps an official sample whose daily strings are deliberately shortened, and we run it separately as an illustration; the official input domain there still requires 1,440 characters per day. The per-seed contracts list the detailed exceptions.
