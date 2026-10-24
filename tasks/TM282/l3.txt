@@ -1,0 +1,49 @@
+# alternating range sum
+
+## Problem Statement
+
+
+You are given a non-negative integer sequence $A = (a_0, a_1, \ldots, a_{N-1})$ with the length $N$. Process the following $Q$ queries in order:
+
+- You are given integers $l_i$ and $r_i$. Print $\sum_{k=l_i}^{r_i-1} (-1)^{k-l_i}a_k$.
+
+
+## Constraints
+
+- $1 \leq N \leq 500000$
+- $1 \leq Q \leq 500000$
+- $0 \leq a_i \leq 1000000000$
+- $0 \leq l_i < r_i \leq N$
+
+## Input
+
+```
+$N$ $Q$
+$a_0$ $a_1$ $\ldots$ $a_{N-1}$
+$l_1$ $r_1$
+$\vdots$
+$l_Q$ $r_Q$
+```
+
+
+## Sample Input 1
+
+```
+5 5
+1 10 100 1000 10000
+2 3
+0 3
+2 5
+3 4
+0 5
+```
+
+## Sample Output 1
+
+```
+100
+91
+9100
+1000
+9091
+```

@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "point_set_range_frequency",
+  "seed_id": "TM281",
+  "changes": {
+    "Q_MAX": {
+      "native": 200000,
+      "expanded": 400000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/point_set_range_frequency/gen/max.cpp",
+      "generator_sha256": "4fe5433632a82ba633b97cdc459b384a377b5c594ae6075efe7ac371d64c8184",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 200000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM281/tests/l2/expanded_00.in",
+      "input_sha256": "085ba0abfe09048ddbfb2e62282642c20e9d3655f982df3a639c094a14250262",
+      "expected_path": "tasks/TM281/tests/l2/expanded_00.out",
+      "expected_sha256": "b01e482c85f3605e21a4e9124251759e4768901880a42322033a351d091c36fa",
+      "source_reference_run": "validation/library_l2_expanded/point_set_range_frequency/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.16,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.26,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/point_set_range_frequency/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/point_set_range_frequency/gen/max.cpp",
+      "generator_sha256": "4fe5433632a82ba633b97cdc459b384a377b5c594ae6075efe7ac371d64c8184",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 200000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM281/tests/l2/expanded_01.in",
+      "input_sha256": "0976578a240af2c8791cb53bf5376da7fed0f5f7fdd90239294dfa89743d8c3b",
+      "expected_path": "tasks/TM281/tests/l2/expanded_01.out",
+      "expected_sha256": "e3c1b313f02d8fd500e8c4e32650753ec2fe1047855d29a04c4bc05c8948f160",
+      "source_reference_run": "validation/library_l2_expanded/point_set_range_frequency/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.17,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.27,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/point_set_range_frequency/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

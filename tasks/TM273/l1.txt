@@ -1,0 +1,69 @@
+# Junctions
+
+The tree is a weighted route network with numbered junctions.
+
+
+## Problem Statement
+
+
+You are given a weighted undirected tree with $N$ junctions.
+The $i$-th route link bidirectionally connects junctions $a_i$ and $b_i$, and its weight is $c_i$.
+
+Find a pair of junctions $(u, v)$ that are farthest apart, and output the path from $u$ to $v$.
+
+
+
+## Constraints
+
+
+- All input are integers.
+- $1 \leq N \leq 500000$
+- $0 \leq a_i, b_i \leq N - 1$
+- $a_i \neq b_i$
+- $1 \leq c_i \leq 1000000000$
+
+
+
+## Input
+
+```
+$N$
+$a_0$ $b_0$ $c_0$
+$a_1$ $b_1$ $c_1$
+$\vdots$
+$a_{N-2}$ $b_{N-2}$ $c_{N-2}$
+```
+
+## Output
+
+```
+$X$ $Y$
+$u_0$ $u_1$ $\ldots$ $u_{Y-1}$
+```
+
+$X$ is the sum of weights on the path, and $Y$ is the number of junctions on the path.
+$u_i$ and $u_{i+1}$ are the starting and ending junctions of the $i+1$-th route link traveled.
+
+
+
+## Sample
+
+## Sample Input 1
+
+```
+8
+0 1 5
+1 2 3
+2 3 1
+1 4 2
+4 7 4
+1 5 7
+2 6 5
+```
+
+## Sample Output 1
+
+```
+15 4
+6 2 1 5
+```

@@ -1,0 +1,83 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "rooted_tree_isomorphism_classification",
+  "seed_id": "TM274",
+  "changes": {
+    "N_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rooted_tree_isomorphism_classification/gen/max_random.cpp",
+      "generator_sha256": "14dc04b4aaec086ce5f4ae02de1842b7dcb7d2137c2d8044164dd432dc28e2c2",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM274/tests/l2/expanded_00.in",
+      "input_sha256": "782fc2f46735b020bd80e9eb2306f895f766488da1ea3b6ce3103e6c2258e61d",
+      "expected_path": "tasks/TM274/tests/l2/expanded_00.out",
+      "expected_sha256": "ce9bf4bc26203b6595fea344ee7c4bbea95df550d01031477d59d897667f6e7f",
+      "source_reference_run": "validation/library_l2_expanded/rooted_tree_isomorphism_classification/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.24,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.25,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rooted_tree_isomorphism_classification/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rooted_tree_isomorphism_classification/gen/max_random.cpp",
+      "generator_sha256": "14dc04b4aaec086ce5f4ae02de1842b7dcb7d2137c2d8044164dd432dc28e2c2",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM274/tests/l2/expanded_01.in",
+      "input_sha256": "be8beb53541f5042118c863e1f730d75822d62f5a449fe2e1db54433ae978bfa",
+      "expected_path": "tasks/TM274/tests/l2/expanded_01.out",
+      "expected_sha256": "260ecfa27b278a084ea9d362d7dc57b014263c294ad09deac14950634c584e63",
+      "source_reference_run": "validation/library_l2_expanded/rooted_tree_isomorphism_classification/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.26,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.26,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rooted_tree_isomorphism_classification/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

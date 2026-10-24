@@ -1,0 +1,98 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "maximum_independent_set",
+  "seed_id": "TM276",
+  "changes": {
+    "N_MAX": {
+      "native": 40,
+      "expanded": 42
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/maximum_independent_set/gen/max_random.cpp",
+      "generator_sha256": "04fd921f03ed7cc1c14c0e3dbac91c234fd5d69d73d84c01dd2ddaa1f25e763f",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 42,
+        "Q": 692,
+        "M": 692
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 40,
+          "actual": 42,
+          "expanded_upper_bound": 42
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM276/tests/l2/expanded_00.in",
+      "input_sha256": "0883964dd1b8d6cc828e7fc6300f8190b93e8a6f594804383888f8374f0090d6",
+      "expected_path": "tasks/TM276/tests/l2/expanded_00.out",
+      "expected_sha256": "39a12451568549ca519bf74e7256c1d5d66f4f86820b7d9794996db3f49e1358",
+      "source_reference_run": "validation/library_l2_expanded/maximum_independent_set/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.0012150000000000008,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.0013940000000000003,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_strict_program_repairs/maximum_independent_set/expanded_raw/expanded_00.run.json",
+      "pre_repair_fast_run": "validation/library_l2_expanded/maximum_independent_set/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/maximum_independent_set/gen/max_random.cpp",
+      "generator_sha256": "04fd921f03ed7cc1c14c0e3dbac91c234fd5d69d73d84c01dd2ddaa1f25e763f",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 42,
+        "Q": 197,
+        "M": 197
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 40,
+          "actual": 42,
+          "expanded_upper_bound": 42
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM276/tests/l2/expanded_01.in",
+      "input_sha256": "f57b1291fd7852d3808c3801ed7a13bb6d505c46659f4a09f97c3fcef9009320",
+      "expected_path": "tasks/TM276/tests/l2/expanded_01.out",
+      "expected_sha256": "5ebcb55c0ee8ded104e20db7da047b01d1d40783b51b05bc42ab35cf1ac3ccfe",
+      "source_reference_run": "validation/library_l2_expanded/maximum_independent_set/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.0015640000000000003,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.001255,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_strict_program_repairs/maximum_independent_set/expanded_raw/expanded_01.run.json",
+      "pre_repair_fast_run": "validation/library_l2_expanded/maximum_independent_set/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/maximum_independent_set/sol/correct.cpp",
+      "reason": "increase fixed clique bitset capacity40 to42 only; no algorithm change"
+    }
+  ],
+  "strict_program_override": {
+    "raw_fast": "../library_work/strict_programs/maximum_independent_set/raw_fast.cpp",
+    "repair_reason": "Raw/L2 clique-complement algorithm is unchanged; its fixed bitset capacity is increased from40 to42 to support the expanded original N bound. Native L3 remains at original N<=40."
+  }
+}

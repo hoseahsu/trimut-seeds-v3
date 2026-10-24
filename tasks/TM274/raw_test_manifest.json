@@ -1,0 +1,479 @@
+{
+  "schema_version": "library-native-tests-v1",
+  "seed_id": "TM274",
+  "source_id": "rooted_tree_isomorphism_classification",
+  "test_scope": "selected reproducible native-domain experimental subset; not complete official hidden test suite",
+  "raw_l1_policy": "Raw and L1 must reference this exact same immutable manifest and all input/expected bytes",
+  "contains_all_original_samples": true,
+  "native_upper_bound_reached": true,
+  "source_verifier_path": "sources/library-checker-problems-master/tree/rooted_tree_isomorphism_classification/verifier.cpp",
+  "source_verifier_sha256": "60bcb0502677c7c41b6f8f29e4ba07b28999ef9783504c96eec9e943415610a5",
+  "native_params": {
+    "N_MIN": 1,
+    "N_MAX": 500000
+  },
+  "records": [
+    {
+      "name": "example_00",
+      "kind": "original_sample",
+      "official_name": "example_00",
+      "input_path": "tasks/TM274/tests/raw/example_00.in",
+      "input_sha256": "d88c0faa296841e5407e129b9e503f07d0a0aba42cdc2c3e6d83de247ce7e2c1",
+      "expected_path": "tasks/TM274/tests/raw/example_00.out",
+      "expected_sha256": "a32bb36ccc5799ea9991c8bf704f32f70aa35719455e73277690cfc16c1e0a50",
+      "dimensions": {
+        "N": 11
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/example_00.run.json",
+      "reference_cpu_seconds": 0.0016840000000000188,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.001722999999999697,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/example_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "example_01",
+      "kind": "original_sample",
+      "official_name": "example_01",
+      "input_path": "tasks/TM274/tests/raw/example_01.in",
+      "input_sha256": "ac2d9236588cfc9d715b45c34c1b8fc002f54839463330e5d6ac17d7a9360be6",
+      "expected_path": "tasks/TM274/tests/raw/example_01.out",
+      "expected_sha256": "f7153049210008085d8b5e9ebcb3583758074b9de938625fb426254ba41f0030",
+      "dimensions": {
+        "N": 5
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/example_01.run.json",
+      "reference_cpu_seconds": 0.0018039999999999168,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.001758999999999844,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/example_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "small_random_00",
+      "kind": "native_small_structural",
+      "official_name": "small_random_00",
+      "generator": "sources/library-checker-problems-master/tree/rooted_tree_isomorphism_classification/gen/small_random.cpp",
+      "generator_sha256": "addc77a258ab1434b73197e7adf37f3f2c46a094a069ca9ad3fd79d6be0bda65",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM274/tests/raw/small_random_00.in",
+      "input_sha256": "95a7b57bad9e545d0c571c55c3138e90704ca7345f0662d94d94fa2483206e7d",
+      "expected_path": "tasks/TM274/tests/raw/small_random_00.out",
+      "expected_sha256": "64af82f71907b6e27344f6913c71b0ee640ba828831a43ebe83b6e11c4e460e0",
+      "dimensions": {
+        "N": 92
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/small_random_00.run.json",
+      "reference_cpu_seconds": 0.001650999999999847,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0018890000000002516,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/small_random_00.run.json"
+      }
+    },
+    {
+      "name": "max_random_00",
+      "kind": "native_scale_candidate",
+      "official_name": "max_random_00",
+      "generator": "sources/library-checker-problems-master/tree/rooted_tree_isomorphism_classification/gen/max_random.cpp",
+      "generator_sha256": "14dc04b4aaec086ce5f4ae02de1842b7dcb7d2137c2d8044164dd432dc28e2c2",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM274/tests/raw/max_random_00.in",
+      "input_sha256": "7e43d747bc67de1a1e23a2dea3af5527658086c53bbb79a75b4f72d89e32c25f",
+      "expected_path": "tasks/TM274/tests/raw/max_random_00.out",
+      "expected_sha256": "cdf9be746e060c47d7dc5fd0119f56dd1cea0c51e60892a4f6f1b20adcf78eb3",
+      "dimensions": {
+        "N": 500000
+      },
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "value": 500000
+        }
+      ],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/max_random_00.run.json",
+      "reference_cpu_seconds": 0.1,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.09,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/max_random_00.run.json"
+      }
+    },
+    {
+      "name": "max_line_00",
+      "kind": "native_structural_boundary",
+      "official_name": "max_line_00",
+      "generator": "sources/library-checker-problems-master/tree/rooted_tree_isomorphism_classification/gen/max_line.cpp",
+      "generator_sha256": "a87ea55e7442d419229fb25a1ee4dd97a87680325365809b33059f0c2298ede7",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM274/tests/raw/max_line_00.in",
+      "input_sha256": "277f33891650ea21505bd4c8964e1f994be37f9b9f17a7100bfee3b25b7099d5",
+      "expected_path": "tasks/TM274/tests/raw/max_line_00.out",
+      "expected_sha256": "856e4fdb9b41cd7b041b3548a7dcb94d060e6da59e64ff2db7eb238a7c7eee1b",
+      "dimensions": {
+        "N": 500000
+      },
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "value": 500000
+        }
+      ],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/max_line_00.run.json",
+      "reference_cpu_seconds": 0.22,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.17,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/max_line_00.run.json"
+      }
+    },
+    {
+      "name": "authored_boundary_00",
+      "kind": "authored_boundary",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_boundary_00.in",
+      "input_sha256": "5ad31677fb128ce9377262dbdfecc906a6608f00837f781fe5deeb022cfe61cc",
+      "expected_path": "tasks/TM274/tests/raw/authored_boundary_00.out",
+      "expected_sha256": "2e2c5cda6f5cd3ce837772ce8b12b2019a7e9fb47395a5d2da07745a8971e212",
+      "dimensions": {
+        "N": 9
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_boundary_00.run.json",
+      "reference_cpu_seconds": 0.0020620000000000083,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0022859999999998437,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_boundary_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_boundary_01",
+      "kind": "authored_boundary",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_boundary_01.in",
+      "input_sha256": "5a0a2b76858bf8cc147613f783d84cd22c0047d142ba0d9ce13fcedf953b57ed",
+      "expected_path": "tasks/TM274/tests/raw/authored_boundary_01.out",
+      "expected_sha256": "5d90ef7fc0d040fd56a1e48697cfa99e0dfaf4fd803aefefc3b5053ec1d36aea",
+      "dimensions": {
+        "N": 1
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_boundary_01.run.json",
+      "reference_cpu_seconds": 0.0024779999999999802,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0023669999999996194,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_boundary_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_00",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_00.in",
+      "input_sha256": "370b6e2dfa5a0ed705323bb0659e50824d492b663aa20c7e7875d83b8f5fa563",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_00.out",
+      "expected_sha256": "e1147b7711941d1c7f966fda5cad5182b128c4da282af26c5ab393a1b7a4cb7e",
+      "dimensions": {
+        "N": 12
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_00.run.json",
+      "reference_cpu_seconds": 0.0024199999999998667,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0022820000000001173,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_01",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_01.in",
+      "input_sha256": "31e0d075e85344f11464c8089cd682440ccb6040a0184ac13974c82ff3edb202",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_01.out",
+      "expected_sha256": "779fdd8d9f917687d2efa9ae4bc1fe0c23b786c828ae9e5621bb5bd313b93105",
+      "dimensions": {
+        "N": 10
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_01.run.json",
+      "reference_cpu_seconds": 0.0021300000000001873,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0018870000000000275,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_02",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_02.in",
+      "input_sha256": "3534a822616544f192e7efe736ad1307f9395a1ea9cf88473cc8fc592e2bc0dd",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_02.out",
+      "expected_sha256": "7ad0bc101f55b18231a333e555dd2f23b87b78362ba4a1a290a8308ff9b76656",
+      "dimensions": {
+        "N": 12
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_02.run.json",
+      "reference_cpu_seconds": 0.0016499999999997073,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.001968000000000192,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_02.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_03",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_03.in",
+      "input_sha256": "350b07a6fbe5584b204e47e24f31114117285cf59d91106be39d8bc263bafcdb",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_03.out",
+      "expected_sha256": "23b2d77e7487663499cc9059a72d9442a997d965f80acf36de26d26ef6ff7303",
+      "dimensions": {
+        "N": 8
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_03.run.json",
+      "reference_cpu_seconds": 0.0017179999999998863,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0016510000000003466,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_03.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_04",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_04.in",
+      "input_sha256": "d111243f807f35a1083938d0483c5da242c11ba9cbfaf4592a1a9ebc76ef5f78",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_04.out",
+      "expected_sha256": "56f4816d6ae94cb34ab1f6874dffb0835eb6d79feec3a9471940f463dc6da53f",
+      "dimensions": {
+        "N": 14
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_04.run.json",
+      "reference_cpu_seconds": 0.0017279999999999518,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017130000000000756,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_04.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_05",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_05.in",
+      "input_sha256": "b23152475fd640689c8953cf5166ad3f7f5d504072392b030b8959163521b624",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_05.out",
+      "expected_sha256": "66acb879bc28ac8937a6394d1055ec6bb3ff011f4778df0b09efd69a9512ee9c",
+      "dimensions": {
+        "N": 7
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_05.run.json",
+      "reference_cpu_seconds": 0.0020830000000000015,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0022289999999998145,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_05.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_06",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_06.in",
+      "input_sha256": "a22f50cb8f76da5ae23e8465fe0fdbe0fe55b5e3b9a82bda38805723d822309a",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_06.out",
+      "expected_sha256": "ec0f05ff9f1f267c1625af361496f9858601bd49373e933c71a62f98c50b75fb",
+      "dimensions": {
+        "N": 16
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_06.run.json",
+      "reference_cpu_seconds": 0.0021010000000000195,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.00216700000000003,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_06.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_07",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch5.py",
+      "generator_recipe_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM274/tests/raw/authored_small_07.in",
+      "input_sha256": "cbb489ec2ff21c4c0838dd1aa0750a45c5ee0134103629615e9c9954d7a5ecb0",
+      "expected_path": "tasks/TM274/tests/raw/authored_small_07.out",
+      "expected_sha256": "6dae586a45160a11ce8d8b46ec875a2a767f0daa412d4468fc7d7465bb434e30",
+      "dimensions": {
+        "N": 6
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/rooted_tree_isomorphism_classification/raw_reference/authored_small_07.run.json",
+      "reference_cpu_seconds": 0.002035000000000231,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0020400000000000418,
+        "report": "validation/library_native_domain/rooted_tree_isomorphism_classification/l3_fast/authored_small_07.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    }
+  ],
+  "rejected_authored_cases": [],
+  "test_count": 15,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false
+}

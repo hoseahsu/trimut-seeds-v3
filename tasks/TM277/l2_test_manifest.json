@@ -1,0 +1,88 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "chromatic_number",
+  "seed_id": "TM277",
+  "changes": {
+    "MAX_N": {
+      "native": 20,
+      "expanded": 21
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 21,
+        "Q": 81,
+        "M": 81
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "MAX_N",
+          "dimension": "N",
+          "native_upper_bound": 20,
+          "actual": 21,
+          "expanded_upper_bound": 21
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM277/tests/l2/expanded_00.in",
+      "input_sha256": "4603f0794c942f5b723b0b4d2b7edd41395cc496d717ea3e4e0d847f3cfa2519",
+      "expected_path": "tasks/TM277/tests/l2/expanded_00.out",
+      "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "source_reference_run": "validation/library_l2_expanded/chromatic_number/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 7.67,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.001475000000000004,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/chromatic_number/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 21,
+        "Q": 142,
+        "M": 142
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "MAX_N",
+          "dimension": "N",
+          "native_upper_bound": 20,
+          "actual": 21,
+          "expanded_upper_bound": 21
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM277/tests/l2/expanded_01.in",
+      "input_sha256": "5b075b8c0ab1c1fca94691343a306e63dafb46dc610e1d3f20cd0343c59c0ed2",
+      "expected_path": "tasks/TM277/tests/l2/expanded_01.out",
+      "expected_sha256": "aa67a169b0bba217aa0aa88a65346920c84c42447c36ba5f7ea65f422c1fe5d8",
+      "source_reference_run": "validation/library_l2_expanded/chromatic_number/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 7.68,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.0015340000000000006,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/chromatic_number/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/chromatic_number/sol/correct.cpp",
+      "reason": "increase fixed array capacity to21 only; no algorithm change"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+# Work units
+
+The rooted tree describes prerequisite relationships between numbered work units.
+
+
+## Problem Statement
+
+
+
+You are given :
+
+* a rooted tree of $N$ work units ,
+* $N$ integers $c _ 0 , c _ 1 , \dots , c _ {N-1}$ and
+* $N$ integers $d _ 0 , d _ 1 , \dots , d _ {N-1}$.
+
+The root of the tree is the work unit $0$ , and the parent of the work unit $i$ is $p _ i$ .
+
+Find one permutation $p$ of $(0,1,\dots ,N-1)$ which satisfies following condition. If there are multiple candidates, you can choose any of them.
+
+* If $i\neq j$ and the work unit $p _ i$ is an ancestor of the work unit $p _ j$, $i \lt j$ holds.
+* Among one that satisfies the condition above, the value $X=\sum _ {i=0} ^ {N-1} \sum _ {j=0} ^ {i-1} c _ {p _ i} d _ {p _ j}$ is minimized.
+
+Output the minimum value of $X$ and a possible permutation $p$ with the value $X$ is minimized.
+
+
+
+
+## Constraints
+
+- $1 \leq N \leq 200000$
+- $0 \leq p _ i \lt i$
+- $0 \leq c _ i \leq 1000000000$
+- $0 \leq d _ i \leq 1000000000$
+- $\sum _ {i=0} ^ {N-1} c _ i \leq 1000000000$
+- $\sum _ {i=0} ^ {N-1} d _ i \leq 1000000000$
+
+## Input
+
+~~~
+$N$
+$p _ 1$ $p _ 2$ ... $p _ {N-1}$
+$c _ 0$ $c _ 1$ ... $c _ {N-1}$
+$d _ 0$ $d _ 1$ ... $d _ {N-1}$
+~~~
+
+## Output
+
+~~~
+$X$
+$p _ 0$ $p _ 1$ $\ldots$ $p _ {N-1}$
+~~~
+
+## Sample
+
+## Sample Input 1
+
+```
+10
+0 0 0 1 2 2 4 7 8
+41 10 46 7 30 4 30 12 48 32
+47 38 25 31 37 48 16 17 34 13
+```
+
+## Sample Output 1
+
+```
+29047
+0 2 6 1 4 7 8 9 3 5
+```
+
+## Sample Input 2
+
+```
+5
+0 0 1 2
+1 100000000 1 1 100000000
+1 1 100000000 100000000 1
+```
+
+## Sample Output 2
+
+```
+10000000400000005
+0 1 2 4 3
+```

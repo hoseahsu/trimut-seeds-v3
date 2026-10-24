@@ -1,0 +1,101 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "vertex_set_path_composite",
+  "seed_id": "TM275",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 200000,
+      "expanded": 400000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/vertex_set_path_composite/gen/max_random.cpp",
+      "generator_sha256": "1363ffd89db17e2dd5b48955581c7ac6ce93a40be4d37301d7bdea25cd5f6cdc",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM275/tests/l2/expanded_00.in",
+      "input_sha256": "3c6e25bdf8e31b0ac30cb9dd244a8b4840143c4b580176027c5f69876ffeffd1",
+      "expected_path": "tasks/TM275/tests/l2/expanded_00.out",
+      "expected_sha256": "f8fcd7893a6d6317a7487f4142bd8fe6e48c1f275adaa8cf2d7abba8d8457c77",
+      "source_reference_run": "validation/library_l2_expanded/vertex_set_path_composite/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.43,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.43,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/vertex_set_path_composite/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/vertex_set_path_composite/gen/max_random.cpp",
+      "generator_sha256": "1363ffd89db17e2dd5b48955581c7ac6ce93a40be4d37301d7bdea25cd5f6cdc",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM275/tests/l2/expanded_01.in",
+      "input_sha256": "545e889ea1dd06cbf0ff88f5e3abf43df2748433f09c070357d72c57df9ab9c8",
+      "expected_path": "tasks/TM275/tests/l2/expanded_01.out",
+      "expected_sha256": "44127ac9ca77ac8a42dbb24372a3a0ed66e08e7ad92122a2c526b23b7d0807e9",
+      "source_reference_run": "validation/library_l2_expanded/vertex_set_path_composite/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.41,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.39,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/vertex_set_path_composite/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

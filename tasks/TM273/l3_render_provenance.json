@@ -1,0 +1,28 @@
+{
+  "semantic_edits": [
+    {
+      "original": "Find a pair of vertices $(u, v)$ that are farthest apart, and output the path from $u$ to $v$.",
+      "replacement": "For a simple path, define its score as the largest edge weight on it; the score of a singleton path is $0$. Find a simple path of maximum score and output it.",
+      "occurrences": 1
+    },
+    {
+      "original": "the sum of weights on the path",
+      "replacement": "the largest edge weight on the path (or $0$ for a singleton path)",
+      "occurrences": 1
+    }
+  ],
+  "additional_definitions": null,
+  "native_constraints_identical": true,
+  "samples": [
+    {
+      "name": "example_00",
+      "input_sha256": "de4adbbc39d2d715c5001574ce6a8e3c74b912e160ce57f24168f62846c08f04",
+      "l3_output_sha256": "619b165458ecb2af8b5fef9c2e0cfdfe078a008e75599d29f7b7c0dffdd75751",
+      "l3_output_path": "validation/library_native_domain/tree_diameter/l3_fast/example_00.stdout"
+    }
+  ],
+  "raw_sha256": "fc2e945dfc4c5ead3d994314de4dacc9e1f8cf022913d950766b30cc1fb595db",
+  "l3_sha256": "d3b43b4abe2f6a63d718fd679e19a529ca0673ffdea11b511266c4bc008425fc",
+  "source_id": "tree_diameter",
+  "seed_id": "TM273"
+}

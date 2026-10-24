@@ -1,0 +1,101 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "range_linear_add_range_min",
+  "seed_id": "TM285",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 100000,
+      "expanded": 200000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/range_linear_add_range_min/gen/max_random.cpp",
+      "generator_sha256": "bffdf546e4cd7100e1fec475504800eaa574454995baf70c14a82ddbb85af481",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 200000,
+        "Q": 200000,
+        "M": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM285/tests/l2/expanded_00.in",
+      "input_sha256": "9c923d5198d9bb12242ba4dd16358de60a41cedca0ca6f9d1d708028c4ac55c8",
+      "expected_path": "tasks/TM285/tests/l2/expanded_00.out",
+      "expected_sha256": "300a46c0d269407603fed42d06a8877f02e2a2559d996ae2b511f6ab3a1634d8",
+      "source_reference_run": "validation/library_l2_expanded/range_linear_add_range_min/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.78,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.85,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/range_linear_add_range_min/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/range_linear_add_range_min/gen/max_random.cpp",
+      "generator_sha256": "bffdf546e4cd7100e1fec475504800eaa574454995baf70c14a82ddbb85af481",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 200000,
+        "Q": 200000,
+        "M": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM285/tests/l2/expanded_01.in",
+      "input_sha256": "82c08ac38af4ac43af77603f73cf17ffa7ea202b17341806f6a6dfe52542df61",
+      "expected_path": "tasks/TM285/tests/l2/expanded_01.out",
+      "expected_sha256": "bb629e22da5bede193f5910669daac30b1e07d39998ae4eaa9353274174f8816",
+      "source_reference_run": "validation/library_l2_expanded/range_linear_add_range_min/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.78,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.78,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/range_linear_add_range_min/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

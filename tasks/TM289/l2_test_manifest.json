@@ -1,0 +1,83 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "rooted_tree_topological_order_with_minimum_inversions",
+  "seed_id": "TM289",
+  "changes": {
+    "N_MAX": {
+      "native": 200000,
+      "expanded": 400000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rooted_tree_topological_order_with_minimum_inversions/gen/max_random.cpp",
+      "generator_sha256": "1930cb2369cd75b0b45e9fecad81cb60bc0865f75906d830b381d07378b6311c",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM289/tests/l2/expanded_00.in",
+      "input_sha256": "7259442e4b727b1061ba3adff8ee0e97e0c4de61be71e57222c99081c405defc",
+      "expected_path": "tasks/TM289/tests/l2/expanded_00.out",
+      "expected_sha256": "94606c04d63e1d7d96d9ba06eb5b5c908635d99cac0b8dc310dd6b3b1a840312",
+      "source_reference_run": "validation/library_l2_expanded/rooted_tree_topological_order_with_minimum_inversions/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.2,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.21,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rooted_tree_topological_order_with_minimum_inversions/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/rooted_tree_topological_order_with_minimum_inversions/gen/max_random.cpp",
+      "generator_sha256": "1930cb2369cd75b0b45e9fecad81cb60bc0865f75906d830b381d07378b6311c",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM289/tests/l2/expanded_01.in",
+      "input_sha256": "cdf3aeec6312d8dc67a19248a4004ea82e22655382aaa380716986f219233248",
+      "expected_path": "tasks/TM289/tests/l2/expanded_01.out",
+      "expected_sha256": "b722afa496684755380fdca1078997ca0a7336bd88f0d3ee09faa7610c36e462",
+      "source_reference_run": "validation/library_l2_expanded/rooted_tree_topological_order_with_minimum_inversions/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.19,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.19,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/rooted_tree_topological_order_with_minimum_inversions/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

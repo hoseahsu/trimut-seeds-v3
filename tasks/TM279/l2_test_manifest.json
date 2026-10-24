@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "counting_spanning_tree_directed",
+  "seed_id": "TM279",
+  "changes": {
+    "M_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/counting_spanning_tree_directed/gen/max.cpp",
+      "generator_sha256": "1fd0618f3891d2d33bc967baea6e2adbde58a96137bcfad43bf878921c74bf23",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 500,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "M_MAX",
+          "dimension": "M",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM279/tests/l2/expanded_00.in",
+      "input_sha256": "1f33b63157cab1357a37efa87fceca47c939e07d72fb12b9f6a08104016f0b03",
+      "expected_path": "tasks/TM279/tests/l2/expanded_00.out",
+      "expected_sha256": "2922fce7429b429c71cee1b297deefc0ea85d7800b83aa187d5d634bcb5b1696",
+      "source_reference_run": "validation/library_l2_expanded/counting_spanning_tree_directed/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.13,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.08,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/counting_spanning_tree_directed/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/counting_spanning_tree_directed/gen/max.cpp",
+      "generator_sha256": "1fd0618f3891d2d33bc967baea6e2adbde58a96137bcfad43bf878921c74bf23",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 500,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "M_MAX",
+          "dimension": "M",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM279/tests/l2/expanded_01.in",
+      "input_sha256": "52c4313bbab1df564f797ff6bb719aa9c361bfff58af8792979f293522ee201f",
+      "expected_path": "tasks/TM279/tests/l2/expanded_01.out",
+      "expected_sha256": "ce24321f57ecbabbffc882b003298ed55be448b26d50fc47eb876564fba8dd25",
+      "source_reference_run": "validation/library_l2_expanded/counting_spanning_tree_directed/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.14,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.08,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/counting_spanning_tree_directed/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

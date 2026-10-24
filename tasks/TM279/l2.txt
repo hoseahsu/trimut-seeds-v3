@@ -1,0 +1,100 @@
+# Counting Spanning Trees (Directed)
+
+## Problem Statement
+
+
+You are given a directed graph, consisting of $N$ vertices and $M$ edges. The $i$-th edge is directed from vertex $u_i$ to vertex $v_i$. This graph may not be simple.
+You are also given a vertex $r$. 
+
+Find the number of directed spanning trees whose root is the vertex $r$ (it means that all the vertices have to be reachable from $r$), modulo $998244353$. 
+
+
+
+## Constraints
+
+- $1 \leq N \leq 500$
+- $0 \leq M \leq 1000000$
+- $0 \leq r \lt N$
+- $0 \leq u_i \lt N$
+- $0 \leq v_i \lt N$
+
+
+## Input
+
+```
+$N$ $M$ $r$
+$u_0$ $v_0$
+$u_1$ $v_1$
+$u_2$ $v_2$
+$\vdots$
+$u_{M-1}$ $v_{M-1}$
+```
+
+## Sample
+
+## Sample Input 1
+
+```
+3 5 2
+0 1
+0 1
+1 2
+2 1
+2 0
+```
+
+## Sample Output 1
+
+```
+3
+```
+
+## Sample Input 2
+
+```
+1 2 0
+0 0
+0 0
+```
+
+## Sample Output 2
+
+```
+1
+```
+
+## Sample Input 3
+
+```
+4 4 3
+0 1
+1 0
+2 3
+3 2
+```
+
+## Sample Output 3
+
+```
+0
+```
+
+## Sample Input 4
+
+```
+4 8 2
+0 1
+0 3
+2 1
+3 1
+3 0
+3 0
+2 3
+1 3
+```
+
+## Sample Output 4
+
+```
+8
+```

@@ -1,0 +1,102 @@
+# Vertex Set Path Composite
+
+## Problem Statement
+
+
+Given an $N$ vertices tree. Edges are $(u_i, v_i)$ and a linear function $f_i(x) = a_i x + b_i$ is written on the vertex $i$ for each $i$. Process $Q$ queries as follows:
+
+- `0 $p$ $c$ $d$`: Set $f_p \gets cx + d$
+- `1 $u$ $v$ $x$`: Let vertices on the path between $u$ and $v$ be $p_1 = u, p_2, ..., p_k = v$. Print $f_{p_k}(...f_{p_2}(f_{p_1}(x))) \bmod 998244353$
+
+
+## Constraints
+
+- $1 \leq N, Q \leq 400000$
+- $1 \leq a_i, c < 998244353$
+- $0 \leq b_i, d, x < 998244353$
+- $0 \leq p < N$
+- $0 \leq u, v < N$
+
+## Input
+
+~~~
+$N$ $Q$
+$a_0$ $b_0$
+$a_1$ $b_1$
+:
+$a_{N - 1}$ $b_{N - 1}$
+$u_0$ $v_0$
+$u_1$ $v_1$
+:
+$u_{N - 2}$ $v_{N - 2}$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q - 1}$
+~~~
+
+## Sample Input 1
+
+```
+5 5
+1 2
+3 4
+5 6
+7 8
+9 10
+0 1
+1 2
+2 3
+2 4
+1 0 3 11
+1 2 4 12
+0 2 13 14
+1 0 4 15
+1 2 2 16
+```
+
+## Sample Output 1
+
+```
+1555
+604
+6571
+222
+```
+
+## Sample Input 2
+
+```
+7 7
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+0 1
+1 2
+0 3
+3 4
+0 5
+5 6
+1 2 4 1
+1 4 6 1
+1 6 2 1
+0 1 20 30
+1 2 4 1
+1 4 6 1
+1 6 2 1
+```
+
+## Sample Output 2
+
+```
+411
+2199
+607
+3471
+2199
+6034
+```
