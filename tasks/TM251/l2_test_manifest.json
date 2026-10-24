@@ -1,0 +1,83 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "lcm_convolution",
+  "seed_id": "TM251",
+  "changes": {
+    "N_MAX": {
+      "native": 1000000,
+      "expanded": 2000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/lcm_convolution/gen/max_random.cpp",
+      "generator_sha256": "b8992624173b2be3367cba74db6289feb61c63fe9025831f323dcc1e140c8fec",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 2000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 1000000,
+          "actual": 2000000,
+          "expanded_upper_bound": 2000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM251/tests/l2/expanded_00.in",
+      "input_sha256": "96ba614050a8e53c9b703d3d82da83a4efa7ebfd66abddde37f6939596e59eb6",
+      "expected_path": "tasks/TM251/tests/l2/expanded_00.out",
+      "expected_sha256": "ceb866a83be2c90a20d599d8444547fcdc30a40c072de63cc4b9bab9fe481afa",
+      "source_reference_run": "validation/library_l2_expanded/lcm_convolution/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.51,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.59,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/lcm_convolution/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/lcm_convolution/gen/max_random.cpp",
+      "generator_sha256": "b8992624173b2be3367cba74db6289feb61c63fe9025831f323dcc1e140c8fec",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 2000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 1000000,
+          "actual": 2000000,
+          "expanded_upper_bound": 2000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM251/tests/l2/expanded_01.in",
+      "input_sha256": "c5bd5a1449dad0d1a2fb3ed463818afbce56a13708920aec9480a6270aa4f405",
+      "expected_path": "tasks/TM251/tests/l2/expanded_01.out",
+      "expected_sha256": "2153e52588ebaab673dd6eedcc8dcc0484a6e76772c066b1ec1249514475f865",
+      "source_reference_run": "validation/library_l2_expanded/lcm_convolution/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.52,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.64,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/lcm_convolution/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

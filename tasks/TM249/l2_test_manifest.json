@@ -1,0 +1,83 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "bitwise_xor_convolution",
+  "seed_id": "TM249",
+  "changes": {
+    "N_MAX": {
+      "native": 20,
+      "expanded": 21
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/bitwise_xor_convolution/gen/max_random.cpp",
+      "generator_sha256": "dc8ef550c3e96e88d56174c78653ac3f949da3678b10a8a170f533a1c95164ab",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 21
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 20,
+          "actual": 21,
+          "expanded_upper_bound": 21
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM249/tests/l2/expanded_00.in",
+      "input_sha256": "27510b0cc4711bcbc331c3350a23218ae27fb6dbc89b2cbef058644f76beac3f",
+      "expected_path": "tasks/TM249/tests/l2/expanded_00.out",
+      "expected_sha256": "3498ece41727a044874eb8ca513962d5df9654ebf0e73597002a9cab3ddbe0e5",
+      "source_reference_run": "validation/library_l2_expanded/bitwise_xor_convolution/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.21,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.26,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/bitwise_xor_convolution/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/bitwise_xor_convolution/gen/max_random.cpp",
+      "generator_sha256": "dc8ef550c3e96e88d56174c78653ac3f949da3678b10a8a170f533a1c95164ab",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 21
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 20,
+          "actual": 21,
+          "expanded_upper_bound": 21
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM249/tests/l2/expanded_01.in",
+      "input_sha256": "eb31e575e184c7c3100661f4520e40362a91134331840946d127648159665294",
+      "expected_path": "tasks/TM249/tests/l2/expanded_01.out",
+      "expected_sha256": "d4db4d829587957014a5f16b68de5f62cc29bf32c32b92b9c566881cf124800a",
+      "source_reference_run": "validation/library_l2_expanded/bitwise_xor_convolution/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.2,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.27,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/bitwise_xor_convolution/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

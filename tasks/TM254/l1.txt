@@ -1,0 +1,67 @@
+# A root-calculation record supplies
+
+Each record supplies the input value and root index for an integer root calculation.
+
+
+## Problem Statement
+
+
+Each test case consist of $T$ cases.
+
+A root-calculation record supplies $A, K$. Print $\textrm{floor}(a^{1/k})$.
+
+
+## Constraints
+
+- $1 \leq T \leq 500,000$
+- $0 \leq A < 2^{64}$
+- $1 \leq K \leq 64$
+
+## Input
+
+```
+$T$
+$A_0$ $K_0$
+$A_1$ $K_1$
+:
+$A_{T-1}$ $K_{T-1}$
+```
+
+## Output
+
+
+For each line, print the answer.
+
+
+## Sample
+
+## Sample Input 1
+
+```
+10
+215 3
+216 3
+217 3
+9999999999 10
+10000000000 10
+10000000001 10
+18446744073709551615 1
+18446744073709551615 2
+18446744073709551615 63
+18446744073709551615 64
+```
+
+## Sample Output 1
+
+```
+5
+6
+6
+9
+10
+10
+18446744073709551615
+4294967295
+2
+1
+```

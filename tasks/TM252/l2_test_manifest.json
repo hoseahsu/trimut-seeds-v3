@@ -1,0 +1,88 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "subset_convolution",
+  "seed_id": "TM252",
+  "changes": {
+    "N_MAX": {
+      "native": 20,
+      "expanded": 21
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/subset_convolution/gen/max_random.cpp",
+      "generator_sha256": "bf4cb2e4852abe568de2791c16cb9da0e8405b2025ad38b30562ff5a926fcf4c",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 21
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 20,
+          "actual": 21,
+          "expanded_upper_bound": 21
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM252/tests/l2/expanded_00.in",
+      "input_sha256": "27510b0cc4711bcbc331c3350a23218ae27fb6dbc89b2cbef058644f76beac3f",
+      "expected_path": "tasks/TM252/tests/l2/expanded_00.out",
+      "expected_sha256": "fe1209da13c51d9b1cad1b2277d526ad7ab7c4971e4471386818f999c4321fa7",
+      "source_reference_run": "validation/library_l2_expanded/subset_convolution/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 1.81,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 3.63,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/subset_convolution/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/subset_convolution/gen/max_random.cpp",
+      "generator_sha256": "bf4cb2e4852abe568de2791c16cb9da0e8405b2025ad38b30562ff5a926fcf4c",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 21
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 20,
+          "actual": 21,
+          "expanded_upper_bound": 21
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM252/tests/l2/expanded_01.in",
+      "input_sha256": "eb31e575e184c7c3100661f4520e40362a91134331840946d127648159665294",
+      "expected_path": "tasks/TM252/tests/l2/expanded_01.out",
+      "expected_sha256": "cd6d91b0d270e945e2f10da472150fde1ed7d0cd271fa995f4e4d488ea8bb39f",
+      "source_reference_run": "validation/library_l2_expanded/subset_convolution/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 1.8,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 3.59,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/subset_convolution/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/subset_convolution/sol/correct.cpp",
+      "reason": "increase rank-vector capacity21 to22 and input assertion20 to21 only; no algorithm change"
+    }
+  ]
+}

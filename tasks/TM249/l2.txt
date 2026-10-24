@@ -1,0 +1,50 @@
+# Bitwise Xor Convolution
+
+## Problem Statement
+
+
+Given size $2^N$ integer sequences $a_0, a_1, \dots, a_{2^N - 1}$ and $b_0, b_1, \dots, b_{2^N - 1}$. Calculate an integer sequence $c_0, c_1, \dots, c_{2^N - 1}$ as follows and print it $\bmod 998244353$.
+
+$c_k = \sum_{i, j, i \oplus j = k} a_i b_j$
+
+We note that $i \oplus j$ means bitwise-XOR.
+
+
+
+
+## Constraints
+
+- $0 \leq N \leq 21$
+- $0 \leq a_i < 998244353$
+- $0 \leq b_i < 998244353$
+
+
+## Input
+
+```
+$N$
+$a_0$ $a_1$ ... $a_{2^N - 1}$
+$b_0$ $b_1$ ... $b_{2^N - 1}$
+```
+
+## Output
+
+```
+$c_0$ $c_1$ ... $c_{2^N - 1}$
+```
+
+## Sample
+
+## Sample Input 1
+
+```
+3
+1 2 3 4 5 6 7 8
+9 10 11 12 13 14 15 16
+```
+
+## Sample Output 1
+
+```
+492 488 476 472 428 424 412 408
+```

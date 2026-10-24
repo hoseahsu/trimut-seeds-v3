@@ -1,0 +1,99 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "sum_of_floor_of_linear",
+  "seed_id": "TM253",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "T",
+      "native": 100000,
+      "expanded": 200000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "T": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "T",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM253/tests/l2/expanded_00.in",
+      "input_sha256": "c7a36ee20c91c43200fa6ea289730d58bb002e80a9da55e19d52205af5c1789f",
+      "expected_path": "tasks/TM253/tests/l2/expanded_00.out",
+      "expected_sha256": "2af8534d924a3152f5ee5485948a95559851d54ee81bafe7ab82124c378c3b58",
+      "source_reference_run": "validation/library_l2_expanded/sum_of_floor_of_linear/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.04,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.03,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/sum_of_floor_of_linear/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "T": 200000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "T",
+          "native_upper_bound": 100000,
+          "actual": 200000,
+          "expanded_upper_bound": 200000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM253/tests/l2/expanded_01.in",
+      "input_sha256": "c7a36ee20c91c43200fa6ea289730d58bb002e80a9da55e19d52205af5c1789f",
+      "expected_path": "tasks/TM253/tests/l2/expanded_01.out",
+      "expected_sha256": "2af8534d924a3152f5ee5485948a95559851d54ee81bafe7ab82124c378c3b58",
+      "source_reference_run": "validation/library_l2_expanded/sum_of_floor_of_linear/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.05,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.03,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/sum_of_floor_of_linear/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/sum_of_floor_of_linear/verifier.cpp",
+      "replace": "100'000",
+      "with": "200000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/sum_of_floor_of_linear/gen/small.cpp",
+      "replace": "100'000",
+      "with": "200000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/sum_of_floor_of_linear/gen/random.cpp",
+      "replace": "100'000",
+      "with": "200000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}
