@@ -1,0 +1,118 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "range_add_range_min",
+  "seed_id": "TM231",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/range_add_range_min/gen/max_random.cpp",
+      "generator_sha256": "6d80f7ccdebc023820ce5c3569790f2fcabc96b9d2e448d9b3f7d9e7c40c3bbd",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM231/tests/l2/expanded_00.in",
+      "input_sha256": "1eb5a950b222164496444e5c19ebf6a644daa6bb06393f241e151dcbde85b19f",
+      "expected_path": "tasks/TM231/tests/l2/expanded_00.out",
+      "expected_sha256": "cb8e61be109bb04a7a094c126d692324c08dc1e91930d15b6272407c89116934",
+      "source_reference_run": "validation/library_l2_expanded/range_add_range_min/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.45,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.61,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_strict_program_repairs/range_add_range_min/expanded_raw/expanded_00.run.json",
+      "pre_repair_fast_run": "validation/library_l2_expanded/range_add_range_min/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/range_add_range_min/gen/max_random.cpp",
+      "generator_sha256": "6d80f7ccdebc023820ce5c3569790f2fcabc96b9d2e448d9b3f7d9e7c40c3bbd",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM231/tests/l2/expanded_01.in",
+      "input_sha256": "2937e4ab845bb3e3566df81993c727ad387a1efcb616e15bc199decc226f49d3",
+      "expected_path": "tasks/TM231/tests/l2/expanded_01.out",
+      "expected_sha256": "b9fd624552ba296a8c3df857273fa2f6d00b23cefdc9e48c30dde407f1668dec",
+      "source_reference_run": "validation/library_l2_expanded/range_add_range_min/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.46,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.6,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_strict_program_repairs/range_add_range_min/expanded_raw/expanded_01.run.json",
+      "pre_repair_fast_run": "validation/library_l2_expanded/range_add_range_min/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [],
+  "strict_program_override": {
+    "raw_fast": {
+      "path": "../library_work/strict_programs/range_add_range_min/fast.cpp",
+      "args": [
+        "raw"
+      ]
+    },
+    "l3_fast": {
+      "path": "../library_work/strict_programs/range_add_range_min/fast.cpp",
+      "args": [
+        "l3"
+      ]
+    },
+    "repair_reason": "Original authored shared segment tree maintained an unused range sum; full native range-add sequences could overflow that unused 64-bit sum. This independent strict implementation stores only min/max and lazy additions; these are bounded by (Q+1)*10^9, below signed64 at native and expanded caps."
+  }
+}

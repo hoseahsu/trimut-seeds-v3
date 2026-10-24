@@ -1,0 +1,101 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "minimum_spanning_tree",
+  "seed_id": "TM227",
+  "changes": {
+    "N_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/minimum_spanning_tree/gen/max_random.cpp",
+      "generator_sha256": "a34b6e93e4d671abcb5073b5f29fda816f250f139aeaf6597b35c191ab7140d5",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 999952,
+        "Q": 999993,
+        "M": 999993
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 999952,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_MAX",
+          "dimension": "M",
+          "native_upper_bound": 500000,
+          "actual": 999993,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM227/tests/l2/expanded_00.in",
+      "input_sha256": "70c735aa260745f8b005e4b3700b5f3bf32546f8583111c724a6deebd46098dd",
+      "expected_path": "tasks/TM227/tests/l2/expanded_00.out",
+      "expected_sha256": "76aeb5569def0e54ce1bf5e68f4263b2e7c60134d21a8d68d2d8f03a555c92d6",
+      "source_reference_run": "validation/library_l2_expanded/minimum_spanning_tree/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.54,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.17,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/minimum_spanning_tree/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/minimum_spanning_tree/gen/max_random.cpp",
+      "generator_sha256": "a34b6e93e4d671abcb5073b5f29fda816f250f139aeaf6597b35c191ab7140d5",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 999969,
+        "Q": 999988,
+        "M": 999988
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 999969,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_MAX",
+          "dimension": "M",
+          "native_upper_bound": 500000,
+          "actual": 999988,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM227/tests/l2/expanded_01.in",
+      "input_sha256": "ecd75c3d4d675f662745b6287875209f7e315b19a389b90118e3c225d6eaa679",
+      "expected_path": "tasks/TM227/tests/l2/expanded_01.out",
+      "expected_sha256": "499823971c9ac377182de45e562a0147b649d21cbba26c3c7c71c072be498484",
+      "source_reference_run": "validation/library_l2_expanded/minimum_spanning_tree/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.51,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.18,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/minimum_spanning_tree/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

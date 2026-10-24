@@ -1,0 +1,79 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "cartesian_tree",
+  "seed_id": "TM226",
+  "changes": {
+    "N_MAX": {
+      "native": 1000000,
+      "expanded": 2000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 2000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 1000000,
+          "actual": 2000000,
+          "expanded_upper_bound": 2000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM226/tests/l2/expanded_00.in",
+      "input_sha256": "770fe1329813f1ed048a3532f6f196cb0fd16a76d5c854384439640e139e5b1e",
+      "expected_path": "tasks/TM226/tests/l2/expanded_00.out",
+      "expected_sha256": "470146557a644a1f9512ad86dd58006d4ab19d344492de20a7645b1a8f4786ca",
+      "source_reference_run": "validation/library_l2_expanded/cartesian_tree/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.13,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.09,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/cartesian_tree/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 2000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "native_upper_bound": 1000000,
+          "actual": 2000000,
+          "expanded_upper_bound": 2000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM226/tests/l2/expanded_01.in",
+      "input_sha256": "770fe1329813f1ed048a3532f6f196cb0fd16a76d5c854384439640e139e5b1e",
+      "expected_path": "tasks/TM226/tests/l2/expanded_01.out",
+      "expected_sha256": "470146557a644a1f9512ad86dd58006d4ab19d344492de20a7645b1a8f4786ca",
+      "source_reference_run": "validation/library_l2_expanded/cartesian_tree/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.13,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.09,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/cartesian_tree/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

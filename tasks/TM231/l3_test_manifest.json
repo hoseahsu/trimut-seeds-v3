@@ -1,0 +1,368 @@
+{
+  "schema_version": "library-l3-native-v1",
+  "seed_id": "TM231",
+  "source_id": "range_add_range_min",
+  "same_input_domain_as_raw": true,
+  "native_constraints_identical": true,
+  "records": [
+    {
+      "name": "example_00",
+      "input_path": "tasks/TM231/tests/raw/example_00.in",
+      "input_sha256": "1694f6aeb87d7ab11f8b9579d681288f40a9f1b4b121dd6c8fa4aa27b475aee8",
+      "input_source_kind": "original_sample",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.001637,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/example_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/example_00.out",
+      "expected_sha256": "d4a9d05fbe77dd1e7f7abc6c33d85310a18335069afc8343e48613a5c63937e3",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "small_random_00",
+      "input_path": "tasks/TM231/tests/raw/small_random_00.in",
+      "input_sha256": "0c87745b19af0379b454e644026746120382606de3260029734f059ca39f1cd0",
+      "input_source_kind": "native_small_structural",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017019999999999995,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/small_random_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM231/tests/l3/small_random_00.out",
+      "expected_sha256": "10decf57d10f04874ef0c0c6b91f589f847058e787dc8204831ddfff067ddab4",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "random_00",
+      "input_path": "tasks/TM231/tests/raw/random_00.in",
+      "input_sha256": "8e7db45a0660228239ad86a65208b449f0de91afb51aa121c764dc4dc11be3f1",
+      "input_source_kind": "native_random",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.21,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/random_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM231/tests/l3/random_00.out",
+      "expected_sha256": "48bf77b4de8125939c8f0954a185bf974e17e2ab4443c2b8816719cfce371177",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "max_random_00",
+      "input_path": "tasks/TM231/tests/raw/max_random_00.in",
+      "input_sha256": "55794f943f7e51ab334fddbb02b7c27c87567ffc809db25a446d0ce83b5a0198",
+      "input_source_kind": "native_scale_candidate",
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "value": 500000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "value": 500000
+        }
+      ],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.27,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/max_random_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM231/tests/l3/max_random_00.out",
+      "expected_sha256": "c08235296c6e97af461855d9664309eb35708deeefe40cf4b1ee749d4044087f",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "max_lazy_00",
+      "input_path": "tasks/TM231/tests/raw/max_lazy_00.in",
+      "input_sha256": "0b09fcaf4ae59ff0a110559d3ddc6bb4d9100fc11b481cba799d20d1ac4dcea4",
+      "input_source_kind": "native_structural_boundary",
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "value": 500000
+        }
+      ],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.08,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/max_lazy_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM231/tests/l3/max_lazy_00.out",
+      "expected_sha256": "3f962c8a4943242b0999de1e65f5f536a9c47f863326e54f3fe93e365851f998",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_boundary_00",
+      "input_path": "tasks/TM231/tests/raw/authored_boundary_00.in",
+      "input_sha256": "a288cd5b9f3de8ba54db8d957e4272a5dd35504e37df5fa55bef72967e37aff2",
+      "input_source_kind": "authored_boundary",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0019419999999999993,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_boundary_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_boundary_00.out",
+      "expected_sha256": "c1dbf2422a6ffce3d996831c2188be2622ebfd6c35fc76c2ac7b6dc8c610627d",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_00",
+      "input_path": "tasks/TM231/tests/raw/authored_small_00.in",
+      "input_sha256": "8dcddfd290ea85dce4f9a5b05938fa8d02a76d0cf6654001a3ebdd2ee4a3afdc",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.001772000000000001,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_00.out",
+      "expected_sha256": "5de35a39958664a77547c3ffa690a6e9bb228c46a770d2fb1d1eb174b803e64b",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_01",
+      "input_path": "tasks/TM231/tests/raw/authored_small_01.in",
+      "input_sha256": "8b87c00a8d382312c79f83e4372c50fd4c995a64408cef7120906225c23c95d8",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017859999999999994,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_01.out",
+      "expected_sha256": "29d9c21fd8d94778eb98ca0c667da196f901726d8b631c08324be2f5b35d09c2",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_02",
+      "input_path": "tasks/TM231/tests/raw/authored_small_02.in",
+      "input_sha256": "9f5f069e016fe6747fc6535f250e9fa8a148b067ec12bb99cbd554d53ef36834",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0016450000000000006,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_02.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_02.out",
+      "expected_sha256": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_03",
+      "input_path": "tasks/TM231/tests/raw/authored_small_03.in",
+      "input_sha256": "267271535b023c4ac47850977f30aa61f200e97e7ab5e06078734740cae6d6ab",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017669999999999977,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_03.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_03.out",
+      "expected_sha256": "2c7fb0102616c3e0b4d2362dfc944c65dc384769b75f762ef139322ef33e3843",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_04",
+      "input_path": "tasks/TM231/tests/raw/authored_small_04.in",
+      "input_sha256": "ac07e58fa4084d8450e150a0534cab7c05c7299823e0a7b3c8692fee385be3dc",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017240000000000033,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_04.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_04.out",
+      "expected_sha256": "a99b746d0713d3f515038f2ea6ef5a45bfe4c6b7de2db4f003239a755ad05f7d",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_05",
+      "input_path": "tasks/TM231/tests/raw/authored_small_05.in",
+      "input_sha256": "05c2df01299369ca98a4805b31c51572bd6c4b0278148a507cc908a87874dbac",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0018809999999999973,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_05.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_05.out",
+      "expected_sha256": "372a742baf743935ac09aa9a00bf88bac3820212ed5d0070e5a2b1566a635eb2",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_06",
+      "input_path": "tasks/TM231/tests/raw/authored_small_06.in",
+      "input_sha256": "cdfe20b4206ea3afa56c6203ab9b1b4faa29de6f4491ac0bebdcac6c87a20809",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.001902000000000001,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_06.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_06.out",
+      "expected_sha256": "41912244554878bbf7e5d2229e643eae81197531648d2e687302682e5fdf92e7",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_07",
+      "input_path": "tasks/TM231/tests/raw/authored_small_07.in",
+      "input_sha256": "80a42897df5dc82877f422d76366e446d066ee28af3ee2e8013b38f872902965",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.001954000000000001,
+        "report": "validation/library_strict_program_repairs/range_add_range_min/native_l3/authored_small_07.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM231/tests/l3/authored_small_07.out",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    }
+  ],
+  "large_expected_note": "Large-case answers are generated by the authored optimized L3 implementation. Independent exhaustive/scanning oracles validate the recorded small cases; no independent large-case oracle or universal formal proof is claimed.",
+  "test_scope": "same selected native-domain experimental inputs as Raw; changed L3 answers; not the complete official hidden suite"
+}
