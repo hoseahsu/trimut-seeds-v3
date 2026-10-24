@@ -1,0 +1,436 @@
+{
+  "schema": "trimut.experiment-tests.v1",
+  "seed_id": "TM235",
+  "condition": "raw",
+  "cpu_budget_seconds": 5.0,
+  "memory_mb": 1024,
+  "component_manifests": [
+    {
+      "path": "tasks/TM235/raw_test_manifest.json",
+      "sha256": "ce354ce8fa5283ccff1ccc96ff3415832c1760041e74b6b14bc52b7597fd45f3"
+    }
+  ],
+  "records": [
+    {
+      "name": "example_00",
+      "kind": "original_sample",
+      "official_name": "example_00",
+      "input_path": "tasks/TM235/tests/raw/example_00.in",
+      "input_sha256": "7d0e2640001cf9b7d0b8e533577183be4bbe1e9733a999724c210d69d6f39a94",
+      "expected_path": "tasks/TM235/tests/raw/example_00.out",
+      "expected_sha256": "2ee96910a1511a2c228aec3826aec4af2ef7f8a961de24d60fe1712197e2f2b9",
+      "dimensions": {
+        "Q": 6
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/example_00.run.json",
+      "reference_cpu_seconds": 0.002118999999999982,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.001970999999999945,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/example_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "example_01",
+      "kind": "original_sample",
+      "official_name": "example_01",
+      "input_path": "tasks/TM235/tests/raw/example_01.in",
+      "input_sha256": "9a2b6e82ea86dcfad5750daa415fd4d4f252622629bc522468f19f0a7512e180",
+      "expected_path": "tasks/TM235/tests/raw/example_01.out",
+      "expected_sha256": "e5a5c6a637915586097c5dff72c9b9f56c3bd3b4b4c939565105036d8e552cbe",
+      "dimensions": {
+        "Q": 1
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/example_01.run.json",
+      "reference_cpu_seconds": 0.0016169999999999796,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017500000000001403,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/example_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "small_00",
+      "kind": "native_small_structural",
+      "official_name": "small_00",
+      "generator": "sources/library-checker-problems-master/data_structure/queue_operate_all_composite/gen/small.cpp",
+      "generator_sha256": "dfd3b843fcfc1a67e62242630f623da4d6733162429c97b9bb00a0d98eb70340",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM235/tests/raw/small_00.in",
+      "input_sha256": "b331b53dbae6ad759be8e1c99ac661a9551c0270264ab65e67ec550093dd4ec7",
+      "expected_path": "tasks/TM235/tests/raw/small_00.out",
+      "expected_sha256": "5cdc80ae4b180cd2b82d26dc5425475b15834989d105ae99689cb8c2e1d25048",
+      "dimensions": {
+        "Q": 10
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/small_00.run.json",
+      "reference_cpu_seconds": 0.0018240000000000478,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017659999999999343,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/small_00.run.json"
+      }
+    },
+    {
+      "name": "random_00",
+      "kind": "native_random",
+      "official_name": "random_00",
+      "generator": "sources/library-checker-problems-master/data_structure/queue_operate_all_composite/gen/random.cpp",
+      "generator_sha256": "7e2f8abb20bac2661c2969efdf684154774244f762a528258310ff57dbbe0723",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM235/tests/raw/random_00.in",
+      "input_sha256": "6c75a1fdba4dc26a78119bb48ee9ea7b6d8104e323955599e99d06e786372e08",
+      "expected_path": "tasks/TM235/tests/raw/random_00.out",
+      "expected_sha256": "f4d7012db4e426d1924e268a5e955d31693641529b7a1ad4cb7306f2c0a03e35",
+      "dimensions": {
+        "Q": 389813
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/random_00.run.json",
+      "reference_cpu_seconds": 0.03,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.05,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/random_00.run.json"
+      }
+    },
+    {
+      "name": "max_random_00",
+      "kind": "native_scale_candidate",
+      "official_name": "max_random_00",
+      "generator": "sources/library-checker-problems-master/data_structure/queue_operate_all_composite/gen/max_random.cpp",
+      "generator_sha256": "3d94debed8753a3fbe44ce006156c19ada5424b55a1c5d807314154857c90f5b",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM235/tests/raw/max_random_00.in",
+      "input_sha256": "2bc4e416ca89bf1879f25c8a11db51024e9a70957ac42d0d0f38303142c10814",
+      "expected_path": "tasks/TM235/tests/raw/max_random_00.out",
+      "expected_sha256": "386932c02f58a440357048868e89b4955dd2085cf19ee229aeac32e1800b60d9",
+      "dimensions": {
+        "Q": 500000
+      },
+      "native_upper_bound_hits": [
+        {
+          "parameter": "literal",
+          "dimension": "Q",
+          "value": 500000
+        }
+      ],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/max_random_00.run.json",
+      "reference_cpu_seconds": 0.04,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.08,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/max_random_00.run.json"
+      }
+    },
+    {
+      "name": "authored_boundary_00",
+      "kind": "authored_boundary",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_boundary_00.in",
+      "input_sha256": "974dfb978eb058cf29e202d12b0fdd6f3535d2ddfae663ed31fffe3999cedf70",
+      "expected_path": "tasks/TM235/tests/raw/authored_boundary_00.out",
+      "expected_sha256": "81e7f188d05505f9d5a7132c023e7f0515a0c6efd33af701cb1f9a5b2c370b18",
+      "dimensions": {
+        "Q": 6
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_boundary_00.run.json",
+      "reference_cpu_seconds": 0.0021879999999998567,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0024049999999999905,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_boundary_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_00",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_00.in",
+      "input_sha256": "f844fcbc70471ddd6b12b53e53677ae7225a52be7a8b78d0568c27e9a74470f3",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_00.out",
+      "expected_sha256": "67fb201aca4020a6bf83a38ac9d45b6529574e1e6d7f541e575b41763b66689e",
+      "dimensions": {
+        "Q": 12
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_00.run.json",
+      "reference_cpu_seconds": 0.0019549999999999845,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.002186999999999939,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_01",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_01.in",
+      "input_sha256": "341626d4ab3add717fd4ec4cfcbbbca8e0c96df9c0acad59a1a9b0df6ecb4ec7",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_01.out",
+      "expected_sha256": "cbb71aa3f54c6fb73883ef4a2a5259a993ae422e2ce7f86468e8f93d55d73754",
+      "dimensions": {
+        "Q": 7
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_01.run.json",
+      "reference_cpu_seconds": 0.0020060000000000633,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0023119999999999252,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_02",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_02.in",
+      "input_sha256": "898188f58047cd31236a7fbd4ea8a8e50c680544c2e6a4fb398bd6825e622fac",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_02.out",
+      "expected_sha256": "5798d11eaebac390843a79650b6496e20fcb172cb79a653de56f59cc2b2ee347",
+      "dimensions": {
+        "Q": 19
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_02.run.json",
+      "reference_cpu_seconds": 0.0021329999999999405,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0020329999999999515,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_02.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_03",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_03.in",
+      "input_sha256": "7603235f0ebb37a7da4362a860184236c5ade334ad1c59511a5b40bb78bf6554",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_03.out",
+      "expected_sha256": "c65120d1f3ff60285f8da60d89ce5abe7dbd7f88504eb190932204008cfdd21d",
+      "dimensions": {
+        "Q": 2
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_03.run.json",
+      "reference_cpu_seconds": 0.0020530000000000825,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0019750000000001156,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_03.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_04",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_04.in",
+      "input_sha256": "6ceff164bc7124f4ea0b683279b32673e4ad9e81f207a50ef6db7cc0516d68cd",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_04.out",
+      "expected_sha256": "97744188230d602e4dc8d6d62e87997d7dee3b68c166f534e208b27a30d56262",
+      "dimensions": {
+        "Q": 16
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_04.run.json",
+      "reference_cpu_seconds": 0.0019849999999999035,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0021199999999996777,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_04.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_05",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_05.in",
+      "input_sha256": "7f49d429c5480a776e97baeec8e65e328c31b2e0d92b086eb6ca9f25e642b3fa",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_05.out",
+      "expected_sha256": "1d0866661d850d9f81667af37ecaa49b0e4eed1d35970909586c84b4e9a2eeac",
+      "dimensions": {
+        "Q": 9
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_05.run.json",
+      "reference_cpu_seconds": 0.0021570000000002976,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0024270000000001235,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_05.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_06",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_06.in",
+      "input_sha256": "b7284be52a140962f0b663fd4ac701cf20fe708135067beb975f326e3a858143",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_06.out",
+      "expected_sha256": "8e9ce1348191191ec127f9573f1eb0c920e139f5b1910ac3195e400a6d1f723e",
+      "dimensions": {
+        "Q": 12
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_06.run.json",
+      "reference_cpu_seconds": 0.0021160000000000068,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0019379999999999953,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_06.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_07",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch2.py",
+      "generator_recipe_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM235/tests/raw/authored_small_07.in",
+      "input_sha256": "1cfd974f963c5225d6e8f7ed945bac715bd06477b0d85b46d925d48cb748021f",
+      "expected_path": "tasks/TM235/tests/raw/authored_small_07.out",
+      "expected_sha256": "91eede1b5e4c0cf32e3331835eafb6a7e6f823943e6f159873a660b2e71c9639",
+      "dimensions": {
+        "Q": 16
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/queue_operate_all_composite/raw_reference/authored_small_07.run.json",
+      "reference_cpu_seconds": 0.0020250000000001656,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0021100000000000563,
+        "report": "validation/library_native_domain/queue_operate_all_composite/l3_fast/authored_small_07.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    }
+  ]
+}

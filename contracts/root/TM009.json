@@ -1,0 +1,188 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM009",
+  "source_identity": "codecontests:5:p03072 AtCoder Beginner Contest 124 - Great Ocean View",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03072 AtCoder Beginner Contest 124 - Great Ocean View"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM009/raw.txt",
+      "sha256": "f47fadce8ac52daa2fbeef9aa1729da129dbf2e0dc23982a51ebfaeb503d7e77"
+    },
+    "provenance": {
+      "path": "tasks/TM009/raw_provenance.json",
+      "sha256": "ddc311840b1e589cdf46e712d0f31f41ec82df24a352292c7a0af8e70da8405c"
+    },
+    "tests": {
+      "path": "tasks/TM009/raw_test_manifest.json",
+      "sha256": "bfd96842456df3f13bb0b5cab8d195091b1b59cb36eafa31a7a00b2ec01d953c"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM009/l1.txt",
+      "sha256": "38eb1c2ce370ae4a7eb1a51539854d54cdbbc76b279ac4209d22eb8a203c15bf"
+    },
+    "certificate": {
+      "path": "tasks/TM009/l1_certificate.json",
+      "sha256": "271ad7b90d20c99c50accd2c2114c7568d1c43981e2e0ad8214a767061d7d4d2"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM009/raw_test_manifest.json",
+      "sha256": "bfd96842456df3f13bb0b5cab8d195091b1b59cb36eafa31a7a00b2ec01d953c"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM009/l2.txt",
+      "sha256": "2a304cd21d033816aaef66648c689297bb5a19c2617ec5bb1b221a784b16eeb9"
+    },
+    "tests": {
+      "path": "tasks/TM009/l2_test_manifest.json",
+      "sha256": "89f24f10e0cff4ca352b89c3769c08406ef6d29abd78b7ac189a540fe3d90fcf"
+    },
+    "axis": "N",
+    "original_upper": 20,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM009/l3.txt",
+      "sha256": "6c5ab674af1c9b3f6f92136074d5da202d9718899b9fdb17f7fd025b3ed2ca09"
+    },
+    "tests": {
+      "path": "tasks/TM009/l3_test_manifest.json",
+      "sha256": "e8b8bc0989e8fdc1b2ea9b7146bcfa5804efcc551d6050fdbb41a9e2d49cbd3e"
+    },
+    "operator": "Require height strictly greater than every earlier height.",
+    "correctness_argument": "A prefix maximum suffices; the oracle compares each index with every predecessor. Strong n extends the public limit20.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_1",
+      "small_small_3",
+      "small_small_4",
+      "small_small_8",
+      "small_small_14",
+      "small_small_16",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "ocean",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "ocean",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "ocean",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "ocean",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "9",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "9",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_ocean"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM009/report.json",
+      "sha256": "c8cb7b31f647d2e3408d8424434efaa111fba185523ae3b8ee6fc6c18ff44517"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM009/report.json",
+      "sha256": "c71a4626747f930ae102f1871895c930a85dee9898adebc19d4d0e3c8b305376"
+    },
+    "resolution": {
+      "path": "tasks/TM009/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM009/mutation_edits.json",
+      "sha256": "cb186fa1579c4aa7672620e0166e34235950162db45fc3f1be36e585353e0619"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

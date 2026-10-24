@@ -1,0 +1,182 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM046",
+  "source_identity": "codeforces:536_A",
+  "source_url": "https://codeforces.com/problemset/problem/536/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:536_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM046/raw.txt",
+      "sha256": "d7938873a350d9b8bbd7881e7b23bf579679ff55dda323be9a2e596dd1281542"
+    },
+    "provenance": {
+      "path": "tasks/TM046/raw_provenance.json",
+      "sha256": "194be757240d1636dabd3f8a090feca02b7cd2efd4e81a25b0ed6850476b516a"
+    },
+    "tests": {
+      "path": "tasks/TM046/raw_test_manifest.json",
+      "sha256": "b5534a9b57ef62b2703d9f34b10bd365bd38a4214e1ea69f320324f57dde6b7e"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM046/l1.txt",
+      "sha256": "3707d205b7c853ab2b4274ae2d4934d31e8ea62911ffdc75ea86a1b379dc2d18"
+    },
+    "certificate": {
+      "path": "tasks/TM046/l1_certificate.json",
+      "sha256": "d94219137bfe66aea405cf5554a6c839c2505e495bf7177b662360b80c9231fa"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM046/raw_test_manifest.json",
+      "sha256": "b5534a9b57ef62b2703d9f34b10bd365bd38a4214e1ea69f320324f57dde6b7e"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM046/l2.txt",
+      "sha256": "5abe36d834874e3228712ba9d4bfa902f0bdea3dc4b4cb9aac343c470c63934d"
+    },
+    "tests": {
+      "path": "tasks/TM046/l2_test_manifest.json",
+      "sha256": "7ffcd350ef2d5ccd3cc38a58444c15a5f3c88bb3ad4b9a090a3545afae4dc016"
+    },
+    "axis": "query count",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM046/l3.txt",
+      "sha256": "7b4a69178b4ba84d4b15935ed11fca2bc634079b51a8b99d9a4440c89214bb78"
+    },
+    "tests": {
+      "path": "tasks/TM046/l3_test_manifest.json",
+      "sha256": "ce3774655bfa242c6b8f98a109a2a2e1f7d7a3a7468c64134595b2084bb54d25"
+    },
+    "operator": "Require total height<m*t, retaining max height<=t (at least one capacity slot remains unused).",
+    "correctness_argument": "Both constraints are monotone in r; exact arithmetic-series sums support binary search. Oracle grows the interval one vegetable at a time.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 25,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_20"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "tavas",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "tavas",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "tavas",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "tavas",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "native/root_scale_oracle.py",
+      "sha256": "4560e7c2a18f2167c16a9faadf61c0edcf53edf330ecbad6a9c8c7e9a7e99589",
+      "args": [
+        "46",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "native/root_scale_oracle.py",
+      "sha256": "4560e7c2a18f2167c16a9faadf61c0edcf53edf330ecbad6a9c8c7e9a7e99589",
+      "args": [
+        "46",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_tavas"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM046/report.json",
+      "sha256": "0f2076f5735a8b33661b3982a1cad71d302ac486f59e009314295fa807fb195c"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM046/report.json",
+      "sha256": "25effc7950d00a7640fb5c25e1c7ea75339a8a959f4a033f322c81e90b9aef47"
+    },
+    "resolution": {
+      "path": "tasks/TM046/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM046/mutation_edits.json",
+      "sha256": "689700dd1b1fb12eccf69f0cf19c75294660fcd05667af5bb70ff2a2cf561c3b"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

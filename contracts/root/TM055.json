@@ -1,0 +1,189 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM055",
+  "source_identity": "codeforces:1064_B",
+  "source_url": "https://codeforces.com/problemset/problem/1064/B",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1064_B"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM055/raw.txt",
+      "sha256": "830f3ae47254116cd44ca297fe2479e85f69c630bcb2504c2ab7e6c6d08f996c"
+    },
+    "provenance": {
+      "path": "tasks/TM055/raw_provenance.json",
+      "sha256": "0a59bdb558a3f84b5ccc8d8b2ff3d893e24bc5b9bda3103a8668d7415f577732"
+    },
+    "tests": {
+      "path": "tasks/TM055/raw_test_manifest.json",
+      "sha256": "a181fd421b384c5e87e3aeb019aae582734a8545e0bd7b3053eb2576f4508250"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM055/l1.txt",
+      "sha256": "ef7ef22291bb7ff0097f1c6ec1eb5bbb3390fb460c0576a06b22b63fea3120fb"
+    },
+    "certificate": {
+      "path": "tasks/TM055/l1_certificate.json",
+      "sha256": "5ac3289f46c6f2dab98c1bfb9e3ac80e55f8ce25e4dfcdd030cda5c8c753e40b"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM055/raw_test_manifest.json",
+      "sha256": "a181fd421b384c5e87e3aeb019aae582734a8545e0bd7b3053eb2576f4508250"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM055/l2.txt",
+      "sha256": "3fbafc76ed13ae60851726e14cd9bccb645f37798440051f6f2af9197460bb75"
+    },
+    "tests": {
+      "path": "tasks/TM055/l2_test_manifest.json",
+      "sha256": "8a0d3004386632190b7f8c6de6e346588f0260ad23df7eb8ede9f03f909ab1f9"
+    },
+    "axis": "a",
+    "original_upper": 1073741823,
+    "expanded_upper": 1152921504606846975,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM055/l3.txt",
+      "sha256": "a8338ae29277b73f2578fb3ea3f3b0cf3033eeb2607f88191481f5ec5eafa9b2"
+    },
+    "tests": {
+      "path": "tasks/TM055/l3_test_manifest.json",
+      "sha256": "0522fb130642a8182fa1a21430664cf70cfbf033c5b37ad829497e6ac6d04f4d"
+    },
+    "operator": "Count only even nonnegative solutions x.",
+    "correctness_argument": "Solutions are precisely submasks of a, since the equation forbids borrowing. Count free set bits; L3 fixes bit0 to0. Oracle enumerates0<=x<=a and tests the arithmetic equation.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 25,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_1",
+      "small_small_5",
+      "small_small_9",
+      "small_small_16",
+      "small_small_17",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "equation",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "equation",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "equation",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "equation",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "55",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "55",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_equation"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM055/report.json",
+      "sha256": "8bd90e8dde14de66f76ffc89f59eb2aba5028fb0bd07702445f5edafe7a516d4"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM055/report.json",
+      "sha256": "e28ec0595596d8f67e04676449e06d0727ef5d8131561f0abfcc6ae168cb7cca"
+    },
+    "resolution": {
+      "path": "tasks/TM055/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM055/mutation_edits.json",
+      "sha256": "7fa0478dfe15224a3cd77999304ce588587e85e22d17b4a689a3a1d67e5c81b4"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

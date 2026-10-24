@@ -1,0 +1,203 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM010",
+  "source_identity": "codecontests:5:p03363 AtCoder Grand Contest 023 - Zero-Sum Ranges",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03363 AtCoder Grand Contest 023 - Zero-Sum Ranges"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM010/raw.txt",
+      "sha256": "8aaabbc5d8977de6b7b2ab01a43c6544555ccdd1041c6034ed2c95a45ec5b3c9"
+    },
+    "provenance": {
+      "path": "tasks/TM010/raw_provenance.json",
+      "sha256": "61de547b9c6d51c254fd15676210378b75e6d693fbd73531397a906d1b2df76e"
+    },
+    "tests": {
+      "path": "tasks/TM010/raw_test_manifest.json",
+      "sha256": "3a9ff94acddcf5cbe78d52b18bd1f9115aae0bf588882e9fb8495a6b94274321"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM010/l1.txt",
+      "sha256": "702e476050c1ae48714489bb36e1ad73f9b9aba1b9e4a4d37210cad416a0cce3"
+    },
+    "certificate": {
+      "path": "tasks/TM010/l1_certificate.json",
+      "sha256": "f601024e02e67adfdf47a578b6920e18cfa636aba39165abc1289aaff9acda4a"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM010/raw_test_manifest.json",
+      "sha256": "3a9ff94acddcf5cbe78d52b18bd1f9115aae0bf588882e9fb8495a6b94274321"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM010/l2.txt",
+      "sha256": "b6bce50daf90b41174260ce482bbff90ad17ae27a607938d4734be0cb9ef2de0"
+    },
+    "tests": {
+      "path": "tasks/TM010/l2_test_manifest.json",
+      "sha256": "dd6f5c5ec7b898284d071587325cd202a20601f7e7426c91d6abce0164f8b253"
+    },
+    "axis": "N",
+    "original_upper": 200000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM010/l3.txt",
+      "sha256": "c2104ad24f68407f499d10c19a94c4d5b5be8f6e75f50bcb02d6b9c8938b3237"
+    },
+    "tests": {
+      "path": "tasks/TM010/l3_test_manifest.json",
+      "sha256": "f2227508750cc0eb09f140fcbcbf45be90a4e625c1fce7b17232cc83529d463f"
+    },
+    "operator": "Count nonempty contiguous subarrays with strictly positive sum.",
+    "correctness_argument": "Zero sums correspond to equal prefix sums; positive sums correspond to strictly increasing prefix pairs, counted by a Fenwick tree. Oracle sums every interval.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 24,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "boundary_boundary_1",
+      "small_small_0",
+      "small_small_1",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_6",
+      "small_small_8",
+      "small_small_9",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "zeros",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "zeros",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "zeros",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "zeros",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "10",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "10",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_zeros"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM010/report.json",
+      "sha256": "fe181868e702f82851fd87bf2e6a4f3dbb99af892e82ff96cbb01ff423386df5"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM010/report.json",
+      "sha256": "82611f9e5030109842b58706055bcc3a23fb729107cdcea27c3f1014b7ca9382"
+    },
+    "resolution": {
+      "path": "tasks/TM010/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM010/mutation_edits.json",
+      "sha256": "b95d50f6c67774b89492ca1f4e8c245ac054e0411a9bd69db8954a70f1447c7f"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

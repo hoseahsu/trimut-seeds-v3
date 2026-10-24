@@ -1,0 +1,431 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM244",
+  "source_identity": "library-checker:predecessor_problem",
+  "source_url": "https://judge.yosupo.jp/problem/predecessor_problem",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "predecessor_problem"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/data_structure/predecessor_problem/task.md",
+    "source_task_sha256": "5de2ebf500f8a43669ff4be23f40baf097a6df337f7799e551eaf77a7f76bba4",
+    "source_info_path": "sources/library-checker-problems-master/data_structure/predecessor_problem/info.toml",
+    "source_info_sha256": "56e961b6a906c30955c839ce1d7e9220222fb894315137f6ee5aa391153c32d4",
+    "source_hash_path": "sources/library-checker-problems-master/data_structure/predecessor_problem/hash.json",
+    "source_hash_sha256": "766b91dbde599c2b49a4aa5f5d9bf3e5d2e3f0d3ebd9570d1a86fb72b3b28671"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM244/raw.txt",
+      "sha256": "f4bf03841de032d616fe31e09066081eff64e78e9995a3e5cada196c28dbee7f"
+    },
+    "native_params": {
+      "N_MIN": 1,
+      "N_MAX": 10000000,
+      "Q_MIN": 1,
+      "Q_MAX": 1000000
+    },
+    "native_cpu_budget_seconds": 10.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM244/raw_provenance.json",
+      "sha256": "00f03c6298b0c23c7574b3780194ce086c70622247e4c64ee0c6eec1d70f683a"
+    },
+    "tests": {
+      "path": "tasks/TM244/raw_test_manifest.json",
+      "sha256": "b56d2b88dbe0ed94a03f30bc820cace3981446136b3e1932cef90b51d7029483"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM244/l1.txt",
+      "sha256": "7de042ea6b755e78ec7c08b324df23bcc5deacbbcfa79cddf91bbff46aaf6b34"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM244/raw_test_manifest.json",
+      "sha256": "b56d2b88dbe0ed94a03f30bc820cace3981446136b3e1932cef90b51d7029483"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM244/l2.txt",
+      "sha256": "3f16083758f96dd3a09b774a4a3e932825dd0f32fb6fbbef71c63b1446fa2755"
+    },
+    "provenance": {
+      "path": "tasks/TM244/l2_render_provenance.json",
+      "sha256": "f2e5030f565584faf6275a8963abea5fb81eccce2a43561b265d5b539516e4f7"
+    },
+    "bound_changes": {
+      "Q_MAX": {
+        "native": 1000000,
+        "expanded": 2000000
+      }
+    },
+    "tests": {
+      "path": "tasks/TM244/l2_test_manifest.json",
+      "sha256": "c9e8de807b43a800e9e27e61abb26835f23da8ffb33c1d90ccc6f404582cb543"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM244/l3.txt",
+      "sha256": "ed9231227ad462d63597d505ead2f8cbb3f083885101b83964b168749105527c"
+    },
+    "provenance": {
+      "path": "tasks/TM244/l3_render_provenance.json",
+      "sha256": "e35f768653cb942caa67b963bb5f733f96293f793a93ebc5e6da334102a11aad"
+    },
+    "operator": "inclusive successor → strict successor",
+    "specification": "Change only type 3 from minimum key >=k to minimum key >k; all other operations unchanged.",
+    "correctness_argument": "The ordered-set upper_bound implements the new predicate, retaining -1 when absent.",
+    "tests": {
+      "path": "tasks/TM244/l3_test_manifest.json",
+      "sha256": "ccbd0f0eb2bfe3ff915d638838323a29a452b38eece20afc2c182df7d057319e"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 10,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "example_00",
+      "authored_boundary_00",
+      "authored_small_00",
+      "authored_small_01",
+      "authored_small_03",
+      "authored_small_06"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/data_structure/predecessor_problem/sol/correct.cpp",
+      "source_sha256": "8cdcb0caeb7153c0eb68522c6ead3d7d01ad3afa9631e69e5ae52c5f76df6fdf",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch2/predecessor_problem_raw.cpp",
+      "source_sha256": "822f86f6690af261d54b29f8a779c0e79b8f4c8674e5a1e4192df7d2e859f9c3",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch2/queue_operate_all_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch2/range_reverse_range_sum_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch2/associative_array_l3.cpp": "a0ef5209b7f73e8f0e97a2c899a2db7d002c881841490d96093acc94ce86366c",
+        "assets/library_batch2/set_xor_min_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch2/range_reverse_range_sum_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch2/associative_array_raw.cpp": "cc1405469307283afda82d8ff6c8f455559a42f8f1124bb956ed4fc90099c4b7",
+        "assets/library_batch2/range_set_range_composite_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch2/solver.cpp": "9080e763c393ac955c16f127a95053654b34bfa5463892c8b0e0308329686121",
+        "assets/library_batch2/range_affine_range_sum_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch2/deque_operate_all_composite_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch2/vertex_add_subtree_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch2/static_range_count_distinct_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch2/majority_voting_raw.cpp": "063a1843176f62edcd0fe190917dc459abdd2fefa3ad1878625e335fef86002b",
+        "assets/library_batch2/associative_array_slow.cpp": "44eb130cae306cfb02375cd3023871e73cc9175bb044511c88f23cb25bebf9c5",
+        "assets/library_batch2/persistent_queue_raw.cpp": "027a126dc634215cb92f39242aba5426c7f16014bf827ce589832ace4bb15d6a",
+        "assets/library_batch2/predecessor_problem_slow.cpp": "e5d8487d715e8b5f67b2ef5db42fa88ddf94e878ef7132cd37d99a366fe56abd",
+        "assets/library_batch2/set_xor_min_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch2/vertex_add_path_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch2/ordered_set_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch2/range_reverse_range_sum_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch2/point_set_range_composite_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch2/queue_operate_all_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch2/range_add_range_min_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch2/range_set_range_composite_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch2/deque_operate_all_composite_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch2/predecessor_problem_raw.cpp": "822f86f6690af261d54b29f8a779c0e79b8f4c8674e5a1e4192df7d2e859f9c3",
+        "assets/library_batch2/ordered_set_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch2/predecessor_problem_l3.cpp": "7752fec48494060a9f3dd93d143dbf087c43d71cb8e386f87c80a897385693c9",
+        "assets/library_batch2/range_add_range_min_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch2/vertex_add_path_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch2/majority_voting_slow.cpp": "b8f8cab097f28910d1c074771380835e3f37ee51b79dc7e5d9bb48a1b7870df0",
+        "assets/library_batch2/point_add_range_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch2/set_xor_min_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch2/persistent_queue_l3.cpp": "2536a33f62f2af249e0d22514222b77fc2626e93b956da08d03f7bc78ef02fce",
+        "assets/library_batch2/deque_operate_all_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch2/queue_operate_all_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch2/range_add_range_min_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch2/point_set_range_composite_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch2/range_affine_range_sum_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch2/range_affine_range_sum_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch2/range_set_range_composite_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch2/ordered_set_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch2/point_add_range_sum_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch2/static_range_count_distinct_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch2/persistent_queue_slow.cpp": "f929d86afcdb9b83c0f08d90f154792e01fb74fbb8aa8c7b4770e5e5c0b25fd8",
+        "assets/library_batch2/majority_voting_l3.cpp": "3c595f5ed801a97804acf560910bff646ffd18bfced1ddb89a4971b3944e4afc",
+        "assets/library_batch2/point_add_range_sum_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch2/static_range_count_distinct_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch2/vertex_add_path_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch2/vertex_add_subtree_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch2/point_set_range_composite_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch2/vertex_add_subtree_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch2/predecessor_problem_l3.cpp",
+      "source_sha256": "7752fec48494060a9f3dd93d143dbf087c43d71cb8e386f87c80a897385693c9",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch2/queue_operate_all_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch2/range_reverse_range_sum_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch2/associative_array_l3.cpp": "a0ef5209b7f73e8f0e97a2c899a2db7d002c881841490d96093acc94ce86366c",
+        "assets/library_batch2/set_xor_min_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch2/range_reverse_range_sum_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch2/associative_array_raw.cpp": "cc1405469307283afda82d8ff6c8f455559a42f8f1124bb956ed4fc90099c4b7",
+        "assets/library_batch2/range_set_range_composite_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch2/solver.cpp": "9080e763c393ac955c16f127a95053654b34bfa5463892c8b0e0308329686121",
+        "assets/library_batch2/range_affine_range_sum_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch2/deque_operate_all_composite_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch2/vertex_add_subtree_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch2/static_range_count_distinct_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch2/majority_voting_raw.cpp": "063a1843176f62edcd0fe190917dc459abdd2fefa3ad1878625e335fef86002b",
+        "assets/library_batch2/associative_array_slow.cpp": "44eb130cae306cfb02375cd3023871e73cc9175bb044511c88f23cb25bebf9c5",
+        "assets/library_batch2/persistent_queue_raw.cpp": "027a126dc634215cb92f39242aba5426c7f16014bf827ce589832ace4bb15d6a",
+        "assets/library_batch2/predecessor_problem_slow.cpp": "e5d8487d715e8b5f67b2ef5db42fa88ddf94e878ef7132cd37d99a366fe56abd",
+        "assets/library_batch2/set_xor_min_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch2/vertex_add_path_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch2/ordered_set_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch2/range_reverse_range_sum_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch2/point_set_range_composite_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch2/queue_operate_all_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch2/range_add_range_min_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch2/range_set_range_composite_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch2/deque_operate_all_composite_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch2/predecessor_problem_raw.cpp": "822f86f6690af261d54b29f8a779c0e79b8f4c8674e5a1e4192df7d2e859f9c3",
+        "assets/library_batch2/ordered_set_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch2/predecessor_problem_l3.cpp": "7752fec48494060a9f3dd93d143dbf087c43d71cb8e386f87c80a897385693c9",
+        "assets/library_batch2/range_add_range_min_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch2/vertex_add_path_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch2/majority_voting_slow.cpp": "b8f8cab097f28910d1c074771380835e3f37ee51b79dc7e5d9bb48a1b7870df0",
+        "assets/library_batch2/point_add_range_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch2/set_xor_min_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch2/persistent_queue_l3.cpp": "2536a33f62f2af249e0d22514222b77fc2626e93b956da08d03f7bc78ef02fce",
+        "assets/library_batch2/deque_operate_all_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch2/queue_operate_all_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch2/range_add_range_min_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch2/point_set_range_composite_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch2/range_affine_range_sum_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch2/range_affine_range_sum_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch2/range_set_range_composite_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch2/ordered_set_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch2/point_add_range_sum_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch2/static_range_count_distinct_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch2/persistent_queue_slow.cpp": "f929d86afcdb9b83c0f08d90f154792e01fb74fbb8aa8c7b4770e5e5c0b25fd8",
+        "assets/library_batch2/majority_voting_l3.cpp": "3c595f5ed801a97804acf560910bff646ffd18bfced1ddb89a4971b3944e4afc",
+        "assets/library_batch2/point_add_range_sum_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch2/static_range_count_distinct_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch2/vertex_add_path_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch2/vertex_add_subtree_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch2/point_set_range_composite_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch2/vertex_add_subtree_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch2/oracle.py",
+      "args": [
+        "predecessor_problem",
+        "raw"
+      ],
+      "source_sha256": "d2c6bab4ce16a1fdda31e27bab81d01b7dd81fd50aef6607e9656d6ffb2b0d12",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch2/queue_operate_all_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch2/range_reverse_range_sum_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch2/associative_array_l3.cpp": "a0ef5209b7f73e8f0e97a2c899a2db7d002c881841490d96093acc94ce86366c",
+        "assets/library_batch2/set_xor_min_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch2/range_reverse_range_sum_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch2/associative_array_raw.cpp": "cc1405469307283afda82d8ff6c8f455559a42f8f1124bb956ed4fc90099c4b7",
+        "assets/library_batch2/range_set_range_composite_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch2/solver.cpp": "9080e763c393ac955c16f127a95053654b34bfa5463892c8b0e0308329686121",
+        "assets/library_batch2/range_affine_range_sum_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch2/deque_operate_all_composite_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch2/vertex_add_subtree_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch2/static_range_count_distinct_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch2/majority_voting_raw.cpp": "063a1843176f62edcd0fe190917dc459abdd2fefa3ad1878625e335fef86002b",
+        "assets/library_batch2/associative_array_slow.cpp": "44eb130cae306cfb02375cd3023871e73cc9175bb044511c88f23cb25bebf9c5",
+        "assets/library_batch2/persistent_queue_raw.cpp": "027a126dc634215cb92f39242aba5426c7f16014bf827ce589832ace4bb15d6a",
+        "assets/library_batch2/predecessor_problem_slow.cpp": "e5d8487d715e8b5f67b2ef5db42fa88ddf94e878ef7132cd37d99a366fe56abd",
+        "assets/library_batch2/set_xor_min_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch2/vertex_add_path_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch2/ordered_set_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch2/range_reverse_range_sum_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch2/point_set_range_composite_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch2/queue_operate_all_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch2/range_add_range_min_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch2/range_set_range_composite_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch2/deque_operate_all_composite_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch2/predecessor_problem_raw.cpp": "822f86f6690af261d54b29f8a779c0e79b8f4c8674e5a1e4192df7d2e859f9c3",
+        "assets/library_batch2/ordered_set_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch2/predecessor_problem_l3.cpp": "7752fec48494060a9f3dd93d143dbf087c43d71cb8e386f87c80a897385693c9",
+        "assets/library_batch2/range_add_range_min_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch2/vertex_add_path_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch2/majority_voting_slow.cpp": "b8f8cab097f28910d1c074771380835e3f37ee51b79dc7e5d9bb48a1b7870df0",
+        "assets/library_batch2/point_add_range_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch2/set_xor_min_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch2/persistent_queue_l3.cpp": "2536a33f62f2af249e0d22514222b77fc2626e93b956da08d03f7bc78ef02fce",
+        "assets/library_batch2/deque_operate_all_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch2/queue_operate_all_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch2/range_add_range_min_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch2/point_set_range_composite_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch2/range_affine_range_sum_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch2/range_affine_range_sum_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch2/range_set_range_composite_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch2/ordered_set_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch2/point_add_range_sum_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch2/static_range_count_distinct_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch2/persistent_queue_slow.cpp": "f929d86afcdb9b83c0f08d90f154792e01fb74fbb8aa8c7b4770e5e5c0b25fd8",
+        "assets/library_batch2/majority_voting_l3.cpp": "3c595f5ed801a97804acf560910bff646ffd18bfced1ddb89a4971b3944e4afc",
+        "assets/library_batch2/point_add_range_sum_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch2/static_range_count_distinct_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch2/vertex_add_path_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch2/vertex_add_subtree_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch2/point_set_range_composite_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch2/vertex_add_subtree_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch2/oracle.py",
+      "args": [
+        "predecessor_problem",
+        "l3"
+      ],
+      "source_sha256": "d2c6bab4ce16a1fdda31e27bab81d01b7dd81fd50aef6607e9656d6ffb2b0d12",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch2/queue_operate_all_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch2/range_reverse_range_sum_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch2/associative_array_l3.cpp": "a0ef5209b7f73e8f0e97a2c899a2db7d002c881841490d96093acc94ce86366c",
+        "assets/library_batch2/set_xor_min_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch2/range_reverse_range_sum_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch2/associative_array_raw.cpp": "cc1405469307283afda82d8ff6c8f455559a42f8f1124bb956ed4fc90099c4b7",
+        "assets/library_batch2/range_set_range_composite_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch2/solver.cpp": "9080e763c393ac955c16f127a95053654b34bfa5463892c8b0e0308329686121",
+        "assets/library_batch2/range_affine_range_sum_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch2/deque_operate_all_composite_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch2/vertex_add_subtree_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch2/static_range_count_distinct_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch2/majority_voting_raw.cpp": "063a1843176f62edcd0fe190917dc459abdd2fefa3ad1878625e335fef86002b",
+        "assets/library_batch2/associative_array_slow.cpp": "44eb130cae306cfb02375cd3023871e73cc9175bb044511c88f23cb25bebf9c5",
+        "assets/library_batch2/persistent_queue_raw.cpp": "027a126dc634215cb92f39242aba5426c7f16014bf827ce589832ace4bb15d6a",
+        "assets/library_batch2/predecessor_problem_slow.cpp": "e5d8487d715e8b5f67b2ef5db42fa88ddf94e878ef7132cd37d99a366fe56abd",
+        "assets/library_batch2/set_xor_min_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch2/vertex_add_path_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch2/ordered_set_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch2/range_reverse_range_sum_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch2/point_set_range_composite_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch2/queue_operate_all_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch2/range_add_range_min_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch2/range_set_range_composite_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch2/deque_operate_all_composite_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch2/predecessor_problem_raw.cpp": "822f86f6690af261d54b29f8a779c0e79b8f4c8674e5a1e4192df7d2e859f9c3",
+        "assets/library_batch2/ordered_set_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch2/predecessor_problem_l3.cpp": "7752fec48494060a9f3dd93d143dbf087c43d71cb8e386f87c80a897385693c9",
+        "assets/library_batch2/range_add_range_min_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch2/vertex_add_path_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch2/majority_voting_slow.cpp": "b8f8cab097f28910d1c074771380835e3f37ee51b79dc7e5d9bb48a1b7870df0",
+        "assets/library_batch2/point_add_range_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch2/set_xor_min_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch2/persistent_queue_l3.cpp": "2536a33f62f2af249e0d22514222b77fc2626e93b956da08d03f7bc78ef02fce",
+        "assets/library_batch2/deque_operate_all_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch2/queue_operate_all_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch2/range_add_range_min_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch2/point_set_range_composite_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch2/range_affine_range_sum_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch2/range_affine_range_sum_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch2/range_set_range_composite_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch2/ordered_set_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch2/point_add_range_sum_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch2/static_range_count_distinct_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch2/persistent_queue_slow.cpp": "f929d86afcdb9b83c0f08d90f154792e01fb74fbb8aa8c7b4770e5e5c0b25fd8",
+        "assets/library_batch2/majority_voting_l3.cpp": "3c595f5ed801a97804acf560910bff646ffd18bfced1ddb89a4971b3944e4afc",
+        "assets/library_batch2/point_add_range_sum_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch2/static_range_count_distinct_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch2/vertex_add_path_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch2/vertex_add_subtree_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch2/point_set_range_composite_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch2/vertex_add_subtree_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/predecessor_problem/verifier.cpp",
+      "params_path": "library_work/prepared_packages/predecessor_problem/params.h",
+      "source_sha256": "dd0be5c8e99e4a70a8591083d9bdf7a360f467b25e6454aaea4963a2a5b9aa35",
+      "params_sha256": "913eb7c0f24b6fefdcc5a62965addb69d577e4843704d373b36c67d898eb55cb"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/predecessor_problem/verifier.cpp",
+      "params_path": "library_work/l2_packages/predecessor_problem/params.h",
+      "source_sha256": "dd0be5c8e99e4a70a8591083d9bdf7a360f467b25e6454aaea4963a2a5b9aa35",
+      "params_sha256": "fa753a169d9193120878c31a7936fa2fc81d5f4f2ca813f9eec562fede0b83ef"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/predecessor_problem/sol/correct.cpp",
+      "source_sha256": "8cdcb0caeb7153c0eb68522c6ead3d7d01ad3afa9631e69e5ae52c5f76df6fdf",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/predecessor_problem/strict_edit_log.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 10.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch2.py",
+    "module_sha256": "46160e1e9f137097d0881adf07dfd34faf4f2f51784d9afe1d751d762f754760",
+    "function": null,
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

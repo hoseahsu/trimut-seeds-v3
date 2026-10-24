@@ -1,0 +1,185 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM004",
+  "source_identity": "codeforces:615_A",
+  "source_url": "https://codeforces.com/problemset/problem/615/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:615_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM004/raw.txt",
+      "sha256": "01d60fe9bfc2e6a7a143469bdc59ce1ab9f73eb8c25a83694907b531dd717583"
+    },
+    "provenance": {
+      "path": "tasks/TM004/raw_provenance.json",
+      "sha256": "27ec073bb23bef76f6a1c25524a2697d741fce593f3e850257afac60863fa68c"
+    },
+    "tests": {
+      "path": "tasks/TM004/raw_test_manifest.json",
+      "sha256": "624aeb361728a2dd2e7adee228f7d2f39d6b682f8e79a560cea786e747290a75"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM004/l1.txt",
+      "sha256": "50bfdb60931a69f5eb969758ba2f41a6070fa8541c143f15a9c56a2dfa4c5b54"
+    },
+    "certificate": {
+      "path": "tasks/TM004/l1_certificate.json",
+      "sha256": "36e1e8153f2b63cdb353b8a3662612f21a00178879e37872336c68f1d9bba98a"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM004/raw_test_manifest.json",
+      "sha256": "624aeb361728a2dd2e7adee228f7d2f39d6b682f8e79a560cea786e747290a75"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM004/l2.txt",
+      "sha256": "fb8f0159410ee7d9a39fe6134d6cc5fdc6f56f14f6dcb1cd2a883b20b12eeaeb"
+    },
+    "tests": {
+      "path": "tasks/TM004/l2_test_manifest.json",
+      "sha256": "231117b1718d3c89618827964c908849765eda73a19a02d57dbaea76214d3cd4"
+    },
+    "axis": "n",
+    "original_upper": 100,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM004/l3.txt",
+      "sha256": "715ccf3956c04bfb827f265dc42c50b226111efa872b2145ff114f8d54b4eba7"
+    },
+    "tests": {
+      "path": "tasks/TM004/l3_test_manifest.json",
+      "sha256": "686ad77d9e252ca02462e3e99a99f76fd6ab73c4d219899def61f41c42e757eb"
+    },
+    "operator": "A press toggles every bulb in its connection set instead of setting it on. Decide whether some presses can light all bulbs. Duplicate identifiers within a button describe one connection, not multiple toggles.",
+    "correctness_argument": "Raw is union coverage. With toggles, only press parity matters, and the all-one vector must lie in the GF(2) span of button vectors. Independent oracle enumerates subsets of buttons.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 27,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_000",
+      "small_small_004",
+      "small_small_011",
+      "small_small_018",
+      "small_small_021"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "bulbs",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "bulbs",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "bulbs",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "bulbs",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "4",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "4",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch.py",
+    "recipe_id": "cf_615_A"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM004/report.json",
+      "sha256": "b4f162b296a0ad9344f47c21c3039f78a31b4f028a31fa5511469bd40ec0246b"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM004/report.json",
+      "sha256": "661134928dfe05fbfeff36af29f0dc9c1e55272e1003f94999ffb17aa013bfc9"
+    },
+    "resolution": {
+      "path": "tasks/TM004/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM004/mutation_edits.json",
+      "sha256": "01c4b94fb88ed6d7dee33fc3d9b6216fc433ad4792e2cdea3942b348c0f9e0eb"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

@@ -1,0 +1,172 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM085",
+  "source_identity": "codeforces:1344_A",
+  "source_url": "https://codeforces.com/problemset/problem/1344/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1344_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM085/raw.txt",
+      "sha256": "ff5b2d2ce58609913b44c78d7983d1fb76c8c00cef507a14b11337e83cff24f9"
+    },
+    "provenance": {
+      "path": "tasks/TM085/raw_provenance.json",
+      "sha256": "f213258cbd11d56a0bbb03a3e979f9ee6cded168b0ce5f446c84fbe2d0c97b44"
+    },
+    "tests": {
+      "path": "tasks/TM085/raw_test_manifest.json",
+      "sha256": "4ac03cece3028e05747efdf08059b8585248848e63a504925a3659aea4cec46c"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM085/l1.txt",
+      "sha256": "64ddbfcd6b8ce0ce90549aeed755cca7dfd315602cb03449ea91ccb36d045c3c"
+    },
+    "certificate": {
+      "path": "tasks/TM085/l1_certificate.json",
+      "sha256": "97c708205890303bac1f12803ff53cc45e89fd06c1a1d78432ad324ecf33cfa5"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM085/raw_test_manifest.json",
+      "sha256": "4ac03cece3028e05747efdf08059b8585248848e63a504925a3659aea4cec46c"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM085/l2.txt",
+      "sha256": "101ab285b15d9260a1cb5f825421e1c5bb18921141584793528ead3e6d2f5c3c"
+    },
+    "certificate": {
+      "path": "tasks/TM085/l2_certificate.json",
+      "sha256": "b5c2044223f344b8e6bb6d4f4848e83ad6cc83eacbdc518752c74416ddff979d"
+    },
+    "tests": {
+      "path": "tasks/TM085/l2_test_manifest.json",
+      "sha256": "2ad01cdb76e1c647a6df35dca1a61e3c4dac11678cd32ae113c652fef95be289"
+    },
+    "axis": "n_and_total_n",
+    "original_upper": 200000,
+    "expanded_upper": 400000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM085/l3.txt",
+      "sha256": "a1f0b3784967caa1d388a32fbbe16fdf2029f08e640715b2e556b950e6f1e7c6"
+    },
+    "tests": {
+      "path": "tasks/TM085/l3_test_manifest.json",
+      "sha256": "7704e6e89427618ad1a92d8146ac07ce6fd9b892a9538430cde9348d40448859"
+    },
+    "operator": "Move each guest to k-a_(k mod n) instead of k+a_(k mod n).",
+    "correctness_argument": "Every residue class maps bijectively to one destination residue class, so the infinite map is bijective exactly when the n destination residues are distinct. The optimized program marks residues; the oracle checks every pair of displacement differences for divisibility by n.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch2/cf_1344_a/raw_fast.cpp",
+      "sha256": "c31d014040702c66b5fdf983bd2d2da981218a8f1bfb2219d04dc4d1bb40dbf3",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch2/cf_1344_a/l3_fast.cpp",
+      "sha256": "f6e1cc729bfaabbe15d7770a5aee708d9967f05304d652b0702115ff3eadf24e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch2/cf_1344_a/raw_oracle.cpp",
+      "sha256": "0c1360cc56cf755bb3f4f0fd9bcf813dc933ad31668cfbaaf6688bf53a9c6c7a",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch2/cf_1344_a/l3_oracle.cpp",
+      "sha256": "ea721791175d4341bc40e3610e0b2ec27b3fb1e6e92caf5b8cda9fa3212c49cf",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch2/cf_1344_a/raw_fast.cpp",
+      "sha256": "c31d014040702c66b5fdf983bd2d2da981218a8f1bfb2219d04dc4d1bb40dbf3",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM085/report.json",
+      "sha256": "c3fd3ef3688ecb8e11a9feab7305b0fae51c916e6c1d8ca23af507b1ebd2a7dd"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch2.py",
+    "recipe_id": "cf_1344_a",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch2.py",
+  "recipe_id": "cf_1344_a"
+}

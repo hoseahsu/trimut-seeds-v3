@@ -1,0 +1,201 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM052",
+  "source_identity": "codecontests:5:p04044 AtCoder Beginner Contest 042 - Iroha Loves Strings (ABC Edition)",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p04044 AtCoder Beginner Contest 042 - Iroha Loves Strings (ABC Edition)"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM052/raw.txt",
+      "sha256": "ce140a098a5cd83c9ca8b75dab2d2cb559fa33a2c22118f06fe7350be66500f1"
+    },
+    "provenance": {
+      "path": "tasks/TM052/raw_provenance.json",
+      "sha256": "5504405f6eddf0a5dd9bf49f81cc0e262acbccc880d212ec21ff1c7e1090439a"
+    },
+    "tests": {
+      "path": "tasks/TM052/raw_test_manifest.json",
+      "sha256": "6970edd7aeaf84799d66184126f19e93bbd426bda8d505aca92516f327fd71ea"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM052/l1.txt",
+      "sha256": "540332935ea2537f18d0a64c43415ee2701dbfce73126cfd44ec2d332c41417b"
+    },
+    "certificate": {
+      "path": "tasks/TM052/l1_certificate.json",
+      "sha256": "47529d77e40cda70eab5441442d6abe66b1c0fba5ea639552cb742c1952297f0"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM052/raw_test_manifest.json",
+      "sha256": "6970edd7aeaf84799d66184126f19e93bbd426bda8d505aca92516f327fd71ea"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM052/l2.txt",
+      "sha256": "d4757b14cf63961a5e9c0925d4f773671b78383c72a8c142f3dc982a1d84f728"
+    },
+    "tests": {
+      "path": "tasks/TM052/l2_test_manifest.json",
+      "sha256": "ef088c6075e8de69fe3aebe275a4a85eed9c064e4dc8c36c634f3aef9001a210"
+    },
+    "axis": "N",
+    "original_upper": 100,
+    "expanded_upper": 10000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM052/l3.txt",
+      "sha256": "97fa3ab57500204d78204f64f2920a825b6a9cb77b920c7e5213f9e78fcd0eec"
+    },
+    "tests": {
+      "path": "tasks/TM052/l3_test_manifest.json",
+      "sha256": "bb0ee2fd32e78a54f17ed9efe073d5d4e8f1c9b495f3705e24200c4e00c5bf1d"
+    },
+    "operator": "Give the lexicographically largest result.",
+    "correctness_argument": "Equal block lengths make ascending/descending sorting optimal by adjacent exchange. Oracle enumerates all block permutations.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_3",
+      "small_small_6",
+      "small_small_7",
+      "small_small_8",
+      "small_small_9",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "concat",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "concat",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "concat",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "concat",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "52",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "52",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_concat"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM052/report.json",
+      "sha256": "d2c9ceb3d1338c626cd1891368ae5466efeef53c155c5a7740d4c7d89a5c993b"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM052/report.json",
+      "sha256": "49eb29b524102af77c7d3a5dfcf85e111fa7fb126e10566e8b8387c3c716c956"
+    },
+    "resolution": {
+      "path": "tasks/TM052/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM052/mutation_edits.json",
+      "sha256": "c869d6c22cc8a1bf310f9c7522fd5c222fb3c8edbc632e9fd1408dfcc37a1c36"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

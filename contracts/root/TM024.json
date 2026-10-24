@@ -1,0 +1,204 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM024",
+  "source_identity": "codecontests:6:p02328 Largest Rectangle in a Histogram",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:6:p02328 Largest Rectangle in a Histogram"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM024/raw.txt",
+      "sha256": "bc2bf3410e1031ad581d16dc7055849c3054fb7b8b252e56631d42ae420168cb"
+    },
+    "provenance": {
+      "path": "tasks/TM024/raw_provenance.json",
+      "sha256": "0b53f3af0e616830950f121e9fc71822172d37adf20627bb04e562eb28145b56"
+    },
+    "tests": {
+      "path": "tasks/TM024/raw_test_manifest.json",
+      "sha256": "b5a9509700082214233ff69474747119408d2e79039e3f5f310836cc74e38fab"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM024/l1.txt",
+      "sha256": "6028bfe03348d4d13b1c3c93011350cce876ef65029f6172558ececf1f26f9b4"
+    },
+    "certificate": {
+      "path": "tasks/TM024/l1_certificate.json",
+      "sha256": "97c1cf36a55cade9ac41895be378c9403fc8c92b1b5f398144cfdd8849f7d3e3"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM024/raw_test_manifest.json",
+      "sha256": "b5a9509700082214233ff69474747119408d2e79039e3f5f310836cc74e38fab"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM024/l2.txt",
+      "sha256": "505058a14632905b89da4244d1f0fbdded88b47ef9f2c35e4b961b28258c6d5d"
+    },
+    "tests": {
+      "path": "tasks/TM024/l2_test_manifest.json",
+      "sha256": "85b6d746b2a6e27d26e428e5891ffc8000c0338457cb49788a7888c2babbae6b"
+    },
+    "axis": "N",
+    "original_upper": 100000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM024/l3.txt",
+      "sha256": "24e22730f7df2a707addbbf050851a126c09fda1a84db3a067a1ead24812321d"
+    },
+    "tests": {
+      "path": "tasks/TM024/l3_test_manifest.json",
+      "sha256": "1c04f18034e92a5a7386b9da368d48394475e09b82589bfd75cff623acefee0c"
+    },
+    "operator": "Maximum square area under the same histogram, with axis-parallel sides.",
+    "correctness_argument": "A monotone stack gives each limiting bar its maximal span. Rectangle score=h*w; square score=min(h,w)^2. Oracle scans all intervals.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 27,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_6",
+      "small_small_7",
+      "small_small_8",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "histogram",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "histogram",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "histogram",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "histogram",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "24",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "24",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_histogram"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM024/report.json",
+      "sha256": "41fcebf7e41d376365d1d2d4f71e3cf22babc4f8ece82494d55d19075e0e4865"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM024/report.json",
+      "sha256": "0ba1dd948b6bababbcd640cb07d4bbd42fc7de58912f5be5b914b5e0e3c37bab"
+    },
+    "resolution": {
+      "path": "tasks/TM024/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM024/mutation_edits.json",
+      "sha256": "bcd979a76ff55ccee4788ffd840dba9e0ca4db453ee521b42af04914ad7842e6"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

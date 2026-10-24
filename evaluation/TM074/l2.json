@@ -1,0 +1,1423 @@
+{
+  "schema": "trimut.experiment-tests.v1",
+  "seed_id": "TM074",
+  "condition": "l2",
+  "cpu_budget_seconds": 5,
+  "memory_mb": 2048,
+  "component_manifests": [
+    {
+      "path": "tasks/TM074/raw_test_manifest.json",
+      "sha256": "102412652de205ba4ba60540979d2d600f3bce5cb8f50012f5a081c1482bba4d"
+    },
+    {
+      "path": "tasks/TM074/l2_test_manifest.json",
+      "sha256": "13c2b0d5aa3e7adeb186a86686e9aaecca101fec43a584ad25d4c0cb82bfda96"
+    }
+  ],
+  "records": [
+    {
+      "name": "public_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/public_tests_0000.in",
+      "input_sha256": "9eba81d8c2dd05062c994948155b6229cd0d4393f8615596ccd8f527c543d7be",
+      "expected_path": "tasks/TM074/tests/raw/public_tests_0000.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002702999999999678,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "public_tests_0000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "public_tests_0001",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/public_tests_0001.in",
+      "input_sha256": "92e86a519b743385a3cb5c6c227983e6580051345b0402463e6d2506569781f1",
+      "expected_path": "tasks/TM074/tests/raw/public_tests_0001.out",
+      "expected_sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00247099999999989,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "public_tests_0001",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0000.in",
+      "input_sha256": "416521b6fc720cbb46c650ed3eff1b58607a6278967e88b564197e5f866c41ef",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0000.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002426999999999957,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0001",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0001.in",
+      "input_sha256": "4a0c058fac20a7eb08cc044efd17abf94c30932d9028a2ac58a0f6626fb1c175",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0001.out",
+      "expected_sha256": "27f8d822ea64f5bdb9564c533195e35d21689b84bf074d83bb2d7a866b5276d4",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0026460000000003703,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0001",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0002",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0002.in",
+      "input_sha256": "37cf2947308927c4f556a1e1c139e6bd878a9f7cdaf5eddfd118f02d301ad28d",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0002.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002266999999999797,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0002",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0003",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0003.in",
+      "input_sha256": "16fa3cd0675332b0ba26d39fc4b68a49389e159b45fcd0fa97cc007a1fe2c130",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0003.out",
+      "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0022300000000008424,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0003",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0004",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0004.in",
+      "input_sha256": "e10af96334f37d83e52216771db7343778fe8e8c49802a319595df3734903c32",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0004.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002643000000000284,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0004",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0005",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0005.in",
+      "input_sha256": "1bc20aa6a20cc9e913c740e1eae3b87007e03a8db6843db10812054db5662495",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0005.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002634999999999388,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0005",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0006",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0006.in",
+      "input_sha256": "157ab522fd7c56acac9c9074f4ffbdfb400f07ebcd97debd65368bf11449c70e",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0006.out",
+      "expected_sha256": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002494999999999692,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0006",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "private_tests_0007",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/private_tests_0007.in",
+      "input_sha256": "61e0d6d77e1e3322e7ce16ccdfee9542c6a47a953bd607e1b5c6f95c0a302034",
+      "expected_path": "tasks/TM074/tests/raw/private_tests_0007.out",
+      "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0030970000000003495,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "private_tests_0007",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0000.in",
+      "input_sha256": "2417ccda23f3af80c405544f731f01271bc686861cead33fd95b515f30c0780f",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0000.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024940000000004403,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0001",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0001.in",
+      "input_sha256": "736f799c7bbe970eea67e7c01a1f0cf43807f626b5ce2629d65ff872f8ba0c88",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0001.out",
+      "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024730000000001695,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0001",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0003",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0003.in",
+      "input_sha256": "8f71041f6194873c10569bf7ac9b26975bbe5d763f35ec0d33d60a8856d52a7f",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0003.out",
+      "expected_sha256": "d867d3f88fa20d7cb936ecd93651adeedf473a6177218cd0987f462ff5511cb6",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002310999999999508,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0003",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0004",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0004.in",
+      "input_sha256": "d3c0d9456fb824a2cf55a61b6b1485f27dac02e2f4a205638e923661f4ed2b4a",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0004.out",
+      "expected_sha256": "9a92adbc0cee38ef658c71ce1b1bf8c65668f166bfb213644c895ccb1ad07a25",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002389999999999448,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0004",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0006",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0006.in",
+      "input_sha256": "0ba4b9eddc9f1e436b426962405da8878a876dfee1998c4e9c78674268516517",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0006.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002258999999999567,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0006",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0007",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0007.in",
+      "input_sha256": "59d9335b556be6606f07ef2365ba6a66d2524c69ec18cd86cbca276bfa4eaa57",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0007.out",
+      "expected_sha256": "969eeff1eaac226a228cc61503effa46ea87d872ef3174365befc7c36ffa3c48",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002366999999999564,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0007",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0008",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0008.in",
+      "input_sha256": "c76c18a5ebd1315cb16d84745cbb3b1e8789e1ccc450461aecd93e10365d24c8",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0008.out",
+      "expected_sha256": "54183f4323f377b737433a1e98229ead0fdc686f93bab057ecb612daa94002b5",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025649999999997064,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0008",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0009",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0009.in",
+      "input_sha256": "35901d4b38b25f5cb63fdb6502ea6b9878c81553e18ef35da6170ceebb80cdfc",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0009.out",
+      "expected_sha256": "6fc16b03d8c15b9885876848a301a01816cccaf7b48e74f2b51db99c007a3bd5",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002366999999999564,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0009",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0010",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0010.in",
+      "input_sha256": "94e852b82581de85cb47dba6059eaeffddae81d909c6733557137283df3b9fb3",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0010.out",
+      "expected_sha256": "4393447bd3c1d55ea7f97417ecb1b36a691ccaacaaf2ebd21c59a5acf825fb7b",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023490000000006006,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0010",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0011",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0011.in",
+      "input_sha256": "37dad9cc757ddc66665beba4d99287a76edb77b46853d770f8ef22847cbf87c2",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0011.out",
+      "expected_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002558999999999534,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0011",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0012",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0012.in",
+      "input_sha256": "310d7934ce50521f8340f389e0702d7118bd06444447bd8ccbcb4ce2e96115d7",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0012.out",
+      "expected_sha256": "77a60c200656e08ac5403f38b58657ecec155293323bd5313290399b75cf1c3d",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0026719999999995636,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0012",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0013",
+      "kind": "source",
+      "input_path": "tasks/TM074/tests/raw/generated_tests_0013.in",
+      "input_sha256": "4eb754fbfdf9b7a35ff798de9d5f7501f9b9af50095dc96dfb3cea69927c475c",
+      "expected_path": "tasks/TM074/tests/raw/generated_tests_0013.out",
+      "expected_sha256": "1a252402972f6057fa53cc172b52b9ffca698e18311facd0f3b06ecaaef79e17",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023159999999995406,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "generated_tests_0013",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "boundary_semantic_witness",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/boundary_semantic_witness.in",
+      "input_sha256": "488aa2bd7f81564a2df06b892c12726220386a8aebfde71f214ed6b55ebf9109",
+      "expected_path": "tasks/TM074/tests/raw/boundary_semantic_witness.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023540000000004113,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "boundary_semantic_witness",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_0",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/boundary_extra_0.in",
+      "input_sha256": "73916a0a4c69cd2b7f393a6041b85f145b3c3a5c94c36ab2f5aef034121130bb",
+      "expected_path": "tasks/TM074/tests/raw/boundary_extra_0.out",
+      "expected_sha256": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002711000000000574,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "boundary_extra_0",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_1",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/boundary_extra_1.in",
+      "input_sha256": "d847a4fded7459f6817fbe9da12caa2ba9225324d1a3b8b57e31cb20d980d0aa",
+      "expected_path": "tasks/TM074/tests/raw/boundary_extra_1.out",
+      "expected_sha256": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.003143000000000562,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "boundary_extra_1",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_2",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/boundary_extra_2.in",
+      "input_sha256": "1c60e5473de0901e983c661c0161993901116ced26e9e5bf5451af306f81634d",
+      "expected_path": "tasks/TM074/tests/raw/boundary_extra_2.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002599000000000018,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "boundary_extra_2",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_3",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/boundary_extra_3.in",
+      "input_sha256": "827a7e54cd9d8a6198cb619401d68e5b59371fd767d1233e82b2a0336e8e9167",
+      "expected_path": "tasks/TM074/tests/raw/boundary_extra_3.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002529999999999255,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "boundary_extra_3",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_4",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/boundary_extra_4.in",
+      "input_sha256": "1b004f1a3d82e5c0d4d95258b725fd4d16456c13ff5314484fd5a96aa7443e3d",
+      "expected_path": "tasks/TM074/tests/raw/boundary_extra_4.out",
+      "expected_sha256": "1a252402972f6057fa53cc172b52b9ffca698e18311facd0f3b06ecaaef79e17",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025769999999996074,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "boundary_extra_4",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_000",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_000.in",
+      "input_sha256": "c00ebed01e63499c69c01c658ce76a7aebc97e901a0f51f6641ec5d554831d78",
+      "expected_path": "tasks/TM074/tests/raw/small_random_000.out",
+      "expected_sha256": "238903180cc104ec2c5d8b3f20c5bc61b389ec0a967df8cc208cdc7cd454174f",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024439999999996687,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_001",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_001.in",
+      "input_sha256": "fb57b4b824a0a0242ee9a4d97689726d142c0858a522d633861ea959f1d83e7a",
+      "expected_path": "tasks/TM074/tests/raw/small_random_001.out",
+      "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002502999999999922,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_001",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_002",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_002.in",
+      "input_sha256": "c71dcd2b46959158712da242a5a285da1fb5978cb10096cc6c8f26d4a855729f",
+      "expected_path": "tasks/TM074/tests/raw/small_random_002.out",
+      "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024060000000005743,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_002",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_003",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_003.in",
+      "input_sha256": "fdde7c59e0272f31aafa1333f382c50a9ad6fbe2b77654d2078e7d470d022b9e",
+      "expected_path": "tasks/TM074/tests/raw/small_random_003.out",
+      "expected_sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 11,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024850000000000705,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_003",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_004",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_004.in",
+      "input_sha256": "e2ae35444aa4c62b6f491315b0b77c32865c68d7a7e3527c115d7e6c2432a7c1",
+      "expected_path": "tasks/TM074/tests/raw/small_random_004.out",
+      "expected_sha256": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024340000000000472,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_004",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_005",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_005.in",
+      "input_sha256": "1e98e7ea98c0d883d1b56cfb28e136f84482aef07846cd754a88dde5dc321c1f",
+      "expected_path": "tasks/TM074/tests/raw/small_random_005.out",
+      "expected_sha256": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025479999999999947,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_005",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_006",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_006.in",
+      "input_sha256": "a3cc25234ad5aa7a352641ab9484687636eacf57409a4c9fce9c50ff41b92c50",
+      "expected_path": "tasks/TM074/tests/raw/small_random_006.out",
+      "expected_sha256": "a9742eb8ee320e006666aef25ae9aeed948247f3125c9cafa7cf97b7e7467dd5",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002437999999999718,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_006",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_007",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_007.in",
+      "input_sha256": "404e4733fa596f2c8e3f64d1a409714cff5c2abe1e2d85add2c2f41c70e1c069",
+      "expected_path": "tasks/TM074/tests/raw/small_random_007.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023840000000001638,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_007",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_008",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_008.in",
+      "input_sha256": "c2d726dab86b6c9eae1bd20a5a2d39d702781e53f9c64d8385b45c740d6a0ff1",
+      "expected_path": "tasks/TM074/tests/raw/small_random_008.out",
+      "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 9,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002264000000000266,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_008",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_009",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_009.in",
+      "input_sha256": "b25c233e862f45b83adb2e744e490e86fa748ea85495e9888d6073ca5378f19b",
+      "expected_path": "tasks/TM074/tests/raw/small_random_009.out",
+      "expected_sha256": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002282999999999702,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_009",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_010",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_010.in",
+      "input_sha256": "257c0848c0ac7bc10e67deb9f8b3df5aba961905ae8911afbc6676cdc0afa7e2",
+      "expected_path": "tasks/TM074/tests/raw/small_random_010.out",
+      "expected_sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023980000000003443,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_010",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_011",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_011.in",
+      "input_sha256": "0c857bd7c6613de268b2e882ce13f74e73f9c9299ee10ba955f6f64f36f35be7",
+      "expected_path": "tasks/TM074/tests/raw/small_random_011.out",
+      "expected_sha256": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023980000000005663,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_011",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_012",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_012.in",
+      "input_sha256": "b7ab570a6b6c86dcb773d571135b804d4b98d3f63da0db200e01abc750d8febd",
+      "expected_path": "tasks/TM074/tests/raw/small_random_012.out",
+      "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 11,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00265100000000007,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_012",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_013",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_013.in",
+      "input_sha256": "7622dfdcf9d7064c53916e3268cfa5e3b612acea16405601488dc17a9e8b38b6",
+      "expected_path": "tasks/TM074/tests/raw/small_random_013.out",
+      "expected_sha256": "a9742eb8ee320e006666aef25ae9aeed948247f3125c9cafa7cf97b7e7467dd5",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002394999999999925,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_013",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_014",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_014.in",
+      "input_sha256": "2e671a711465e09e56d0fb86de34a453984f8484bc7f60d02178c03470e43a2a",
+      "expected_path": "tasks/TM074/tests/raw/small_random_014.out",
+      "expected_sha256": "238903180cc104ec2c5d8b3f20c5bc61b389ec0a967df8cc208cdc7cd454174f",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002350999999999104,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_014",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_015",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_015.in",
+      "input_sha256": "38ba72b01b9a835da0f5ef0f3b686ae579cabb3b3d24917eb81872ad63506c77",
+      "expected_path": "tasks/TM074/tests/raw/small_random_015.out",
+      "expected_sha256": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 11,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0026409999999996714,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_015",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_016",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_016.in",
+      "input_sha256": "d9549b05015c8458bee1b8e2d114a3a2df9fa3272d97d516be774841b97cfc00",
+      "expected_path": "tasks/TM074/tests/raw/small_random_016.out",
+      "expected_sha256": "b58a3da5fde2680191877ec88a1aa7d06927cc3b30cdf0d0db8c39b488891576",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024720000000000297,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_016",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_017",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_017.in",
+      "input_sha256": "a4c70bd4217f64941aa485b7079b5ff3b4305d1318fa68c21d71f4ff939663cb",
+      "expected_path": "tasks/TM074/tests/raw/small_random_017.out",
+      "expected_sha256": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002402999999999156,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_017",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_018",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_018.in",
+      "input_sha256": "ac191a3c56f62246dfe19708ef53452aef9b00276c2e8c1b991e8b08179520e7",
+      "expected_path": "tasks/TM074/tests/raw/small_random_018.out",
+      "expected_sha256": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 9,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00238999999999967,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_018",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_019",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_019.in",
+      "input_sha256": "d7a59e06bc3a2abd3f87dd1fa29641f5733606fbbe30b204649479c4afb710a5",
+      "expected_path": "tasks/TM074/tests/raw/small_random_019.out",
+      "expected_sha256": "6169555d9248be7e184f52250129b0d66c9932af74f4ac7bc716c20013fca362",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 11,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00245499999999943,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_019",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_020",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_020.in",
+      "input_sha256": "b00dcd17242bb4f0eb94bc32c137b63950cc9752a762aa81050366d2e2228f4c",
+      "expected_path": "tasks/TM074/tests/raw/small_random_020.out",
+      "expected_sha256": "e3667f7d8c030260bf49046f955ec9bebdb9a4cb8a66b812fd498ded5431a821",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0027100000000003233,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_020",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_021",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_021.in",
+      "input_sha256": "07577c7aaf46798d69cb4c524071ff31e5eee6c102aa6b616f34909e0e9c942a",
+      "expected_path": "tasks/TM074/tests/raw/small_random_021.out",
+      "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 7,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0027970000000001605,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_021",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_022",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_022.in",
+      "input_sha256": "ea0e39eb543e4a23723301dbedbf7b283c0d057ca6f1834b546bb546b46f54f8",
+      "expected_path": "tasks/TM074/tests/raw/small_random_022.out",
+      "expected_sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 11,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0026660000000005013,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_022",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_023",
+      "kind": "small",
+      "input_path": "tasks/TM074/tests/raw/small_random_023.in",
+      "input_sha256": "3ae925a1f708e81cfd8d30620f5ae3000b358938e505ebec3096a8d5b5bd6ec5",
+      "expected_path": "tasks/TM074/tests/raw/small_random_023.out",
+      "expected_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 1,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002709999999999546,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "small_random_023",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "native_upper",
+      "kind": "native_upper",
+      "input_path": "tasks/TM074/tests/raw/native_upper.in",
+      "input_sha256": "04c08b84b56fabde4246656d1a35c806c1cb5ed236c9d2128ae9c5dd14eb3530",
+      "expected_path": "tasks/TM074/tests/raw/native_upper.out",
+      "expected_sha256": "b80500a01f984c764f1a3b486622d0ef7cc5b13fa9bd57ec9015113eaf875597",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 199999,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0038479999999992964,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "native_upper",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "l2_upper",
+      "kind": "l2_upper",
+      "input_path": "tasks/TM074/tests/l2/l2_upper.in",
+      "input_sha256": "b8514740393db9214ec4119ab98eb6d69f19c28256521e4da89df63618ab33c0",
+      "expected_path": "tasks/TM074/tests/l2/l2_upper.out",
+      "expected_sha256": "d43574be921c54215a1e05bb2fc0c1a4b63dd2aea4bbfd5b9ebc11a2685943e2",
+      "native_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 399999,
+        "original_upper": 199999,
+        "l2_upper": 399999,
+        "outside_original": true
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025880000000002568,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM074/report.json",
+        "case": "l2_upper",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    }
+  ]
+}

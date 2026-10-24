@@ -1,0 +1,383 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM248",
+  "source_identity": "library-checker:bitwise_and_convolution",
+  "source_url": "https://judge.yosupo.jp/problem/bitwise_and_convolution",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "standard_set_convolutions"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/convolution/bitwise_and_convolution/task.md",
+    "source_task_sha256": "f46d4948e2004fb465ff214e510158a27e83b719a221f3bbf038bc511d0b6d1a",
+    "source_info_path": "sources/library-checker-problems-master/convolution/bitwise_and_convolution/info.toml",
+    "source_info_sha256": "6dbe418b3605c2737c43bef9e227c9f992f7726581c16b8a0034df65330d2826",
+    "source_hash_path": "sources/library-checker-problems-master/convolution/bitwise_and_convolution/hash.json",
+    "source_hash_sha256": "49ab0ba333a8f44b1038392141e5ecd28155f57c6278ae526ea65b5a11c8f5e8"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM248/raw.txt",
+      "sha256": "32b0e14d28725146c2d291db910e7bb1f2ff74b3f7629557732568fc49952f70"
+    },
+    "native_params": {
+      "N_MAX": 20,
+      "MOD": 998244353
+    },
+    "native_cpu_budget_seconds": 5.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM248/raw_provenance.json",
+      "sha256": "3df835b1466e0726abe96ca40a05f906a3c3fa246c01fba71cdd0862a88de1e3"
+    },
+    "tests": {
+      "path": "tasks/TM248/raw_test_manifest.json",
+      "sha256": "a2ef0289581968fdef744ada686c1695005c8a1dde35a3397c402df63512a2ff"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM248/l1.txt",
+      "sha256": "3463fa450da0d49481a6898bacbcd4ec8aa49498b46633c310b5b09d5627de1e"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM248/raw_test_manifest.json",
+      "sha256": "a2ef0289581968fdef744ada686c1695005c8a1dde35a3397c402df63512a2ff"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM248/l2.txt",
+      "sha256": "39baddab77f1b476b8e5f91da74de10a9be4417593460360db6c7ab90a714717"
+    },
+    "provenance": {
+      "path": "tasks/TM248/l2_render_provenance.json",
+      "sha256": "611b5386ec32d6650ca7ddb43b9c44aa2e279bcfa357ec74efc4c30ca8abc9e0"
+    },
+    "bound_changes": {
+      "N_MAX": {
+        "native": 20,
+        "expanded": 21
+      }
+    },
+    "tests": {
+      "path": "tasks/TM248/l2_test_manifest.json",
+      "sha256": "e1188ef704c5964e3b1b7f57a1aa810f995dd895c9a8820ce249b3c1dc8e5ca8"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM248/l3.txt",
+      "sha256": "7743350c1c871dfe13a93c29dcc8dc068478cbd4e833a875d9eef7b1d91f22d5"
+    },
+    "provenance": {
+      "path": "tasks/TM248/l3_render_provenance.json",
+      "sha256": "50af46d08608f35d8cefa73ef36e355b345db5fa189f2498bdcecd4ea129f774"
+    },
+    "operator": "AND → OR index relation",
+    "specification": "Use i OR j=k instead of i AND j=k, preserving modular coefficient aggregation.",
+    "correctness_argument": "Subset zeta multiplication and Mobius inversion yield OR convolution.",
+    "tests": {
+      "path": "tasks/TM248/l3_test_manifest.json",
+      "sha256": "3dceb8c4c6f4330a26bb46ca20434f4cbf5d11ed3c92b7852d1e2ad85a591d51"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 11,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "example_00",
+      "authored_small_00",
+      "authored_small_01",
+      "authored_small_02",
+      "authored_small_03",
+      "authored_small_04",
+      "authored_small_05",
+      "authored_small_07"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/convolution/bitwise_and_convolution/sol/correct.cpp",
+      "source_sha256": "fc829796146a22b8b1e39b28f888c5f56a1fd39aec73983f6b7526ba9cbf1d1c",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch3/bitwise_and_convolution_raw.cpp",
+      "source_sha256": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch3/bitwise_xor_convolution_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch3/point_add_rectangle_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch3/rectangle_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch3/subset_convolution_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch3/gcd_convolution_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch3/solver.cpp": "6c7dd2f3eb58c4b43ec1aaa97190afb74248164cf8404cd0e5770bfeda563dc0",
+        "assets/library_batch3/number_of_substrings_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch3/number_of_substrings_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch3/subset_convolution_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch3/kth_root_integer_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch3/bitwise_xor_convolution_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch3/lyndon_factorization_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch3/lyndon_factorization_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch3/wildcard_pattern_matching_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch3/rectangle_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch3/bitwise_and_convolution_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch3/subset_convolution_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch3/bitwise_and_convolution_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch3/point_add_rectangle_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch3/sum_of_floor_of_linear_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch3/wildcard_pattern_matching_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch3/wildcard_pattern_matching_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch3/bitwise_and_convolution_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch3/rectangle_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch3/kth_root_integer_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch3/sum_of_floor_of_linear_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch3/kth_root_integer_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch3/lyndon_factorization_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch3/lcm_convolution_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch3/gcd_convolution_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch3/sum_of_floor_of_linear_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch3/rectangle_add_point_get_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch3/number_of_substrings_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch3/gcd_convolution_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch3/rectangle_add_point_get_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch3/rectangle_add_point_get_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch3/lcm_convolution_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch3/point_add_rectangle_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch3/lcm_convolution_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch3/bitwise_xor_convolution_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch3/bitwise_and_convolution_l3.cpp",
+      "source_sha256": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch3/bitwise_xor_convolution_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch3/point_add_rectangle_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch3/rectangle_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch3/subset_convolution_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch3/gcd_convolution_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch3/solver.cpp": "6c7dd2f3eb58c4b43ec1aaa97190afb74248164cf8404cd0e5770bfeda563dc0",
+        "assets/library_batch3/number_of_substrings_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch3/number_of_substrings_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch3/subset_convolution_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch3/kth_root_integer_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch3/bitwise_xor_convolution_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch3/lyndon_factorization_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch3/lyndon_factorization_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch3/wildcard_pattern_matching_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch3/rectangle_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch3/bitwise_and_convolution_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch3/subset_convolution_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch3/bitwise_and_convolution_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch3/point_add_rectangle_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch3/sum_of_floor_of_linear_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch3/wildcard_pattern_matching_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch3/wildcard_pattern_matching_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch3/bitwise_and_convolution_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch3/rectangle_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch3/kth_root_integer_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch3/sum_of_floor_of_linear_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch3/kth_root_integer_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch3/lyndon_factorization_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch3/lcm_convolution_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch3/gcd_convolution_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch3/sum_of_floor_of_linear_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch3/rectangle_add_point_get_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch3/number_of_substrings_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch3/gcd_convolution_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch3/rectangle_add_point_get_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch3/rectangle_add_point_get_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch3/lcm_convolution_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch3/point_add_rectangle_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch3/lcm_convolution_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch3/bitwise_xor_convolution_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch3/oracle.py",
+      "args": [
+        "bitwise_and_convolution",
+        "raw"
+      ],
+      "source_sha256": "4e13a3541fa294818392526801bf261c9dc465f62bc849bd36d4d3334c174b03",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch3/bitwise_xor_convolution_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch3/point_add_rectangle_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch3/rectangle_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch3/subset_convolution_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch3/gcd_convolution_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch3/solver.cpp": "6c7dd2f3eb58c4b43ec1aaa97190afb74248164cf8404cd0e5770bfeda563dc0",
+        "assets/library_batch3/number_of_substrings_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch3/number_of_substrings_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch3/subset_convolution_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch3/kth_root_integer_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch3/bitwise_xor_convolution_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch3/lyndon_factorization_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch3/lyndon_factorization_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch3/wildcard_pattern_matching_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch3/rectangle_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch3/bitwise_and_convolution_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch3/subset_convolution_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch3/bitwise_and_convolution_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch3/point_add_rectangle_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch3/sum_of_floor_of_linear_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch3/wildcard_pattern_matching_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch3/wildcard_pattern_matching_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch3/bitwise_and_convolution_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch3/rectangle_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch3/kth_root_integer_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch3/sum_of_floor_of_linear_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch3/kth_root_integer_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch3/lyndon_factorization_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch3/lcm_convolution_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch3/gcd_convolution_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch3/sum_of_floor_of_linear_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch3/rectangle_add_point_get_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch3/number_of_substrings_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch3/gcd_convolution_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch3/rectangle_add_point_get_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch3/rectangle_add_point_get_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch3/lcm_convolution_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch3/point_add_rectangle_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch3/lcm_convolution_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch3/bitwise_xor_convolution_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch3/oracle.py",
+      "args": [
+        "bitwise_and_convolution",
+        "l3"
+      ],
+      "source_sha256": "4e13a3541fa294818392526801bf261c9dc465f62bc849bd36d4d3334c174b03",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch3/bitwise_xor_convolution_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch3/point_add_rectangle_sum_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch3/rectangle_sum_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch3/subset_convolution_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch3/gcd_convolution_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch3/solver.cpp": "6c7dd2f3eb58c4b43ec1aaa97190afb74248164cf8404cd0e5770bfeda563dc0",
+        "assets/library_batch3/number_of_substrings_slow.cpp": "4b4cee190812fc70734817bc0b8fa554614a8f50922e448baa9a0e086aa28951",
+        "assets/library_batch3/number_of_substrings_raw.cpp": "cb210b91274f44a5611fcc37ba639d1c495632b5679012e35d967f4cb240d4c3",
+        "assets/library_batch3/subset_convolution_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch3/kth_root_integer_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch3/bitwise_xor_convolution_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch3/lyndon_factorization_l3.cpp": "0a46b40cc63a4848d79516e0426ef20a96c581b87761a215421056af782d92b1",
+        "assets/library_batch3/lyndon_factorization_slow.cpp": "94d03cd27a734785f7c70ac40dab7ff5d0305be429960172bd88f79e520f72f5",
+        "assets/library_batch3/wildcard_pattern_matching_l3.cpp": "7b2b7fa3c50fc8e0039a6160ac4c8f2c9edcdd1ef7564220807a2d7afc11a95a",
+        "assets/library_batch3/rectangle_sum_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch3/bitwise_and_convolution_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch3/subset_convolution_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch3/bitwise_and_convolution_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch3/point_add_rectangle_sum_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch3/sum_of_floor_of_linear_raw.cpp": "6e2dffd1a993606ccfc942426eee842be5ef0b050763c9b58443871a76f0fc0a",
+        "assets/library_batch3/wildcard_pattern_matching_raw.cpp": "6c83237956324f3e9fe5d49d94343a99325f3444242d3d092a870ec45db1d544",
+        "assets/library_batch3/wildcard_pattern_matching_slow.cpp": "aea2311d43b0ee4447975d2e2ec00e47d06872dcf20da14461080626b6fec470",
+        "assets/library_batch3/bitwise_and_convolution_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch3/rectangle_sum_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch3/kth_root_integer_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch3/sum_of_floor_of_linear_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch3/kth_root_integer_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch3/lyndon_factorization_raw.cpp": "291b4073b8ef1e3383fe5414a9e101d30e5b7d36e24a3acc5b8706c193797c7d",
+        "assets/library_batch3/lcm_convolution_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch3/gcd_convolution_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch3/sum_of_floor_of_linear_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch3/rectangle_add_point_get_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch3/number_of_substrings_l3.cpp": "0e1d28518a0553ea2279b265e50cc7cc2bc23a2e6731118bbee7021d4719122a",
+        "assets/library_batch3/gcd_convolution_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch3/rectangle_add_point_get_raw.cpp": "eae321152f86f16221a1b8c5b2d033f4dc11d7076ff6e0e6869c27f41036e7f7",
+        "assets/library_batch3/rectangle_add_point_get_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch3/lcm_convolution_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch3/point_add_rectangle_sum_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch3/lcm_convolution_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch3/bitwise_xor_convolution_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/bitwise_and_convolution/verifier.cpp",
+      "params_path": "library_work/prepared_packages/bitwise_and_convolution/params.h",
+      "source_sha256": "e8f1f660480f83587a1ceb47b864ecd6c2e6a8edde0386a121d23e0561a2839e",
+      "params_sha256": "c74be7918b63028fcecea04a86892007610c723fbe7c0ec425e00bcd51bdf2de"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/bitwise_and_convolution/verifier.cpp",
+      "params_path": "library_work/l2_packages/bitwise_and_convolution/params.h",
+      "source_sha256": "e8f1f660480f83587a1ceb47b864ecd6c2e6a8edde0386a121d23e0561a2839e",
+      "params_sha256": "4c7a7fc60901728e8364d921408240a8ebd36ee353f3bda270f3ab6f56021496"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/bitwise_and_convolution/sol/correct.cpp",
+      "source_sha256": "fc829796146a22b8b1e39b28f888c5f56a1fd39aec73983f6b7526ba9cbf1d1c",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/bitwise_and_convolution/strict_edit_log.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 5.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch3.py",
+    "module_sha256": "d78fbdb8300d3bcb7e2f335a0dfdb5e50368935fdcb72b27f44578eebacd4f8a",
+    "function": null,
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

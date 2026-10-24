@@ -1,0 +1,182 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM121",
+  "source_identity": "codecontests:5:p03408 AtCoder Beginner Contest 091 - Two Colors Card Game",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03408 AtCoder Beginner Contest 091 - Two Colors Card Game"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM121/raw.txt",
+      "sha256": "5dfd12e3797bed9a6ea77d90d367d25ab335ff18c5b1e75cb60f81dd24763be6"
+    },
+    "provenance": {
+      "path": "tasks/TM121/raw_provenance.json",
+      "sha256": "9b96071c2890b09a239483574c34d0c9252426bcd2d228c39075e336fc314c02"
+    },
+    "tests": {
+      "path": "tasks/TM121/raw_test_manifest.json",
+      "sha256": "5ad5243e473f4c30d74b95bec340baa8115a0fa86ce5c8b4965c80795cc7e0d0"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM121/l1.txt",
+      "sha256": "f8e0be1fdb97e66d5d29e0f292e52482df823a3d55582cfd40a353f406337d60"
+    },
+    "certificate": {
+      "path": "tasks/TM121/l1_certificate.json",
+      "sha256": "8d8aaefd08e5b27a9299d2521692d4d7b044182b7cd2053da8a951474b4b0916"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM121/raw_test_manifest.json",
+      "sha256": "5ad5243e473f4c30d74b95bec340baa8115a0fa86ce5c8b4965c80795cc7e0d0"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM121/l2.txt",
+      "sha256": "c35ff43f61cde24e00d1dec0199e8241c91840add6509183b8c116c7804be6fb"
+    },
+    "certificate": {
+      "path": "tasks/TM121/l2_certificate.json",
+      "sha256": "01dbdf6ba99342ee38638877748e230333ceee581967ab3adae57de07191d5c4"
+    },
+    "tests": {
+      "path": "tasks/TM121/l2_test_manifest.json",
+      "sha256": "0ecab3d53d22cc94510307f14b04d6248cbca4e7d6061e16d79f2029983f19d8"
+    },
+    "axis": "N",
+    "original_upper": 100,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM121/l3.txt",
+      "sha256": "572816d9fa2f9d8bb9d6c0e6bda106056d9f6e3a18718e150578d15e374bf7e2"
+    },
+    "tests": {
+      "path": "tasks/TM121/l3_test_manifest.json",
+      "sha256": "eb5d5675b6ab1f5a644acf8cb3ea7120969fb21c0baba4b1b6d2171a41477bb2"
+    },
+    "operator": "Only a string appearing on BOTH a blue card and a red card earns its usual net score; all other announcements earn0. Maximize net earning.",
+    "correctness_argument": "Group identical strings and evaluate blue_count-red_count, applying the both-colors eligibility predicate for L3. The oracle independently scans both complete card lists for each announced blue-card string. Any strictly positive eligible result must have a blue occurrence.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "small_random_000",
+      "small_random_002",
+      "small_random_003",
+      "small_random_013",
+      "small_random_014",
+      "small_random_017",
+      "small_random_018",
+      "small_random_021"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch5/atcoder_abc091_b/raw_fast.cpp",
+      "sha256": "5f64c12888e021e02eb763f45963f9dc370dd43292e3052f6363f2268154dc21",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch5/atcoder_abc091_b/l3_fast.cpp",
+      "sha256": "ece948dc48dccab5f950b5a9837781094c5a52308058e6508c5b9d76ed159cff",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch5/atcoder_abc091_b/raw_oracle.cpp",
+      "sha256": "fa51831918f07fec82958b80d3abca4f1c63c9bc6f47fcfaf4487df35bc4bee0",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch5/atcoder_abc091_b/l3_oracle.cpp",
+      "sha256": "7a34861df64f8fa0c7f77f6db6873ab6cf1693d71e073e5f59c1b5b80a7be63e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch5/atcoder_abc091_b/raw_fast.cpp",
+      "sha256": "5f64c12888e021e02eb763f45963f9dc370dd43292e3052f6363f2268154dc21",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM121/report.json",
+      "sha256": "7325a2ec8c5ac80e8d185db8b65fd96f35f1555eb0adf03e34d64c99b01d4fa3"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch5.py",
+    "recipe_id": "atcoder_abc091_b",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch5.py",
+  "recipe_id": "atcoder_abc091_b"
+}

@@ -1,0 +1,382 @@
+{
+  "schema": "trimut.strict.cc_b.v1",
+  "seed_id": "TM161",
+  "source_identity": "codecontests:5:p03003 AtCoder Beginner Contest 130 - Common Subsequence",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "atcoder_abc130_e"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM161/raw.txt",
+      "sha256": "c6828a8f5df55260e66faef52e5cbb39bfd4e3a0bfae54287f82a60df65f4dc8"
+    },
+    "provenance": {
+      "path": "tasks/TM161/raw_provenance.json",
+      "sha256": "140dc6dd20944760430ac403eea229c1c109653492c19e4ac09f80e5136e8f63"
+    },
+    "tests": {
+      "path": "tasks/TM161/raw_test_manifest.json",
+      "sha256": "36ddf6785cadffff06ce86202b0f808318d4f11d9627537bf1bfb4db81614b00"
+    },
+    "native_upper_bound_reached": true,
+    "unattainable_literal_cap_note": null,
+    "all_original_examples_included": true,
+    "native_contract": {
+      "seed_id": "TM161",
+      "recipe_id": "atcoder_abc130_e",
+      "source_sha256": "c6828a8f5df55260e66faef52e5cbb39bfd4e3a0bfae54287f82a60df65f4dc8",
+      "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+      "native_axes": [
+        {
+          "name": "N",
+          "upper_inclusive": 2000,
+          "proposed_l2_upper_inclusive": 4000
+        }
+      ],
+      "native_invariants": "M1..2000;Si,Ti1..100000;mod10^9+7",
+      "source_evidence": [
+        {
+          "line": 1,
+          "text": "You are given two integer sequences S and T of length N and M, respectively, both consisting of integers between 1 and 10^5 (inclusive)."
+        },
+        {
+          "line": 11,
+          "text": "Constraints"
+        },
+        {
+          "line": 13,
+          "text": "* 1 \\leq N, M \\leq 2 \\times 10^3"
+        },
+        {
+          "line": 14,
+          "text": "* The length of S is N."
+        },
+        {
+          "line": 15,
+          "text": "* The length of T is M."
+        },
+        {
+          "line": 16,
+          "text": "* 1 \\leq S_i, T_i \\leq 10^5"
+        }
+      ],
+      "status": "contract_transcription_for_implementation;L2proposal_not_yet_validated",
+      "preserve_other_native_bounds": true
+    }
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM161/l1.txt",
+      "sha256": "9bed68a25856c59fd9e966f111ac3f9d95763944912a94104981ad1e40f50d79"
+    },
+    "certificate": {
+      "path": "tasks/TM161/l1_certificate.json",
+      "sha256": "f0fc83081ca7f4d1bb803dab4fbf7c498b724944a48ce2a217a1fd9c244f302d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM161/raw_test_manifest.json",
+      "sha256": "36ddf6785cadffff06ce86202b0f808318d4f11d9627537bf1bfb4db81614b00"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM161/l2.txt",
+      "sha256": "6181a093c466e8f5db2a7d5d8f19707ee8e2c1206af9dffec7a524e5fc85c059"
+    },
+    "tests": {
+      "path": "tasks/TM161/l2_test_manifest.json",
+      "sha256": "24067a947014b114d1048375eed4bea7305986fca5ca7c085f7772d2ab4b52ff"
+    },
+    "axis": "N",
+    "original_upper": 2000,
+    "expanded_upper": 4000,
+    "native_upper_bound_strictly_expanded": true,
+    "all_native_inputs_remain_legal": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "The original upper bound is extended. No claim that every native-passing algorithm times out only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM161/l3.txt",
+      "sha256": "5c0d0f5b60daf45a3ca6189ebc110e13cad9066961a197e67e105443817c491c"
+    },
+    "tests": {
+      "path": "tasks/TM161/l3_test_manifest.json",
+      "sha256": "97782ea63444c8b51ae3de12307f41543b31369894a2fbb182110e4517a07856"
+    },
+    "operator": "Count only equal-content subsequence pairs of odd length instead of every length. Index-set multiplicities and modulo 1000000007 are unchanged.",
+    "correctness_argument": "A two-parity DP extends equal-value pairs by toggling subsequence length parity. The independent oracle materializes both subsequence multisets and joins identical tuples.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "independent_structured_native_upper_agreement": true,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "original_statement_sample_2",
+      "boundary_boundary_1",
+      "small_small_00",
+      "small_small_01",
+      "small_small_02",
+      "small_small_03",
+      "small_small_04",
+      "small_small_05",
+      "small_small_06",
+      "small_small_07",
+      "small_small_08",
+      "small_small_09",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "witness_check": "Raw output rejected by L3 semantic checker against independent oracle",
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_b_batch3/atcoder_abc130_e_raw.cpp",
+      "sha256": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "assets/cc_b_batch3/atcoder_abc105_d_l3.cpp": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+        "assets/cc_b_batch3/atcoder_abc105_d_raw.cpp": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+        "assets/cc_b_batch3/atcoder_abc105_d_slow.cpp": "d4f8ee3d30f7762f19bc7538cd0e357eedca1727dbb5a744137cba8b7ce8e625",
+        "assets/cc_b_batch3/atcoder_abc130_e_l3.cpp": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+        "assets/cc_b_batch3/atcoder_abc130_e_raw.cpp": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+        "assets/cc_b_batch3/atcoder_abc130_e_slow.cpp": "dadb30ab81a4d73549a91c98c7988173a152fa03e0d8c5ecb6dd1c3186202ad8",
+        "assets/cc_b_batch3/atcoder_abc171_d_l3.cpp": "60b433a93377abc3b85a160805a0dde0125e8e05ef0c6c5c8da93eaa6ab0d0cf",
+        "assets/cc_b_batch3/atcoder_abc171_d_raw.cpp": "e5fcd2c5db333b7ada1133784c1a9ec81bbb2d971cd9182c7f839662e28e414c",
+        "assets/cc_b_batch3/atcoder_abc171_d_slow.cpp": "e6a3579affa2c51a0dfba9695be056a030c3626aca287c4a0e6985702e0c44a7",
+        "assets/cc_b_batch3/atcoder_dp_m_l3.cpp": "8ed307ee8b85f887d2b9ee5cd75c80d2aa00082c85e8b6fbe465d9be1c47f635",
+        "assets/cc_b_batch3/atcoder_dp_m_raw.cpp": "733518928f269f45aa3eb0954ea430334bca05d894764b76ee431f85fd6d2e97",
+        "assets/cc_b_batch3/atcoder_dp_m_slow.cpp": "ad87a3095b97d85abb0ea0ce90bcf6fb45409957b485c39b864ac75c1b0b4af3",
+        "assets/cc_b_batch3/cf_1000_c_l3.cpp": "a15d1e33c10290f5656b581bfd22c66ea17703be18bbf136dfa1ec9ca2b37a5c",
+        "assets/cc_b_batch3/cf_1000_c_raw.cpp": "2a78d9f0705cecb5efadadb832fc635d7752ca0a656dec427cd5d367b41b76dc",
+        "assets/cc_b_batch3/cf_1000_c_slow.cpp": "e45b51811c618cccf81daf7e3dd57270a769f513a1303815d300bd46586db238",
+        "assets/cc_b_batch3/cf_1011_a_l3.cpp": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+        "assets/cc_b_batch3/cf_1011_a_raw.cpp": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+        "assets/cc_b_batch3/cf_1011_a_slow.cpp": "2e162829a34e73dd5b753c848a33426b5cb72099ff04c5e956ab1efeef020a5b",
+        "assets/cc_b_batch3/cf_1121_a_l3.cpp": "e2b6cd4aeb8641a77e31ada0739f918df2825729392f774e5ec6466c2ea20191",
+        "assets/cc_b_batch3/cf_1121_a_raw.cpp": "f1f217b3d6bd16e9d0ebd144cdd04a4b88359a9e0336e60c59b9d1cabed4d7a8",
+        "assets/cc_b_batch3/cf_1121_a_slow.cpp": "a321b720f76ce25ee3ad9a189933359440924be904f86391e7c0f67385aec050",
+        "assets/cc_b_batch3/cf_1152_a_l3.cpp": "cfb75961409191ea674662b54118e386a3dfc4b46ce2ba833835b0f622319f4b",
+        "assets/cc_b_batch3/cf_1152_a_raw.cpp": "07e017d9847dd4e5a51c4b45688483e1d56a529c700772a6f1ca1a16102ed7f6",
+        "assets/cc_b_batch3/cf_1152_a_slow.cpp": "be15debb9f41aefb748c8d6f1448c729fb21fee4a3a9ce2de1596bfddc78cd0a",
+        "assets/cc_b_batch3/cf_1165_e_l3.cpp": "8f18de37991bb93e912be72ced8f17d23ac17bd97aaf608d4b0c2eb159d4ee6e",
+        "assets/cc_b_batch3/cf_1165_e_raw.cpp": "3aa0144536b6b90cb1235bde08cb30269654f27d91ba21c1057a5d7a5c26dffd",
+        "assets/cc_b_batch3/cf_1165_e_slow.cpp": "fbe2be99a7cc87ea5c72b45b36d8e954a2c83babea75a9e501871eda1868bdc4",
+        "assets/cc_b_batch3/cf_1215_b_l3.cpp": "1ad57a141f583951aae8b3a84a12f74c718d78f666e5d649a6764396ddc248d3",
+        "assets/cc_b_batch3/cf_1215_b_raw.cpp": "0f97b4327bcb2e79fc6f6bc0e7eba153abbb6a30610a31ab506c742bc52a8d20",
+        "assets/cc_b_batch3/cf_1215_b_slow.cpp": "c7f57e2e9ce460156d95d4ee96350deee78b4525004edea6b86a47397a04ad88",
+        "assets/cc_b_batch3/cf_1225_b1_l3.cpp": "c1a6f938c9ca4f6383c970d3f922504c634ec64ae80699ef486e044c7fc89012",
+        "assets/cc_b_batch3/cf_1225_b1_raw.cpp": "aa39912c9a22d9329140e62f2bf9885fb1284ad6a24bcc5eb4e20c6a0902dcac",
+        "assets/cc_b_batch3/cf_1225_b1_slow.cpp": "9b2d63b1b158a5f6caf9cae05d47b2542a364284d4f65748ed79ca117c13a72a",
+        "assets/cc_b_batch3/cf_166_a_l3.cpp": "bce5bde31cb5beb966a67b93d0304b841f89cb37d2fd82f9345b3c0363da00eb",
+        "assets/cc_b_batch3/cf_166_a_raw.cpp": "3c626d518c867e179cc1d689313eb5d5b1e6bbd05cf49541684ccfdec83720d4",
+        "assets/cc_b_batch3/cf_166_a_slow.cpp": "57b710ea5e69c0aa2aefdc0bbe3fee35a6f2e5727ce11d460bfddb6b37515ba9",
+        "assets/cc_b_batch3/cf_372_a_l3.cpp": "c631f7972bd9769c2e51a87b4a87e060a416a27ea1c2bf8891c827b09d8cacd6",
+        "assets/cc_b_batch3/cf_372_a_raw.cpp": "fef7bd31122ff8dfa0079a2e20f4d298f91d42ce257050bf94f317b63e76b42f",
+        "assets/cc_b_batch3/cf_372_a_slow.cpp": "9e6b3bb2fbf366751e53fabec4e0a3266c75a1e10f1a17fb7125311d9d805f8a",
+        "assets/cc_b_batch3/cf_451_d_l3.cpp": "6f4d7e09ee860cff83c537995d328939c23d41ca7a4a6b3d02cf35791334af4a",
+        "assets/cc_b_batch3/cf_451_d_raw.cpp": "ba7ad0c067c35082d6d2c80df8e0c8e72016d44990109b1a9613251b09121864",
+        "assets/cc_b_batch3/cf_451_d_slow.cpp": "78696fefb2b991a5c8ae9bbbbde1f365e53a4efaab99277a26d34399e8cba785",
+        "assets/cc_b_batch3/cf_46_c_l3.cpp": "1237a1c3b0505793294f0d9682669f51f5cf31cc58aea0fc251229747a66fa0a",
+        "assets/cc_b_batch3/cf_46_c_raw.cpp": "2f254139450b5302248ae51f6ce86f4ac1589e82b10a02bf2cf1998ef7f87399",
+        "assets/cc_b_batch3/cf_46_c_slow.cpp": "57886e5b88d11f5364217889ba1a976dc1413e7a4ff355987f5d1b30249c6cfc",
+        "assets/cc_b_batch3/cf_489_b_l3.cpp": "911567a0c4cd613880889f3dc236f688a44df8ad87fd020ba74fa30394c9307b",
+        "assets/cc_b_batch3/cf_489_b_raw.cpp": "e3cad1091a9862c5021f716d2adc221e48fe0164de1e4b35c1358247a8a33805",
+        "assets/cc_b_batch3/cf_489_b_slow.cpp": "c47db19f3d85f4b1ea1362d5b94684696ed14bde8e137d25b90bc96c00200713",
+        "assets/cc_b_batch3/cf_633_a_l3.cpp": "416d8ddeaf8a45c3c66442b2002c3467f9f8dc2a34f6d7265616a9df1752c1b9",
+        "assets/cc_b_batch3/cf_633_a_raw.cpp": "405a1538abc4c2d937494e454f7d22568c1c576811e5844c526a1caf3b26f990",
+        "assets/cc_b_batch3/cf_633_a_slow.cpp": "b630e823dc1a168bc52b34411806b3bbf497678a35f2a1c3c80fd4de0ec2adaa",
+        "assets/cc_b_batch3/cf_740_b_l3.cpp": "19fa3726142a5d7a7640789a0eff5d26a97a5085873c77036543283a4bb1a49d",
+        "assets/cc_b_batch3/cf_740_b_raw.cpp": "b7efe3ea098fb6636aa3ae2e730102f18a47390b50d5ac4eb3d74bab7bc8a50e",
+        "assets/cc_b_batch3/cf_740_b_slow.cpp": "201950bccd1b8574cf5cc4faa91290b054c6beee77048092bf02a72dae8e3d2d",
+        "assets/cc_b_batch3/cf_865_d_l3.cpp": "2c027d8b9b38c9cbfee860df063ec0e8e1d515e19a61ba2821bf73972eee0cf9",
+        "assets/cc_b_batch3/cf_865_d_raw.cpp": "2cf47047b005e64ac316ad4f4fd638a0255fa00a0ca1b0a6a74ae1ed62d9e8f0",
+        "assets/cc_b_batch3/cf_865_d_slow.cpp": "85084c39ad3097a76a6a6d853d5df13829fbbe46f5b801151ad102969294d627",
+        "assets/cc_b_batch3/codenet_p02327_l3.cpp": "a91de935180eb15eadcfa152b6119a71cae684b3462ec64a38a3c16ca9ea8465",
+        "assets/cc_b_batch3/codenet_p02327_raw.cpp": "f266ee5a061653db099f4ba5eb6595d1a3c55649915d48a85094825111565565",
+        "assets/cc_b_batch3/codenet_p02327_slow.cpp": "47870f085b5b493ad2fde6e786e7749cc87c40d86b417673b5a2f386d17cf566",
+        "assets/cc_b_batch3/solver.cpp": "ffd24ea426b45e1c6cde5ee556601c84a5b7bdf090da249108b7bca2b33a4eb0"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_b_batch3/atcoder_abc130_e_l3.cpp",
+      "sha256": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "assets/cc_b_batch3/atcoder_abc105_d_l3.cpp": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+        "assets/cc_b_batch3/atcoder_abc105_d_raw.cpp": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+        "assets/cc_b_batch3/atcoder_abc105_d_slow.cpp": "d4f8ee3d30f7762f19bc7538cd0e357eedca1727dbb5a744137cba8b7ce8e625",
+        "assets/cc_b_batch3/atcoder_abc130_e_l3.cpp": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+        "assets/cc_b_batch3/atcoder_abc130_e_raw.cpp": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+        "assets/cc_b_batch3/atcoder_abc130_e_slow.cpp": "dadb30ab81a4d73549a91c98c7988173a152fa03e0d8c5ecb6dd1c3186202ad8",
+        "assets/cc_b_batch3/atcoder_abc171_d_l3.cpp": "60b433a93377abc3b85a160805a0dde0125e8e05ef0c6c5c8da93eaa6ab0d0cf",
+        "assets/cc_b_batch3/atcoder_abc171_d_raw.cpp": "e5fcd2c5db333b7ada1133784c1a9ec81bbb2d971cd9182c7f839662e28e414c",
+        "assets/cc_b_batch3/atcoder_abc171_d_slow.cpp": "e6a3579affa2c51a0dfba9695be056a030c3626aca287c4a0e6985702e0c44a7",
+        "assets/cc_b_batch3/atcoder_dp_m_l3.cpp": "8ed307ee8b85f887d2b9ee5cd75c80d2aa00082c85e8b6fbe465d9be1c47f635",
+        "assets/cc_b_batch3/atcoder_dp_m_raw.cpp": "733518928f269f45aa3eb0954ea430334bca05d894764b76ee431f85fd6d2e97",
+        "assets/cc_b_batch3/atcoder_dp_m_slow.cpp": "ad87a3095b97d85abb0ea0ce90bcf6fb45409957b485c39b864ac75c1b0b4af3",
+        "assets/cc_b_batch3/cf_1000_c_l3.cpp": "a15d1e33c10290f5656b581bfd22c66ea17703be18bbf136dfa1ec9ca2b37a5c",
+        "assets/cc_b_batch3/cf_1000_c_raw.cpp": "2a78d9f0705cecb5efadadb832fc635d7752ca0a656dec427cd5d367b41b76dc",
+        "assets/cc_b_batch3/cf_1000_c_slow.cpp": "e45b51811c618cccf81daf7e3dd57270a769f513a1303815d300bd46586db238",
+        "assets/cc_b_batch3/cf_1011_a_l3.cpp": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+        "assets/cc_b_batch3/cf_1011_a_raw.cpp": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+        "assets/cc_b_batch3/cf_1011_a_slow.cpp": "2e162829a34e73dd5b753c848a33426b5cb72099ff04c5e956ab1efeef020a5b",
+        "assets/cc_b_batch3/cf_1121_a_l3.cpp": "e2b6cd4aeb8641a77e31ada0739f918df2825729392f774e5ec6466c2ea20191",
+        "assets/cc_b_batch3/cf_1121_a_raw.cpp": "f1f217b3d6bd16e9d0ebd144cdd04a4b88359a9e0336e60c59b9d1cabed4d7a8",
+        "assets/cc_b_batch3/cf_1121_a_slow.cpp": "a321b720f76ce25ee3ad9a189933359440924be904f86391e7c0f67385aec050",
+        "assets/cc_b_batch3/cf_1152_a_l3.cpp": "cfb75961409191ea674662b54118e386a3dfc4b46ce2ba833835b0f622319f4b",
+        "assets/cc_b_batch3/cf_1152_a_raw.cpp": "07e017d9847dd4e5a51c4b45688483e1d56a529c700772a6f1ca1a16102ed7f6",
+        "assets/cc_b_batch3/cf_1152_a_slow.cpp": "be15debb9f41aefb748c8d6f1448c729fb21fee4a3a9ce2de1596bfddc78cd0a",
+        "assets/cc_b_batch3/cf_1165_e_l3.cpp": "8f18de37991bb93e912be72ced8f17d23ac17bd97aaf608d4b0c2eb159d4ee6e",
+        "assets/cc_b_batch3/cf_1165_e_raw.cpp": "3aa0144536b6b90cb1235bde08cb30269654f27d91ba21c1057a5d7a5c26dffd",
+        "assets/cc_b_batch3/cf_1165_e_slow.cpp": "fbe2be99a7cc87ea5c72b45b36d8e954a2c83babea75a9e501871eda1868bdc4",
+        "assets/cc_b_batch3/cf_1215_b_l3.cpp": "1ad57a141f583951aae8b3a84a12f74c718d78f666e5d649a6764396ddc248d3",
+        "assets/cc_b_batch3/cf_1215_b_raw.cpp": "0f97b4327bcb2e79fc6f6bc0e7eba153abbb6a30610a31ab506c742bc52a8d20",
+        "assets/cc_b_batch3/cf_1215_b_slow.cpp": "c7f57e2e9ce460156d95d4ee96350deee78b4525004edea6b86a47397a04ad88",
+        "assets/cc_b_batch3/cf_1225_b1_l3.cpp": "c1a6f938c9ca4f6383c970d3f922504c634ec64ae80699ef486e044c7fc89012",
+        "assets/cc_b_batch3/cf_1225_b1_raw.cpp": "aa39912c9a22d9329140e62f2bf9885fb1284ad6a24bcc5eb4e20c6a0902dcac",
+        "assets/cc_b_batch3/cf_1225_b1_slow.cpp": "9b2d63b1b158a5f6caf9cae05d47b2542a364284d4f65748ed79ca117c13a72a",
+        "assets/cc_b_batch3/cf_166_a_l3.cpp": "bce5bde31cb5beb966a67b93d0304b841f89cb37d2fd82f9345b3c0363da00eb",
+        "assets/cc_b_batch3/cf_166_a_raw.cpp": "3c626d518c867e179cc1d689313eb5d5b1e6bbd05cf49541684ccfdec83720d4",
+        "assets/cc_b_batch3/cf_166_a_slow.cpp": "57b710ea5e69c0aa2aefdc0bbe3fee35a6f2e5727ce11d460bfddb6b37515ba9",
+        "assets/cc_b_batch3/cf_372_a_l3.cpp": "c631f7972bd9769c2e51a87b4a87e060a416a27ea1c2bf8891c827b09d8cacd6",
+        "assets/cc_b_batch3/cf_372_a_raw.cpp": "fef7bd31122ff8dfa0079a2e20f4d298f91d42ce257050bf94f317b63e76b42f",
+        "assets/cc_b_batch3/cf_372_a_slow.cpp": "9e6b3bb2fbf366751e53fabec4e0a3266c75a1e10f1a17fb7125311d9d805f8a",
+        "assets/cc_b_batch3/cf_451_d_l3.cpp": "6f4d7e09ee860cff83c537995d328939c23d41ca7a4a6b3d02cf35791334af4a",
+        "assets/cc_b_batch3/cf_451_d_raw.cpp": "ba7ad0c067c35082d6d2c80df8e0c8e72016d44990109b1a9613251b09121864",
+        "assets/cc_b_batch3/cf_451_d_slow.cpp": "78696fefb2b991a5c8ae9bbbbde1f365e53a4efaab99277a26d34399e8cba785",
+        "assets/cc_b_batch3/cf_46_c_l3.cpp": "1237a1c3b0505793294f0d9682669f51f5cf31cc58aea0fc251229747a66fa0a",
+        "assets/cc_b_batch3/cf_46_c_raw.cpp": "2f254139450b5302248ae51f6ce86f4ac1589e82b10a02bf2cf1998ef7f87399",
+        "assets/cc_b_batch3/cf_46_c_slow.cpp": "57886e5b88d11f5364217889ba1a976dc1413e7a4ff355987f5d1b30249c6cfc",
+        "assets/cc_b_batch3/cf_489_b_l3.cpp": "911567a0c4cd613880889f3dc236f688a44df8ad87fd020ba74fa30394c9307b",
+        "assets/cc_b_batch3/cf_489_b_raw.cpp": "e3cad1091a9862c5021f716d2adc221e48fe0164de1e4b35c1358247a8a33805",
+        "assets/cc_b_batch3/cf_489_b_slow.cpp": "c47db19f3d85f4b1ea1362d5b94684696ed14bde8e137d25b90bc96c00200713",
+        "assets/cc_b_batch3/cf_633_a_l3.cpp": "416d8ddeaf8a45c3c66442b2002c3467f9f8dc2a34f6d7265616a9df1752c1b9",
+        "assets/cc_b_batch3/cf_633_a_raw.cpp": "405a1538abc4c2d937494e454f7d22568c1c576811e5844c526a1caf3b26f990",
+        "assets/cc_b_batch3/cf_633_a_slow.cpp": "b630e823dc1a168bc52b34411806b3bbf497678a35f2a1c3c80fd4de0ec2adaa",
+        "assets/cc_b_batch3/cf_740_b_l3.cpp": "19fa3726142a5d7a7640789a0eff5d26a97a5085873c77036543283a4bb1a49d",
+        "assets/cc_b_batch3/cf_740_b_raw.cpp": "b7efe3ea098fb6636aa3ae2e730102f18a47390b50d5ac4eb3d74bab7bc8a50e",
+        "assets/cc_b_batch3/cf_740_b_slow.cpp": "201950bccd1b8574cf5cc4faa91290b054c6beee77048092bf02a72dae8e3d2d",
+        "assets/cc_b_batch3/cf_865_d_l3.cpp": "2c027d8b9b38c9cbfee860df063ec0e8e1d515e19a61ba2821bf73972eee0cf9",
+        "assets/cc_b_batch3/cf_865_d_raw.cpp": "2cf47047b005e64ac316ad4f4fd638a0255fa00a0ca1b0a6a74ae1ed62d9e8f0",
+        "assets/cc_b_batch3/cf_865_d_slow.cpp": "85084c39ad3097a76a6a6d853d5df13829fbbe46f5b801151ad102969294d627",
+        "assets/cc_b_batch3/codenet_p02327_l3.cpp": "a91de935180eb15eadcfa152b6119a71cae684b3462ec64a38a3c16ca9ea8465",
+        "assets/cc_b_batch3/codenet_p02327_raw.cpp": "f266ee5a061653db099f4ba5eb6595d1a3c55649915d48a85094825111565565",
+        "assets/cc_b_batch3/codenet_p02327_slow.cpp": "47870f085b5b493ad2fde6e786e7749cc87c40d86b417673b5a2f386d17cf566",
+        "assets/cc_b_batch3/solver.cpp": "ffd24ea426b45e1c6cde5ee556601c84a5b7bdf090da249108b7bca2b33a4eb0"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_b_batch3/oracle.py",
+      "sha256": "3cb855a7c0a0ec7116f83e26b9e7c1f596df28c3d9cef5a589982e0caa35dbcd",
+      "args": [
+        "9",
+        "raw"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    },
+    "l3_oracle": {
+      "path": "assets/cc_b_batch3/oracle.py",
+      "sha256": "3cb855a7c0a0ec7116f83e26b9e7c1f596df28c3d9cef5a589982e0caa35dbcd",
+      "args": [
+        "9",
+        "l3"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/cc_b_batch3.py",
+    "recipe_id": "atcoder_abc130_e"
+  },
+  "validator": {
+    "path": "native/cc_b83.py",
+    "sha256": "0b1a6d69b5a8f99a4ae66b941682a287bad3aa12e5f71c223ace682b8b8e9f79",
+    "function": "validate",
+    "seed_argument": 161,
+    "conditions": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "l2",
+      "l3": "raw"
+    },
+    "bounds_dependency": {
+      "path": "contracts/cc165_native.json",
+      "sha256": "f9e64ff23d2b03f7c000ec59127c7a0fbaabf47f2e8722332c91740901573dd2"
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap unshare-all, no network; compilation also isolated",
+    "cpu_budget_seconds": 5,
+    "memory_mb": 2048,
+    "experimental_memory_mb": 2048,
+    "original_resource_limit_claim": false,
+    "cpu_core": 3
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_cc_b/TM161/report.json",
+      "sha256": "ab9ed7c58d18dfea8674a88da4d2289806132f606a5a792d48dde9f22f970876"
+    },
+    "supplement_report": {
+      "path": "validation/strict_cc_b_supplement/TM161/report.json",
+      "sha256": "8787d54aa559766d7d729531a75416447f0c6473b9f804a5f62dcbb3f02c708d"
+    },
+    "resolution": {
+      "path": "tasks/TM161/validation_resolution.json",
+      "sha256": "0fe8ab48a8768d976f9a3dba930256bcd75705fd70b0935db864526fe1dfd0c2"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM161/mutation_edits.json",
+      "sha256": "7b5aef792305a80b3650cb5258b74136915fd2c297d2c992a65a3ad6951ae696"
+    },
+    "upstream_exclusions": {
+      "path": "tasks/TM161/upstream_exclusion_ledger.json",
+      "sha256": "e8ff940eb0b6d275d700b48961c956aafb2e00d9b5139d24447acc7825442573"
+    },
+    "sample_extractor": {
+      "path": "native/cc_b_samples.py",
+      "sha256": "7051895f4b747a62b74f51b32bc936da0c0ee3909c2ea3a708b22955c997425e"
+    },
+    "scale_certificate_code": {
+      "path": "native/cc_b_extensions.py",
+      "sha256": "57ab2dd1a9ddca30aff74f9be5acab2f4a9c1439e4081a5246d89165d6fb5ac6"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

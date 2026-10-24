@@ -1,0 +1,175 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM058",
+  "source_identity": "codeforces:545_C",
+  "source_url": "https://codeforces.com/problemset/problem/545/C",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:545_C"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM058/raw.txt",
+      "sha256": "7c989cd3f0998f6c3fc110eae1591111b44e097e40965f7986997d7d95161e4e"
+    },
+    "provenance": {
+      "path": "tasks/TM058/raw_provenance.json",
+      "sha256": "dd8a16464edfae1c927e7c8073f4c1ab06d9300f8d08e0f88abc06b1b55300c8"
+    },
+    "tests": {
+      "path": "tasks/TM058/raw_test_manifest.json",
+      "sha256": "2abd19acfdcd9866ae6cd2756d3295b70f8131d3580bb1cfb5188ec2bdad5039"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM058/l1.txt",
+      "sha256": "9bc6e36bace4ed1206892ffe23e0d9b8f9823bdb8adb33791564834c41433845"
+    },
+    "certificate": {
+      "path": "tasks/TM058/l1_certificate.json",
+      "sha256": "9f895bf7f2a72c9cecc8620bf4f8eaf68dafcc80da6832a2fa3dd8d3d89e5b61"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM058/raw_test_manifest.json",
+      "sha256": "2abd19acfdcd9866ae6cd2756d3295b70f8131d3580bb1cfb5188ec2bdad5039"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM058/l2.txt",
+      "sha256": "09c25d7c7e9209ce603361871e780597c4f9b6f99bb106475185201c996ae79e"
+    },
+    "certificate": {
+      "path": "tasks/TM058/l2_certificate.json",
+      "sha256": "13fd71ba27630dc77e90447432f9406bc5c5ac1c4db5103f547da0fa914123e8"
+    },
+    "tests": {
+      "path": "tasks/TM058/l2_test_manifest.json",
+      "sha256": "6a8a158e763781c105c9594277c9749ddcc4a613c0c32aaefca15c1a6175bf24"
+    },
+    "axis": "n",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM058/l3.txt",
+      "sha256": "baac9d2abfa00b49d02e53e08a4e177c76c8a1ac4b2ee28a15e3cbb73277e064"
+    },
+    "tests": {
+      "path": "tasks/TM058/l3_test_manifest.json",
+      "sha256": "2846acf53629a18a894e0c8364feacb0e5bf4b87d8f248516d4e6f45ae823140"
+    },
+    "operator": "Allow intervals occupied by adjacent trees to share an endpoint: replace strict separation right_i < left_(i+1) by non-strict separation right_i <= left_(i+1). All other falling and objective rules remain unchanged.",
+    "correctness_argument": "Tree intervals contain their original ordered coordinates, so feasibility is equivalent to separation of each adjacent pair. A three-state DP records the last tree direction and occupied right endpoint, checking all nine adjacent transitions. Exhaustive ternary enumeration independently checks every configuration. L3 replaces < by <= in the adjacency predicate, allowing endpoint contact.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "small_random_001",
+      "small_random_014",
+      "small_random_015"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/cf_545_c/raw_fast.cpp",
+      "sha256": "4dfbb56bc767bbb383c592461b8351f6bdb1a8a9a4684dd841a56c54d85bea2e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/cf_545_c/l3_fast.cpp",
+      "sha256": "0b39d80a50ba9cf491bd30db03f4e0e788ae862c52c0a19e7013507cdb3b3b7d",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/cf_545_c/raw_slow.cpp",
+      "sha256": "f5b07c3880c7b0d94049f95df781a73b89e25879270bfe281025c059bcbb8a36",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/cf_545_c/l3_slow.cpp",
+      "sha256": "3e97222b1efffcc7310434a06ead24ff5f3450eeac419c0850800504fbdddd4b",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/cf_545_c/raw_fast.cpp",
+      "sha256": "4dfbb56bc767bbb383c592461b8351f6bdb1a8a9a4684dd841a56c54d85bea2e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM058/report.json",
+      "sha256": "a6452677b44aaa0bee18b017b6ea093a05077d42adf606507864e5b162f19529"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "cf_545_c",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "cf_545_c"
+}

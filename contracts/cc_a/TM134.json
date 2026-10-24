@@ -1,0 +1,180 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM134",
+  "source_identity": "codeforces:1081_C",
+  "source_url": "https://codeforces.com/problemset/problem/1081/C",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1081_C"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM134/raw.txt",
+      "sha256": "b2928f3fdd607580a49bbad225f551d448dd197be910b8c3a9b49ab2b9e8b943"
+    },
+    "provenance": {
+      "path": "tasks/TM134/raw_provenance.json",
+      "sha256": "fc4b25c5e6e6502f8b598039160d230f0db18fdd59d0247ac2ea336db251849d"
+    },
+    "tests": {
+      "path": "tasks/TM134/raw_test_manifest.json",
+      "sha256": "08a482e1a65b57ad264a863d355ec126510b647569dd005a7c4e44fe4bee5a76"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM134/l1.txt",
+      "sha256": "aaa2b9939e96a0db96605f35daf0b38bcbfd026e9cbd529d604819ece7cdf61f"
+    },
+    "certificate": {
+      "path": "tasks/TM134/l1_certificate.json",
+      "sha256": "c038fbebca0cfc2abadda0f57d23d19608c78b1b56a06ad7080a901f4bbdb545"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM134/raw_test_manifest.json",
+      "sha256": "08a482e1a65b57ad264a863d355ec126510b647569dd005a7c4e44fe4bee5a76"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM134/l2.txt",
+      "sha256": "192dee0e9c5368565804942e9fad973be07345dc62cbfb81859e76ac14884371"
+    },
+    "certificate": {
+      "path": "tasks/TM134/l2_certificate.json",
+      "sha256": "ccbac05fc514003367109e148b9b2051e3aca2fc9058a7044da00044864948e8"
+    },
+    "tests": {
+      "path": "tasks/TM134/l2_test_manifest.json",
+      "sha256": "6226b44d3369cdd064442e38be78ed5810385742437f8f2a566eb912ed80d51e"
+    },
+    "axis": "n",
+    "original_upper": 2000,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM134/l3.txt",
+      "sha256": "0dfee084449631377a2e88955ea881c5078daf653401611d11d4d5ebd008cda7"
+    },
+    "tests": {
+      "path": "tasks/TM134/l3_test_manifest.json",
+      "sha256": "3e0e98f7817014d74944b87aa2fb6a81fe60bfdc60bb1efdef6fd747d5b99d41"
+    },
+    "operator": "Count colorings having AT MOSTk adjacent changes instead of exactlyk.",
+    "correctness_argument": "Choosej changed gaps amongn-1, choose the initial color inm ways, then each changed gap hasm-1 new-color choices: C(n-1,j)*m*(m-1)^j. Keepj=k or sum throughk. The oracle enumerates every color sequence and directly counts neighboring inequalities.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 17,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "small_random_000",
+      "small_random_001",
+      "small_random_005",
+      "small_random_009",
+      "small_random_014",
+      "small_random_019",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch6/cf_1081_c/raw_fast.cpp",
+      "sha256": "79fc0f97ae15d13345b02cc6b6c3ac21e0ace431fe6c9bd603f6bd6df28cec19",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch6/cf_1081_c/l3_fast.cpp",
+      "sha256": "6327db0116ffa56160afd195988d84191b377bc4853ef6f30cfdffe119d80914",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch6/cf_1081_c/raw_oracle.cpp",
+      "sha256": "d92b3f6a6ad27c50c118a90c44de4e7345b58d1ec2c46637381b39c0947f605b",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch6/cf_1081_c/l3_oracle.cpp",
+      "sha256": "e79226634f4c4d489327a27ae31cb5b63794823ee3278c811afd324cfade0194",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch6/cf_1081_c/raw_fast.cpp",
+      "sha256": "79fc0f97ae15d13345b02cc6b6c3ac21e0ace431fe6c9bd603f6bd6df28cec19",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM134/report.json",
+      "sha256": "64e3b0491f8cdfdee211cccacff9f54cfcfa047f160139c9e49bbbd002f638c3"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch6.py",
+    "recipe_id": "cf_1081_c",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch6.py",
+  "recipe_id": "cf_1081_c"
+}

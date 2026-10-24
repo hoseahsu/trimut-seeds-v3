@@ -1,0 +1,399 @@
+{
+  "schema": "trimut.experiment-tests.v1",
+  "seed_id": "TM289",
+  "condition": "l3",
+  "cpu_budget_seconds": 5.0,
+  "memory_mb": 1024,
+  "component_manifests": [
+    {
+      "path": "tasks/TM289/l3_test_manifest.json",
+      "sha256": "f38cc1623fee9961068f120fbea2bf060435da9fd1a7c0dbe33b5c93a6a662f5"
+    }
+  ],
+  "records": [
+    {
+      "name": "example_00",
+      "input_path": "tasks/TM289/tests/raw/example_00.in",
+      "input_sha256": "81a301989bb1ca7a551fa464c9fd13134921658ef40ef84749be09c731e0d048",
+      "input_source_kind": "original_sample",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0023680000000000367,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/example_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/example_00.out",
+      "expected_sha256": "91b7309b897b5a2299754a99cc19105bbdde5ffc56489ec470a1d4d5f38f1a55",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "example_01",
+      "input_path": "tasks/TM289/tests/raw/example_01.in",
+      "input_sha256": "c68247633c85affed13a76afcc04ff8749a59533d3239e34650fa4a16991ef19",
+      "input_source_kind": "original_sample",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0019400000000000528,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/example_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/example_01.out",
+      "expected_sha256": "f6bf38aa5b42fc9d851f10d88b4a67b4ec40161b0f5051ec006ffbba662d081a",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "random_00",
+      "input_path": "tasks/TM289/tests/raw/random_00.in",
+      "input_sha256": "7aac9de0f0c970a5c67f65a13fdc245af65b4fad1c7ce273318f396639c25c5e",
+      "input_source_kind": "native_random",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.04,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/random_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM289/tests/l3/random_00.out",
+      "expected_sha256": "505ea689ee4dce8af1e5165067c6c2b7a7022fe9df2994fac7c588967f7e9ae9",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "max_random_00",
+      "input_path": "tasks/TM289/tests/raw/max_random_00.in",
+      "input_sha256": "87b0289f259ffe64d042d296bf40c0efaea9fd266083745aa85f6a2d267bd213",
+      "input_source_kind": "native_scale_candidate",
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "value": 200000
+        }
+      ],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.09,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/max_random_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM289/tests/l3/max_random_00.out",
+      "expected_sha256": "fea6fba7f05c6b73fb094aebf806dca0e0edcc7ca87a868c8a9996fc9306db59",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "almost_line_00",
+      "input_path": "tasks/TM289/tests/raw/almost_line_00.in",
+      "input_sha256": "b9557934ed66dbb033ad29ebf25977f3e35388c4343cee8b1a81effd89565090",
+      "input_source_kind": "native_structural_boundary",
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_MAX",
+          "dimension": "N",
+          "value": 200000
+        }
+      ],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.09,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/almost_line_00.run.json"
+      },
+      "small_independent_oracles": null,
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM289/tests/l3/almost_line_00.out",
+      "expected_sha256": "6382487d15583aa07c067fd0707ef7b0ad56d24bccddbdc5e8e2997ecb01d395",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_boundary_00",
+      "input_path": "tasks/TM289/tests/raw/authored_boundary_00.in",
+      "input_sha256": "a83fb154bf8b0584195a6c05e0fe8f04951f23296006f856220723e2043a46a9",
+      "input_source_kind": "authored_boundary",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.002661999999999942,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_boundary_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_boundary_00.out",
+      "expected_sha256": "a0d18793351b2111a7e76a6e6ba47239ae622e86011482e16147b4305df7e96c",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_boundary_01",
+      "input_path": "tasks/TM289/tests/raw/authored_boundary_01.in",
+      "input_sha256": "60539ad8737d93f8b18aba4db51d1de9c17eadb77be73bb1b5147f650650dc06",
+      "input_source_kind": "authored_boundary",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0027729999999999144,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_boundary_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM289/tests/l3/authored_boundary_01.out",
+      "expected_sha256": "52f96c26a39ed25108a6db43d6e11c6051eba8a498a5baab1891adfa7ac7c262",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_00",
+      "input_path": "tasks/TM289/tests/raw/authored_small_00.in",
+      "input_sha256": "debac3fc273f90f56f58e7e53f6f818f8c7f2dbd6382b5c4606a0633942d52d8",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0025370000000000115,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_00.out",
+      "expected_sha256": "aef5ef67a8df68e2408644d29beaf05cd5aa321457f65877810ed9be3556f908",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_01",
+      "input_path": "tasks/TM289/tests/raw/authored_small_01.in",
+      "input_sha256": "512475e13e38597f85123e41fe26d2c893268ae6cc670e4e8ad71df8bb28b6eb",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0024619999999999642,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_01.out",
+      "expected_sha256": "01ebbeb97c6b9f1d319c5c3191f35444f1b04ae11cc4dfc03c93a3b844337982",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_02",
+      "input_path": "tasks/TM289/tests/raw/authored_small_02.in",
+      "input_sha256": "e3135662b5139441603a533b699bdc42b2816e8e72969f465a0fb5aa7f340965",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0026540000000001562,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_02.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_02.out",
+      "expected_sha256": "9c7b29d406de787b0d501d5b5d6a3b0cc83ce49e4a834343a5f398d6f2bb117c",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_03",
+      "input_path": "tasks/TM289/tests/raw/authored_small_03.in",
+      "input_sha256": "f326e6d4633ec25cdc179d5b4a0010c8fe73bafdb847f21053cd423c0815ab45",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0023569999999999425,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_03.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_03.out",
+      "expected_sha256": "2fc135d2896cb36b8e6ede58b2e1ae4793ca44dcc0b5201ee4ec0e372d2e6026",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_04",
+      "input_path": "tasks/TM289/tests/raw/authored_small_04.in",
+      "input_sha256": "a3a65ba2337fa1ccce2a57952e9e4c494b8aed31165b7b9c9b8fb37a44f90ac9",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.002839000000000036,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_04.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": false,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_04.out",
+      "expected_sha256": "52f96c26a39ed25108a6db43d6e11c6051eba8a498a5baab1891adfa7ac7c262",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_05",
+      "input_path": "tasks/TM289/tests/raw/authored_small_05.in",
+      "input_sha256": "f14847c26f79939226eaaa9ef90c0f93b044bee73d82743e29fb312df38452ad",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.001843000000000039,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_05.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_05.out",
+      "expected_sha256": "db173038978343562344f43ad2c269e2dcf71f78253ee0e7b6c0a9fc31e42852",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_06",
+      "input_path": "tasks/TM289/tests/raw/authored_small_06.in",
+      "input_sha256": "7309bbe6cf8ab5968ecb296b36ccc04442160a22316829f080d23d141d4f4477",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.002415000000000056,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_06.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_06.out",
+      "expected_sha256": "42a48128e00b8b6d454bac9d2e4a8b70a87bb56d503a305e62c4cfde92526754",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    },
+    {
+      "name": "authored_small_07",
+      "input_path": "tasks/TM289/tests/raw/authored_small_07.in",
+      "input_sha256": "295409fd8914281c1be1c10650580a31f761cc7940bc22600dea0335eb2d2704",
+      "input_source_kind": "authored_small",
+      "native_upper_bound_hits": [],
+      "source_verifier_passed": true,
+      "run": {
+        "status": "OK",
+        "cpu_seconds": 0.0027599999999998737,
+        "report": "validation/library_native_domain/rooted_tree_topological_order_with_minimum_inversions/l3_fast/authored_small_07.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      },
+      "raw_answer_rejected_by_l3": true,
+      "expected_path": "tasks/TM289/tests/l3/authored_small_07.out",
+      "expected_sha256": "1613fa19690c8b1924cd29e7694656b2aa9adcef0bcd94ffeaf95547ddec7b0e",
+      "expected_generation": "validated authored L3 fast program",
+      "independent_large_oracle": false,
+      "independent_oracle_scope": null
+    }
+  ]
+}

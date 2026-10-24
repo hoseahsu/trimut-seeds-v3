@@ -1,0 +1,196 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM133",
+  "source_identity": "codecontests:3:minimise-maximum-sum",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:3:minimise-maximum-sum"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM133/raw.txt",
+      "sha256": "db00fc9e89f8544b962a1a81bbd1c829cfa466746b12d58a8377f6e42606f078"
+    },
+    "provenance": {
+      "path": "tasks/TM133/raw_provenance.json",
+      "sha256": "c9b5611402f337e0e977153fef916d1b004a0c43eac4b3d36f8dde3ad10a5c96"
+    },
+    "tests": {
+      "path": "tasks/TM133/raw_test_manifest.json",
+      "sha256": "28395435c3c4b5ef38ba81e07633d49f7c6f9af34f212c3b25a6cd00d66343e1"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM133/l1.txt",
+      "sha256": "34c8611569ef329ef1760a1cceefa406491051ce9f969ac3e062f9403920d2ae"
+    },
+    "certificate": {
+      "path": "tasks/TM133/l1_certificate.json",
+      "sha256": "5abe74f9c3cd3b3cd983c47b53c9a7a94f75b081a1493d788f9a60ed12e9a6c1"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM133/raw_test_manifest.json",
+      "sha256": "28395435c3c4b5ef38ba81e07633d49f7c6f9af34f212c3b25a6cd00d66343e1"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM133/l2.txt",
+      "sha256": "d0520b52f73a39e15489fe60a022fccf0005932fc76fb60dda66bd9c4120d496"
+    },
+    "certificate": {
+      "path": "tasks/TM133/l2_certificate.json",
+      "sha256": "d56890c5315ff1de05e952fb29ab8302ae83735a44680609f01f692c64055d38"
+    },
+    "tests": {
+      "path": "tasks/TM133/l2_test_manifest.json",
+      "sha256": "8e31ff541a954eb7a2f6e1bee23c4d9252ec852a3212e2cb419858cf78d0e0d7"
+    },
+    "axis": "N",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM133/l3.txt",
+      "sha256": "64e38e6264e3b38bf2d91f6e1b85401f509e540e6c77c6cd1b56ef7f5ebf88fd"
+    },
+    "tests": {
+      "path": "tasks/TM133/l3_test_manifest.json",
+      "sha256": "86348175e40b298876453996a562b88b5af4a262af04ec278f95fa0a3b88e231"
+    },
+    "operator": "MAXIMIZE the MINIMUM pair sum instead. Every input occurrence must still belong to exactly one pair.",
+    "correctness_argument": "Pairing sorted extremes is optimal for either bottleneck objective. Exchange the pairs containing the smallest and largest values so they become a pair; the other two become a pair. This does not worsen the maximal pair sum or the minimal pair sum respectively. Repeat inductively. The oracle enumerates all input permutations, pairs adjacent positions, and evaluates the requested bottleneck.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 31,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "boundary_extra_3",
+      "small_random_000",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch6/hackerearth_minimise_maximum_sum/raw_fast.cpp",
+      "sha256": "1de048a3707c048aff7e1bac8c9a50956212969c21f86f001851ba247150aedd",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch6/hackerearth_minimise_maximum_sum/l3_fast.cpp",
+      "sha256": "08ed7f22601e816971c6a61db5cd36c331cb51e62f4d6975c13e4ed92b7f9aa4",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch6/hackerearth_minimise_maximum_sum/raw_oracle.cpp",
+      "sha256": "2698d320995606083d7115cb0431cdc52effd1c1d62df34e3b8c4475935e67db",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch6/hackerearth_minimise_maximum_sum/l3_oracle.cpp",
+      "sha256": "056bab9e5347d6f17208bddf3d3ffe6c6d8d3c2abc7570b10c29607fda715189",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch6/hackerearth_minimise_maximum_sum/raw_fast.cpp",
+      "sha256": "1de048a3707c048aff7e1bac8c9a50956212969c21f86f001851ba247150aedd",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM133/report.json",
+      "sha256": "a169f1156b642daf899b24905f7cc75917c32dda17d43129740052ae5f362245"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch6.py",
+    "recipe_id": "hackerearth_minimise_maximum_sum",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch6.py",
+  "recipe_id": "hackerearth_minimise_maximum_sum"
+}

@@ -1,0 +1,181 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM054",
+  "source_identity": "codecontests:1:hotel",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:1:hotel"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM054/raw.txt",
+      "sha256": "7d6fa6542d5f38f3c1ac75695473c4feb9e74fcdebbffc47be63242b8c1f5e5d"
+    },
+    "provenance": {
+      "path": "tasks/TM054/raw_provenance.json",
+      "sha256": "6bf4cb0ad976c0da8048216a9576b56ff0997d7c95e6bc77fed9b548c8ea6cfe"
+    },
+    "tests": {
+      "path": "tasks/TM054/raw_test_manifest.json",
+      "sha256": "7781a05cd8de4f1940a1bc4ece3d01945f9eca4fadfa76958829461f3e0ee19e"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM054/l1.txt",
+      "sha256": "7b4c3e1d22cba3916be72169c81c71ef67b95726f1559190027acf3917363961"
+    },
+    "certificate": {
+      "path": "tasks/TM054/l1_certificate.json",
+      "sha256": "7006b0bff2586826614ee45fe4ae0561aef0b8baf9b007579e9bcac5504af4a2"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM054/raw_test_manifest.json",
+      "sha256": "7781a05cd8de4f1940a1bc4ece3d01945f9eca4fadfa76958829461f3e0ee19e"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM054/l2.txt",
+      "sha256": "f7bdab7fdfb887011efe1005bd13afdaaf7af77065ede0c2e3dc28bf9e8e0094"
+    },
+    "tests": {
+      "path": "tasks/TM054/l2_test_manifest.json",
+      "sha256": "4ccac23d21ae4189cf21d1fdc8e11c5061dd1b3563cbcb75609a268f20ac0197"
+    },
+    "axis": "N per test case",
+    "original_upper": 100,
+    "expanded_upper": 10000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM054/l3.txt",
+      "sha256": "901a6c9688739800040b5eeb7189874a2b75d899ca3c865fd81948e7de66e8ac"
+    },
+    "tests": {
+      "path": "tasks/TM054/l3_test_manifest.json",
+      "sha256": "fb676b4c8f2aa543854ea811c3d01a4d538230ea6c4ef2d3e61f506fdc510691"
+    },
+    "operator": "Count a departing guest at its departure instant as well.",
+    "correctness_argument": "Sweep events; Raw departures precede arrivals at equal times, L3 arrivals precede departures. Oracle counts occupancy at each arrival.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "hotel",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "hotel",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "hotel",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "hotel",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "54",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "54",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_hotel"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM054/report.json",
+      "sha256": "e0e2df2471dbb9bc904ef055c1d04351e445f4d1ef6db5033b146e894c5ffb7d"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM054/report.json",
+      "sha256": "22cf9d07949bc3598f5f89a85f1d09cd73de90527fc7ef2956d37f6bf5ca1e63"
+    },
+    "resolution": {
+      "path": "tasks/TM054/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM054/mutation_edits.json",
+      "sha256": "47ea9c372e25938eff29c37d07a459da3d998446d1752b6be158426d1f387cb6"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

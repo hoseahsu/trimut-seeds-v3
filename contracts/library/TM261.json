@@ -1,0 +1,350 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM261",
+  "source_identity": "library-checker:area_of_union_of_rectangles",
+  "source_url": "https://judge.yosupo.jp/problem/area_of_union_of_rectangles",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "area_of_union_of_rectangles"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/data_structure/area_of_union_of_rectangles/task.md",
+    "source_task_sha256": "e491bf3fec19cbc276745e5362747d20b65fcb3ac95f1a5f0d45e82f7bcee071",
+    "source_info_path": "sources/library-checker-problems-master/data_structure/area_of_union_of_rectangles/info.toml",
+    "source_info_sha256": "c80ad362ade9a7680070e8ff8fa0a6c2b443ddd04aee9aa1c5b394cdce774b41",
+    "source_hash_path": "sources/library-checker-problems-master/data_structure/area_of_union_of_rectangles/hash.json",
+    "source_hash_sha256": "72dea2a2af01a074aa4c053c485bda5b3cbf043c1b9c1d4a411886148335ce3d"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM261/raw.txt",
+      "sha256": "64fe465515ebfece8ac4c22ea2fd8ef3b91d6742fdc46fdf466e63f00a754bfc"
+    },
+    "native_params": {
+      "N_MAX": 500000,
+      "COORD_MAX": 1000000000
+    },
+    "native_cpu_budget_seconds": 5.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM261/raw_provenance.json",
+      "sha256": "1dabffe6eb8d177b39ca1a419b712071d99f991a96147b9ee093d0b14d096bb6"
+    },
+    "tests": {
+      "path": "tasks/TM261/raw_test_manifest.json",
+      "sha256": "0280e8ea6f39aba230afad718781abba37c0694b934b787cc4b5d3fa085cb2ef"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM261/l1.txt",
+      "sha256": "56c06a677320f9a256b64865569701be22733d48d18d20180b49e8dd8cec006c"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM261/raw_test_manifest.json",
+      "sha256": "0280e8ea6f39aba230afad718781abba37c0694b934b787cc4b5d3fa085cb2ef"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM261/l2.txt",
+      "sha256": "8c409b48d8717f0df175388b4b8575be0a3d61cc2a689e6770e5e6e86693e37b"
+    },
+    "provenance": {
+      "path": "tasks/TM261/l2_render_provenance.json",
+      "sha256": "ccfbb6a9f33ce5e7718a4b052cf2ab9079fbc4daeb8bc6c2c27a2b1f93f5eb9d"
+    },
+    "bound_changes": {
+      "N_MAX": {
+        "native": 500000,
+        "expanded": 1000000
+      }
+    },
+    "tests": {
+      "path": "tasks/TM261/l2_test_manifest.json",
+      "sha256": "d133814531b21e156de04cee7a6b8c4b41eab613b5ed0aa3babb2334dc1953a4"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM261/l3.txt",
+      "sha256": "e2eedcd77dc4cdd9ffd1986f95ab42b9dc6b5cee4ddaae51104936104df80ec0"
+    },
+    "provenance": {
+      "path": "tasks/TM261/l3_render_provenance.json",
+      "sha256": "df623de741548a69caca5bc88b4d9124c401b7d41294671ffc9554648197cff6"
+    },
+    "operator": "coverage at least1 → at least2",
+    "specification": "Compute area covered by at least two input rectangle instances; identical rectangles count separately.",
+    "correctness_argument": "Sweep-line segment nodes retain lengths covered at least once and twice; the coverage counter determines whether child first- or second-threshold lengths contribute.",
+    "tests": {
+      "path": "tasks/TM261/l3_test_manifest.json",
+      "sha256": "28fcc612b04559473879e2c002014289afab37e8a581c0c1db070123a2c01f97"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 11,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "example_00",
+      "authored_boundary_00",
+      "authored_boundary_01",
+      "authored_small_00",
+      "authored_small_01",
+      "authored_small_02",
+      "authored_small_03",
+      "authored_small_04",
+      "authored_small_05",
+      "authored_small_06",
+      "authored_small_07"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/data_structure/area_of_union_of_rectangles/sol/correct.cpp",
+      "source_sha256": "109b27fbeaaf510144565d42bee032bcbf46b728998ee00264132d84aab71361",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch4/area_of_union_of_rectangles_raw.cpp",
+      "source_sha256": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch4/area_of_union_of_rectangles_l3.cpp",
+      "source_sha256": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch4/oracle.py",
+      "args": [
+        "area_of_union_of_rectangles",
+        "raw"
+      ],
+      "source_sha256": "0882bbe368d7124cdee9a552ab06c193ea96d721d980a40335b5a5e6f6465e63",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch4/oracle.py",
+      "args": [
+        "area_of_union_of_rectangles",
+        "l3"
+      ],
+      "source_sha256": "0882bbe368d7124cdee9a552ab06c193ea96d721d980a40335b5a5e6f6465e63",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/area_of_union_of_rectangles/verifier.cpp",
+      "params_path": "library_work/prepared_packages/area_of_union_of_rectangles/params.h",
+      "source_sha256": "1bff588d31de83117393b8a27c28d5964398c77175335fdbaf33dff29c44229d",
+      "params_sha256": "0c58536a9a58320af720c744ec3e8af97a99c29c3ecdb8c49b7efcda85538ba3"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/area_of_union_of_rectangles/verifier.cpp",
+      "params_path": "library_work/l2_packages/area_of_union_of_rectangles/params.h",
+      "source_sha256": "1bff588d31de83117393b8a27c28d5964398c77175335fdbaf33dff29c44229d",
+      "params_sha256": "b72f5774ca2dbce6a769635995cabe4bcc7e6450062223f4e4c3f1cc2018470f"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/area_of_union_of_rectangles/sol/correct.cpp",
+      "source_sha256": "109b27fbeaaf510144565d42bee032bcbf46b728998ee00264132d84aab71361",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/area_of_union_of_rectangles/strict_edit_log.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 5.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch4.py",
+    "module_sha256": "8f1bc353879e9afe3fc600018b9a7df7434d050d1a207f0c9fb3d6aa5f1f9412",
+    "function": "check_output",
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

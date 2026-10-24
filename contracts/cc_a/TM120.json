@@ -1,0 +1,211 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM120",
+  "source_identity": "codecontests:5:p03108 AtCoder Beginner Contest 120 - Decayed Bridges",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03108 AtCoder Beginner Contest 120 - Decayed Bridges"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM120/raw.txt",
+      "sha256": "66af61f108396c4a719acb2418a373c292358663cc25036154556c0e7a466529"
+    },
+    "provenance": {
+      "path": "tasks/TM120/raw_provenance.json",
+      "sha256": "d396a6f9a4b3e773f36bb001e5e6c95504d6c711e416573a1abc765584bf799b"
+    },
+    "tests": {
+      "path": "tasks/TM120/raw_test_manifest.json",
+      "sha256": "e2c1aab9cd5b9830ec14d67191cef03f5e2488b08a32bd24133a7a54bcfb9034"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM120/l1.txt",
+      "sha256": "3c729d2959fb5cb0d3c299d2113796d687c23aa7a72d305bb217a60d3cd3b910"
+    },
+    "certificate": {
+      "path": "tasks/TM120/l1_certificate.json",
+      "sha256": "2687bfe5e379c9b012f40bf84cb87a4c871e67a8ef3d9a65c02eb294fb28ad89"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM120/raw_test_manifest.json",
+      "sha256": "e2c1aab9cd5b9830ec14d67191cef03f5e2488b08a32bd24133a7a54bcfb9034"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM120/l2.txt",
+      "sha256": "6b34a43a9c97a4743db54d28eed20020624e233d9fea62ec9625eaae976f2577"
+    },
+    "certificate": {
+      "path": "tasks/TM120/l2_certificate.json",
+      "sha256": "1004e539c8edfac712680c05747a654bcd282eec0f2f64b297139f06f1ff5f11"
+    },
+    "tests": {
+      "path": "tasks/TM120/l2_test_manifest.json",
+      "sha256": "257b10cec561bfafa069c970fd09cceb6f7cac60a1466a7d96e6b1ed8fa06dd9"
+    },
+    "axis": "N_and_M",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement.",
+    "bound_changes": {
+      "N": {
+        "native": 100000,
+        "expanded": 300000
+      },
+      "M": {
+        "native": 100000,
+        "expanded": 300000
+      }
+    }
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM120/l3.txt",
+      "sha256": "e790005359deeeb5b9f2b613e215d432abbc1b120e2a58b300e90bf50a9279b2"
+    },
+    "tests": {
+      "path": "tasks/TM120/l3_test_manifest.json",
+      "sha256": "a2ae2be99c058f15ee255fb9d0c28ac9953b59bd4de4f617e3bb27899eab6de1"
+    },
+    "operator": "Initially NO bridge exists. BUILD bridges in listed order; after each addition print the number of disconnected unordered island pairs.",
+    "correctness_argument": "Adding an edge between components of sizesa,b makes exactlya*b pairs connected. Raw removals are handled in reverse with answers recorded before insertion; L3 uses forward insertions with answers recorded after insertion. The oracle rebuilds the graph for each stage and discovers components by BFS.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_0",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "boundary_extra_3",
+      "boundary_extra_4",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch5/atcoder_abc120_d/raw_fast.cpp",
+      "sha256": "94783c31b8ec6317d4c498394dc09de325a400d6461ee1d9856d0f685d2bf3a2",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch5/atcoder_abc120_d/l3_fast.cpp",
+      "sha256": "76321dba0b73a39ba522cd14a62c83b253e1a42c796faef207e48d1fbe1c0e4e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch5/atcoder_abc120_d/raw_oracle.cpp",
+      "sha256": "bb31e07cf188ccf6c41fe816218133fb9b1fc55e51ec677282e549041e9a1d15",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch5/atcoder_abc120_d/l3_oracle.cpp",
+      "sha256": "02920457763289298f9fb2c0bd5f7b90aacaa22664aa6c404b0fd57f47fefccb",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch5/atcoder_abc120_d/raw_fast.cpp",
+      "sha256": "94783c31b8ec6317d4c498394dc09de325a400d6461ee1d9856d0f685d2bf3a2",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM120/report.json",
+      "sha256": "197386e5a6f1972995f3654c00f800fa47bbce4bca1a11b5fd8aec136347f0e0"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch5.py",
+    "recipe_id": "atcoder_abc120_d",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch5.py",
+  "recipe_id": "atcoder_abc120_d"
+}

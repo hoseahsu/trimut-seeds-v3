@@ -1,0 +1,203 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM015",
+  "source_identity": "codeforces:155_A",
+  "source_url": "https://codeforces.com/problemset/problem/155/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:155_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM015/raw.txt",
+      "sha256": "f3bb369ed26a7d7b872a5a0397151553700ea3d441c32bbfe816f4a73492df66"
+    },
+    "provenance": {
+      "path": "tasks/TM015/raw_provenance.json",
+      "sha256": "dfc5378e227e2b3eb321281b4b01f206af303de5bed563580b052ce1d4562fd3"
+    },
+    "tests": {
+      "path": "tasks/TM015/raw_test_manifest.json",
+      "sha256": "216426454d6a2c2f171d00b3836280503ecb422deb92d0a0a5f1f2bd69d09e29"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM015/l1.txt",
+      "sha256": "8d1b62ba211923b97f578f6fb197b22f94b087cdb9e0118cb18d83c5ff319dd3"
+    },
+    "certificate": {
+      "path": "tasks/TM015/l1_certificate.json",
+      "sha256": "d060f46a0d98797026712fc879dd94acff219a1d7cd243915b784d4500554b89"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM015/raw_test_manifest.json",
+      "sha256": "216426454d6a2c2f171d00b3836280503ecb422deb92d0a0a5f1f2bd69d09e29"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM015/l2.txt",
+      "sha256": "db3dc8938374c4196ff0d9acdd525e1d4dbb16322e052d6cdcd87001c88a2786"
+    },
+    "tests": {
+      "path": "tasks/TM015/l2_test_manifest.json",
+      "sha256": "be3579fa8555e84c7409b2bd7ab2a0da4a2407e8e0e3a8e8e9f31cbca50f2c97"
+    },
+    "axis": "n",
+    "original_upper": 1000,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM015/l3.txt",
+      "sha256": "3982b02b9d4effe53a2587a7889ad7ea293e12d315325581247e902085431ce2"
+    },
+    "tests": {
+      "path": "tasks/TM015/l3_test_manifest.json",
+      "sha256": "0024163d4a54adf6e372694b2cb0f789927a46877cd58233dd7265c3cd6b727a"
+    },
+    "operator": "Count strict record highs only, excluding the first contest.",
+    "correctness_argument": "Maintain prefix extrema; oracle compares all predecessor scores. L2 extends public n<=1000.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 25,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_6",
+      "small_small_7",
+      "small_small_9",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "records",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "records",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "records",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "records",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "15",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "15",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_records"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM015/report.json",
+      "sha256": "2433f543cea06aded538a88f164aa0d23c856c5b6c6071a58571c82ac9dba2e6"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM015/report.json",
+      "sha256": "fedb56c369832c00389ba27326db88baef814500d32d8448b2a71a645c583c6c"
+    },
+    "resolution": {
+      "path": "tasks/TM015/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM015/mutation_edits.json",
+      "sha256": "446bf8e6659cd8f045d93adaf8701fb93af47462eb43e97cf1307e9a3502307b"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

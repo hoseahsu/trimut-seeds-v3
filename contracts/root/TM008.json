@@ -1,0 +1,198 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM008",
+  "source_identity": "codeforces:830_A",
+  "source_url": "https://codeforces.com/problemset/problem/830/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:830_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM008/raw.txt",
+      "sha256": "9acc7d60da60fdd75c7e3c4f2d4c7fc3a9cd784bb3317223a493dcf27660e73f"
+    },
+    "provenance": {
+      "path": "tasks/TM008/raw_provenance.json",
+      "sha256": "d64452e40a1266e7114d8f728b4a396c19a140ad11f04f0298e27882364e27bd"
+    },
+    "tests": {
+      "path": "tasks/TM008/raw_test_manifest.json",
+      "sha256": "71bba462d823409bf4849b619cada221d307531670c852de1b4bacac1bed81d5"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM008/l1.txt",
+      "sha256": "c47994081291b6d40c441f05c85f1ba7ea7549425eaa46f4969b4c17133d19cd"
+    },
+    "certificate": {
+      "path": "tasks/TM008/l1_certificate.json",
+      "sha256": "67771d0d55d9c277825f07099aa1b66b5e56631c1c5b138090534807978b61b2"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM008/raw_test_manifest.json",
+      "sha256": "71bba462d823409bf4849b619cada221d307531670c852de1b4bacac1bed81d5"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM008/l2.txt",
+      "sha256": "1b8be633d1e7fba73c77a507bd898889ccbb44938c224eaed9c8735edb8605d0"
+    },
+    "tests": {
+      "path": "tasks/TM008/l2_test_manifest.json",
+      "sha256": "6d94428d3d711194ccdd325b65fd3ba28f2ee7265d4db2bf93587c3829d34a9e"
+    },
+    "axis": "k",
+    "original_upper": 2000,
+    "expanded_upper": 10000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM008/l3.txt",
+      "sha256": "6070a80bc14bd60965e2aaeb08d28298e0c7c6fe28ecc49960dafb65e4a4a753"
+    },
+    "tests": {
+      "path": "tasks/TM008/l3_test_manifest.json",
+      "sha256": "21d3f75bc5778ecc424eb4c2acacb428b0a4eafa9aa550f1d6c7b857e8d48116"
+    },
+    "operator": "Minimize the sum of all assigned travel times instead of their maximum.",
+    "correctness_argument": "Sorted matching admits an uncrossing exchange for both bottleneck and total absolute-distance objectives; the office term is key-specific. DP chooses or skips each sorted key. Oracle enumerates all injective assignments without assuming ordered matching.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_000",
+      "small_small_000",
+      "small_small_002",
+      "small_small_003",
+      "small_small_004",
+      "small_small_005",
+      "small_small_006",
+      "small_small_008",
+      "small_small_011",
+      "small_small_012",
+      "small_small_013",
+      "small_small_014",
+      "small_small_016",
+      "small_small_017",
+      "small_small_020",
+      "small_small_021",
+      "small_small_022",
+      "small_small_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "keys",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "keys",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "keys",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "keys",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "8",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "8",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch.py",
+    "recipe_id": "cf_830_A"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM008/report.json",
+      "sha256": "c70603b7fdfc5901fc4bddce07749cd9bfae5f23d49fbd5d6d3eaee56b2cb30e"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM008/report.json",
+      "sha256": "751b8c3a9ca3ceb8cf6fd7d232db99771de7db7e70563ef40ce9e280ddb15cc7"
+    },
+    "resolution": {
+      "path": "tasks/TM008/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM008/mutation_edits.json",
+      "sha256": "d52ee2ce0a0eea4b64b490ab4da606482e4f6c97f401294a364c58345aef71a3"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

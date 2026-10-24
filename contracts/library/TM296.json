@@ -1,0 +1,376 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM296",
+  "source_identity": "library-checker:point_set_range_sort_range_composite",
+  "source_url": "https://judge.yosupo.jp/problem/point_set_range_sort_range_composite",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "interval_function_composition_direction"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/data_structure/point_set_range_sort_range_composite/task.md",
+    "source_task_sha256": "ff81ab08e59b9a1cf41390b42e4b3460d43223c2e23e10c41507b279942199a5",
+    "source_info_path": "sources/library-checker-problems-master/data_structure/point_set_range_sort_range_composite/info.toml",
+    "source_info_sha256": "2fb0eb54089ac4b22066f7a83a3d6ab22006544a1ceff4c8fede2bcfe637db4c",
+    "source_hash_path": "sources/library-checker-problems-master/data_structure/point_set_range_sort_range_composite/hash.json",
+    "source_hash_sha256": "a0b90ccdab81862ac037316697fe8974a8a62342197889a2758ce5009ccb76c0"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM296/raw.txt",
+      "sha256": "d31426e7bdb5d04a5f6a198d96c7fd78f58ac0fea00fff1500dd9766941dbe81"
+    },
+    "native_params": {
+      "MOD": 998244353,
+      "N_MIN": 1,
+      "N_MAX": 100000,
+      "P_MIN": 0,
+      "P_MAX": 1000000000,
+      "Q_MIN": 1,
+      "Q_MAX": 100000
+    },
+    "native_cpu_budget_seconds": 10.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM296/raw_provenance.json",
+      "sha256": "d001f9d1ca24a3e3b324d54a63a16da73668880bccead10fd70c21a1bc755e42"
+    },
+    "tests": {
+      "path": "tasks/TM296/raw_test_manifest.json",
+      "sha256": "c28f93b5f2835f26c1362ebb9df9674a673c6230cd2328007720ce9b4b6e0fba"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM296/l1.txt",
+      "sha256": "9416f166ef4111006dea9a01006ee559d3833dd3a243e31aa4da9923a4b6f1e1"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM296/raw_test_manifest.json",
+      "sha256": "c28f93b5f2835f26c1362ebb9df9674a673c6230cd2328007720ce9b4b6e0fba"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM296/l2.txt",
+      "sha256": "67f234bfc5a5afd6209d01a1c451d4661b5bb42abdcf215f8a6fc5a22b883996"
+    },
+    "provenance": {
+      "path": "tasks/TM296/l2_render_provenance.json",
+      "sha256": "36724888f66a4579aa1278c6b671dd4aedca6239c63d2d93199751283c4047c6"
+    },
+    "bound_changes": {
+      "Q_MAX": {
+        "native": 100000,
+        "expanded": 200000
+      }
+    },
+    "tests": {
+      "path": "tasks/TM296/l2_test_manifest.json",
+      "sha256": "a36dc29e06bf9b6ccab31cc276b1a0612830e57f502c113cf33e27fce5e9fc0c"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM296/l3.txt",
+      "sha256": "02007a7dc87b73728087c6aaacda1800ce11a545f3eacb8c832e699f70236f54"
+    },
+    "provenance": {
+      "path": "tasks/TM296/l3_render_provenance.json",
+      "sha256": "ac663faf57e941491ea6536e9fdbd5fd7a836909d7442179aa8bc00a7f3472a7"
+    },
+    "operator": "forward → reverse composition",
+    "specification": "Keep assignments and ascending/descending sorting by unique keys; query applies interval functions from right to left.",
+    "correctness_argument": "Use the opposite composition monoid inside the sortable segment tree; key ordering, inverses and updates are unchanged. Oracle sorts explicit triples then evaluates right-to-left.",
+    "tests": {
+      "path": "tasks/TM296/l3_test_manifest.json",
+      "sha256": "63f07bf41d10bb20f7c6bd74265a89ee404709d31875ff95dd920c215dd563d7"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 11,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "example_00",
+      "example_01",
+      "authored_boundary_00",
+      "authored_small_00",
+      "authored_small_02",
+      "authored_small_05",
+      "authored_small_06",
+      "authored_small_07"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/data_structure/point_set_range_sort_range_composite/sol/correct.cpp",
+      "source_sha256": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch7/point_set_range_sort_range_composite_raw.cpp",
+      "source_sha256": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch7/group_affine_reverse.hpp": "eac16601a3153c6055090230d26b40cfcc405aecbec0b089f788d461c868d7a9",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_l3.cpp": "37e92a334987a4ba71e4f2bb3a7b8729698592234920bdb305e3c01a2b070520",
+        "assets/library_batch7/persistent_range_affine_range_sum_l3.cpp": "1a0b7b1923c835c4187117a4b710f59ef5e5a5d2c9f4432e25c013b8a3e259ec",
+        "assets/library_batch7/solver.cpp": "19bfb013a14f833c1576debba2e6d0a62f1407068ea3c73e2eb0152c81188c6e",
+        "assets/library_batch7/general_weighted_matching_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch7/scc_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch7/connected_components_of_complement_graph_raw.cpp": "d165073e62976464c9dcee5f03246aac98da6c09f4f9a6c24da0d6c06072111d",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_l3.cpp": "9a640a510444b2d41d535f0143ba387b950e22d4f42676e7f969a1446b047d31",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_l3.cpp": "cfdc0560c677ea7bb8c5ff835ca5d6ee26e746f72476e2db902dda9d810e9d54",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_raw.cpp": "dfa57b65d70b96adee4626dc7c068942509d1017d5085abaabd551010c887483",
+        "assets/library_batch7/point_set_range_sort_range_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch7/sortable_segtree.hpp": "ef2182252de203c6b50238e80160eab627dbf9332dc999523b1375d9baf65a95",
+        "assets/library_batch7/point_set_range_sort_range_composite_raw.cpp": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+        "assets/library_batch7/point_set_range_sort_range_composite_l3.cpp": "dfb447126d9ecc08daaa70c8d0c7076cd6a6044ec1b0d440f65443e0fbdaf10d",
+        "assets/library_batch7/segtree.hpp": "5139c13c698a4b03f5052a3d4bec7222b0dc62eafc442fa6d9f5a3043701f47c",
+        "assets/library_batch7/persistent_range_affine_range_sum_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch7/connected_components_of_complement_graph_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch7/scc_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_raw.cpp": "7841cbf028e9cb5fb709d57a3d52a88170e96775113d3df46a38dde4b1e30fe2",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch7/connected_components_of_complement_graph_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_l3.cpp": "b21b07ecd3f589337282489c7f20d04f086a91d43327fd739cd6a3f8ffa0a3b8",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_raw.cpp": "ee74d4a2b1b5ed948f2ed4fb4d04e535e3d4dbd76e24f7babe900d23165a4d9b",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_raw.cpp": "5d647094684b7c02fa7aaa2ad38dd442eaf5112d74500e3bd51db4704a13e53f",
+        "assets/library_batch7/general_weighted_matching_l3.cpp": "f474aac9fafa8b1f83b49219959de2c079e289cf692aa1545d1f9b65ddaedae5",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch7/fastset.hpp": "29674f57fe314df630d3ec4b0bd0963f804534eeb19870afc399b4d8fa3ab3ae",
+        "assets/library_batch7/persistent_range_affine_range_sum_raw.cpp": "2ed0b04e4ab012d2a9f52cbbec039fce04ff864681ac4a4308fda01347ef50da",
+        "assets/library_batch7/modint.hpp": "f88b23e5c1c898254c1cf210f6bf51355da7c2a21d098b9d5fc18e92ebd7c3a7",
+        "assets/library_batch7/group_affine.hpp": "01cb00e63d801aefdcb409fa28e03bf16b1898548f78fa5025d3c9bd02bb54f1",
+        "assets/library_batch7/general_weighted_matching_raw.cpp": "7fa87d6674e55c82e7edcf85a331b406d263783dafd52bd04f32939179681c19",
+        "assets/library_batch7/scc_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch7/point_set_range_sort_range_composite_l3.cpp",
+      "source_sha256": "dfb447126d9ecc08daaa70c8d0c7076cd6a6044ec1b0d440f65443e0fbdaf10d",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch7/group_affine_reverse.hpp": "eac16601a3153c6055090230d26b40cfcc405aecbec0b089f788d461c868d7a9",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_l3.cpp": "37e92a334987a4ba71e4f2bb3a7b8729698592234920bdb305e3c01a2b070520",
+        "assets/library_batch7/persistent_range_affine_range_sum_l3.cpp": "1a0b7b1923c835c4187117a4b710f59ef5e5a5d2c9f4432e25c013b8a3e259ec",
+        "assets/library_batch7/solver.cpp": "19bfb013a14f833c1576debba2e6d0a62f1407068ea3c73e2eb0152c81188c6e",
+        "assets/library_batch7/general_weighted_matching_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch7/scc_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch7/connected_components_of_complement_graph_raw.cpp": "d165073e62976464c9dcee5f03246aac98da6c09f4f9a6c24da0d6c06072111d",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_l3.cpp": "9a640a510444b2d41d535f0143ba387b950e22d4f42676e7f969a1446b047d31",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_l3.cpp": "cfdc0560c677ea7bb8c5ff835ca5d6ee26e746f72476e2db902dda9d810e9d54",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_raw.cpp": "dfa57b65d70b96adee4626dc7c068942509d1017d5085abaabd551010c887483",
+        "assets/library_batch7/point_set_range_sort_range_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch7/sortable_segtree.hpp": "ef2182252de203c6b50238e80160eab627dbf9332dc999523b1375d9baf65a95",
+        "assets/library_batch7/point_set_range_sort_range_composite_raw.cpp": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+        "assets/library_batch7/point_set_range_sort_range_composite_l3.cpp": "dfb447126d9ecc08daaa70c8d0c7076cd6a6044ec1b0d440f65443e0fbdaf10d",
+        "assets/library_batch7/segtree.hpp": "5139c13c698a4b03f5052a3d4bec7222b0dc62eafc442fa6d9f5a3043701f47c",
+        "assets/library_batch7/persistent_range_affine_range_sum_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch7/connected_components_of_complement_graph_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch7/scc_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_raw.cpp": "7841cbf028e9cb5fb709d57a3d52a88170e96775113d3df46a38dde4b1e30fe2",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch7/connected_components_of_complement_graph_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_l3.cpp": "b21b07ecd3f589337282489c7f20d04f086a91d43327fd739cd6a3f8ffa0a3b8",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_raw.cpp": "ee74d4a2b1b5ed948f2ed4fb4d04e535e3d4dbd76e24f7babe900d23165a4d9b",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_raw.cpp": "5d647094684b7c02fa7aaa2ad38dd442eaf5112d74500e3bd51db4704a13e53f",
+        "assets/library_batch7/general_weighted_matching_l3.cpp": "f474aac9fafa8b1f83b49219959de2c079e289cf692aa1545d1f9b65ddaedae5",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch7/fastset.hpp": "29674f57fe314df630d3ec4b0bd0963f804534eeb19870afc399b4d8fa3ab3ae",
+        "assets/library_batch7/persistent_range_affine_range_sum_raw.cpp": "2ed0b04e4ab012d2a9f52cbbec039fce04ff864681ac4a4308fda01347ef50da",
+        "assets/library_batch7/modint.hpp": "f88b23e5c1c898254c1cf210f6bf51355da7c2a21d098b9d5fc18e92ebd7c3a7",
+        "assets/library_batch7/group_affine.hpp": "01cb00e63d801aefdcb409fa28e03bf16b1898548f78fa5025d3c9bd02bb54f1",
+        "assets/library_batch7/general_weighted_matching_raw.cpp": "7fa87d6674e55c82e7edcf85a331b406d263783dafd52bd04f32939179681c19",
+        "assets/library_batch7/scc_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch7/oracle.py",
+      "args": [
+        "point_set_range_sort_range_composite",
+        "raw"
+      ],
+      "source_sha256": "032a57f3cef5942f9ca3e3bd44a7200fd7a36cdd24642fdba7760113a4646744",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch7/group_affine_reverse.hpp": "eac16601a3153c6055090230d26b40cfcc405aecbec0b089f788d461c868d7a9",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_l3.cpp": "37e92a334987a4ba71e4f2bb3a7b8729698592234920bdb305e3c01a2b070520",
+        "assets/library_batch7/persistent_range_affine_range_sum_l3.cpp": "1a0b7b1923c835c4187117a4b710f59ef5e5a5d2c9f4432e25c013b8a3e259ec",
+        "assets/library_batch7/solver.cpp": "19bfb013a14f833c1576debba2e6d0a62f1407068ea3c73e2eb0152c81188c6e",
+        "assets/library_batch7/general_weighted_matching_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch7/scc_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch7/connected_components_of_complement_graph_raw.cpp": "d165073e62976464c9dcee5f03246aac98da6c09f4f9a6c24da0d6c06072111d",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_l3.cpp": "9a640a510444b2d41d535f0143ba387b950e22d4f42676e7f969a1446b047d31",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_l3.cpp": "cfdc0560c677ea7bb8c5ff835ca5d6ee26e746f72476e2db902dda9d810e9d54",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_raw.cpp": "dfa57b65d70b96adee4626dc7c068942509d1017d5085abaabd551010c887483",
+        "assets/library_batch7/point_set_range_sort_range_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch7/sortable_segtree.hpp": "ef2182252de203c6b50238e80160eab627dbf9332dc999523b1375d9baf65a95",
+        "assets/library_batch7/point_set_range_sort_range_composite_raw.cpp": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+        "assets/library_batch7/point_set_range_sort_range_composite_l3.cpp": "dfb447126d9ecc08daaa70c8d0c7076cd6a6044ec1b0d440f65443e0fbdaf10d",
+        "assets/library_batch7/segtree.hpp": "5139c13c698a4b03f5052a3d4bec7222b0dc62eafc442fa6d9f5a3043701f47c",
+        "assets/library_batch7/persistent_range_affine_range_sum_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch7/connected_components_of_complement_graph_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch7/scc_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_raw.cpp": "7841cbf028e9cb5fb709d57a3d52a88170e96775113d3df46a38dde4b1e30fe2",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch7/connected_components_of_complement_graph_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_l3.cpp": "b21b07ecd3f589337282489c7f20d04f086a91d43327fd739cd6a3f8ffa0a3b8",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_raw.cpp": "ee74d4a2b1b5ed948f2ed4fb4d04e535e3d4dbd76e24f7babe900d23165a4d9b",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_raw.cpp": "5d647094684b7c02fa7aaa2ad38dd442eaf5112d74500e3bd51db4704a13e53f",
+        "assets/library_batch7/general_weighted_matching_l3.cpp": "f474aac9fafa8b1f83b49219959de2c079e289cf692aa1545d1f9b65ddaedae5",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch7/fastset.hpp": "29674f57fe314df630d3ec4b0bd0963f804534eeb19870afc399b4d8fa3ab3ae",
+        "assets/library_batch7/persistent_range_affine_range_sum_raw.cpp": "2ed0b04e4ab012d2a9f52cbbec039fce04ff864681ac4a4308fda01347ef50da",
+        "assets/library_batch7/modint.hpp": "f88b23e5c1c898254c1cf210f6bf51355da7c2a21d098b9d5fc18e92ebd7c3a7",
+        "assets/library_batch7/group_affine.hpp": "01cb00e63d801aefdcb409fa28e03bf16b1898548f78fa5025d3c9bd02bb54f1",
+        "assets/library_batch7/general_weighted_matching_raw.cpp": "7fa87d6674e55c82e7edcf85a331b406d263783dafd52bd04f32939179681c19",
+        "assets/library_batch7/scc_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch7/oracle.py",
+      "args": [
+        "point_set_range_sort_range_composite",
+        "l3"
+      ],
+      "source_sha256": "032a57f3cef5942f9ca3e3bd44a7200fd7a36cdd24642fdba7760113a4646744",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch7/group_affine_reverse.hpp": "eac16601a3153c6055090230d26b40cfcc405aecbec0b089f788d461c868d7a9",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_l3.cpp": "37e92a334987a4ba71e4f2bb3a7b8729698592234920bdb305e3c01a2b070520",
+        "assets/library_batch7/persistent_range_affine_range_sum_l3.cpp": "1a0b7b1923c835c4187117a4b710f59ef5e5a5d2c9f4432e25c013b8a3e259ec",
+        "assets/library_batch7/solver.cpp": "19bfb013a14f833c1576debba2e6d0a62f1407068ea3c73e2eb0152c81188c6e",
+        "assets/library_batch7/general_weighted_matching_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch7/scc_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch7/connected_components_of_complement_graph_raw.cpp": "d165073e62976464c9dcee5f03246aac98da6c09f4f9a6c24da0d6c06072111d",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_l3.cpp": "9a640a510444b2d41d535f0143ba387b950e22d4f42676e7f969a1446b047d31",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_l3.cpp": "cfdc0560c677ea7bb8c5ff835ca5d6ee26e746f72476e2db902dda9d810e9d54",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_raw.cpp": "dfa57b65d70b96adee4626dc7c068942509d1017d5085abaabd551010c887483",
+        "assets/library_batch7/point_set_range_sort_range_composite_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch7/sortable_segtree.hpp": "ef2182252de203c6b50238e80160eab627dbf9332dc999523b1375d9baf65a95",
+        "assets/library_batch7/point_set_range_sort_range_composite_raw.cpp": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+        "assets/library_batch7/point_set_range_sort_range_composite_l3.cpp": "dfb447126d9ecc08daaa70c8d0c7076cd6a6044ec1b0d440f65443e0fbdaf10d",
+        "assets/library_batch7/segtree.hpp": "5139c13c698a4b03f5052a3d4bec7222b0dc62eafc442fa6d9f5a3043701f47c",
+        "assets/library_batch7/persistent_range_affine_range_sum_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch7/connected_components_of_complement_graph_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch7/scc_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch7/range_chmin_chmax_add_range_sum_raw.cpp": "7841cbf028e9cb5fb709d57a3d52a88170e96775113d3df46a38dde4b1e30fe2",
+        "assets/library_batch7/dynamic_tree_vertex_add_path_sum_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch7/connected_components_of_complement_graph_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_l3.cpp": "b21b07ecd3f589337282489c7f20d04f086a91d43327fd739cd6a3f8ffa0a3b8",
+        "assets/library_batch7/dynamic_graph_vertex_add_component_sum_raw.cpp": "ee74d4a2b1b5ed948f2ed4fb4d04e535e3d4dbd76e24f7babe900d23165a4d9b",
+        "assets/library_batch7/dynamic_tree_vertex_set_path_composite_raw.cpp": "5d647094684b7c02fa7aaa2ad38dd442eaf5112d74500e3bd51db4704a13e53f",
+        "assets/library_batch7/general_weighted_matching_l3.cpp": "f474aac9fafa8b1f83b49219959de2c079e289cf692aa1545d1f9b65ddaedae5",
+        "assets/library_batch7/dynamic_sequence_range_affine_range_sum_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch7/fastset.hpp": "29674f57fe314df630d3ec4b0bd0963f804534eeb19870afc399b4d8fa3ab3ae",
+        "assets/library_batch7/persistent_range_affine_range_sum_raw.cpp": "2ed0b04e4ab012d2a9f52cbbec039fce04ff864681ac4a4308fda01347ef50da",
+        "assets/library_batch7/modint.hpp": "f88b23e5c1c898254c1cf210f6bf51355da7c2a21d098b9d5fc18e92ebd7c3a7",
+        "assets/library_batch7/group_affine.hpp": "01cb00e63d801aefdcb409fa28e03bf16b1898548f78fa5025d3c9bd02bb54f1",
+        "assets/library_batch7/general_weighted_matching_raw.cpp": "7fa87d6674e55c82e7edcf85a331b406d263783dafd52bd04f32939179681c19",
+        "assets/library_batch7/scc_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/point_set_range_sort_range_composite/verifier.cpp",
+      "params_path": "library_work/prepared_packages/point_set_range_sort_range_composite/params.h",
+      "source_sha256": "2cacaefdf0f662cc20da631064d0acbe8da244c1bf9d407af5bf854126f9ad28",
+      "params_sha256": "249ac4c3b20102796c8c38795b361ac90d3e58a6ae5497daccaece7ffe708948"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/point_set_range_sort_range_composite/verifier.cpp",
+      "params_path": "library_work/l2_packages/point_set_range_sort_range_composite/params.h",
+      "source_sha256": "2cacaefdf0f662cc20da631064d0acbe8da244c1bf9d407af5bf854126f9ad28",
+      "params_sha256": "0862cbdd9e7428009d585367e144e0f4a12bf1da031e7e92a660d0b5b1257ded"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/point_set_range_sort_range_composite/sol/correct.cpp",
+      "source_sha256": "4e0b72e82bc0dda1241231e3550dbd8f1d538eaaaa488291f67b5fee7fd0ce4c",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/point_set_range_sort_range_composite/strict_edit_log.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 10.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch7.py",
+    "module_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+    "function": "check_output",
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

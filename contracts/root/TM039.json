@@ -1,0 +1,195 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM039",
+  "source_identity": "codecontests:3:xenny-and-counting",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:3:xenny-and-counting"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM039/raw.txt",
+      "sha256": "a7002b032ba51571160384009e09ccffd4da3b71863b4ed0c9904661f89c4126"
+    },
+    "provenance": {
+      "path": "tasks/TM039/raw_provenance.json",
+      "sha256": "4d04362634fc2b7116e985a2585208c4a38474f1bd862b1cafa9092f54f17dd9"
+    },
+    "tests": {
+      "path": "tasks/TM039/raw_test_manifest.json",
+      "sha256": "40dad849830c361f058540e838a88fd0f802f2090b1f21ba9ecfadb4019d251c"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM039/l1.txt",
+      "sha256": "d1b718d503e444f35ae38c091e59dc225e7ee7a8064f6bcad1755b5095e542d4"
+    },
+    "certificate": {
+      "path": "tasks/TM039/l1_certificate.json",
+      "sha256": "9e3ef0c5c7388e8bd39180bebb25db0750ec21497c4b6f49b1a8507b19611bbf"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM039/raw_test_manifest.json",
+      "sha256": "40dad849830c361f058540e838a88fd0f802f2090b1f21ba9ecfadb4019d251c"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM039/l2.txt",
+      "sha256": "9beca0f6bbead856f3e7855d5342ca40677cca1b55e84de734a52b9e08e18d69"
+    },
+    "tests": {
+      "path": "tasks/TM039/l2_test_manifest.json",
+      "sha256": "6e3e11b05f9fe560efe39069e8b8ef196ed376bd21ba09316464530007d43642"
+    },
+    "axis": "k",
+    "original_upper": 19,
+    "expanded_upper": 25,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM039/l3.txt",
+      "sha256": "4cf38a6dd0cf06893e88d762b3417339b14a54c2205bf229189fc256d84d8c68"
+    },
+    "tests": {
+      "path": "tasks/TM039/l3_test_manifest.json",
+      "sha256": "3fa6f09bdd1a41e80b4c2012946461941090846b4b9e3d7e46706abeceecfb5e"
+    },
+    "operator": "Every move must score at least1.",
+    "correctness_argument": "Stars-and-bars gives C(N+k-1,N-1); shifting positive parts gives C(k-1,N-1), or0. Oracle recursively enumerates every allowed composition.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 17,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_7",
+      "small_small_8",
+      "small_small_9",
+      "small_small_10",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_16",
+      "small_small_21"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "compositions",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "compositions",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "compositions",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "compositions",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "39",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "39",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_compositions"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM039/report.json",
+      "sha256": "16747ce75e7efee91f967b4f22eb09f0ca7b0d62c630dc7272e18ce75b150677"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM039/report.json",
+      "sha256": "e38e54ac08d925e4a7e27b4a2c9b41e1b0b11f458116ea553895956c672b1bdf"
+    },
+    "resolution": {
+      "path": "tasks/TM039/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM039/mutation_edits.json",
+      "sha256": "c7d093ff5e19926a8574a8c27228e00fe82f6b765ace309dc82097218c080286"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

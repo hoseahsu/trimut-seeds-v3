@@ -1,0 +1,184 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM005",
+  "source_identity": "codeforces:915_A",
+  "source_url": "https://codeforces.com/problemset/problem/915/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:915_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM005/raw.txt",
+      "sha256": "fa103dad0ae99dc845b291e3629f73a69b853f15a56738fd38b22df0be5e4132"
+    },
+    "provenance": {
+      "path": "tasks/TM005/raw_provenance.json",
+      "sha256": "f4ea02f2580fd826a1180a91e9d8ceee0428fa8fd0334650f0500e5961c8c7ed"
+    },
+    "tests": {
+      "path": "tasks/TM005/raw_test_manifest.json",
+      "sha256": "2d74b1fe9c99e0d1329522bfab370d7e471e8915db21d65738b64868bd8a9a52"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM005/l1.txt",
+      "sha256": "8e682da0cbbcadde18c5b77894af529f7b81202110c13a4da1360b1e7d4aa4e8"
+    },
+    "certificate": {
+      "path": "tasks/TM005/l1_certificate.json",
+      "sha256": "45ac3ff441a23feab3b88aa238e851f977c762c1f62a394102645b8ba5e1274b"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM005/raw_test_manifest.json",
+      "sha256": "2d74b1fe9c99e0d1329522bfab370d7e471e8915db21d65738b64868bd8a9a52"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM005/l2.txt",
+      "sha256": "0de810635b4a7f099cdc6be3cae9a510540e544fde6107e015a1939b3e36add6"
+    },
+    "tests": {
+      "path": "tasks/TM005/l2_test_manifest.json",
+      "sha256": "074d3c51399dab6bd34af780149b9457ab694bbf74ff54d986a29be19e38a295"
+    },
+    "axis": "n",
+    "original_upper": 100,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM005/l3.txt",
+      "sha256": "c4a4c6c93c282bf26e8123b3c67678a2c2127e8ff86cb457a526e37e927910c4"
+    },
+    "tests": {
+      "path": "tasks/TM005/l3_test_manifest.json",
+      "sha256": "f1faabec28947087c1024d4452859564613804e8ae5b745de744d2df573316c5"
+    },
+    "operator": "Maximize the number of hours among feasible choices of one bucket.",
+    "correctness_argument": "Feasibility is divisibility. Optimize k/a in the declared direction. The oracle repeatedly covers one bucket-length segment until reaching or exceeding k.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_000",
+      "small_small_001",
+      "small_small_011",
+      "small_small_021"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "garden",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "garden",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "garden",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "garden",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "5",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "5",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch.py",
+    "recipe_id": "cf_915_A"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM005/report.json",
+      "sha256": "1defa5845a47912fa6cda9748c31d27d045c20a8432b193f7b6ff7849cb0b8f1"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM005/report.json",
+      "sha256": "729962be602f309be25806a6524678b9cd90234a5d6cf0ff5fdb2467692cf4bb"
+    },
+    "resolution": {
+      "path": "tasks/TM005/validation_resolution.json",
+      "sha256": "190f26a50a2b8c88e21d806647ed62d4ac1199fdd07cebcd206a0935883d849d"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM005/mutation_edits.json",
+      "sha256": "e3f95890c52e2427615ae9710bdaa47101d8355b21e1719fbfea93dd966e71f3"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

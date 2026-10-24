@@ -1,0 +1,191 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM116",
+  "source_identity": "codeforces:1506_G",
+  "source_url": "https://codeforces.com/problemset/problem/1506/G",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1506_G"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM116/raw.txt",
+      "sha256": "d2f0d1be1d85b22bf24fbbc9a85e77ae111a91144f20497b168f6b15c9c07836"
+    },
+    "provenance": {
+      "path": "tasks/TM116/raw_provenance.json",
+      "sha256": "b7b1ae5fb0d72d2304af8c0d7d897dc5ccce4b56177b4a2a21b3264096832260"
+    },
+    "tests": {
+      "path": "tasks/TM116/raw_test_manifest.json",
+      "sha256": "5be0a76386427825d9cb858b15bede3a9314d92fbd4011f75d90b237e8566b1d"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM116/l1.txt",
+      "sha256": "5d0525508dcc9958487429e27882383dc1798eba1ac1792d7de5322eed546be2"
+    },
+    "certificate": {
+      "path": "tasks/TM116/l1_certificate.json",
+      "sha256": "982b4c2323d38e992ce1577b56e377d4f5841ae867780ddcd9c22a8753fc880d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM116/raw_test_manifest.json",
+      "sha256": "5be0a76386427825d9cb858b15bede3a9314d92fbd4011f75d90b237e8566b1d"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM116/l2.txt",
+      "sha256": "dc4ab5bb4d289470673be96ce7082900d50bd2f6e89ebaec0485dbab9e374316"
+    },
+    "certificate": {
+      "path": "tasks/TM116/l2_certificate.json",
+      "sha256": "efae966dde572421f02411de152fbb3b753fa678461db1731f6cf91ac008ca24"
+    },
+    "tests": {
+      "path": "tasks/TM116/l2_test_manifest.json",
+      "sha256": "004f0015bde92cb39c98907eeed7b1e0f20d148835d38a3a0024be357bd3282f"
+    },
+    "axis": "per_and_total_string_length",
+    "original_upper": 200000,
+    "expanded_upper": 400000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM116/l3.txt",
+      "sha256": "7faa64a312e08ded2a20337833f3fb6b38d4e61d2e654fa819c2cfceb3b757b1"
+    },
+    "tests": {
+      "path": "tasks/TM116/l3_test_manifest.json",
+      "sha256": "b030825e335d2706bb9ef370441ba4ea0bf6cb0f11d111977fb8336eb90e961f"
+    },
+    "operator": "Output the lexicographically MINIMUM obtainable final string under the same deletion rules.",
+    "correctness_argument": "Final strings are subsequences containing each original distinct letter exactly once. A stack greedily removes a less-preferred preceding letter only when another occurrence remains, preserving feasibility while improving the earliest differing position. The oracle enumerates all subsequences and explicitly checks exact coverage and uniqueness.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "small_random_000",
+      "small_random_001",
+      "small_random_003",
+      "small_random_004",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_010",
+      "small_random_012",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch5/cf_1506_g/raw_fast.cpp",
+      "sha256": "7df7040bfc6b8348983de16c9ccda8f92c64241cfd4a2e1a3c941ba313ea73a0",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch5/cf_1506_g/l3_fast.cpp",
+      "sha256": "5855b3fab2dbc3f715d6b4287cf85e92af17b195633f9028cf113ed0de66a59a",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch5/cf_1506_g/raw_oracle.cpp",
+      "sha256": "e516a8b05ac472f5ddfa0bce0a297c95e66bfc0ad21f1035af147f7b5f108c24",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch5/cf_1506_g/l3_oracle.cpp",
+      "sha256": "7063f4755f0bf0d2584ff41180d6dfda3439f82978afd543a7f5519beaf75560",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch5/cf_1506_g/raw_fast.cpp",
+      "sha256": "7df7040bfc6b8348983de16c9ccda8f92c64241cfd4a2e1a3c941ba313ea73a0",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM116/report.json",
+      "sha256": "78e7966c3cd7ef1db7afd2373fcb13865c4df0bad60c7d296e600342cead7ff2"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch5.py",
+    "recipe_id": "cf_1506_g",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch5.py",
+  "recipe_id": "cf_1506_g"
+}

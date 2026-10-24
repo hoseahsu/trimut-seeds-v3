@@ -1,0 +1,192 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM011",
+  "source_identity": "codecontests:6:p02319 0-1 Knapsack Problem II",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:6:p02319 0-1 Knapsack Problem II"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM011/raw.txt",
+      "sha256": "f2d012996c95047c1d687b5584f518b0ec00c51c0170e8c4fa01a4547fae2acb"
+    },
+    "provenance": {
+      "path": "tasks/TM011/raw_provenance.json",
+      "sha256": "735fb19efd2a62a489e658e4373ed1c118c61ec871df4e2fe4eadad1a185678b"
+    },
+    "tests": {
+      "path": "tasks/TM011/raw_test_manifest.json",
+      "sha256": "3dc293dcde4058b53f52e8ac9b5707ce238d69939233ee719739f1a055352d12"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM011/l1.txt",
+      "sha256": "285c6ae75c42e7977f6c3f07129468239b8b4904b8a8a4311517abcfde7aa14f"
+    },
+    "certificate": {
+      "path": "tasks/TM011/l1_certificate.json",
+      "sha256": "8271a3fdd2fda7a07073498a63f2663c1599e466a51caa093f5bd8b7a2cdda25"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM011/raw_test_manifest.json",
+      "sha256": "3dc293dcde4058b53f52e8ac9b5707ce238d69939233ee719739f1a055352d12"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM011/l2.txt",
+      "sha256": "ff11b2e71282946f527277a1103dae50329708ba9cd59d1dcdf66eb631b655f7"
+    },
+    "tests": {
+      "path": "tasks/TM011/l2_test_manifest.json",
+      "sha256": "82b0cbfc3cab1da73bac899d4e2f3d234bc083e24ef42411edf56efd489dbac8"
+    },
+    "axis": "N",
+    "original_upper": 100,
+    "expanded_upper": 200,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM011/l3.txt",
+      "sha256": "0f30e93e98cd4466cbe5e9865e7034688581afeb7fe209d4897acc95351384e6"
+    },
+    "tests": {
+      "path": "tasks/TM011/l3_test_manifest.json",
+      "sha256": "1ca26af1ac0068820ab1f1ba70681e38ec5208415f64c1d0a0af8d92330a63d8"
+    },
+    "operator": "Require an odd number of selected items; output -1 if no such feasible subset exists.",
+    "correctness_argument": "DP stores minimum weight for each value and cardinality parity; the oracle enumerates subsets without this decomposition.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "boundary_boundary_1",
+      "small_small_6",
+      "small_small_11",
+      "small_small_12",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_21"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "knapsack",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "knapsack",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "knapsack",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "knapsack",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "11",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "11",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_knapsack"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM011/report.json",
+      "sha256": "d025b0b811589f4fbcf7ee81052e635704e97ad3785fb3ebc68f104cc3eaa2cc"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM011/report.json",
+      "sha256": "2da40f43091c29b41b566db4a3248896395eb3533d8a2dba33808477b3136fd3"
+    },
+    "resolution": {
+      "path": "tasks/TM011/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM011/mutation_edits.json",
+      "sha256": "047e6c89b0b497e915f960551b784c1a7004ff7110cfab5023a064bc61b96ec0"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

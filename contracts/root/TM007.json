@@ -1,0 +1,192 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM007",
+  "source_identity": "codeforces:268_A",
+  "source_url": "https://codeforces.com/problemset/problem/268/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:268_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM007/raw.txt",
+      "sha256": "9ec8aa31564f057cf3cc40a0c2f07fcf18c14066562f56bf85d21a8b8d508b7d"
+    },
+    "provenance": {
+      "path": "tasks/TM007/raw_provenance.json",
+      "sha256": "0b48cf45acc43e59997815abda04111433edb8e0bbe3f296040689790338b29c"
+    },
+    "tests": {
+      "path": "tasks/TM007/raw_test_manifest.json",
+      "sha256": "80c126562f9c8828f0ca180d6d9522c8f287a75c4b29f2cbd464a7853d2885b6"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM007/l1.txt",
+      "sha256": "c24cc971ce2af3cdc300db32c09b570fc05581db4961aa73369389a281864a54"
+    },
+    "certificate": {
+      "path": "tasks/TM007/l1_certificate.json",
+      "sha256": "dd1417be5286982ba1761f47b3c55fe37e784fc34cfa406dd074740253a70fe3"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM007/raw_test_manifest.json",
+      "sha256": "80c126562f9c8828f0ca180d6d9522c8f287a75c4b29f2cbd464a7853d2885b6"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM007/l2.txt",
+      "sha256": "4243cf8e7c8ffbc3a5cb7694bab9f8a875929577126445b04008749d832e7a27"
+    },
+    "tests": {
+      "path": "tasks/TM007/l2_test_manifest.json",
+      "sha256": "724ad45d4504a7fa57a07e09e50182fe9efd585194446602ee82c1933c69e563"
+    },
+    "axis": "n",
+    "original_upper": 30,
+    "expanded_upper": 200000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM007/l3.txt",
+      "sha256": "f31e2f5ddce0721534b4fa486b55dc4797d0cef47bd875330505831f0167942a"
+    },
+    "tests": {
+      "path": "tasks/TM007/l3_test_manifest.json",
+      "sha256": "0cc9520020a5e954265b6978f1fb701a90bea434b560b7f62832fb5425b120f2"
+    },
+    "operator": "Visitors use their home colour h_j. Count ordered distinct-team pairs where h_i=h_j.",
+    "correctness_argument": "Histogram products count ordered equal-colour pairs. Raw self-pairs never match because h_i!=a_i; the new relation subtracts one self-pair per team. Oracle enumerates all ordered distinct pairs.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 25,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_001",
+      "small_small_000",
+      "small_small_001",
+      "small_small_004",
+      "small_small_005",
+      "small_small_008",
+      "small_small_010",
+      "small_small_012",
+      "small_small_015",
+      "small_small_017",
+      "small_small_022",
+      "small_small_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "games",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "games",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "games",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "games",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "7",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "7",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch.py",
+    "recipe_id": "cf_268_A"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM007/report.json",
+      "sha256": "db399319becf5bc1af22963dcbf5506c65c92e4fabde15b38577e80a0434d135"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM007/report.json",
+      "sha256": "ea2d11dc2f974b22ac353d6e2c4fb3dde650f2468222131018edbf342413562a"
+    },
+    "resolution": {
+      "path": "tasks/TM007/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM007/mutation_edits.json",
+      "sha256": "d51b7586ba920086311b078880982eb5601cade500f25c81034af4752ef9e6c1"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

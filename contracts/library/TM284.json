@@ -1,0 +1,346 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM284",
+  "source_identity": "library-checker:range_affine_point_get",
+  "source_url": "https://judge.yosupo.jp/problem/range_affine_point_get",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "range_affine_point_get"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/data_structure/range_affine_point_get/task.md",
+    "source_task_sha256": "82f2d09abb82b873ed237c87b985ce14aed534c5d7e3cc6afbff7446161261eb",
+    "source_info_path": "sources/library-checker-problems-master/data_structure/range_affine_point_get/info.toml",
+    "source_info_sha256": "a0dc87c7818d25428512f3222028d757e7692b0d127c4f179b4bdf58ef826cbd",
+    "source_hash_path": "sources/library-checker-problems-master/data_structure/range_affine_point_get/hash.json",
+    "source_hash_sha256": "43c2e7b87a641bd5eede7b10da17b9426e44a165540cc7bd4d5b7b763dfa878a"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM284/raw.txt",
+      "sha256": "b9b0810b223d5d0ef6a4843d9a0df42e90cbd84d033164ed957c254816508000"
+    },
+    "native_params": {
+      "N_AND_Q_MAX": 500000,
+      "MOD": 998244353
+    },
+    "native_cpu_budget_seconds": 5.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM284/raw_provenance.json",
+      "sha256": "c413912423ce04b85a4f7a2f3e16fdce4846b1f6e1c4e95c96159f3f400df6a7"
+    },
+    "tests": {
+      "path": "tasks/TM284/raw_test_manifest.json",
+      "sha256": "4324cf53bb0c3c2287880c3e58acb58ceb48600697a3017f3e6c959a03b4df6a"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM284/l1.txt",
+      "sha256": "d2e2f0ca51d81be2a2a6755843b02d455f2fcadd0b918a02f894dee587abd3a6"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM284/raw_test_manifest.json",
+      "sha256": "4324cf53bb0c3c2287880c3e58acb58ceb48600697a3017f3e6c959a03b4df6a"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM284/l2.txt",
+      "sha256": "335889393a579f31099a07c4165a71e6506cc15d602af5a4322bbdc3acdaa0ac"
+    },
+    "provenance": {
+      "path": "tasks/TM284/l2_render_provenance.json",
+      "sha256": "3b3be6da3671c4cb6834b586e3b8aba304536224731fa5728876513784085989"
+    },
+    "bound_changes": {
+      "N_AND_Q_MAX": {
+        "native": 500000,
+        "expanded": 1000000
+      }
+    },
+    "tests": {
+      "path": "tasks/TM284/l2_test_manifest.json",
+      "sha256": "9cda9fd5ee83ef73e5ca32a3a7268eb171143b346c518fcaf073691edbaff6c2"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM284/l3.txt",
+      "sha256": "b0e3e88d56110a3c7c638945c066043dab29d033b1798af8e94e8aa64badd683"
+    },
+    "provenance": {
+      "path": "tasks/TM284/l3_render_provenance.json",
+      "sha256": "a428be03b1719cea1adcf966e13af7dcaa7b013c83006c76e3a68ba5bab500f3"
+    },
+    "operator": "multiply then add → add then multiply",
+    "specification": "An update0 l r b c now sets each selected value to b*(a_i+c) modulo998244353; point queries retain their meaning.",
+    "correctness_argument": "Store affine map(b,b*c) instead of(b,c), then compose lazy maps chronologically. Literal oracle explicitly adds c before multiplication.",
+    "tests": {
+      "path": "tasks/TM284/l3_test_manifest.json",
+      "sha256": "6ac391646cbfdcb15a3e93f7a610fc2867291041e632aea4330a63cd50556445"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 10,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "example_00",
+      "authored_boundary_00",
+      "authored_small_00",
+      "authored_small_01",
+      "authored_small_02",
+      "authored_small_06",
+      "authored_small_07"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/data_structure/range_affine_point_get/sol/correct.cpp",
+      "source_sha256": "7adadbb8b766bafbb45e18d751b5d2e46a4949e136c4e2f69ad28a0519fb73dc",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch6/range_affine_point_get_raw.cpp",
+      "source_sha256": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_raw.cpp": "60eda87228b475f41fb1e03e0920219761439dcd9c3fcea7e50362ed31e07640",
+        "assets/library_batch6/range_linear_add_range_min_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch6/range_affine_point_get_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch6/range_affine_point_get_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch6/solver.cpp": "5a55616e10710fdfc62d81979970fef3e1a11c2c2ebd9d9f8a6ec6d97c04fb8b",
+        "assets/library_batch6/range_parallel_unionfind_raw.cpp": "968b41b438726eba70719c4b567a5a5654e0c6c4a302f2d31e61f4f8cec62fbf",
+        "assets/library_batch6/static_range_lis_query_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_l3.cpp": "2d3c11ded3ef896104378c2ddc2da3b80314c4959365097d856743ddb382585f",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_l3.cpp": "2915b373069383d48ebfd23d45f10177767c448b66f0441ee2a0681a446b0a8c",
+        "assets/library_batch6/static_range_sum_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_raw.cpp": "20b66510977269364498b9f208d7f420bd8f121603cd2a552a822798ca750da9",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch6/static_range_sum_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch6/range_parallel_unionfind_l3.cpp": "057def5ce2c01f0e4d3cdea7edf81ba940287919dc333d2d981c8cb17d45c012",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_l3.cpp": "f48055425cd4c29361774230c985e8c771e0afc0191da9cdee40f9a56c526ff0",
+        "assets/library_batch6/point_set_range_frequency_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch6/static_range_sum_with_upper_bound_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch6/static_range_sum_with_upper_bound_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch6/point_set_range_frequency_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch6/range_affine_point_get_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch6/point_set_range_frequency_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch6/static_range_lis_query_raw.cpp": "f7f5e9d329d7644904986bfd6daf7961b47002764257373e5c37a4b6f86c8e79",
+        "assets/library_batch6/range_linear_add_range_min_raw.cpp": "0c8ad35bc020666c6c590bcd6f90750407f0887eea0e2d3c03b3d318287ce241",
+        "assets/library_batch6/static_range_sum_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch6/static_range_sum_with_upper_bound_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch6/range_linear_add_range_min_l3.cpp": "d8d383f091f668a0a1360f692b5c269b7f35976a54e2854c074a61effadd7634",
+        "assets/library_batch6/range_parallel_unionfind_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_raw.cpp": "5d3697e58cee98a7a8b950a0196c6cc9146b36b61dfc9eb9cd1fe4b20feb6ce0",
+        "assets/library_batch6/static_range_lis_query_l3.cpp": "1e5e996afd62982ae251a1f7c0347396c03f2e079328e34943c42b6e38855f04"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch6/range_affine_point_get_l3.cpp",
+      "source_sha256": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_raw.cpp": "60eda87228b475f41fb1e03e0920219761439dcd9c3fcea7e50362ed31e07640",
+        "assets/library_batch6/range_linear_add_range_min_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch6/range_affine_point_get_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch6/range_affine_point_get_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch6/solver.cpp": "5a55616e10710fdfc62d81979970fef3e1a11c2c2ebd9d9f8a6ec6d97c04fb8b",
+        "assets/library_batch6/range_parallel_unionfind_raw.cpp": "968b41b438726eba70719c4b567a5a5654e0c6c4a302f2d31e61f4f8cec62fbf",
+        "assets/library_batch6/static_range_lis_query_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_l3.cpp": "2d3c11ded3ef896104378c2ddc2da3b80314c4959365097d856743ddb382585f",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_l3.cpp": "2915b373069383d48ebfd23d45f10177767c448b66f0441ee2a0681a446b0a8c",
+        "assets/library_batch6/static_range_sum_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_raw.cpp": "20b66510977269364498b9f208d7f420bd8f121603cd2a552a822798ca750da9",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch6/static_range_sum_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch6/range_parallel_unionfind_l3.cpp": "057def5ce2c01f0e4d3cdea7edf81ba940287919dc333d2d981c8cb17d45c012",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_l3.cpp": "f48055425cd4c29361774230c985e8c771e0afc0191da9cdee40f9a56c526ff0",
+        "assets/library_batch6/point_set_range_frequency_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch6/static_range_sum_with_upper_bound_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch6/static_range_sum_with_upper_bound_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch6/point_set_range_frequency_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch6/range_affine_point_get_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch6/point_set_range_frequency_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch6/static_range_lis_query_raw.cpp": "f7f5e9d329d7644904986bfd6daf7961b47002764257373e5c37a4b6f86c8e79",
+        "assets/library_batch6/range_linear_add_range_min_raw.cpp": "0c8ad35bc020666c6c590bcd6f90750407f0887eea0e2d3c03b3d318287ce241",
+        "assets/library_batch6/static_range_sum_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch6/static_range_sum_with_upper_bound_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch6/range_linear_add_range_min_l3.cpp": "d8d383f091f668a0a1360f692b5c269b7f35976a54e2854c074a61effadd7634",
+        "assets/library_batch6/range_parallel_unionfind_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_raw.cpp": "5d3697e58cee98a7a8b950a0196c6cc9146b36b61dfc9eb9cd1fe4b20feb6ce0",
+        "assets/library_batch6/static_range_lis_query_l3.cpp": "1e5e996afd62982ae251a1f7c0347396c03f2e079328e34943c42b6e38855f04"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch6/oracle.py",
+      "args": [
+        "range_affine_point_get",
+        "raw"
+      ],
+      "source_sha256": "69d631f4cf19f9ee43599f64ff069b6560b13092a1cae740386aaa98167f9ce2",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_raw.cpp": "60eda87228b475f41fb1e03e0920219761439dcd9c3fcea7e50362ed31e07640",
+        "assets/library_batch6/range_linear_add_range_min_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch6/range_affine_point_get_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch6/range_affine_point_get_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch6/solver.cpp": "5a55616e10710fdfc62d81979970fef3e1a11c2c2ebd9d9f8a6ec6d97c04fb8b",
+        "assets/library_batch6/range_parallel_unionfind_raw.cpp": "968b41b438726eba70719c4b567a5a5654e0c6c4a302f2d31e61f4f8cec62fbf",
+        "assets/library_batch6/static_range_lis_query_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_l3.cpp": "2d3c11ded3ef896104378c2ddc2da3b80314c4959365097d856743ddb382585f",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_l3.cpp": "2915b373069383d48ebfd23d45f10177767c448b66f0441ee2a0681a446b0a8c",
+        "assets/library_batch6/static_range_sum_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_raw.cpp": "20b66510977269364498b9f208d7f420bd8f121603cd2a552a822798ca750da9",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch6/static_range_sum_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch6/range_parallel_unionfind_l3.cpp": "057def5ce2c01f0e4d3cdea7edf81ba940287919dc333d2d981c8cb17d45c012",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_l3.cpp": "f48055425cd4c29361774230c985e8c771e0afc0191da9cdee40f9a56c526ff0",
+        "assets/library_batch6/point_set_range_frequency_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch6/static_range_sum_with_upper_bound_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch6/static_range_sum_with_upper_bound_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch6/point_set_range_frequency_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch6/range_affine_point_get_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch6/point_set_range_frequency_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch6/static_range_lis_query_raw.cpp": "f7f5e9d329d7644904986bfd6daf7961b47002764257373e5c37a4b6f86c8e79",
+        "assets/library_batch6/range_linear_add_range_min_raw.cpp": "0c8ad35bc020666c6c590bcd6f90750407f0887eea0e2d3c03b3d318287ce241",
+        "assets/library_batch6/static_range_sum_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch6/static_range_sum_with_upper_bound_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch6/range_linear_add_range_min_l3.cpp": "d8d383f091f668a0a1360f692b5c269b7f35976a54e2854c074a61effadd7634",
+        "assets/library_batch6/range_parallel_unionfind_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_raw.cpp": "5d3697e58cee98a7a8b950a0196c6cc9146b36b61dfc9eb9cd1fe4b20feb6ce0",
+        "assets/library_batch6/static_range_lis_query_l3.cpp": "1e5e996afd62982ae251a1f7c0347396c03f2e079328e34943c42b6e38855f04"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch6/oracle.py",
+      "args": [
+        "range_affine_point_get",
+        "l3"
+      ],
+      "source_sha256": "69d631f4cf19f9ee43599f64ff069b6560b13092a1cae740386aaa98167f9ce2",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_raw.cpp": "60eda87228b475f41fb1e03e0920219761439dcd9c3fcea7e50362ed31e07640",
+        "assets/library_batch6/range_linear_add_range_min_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch6/range_affine_point_get_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch6/range_affine_point_get_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch6/solver.cpp": "5a55616e10710fdfc62d81979970fef3e1a11c2c2ebd9d9f8a6ec6d97c04fb8b",
+        "assets/library_batch6/range_parallel_unionfind_raw.cpp": "968b41b438726eba70719c4b567a5a5654e0c6c4a302f2d31e61f4f8cec62fbf",
+        "assets/library_batch6/static_range_lis_query_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_l3.cpp": "2d3c11ded3ef896104378c2ddc2da3b80314c4959365097d856743ddb382585f",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_l3.cpp": "2915b373069383d48ebfd23d45f10177767c448b66f0441ee2a0681a446b0a8c",
+        "assets/library_batch6/static_range_sum_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_raw.cpp": "20b66510977269364498b9f208d7f420bd8f121603cd2a552a822798ca750da9",
+        "assets/library_batch6/vertex_add_range_contour_sum_on_tree_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch6/static_range_sum_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch6/range_parallel_unionfind_l3.cpp": "057def5ce2c01f0e4d3cdea7edf81ba940287919dc333d2d981c8cb17d45c012",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_l3.cpp": "f48055425cd4c29361774230c985e8c771e0afc0191da9cdee40f9a56c526ff0",
+        "assets/library_batch6/point_set_range_frequency_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch6/static_range_sum_with_upper_bound_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch6/static_range_sum_with_upper_bound_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch6/point_set_range_frequency_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch6/range_affine_point_get_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch6/point_set_range_frequency_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch6/static_range_lis_query_raw.cpp": "f7f5e9d329d7644904986bfd6daf7961b47002764257373e5c37a4b6f86c8e79",
+        "assets/library_batch6/range_linear_add_range_min_raw.cpp": "0c8ad35bc020666c6c590bcd6f90750407f0887eea0e2d3c03b3d318287ce241",
+        "assets/library_batch6/static_range_sum_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch6/vertex_get_range_contour_add_on_tree_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch6/static_range_sum_with_upper_bound_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch6/range_linear_add_range_min_l3.cpp": "d8d383f091f668a0a1360f692b5c269b7f35976a54e2854c074a61effadd7634",
+        "assets/library_batch6/range_parallel_unionfind_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch6/rooted_tree_topological_order_with_minimum_inversions_raw.cpp": "5d3697e58cee98a7a8b950a0196c6cc9146b36b61dfc9eb9cd1fe4b20feb6ce0",
+        "assets/library_batch6/static_range_lis_query_l3.cpp": "1e5e996afd62982ae251a1f7c0347396c03f2e079328e34943c42b6e38855f04"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/range_affine_point_get/verifier.cpp",
+      "params_path": "library_work/prepared_packages/range_affine_point_get/params.h",
+      "source_sha256": "9fd3d9a21bd96e699a7df798a39faff1f1f0eb0485ab6d13ae51a09fc088036d",
+      "params_sha256": "677abd4626cfc2134d029e21743671b4b63ed8cbe379b78a46d7e1d91ef0cbcf"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/range_affine_point_get/verifier.cpp",
+      "params_path": "library_work/l2_packages/range_affine_point_get/params.h",
+      "source_sha256": "9fd3d9a21bd96e699a7df798a39faff1f1f0eb0485ab6d13ae51a09fc088036d",
+      "params_sha256": "445d7977a0089f0f83b94746fcb15e40306fa67b39237d83e71306be0cd36f6f"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/range_affine_point_get/sol/correct.cpp",
+      "source_sha256": "7adadbb8b766bafbb45e18d751b5d2e46a4949e136c4e2f69ad28a0519fb73dc",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/range_affine_point_get/strict_edit_log.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 5.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch6.py",
+    "module_sha256": "ddf2f3242e6d26ace10eeeab14dee4c0525588df06d982026a3192bb44be075d",
+    "function": "check_output",
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

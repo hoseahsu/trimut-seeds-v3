@@ -1,0 +1,340 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM277",
+  "source_identity": "library-checker:chromatic_number",
+  "source_url": "https://judge.yosupo.jp/problem/chromatic_number",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "standard_clique_independent_coloring"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/graph/chromatic_number/task.md",
+    "source_task_sha256": "bec37ac16ea906fe7740b5b57c7b1785b248755f08f9ef7c0ecd907891251473",
+    "source_info_path": "sources/library-checker-problems-master/graph/chromatic_number/info.toml",
+    "source_info_sha256": "af28f2b838fcfc4b75ad1abbfb50b879bda0427dba1563c368157c70428228a5",
+    "source_hash_path": "sources/library-checker-problems-master/graph/chromatic_number/hash.json",
+    "source_hash_sha256": "ffa741a5c4187252d0f08462e5c5f1008073f9f3fa525c565b707d7218c6ee65"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM277/raw.txt",
+      "sha256": "056e6f320fb1bc36f82c3b2b910c61884dd82faae6d15ec21fa917046f09efd4"
+    },
+    "native_params": {
+      "MIN_N": 1,
+      "MAX_N": 20
+    },
+    "native_cpu_budget_seconds": 10.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM277/raw_provenance.json",
+      "sha256": "934fcf601accfde0fca13d225c848a61dfd6b44ebb614a775b1d57c7acee0e91"
+    },
+    "tests": {
+      "path": "tasks/TM277/raw_test_manifest.json",
+      "sha256": "7a2adac90a341bd05504fed8e04ca8b0fefc4e5bc92cecceca77c866559ff7bd"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM277/l1.txt",
+      "sha256": "2a5a81c28aa364d55085df916f874508b9846e146114464b9067355871b627af"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM277/raw_test_manifest.json",
+      "sha256": "7a2adac90a341bd05504fed8e04ca8b0fefc4e5bc92cecceca77c866559ff7bd"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM277/l2.txt",
+      "sha256": "3a6cc8d948dfde61e92df1986cbefb569b52fd4b46d68cfd500c1838ab9a9aa8"
+    },
+    "provenance": {
+      "path": "tasks/TM277/l2_render_provenance.json",
+      "sha256": "388126e17bc18ae094474ccb77dc8c3045260d8ab4446cc3ecc650965253f0a5"
+    },
+    "bound_changes": {
+      "MAX_N": {
+        "native": 20,
+        "expanded": 21
+      }
+    },
+    "tests": {
+      "path": "tasks/TM277/l2_test_manifest.json",
+      "sha256": "a7ff686d394e588e6b90d128a7e8e551061a9a619448e42b6622ef4aa1f1318f"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM277/l3.txt",
+      "sha256": "20bd4cd84d54ce2351951e0063bc73e8f5670623766e08b07aa4a7814ea85abe"
+    },
+    "provenance": {
+      "path": "tasks/TM277/l3_render_provenance.json",
+      "sha256": "7320a443e4a9bd9a0bc0e59d41213bc5b8c4cbb82a55524342ee802bb742a67a"
+    },
+    "operator": "chromatic number → clique number",
+    "specification": "Return the largest number of pairwise adjacent vertices instead of minimum number of colors.",
+    "correctness_argument": "A subset is a clique iff removing one vertex leaves a clique and the removed vertex is adjacent to every remaining vertex. Raw DSATUR searches colorings exactly, independently checked by canonical set partitions.",
+    "tests": {
+      "path": "tasks/TM277/l3_test_manifest.json",
+      "sha256": "27b3ca0016a03ba6be2b1c6e44b23edd20566d115b123c9c04b61a8b50adf0f0"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 12,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "authored_boundary_00"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/graph/chromatic_number/sol/correct.cpp",
+      "source_sha256": "c5573be713767c6a3d5958db5bc82e66a8ed3921686e205b65f590c367bf7758",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch5/chromatic_number_raw.cpp",
+      "source_sha256": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch5/directedmst_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch5/counting_spanning_tree_directed_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch5/chromatic_number_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch5/lca_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch5/solver.cpp": "5971ab4b441515ff69bb5bd19be71eb44e0241eeb200f959f9eeff20ac105b69",
+        "assets/library_batch5/jump_on_tree_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch5/lca_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch5/lca_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch5/maximum_independent_set_raw.cpp": "b7e6ddc726c39e0aeeb3ffe0d6f746a2264938ab487290ab91d7a6a346833d93",
+        "assets/library_batch5/jump_on_tree_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch5/jump_on_tree_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch5/counting_spanning_tree_directed_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch5/vertex_set_path_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch5/maximum_independent_set_l3.cpp": "b5e3208130bd2fef2acb07976b82a2d376688ac8216856e1ab8cd36af73730bf",
+        "assets/library_batch5/tree_diameter_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch5/vertex_set_path_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch5/counting_spanning_tree_undirected_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch5/counting_spanning_tree_undirected_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch5/maximum_independent_set_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch5/counting_spanning_tree_undirected_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch5/chromatic_number_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch5/directedmst_l3.cpp": "8cc5131cf1f3b2a8d7d4dbda290f8a11b290725895f6665e05a6a777460fd9cf",
+        "assets/library_batch5/chromatic_number_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch5/directedmst_raw.cpp": "975f387e5a7c69ad59b4aab530836ef5d4172268d64119501206add542e3a345",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch5/vertex_set_path_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch5/tree_diameter_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch5/tree_diameter_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch5/counting_spanning_tree_directed_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch5/chromatic_number_l3.cpp",
+      "source_sha256": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch5/directedmst_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch5/counting_spanning_tree_directed_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch5/chromatic_number_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch5/lca_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch5/solver.cpp": "5971ab4b441515ff69bb5bd19be71eb44e0241eeb200f959f9eeff20ac105b69",
+        "assets/library_batch5/jump_on_tree_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch5/lca_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch5/lca_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch5/maximum_independent_set_raw.cpp": "b7e6ddc726c39e0aeeb3ffe0d6f746a2264938ab487290ab91d7a6a346833d93",
+        "assets/library_batch5/jump_on_tree_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch5/jump_on_tree_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch5/counting_spanning_tree_directed_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch5/vertex_set_path_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch5/maximum_independent_set_l3.cpp": "b5e3208130bd2fef2acb07976b82a2d376688ac8216856e1ab8cd36af73730bf",
+        "assets/library_batch5/tree_diameter_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch5/vertex_set_path_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch5/counting_spanning_tree_undirected_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch5/counting_spanning_tree_undirected_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch5/maximum_independent_set_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch5/counting_spanning_tree_undirected_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch5/chromatic_number_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch5/directedmst_l3.cpp": "8cc5131cf1f3b2a8d7d4dbda290f8a11b290725895f6665e05a6a777460fd9cf",
+        "assets/library_batch5/chromatic_number_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch5/directedmst_raw.cpp": "975f387e5a7c69ad59b4aab530836ef5d4172268d64119501206add542e3a345",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch5/vertex_set_path_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch5/tree_diameter_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch5/tree_diameter_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch5/counting_spanning_tree_directed_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch5/oracle.py",
+      "args": [
+        "chromatic_number",
+        "raw"
+      ],
+      "source_sha256": "08215866864d3b2b8901f22c4bab8d100549009558a99c1a8ccc56aed17293ff",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch5/directedmst_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch5/counting_spanning_tree_directed_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch5/chromatic_number_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch5/lca_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch5/solver.cpp": "5971ab4b441515ff69bb5bd19be71eb44e0241eeb200f959f9eeff20ac105b69",
+        "assets/library_batch5/jump_on_tree_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch5/lca_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch5/lca_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch5/maximum_independent_set_raw.cpp": "b7e6ddc726c39e0aeeb3ffe0d6f746a2264938ab487290ab91d7a6a346833d93",
+        "assets/library_batch5/jump_on_tree_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch5/jump_on_tree_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch5/counting_spanning_tree_directed_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch5/vertex_set_path_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch5/maximum_independent_set_l3.cpp": "b5e3208130bd2fef2acb07976b82a2d376688ac8216856e1ab8cd36af73730bf",
+        "assets/library_batch5/tree_diameter_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch5/vertex_set_path_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch5/counting_spanning_tree_undirected_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch5/counting_spanning_tree_undirected_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch5/maximum_independent_set_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch5/counting_spanning_tree_undirected_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch5/chromatic_number_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch5/directedmst_l3.cpp": "8cc5131cf1f3b2a8d7d4dbda290f8a11b290725895f6665e05a6a777460fd9cf",
+        "assets/library_batch5/chromatic_number_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch5/directedmst_raw.cpp": "975f387e5a7c69ad59b4aab530836ef5d4172268d64119501206add542e3a345",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch5/vertex_set_path_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch5/tree_diameter_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch5/tree_diameter_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch5/counting_spanning_tree_directed_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch5/oracle.py",
+      "args": [
+        "chromatic_number",
+        "l3"
+      ],
+      "source_sha256": "08215866864d3b2b8901f22c4bab8d100549009558a99c1a8ccc56aed17293ff",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch5/directedmst_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch5/counting_spanning_tree_directed_raw.cpp": "af6b8721f4dceb6e8a3b03a47242ac2aefbc7af9dc5a140f7c469f258334e5c0",
+        "assets/library_batch5/chromatic_number_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch5/lca_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch5/solver.cpp": "5971ab4b441515ff69bb5bd19be71eb44e0241eeb200f959f9eeff20ac105b69",
+        "assets/library_batch5/jump_on_tree_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch5/lca_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch5/lca_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch5/maximum_independent_set_raw.cpp": "b7e6ddc726c39e0aeeb3ffe0d6f746a2264938ab487290ab91d7a6a346833d93",
+        "assets/library_batch5/jump_on_tree_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch5/jump_on_tree_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch5/counting_spanning_tree_directed_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch5/vertex_set_path_composite_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch5/maximum_independent_set_l3.cpp": "b5e3208130bd2fef2acb07976b82a2d376688ac8216856e1ab8cd36af73730bf",
+        "assets/library_batch5/tree_diameter_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch5/vertex_set_path_composite_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch5/counting_spanning_tree_undirected_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch5/counting_spanning_tree_undirected_raw.cpp": "a56a0c06e1a5eb60def4ccb5fddbf865c10443a0c73ea93404ca67ee3f8c6a64",
+        "assets/library_batch5/maximum_independent_set_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch5/counting_spanning_tree_undirected_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch5/chromatic_number_raw.cpp": "164390059e9e153395bc96b58f7c1ef7bb02f2745aba7342713e4a41917dfa7c",
+        "assets/library_batch5/directedmst_l3.cpp": "8cc5131cf1f3b2a8d7d4dbda290f8a11b290725895f6665e05a6a777460fd9cf",
+        "assets/library_batch5/chromatic_number_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch5/directedmst_raw.cpp": "975f387e5a7c69ad59b4aab530836ef5d4172268d64119501206add542e3a345",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch5/rooted_tree_isomorphism_classification_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch5/vertex_set_path_composite_raw.cpp": "0066c799c585d8baf80ba391f1bca8de2d3262d7b166ec55c45fdffe3e23426c",
+        "assets/library_batch5/tree_diameter_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch5/tree_diameter_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch5/counting_spanning_tree_directed_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/chromatic_number/verifier.cpp",
+      "params_path": "library_work/prepared_packages/chromatic_number/params.h",
+      "source_sha256": "5e965d45fe866d3e8feafd6c6485fac681148d29e2edde96803ff7da1bf8e20f",
+      "params_sha256": "91fe790dd085519bef30eef23a6c23e55a360379c9efe18128d2a938202e4a30"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/chromatic_number/verifier.cpp",
+      "params_path": "library_work/l2_packages/chromatic_number/params.h",
+      "source_sha256": "5e965d45fe866d3e8feafd6c6485fac681148d29e2edde96803ff7da1bf8e20f",
+      "params_sha256": "950bd562493a6144515e1e0036b323e8b1afadf04358a61903713e62166d9871"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/chromatic_number/sol/correct.cpp",
+      "source_sha256": "1efbdf62de9f980706e43864a26c796f2560a8f265364853b5a5c5ea909eea89",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/chromatic_number/strict_edit_log.json",
+        "sha256": "2f452706330b9b3024fbe353559c47843ce163dc9f790cd303fc583e7d22b12f"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 10.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch5.py",
+    "module_sha256": "b8f0f5dbe58e6026af3ba2aed5ed4f9e23b6e886bf4868dd3dc7fea0e217daa4",
+    "function": "check_output",
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

@@ -1,0 +1,847 @@
+{
+  "schema": "trimut.experiment-tests.v1",
+  "seed_id": "TM071",
+  "condition": "l3",
+  "cpu_budget_seconds": 5,
+  "memory_mb": 2048,
+  "component_manifests": [
+    {
+      "path": "tasks/TM071/l3_test_manifest.json",
+      "sha256": "304d77b549a02ddf8e7809de2a53664a790dbfb1be2caece9a4d326a8ad1f52e"
+    }
+  ],
+  "records": [
+    {
+      "name": "public_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM071/tests/raw/public_tests_0000.in",
+      "input_sha256": "0f2741648d7a55ed5af96b14d8a0348d5f81aadad1d98c13d96dd367353faf7c",
+      "expected_path": "tasks/TM071/tests/l3/public_tests_0000.out",
+      "expected_sha256": "ad0fadf63cc7cd779ce475e345bf4063565b63a3c2efef1eebc89790aaa6acba",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021170000000001465,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "public_tests_0000",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "verified_fast_program_generated"
+    },
+    {
+      "name": "boundary_semantic_witness",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/boundary_semantic_witness.in",
+      "input_sha256": "2569f19c9091b9d79a695e821d5f896c6243b725c9d68a123b08dba76e46a7a3",
+      "expected_path": "tasks/TM071/tests/l3/boundary_semantic_witness.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0019819999999999283,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "boundary_semantic_witness",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_00",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/boundary_extra_00.in",
+      "input_sha256": "67cb2df0b728ab5dc59f13e2134c7956b1c95517eda74a405fc78e381fd5c590",
+      "expected_path": "tasks/TM071/tests/l3/boundary_extra_00.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021079999999997767,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "boundary_extra_00",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_01",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/boundary_extra_01.in",
+      "input_sha256": "7bcb0d411c1ec8886042fcd45e9431d6cab8a13818f51557f04135f5bb5c245e",
+      "expected_path": "tasks/TM071/tests/l3/boundary_extra_01.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0022660000000001013,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "boundary_extra_01",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_02",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/boundary_extra_02.in",
+      "input_sha256": "b1eff17bd0c22345dff3fe11ed48784a41e957239af528d4abce38db0ffe9ad3",
+      "expected_path": "tasks/TM071/tests/l3/boundary_extra_02.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 7,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025850000000002815,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "boundary_extra_02",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_03",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/boundary_extra_03.in",
+      "input_sha256": "f827c9a83aeca5320926cecda6ebb652a1a4589eb7af3af8b69df5413e119b29",
+      "expected_path": "tasks/TM071/tests/l3/boundary_extra_03.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002505999999999897,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "boundary_extra_03",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_04",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/boundary_extra_04.in",
+      "input_sha256": "136eed3adabf6c9da08f1b92a6882278d0b40aae1b9038601191e271e32fa04c",
+      "expected_path": "tasks/TM071/tests/l3/boundary_extra_04.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023420000000000663,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "boundary_extra_04",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_000",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_000.in",
+      "input_sha256": "be519fc5fa95dcfedaa405cf40595234a8698a2e4ae29f7bfe7f556ac35117db",
+      "expected_path": "tasks/TM071/tests/l3/small_random_000.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 10,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023840000000001638,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_000",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_001",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_001.in",
+      "input_sha256": "fbc4db6bfe21f18ad7b3365849cfa88a952a101005606cee873893b2095f5480",
+      "expected_path": "tasks/TM071/tests/l3/small_random_001.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00255099999999997,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_001",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_002",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_002.in",
+      "input_sha256": "6fddeb88f16696df9afc00f169d8593950f26b2b60a2201d322332229dca13c3",
+      "expected_path": "tasks/TM071/tests/l3/small_random_002.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002254999999999896,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_002",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_003",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_003.in",
+      "input_sha256": "e227a9e9438bfd908a0ede57fbf0f997dcddf6b3a05da8a8d78ad4593403fd01",
+      "expected_path": "tasks/TM071/tests/l3/small_random_003.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 4,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023170000000001245,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_003",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_004",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_004.in",
+      "input_sha256": "17177a2d20db1560abd106e9681b59391590771af91c0c19812a939dc4245175",
+      "expected_path": "tasks/TM071/tests/l3/small_random_004.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 4,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021480000000000388,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_004",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_005",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_005.in",
+      "input_sha256": "8849e1b69a86312c9f0446a11feaadb1e1c6d2599d371236274c0234758817d9",
+      "expected_path": "tasks/TM071/tests/l3/small_random_005.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00224800000000025,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_005",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_006",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_006.in",
+      "input_sha256": "a9a5f5f616dd943fe4792d2f7ac3cf56204a02376a9864f50a654ecff984b11c",
+      "expected_path": "tasks/TM071/tests/l3/small_random_006.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0022289999999998145,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_006",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_007",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_007.in",
+      "input_sha256": "01d376b3f788c59c399ea97abd63b3462ac2268118119683e24211ccacf76eb5",
+      "expected_path": "tasks/TM071/tests/l3/small_random_007.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0024489999999998124,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_007",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_008",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_008.in",
+      "input_sha256": "db82307a0d8e56e5d5c43aea24061c55fbf9410b7c6ebcad4d6f7ed432e86711",
+      "expected_path": "tasks/TM071/tests/l3/small_random_008.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023360000000001158,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_008",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_009",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_009.in",
+      "input_sha256": "460cb2f85deeab6b5232cee7890bc39a25bfb0ddcaed82e4e4436501ce73e4af",
+      "expected_path": "tasks/TM071/tests/l3/small_random_009.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0022980000000001333,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_009",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_010",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_010.in",
+      "input_sha256": "dcf9a5c9143e6d9a98d43ad533b43fc6e123bd67eb09ca19f6c9361994662cb2",
+      "expected_path": "tasks/TM071/tests/l3/small_random_010.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002252000000000365,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_010",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_011",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_011.in",
+      "input_sha256": "3cb30152db21758309197c701c37285ede266d43109bb550d545d3265f1c2041",
+      "expected_path": "tasks/TM071/tests/l3/small_random_011.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 4,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0022720000000000518,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_011",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_012",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_012.in",
+      "input_sha256": "7458a5d3bc7af62c310132dee0b109b116ea28813fb49f8494be2e8f4f8b8799",
+      "expected_path": "tasks/TM071/tests/l3/small_random_012.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 3,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002404000000000295,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_012",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_013",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_013.in",
+      "input_sha256": "17ac2e8c40541d0946c62eb04e420a6663a9e3aa576f0e5e74a7099263ab74d1",
+      "expected_path": "tasks/TM071/tests/l3/small_random_013.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.003438000000000052,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_013",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_014",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_014.in",
+      "input_sha256": "886199a157e560be5888ff4401099132b49509e357c9c8ba4cd4062412480b4b",
+      "expected_path": "tasks/TM071/tests/l3/small_random_014.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 8,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.005333000000000032,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_014",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_015",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_015.in",
+      "input_sha256": "e289303718ab68432eeffcce1d7fadd84dfb870c541cd7a925ec15bd7e435581",
+      "expected_path": "tasks/TM071/tests/l3/small_random_015.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 10,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.005315999999999765,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_015",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_016",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_016.in",
+      "input_sha256": "5a9c0e786365b45a4c91dabd6def5e907e13ef9c41a9758d2f19c565330e6386",
+      "expected_path": "tasks/TM071/tests/l3/small_random_016.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025089999999998724,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_016",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_017",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_017.in",
+      "input_sha256": "d89f9baf036ae7064ac2f61f757afa90d526d6c98ab5e996b1ca0ea15d2ccb0a",
+      "expected_path": "tasks/TM071/tests/l3/small_random_017.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0025490000000003565,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_017",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_018",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_018.in",
+      "input_sha256": "05369815f48919732548195902018454ba7d203bc95121979c4d8a318313a3a9",
+      "expected_path": "tasks/TM071/tests/l3/small_random_018.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002194999999999947,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_018",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_019",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_019.in",
+      "input_sha256": "3e2bddbd0b2fd1e1c88a6befe1efe236a94f4a38b0163a9ae8e9a4c15f51a4e7",
+      "expected_path": "tasks/TM071/tests/l3/small_random_019.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 4,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002456000000000458,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_019",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_020",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_020.in",
+      "input_sha256": "6e3712c944eb1fd4b624c0af3de8f63038e5e8cc1b5ab92e511d8acf66d610b4",
+      "expected_path": "tasks/TM071/tests/l3/small_random_020.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 7,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021190000000002596,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_020",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_021",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_021.in",
+      "input_sha256": "23a671078758f924b469c190601d7e7559b4ce20f2ded69b633b13e17ff8e133",
+      "expected_path": "tasks/TM071/tests/l3/small_random_021.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 8,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002403000000000155,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_021",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_022",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_022.in",
+      "input_sha256": "87640e96133e35bdb1d2dcfb70d7d4c556fb7ac7526ff3b29520a572ddbfc468",
+      "expected_path": "tasks/TM071/tests/l3/small_random_022.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00218800000000019,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_022",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_023",
+      "kind": "small",
+      "input_path": "tasks/TM071/tests/raw/small_random_023.in",
+      "input_sha256": "7df6e879a9ca482c14ec85f6605f8ba0bba9c1f3279aeb605f0b993b458592b5",
+      "expected_path": "tasks/TM071/tests/l3/small_random_023.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002034999999999787,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "small_random_023",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "native_upper",
+      "kind": "native_upper",
+      "input_path": "tasks/TM071/tests/raw/native_upper.in",
+      "input_sha256": "2570a64b1dd0cb38a0ed0a6977f1257ddbc239cc1b798fbd94121ee5a59c1b3b",
+      "expected_path": "tasks/TM071/tests/l3/native_upper.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 999,
+        "original_upper": 999,
+        "l2_upper": 10000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002626999999999935,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM071/report.json",
+        "case": "native_upper",
+        "role": "l3_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    }
+  ]
+}

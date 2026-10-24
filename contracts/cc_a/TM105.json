@@ -1,0 +1,188 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM105",
+  "source_identity": "codecontests:5:p03170 Educational DP Contest - Stones",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03170 Educational DP Contest - Stones"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM105/raw.txt",
+      "sha256": "ec0b0a87673eefd8b6ddd80afa4c6c88f55eaf746185f7992b9e7341f1345c1a"
+    },
+    "provenance": {
+      "path": "tasks/TM105/raw_provenance.json",
+      "sha256": "140710849bc87d989d15fe0010ec67d4661a4784258b7b02ee60e85386ec001b"
+    },
+    "tests": {
+      "path": "tasks/TM105/raw_test_manifest.json",
+      "sha256": "dc2dd01679b26c6e223954898d6a8d339afb526f705ff55b734900aceade9a41"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM105/l1.txt",
+      "sha256": "2a2da6731dc6761db0cc5d55720fdbec02c98da4e2dba4f090a88297d41db45b"
+    },
+    "certificate": {
+      "path": "tasks/TM105/l1_certificate.json",
+      "sha256": "93074d368e1c02120ba64b95f34fffab5a2c48b1a17913be0ba3f7cbd2a645c3"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM105/raw_test_manifest.json",
+      "sha256": "dc2dd01679b26c6e223954898d6a8d339afb526f705ff55b734900aceade9a41"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM105/l2.txt",
+      "sha256": "04b5db7e0813ed275b7ec77b8678c5d1e74b0871a57f458d52b4ed3f559745f6"
+    },
+    "certificate": {
+      "path": "tasks/TM105/l2_certificate.json",
+      "sha256": "d84a09d26da4a1de98d431c27277bb253a9fadb4c8d42460e824cf62607c2cf4"
+    },
+    "tests": {
+      "path": "tasks/TM105/l2_test_manifest.json",
+      "sha256": "be52ee6eee5cddb4bb70069241eb388fb01a612d5c079a9b21f1c8b8f30d3693"
+    },
+    "axis": "K",
+    "original_upper": 100000,
+    "expanded_upper": 200000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM105/l3.txt",
+      "sha256": "b6c857096fdb84bc8afdfd331ff31acc6ad01ec22a447e5525ed8c45fa38117a"
+    },
+    "tests": {
+      "path": "tasks/TM105/l3_test_manifest.json",
+      "sha256": "ee175cede9197639315234c3f58b4051d0c2d7e381543807b1c0271396b7a844"
+    },
+    "operator": "A player whose turn has NO LEGAL MOVE WINS instead of losing. Legal moves and optimal play are unchanged.",
+    "correctness_argument": "For nonterminal piles, a state is winning iff at least one successor is losing. Only the terminal base case changes. Bottom-up DP reuses states; the oracle independently evaluates the literal game tree with an explicit traversal stack and no memoization.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 28,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_0",
+      "small_random_000",
+      "small_random_002",
+      "small_random_003",
+      "small_random_005",
+      "small_random_006",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_022"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch4/atcoder_dp_k/raw_fast.cpp",
+      "sha256": "79361b986ff17a74aed7227221de237f326499336a4e3fae196bf5265c1c4414",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch4/atcoder_dp_k/l3_fast.cpp",
+      "sha256": "9ca8693b065d39ee6781a57e1ebd93e7063a6b88d08a6e35e5a040717ed66f9f",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch4/atcoder_dp_k/raw_oracle.cpp",
+      "sha256": "565f51acf49215d545573081fc5525e44363391089beb4a7f9a5530d5959af90",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch4/atcoder_dp_k/l3_oracle.cpp",
+      "sha256": "7e66767ee712de26d0a23ea219a23e47d8e5c98c32c571b8c8a3c3b3612122bd",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch4/atcoder_dp_k/raw_fast.cpp",
+      "sha256": "79361b986ff17a74aed7227221de237f326499336a4e3fae196bf5265c1c4414",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM105/report.json",
+      "sha256": "4eb97978b27e9861e925d35b95d09487576b96dd90d8863b2c6c0df5ab02870b"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch4.py",
+    "recipe_id": "atcoder_dp_k",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch4.py",
+  "recipe_id": "atcoder_dp_k"
+}

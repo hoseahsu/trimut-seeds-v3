@@ -1,0 +1,200 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM073",
+  "source_identity": "codecontests:1:luckybal",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:1:luckybal"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM073/raw.txt",
+      "sha256": "4e8d57eac7b1735dda028087b3ae966f57bbec1482d02e99419ca27a1ea23d80"
+    },
+    "provenance": {
+      "path": "tasks/TM073/raw_provenance.json",
+      "sha256": "0992672d2a2a627f24500eb7965fe1916b546c319c1f07a89b8623570021ff78"
+    },
+    "tests": {
+      "path": "tasks/TM073/raw_test_manifest.json",
+      "sha256": "931a63ac7925d05264c518e5b7fd8d88063614a42cb3e7baeede04a8aa7cc47c"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM073/l1.txt",
+      "sha256": "8222b8fa9822462554e03dd45bdffb14c469f8d2f360f3e41119d5c6e101a390"
+    },
+    "certificate": {
+      "path": "tasks/TM073/l1_certificate.json",
+      "sha256": "47c11009efca760d095d31e98af8ae86729893fd3c48e3e0da11d645318989a3"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM073/raw_test_manifest.json",
+      "sha256": "931a63ac7925d05264c518e5b7fd8d88063614a42cb3e7baeede04a8aa7cc47c"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM073/l2.txt",
+      "sha256": "5d8e20af7d0e5205bfad877b5a22f16857f9a7806f7d19f13547d858ba8f024a"
+    },
+    "certificate": {
+      "path": "tasks/TM073/l2_certificate.json",
+      "sha256": "e69302f6248314bef151153ed6fb6a84c1db05fec4637616fbb0dfd2f9172e0f"
+    },
+    "tests": {
+      "path": "tasks/TM073/l2_test_manifest.json",
+      "sha256": "21097c2130f6ef3dd48ad481b64e76bd1487067c3aab7d0bec23a30dd08e4b81"
+    },
+    "axis": "string_length",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM073/l3.txt",
+      "sha256": "e8120c432b6e0c42fc1dc065e055919f86ee5168db034c07bfd7ae40b59d8a01"
+    },
+    "tests": {
+      "path": "tasks/TM073/l3_test_manifest.json",
+      "sha256": "3be81c4725b5e43d285196d0aba32499b9715ac53c6754df985a9f62cba27305"
+    },
+    "operator": "For a substring T, require a cut X in [1,|T|] such that the number of 4s in T[1,X-1] is STRICTLY GREATER THAN, instead of equal to, the number of 7s in T[X,|T|]. Count qualifying substrings as before.",
+    "correctness_argument": "Writing k=X-1, equality becomes k=the total number of7s because prefix7 counts cancel. Such k exists in[0,|T|-1] iff T contains at least one4. Strict greater becomes k>total7, which is possible iff T contains at least two4s. A sliding window counts substrings with at least one/two4s. The oracle explicitly enumerates substrings and cuts and counts both sides without using the reduction.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 29,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "boundary_extra_03",
+      "boundary_extra_04",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/codechef_luckybal/raw_fast.cpp",
+      "sha256": "ba8d7fdd535732ab6084bc641e0af247e66df1a65c936c93b6cff6abefd50b3b",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/codechef_luckybal/l3_fast.cpp",
+      "sha256": "56243f3075b9e78cf2cb4179fd40a39ea023b7838b36186e31c97754171a0c7a",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/codechef_luckybal/raw_slow.cpp",
+      "sha256": "519dcb22b3e3faa312f894d6c844e49fd9bfc8ad291c380cbd10859a3e37b257",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/codechef_luckybal/l3_slow.cpp",
+      "sha256": "1f7b4512a46e9e6c5592d095cb127a693e0d55aa24cb538d44591c62b2c2c062",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/codechef_luckybal/raw_fast.cpp",
+      "sha256": "ba8d7fdd535732ab6084bc641e0af247e66df1a65c936c93b6cff6abefd50b3b",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM073/report.json",
+      "sha256": "0c264ec5f7ab3f625fc3dc61a8562dd9fa9026fc57ee8607b7d1f044db7e4377"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "codechef_luckybal",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "codechef_luckybal"
+}

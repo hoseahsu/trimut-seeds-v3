@@ -1,0 +1,198 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM042",
+  "source_identity": "codeforces:1184_B1",
+  "source_url": "https://codeforces.com/problemset/problem/1184/B1",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1184_B1"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM042/raw.txt",
+      "sha256": "42e6f9a50b9909235ab3b69956320d053bcfc2183b5f33be5e58663278c669dd"
+    },
+    "provenance": {
+      "path": "tasks/TM042/raw_provenance.json",
+      "sha256": "af33c89b4fe190f1b491b85193b9728c2278ceb9dbe45f2b35942a59e5bb935d"
+    },
+    "tests": {
+      "path": "tasks/TM042/raw_test_manifest.json",
+      "sha256": "b2b99022f4d3b2e57f4b7603c53d589246921e02118d818a25b5eeae89138f57"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM042/l1.txt",
+      "sha256": "a97a8562723d5615b88adbaac2f2dc26f5b353cf22e9168e2d76a8f5fc6813a1"
+    },
+    "certificate": {
+      "path": "tasks/TM042/l1_certificate.json",
+      "sha256": "95fda48fcccc9e3cb00ae4d1443a4366fef8c6692d00762503024af81b306e4d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM042/raw_test_manifest.json",
+      "sha256": "b2b99022f4d3b2e57f4b7603c53d589246921e02118d818a25b5eeae89138f57"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM042/l2.txt",
+      "sha256": "15ad81fad3bf357e298a07f6b5d406494f42f7a869ae35737f18dcb9b1420b43"
+    },
+    "tests": {
+      "path": "tasks/TM042/l2_test_manifest.json",
+      "sha256": "561406fb262617b520cce9a0b5347beea2ca019d19c9221978c3bc01b9c2477c"
+    },
+    "axis": "s",
+    "original_upper": 100000,
+    "expanded_upper": 400000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM042/l3.txt",
+      "sha256": "d565b28b14f9542746bac3b1cec41cfcd23872bd0e65f3d174e881848113973e"
+    },
+    "tests": {
+      "path": "tasks/TM042/l3_test_manifest.json",
+      "sha256": "7daf0895cc4352eaf300ffa37f0e09b1e7b17402fa735e495d41dd4bcd53f9d6"
+    },
+    "operator": "Require defense<attack.",
+    "correctness_argument": "Sorted base-defense prefix sums answer upper/lower bound queries. Oracle evaluates every ship-base predicate.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_6",
+      "small_small_7",
+      "small_small_8",
+      "small_small_9",
+      "small_small_10",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "doctor",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "doctor",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "doctor",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "doctor",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "42",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "42",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_doctor"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM042/report.json",
+      "sha256": "ee9f36e024ab4fe183444e47697bb8f344ab82d0d237a9a6caa318472ac4f1b4"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM042/report.json",
+      "sha256": "be836075f1af99050f219f4f8a4eaad19a6a26865a2cf79582e82eb02e704a2f"
+    },
+    "resolution": {
+      "path": "tasks/TM042/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM042/mutation_edits.json",
+      "sha256": "2cf13c7998a38c530a8d9c2946cdea153f636c24d5978923b7c76396ef9f942f"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

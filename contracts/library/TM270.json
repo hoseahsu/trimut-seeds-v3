@@ -1,0 +1,346 @@
+{
+  "schema": "trimut.strict.library.v1",
+  "seed_id": "TM270",
+  "source_identity": "library-checker:minimum_enclosing_circle",
+  "source_url": "https://judge.yosupo.jp/problem/minimum_enclosing_circle",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "minimum_enclosing_circle"
+  ],
+  "original_snapshot": {
+    "source_task_path": "sources/library-checker-problems-master/geo/minimum_enclosing_circle/task.md",
+    "source_task_sha256": "86a5f22443b476c3c11a6d7472212f84ffabb5202ac0118e95dd9a1e85579007",
+    "source_info_path": "sources/library-checker-problems-master/geo/minimum_enclosing_circle/info.toml",
+    "source_info_sha256": "37f046553c26e6c90c3931e5fde9a13dea709c3468612940da10801db43dd0f2",
+    "source_hash_path": "sources/library-checker-problems-master/geo/minimum_enclosing_circle/hash.json",
+    "source_hash_sha256": "4eef881d0d6e17b04f9723d44dbaec40cb579d9dc9b5b365bd67e46929c632be"
+  },
+  "raw": {
+    "statement": {
+      "path": "tasks/TM270/raw.txt",
+      "sha256": "0495104b7b78d5dbb5a445b0307aeeb1a65014f4047a9b92601f63a70cb9861f"
+    },
+    "native_params": {
+      "N_MAX": 100000,
+      "X_AND_Y_ABS_MAX": 10000
+    },
+    "native_cpu_budget_seconds": 5.0,
+    "native_memory_limit": "not specified in repository info.toml; no invented original memory limit",
+    "source_faithful_template_render": true,
+    "provenance": {
+      "path": "tasks/TM270/raw_provenance.json",
+      "sha256": "dc1a956390f5d9b966eccae60dafb3873ec0b595f166334a90166b05d97cc0dd"
+    },
+    "tests": {
+      "path": "tasks/TM270/raw_test_manifest.json",
+      "sha256": "712065cfd188c75eca1e26376afee7ab88a0545cd1b8f7dbd9bcfe6f6a537d48"
+    },
+    "all_original_examples_included": true,
+    "native_upper_bound_reached": true,
+    "test_scope": "selected reproducible experimental subset; not complete official hidden suite"
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM270/l1.txt",
+      "sha256": "91aa248cdadf7aeeb084a535ecef4722d6ca4a4321331407fb38a182c518411f"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM270/raw_test_manifest.json",
+      "sha256": "712065cfd188c75eca1e26376afee7ab88a0545cd1b8f7dbd9bcfe6f6a537d48"
+    },
+    "constraint_policy": "unchanged original numeric/logical constraints; only narrative/entity semantics may change",
+    "l1_author_validation": "owned by strict L1 author; not inferred here"
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM270/l2.txt",
+      "sha256": "467f3a1d1f3d8f1bfe67ecf5ab3c7e09354569de12620a6c90a2e0fe3ae2e89f"
+    },
+    "provenance": {
+      "path": "tasks/TM270/l2_render_provenance.json",
+      "sha256": "901a341d64c0b7ec8e210ed3cb285634faeee1a7b23669ce2256c02f613d6b03"
+    },
+    "bound_changes": {
+      "N_MAX": {
+        "native": 100000,
+        "expanded": 200000
+      }
+    },
+    "tests": {
+      "path": "tasks/TM270/l2_test_manifest.json",
+      "sha256": "02ff1e910bd6fff5d6f11bf2bdc5186f1cb7a4e5188bf8934bf78a8b775303ba"
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Old reduced-bound weak/strong evidence is inapplicable. No claim that an algorithm passing the native upper bound fails only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM270/l3.txt",
+      "sha256": "1c8f7099c8c0ab3e63dacca4e5f554edfb330c06cbcdbfa75a7c1514e2c3c592"
+    },
+    "provenance": {
+      "path": "tasks/TM270/l3_render_provenance.json",
+      "sha256": "9e962123339fec3cce38b9461366b77c178a99446ecb4afe866e3eb42c07ae77"
+    },
+    "operator": "enclosing circle → axis-aligned enclosing rectangle",
+    "specification": "Replace the target object with the unique smallest axis-aligned rectangle containing the points; mark points on its boundary in the original0/1 string format, including degenerate rectangles.",
+    "correctness_argument": "The rectangle is [min x,max x]×[min y,max y]; a point is on its boundary iff any coordinate reaches an extremum. Raw exact small oracle enumerates enclosing circles through pairs/triples.",
+    "tests": {
+      "path": "tasks/TM270/l3_test_manifest.json",
+      "sha256": "805cc52ea0663f52ff77ed23e59c9293c1736c392bd32de78b8d2941cfbafa75"
+    },
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 11,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "authored_boundary_00",
+      "authored_boundary_01",
+      "authored_small_00",
+      "authored_small_01",
+      "authored_small_03",
+      "authored_small_05",
+      "authored_small_07"
+    ],
+    "native_constraints_preserved": true,
+    "universal_correctness_or_novelty_claim": false,
+    "oracle_attempts_outside_small_domain": []
+  },
+  "programs": {
+    "raw_source_reference": {
+      "path": "sources/library-checker-problems-master/geo/minimum_enclosing_circle/sol/correct.cpp",
+      "source_sha256": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/library_batch4/minimum_enclosing_circle_raw.cpp",
+      "source_sha256": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "l3_fast": {
+      "path": "assets/library_batch4/minimum_enclosing_circle_l3.cpp",
+      "source_sha256": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "raw_small_oracle": {
+      "path": "assets/library_batch4/oracle.py",
+      "args": [
+        "minimum_enclosing_circle",
+        "raw"
+      ],
+      "source_sha256": "0882bbe368d7124cdee9a552ab06c193ea96d721d980a40335b5a5e6f6465e63",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "l3_small_oracle": {
+      "path": "assets/library_batch4/oracle.py",
+      "args": [
+        "minimum_enclosing_circle",
+        "l3"
+      ],
+      "source_sha256": "0882bbe368d7124cdee9a552ab06c193ea96d721d980a40335b5a5e6f6465e63",
+      "include_dirs": [],
+      "local_cpp_header_snapshot_sha256": {
+        "assets/library_batch4/area_of_union_of_rectangles_slow.cpp": "fbb342640977be080f3e71a91fe4fd717e3bbaa51dd83d810683d672197e992a",
+        "assets/library_batch4/area_of_union_of_rectangles_raw.cpp": "eb765e33eb4783b2671fbb1123292ad44fe09f883fa9611a09fb781f4dea48e6",
+        "assets/library_batch4/solver.cpp": "f1c8ed7025945618b5afd23c37262ca681a7c3c4fe967747b052ac53136753fd",
+        "assets/library_batch4/static_convex_hull_slow.cpp": "5e36b7698203c435f32f81f77957372b671d91914751fce3adf22e967d934841",
+        "assets/library_batch4/static_convex_hull_raw.cpp": "886f59ebeb1bdda3a7ad6b03f06c2781414e2bd658ef22e75840aaf37b8ee653",
+        "assets/library_batch4/furthest_pair_raw.cpp": "0a1e766439fe4077bd7785e7777e9f28b7d22bcb7e8fb9d10cc6f4348fc85ea0",
+        "assets/library_batch4/closest_pair_raw.cpp": "421d53fbe049575b3d8b42470eb213e21e43ee5448bf4996b6a7c32df6a8a807",
+        "assets/library_batch4/all_furthest_neighbors_slow.cpp": "6b46362298f60ea0dc08e3978464b67fc01f1cb8afbfecd2b5b2fd48c28b9f8c",
+        "assets/library_batch4/static_convex_hull_l3.cpp": "01c42f2cbfb656b3396bdb4c91ab2b5945e679c4df51bfa1441e866250f4d7a8",
+        "assets/library_batch4/minimum_enclosing_circle_l3.cpp": "518c15474a57f507e324a5449b1c3983e6b240acf2bb7c3b9195c001b6a27cbb",
+        "assets/library_batch4/static_range_mode_query_raw.cpp": "95765cc8c889f9e0f24ce60bc7d4ed04634f61def4fcaa377e3040ab8c72f212",
+        "assets/library_batch4/zalgorithm_raw.cpp": "d3782240f36ea69b54f2d334db580a31174aa362aa99b77b6312e58f62a22d71",
+        "assets/library_batch4/closest_pair_slow.cpp": "5ad73076ea8e33be4d7ada164c841d7120ec9ec255d94ace01cc4a8363ff20bf",
+        "assets/library_batch4/static_range_mode_query_l3.cpp": "49a5b0431c539b81433d752f78d46a5a458c67d37194e859ae7b8baa10cd2e5f",
+        "assets/library_batch4/enumerate_palindromes_raw.cpp": "a5cc9f9eba3f749111ac6ccdb98b33604c020479d80cdb56b8a987b60f581a86",
+        "assets/library_batch4/enumerate_palindromes_l3.cpp": "03157b233f570be69e8af923c12f63f98c85a868688ab53d9f678845236a5368",
+        "assets/library_batch4/furthest_pair_slow.cpp": "d009ea00cd68c267cc1389ccf309f0e20df8659d07e77752a25cab66a2fa98d0",
+        "assets/library_batch4/closest_pair_l3.cpp": "9c2bcec5ed50c16d7228a5e038de7be18773cdb4fda4f29ebf559bf8f7f09dc5",
+        "assets/library_batch4/number_of_subsequences_l3.cpp": "f2427c2a368b0c9e20b688b127fb51d593d2c7177995dfb103949da21abfe5be",
+        "assets/library_batch4/number_of_subsequences_slow.cpp": "f6489525691c55dc4dc341a2957a5931d5e1d15dd78a6fe5dd08c98cbdab86ba",
+        "assets/library_batch4/area_of_union_of_rectangles_l3.cpp": "c965a7ab912db728dd317cb397ffd09b717775a0aaeaad2121fa95947a6606cb",
+        "assets/library_batch4/enumerate_palindromes_slow.cpp": "0c092c84c72670948c13256027021af22ec0ba90a14019fb0075671db4035c51",
+        "assets/library_batch4/minimum_enclosing_circle_slow.cpp": "4417b4dd460410f007c33a4b2129b07df49a65553c2832e1c42ee18c656ce21c",
+        "assets/library_batch4/number_of_subsequences_raw.cpp": "05a47b456a1dbcd4ccd5d78fa4f76578ce89eb8b4ccdb35fa2ee5e38438593af",
+        "assets/library_batch4/static_range_mode_query_slow.cpp": "3e6c56e4c7ac7ae47a6ed4d7cca89447abab4c0986b32c11b2efa3d7d215da99",
+        "assets/library_batch4/zalgorithm_slow.cpp": "ff0532ceeb141dac19566aa23d0ad752ba5fa97ed24ae4e2edaa4d42bb6ee1e2",
+        "assets/library_batch4/all_furthest_neighbors_raw.cpp": "c40e3949f471c4ff0ea78466ed54e017079375860a3ddedb59735d4a9d431bbf",
+        "assets/library_batch4/furthest_pair_l3.cpp": "6924c52c32bb66599fe315b397720abc7e26409f75096f2385580cbc06fad6d8",
+        "assets/library_batch4/zalgorithm_l3.cpp": "3af6bf9f51a9bdf23b9a24e0e77ae31cd132964fefde2e8b1d5488600bf1f2a9",
+        "assets/library_batch4/minimum_enclosing_circle_raw.cpp": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+        "assets/library_batch4/all_furthest_neighbors_l3.cpp": "33486d476fe5f5ea0f018d7f427e324ecd0b739a5fe4d51b93ffac9f9d76c25b"
+      }
+    },
+    "raw_and_l3_input_verifier": {
+      "path": "library_work/prepared_packages/minimum_enclosing_circle/verifier.cpp",
+      "params_path": "library_work/prepared_packages/minimum_enclosing_circle/params.h",
+      "source_sha256": "130d0f6ec700a0bc59c1f98c920e07ae97322b060eda54f88b5e5a140cb8bbca",
+      "params_sha256": "35f7921d2e02ce267f1bec6d33bca30af05d2eeff47f3fc055ef1fc2670aa584"
+    },
+    "l2_input_verifier": {
+      "path": "library_work/l2_packages/minimum_enclosing_circle/verifier.cpp",
+      "params_path": "library_work/l2_packages/minimum_enclosing_circle/params.h",
+      "source_sha256": "130d0f6ec700a0bc59c1f98c920e07ae97322b060eda54f88b5e5a140cb8bbca",
+      "params_sha256": "16d4bb56079a336bb33312d0ac2a8c2d7820c9fdaf723d4cba808092003e63d4"
+    },
+    "l2_source_reference": {
+      "path": "library_work/l2_packages/minimum_enclosing_circle/sol/correct.cpp",
+      "source_sha256": "0254114370a9644fface541e27c1a17c108d0e59a1c8c4364039423b8aa17e66",
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe",
+        "-include",
+        "cstdio"
+      ],
+      "include_dirs": [
+        "sources/library-checker-problems-master/common"
+      ],
+      "role": "expected-output construction and comparison; its longer generation budget is not the L2 fast-program performance claim",
+      "source_edit_log": {
+        "path": "library_work/l2_packages/minimum_enclosing_circle/strict_edit_log.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap with unshare-all/no network; compilation also isolated",
+    "experimental_memory_mb": 1024,
+    "memory_is_original_source_claim": false,
+    "cpu_budget_seconds": 5.0,
+    "native_tests_before_core_assignment_may_use_cpu0": "successful CPU-budget results retained; any timeout must be rerun on exclusive CPU1"
+  },
+  "required_numeric_repair_complete": true,
+  "output_checker": {
+    "module_path": "recipes/library_batch4.py",
+    "module_sha256": "8f1bc353879e9afe3fc600018b9a7df7434d050d1a207f0c9fb3d6aa5f1f9412",
+    "function": "check_output",
+    "default": "whitespace-token equality",
+    "arguments": [
+      "source_id",
+      "input_text",
+      "candidate_text",
+      "oracle_text",
+      "condition"
+    ],
+    "condition_mapping": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "raw",
+      "l3": "l3"
+    },
+    "old_weak_domain_validation_used": false
+  },
+  "strict_l2_l3_validation_complete": true
+}

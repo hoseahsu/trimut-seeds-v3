@@ -1,0 +1,201 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM023",
+  "source_identity": "codeforces:742_A",
+  "source_url": "https://codeforces.com/problemset/problem/742/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:742_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM023/raw.txt",
+      "sha256": "60f30d2469acc950eb1f55e84a7cf3812b634c9974ad858ca76db7694ff286fe"
+    },
+    "provenance": {
+      "path": "tasks/TM023/raw_provenance.json",
+      "sha256": "477caab3c265f8dba5a6afc26dfde462a9ab88258530263c13bd2f965eed7963"
+    },
+    "tests": {
+      "path": "tasks/TM023/raw_test_manifest.json",
+      "sha256": "df3574116952b411fd04d12ce8f9d8424f66b65bda2348fbc9d032250f1718ab"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM023/l1.txt",
+      "sha256": "4f4cd71e3287e3c6547b0427a575c7070ea0b88481b56096afccdbb17a125905"
+    },
+    "certificate": {
+      "path": "tasks/TM023/l1_certificate.json",
+      "sha256": "2f75544b1a69a2edfeb0aeeab701e73030938f113684ed20d06b6d1d8e7d573a"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM023/raw_test_manifest.json",
+      "sha256": "df3574116952b411fd04d12ce8f9d8424f66b65bda2348fbc9d032250f1718ab"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM023/l2.txt",
+      "sha256": "8a23ce24dc90ba248ca8f5890473359f646a658927032dd94a9725dc4691f810"
+    },
+    "tests": {
+      "path": "tasks/TM023/l2_test_manifest.json",
+      "sha256": "43661c8cc8e0dc4827aba8d8b75528de9b579863da68e65ea51750c50827d5eb"
+    },
+    "axis": "n",
+    "original_upper": 1000000000,
+    "expanded_upper": 1000000000000000000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM023/l3.txt",
+      "sha256": "860e69c33ee2f4944840eb7f2babf76f077f18b7b752fa7f5942880ebc35fa4a"
+    },
+    "tests": {
+      "path": "tasks/TM023/l3_test_manifest.json",
+      "sha256": "78450bfb28ec00c456df88bfcdec4917cf79686f2eb9f8693d662e37ee33fa5a"
+    },
+    "operator": "Print1378^n modulo100 as an integer without padding.",
+    "correctness_argument": "Binary exponentiation works for either modulus. Oracle performs n individual multiplications.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 24,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "small_small_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_6",
+      "small_small_7",
+      "small_small_9",
+      "small_small_10",
+      "small_small_11",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "power",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "power",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "power",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "power",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "23",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "23",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_power"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM023/report.json",
+      "sha256": "3ec80a1d55beaa9884f262dad98e9714e1eaf4bebc7718cccfe791489865267a"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM023/report.json",
+      "sha256": "bfd921d42e217bbdbba033857628967c382029101a8f985760f360c50a1bd437"
+    },
+    "resolution": {
+      "path": "tasks/TM023/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM023/mutation_edits.json",
+      "sha256": "17ee581648cd814ebba9e8cf1864e7f7b62b8929efde193dccb698d5725169b2"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

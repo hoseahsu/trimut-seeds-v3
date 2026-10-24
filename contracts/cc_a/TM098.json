@@ -1,0 +1,198 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM098",
+  "source_identity": "codecontests:3:ankit-and-race-team-10",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:3:ankit-and-race-team-10"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM098/raw.txt",
+      "sha256": "52f6b3982cb8a23e690cebfd2173c7c339028c9bea672e0bbd5df474514f6064"
+    },
+    "provenance": {
+      "path": "tasks/TM098/raw_provenance.json",
+      "sha256": "dd4ab1b506c054ec2fa035a379f8bdfa39eddfcf6d98e04d2aada7c0b9c0d901"
+    },
+    "tests": {
+      "path": "tasks/TM098/raw_test_manifest.json",
+      "sha256": "d6ba4806d58572056ea057575419d38cd02fe0b8896f3fa54aafc26311dcbb0e"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM098/l1.txt",
+      "sha256": "b43bb93a90446eb09124020a8ab429322d185b4ca96267aa6dd2e95e323a97e3"
+    },
+    "certificate": {
+      "path": "tasks/TM098/l1_certificate.json",
+      "sha256": "d9acdd75ce28b74afb5b7db7da61c84b059703332f88326f92129b86ddad773b"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM098/raw_test_manifest.json",
+      "sha256": "d6ba4806d58572056ea057575419d38cd02fe0b8896f3fa54aafc26311dcbb0e"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM098/l2.txt",
+      "sha256": "5f5dfe4de496b6c8193fc740ad108115afeabce9c492133ecf24f99a669297f4"
+    },
+    "certificate": {
+      "path": "tasks/TM098/l2_certificate.json",
+      "sha256": "7dc53a2257e643a6cd77692c1fe9c0fa5198cbaacf01736e0321cd3b89ff6b6c"
+    },
+    "tests": {
+      "path": "tasks/TM098/l2_test_manifest.json",
+      "sha256": "c7f8106d2e34296a7977238cf266cd498fae6a57dc706fd0a1e25fcfa000ff38"
+    },
+    "axis": "N",
+    "original_upper": 100000,
+    "expanded_upper": 200000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM098/l3.txt",
+      "sha256": "4be1a9d70f12dd8ad76c1ad74acd6e41daac4ce5e2d61629ff2cdb33c32dc79e"
+    },
+    "tests": {
+      "path": "tasks/TM098/l3_test_manifest.json",
+      "sha256": "7e349c404374e43902b13a6403bbd0be4e8782ae9452fce3fbf48763676b93e2"
+    },
+    "operator": "Team strength equals the STRONGEST member instead of the weakest.",
+    "correctness_argument": "In sorted order, a_i is the unique minimum of choose(N-i-1,K-1) teams, or maximum of choose(i,K-1) teams. Factorials and inverse factorials evaluate these weights modulo the prime. The oracle enumerates all subsets and computes the team extremum explicitly.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 31,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_0",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "boundary_extra_3",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023",
+      "original_sample_recovered_0"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch3/hackerearth_ankit_race/raw_fast.cpp",
+      "sha256": "c513de424393415c472d731a28a04b6f2337c67a75d6ab4fa148a5360b59b305",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch3/hackerearth_ankit_race/l3_fast.cpp",
+      "sha256": "87f6e6da9e336de6a3b65bc6213c3517894b611ff9939923053d99e52905b23d",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch3/hackerearth_ankit_race/raw_oracle.cpp",
+      "sha256": "8ebd731b31d4611f4ed24ce8c924e692c85f8ca9f10a2932d0223806f9ecdc9e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch3/hackerearth_ankit_race/l3_oracle.cpp",
+      "sha256": "e2d2505bd234d5d521bd736c7d1fa9f366f09f8379e64256e472cdb24b931117",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch3/hackerearth_ankit_race/raw_fast.cpp",
+      "sha256": "c513de424393415c472d731a28a04b6f2337c67a75d6ab4fa148a5360b59b305",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM098/report.json",
+      "sha256": "1bccc6aa6587bd82183a0251f491c66dceb8165b48a9623e7225422e1a451c01"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch3.py",
+    "recipe_id": "hackerearth_ankit_race",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch3.py",
+  "recipe_id": "hackerearth_ankit_race"
+}

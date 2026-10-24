@@ -1,0 +1,177 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM137",
+  "source_identity": "codeforces:1003_C",
+  "source_url": "https://codeforces.com/problemset/problem/1003/C",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1003_C"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM137/raw.txt",
+      "sha256": "882faabbca26d3b7896110404b80569654ea42ec2fe709b8ccd10516235c3722"
+    },
+    "provenance": {
+      "path": "tasks/TM137/raw_provenance.json",
+      "sha256": "2e42c1720bee75942cbda7b2241a218fc13adc37d4bf278e3b220d1736b07ec8"
+    },
+    "tests": {
+      "path": "tasks/TM137/raw_test_manifest.json",
+      "sha256": "4e23052ceb661be7925936d8633e20071007e1b63070e756a5b70aaf6e9b408b"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM137/l1.txt",
+      "sha256": "d9d8beeec7145db1ac167ffeae61579f18795ea71d7c5e1f364dcd680a58bc0f"
+    },
+    "certificate": {
+      "path": "tasks/TM137/l1_certificate.json",
+      "sha256": "61fd9aba90aa0e58933e0d5bce33a1886802f40e7e742bb7d1f25d04b7dc5e59"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM137/raw_test_manifest.json",
+      "sha256": "4e23052ceb661be7925936d8633e20071007e1b63070e756a5b70aaf6e9b408b"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM137/l2.txt",
+      "sha256": "44de43b6da8056afdc40ec12310a3582389ee68d41d005f57d8ac5bc4961333c"
+    },
+    "certificate": {
+      "path": "tasks/TM137/l2_certificate.json",
+      "sha256": "387fb464c0f2c69b9c9353f50f65486abcacae23793ea22094437e303a8c788d"
+    },
+    "tests": {
+      "path": "tasks/TM137/l2_test_manifest.json",
+      "sha256": "af5d8f13b464c5057471b7ea064b086e202dddf630063b5bfcf051d67af99912"
+    },
+    "axis": "n",
+    "original_upper": 5000,
+    "expanded_upper": 20000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM137/l3.txt",
+      "sha256": "771efc39a4eb98ffc91e552f2ad1ebdeb8cc72839ec1d1f55bd04440fea19bc5"
+    },
+    "tests": {
+      "path": "tasks/TM137/l3_test_manifest.json",
+      "sha256": "73d66b16d793575ed610e7812867de107c8c7895df28d601377aa5b8d7893400"
+    },
+    "operator": "Only segments of length EXACTLYk are eligible; maximize their mean with the same output tolerance.",
+    "correctness_argument": "Prefix sums give each eligible segment sum in constant time, so enumerate all valid endpoint pairs. Exact-length windows need only one end per start. The independent oracle recomputes each candidate sum by a literal loop over its elements.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "small_random_002",
+      "small_random_006",
+      "small_random_018",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch7/cf_1003_c/raw_fast.cpp",
+      "sha256": "d36c30305c21b3ac93a379191824b5dd2f603ba725b978a3cac1a14a730cb233",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch7/cf_1003_c/l3_fast.cpp",
+      "sha256": "b610a44db59b25273212304ce577327c056a9335ea2ccd454be30a934b57ec5e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch7/cf_1003_c/raw_oracle.cpp",
+      "sha256": "a7a1f698e975b2fb54938454b0afc10d77b6bae83007a8cb160252e6ec14f0ee",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch7/cf_1003_c/l3_oracle.cpp",
+      "sha256": "683307ba187d6c81bf02e88e52a5ffceb3a88cee39fe0dfd41de3c55f71e2338",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch7/cf_1003_c/raw_fast.cpp",
+      "sha256": "d36c30305c21b3ac93a379191824b5dd2f603ba725b978a3cac1a14a730cb233",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM137/report.json",
+      "sha256": "d63b3ecc8ba4a22a519f7bb7e295a89ffa5db1916a897dea6e59f526931d6fe2"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch7.py",
+    "recipe_id": "cf_1003_c",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch7.py",
+  "recipe_id": "cf_1003_c"
+}

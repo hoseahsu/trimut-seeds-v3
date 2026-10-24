@@ -1,0 +1,199 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM115",
+  "source_identity": "codeforces:1416_A",
+  "source_url": "https://codeforces.com/problemset/problem/1416/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1416_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM115/raw.txt",
+      "sha256": "efc33695c784f468bc3908fa19880894a6319de037ce2a4411edb80a9e57fe34"
+    },
+    "provenance": {
+      "path": "tasks/TM115/raw_provenance.json",
+      "sha256": "3ab937b7d79d9ad85626b57cd956401d4781c31959b98115d3eb5c12598a0ee1"
+    },
+    "tests": {
+      "path": "tasks/TM115/raw_test_manifest.json",
+      "sha256": "ac0aa9380c69cfc6046e5956bfedaa8a48f5021eaf49f3dd85d495416977baf9"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM115/l1.txt",
+      "sha256": "b018c52dd3bba5c88439edcb3f72d1c621ffccd2bc26457f1a18fbcf05c59cf9"
+    },
+    "certificate": {
+      "path": "tasks/TM115/l1_certificate.json",
+      "sha256": "b7d669c0354cae5898affaef5bcf65a3749ed94d941e9fdcf85aadd1de460a97"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM115/raw_test_manifest.json",
+      "sha256": "ac0aa9380c69cfc6046e5956bfedaa8a48f5021eaf49f3dd85d495416977baf9"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM115/l2.txt",
+      "sha256": "4a4eccc7b306b1f0aae6f094468e573626f2f5cf0e3c92394ae3981ffcada0f3"
+    },
+    "certificate": {
+      "path": "tasks/TM115/l2_certificate.json",
+      "sha256": "3f952397e8494d56e7b9939f7363da7580f23bc457931d91a3a73fbd6e129649"
+    },
+    "tests": {
+      "path": "tasks/TM115/l2_test_manifest.json",
+      "sha256": "69c8740580bdeec195929271beb0931ad53869362d91b07b921fe6a6e94a8d46"
+    },
+    "axis": "n_and_total_n",
+    "original_upper": 300000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM115/l3.txt",
+      "sha256": "7924f62099e3fd6e8d4bd8e4b74f4c775e8c1190ccafcd182d086ca40688ef63"
+    },
+    "tests": {
+      "path": "tasks/TM115/l3_test_manifest.json",
+      "sha256": "af2492dba58b6ae3665f7c5588828b3c428577c1aabe7f8e443a7624c5c24005"
+    },
+    "operator": "Output the MAXIMUM value appearing in every lengthk subarray instead. The absence result remains-1.",
+    "correctness_argument": "A value appears in every lengthk window iff each gap between consecutive occurrences, including artificial positions0 and n+1, is at mostk. Bucket each value by its largest gap and take prefix minima/maxima. The oracle checks membership in every actual window for every candidate value and length.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 29,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_0",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "boundary_extra_3",
+      "boundary_extra_4",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch5/cf_1416_a/raw_fast.cpp",
+      "sha256": "e44343c443639860ec4235e92ab85f871ec0ed8ecf1f8acf43d6af968e090ac7",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch5/cf_1416_a/l3_fast.cpp",
+      "sha256": "f8faf1fdd01e2001cb9a0bc705245161a8bd5dfa75fcbff3f17e939b0dec467d",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch5/cf_1416_a/raw_oracle.cpp",
+      "sha256": "e0ad3961b128647b7d73ddfcdfd663e7fa0f6ed7267438fc0860d8cfc569fd8c",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch5/cf_1416_a/l3_oracle.cpp",
+      "sha256": "ee5498b205eef4e6cb83493fa5f5f563aceefb267b4ab6efc5e0677a109443cc",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch5/cf_1416_a/raw_fast.cpp",
+      "sha256": "e44343c443639860ec4235e92ab85f871ec0ed8ecf1f8acf43d6af968e090ac7",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM115/report.json",
+      "sha256": "1dbb00446bf93e0874a1c10b5b3426826bc0fcf1cad018c54987e005388d2690"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch5.py",
+    "recipe_id": "cf_1416_a",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch5.py",
+  "recipe_id": "cf_1416_a"
+}

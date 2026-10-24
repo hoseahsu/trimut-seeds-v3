@@ -1,0 +1,189 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM131",
+  "source_identity": "codecontests:6:p02323 Traveling Salesman Problem",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:6:p02323 Traveling Salesman Problem"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM131/raw.txt",
+      "sha256": "4d1cb85a81a720301d564ffb136a43d7f6ebea6eb623e7384bd8407ae1fe741f"
+    },
+    "provenance": {
+      "path": "tasks/TM131/raw_provenance.json",
+      "sha256": "129ab63a6f36189b04536497372ffdc42068ed7a0120b3be93012c9850f06bda"
+    },
+    "tests": {
+      "path": "tasks/TM131/raw_test_manifest.json",
+      "sha256": "2735a003eda00d7f70347667d7ec9ea209a4a4ba6bb3fed3bacea96ffb8c543b"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM131/l1.txt",
+      "sha256": "559bf034f40e305f0eb601417f9bcfee3b309436a3a3ab05885610e6b4261f92"
+    },
+    "certificate": {
+      "path": "tasks/TM131/l1_certificate.json",
+      "sha256": "826042ef9f199e2e8a753fe0403d4cf863c8c226f03639065e8cb405b0c2e6ae"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM131/raw_test_manifest.json",
+      "sha256": "2735a003eda00d7f70347667d7ec9ea209a4a4ba6bb3fed3bacea96ffb8c543b"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM131/l2.txt",
+      "sha256": "9ce606dfbe71376a541cbdbb6f00cbf6c85a24916a54c124ab0b269fc096fb30"
+    },
+    "certificate": {
+      "path": "tasks/TM131/l2_certificate.json",
+      "sha256": "31cb92d36d918e602f0c029b7f0fd9f88fa740e4ca30547768a7f143d86c10f4"
+    },
+    "tests": {
+      "path": "tasks/TM131/l2_test_manifest.json",
+      "sha256": "687251e66a348a504e7bb178673884a3f2c6344caef446e75cfdc7e974eabe0e"
+    },
+    "axis": "V",
+    "original_upper": 15,
+    "expanded_upper": 18,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM131/l3.txt",
+      "sha256": "861d2d4de569c2da3a3a85bda19ebb506ec11d2d673cbaafcfc30117186753d8"
+    },
+    "tests": {
+      "path": "tasks/TM131/l3_test_manifest.json",
+      "sha256": "85e6d254f514fa73f650fed83618293d198e6e1cc98333e54aac7df162b7cfce"
+    },
+    "operator": "Find the MAXIMUM total weight among directed Hamiltonian cycles instead. All vertices still must be visited exactly once.",
+    "correctness_argument": "Fix vertex0 as the start; every cycle admits this rotation. Subset DP records the best path to each last vertex for every visited set, then adds the return edge. The oracle directly enumerates every permutation of the other vertices and checks all directed edges.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_2",
+      "small_random_000",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_008",
+      "small_random_010",
+      "small_random_011",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch6/codenet_p02323/raw_fast.cpp",
+      "sha256": "15f6c72a984e904ba86846f21327d1d646d4af12af474ac1ed30d06ffef26002",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch6/codenet_p02323/l3_fast.cpp",
+      "sha256": "8afe53a166d8eff9ab9a070a90bee5e939b1ba6ba67d8c8f06f19af64f9dbdd0",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch6/codenet_p02323/raw_oracle.cpp",
+      "sha256": "809aad0d10711a953580026ebc7ab4e1b11cd76798cad2d3cc0d95844fecf6f4",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch6/codenet_p02323/l3_oracle.cpp",
+      "sha256": "011573fe9f53a1bbdb157bca07c7d75cb3686300aba51b28149165ffadcd1c6d",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch6/codenet_p02323/raw_fast.cpp",
+      "sha256": "15f6c72a984e904ba86846f21327d1d646d4af12af474ac1ed30d06ffef26002",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM131/report.json",
+      "sha256": "33f15de3a68e046a6453517592cfec4663681ea03f3fa5e952bc8beebfe1a77f"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch6.py",
+    "recipe_id": "codenet_p02323",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch6.py",
+  "recipe_id": "codenet_p02323"
+}

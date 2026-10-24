@@ -1,0 +1,176 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM071",
+  "source_identity": "codecontests:1:tf01",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:1:tf01"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM071/raw.txt",
+      "sha256": "40399cda21ff231c1d8401e62f965456c0f6bfba28fabb99012c417d243a0b47"
+    },
+    "provenance": {
+      "path": "tasks/TM071/raw_provenance.json",
+      "sha256": "017987fb608dc65d885f84a2eac348b396b51e599d91464411ce8fb6516cbedc"
+    },
+    "tests": {
+      "path": "tasks/TM071/raw_test_manifest.json",
+      "sha256": "2866841f6e36f1ac371548969d5bc2305d076d05a6feeea6c9655c6280d19057"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM071/l1.txt",
+      "sha256": "57e1bd93f9bad34323c2518f3b15cf582ed1a8645a58fb6847b326c781af612a"
+    },
+    "certificate": {
+      "path": "tasks/TM071/l1_certificate.json",
+      "sha256": "874d164f4fef153dccd1b007f60da2ab44f3661efc206834524ae18a53883d4f"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM071/raw_test_manifest.json",
+      "sha256": "2866841f6e36f1ac371548969d5bc2305d076d05a6feeea6c9655c6280d19057"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM071/l2.txt",
+      "sha256": "ad8132e85d1008e5a7da2f2aee32f4633443b58f08e3cae0b5f5874d507b2e61"
+    },
+    "certificate": {
+      "path": "tasks/TM071/l2_certificate.json",
+      "sha256": "137508297f4b0f7927844430cc63a0a833728098f4d8735338dc6fd6ee6be82e"
+    },
+    "tests": {
+      "path": "tasks/TM071/l2_test_manifest.json",
+      "sha256": "30d6d647ed6b5a6f2f9453124fb1bfdbaebee7beb0c26dccab1113df4e234939"
+    },
+    "axis": "N",
+    "original_upper": 999,
+    "expanded_upper": 10000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM071/l3.txt",
+      "sha256": "8cf6ac07e2929194328cb6f898bdd23fa1a84fdfc2c09440f0fd402e8e0caade"
+    },
+    "tests": {
+      "path": "tasks/TM071/l3_test_manifest.json",
+      "sha256": "304d77b549a02ddf8e7809de2a53664a790dbfb1be2caece9a4d326a8ad1f52e"
+    },
+    "operator": "Each listed nonnegative integer may be selected an UNLIMITED number of times, instead of at most once. Decide whether the selected values can sum to K; output 0 or 1 as before.",
+    "correctness_argument": "Descending target iteration implements 0/1 knapsack, because each new item reads the previous-item state. L3 ascending iteration permits reuse and solves unbounded knapsack. The raw oracle enumerates all 2^N subsets. The L3 oracle independently enumerates the possible multiplicity of each item in a memoized recursion; zero-valued items are skipped because K is positive.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "small_random_002",
+      "small_random_009",
+      "small_random_017"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/codechef_tf01/raw_fast.cpp",
+      "sha256": "1b5de264eb37ad369737ace214dd47b5b0af926e978af4b13b4bbb9aca12592f",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/codechef_tf01/l3_fast.cpp",
+      "sha256": "2a241d4c548fdae838fa4b87765b1d06a1c39b18249809bee5ef481636845406",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/codechef_tf01/raw_slow.cpp",
+      "sha256": "fa7ee05e51a01d3be75bdfa0951d3a50cf00377e79ce23cc112a48c524b06b5f",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/codechef_tf01/l3_slow.cpp",
+      "sha256": "2ab252fba15b5eb6056eb07c398a1bfd775aa8cf41c4ee325a81ebbf5ef49d68",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/codechef_tf01/raw_fast.cpp",
+      "sha256": "1b5de264eb37ad369737ace214dd47b5b0af926e978af4b13b4bbb9aca12592f",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM071/report.json",
+      "sha256": "6b55aa1577fb98e21117ef6e1d2d24afbc9c598ee0341b3049bf9e81a99b2829"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "codechef_tf01",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "codechef_tf01"
+}

@@ -1,0 +1,189 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM016",
+  "source_identity": "codeforces:580_B",
+  "source_url": "https://codeforces.com/problemset/problem/580/B",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:580_B"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM016/raw.txt",
+      "sha256": "63ef08ff44651585d574425c1d2d5d472d3a88d2c148d84e592b76fdc8b00323"
+    },
+    "provenance": {
+      "path": "tasks/TM016/raw_provenance.json",
+      "sha256": "a5ae941547a519ca7c51ca7209eb09ecd560155d699778ded9c771e0eb03a134"
+    },
+    "tests": {
+      "path": "tasks/TM016/raw_test_manifest.json",
+      "sha256": "45363b955dda42a419fbd2c0a8f0adc71acb04b458aea0eb73c6542ecea49139"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM016/l1.txt",
+      "sha256": "5c23c998186b7d9d84bea114e35f92da16e0fa4c836be9a53eb135fe4b14a673"
+    },
+    "certificate": {
+      "path": "tasks/TM016/l1_certificate.json",
+      "sha256": "e4ef5ee1ec90e7ccaf483d45f958020dc444a9d4d0773bc194a4cd76cd7f4705"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM016/raw_test_manifest.json",
+      "sha256": "45363b955dda42a419fbd2c0a8f0adc71acb04b458aea0eb73c6542ecea49139"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM016/l2.txt",
+      "sha256": "ff4805fc03382ce98e2b460e58d172f7d8d4987f5c26a3de76303b3cfaeaf201"
+    },
+    "tests": {
+      "path": "tasks/TM016/l2_test_manifest.json",
+      "sha256": "d8082930c603983fc8cadb7d22078118212ada2d35c9ec831e5f4049cf63fe3a"
+    },
+    "axis": "n",
+    "original_upper": 100000,
+    "expanded_upper": 400000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM016/l3.txt",
+      "sha256": "d45a4cdd1f14ea59b7f32782d61264f7c78540e3895f3b9c1d3f1ea4214ab7fb"
+    },
+    "tests": {
+      "path": "tasks/TM016/l3_test_manifest.json",
+      "sha256": "8e7f922f061672f8e1ad913d562a89fa5d1a59f8649f983b30aa5d5924d626d7"
+    },
+    "operator": "Allow wealth spread<=d.",
+    "correctness_argument": "After wealth sorting, an optimal group can include every point in its feasible interval. Two pointers maximize the sum. Independent oracle enumerates all subsets.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_3",
+      "small_small_5",
+      "small_small_7",
+      "small_small_9",
+      "small_small_13",
+      "small_small_14",
+      "small_small_16",
+      "small_small_22"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "company",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "company",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "company",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "company",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "16",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "16",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_company"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM016/report.json",
+      "sha256": "a9c8ba2d7c94fbe2bd7793f936cc3e71709eeb897400655000e9d04b7899aa0f"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM016/report.json",
+      "sha256": "2e2458af3a00cf2981077d4b3b1a0cefba2dea9af19f50f1f8210a5272b9aff4"
+    },
+    "resolution": {
+      "path": "tasks/TM016/validation_resolution.json",
+      "sha256": "a791be1c179fc99da12d163544af2fa7ecc618818f80cd049565f2851b240a79"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM016/mutation_edits.json",
+      "sha256": "4cd5effd1a730b547cb84e55b4fe3b30af1a7b07b4430ed05ddcbee656a60ea6"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

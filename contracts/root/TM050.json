@@ -1,0 +1,190 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM050",
+  "source_identity": "codecontests:5:p02832 AtCoder Beginner Contest 148 - Brick Break",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p02832 AtCoder Beginner Contest 148 - Brick Break"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM050/raw.txt",
+      "sha256": "e703e2ae57f98386cab0b4b9cbe3a552be00b1184f2fb92a6048f6442d878fca"
+    },
+    "provenance": {
+      "path": "tasks/TM050/raw_provenance.json",
+      "sha256": "26962e3272e1034900135309483d2ff6becda7c097237c22833997bf4877101d"
+    },
+    "tests": {
+      "path": "tasks/TM050/raw_test_manifest.json",
+      "sha256": "b1e231e9f2caba597cd0eccd5afbeb551a39ff702f2639c0ea0e0da6a2c3d514"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM050/l1.txt",
+      "sha256": "747b18a4594103dbc0b740e969191900cdb7a99e2cf516bee358777b34cf68d9"
+    },
+    "certificate": {
+      "path": "tasks/TM050/l1_certificate.json",
+      "sha256": "dee74042370480a30d67c1b9476d0acdb10ed946dc459e3a161d6ad1372d4cae"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM050/raw_test_manifest.json",
+      "sha256": "b1e231e9f2caba597cd0eccd5afbeb551a39ff702f2639c0ea0e0da6a2c3d514"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM050/l2.txt",
+      "sha256": "e5f70707e70ac3c6d84ff95441b03f72ec7240f4f45b9050775643321c365e5a"
+    },
+    "tests": {
+      "path": "tasks/TM050/l2_test_manifest.json",
+      "sha256": "fa8d80280bd62470d4541f4a4e0493ac65f0d49c4917959582db11f17a10d801"
+    },
+    "axis": "N",
+    "original_upper": 200000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM050/l3.txt",
+      "sha256": "52ef50d0cb33ffed05c0ac27a33ccfd79114f45a113d94c34252651559d71557"
+    },
+    "tests": {
+      "path": "tasks/TM050/l3_test_manifest.json",
+      "sha256": "65ca86a22777a7d4c7fe9e9e46454c3c412c2e7408c1bb09b51d80c445916b48"
+    },
+    "operator": "Require remaining sequence K,K-1,...,1.",
+    "correctness_argument": "Raw greedily extends the next required value. Mutant DP at x extends the best chain ending in x+1, then reads the chain ending in1. Oracle enumerates every subsequence.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_1",
+      "small_small_6",
+      "small_small_8",
+      "small_small_9",
+      "small_small_12",
+      "small_small_16",
+      "small_small_17",
+      "small_small_22"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "bricks",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "bricks",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "bricks",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "bricks",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "50",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "50",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_bricks"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM050/report.json",
+      "sha256": "ea1b67d99ec23c1b12643bc1102f372066b43aacdbe155cabf3b973ae7d88c14"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM050/report.json",
+      "sha256": "0bddbb4cab19e793bf427de37bf6b098ef0462c0375a261317ab4b215482d035"
+    },
+    "resolution": {
+      "path": "tasks/TM050/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM050/mutation_edits.json",
+      "sha256": "695a5584b97fed574c31ad0bfc085ee8359d88ec82d347b9e321e43eadd90003"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

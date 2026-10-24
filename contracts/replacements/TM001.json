@@ -1,0 +1,645 @@
+{
+  "schema": "trimut.strict.replacement.v1",
+  "seed_id": "TM001",
+  "source_identity": "codeforces:337_A",
+  "source_url": "https://codeforces.com/problemset/problem/337/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:337_A"
+  ],
+  "replaces_source_identity": "codeforces:1060_A",
+  "raw": {
+    "statement": {
+      "path": "tasks/TM001/raw.txt",
+      "sha256": "4fa40c0e960ff566db4178e6629bcd5d1e20fcb2f84d1d0adf34535fe083bb62"
+    },
+    "provenance": {
+      "path": "tasks/TM001/raw_provenance.json",
+      "sha256": "3201aa64b6b2ca446a90da5573753b381c5dbf4f703b416720c79d9007625a9e"
+    },
+    "tests": {
+      "path": "tasks/TM001/raw_test_manifest.json",
+      "sha256": "e00ca4472bfdb67a7d38ab6de4c55b78b88db6df3a1c26078067b3a886f8ec03"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM001/l1.txt",
+      "sha256": "5e623b40661128a2d4c0d7bc7beef48d09e1ec8e31dd0cada5775b91f4756aa1"
+    },
+    "certificate": {
+      "path": "tasks/TM001/l1_certificate.json",
+      "sha256": "4e35d032a1c068ebe4af5c2a04c7312eae68e8687f343a7d8fb5bc951777cfcb"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM001/raw_test_manifest.json",
+      "sha256": "e00ca4472bfdb67a7d38ab6de4c55b78b88db6df3a1c26078067b3a886f8ec03"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM001/l2.txt",
+      "sha256": "3622e07a7b9cf1cb601f7ceef1c0f2915a67763a157ae69d025476fdd4c3f6da"
+    },
+    "certificate": {
+      "path": "tasks/TM001/l2_certificate.json",
+      "sha256": "584b6607ffe7a17fb06af5c9b649eca389726c36c3a71f2e2de9c56dcd95a00e"
+    },
+    "tests": {
+      "path": "tasks/TM001/l2_test_manifest.json",
+      "sha256": "bef50a9772de9b29c1699ba5e7929a5e8634424dcf18877bdd53679d135f6feb"
+    },
+    "bound_changes": {
+      "n": {
+        "native": 50,
+        "expanded": 200000
+      },
+      "m": {
+        "native": 50,
+        "expanded": 200000
+      }
+    },
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": true,
+    "separation_note": "Recorded slow baseline passes original maximum-domain cases and exceeds the unchanged CPU budget on expanded cases. This concerns these implementations and host, not all algorithms."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM001/l3.txt",
+      "sha256": "d4e5a20363b5a6680bdc1dc243030a3163e5b558155289878e52f6c3fdce7f91"
+    },
+    "certificate": {
+      "path": "tasks/TM001/l3_certificate.json",
+      "sha256": "153dc0924608f49d15e65a76481bd3c07338be17e9a3bd0f3d3f40a5dd10ae7b"
+    },
+    "tests": {
+      "path": "tasks/TM001/l3_test_manifest.json",
+      "sha256": "65b7f5825c2c54e842dd1702e3efc7582b451ff996d57495a7776bf26b6cf8bc"
+    },
+    "operator": "Change minimum range of selected puzzle sizes to maximum range.",
+    "correctness_argument": "After sorting, a minimum-range choice can be a consecutive window; maximum range is global max minus global min since n>=2. Oracle enumerates endpoint values and counts all eligible elements without sorted-window selection.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 85,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0000-small_0-2d422b03f6/input.txt",
+        "input_sha256": "139bde8d09a573051b2a3435f6198cbea12ac0eae6b14d869fdf252d60fc7814",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0000-small_0-2d422b03f6/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0000-small_0-2d422b03f6/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0001-small_1-2352fb53d3/input.txt",
+        "input_sha256": "e52ff9f111ac3aae8208e5cbfd51461dbad9867a1cc02a72a012e02b472fec26",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0001-small_1-2352fb53d3/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0001-small_1-2352fb53d3/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0002-small_2-2b271c703d/input.txt",
+        "input_sha256": "90693c5fed4523364ddadb936e7d9a69fb24add9c34a0f90be6892160ce5a03d",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0002-small_2-2b271c703d/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0002-small_2-2b271c703d/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0003-small_3-e30de01fad/input.txt",
+        "input_sha256": "72ec6027fb1cb5986c3c4f77366a4fa084b8fa1a0f44a2f141f51f761e2d0fca",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0003-small_3-e30de01fad/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0003-small_3-e30de01fad/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0004-small_4-48e3ab793c/input.txt",
+        "input_sha256": "8e1b20876186261685bbf08e7eb3983659a296be28d64ec912b35eada4334956",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0004-small_4-48e3ab793c/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0004-small_4-48e3ab793c/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0005-small_5-b774439b24/input.txt",
+        "input_sha256": "10e9849814e31c1fec0689c7e9060758ef98c30fc7ef7d240ffc3b55887ccd9d",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0005-small_5-b774439b24/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0005-small_5-b774439b24/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0006-small_6-1c6ce6a1ae/input.txt",
+        "input_sha256": "840e0b66f38a1485a22b60839083d2231b76dc1f5ba7fc9f436d156a8bf95783",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0006-small_6-1c6ce6a1ae/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0006-small_6-1c6ce6a1ae/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0007-small_7-aa3a85bb28/input.txt",
+        "input_sha256": "385bbce45f6d65bbabf5f3ded541e9047f90532534d23cb267cc50c523c3281d",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0007-small_7-aa3a85bb28/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0007-small_7-aa3a85bb28/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0008-small_8-e80590076b/input.txt",
+        "input_sha256": "fce3c01f888ef48b3d9fc1d5b419b8136bec5b19855bfe33adff85e1d4cf0796",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0008-small_8-e80590076b/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0008-small_8-e80590076b/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0009-small_9-f438771413/input.txt",
+        "input_sha256": "ae010095dd5ff3ab484c07427a134a0f6f2f1a9961c910e2ebdc7302dbd40921",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0009-small_9-f438771413/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0009-small_9-f438771413/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0010-small_10-3d80a743ea/input.txt",
+        "input_sha256": "5a6c49e115b3c98668b98ed338f4300f4995930038a7e052fbbfd80eb0cec5b7",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0010-small_10-3d80a743ea/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0010-small_10-3d80a743ea/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0013-small_13-4044ddf028/input.txt",
+        "input_sha256": "fef60475220e8ce0419d272e615b65cbce5c709e058df73e30d1d189d6c8ff59",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0013-small_13-4044ddf028/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0013-small_13-4044ddf028/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0014-small_14-6aadbe9e89/input.txt",
+        "input_sha256": "07622c4bfe80707f29573b35a041860614789ed2811b1d317d34fa2fe98b7d4c",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0014-small_14-6aadbe9e89/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0014-small_14-6aadbe9e89/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0015-small_15-2b0347208b/input.txt",
+        "input_sha256": "b6dd91691cdfcc7db6598bce14f74c8bf0d3f875b71157ee2c0bd643a7220f5c",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0015-small_15-2b0347208b/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0015-small_15-2b0347208b/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0016-small_16-51fdccd3f4/input.txt",
+        "input_sha256": "035c164d840c393a05871a5a770a01b27c1dbcce7570bd29bbbbd9a1e0dfc6bf",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0016-small_16-51fdccd3f4/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0016-small_16-51fdccd3f4/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0017-small_17-2140e69cd1/input.txt",
+        "input_sha256": "258b5b6fec33e9553db23e1fa078e57b53d777353c430d9d15ac57b0195c4490",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0017-small_17-2140e69cd1/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0017-small_17-2140e69cd1/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0018-small_18-2f36d0d24b/input.txt",
+        "input_sha256": "f003689f16bb231d284d063f2f126f19966603e61170ef6b0c35e90f719fe790",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0018-small_18-2f36d0d24b/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0018-small_18-2f36d0d24b/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0019-small_19-33fec758e7/input.txt",
+        "input_sha256": "40ed54ef2f6d149b882b9957c5fdb6c73103eee3fd21c10e7befc4b3ca149d2e",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0019-small_19-33fec758e7/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0019-small_19-33fec758e7/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0020-small_20-b7d319d194/input.txt",
+        "input_sha256": "2e0743eec7dc1d9fe0cbd3c45dbad3d341352086bd948347a63375b4e840e2f3",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0020-small_20-b7d319d194/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0020-small_20-b7d319d194/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0021-small_21-8db1312c38/input.txt",
+        "input_sha256": "45472b05c961abda23a670dbdbfcb5e1ca28d02d9e243eb3318ad091e481c638",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0021-small_21-8db1312c38/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0021-small_21-8db1312c38/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0022-small_22-a517347fd2/input.txt",
+        "input_sha256": "2b61d0128f1fbfd491fe1825821cb631fcd83cda3a72728744d94babb9dfd3de",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0022-small_22-a517347fd2/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0022-small_22-a517347fd2/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0023-small_23-2ff73b5f05/input.txt",
+        "input_sha256": "73e5ed7b4f3389289e8a9bb95ec433d98d73dd924d95b284ef0a688684613893",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0023-small_23-2ff73b5f05/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0023-small_23-2ff73b5f05/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0024-small_24-f9745dbbb2/input.txt",
+        "input_sha256": "ad1e05c7706335567ec5a203b00b0302e4c98ebe022f728d6c9eeb9081116627",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0024-small_24-f9745dbbb2/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0024-small_24-f9745dbbb2/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0025-small_25-4760e9ac97/input.txt",
+        "input_sha256": "9c2abace1f121bf1cac73fcceb3cde7df46661fba550f6eacce1ce424ca25cba",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0025-small_25-4760e9ac97/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0025-small_25-4760e9ac97/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0026-small_26-7bb2e01986/input.txt",
+        "input_sha256": "0555938ce233530d05984ddf5306497072e74b722c7bf61995a193ed09eafd57",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0026-small_26-7bb2e01986/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0026-small_26-7bb2e01986/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0027-small_27-a6bc46bde8/input.txt",
+        "input_sha256": "36e1d60e4776cf34839da2af5f4728dc055aad7e50a151ee089dfb6532973c98",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0027-small_27-a6bc46bde8/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0027-small_27-a6bc46bde8/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0028-small_28-702841c34d/input.txt",
+        "input_sha256": "0eb15f595565ac4a98774c93c8aed04e8373abfd67b40838f4543a5d6c7ffc5b",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0028-small_28-702841c34d/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0028-small_28-702841c34d/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0029-small_29-0c1ac7a4bf/input.txt",
+        "input_sha256": "5c173492fcf6a41770cfdb0e2f5dec135197cb38720d1de63b640b4fe0aafcac",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0029-small_29-0c1ac7a4bf/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0029-small_29-0c1ac7a4bf/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0030-small_30-f8bd0e38b0/input.txt",
+        "input_sha256": "c2c7ea2008eb06834095c39a60c1020a142d08890d16e893dc27af2db88041ab",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0030-small_30-f8bd0e38b0/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0030-small_30-f8bd0e38b0/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0031-small_31-20ade8496d/input.txt",
+        "input_sha256": "5c523f38901b66930fba0bb2dd486604661db9373512695646e8b0dd579196a8",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0031-small_31-20ade8496d/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0031-small_31-20ade8496d/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0032-small_32-c82261b73f/input.txt",
+        "input_sha256": "99cd5eca76c5d209aed6da278e2755daa0a2ab226638f7c446988e85b2cf0238",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0032-small_32-c82261b73f/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0032-small_32-c82261b73f/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0033-small_33-c5228912bb/input.txt",
+        "input_sha256": "9e73d7052ee37a0e003d2f5c1a219ec95406823bddd749836054c80f6eeecdcd",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0033-small_33-c5228912bb/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0033-small_33-c5228912bb/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0034-small_34-0a8e303af2/input.txt",
+        "input_sha256": "6ad76de8a0571d5dcdbf97f457568ab6411dd3277bc031b8b79fbf28804badc2",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0034-small_34-0a8e303af2/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0034-small_34-0a8e303af2/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0035-small_35-9f8193abf4/input.txt",
+        "input_sha256": "6e30313b8ab8ca90ec0e9db43ed7fbf013e7e7a8aaac3d24f29a7f3cb5e32a89",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0035-small_35-9f8193abf4/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0035-small_35-9f8193abf4/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0036-small_36-e8af7949fb/input.txt",
+        "input_sha256": "7f79badb0c9875c394890e5d60cc33234da9c08ef4e9b36e9ad9e7e6000d1728",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0036-small_36-e8af7949fb/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0036-small_36-e8af7949fb/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0037-small_37-38dba33482/input.txt",
+        "input_sha256": "2f7d0aa2fcc642d9a4a72933457125d29e7c5528bb9b90a64bf9080dfb64cc8c",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0037-small_37-38dba33482/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0037-small_37-38dba33482/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0038-small_38-430c3bd5ce/input.txt",
+        "input_sha256": "232517a01553b8d2a6659a6e5657023dc26b19cc7037e831079d677ecf456bf2",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0038-small_38-430c3bd5ce/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0038-small_38-430c3bd5ce/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0039-small_39-960009c852/input.txt",
+        "input_sha256": "8a8fccc180d78c702617f53dca6c0cd48d15b1b57f6cc1e87a191f0bfa6eb29b",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0039-small_39-960009c852/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0039-small_39-960009c852/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0040-small_40-832b2b4c99/input.txt",
+        "input_sha256": "3ae4dcf9ed5054b92375ccee867cbebef640108f16af65275afa1ebd6e708475",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0040-small_40-832b2b4c99/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0040-small_40-832b2b4c99/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0042-small_42-b4abfc0610/input.txt",
+        "input_sha256": "613212efbe9fa431c5a2fb2ad47d35b3703e7356f0a5f0cfe4d919b35bf75b85",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0042-small_42-b4abfc0610/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0042-small_42-b4abfc0610/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0043-small_43-cb9b83b484/input.txt",
+        "input_sha256": "61f61bb6f2558faf4f39cfe58389f38fe4e803c114680135cc55b03ad0d50486",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0043-small_43-cb9b83b484/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0043-small_43-cb9b83b484/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0045-small_45-37a56cf0e8/input.txt",
+        "input_sha256": "a5bfeea4ab134913fd7ee0b91bd4756b743df9304ed7350164f374636a638617",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0045-small_45-37a56cf0e8/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0045-small_45-37a56cf0e8/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0047-small_47-424241a3ef/input.txt",
+        "input_sha256": "ade78ca76bb37156d36cbf22f0664543e42417ed826911a6945557785ec3c8b5",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0047-small_47-424241a3ef/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0047-small_47-424241a3ef/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0048-small_48-c26b4f4d06/input.txt",
+        "input_sha256": "477b88be5629cea8062278835ad2b71b6742768f70151f39097238d868ab2cce",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0048-small_48-c26b4f4d06/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0048-small_48-c26b4f4d06/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0049-small_49-2dbf0718dd/input.txt",
+        "input_sha256": "ed440775c88db42d355b90710ad0fbdd21386e1a89be2296d4bd1da6d34c36a7",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0049-small_49-2dbf0718dd/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0049-small_49-2dbf0718dd/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0050-small_50-b4e5b77334/input.txt",
+        "input_sha256": "16b2e77ef1899456c7becbc1fe967273404cb890c1afb5434beba421cd78c755",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0050-small_50-b4e5b77334/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0050-small_50-b4e5b77334/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0052-small_52-2fa6666ebd/input.txt",
+        "input_sha256": "41e965c636799c02500a725a3a0dbf8cbe1bb1ce2525039fd5d11c467fbbc85b",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0052-small_52-2fa6666ebd/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0052-small_52-2fa6666ebd/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0053-small_53-e9f003600f/input.txt",
+        "input_sha256": "a66a57aa5b1bd8485517e9941b0b1413b4d590c3c317e7a667e3b5bb8470d4f6",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0053-small_53-e9f003600f/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0053-small_53-e9f003600f/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0054-small_54-846c835869/input.txt",
+        "input_sha256": "247559dcb69430b6d35e606f25b98eb631cbc3ee29d59c1cce1fb6c96cd326d9",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0054-small_54-846c835869/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0054-small_54-846c835869/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0055-small_55-8658c7573c/input.txt",
+        "input_sha256": "ab5424711e3019c117ac54fefe142915dbe6190400de638a17dbf41a8ac2f359",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0055-small_55-8658c7573c/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0055-small_55-8658c7573c/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0056-small_56-01365cfc1f/input.txt",
+        "input_sha256": "bd3b1be1630b4c11da3c96a93b5133cb77184dc8af70a1625cf1fa5fa2d83953",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0056-small_56-01365cfc1f/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0056-small_56-01365cfc1f/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0057-small_57-63e1918065/input.txt",
+        "input_sha256": "f2475efa50867197c0a9f8d76ad59f357a6c457419b7da0a0b73531831b7e41f",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0057-small_57-63e1918065/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0057-small_57-63e1918065/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0058-small_58-b72c35e809/input.txt",
+        "input_sha256": "1af1b4d9d1a0a4ed2f11e0f888a30e5d782336c22b7d8df82cb220d2398f9405",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0058-small_58-b72c35e809/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0058-small_58-b72c35e809/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0059-small_59-7bd69be7dd/input.txt",
+        "input_sha256": "24aabf2329af9a7a3f5ce21f47e5aecca87a0fce42459c9f4cd8d8cebfdd4b10",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0059-small_59-7bd69be7dd/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0059-small_59-7bd69be7dd/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0060-small_60-04bc7bb166/input.txt",
+        "input_sha256": "8b6427cc8f48987a257c2863cc6ffe64f68eecabdcee418215ebf062acf00319",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0060-small_60-04bc7bb166/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0060-small_60-04bc7bb166/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0061-small_61-b28e169d7b/input.txt",
+        "input_sha256": "01bc84b46ce7d91b97afb002e320d3880857a36a733a4c38d1cf905783915b3b",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0061-small_61-b28e169d7b/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0061-small_61-b28e169d7b/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0062-small_62-5ed2d81e4a/input.txt",
+        "input_sha256": "f191d5f4fd464b03ccf85a4ed94d8448de4d1cc8673657bfd403fb79524f23c8",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0062-small_62-5ed2d81e4a/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0062-small_62-5ed2d81e4a/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0064-small_64-52c623b35a/input.txt",
+        "input_sha256": "daf266e69e81ff82c0fb2f37b4ccf6a25c3b2f503d1de188f12fc32088832c6e",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0064-small_64-52c623b35a/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0064-small_64-52c623b35a/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0065-small_65-d3fc031f8c/input.txt",
+        "input_sha256": "7cdd7e1b96f1a452b9d62fce1f312d9e6382c9f5b753c0bd2bd081f241589748",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0065-small_65-d3fc031f8c/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0065-small_65-d3fc031f8c/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0066-small_66-940374b270/input.txt",
+        "input_sha256": "00c60042fdf62f9f787e462956cf011eaf22e9a99579e075cab675a71d9dc910",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0066-small_66-940374b270/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0066-small_66-940374b270/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0067-small_67-9ff0cd75c4/input.txt",
+        "input_sha256": "ed3d930237e92c73a65e85aad23f46a46a2417c1ff4458c19a2cb9a126c4b518",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0067-small_67-9ff0cd75c4/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0067-small_67-9ff0cd75c4/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0068-small_68-afd1c5c3b7/input.txt",
+        "input_sha256": "e24547abe9c27eb7e73ed8c85e2ed3a57c156e4222a363e578a7203de50b2030",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0068-small_68-afd1c5c3b7/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0068-small_68-afd1c5c3b7/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0069-small_69-d9f9e0ffe7/input.txt",
+        "input_sha256": "eadbbed891317fcbe63798be7fa4da8c0fd23cedc02bdd377f9d432675a81662",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0069-small_69-d9f9e0ffe7/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0069-small_69-d9f9e0ffe7/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0070-small_70-84cbe01f64/input.txt",
+        "input_sha256": "adfcc8b729ca3416488d4ff6c7396e2892135ac44f02b350af0bacfc3ba2ae9e",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0070-small_70-84cbe01f64/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0070-small_70-84cbe01f64/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0071-small_71-b3f93dc99f/input.txt",
+        "input_sha256": "283ae676b4a2673bd82dad8470aced8b9b7baad11cd91d170de644e3d2acb77e",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0071-small_71-b3f93dc99f/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0071-small_71-b3f93dc99f/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0072-small_72-2500c6a525/input.txt",
+        "input_sha256": "f0050681466dbcbbb680a41c53158ef49333ad34dde9e132e06e77b9131b675e",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0072-small_72-2500c6a525/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0072-small_72-2500c6a525/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0073-small_73-d6e309d0af/input.txt",
+        "input_sha256": "18d9c61fe5361476f2e20f3d0283e6138cab9a19540e1c44a3865bbd01b3b2ba",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0073-small_73-d6e309d0af/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0073-small_73-d6e309d0af/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0074-small_74-ae6e6a058e/input.txt",
+        "input_sha256": "5aa4908f8cf81acf576e99f0e748776340e070f3084bfa684fd74fdfbe618657",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0074-small_74-ae6e6a058e/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0074-small_74-ae6e6a058e/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0075-small_75-1c0e966915/input.txt",
+        "input_sha256": "712cc7e686f7158231563ec0919fe45a8422fa154e8e1e2089df1ef56d781c46",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0075-small_75-1c0e966915/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0075-small_75-1c0e966915/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0076-small_76-418dd5e2df/input.txt",
+        "input_sha256": "1e6e10485433e1503f776e571a12a91f1060a6c140ac37a17f02a12b512d1dd1",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0076-small_76-418dd5e2df/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0076-small_76-418dd5e2df/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0078-small_78-a16c2aa90c/input.txt",
+        "input_sha256": "f8224f24cc7d2aa85e939621d43cf569dd0758beeb5e7d1731d0078cce38c3e8",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0078-small_78-a16c2aa90c/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0078-small_78-a16c2aa90c/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0079-small_79-820f8a525e/input.txt",
+        "input_sha256": "928625558a4da8fa6f7d3ddef6d5fb0ddf277cfc2af2396d9a774e13ff8b7474",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0079-small_79-820f8a525e/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/small/0079-small_79-820f8a525e/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0000-public_sample_1-b2654fe751/input.txt",
+        "input_sha256": "1ddfb8ff92f0f0089896a6a36e3de1dd2e8b28d13e364d49f1c0ecd35321a5be",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0000-public_sample_1-b2654fe751/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0000-public_sample_1-b2654fe751/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0001-boundary_1-3bf5313641/input.txt",
+        "input_sha256": "c826b97de44603449bc57cad7acc5d6432e02ac702a789c890a999fbc99484d3",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0001-boundary_1-3bf5313641/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0001-boundary_1-3bf5313641/l3_fast.stdout"
+      },
+      {
+        "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0004-boundary_4-73631e7d37/input.txt",
+        "input_sha256": "e89a18cfe0213db8d4f0b713c0d4f875e5823f8312593d7d049b47a23cfc3dc2",
+        "raw_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0004-boundary_4-73631e7d37/raw_fast.stdout",
+        "l3_output_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/boundary/0004-boundary_4-73631e7d37/l3_fast.stdout"
+      }
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/replacements/fast.cpp",
+      "sha256": "438c59e1dab154eb9b7fa85d56eefefbf5446ee3e827bb4d7adafb37d1f89067",
+      "args": [
+        "puzzles",
+        "raw"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/replacements/oracle.cpp",
+      "sha256": "01d9f64fd1c7d7f6759490e26c86b8d6b310669e294352b624b935a3af9793f8",
+      "args": [
+        "puzzles",
+        "raw"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/replacements/fast.cpp",
+      "sha256": "438c59e1dab154eb9b7fa85d56eefefbf5446ee3e827bb4d7adafb37d1f89067",
+      "args": [
+        "puzzles",
+        "l3"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/replacements/oracle.cpp",
+      "sha256": "01d9f64fd1c7d7f6759490e26c86b8d6b310669e294352b624b935a3af9793f8",
+      "args": [
+        "puzzles",
+        "l3"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/replacements/fast.cpp",
+      "sha256": "438c59e1dab154eb9b7fa85d56eefefbf5446ee3e827bb4d7adafb37d1f89067",
+      "args": [
+        "puzzles",
+        "raw"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/replacements.py",
+    "recipe_id": "replacement_cf337_A",
+    "output_comparator": "exact whitespace-separated token sequence"
+  },
+  "recipe_module": "recipes/replacements.py",
+  "recipe_id": "replacement_cf337_A",
+  "budget": {
+    "cpu_seconds": 1,
+    "memory_mb": 256,
+    "origin": "source limit retained for all four conditions"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/report.json",
+      "sha256": "cec0fa7c1af2431aed07bdec88a7b70913e1e2da87907e2014a590c75b087988"
+    },
+    "expanded_independent_check": {
+      "path": "replacements/expanded_audit.json",
+      "sha256": "42e7ee5e6d3cb5c7b9b5d92315e7f271961ac4071adec19d53d855b907e61012"
+    },
+    "public_sample_match": {
+      "path": "replacements/execution_audit.json",
+      "sha256": "f566cbd4051b8da9e60119931ddfc8b4e466298fa61377f00e6dcfa6bf589e7a"
+    }
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite differential and scale testing is not a proof over all possible legal inputs.",
+    "The preserved source is publisher-copyright material; no blanket third-party redistribution licence is asserted."
+  ]
+}

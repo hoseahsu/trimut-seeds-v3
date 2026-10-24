@@ -1,0 +1,176 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM069",
+  "source_identity": "codecontests:5:p02744 Panasonic Programming Contest 2020 - String Equivalence",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p02744 Panasonic Programming Contest 2020 - String Equivalence"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM069/raw.txt",
+      "sha256": "f8c7ebab165bd1c56a2ff60ec1c208f1a3aadf1ac9ee09b757f07b9a3f4ba341"
+    },
+    "provenance": {
+      "path": "tasks/TM069/raw_provenance.json",
+      "sha256": "65f7e31af19026743b525e88112bca783948f157e2d5a40872e4260a4c4a47d1"
+    },
+    "tests": {
+      "path": "tasks/TM069/raw_test_manifest.json",
+      "sha256": "4bde5fc0d745e6ef5f0619bfa7369ba289357e61d24085dd6f1bb6eda67267bb"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM069/l1.txt",
+      "sha256": "cafa2113d419efd960ba4f85ca6aa5e1c598351985f2b948a43560475fb26ba9"
+    },
+    "certificate": {
+      "path": "tasks/TM069/l1_certificate.json",
+      "sha256": "c17d1c0e474e02fd2908da58a41f170914905938ab87fcdd28a46ed744f7bea1"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM069/raw_test_manifest.json",
+      "sha256": "4bde5fc0d745e6ef5f0619bfa7369ba289357e61d24085dd6f1bb6eda67267bb"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM069/l2.txt",
+      "sha256": "e5666905ba3718bbf689cf9a5151fdfc3419aa2916a968688ddc64f46cf651ba"
+    },
+    "certificate": {
+      "path": "tasks/TM069/l2_certificate.json",
+      "sha256": "b31bc3bbf31ea9faa6ca92fad3272997ee57640d46bbf60fff07616ba90227b5"
+    },
+    "tests": {
+      "path": "tasks/TM069/l2_test_manifest.json",
+      "sha256": "efd06fce08951c14c52eed97bf6ea298e4f8dc221ef338e2b53e5df35761228c"
+    },
+    "axis": "N",
+    "original_upper": 10,
+    "expanded_upper": 11,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM069/l3.txt",
+      "sha256": "95f88b0b58b66771365a4a69aed54aaa65e7d76cda5660f176355e9d2d740e61"
+    },
+    "tests": {
+      "path": "tasks/TM069/l3_test_manifest.json",
+      "sha256": "c1bbf33a1ecb814323432564656385597a4fc9c2b3917635c953eee91a73063c"
+    },
+    "operator": "For each isomorphism class use its lexicographically LARGEST representative over lowercase English letters, instead of the smallest representative. Continue to print all representatives in lexicographically ascending order.",
+    "correctness_argument": "Canonical representatives have restricted-growth first-occurrence labels: each new letter is the smallest unused letter. DFS emits only such strings. For maximum representatives, new letters are z,y,x,..., and DFS child order reverses to retain ascending lexical output. The oracle enumerates all N^N words over the only N letters that could appear, then checks the first-occurrence condition at each completed word.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 5,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "small_random_001",
+      "small_random_008"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/atcoder_panasonic2020_d/raw_fast.cpp",
+      "sha256": "a18b11fb3ac05eb1d96fc5a6c9551f2e61af22702030d9de76b0eae3c0bebff4",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/atcoder_panasonic2020_d/l3_fast.cpp",
+      "sha256": "e2722897e88886349b147f37b30c05315d8786e0bb534f968c1a129bb3fa724a",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/atcoder_panasonic2020_d/raw_slow.cpp",
+      "sha256": "391ef01d2317f84611fbd8cd9d9be97b43377c22731200e619a80bca603f4ac1",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/atcoder_panasonic2020_d/l3_slow.cpp",
+      "sha256": "54a1fe206930c03ac9af1d06114faa0d2dff695695dc4ee7f6f8eb2e3b9f2efc",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/atcoder_panasonic2020_d/raw_fast.cpp",
+      "sha256": "a18b11fb3ac05eb1d96fc5a6c9551f2e61af22702030d9de76b0eae3c0bebff4",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM069/report.json",
+      "sha256": "a34a58216d2c359ba54e3ea076271efc42f668037ada7e3358f365df3aa01f63"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "atcoder_panasonic2020_d",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "atcoder_panasonic2020_d"
+}

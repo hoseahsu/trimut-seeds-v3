@@ -1,0 +1,981 @@
+{
+  "schema": "trimut.experiment-tests.v1",
+  "seed_id": "TM063",
+  "condition": "l2",
+  "cpu_budget_seconds": 5,
+  "memory_mb": 2048,
+  "component_manifests": [
+    {
+      "path": "tasks/TM063/raw_test_manifest.json",
+      "sha256": "339acda216d229c1dd3f604e02e8b9129067482e64e53ca745f774ec219726b8"
+    },
+    {
+      "path": "tasks/TM063/l2_test_manifest.json",
+      "sha256": "1c430d392ab58e2c645c07e3e80c12e371696bcc5eb06c917deb23c8b16c7d36"
+    }
+  ],
+  "records": [
+    {
+      "name": "private_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM063/tests/raw/private_tests_0000.in",
+      "input_sha256": "6419c8a08273b764a0f7c10bca96fca4631b9e0fc1df068a89a0437fd5bf8815",
+      "expected_path": "tasks/TM063/tests/raw/private_tests_0000.out",
+      "expected_sha256": "b8d75078dadaf33b292339efed1d483ba42b7ae5375c96b72bc2775cea362559",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1000,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021970000000002265,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "private_tests_0000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM063/tests/raw/generated_tests_0000.in",
+      "input_sha256": "704ee837300304f9ca7f776c090fd440f21721e1b2f1e520c7eaa6052dc6de34",
+      "expected_path": "tasks/TM063/tests/raw/generated_tests_0000.out",
+      "expected_sha256": "1ae5e2d01f0b648347b4fd5ddd126d597ae929ca67d2d05bd55536c547755c53",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1000,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021839999999999637,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "generated_tests_0000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0002",
+      "kind": "source",
+      "input_path": "tasks/TM063/tests/raw/generated_tests_0002.in",
+      "input_sha256": "5766d4ab177579ca996f473cec5f3bdf10b2578172595aaaa86a10719cee50fa",
+      "expected_path": "tasks/TM063/tests/raw/generated_tests_0002.out",
+      "expected_sha256": "29f58ac22466487fabd47ec20a463b4c325a152379fdbdc4e37d2d0106706949",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1000,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0022430000000001615,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "generated_tests_0002",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "generated_tests_0003",
+      "kind": "source",
+      "input_path": "tasks/TM063/tests/raw/generated_tests_0003.in",
+      "input_sha256": "3bafc0d035cd883af98fd9a9189048f89e6023716d5f4e0ed7cc863c803bb051",
+      "expected_path": "tasks/TM063/tests/raw/generated_tests_0003.out",
+      "expected_sha256": "cc6482bcb36661bd4745ad1e310658b5a0b4bad12f6f5230d1b6892700089efd",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1000,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0018530000000001046,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "generated_tests_0003",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": false,
+      "reference_output_provenance": "official_public_or_hidden_expected"
+    },
+    {
+      "name": "boundary_semantic_witness",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/boundary_semantic_witness.in",
+      "input_sha256": "1b17200cf03adfb7d518389c449f9655837b0935a0e297755ec274dd107a6a25",
+      "expected_path": "tasks/TM063/tests/raw/boundary_semantic_witness.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 3,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0015620000000000633,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "boundary_semantic_witness",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_00",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/boundary_extra_00.in",
+      "input_sha256": "7f7cbe4a5348d430f1f32f16b4ec05cae1631e7b9ef3e5965c867591e40750de",
+      "expected_path": "tasks/TM063/tests/raw/boundary_extra_00.out",
+      "expected_sha256": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 3,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0014949999999999963,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "boundary_extra_00",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_01",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/boundary_extra_01.in",
+      "input_sha256": "ac5d6ee6207199b69aa54d56472335e1fd95e3f459cccfd9975815cdd83e0bc4",
+      "expected_path": "tasks/TM063/tests/raw/boundary_extra_01.out",
+      "expected_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0016129999999998645,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "boundary_extra_01",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_02",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/boundary_extra_02.in",
+      "input_sha256": "c1e78dcddea42bb17bbf0efd6070b9c2d73377d49380a7eeb6a3530c050fc10a",
+      "expected_path": "tasks/TM063/tests/raw/boundary_extra_02.out",
+      "expected_sha256": "420002158111bff8adb3347d84029e480f45e60e1869b454b6adac3345f9f7d4",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 14,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0017279999999999796,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "boundary_extra_02",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_03",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/boundary_extra_03.in",
+      "input_sha256": "229a2aaf1a9891acd198a8d3c30fe6fade6b6d5e95f2271c3030a75318d3bd6f",
+      "expected_path": "tasks/TM063/tests/raw/boundary_extra_03.out",
+      "expected_sha256": "4b9258d432ecb4511cfe5471a58f3feea9e8aa513e1d32294894693827d3b0d4",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 12,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0018099999999998673,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "boundary_extra_03",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "boundary_extra_04",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/boundary_extra_04.in",
+      "input_sha256": "19b97b907776c3f3b969f742d3bf4234bccb6af67a213dc22653d84d2284efe6",
+      "expected_path": "tasks/TM063/tests/raw/boundary_extra_04.out",
+      "expected_sha256": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001638999999999946,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "boundary_extra_04",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_000",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_000.in",
+      "input_sha256": "57949e3312bf586c10169c09bdde270981038031459d02370a1619d426bd9368",
+      "expected_path": "tasks/TM063/tests/raw/small_random_000.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0017099999999998783,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_000",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_001",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_001.in",
+      "input_sha256": "1c1eb04a0f97d2d558f2cf4fa9179071c57e37c01e550c3c61b146d331351719",
+      "expected_path": "tasks/TM063/tests/raw/small_random_001.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0017079999999998208,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_001",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_002",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_002.in",
+      "input_sha256": "536d98fadc202fc0e57814dd5bc06eb93aaa7b4601942d72d896fc67ea4df2df",
+      "expected_path": "tasks/TM063/tests/raw/small_random_002.out",
+      "expected_sha256": "2115cdb6bfcfb008eb2bab2bb79347cb064a48e4e7c4115ccbe4469c787bb6c4",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001794999999999991,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_002",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_003",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_003.in",
+      "input_sha256": "710b72be857c494533b1861485c29d5c09738fe4d948505c522141d56b6f874b",
+      "expected_path": "tasks/TM063/tests/raw/small_random_003.out",
+      "expected_sha256": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 3,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0017400000000000748,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_003",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_004",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_004.in",
+      "input_sha256": "29fb356d921b22b174791b8e016b62c533a5d14949eb6989036a56f9d730f282",
+      "expected_path": "tasks/TM063/tests/raw/small_random_004.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 15,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0017940000000000733,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_004",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_005",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_005.in",
+      "input_sha256": "1648bd74fedfdfafa8ad00d246e80eb06b6998e2c3f64c6ec4bf8382efdc8f0f",
+      "expected_path": "tasks/TM063/tests/raw/small_random_005.out",
+      "expected_sha256": "ce516e29a2ccfe4bab40e4e6adab7661cd695680482c00b1faa738fc0df62698",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 11,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001715000000000133,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_005",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_006",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_006.in",
+      "input_sha256": "5477a4eec07426c4a6e726fe8cba79e16bebeb7b1fba70df6a797f1d45ef9301",
+      "expected_path": "tasks/TM063/tests/raw/small_random_006.out",
+      "expected_sha256": "d867d3f88fa20d7cb936ecd93651adeedf473a6177218cd0987f462ff5511cb6",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 15,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001599000000000128,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_006",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_007",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_007.in",
+      "input_sha256": "dba582502e46a2dd43ac182936867cbe421ed170498f9ac4b66a5fd8d7917174",
+      "expected_path": "tasks/TM063/tests/raw/small_random_007.out",
+      "expected_sha256": "1326faec3eb42dc72ddffe46daf3940b932f48b9799f6cbf28e80504e7b34958",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 12,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0016490000000000116,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_007",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_008",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_008.in",
+      "input_sha256": "6db1d560e7d1a3afde5bc3124d1a077520632c75d718c7d57836c81595ea9f02",
+      "expected_path": "tasks/TM063/tests/raw/small_random_008.out",
+      "expected_sha256": "4b9258d432ecb4511cfe5471a58f3feea9e8aa513e1d32294894693827d3b0d4",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 13,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001680999999999988,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_008",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_009",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_009.in",
+      "input_sha256": "62778e19f8e86868cfb086491355f430c79ead3fa9e87ff049376d1517c3054a",
+      "expected_path": "tasks/TM063/tests/raw/small_random_009.out",
+      "expected_sha256": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001490000000000019,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_009",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_010",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_010.in",
+      "input_sha256": "6adbb4d9488086a5ac3cf2e862865f0e18a1075f366ce615cc28ba1c77b1102c",
+      "expected_path": "tasks/TM063/tests/raw/small_random_010.out",
+      "expected_sha256": "9961d158a7e0e2f990765971a9e490af826c0743b7d603020f34cc8944319fcb",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001490999999999909,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_010",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_011",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_011.in",
+      "input_sha256": "93584d4843ce3af8a3bf5c3f1bf8c58abb533bdf8e19fab2f07fa6c1b6a662d6",
+      "expected_path": "tasks/TM063/tests/raw/small_random_011.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 11,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001881999999999967,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_011",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_012",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_012.in",
+      "input_sha256": "6e3946642cb86fe48fac5eae511d5895a7aa4b9e498f6b33f06fc888e0eb0e8b",
+      "expected_path": "tasks/TM063/tests/raw/small_random_012.out",
+      "expected_sha256": "1326faec3eb42dc72ddffe46daf3940b932f48b9799f6cbf28e80504e7b34958",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0015179999999999083,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_012",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_013",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_013.in",
+      "input_sha256": "d67740257c706f12b3a71acf228457a03b6c86dfb3297083590b4487f48b17ce",
+      "expected_path": "tasks/TM063/tests/raw/small_random_013.out",
+      "expected_sha256": "9a92adbc0cee38ef658c71ce1b1bf8c65668f166bfb213644c895ccb1ad07a25",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0015640000000001208,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_013",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_014",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_014.in",
+      "input_sha256": "cea4471204f9ec7cfb3fdfb619eb024a958e6eb9e383c51c51fb95bfbaf426af",
+      "expected_path": "tasks/TM063/tests/raw/small_random_014.out",
+      "expected_sha256": "ce516e29a2ccfe4bab40e4e6adab7661cd695680482c00b1faa738fc0df62698",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0015900000000002024,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_014",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_015",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_015.in",
+      "input_sha256": "1702997cdbc32ad3ed71111b114e544c078ca5629184c02d34b3a7b302174c41",
+      "expected_path": "tasks/TM063/tests/raw/small_random_015.out",
+      "expected_sha256": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0018759999999996557,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_015",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_016",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_016.in",
+      "input_sha256": "6a44b2087ff840c80e2434a6ee613d505fde36a5b3b0d09d5fbff6ff5041fc56",
+      "expected_path": "tasks/TM063/tests/raw/small_random_016.out",
+      "expected_sha256": "5378796307535df3ec8d8b15a2e2dc5641419c3d3060cfe32238c0fa973f7aa3",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 7,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0018210000000000726,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_016",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_017",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_017.in",
+      "input_sha256": "73279121c9dbc9d1144e4d0a1bf769e42b6f039f58ac2d0ae163534a32ee9549",
+      "expected_path": "tasks/TM063/tests/raw/small_random_017.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.00200699999999987,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_017",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_018",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_018.in",
+      "input_sha256": "8b6c497193f9b05dc83140afedde985830ba482b36bc97b9ced035f8a9f42e02",
+      "expected_path": "tasks/TM063/tests/raw/small_random_018.out",
+      "expected_sha256": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001994999999999969,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_018",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_019",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_019.in",
+      "input_sha256": "36dda02394ccde992dbd9ba721f0a419998a9952212645b8b7d36872d4fa3b2c",
+      "expected_path": "tasks/TM063/tests/raw/small_random_019.out",
+      "expected_sha256": "19b8d5c59e421f037fe563007c7254eb8d98bc221b278c3db3e5fdbbfd52e273",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 11,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001847000000000154,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_019",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_020",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_020.in",
+      "input_sha256": "59748de60c5f047a98d188bb0ca951100eb6c214520848788450abcdc769aa51",
+      "expected_path": "tasks/TM063/tests/raw/small_random_020.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 12,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0019759999999999778,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_020",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_021",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_021.in",
+      "input_sha256": "dfa04a9088bc603509885958c1ee603870aac02867cd86df5c1af9800bb6afd2",
+      "expected_path": "tasks/TM063/tests/raw/small_random_021.out",
+      "expected_sha256": "4c82a221b575ce7fe118b2e8cdf0764bf4ef570a3017e80b6d3438af9095f376",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 9,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002279000000000142,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_021",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_022",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_022.in",
+      "input_sha256": "c43bafb71c08df34f9b95ccf7098e3a83f49d47021f34a3f477a535c95a86e4c",
+      "expected_path": "tasks/TM063/tests/raw/small_random_022.out",
+      "expected_sha256": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 16,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002195000000000391,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_022",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "small_random_023",
+      "kind": "small",
+      "input_path": "tasks/TM063/tests/raw/small_random_023.in",
+      "input_sha256": "2f1809073f73d5d3164f1a2f53c11e8784a3d9efc2f202f01c5611f4ab30760a",
+      "expected_path": "tasks/TM063/tests/raw/small_random_023.out",
+      "expected_sha256": "7ee29791fc17e986b97128845622b077fb45e349fdb80523fac9dba879b4ad60",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023889999999999745,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "small_random_023",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "native_upper",
+      "kind": "native_upper",
+      "input_path": "tasks/TM063/tests/raw/native_upper.in",
+      "input_sha256": "8d8930c9864404d1d702c7e3ca16b75c2d865518ff838a9d4b04d9a6ba32ee62",
+      "expected_path": "tasks/TM063/tests/raw/native_upper.out",
+      "expected_sha256": "f5aee7df0c39c9481508d69657ba4a0d39b7198bf97969ad11d50207a7f60228",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1000,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0023290000000000255,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "native_upper",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "original_sample_recovered_0",
+      "kind": "source",
+      "input_path": "tasks/TM063/tests/raw/original_sample_recovered_0.in",
+      "input_sha256": "30f60eff311a1f24bc7a472fada53cfeeb7c6d014bf3c2be44e08f57fbc94b0f",
+      "expected_path": "tasks/TM063/tests/raw/original_sample_recovered_0.out",
+      "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 4,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0017809999999999996,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "original_sample_recovered_0",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    },
+    {
+      "name": "l2_upper",
+      "kind": "l2_upper",
+      "input_path": "tasks/TM063/tests/l2/l2_upper.in",
+      "input_sha256": "aececa6f5d69cc2e3668c11ea4de5c9921b2e5cc3ae415e432ac0cedd2252c68",
+      "expected_path": "tasks/TM063/tests/l2/l2_upper.out",
+      "expected_sha256": "2d5c043a952d70ef9564858b25a01a30613abfb3d1562f67ef8d089646bbf786",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 100000,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": true
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.002439000000000302,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM063/report.json",
+        "case": "l2_upper",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM035",
+  "source_identity": "codeforces:550_A",
+  "source_url": "https://codeforces.com/problemset/problem/550/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:550_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM035/raw.txt",
+      "sha256": "07159ab139c659c67fd352d25fc6b19014e1b04ec089d913d64103df8ae1a9de"
+    },
+    "provenance": {
+      "path": "tasks/TM035/raw_provenance.json",
+      "sha256": "416777b5697fb0cea2905bd1550af50ebe2fde87467c0444b09bdcf21dcd4a18"
+    },
+    "tests": {
+      "path": "tasks/TM035/raw_test_manifest.json",
+      "sha256": "f4c7d562639c21e94eb68b72b0e6f3244a12f396c978a768646d8585e532a7b6"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM035/l1.txt",
+      "sha256": "6d131eb2ece55d53623d4ecbe89e2262e5b86f5b6e58ab305ec0be474ae89a76"
+    },
+    "certificate": {
+      "path": "tasks/TM035/l1_certificate.json",
+      "sha256": "500770a841b862061d44068d2019397ac2b4004ffc9b7c5d8bd0fd423d1d837b"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM035/raw_test_manifest.json",
+      "sha256": "f4c7d562639c21e94eb68b72b0e6f3244a12f396c978a768646d8585e532a7b6"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM035/l2.txt",
+      "sha256": "1f21509771672c0fd5fd75e848389d18f08a8071ae2bd856f572babbfc2fdbcc"
+    },
+    "tests": {
+      "path": "tasks/TM035/l2_test_manifest.json",
+      "sha256": "6d93c736cd91f15c9991a9ab82e744264e2951ec00c9cf649dac8b88aba5e8d0"
+    },
+    "axis": "string length",
+    "original_upper": 100000,
+    "expanded_upper": 400000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM035/l3.txt",
+      "sha256": "7483290d44af34a432da54b21797489c7f6b26bc61261f3767b8496a24f89e8d"
+    },
+    "tests": {
+      "path": "tasks/TM035/l3_test_manifest.json",
+      "sha256": "84fce4715c571be7979b672f4f69119167a2bfdaa2cd955eb44fa336062c45d8"
+    },
+    "operator": "Require AB strictly before BA, still nonoverlapping.",
+    "correctness_argument": "Find earliest occurrence of the first pattern and a later disjoint second. Raw checks both orders; L3 checks one. Oracle enumerates all occurrence-position pairs.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "small_small_11"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "substrings",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "substrings",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "substrings",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "substrings",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "35",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "35",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_substrings"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM035/report.json",
+      "sha256": "81c504797e4cb7f301cc1a33dcc5d44ae8abd78a440253f63d3e5f37b7e04263"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM035/report.json",
+      "sha256": "e74c2f386a488eeb53c86d228c2caa8cc74787681265d8382397305bb9822078"
+    },
+    "resolution": {
+      "path": "tasks/TM035/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM035/mutation_edits.json",
+      "sha256": "91300edab2109bf2900ad33ebb5e89668484c70683d197625c175f357e18c199"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

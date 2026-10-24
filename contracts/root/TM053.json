@@ -1,0 +1,183 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM053",
+  "source_identity": "codecontests:6:p01314 Sum of Consecutive Integers",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:6:p01314 Sum of Consecutive Integers"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM053/raw.txt",
+      "sha256": "6ee18ce3f1d2a55fa4e929af79916a5e2bbc9a88c3d3c200e35994776046db16"
+    },
+    "provenance": {
+      "path": "tasks/TM053/raw_provenance.json",
+      "sha256": "8decbae8826ab6ebe0253cc7c36e0743b5dbde208dba1c8c82fa4d31f4bfd827"
+    },
+    "tests": {
+      "path": "tasks/TM053/raw_test_manifest.json",
+      "sha256": "5616d035e2a65906d85d007688edab2bf65c3ac9dc425b0671ecb4e9b0593e1a"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM053/l1.txt",
+      "sha256": "5d92f429d50707f9752bde65a65ce65047016e3efdf74293c19d5931115284dc"
+    },
+    "certificate": {
+      "path": "tasks/TM053/l1_certificate.json",
+      "sha256": "2bf8690a4ac5fee497b2f450a42f68b133d8e59bef296a267e5e0855a156a9cc"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM053/raw_test_manifest.json",
+      "sha256": "5616d035e2a65906d85d007688edab2bf65c3ac9dc425b0671ecb4e9b0593e1a"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM053/l2.txt",
+      "sha256": "035cbab3a106e6b0606a2b4305486e6d763d0d36ba0d789515cc4a1e5e5432ea"
+    },
+    "tests": {
+      "path": "tasks/TM053/l2_test_manifest.json",
+      "sha256": "8fe14a88c89cdd9c7a864ed931e21c8161d15f57ad1fd5840e47e11310cfaca3"
+    },
+    "axis": "N",
+    "original_upper": 1000,
+    "expanded_upper": 10000000000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM053/l3.txt",
+      "sha256": "c206c7a023c84c923b05b4652a280480e95123cb57e1af49cc8fc44291372452"
+    },
+    "tests": {
+      "path": "tasks/TM053/l3_test_manifest.json",
+      "sha256": "7dc86205887cf58e6e4359e80d75380915b620ce0a1745c8ace955f706304b16"
+    },
+    "operator": "Permit the first integer to be0 (all integers remain nonnegative).",
+    "correctness_argument": "For each feasible length, solve length*start+length*(length-1)/2=N and test divisibility/lower bound. Oracle enumerates starts and explicitly adds consecutive integers.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "boundary_boundary_1",
+      "small_small_13"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "consecutive",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "consecutive",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "consecutive",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "consecutive",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "53",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "53",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_consecutive"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM053/report.json",
+      "sha256": "03a58be79f777df3c077cedf2d242c6f122fa34a2d1336393b8e41987e35ab98"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM053/report.json",
+      "sha256": "a79cf1518803efb93c6253a66d0c9f4467d88b99efa6968f32bcdc093415491d"
+    },
+    "resolution": {
+      "path": "tasks/TM053/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM053/mutation_edits.json",
+      "sha256": "0aa69e27f08f217c09e3399062296d560cb775dc80a896852b5709495cc73b14"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

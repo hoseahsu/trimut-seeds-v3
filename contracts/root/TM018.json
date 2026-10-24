@@ -1,0 +1,194 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM018",
+  "source_identity": "codecontests:5:p02537 ACL Beginner Contest - Flat Subsequence",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p02537 ACL Beginner Contest - Flat Subsequence"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM018/raw.txt",
+      "sha256": "e9c8ec85d6d11871a41dbb3e1c8f4b46cb0c7cbce09c7d72cb2588529c4b9f75"
+    },
+    "provenance": {
+      "path": "tasks/TM018/raw_provenance.json",
+      "sha256": "b8ac428b449dd65a4053a82827471ae1e2a4a1957433b0f9773aebdba67fe9b2"
+    },
+    "tests": {
+      "path": "tasks/TM018/raw_test_manifest.json",
+      "sha256": "5dddf307fdc6824a5cee669ae46b0704f084f414b85f3bd7c890418ded5c8284"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM018/l1.txt",
+      "sha256": "5b179f7c844ad3409162f1035ffe866f99cf3bdf61be428349af351b6500bc96"
+    },
+    "certificate": {
+      "path": "tasks/TM018/l1_certificate.json",
+      "sha256": "6060c42660fadc0827ed42191a64c7c2b9e365be2e79c29d51f876687d505bb8"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM018/raw_test_manifest.json",
+      "sha256": "5dddf307fdc6824a5cee669ae46b0704f084f414b85f3bd7c890418ded5c8284"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM018/l2.txt",
+      "sha256": "c0e0f18aaec44f6b079eeef63e848f6deaa17732a5c8929eee1e0ff624fed9ba"
+    },
+    "tests": {
+      "path": "tasks/TM018/l2_test_manifest.json",
+      "sha256": "f7d9913bc2eedce9e9b08beff35a4e3dbec1935cf585872ea1cede1f35a2f60f"
+    },
+    "axis": "N",
+    "original_upper": 300000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM018/l3.txt",
+      "sha256": "8545d4ec1508d762a7fccc1c1c32510297eb4c1abc0d207d9bd78a978c647e33"
+    },
+    "tests": {
+      "path": "tasks/TM018/l3_test_manifest.json",
+      "sha256": "05ac7207c31f25a0b686e842ef536dfa36734d5d367069bd01cb8739b71b1fcb"
+    },
+    "operator": "Require adjacent absolute differences<K.",
+    "correctness_argument": "DP for each ending value queries the allowed value interval with a segment tree. Oracle uses predecessor-index DP; no segment tree or value compression.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_1",
+      "small_small_3",
+      "small_small_4",
+      "small_small_5",
+      "small_small_9",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_19",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "flat",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "flat",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "flat",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "flat",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "18",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "18",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_flat"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM018/report.json",
+      "sha256": "8e469d041fa18a1c11393815d7a5cb398a38cd14f177170ce0a0d6d055aa2ffc"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM018/report.json",
+      "sha256": "0b60413d2c1c3bc8b19dcf624f914a6ca4717685f2d0c75c62c3a2fd3bde0e71"
+    },
+    "resolution": {
+      "path": "tasks/TM018/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM018/mutation_edits.json",
+      "sha256": "ae1fb6504c39b01fd8341747a6ba356063926c0bd0acecd93a1781f27d0d7713"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

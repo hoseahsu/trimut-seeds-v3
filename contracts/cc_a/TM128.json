@@ -1,0 +1,172 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM128",
+  "source_identity": "codeforces:967_B",
+  "source_url": "https://codeforces.com/problemset/problem/967/B",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:967_B"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM128/raw.txt",
+      "sha256": "a0135804d68d39734fdf9289f90ecffaccfc01f5a5f2d203ff919a437e2d3fa9"
+    },
+    "provenance": {
+      "path": "tasks/TM128/raw_provenance.json",
+      "sha256": "0a0d52e28fbbaac9b67228084f4e6c6b0e99083e3797cff4c1c4dabe952987b6"
+    },
+    "tests": {
+      "path": "tasks/TM128/raw_test_manifest.json",
+      "sha256": "9e7b8cf2c9287bfd41c5c58971bf2f52790005ed41e23b53c56e71f0b676c7f9"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM128/l1.txt",
+      "sha256": "a92aa877a9b696c87ed7f98b7247ff90694249360eb7aaa18e9d623e5a657e7c"
+    },
+    "certificate": {
+      "path": "tasks/TM128/l1_certificate.json",
+      "sha256": "8b4df6c33088be57b9a5152300e3c8444826411268a317a5ee9bb93038adc604"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM128/raw_test_manifest.json",
+      "sha256": "9e7b8cf2c9287bfd41c5c58971bf2f52790005ed41e23b53c56e71f0b676c7f9"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM128/l2.txt",
+      "sha256": "d02f5be73abe5f65d5be79e8bdd38306a8787ec29a3c0c3ad7b679644de16984"
+    },
+    "certificate": {
+      "path": "tasks/TM128/l2_certificate.json",
+      "sha256": "9db05b52c38ee5119aaf0534fe47d7e7700724a8864595cb6b0cbffbb9d61f87"
+    },
+    "tests": {
+      "path": "tasks/TM128/l2_test_manifest.json",
+      "sha256": "19dd4a4d19e14782b14097562dd2b4b9872600b2cb10572be8ee34002f372567"
+    },
+    "axis": "n",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM128/l3.txt",
+      "sha256": "d41db17c232fedc8ec0a08f9c4d11fefbe8a7013f05015f4191b8ee8e51d7313"
+    },
+    "tests": {
+      "path": "tasks/TM128/l3_test_manifest.json",
+      "sha256": "eef96ad9d430b2f4c11bdfa9a5596b4485bc19c7a6a77e57851e3327ce797fc5"
+    },
+    "operator": "The first hole must receive STRICTLY MORE THANB liters. Output-1 if no legal blocking set can achieve that.",
+    "correctness_argument": "For a fixed number of blocked holes, blocking the largest other sizes minimizes the denominator and maximizes the first share. Try descending sizes until the exact cross-multiplied inequality holds. The oracle enumerates all blocking subsets, never blocking the first hole.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch6/cf_967_b/raw_fast.cpp",
+      "sha256": "95f05136b544ec4fb94c2ef2af204bf91b1c9326a52a2d460dd9804536882c82",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch6/cf_967_b/l3_fast.cpp",
+      "sha256": "5bf612588d63e23cece948528c7746a834283c6813fcb8efff0eca2eb4cc6ffc",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch6/cf_967_b/raw_oracle.cpp",
+      "sha256": "108ae6baf1b8d6669f61afe83d9ecb85c87e79d719b27b2b300fcbae3cb0e1ab",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch6/cf_967_b/l3_oracle.cpp",
+      "sha256": "2f2f0f008d4d33d3c6e73eb2f3e60d32857e7ebdd1a3305185deed00e45adccf",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch6/cf_967_b/raw_fast.cpp",
+      "sha256": "95f05136b544ec4fb94c2ef2af204bf91b1c9326a52a2d460dd9804536882c82",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM128/report.json",
+      "sha256": "ee147769ec338330b32cd3ef5921e921c4ebd80f227f2b90b8f86efdd70c8155"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch6.py",
+    "recipe_id": "cf_967_b",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch6.py",
+  "recipe_id": "cf_967_b"
+}

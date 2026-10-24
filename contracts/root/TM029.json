@@ -1,0 +1,186 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM029",
+  "source_identity": "codeforces:190_D",
+  "source_url": "https://codeforces.com/problemset/problem/190/D",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:190_D"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM029/raw.txt",
+      "sha256": "aed95992fcb3d51cb7757d3650a6528a0e738552a69c10bbcdda6aa4e14556f1"
+    },
+    "provenance": {
+      "path": "tasks/TM029/raw_provenance.json",
+      "sha256": "9e176893d1781b82258d7305bb73d0486cc02714519a14a82a6208434751a757"
+    },
+    "tests": {
+      "path": "tasks/TM029/raw_test_manifest.json",
+      "sha256": "32790c52d4986a94f7874110173b7a180bd3c31622dce2ca931801e3b6583dce"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM029/l1.txt",
+      "sha256": "c6debf3206dda441912953a6355bc3c94a0093100ec766ef286c04855ab2d91f"
+    },
+    "certificate": {
+      "path": "tasks/TM029/l1_certificate.json",
+      "sha256": "7398323247d5d873d29dd1be463f46118b74f450ad8869737d44e8faa8d942d4"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM029/raw_test_manifest.json",
+      "sha256": "32790c52d4986a94f7874110173b7a180bd3c31622dce2ca931801e3b6583dce"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM029/l2.txt",
+      "sha256": "f2f889c252cd537ffe157019a1d1bb3d7dbd6327fbf859e38a7b2dfa556c5fb3"
+    },
+    "tests": {
+      "path": "tasks/TM029/l2_test_manifest.json",
+      "sha256": "ac21caeab60771b64e68023e15f771aa82cfcc248e932f310e169d28e7767e8b"
+    },
+    "axis": "n",
+    "original_upper": 400000,
+    "expanded_upper": 800000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM029/l3.txt",
+      "sha256": "4eaee7d1f6576498a3af0dd2fedcf8006405e0f771a56637c773a89eaeac5344"
+    },
+    "tests": {
+      "path": "tasks/TM029/l3_test_manifest.json",
+      "sha256": "3667703099a605b80c2abf7075b5da56c5baa91e232ff873b2f5a563fc78408f"
+    },
+    "operator": "Require some value to occur strictly more than k times.",
+    "correctness_argument": "Sliding window maintains all frequencies below threshold and counts valid starting positions. Oracle maintains counts for every interval.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "boundary_boundary_1",
+      "small_small_2",
+      "small_small_9",
+      "small_small_12",
+      "small_small_19"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "cypher",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "cypher",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "cypher",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "cypher",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "29",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "29",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_cypher"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM029/report.json",
+      "sha256": "01eabe03ba3f64782492e33dbdd106e700738f72ef036bc87370470fc7a2dfe7"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM029/report.json",
+      "sha256": "e989b1d1cc7a12686084c7cade6e9f93326ea0d505baead8aa32bfadc8ecec53"
+    },
+    "resolution": {
+      "path": "tasks/TM029/validation_resolution.json",
+      "sha256": "e014e9ae3eef0dee67b25a28c4ac286c7b9a47e201df2a846a11c838d55dd220"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM029/mutation_edits.json",
+      "sha256": "b88865a3f7b5d83b8c7c627eff2868fe9fbbdfb3666c41cf733f878f213e7a38"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

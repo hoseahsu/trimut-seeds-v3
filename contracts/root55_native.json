@@ -1,0 +1,1659 @@
+[
+  {
+    "seed_id": "TM001",
+    "recipe_id": "cf_1060_A",
+    "source_sha256": "c4299de11c69d7be9577dd260d14917083ae4fa3444132f35363a14e98fab858",
+    "source_url": "https://codeforces.com/problemset/problem/1060/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "n digits, each 0..9; exact string length n",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "You have n cards with digits, and you want to use them to make as many phone numbers as possible. Each card must be used in at most one phone number, and you don't have to use all cards. The phone numbers do not necessarily have to be distinct."
+      },
+      {
+        "line": 9,
+        "text": "The first line contains an integer n — the number of cards with digits that you have (1 ≤ n ≤ 100)."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM002",
+    "recipe_id": "cf_1101_A",
+    "source_sha256": "94641988fe140d899edb96e1c3d3916c8462f43f10ddc943dab83540de3a6826",
+    "source_url": "https://codeforces.com/problemset/problem/1101/A",
+    "native_axes": [
+      {
+        "name": "q",
+        "upper_inclusive": 500,
+        "proposed_l2_upper_inclusive": 500000
+      }
+    ],
+    "native_invariants": "1<=l<=r<=10^9; 1<=d<=10^9; exactly q triples",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "Recall that a number x belongs to segment [l, r] if l ≤ x ≤ r."
+      },
+      {
+        "line": 11,
+        "text": "The first line contains one integer q (1 ≤ q ≤ 500) — the number of queries."
+      },
+      {
+        "line": 13,
+        "text": "Then q lines follow, each containing a query given in the format l_i r_i d_i (1 ≤ l_i ≤ r_i ≤ 10^9, 1 ≤ d_i ≤ 10^9). l_i, r_i and d_i are integers."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM003",
+    "recipe_id": "cf_519_B",
+    "source_sha256": "a162016ef644bc49b7fd90a452bfc833ec77dfcebb13685e198191e8187e5eb5",
+    "source_url": "https://codeforces.com/problemset/problem/519/B",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "n>=3; values 1..10^9; multiset B=A minus exactly one occurrence; C=B minus exactly one occurrence",
+    "source_evidence": [
+      {
+        "line": 13,
+        "text": "The first line of the input contains integer n (3 ≤ n ≤ 105) — the initial number of compilation errors."
+      },
+      {
+        "line": 15,
+        "text": "The second line contains n space-separated integers a1, a2, ..., an (1 ≤ ai ≤ 109) — the errors the compiler displayed for the first time. "
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM004",
+    "recipe_id": "cf_615_A",
+    "source_sha256": "01d60fe9bfc2e6a7a143469bdc59ce1ab9f73eb8c25a83694907b531dd717583",
+    "source_url": "https://codeforces.com/problemset/problem/615/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 100000
+      }
+    ],
+    "native_invariants": "m 1..100; each xi 0..m; xi bulb identifiers each 1..m",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "The first line of the input contains integers n and m (1 ≤ n, m ≤ 100) — the number of buttons and the number of bulbs respectively. "
+      },
+      {
+        "line": 9,
+        "text": "Each of the next n lines contains xi (0 ≤ xi ≤ m) — the number of bulbs that are turned on by the i-th button, and then xi numbers yij (1 ≤ yij ≤ m) — the numbers of these bulbs."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM005",
+    "recipe_id": "cf_915_A",
+    "source_sha256": "fa103dad0ae99dc845b291e3629f73a69b853f15a56738fd38b22df0be5e4132",
+    "source_url": "https://codeforces.com/problemset/problem/915/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "k 1..100; ai 1..100; at least one ai divides k",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "The first line of input contains two integer numbers n and k (1 ≤ n, k ≤ 100) — the number of buckets and the length of the garden, respectively."
+      },
+      {
+        "line": 11,
+        "text": "The second line of input contains n integer numbers ai (1 ≤ ai ≤ 100) — the length of the segment that can be watered by the i-th bucket in one hour."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM006",
+    "recipe_id": "cf_1043_A",
+    "source_sha256": "e2c6b09e8ccedb51871272b1c64906a1014bb6ac7d0d41c4f8cf76f0c93cb812",
+    "source_url": "https://codeforces.com/problemset/problem/1043/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "ai 1..100",
+    "source_evidence": [
+      {
+        "line": 1,
+        "text": "Awruk is taking part in elections in his school. It is the final round. He has only one opponent — Elodreip. The are n students in the school. Each student has exactly k votes and is obligated to use all of them. So Awruk knows that if a person gives a_i votes for Elodreip, than he will get exactly k - a_i votes from this person. Of course 0 ≤ k - a_i holds."
+      },
+      {
+        "line": 9,
+        "text": "The first line contains integer n (1 ≤ n ≤ 100) — the number of students in the school."
+      },
+      {
+        "line": 11,
+        "text": "The second line contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 100) — the number of votes each student gives to Elodreip."
+      },
+      {
+        "line": 15,
+        "text": "Output the smallest integer k (k ≥ max a_i) which gives Awruk the victory. In order to win, Awruk needs to get strictly more votes than Elodreip."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM007",
+    "recipe_id": "cf_268_A",
+    "source_sha256": "9ec8aa31564f057cf3cc40a0c2f07fcf18c14066562f56bf85d21a8b8d508b7d",
+    "source_url": "https://codeforces.com/problemset/problem/268/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 30,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "n>=2; hi,ai 1..100 and hi!=ai for each pair",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "You know the colors of the home and guest uniform for each team. For simplicity, the colors are numbered by integers in such a way that no two distinct colors have the same number. Help Manao find the answer to his question."
+      },
+      {
+        "line": 9,
+        "text": "The first line contains an integer n (2 ≤ n ≤ 30). Each of the following n lines contains a pair of distinct space-separated integers hi, ai (1 ≤ hi, ai ≤ 100) — the colors of the i-th team's home and guest uniforms, respectively."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM008",
+    "recipe_id": "cf_830_A",
+    "source_sha256": "e5e2bc36ecf0cdc0089898d2f7150ba26f50f2e22835a1188ee3ace471f61556",
+    "source_url": "https://codeforces.com/problemset/problem/830/A",
+    "native_axes": [
+      {
+        "name": "k",
+        "upper_inclusive": 2000,
+        "proposed_l2_upper_inclusive": 20000
+      }
+    ],
+    "native_invariants": "n 1..1000; k>=n; p,ai,bj 1..10^9; a entries distinct and b entries distinct separately; unsorted permitted",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "The first line contains three integers n, k and p (1 ≤ n ≤ 1 000, n ≤ k ≤ 2 000, 1 ≤ p ≤ 109) — the number of people, the number of keys and the office location."
+      },
+      {
+        "line": 9,
+        "text": "The second line contains n distinct integers a1, a2, ..., an (1 ≤ ai ≤ 109) — positions in which people are located initially. The positions are given in arbitrary order."
+      },
+      {
+        "line": 11,
+        "text": "The third line contains k distinct integers b1, b2, ..., bk (1 ≤ bj ≤ 109) — positions of the keys. The positions are given in arbitrary order."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM009",
+    "recipe_id": "root2_ocean",
+    "source_sha256": "f47fadce8ac52daa2fbeef9aa1729da129dbf2e0dc23982a51ebfaeb503d7e77",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 20,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "Hi 1..100; all input values integral",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "For the inn at the top of the i-th mountain from the west (i = 2, 3, ..., N), you can see the ocean if and only if H_1 \\leq H_i, H_2 \\leq H_i, ..., and H_{i-1} \\leq H_i."
+      },
+      {
+        "line": 13,
+        "text": "Constraints"
+      },
+      {
+        "line": 16,
+        "text": "* 1 \\leq N \\leq 20"
+      },
+      {
+        "line": 17,
+        "text": "* 1 \\leq H_i \\leq 100"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM010",
+    "recipe_id": "root2_zeros",
+    "source_sha256": "8aaabbc5d8977de6b7b2ab01a43c6544555ccdd1041c6034ed2c95a45ec5b3c9",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "Ai -10^9..10^9",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "Constraints"
+      },
+      {
+        "line": 7,
+        "text": "* 1 \\leq N \\leq 2 \\times 10^5"
+      },
+      {
+        "line": 8,
+        "text": "* -10^9 \\leq A_i \\leq 10^9"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM011",
+    "recipe_id": "root2_knapsack",
+    "source_sha256": "f2d012996c95047c1d687b5584f518b0ec00c51c0170e8c4fa01a4547fae2acb",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 400
+      }
+    ],
+    "native_invariants": "W 1..10^9; vi 1..100; wi 1..10^7; use value-sum DP, not W-sized allocation",
+    "source_evidence": [
+      {
+        "line": 12,
+        "text": "Constraints"
+      },
+      {
+        "line": 14,
+        "text": "* 1 ≤ N ≤ 100"
+      },
+      {
+        "line": 15,
+        "text": "* 1 ≤ vi ≤ 100"
+      },
+      {
+        "line": 16,
+        "text": "* 1 ≤ wi ≤ 10,000,000"
+      },
+      {
+        "line": 17,
+        "text": "* 1 ≤ W ≤ 1,000,000,000"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM012",
+    "recipe_id": "root2_intersection",
+    "source_sha256": "b19a9215a6e41463144e750303095a2acb9686a85b19afc5305eafbb30015801",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "m 1..200000; both arrays strictly increasing with values 0..10^9",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "Constraints"
+      },
+      {
+        "line": 5,
+        "text": "* $1 \\leq n, m \\leq 200,000$"
+      },
+      {
+        "line": 6,
+        "text": "* $0 \\leq a_0 < a_1 < ... < a_{n-1} \\leq 10^9$"
+      },
+      {
+        "line": 7,
+        "text": "* $0 \\leq b_0 < b_1 < ... < b_{m-1} \\leq 10^9$"
+      },
+      {
+        "line": 20,
+        "text": "Elements of $A$ and $B$ are given in ascending order respectively. There are no duplicate elements in each set."
+      },
+      {
+        "line": 24,
+        "text": "Print elements in the intersection in ascending order. Print an element in a line."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM013",
+    "recipe_id": "root2_digits",
+    "source_sha256": "ba558ddd6c2e40671a2d64b203209f6e7397b7bbf522e5801fc4f623396c36ad",
+    "source_url": "https://codeforces.com/problemset/problem/12/B",
+    "native_axes": [
+      {
+        "name": "numeric_n_max",
+        "upper_inclusive": 1000000000,
+        "proposed_l2_upper_inclusive": 1000000000000000000
+      }
+    ],
+    "native_invariants": "n>=0 without leading zeroes; m numeric value 0..10^9 but may contain leading zeroes; NO original textual-length cap for m stated",
+    "source_evidence": [
+      {
+        "line": 11,
+        "text": "The first line contains one integer n (0 ≤ n ≤ 109) without leading zeroes. The second lines contains one integer m (0 ≤ m ≤ 109) — Bob's answer, possibly with leading zeroes."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM014",
+    "recipe_id": "root2_counting",
+    "source_sha256": "855ffffde7dbf1dc57844c09147228d1e376b0fb5734809b5189100a0c89ee16",
+    "source_url": "https://codeforces.com/problemset/problem/1342/C",
+    "native_axes": [
+      {
+        "name": "q_per_case",
+        "upper_inclusive": 500,
+        "proposed_l2_upper_inclusive": 50000
+      }
+    ],
+    "native_invariants": "t 1..100; a,b 1..200; 1<=li<=ri<=10^18; no original sum(q) cap stated",
+    "source_evidence": [
+      {
+        "line": 1,
+        "text": "You are given two integers a and b, and q queries. The i-th query consists of two numbers l_i and r_i, and the answer to it is the number of integers x such that l_i ≤ x ≤ r_i, and ((x mod a) mod b) ≠ ((x mod b) mod a). Calculate the answer for each query."
+      },
+      {
+        "line": 7,
+        "text": "The first line contains one integer t (1 ≤ t ≤ 100) — the number of test cases. Then the test cases follow."
+      },
+      {
+        "line": 9,
+        "text": "The first line of each test case contains three integers a, b and q (1 ≤ a, b ≤ 200; 1 ≤ q ≤ 500)."
+      },
+      {
+        "line": 11,
+        "text": "Then q lines follow, each containing two integers l_i and r_i (1 ≤ l_i ≤ r_i ≤ 10^{18}) for the corresponding query."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM015",
+    "recipe_id": "root2_records",
+    "source_sha256": "f3bb369ed26a7d7b872a5a0397151553700ea3d441c32bbfe816f4a73492df66",
+    "source_url": "https://codeforces.com/problemset/problem/155/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 1000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "values 0..10000",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "The first line contains the single integer n (1 ≤ n ≤ 1000) — the number of contests where the coder participated."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM016",
+    "recipe_id": "root2_company",
+    "source_sha256": "f6b1dc4db0ee7f3f53593b56616ac22fa40a7dae8a295a028735e49eab22b679",
+    "source_url": "https://codeforces.com/problemset/problem/580/B",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "d 1..10^9 per official missing formula image; mi,si 0..10^9",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "The first line of the input contains two space-separated integers, n and d (1 ≤ n ≤ 105, <image>) — the number of Kefa's friends and the minimum difference between the amount of money in order to feel poor, respectively."
+      },
+      {
+        "line": 9,
+        "text": "Next n lines contain the descriptions of Kefa's friends, the (i + 1)-th line contains the description of the i-th friend of type mi, si (0 ≤ mi, si ≤ 109) — the amount of money and the friendship factor, respectively. "
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM017",
+    "recipe_id": "root2_monk",
+    "source_sha256": "29309fb3e02341078205f32e6a188b9e2a119d15dce629d5eb9a75d018714a42",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "tc 1..50; Ai,Bi 1..10^12; A and B non-increasing; rule index j<n-1 conflicts likely intended j<n; quarantine pending authoritative clarification",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "Given two non-increasing array of integers A,B  i.e A[i] ≥ A[i+1] and B[i] ≥ B[i+1] and for all i, 0 ≤ i < n-1.  "
+      },
+      {
+        "line": 6,
+        "text": " , if j ≥i and B[j] ≥ A[i], or 0 otherwise. "
+      },
+      {
+        "line": 8,
+        "text": "Find the monkiness of the two arrays, that is given by: M (A,B)=  max (M(A[i],B[j])) for 0≤ i, j< n-1."
+      },
+      {
+        "line": 16,
+        "text": "Constraints:"
+      },
+      {
+        "line": 17,
+        "text": "1 ≤ Test Cases ≤ 50"
+      },
+      {
+        "line": 18,
+        "text": "1 ≤ N ≤ 10^5"
+      },
+      {
+        "line": 19,
+        "text": "1 ≤ Ai, Bi ≤ 10^12"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM018",
+    "recipe_id": "root2_flat",
+    "source_sha256": "e9c8ec85d6d11871a41dbb3e1c8f4b46cb0c7cbce09c7d72cb2588529c4b9f75",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 300000,
+        "proposed_l2_upper_inclusive": 1500000
+      }
+    ],
+    "native_invariants": "K 0..300000; Ai 0..300000",
+    "source_evidence": [
+      {
+        "line": 8,
+        "text": "Constraints"
+      },
+      {
+        "line": 10,
+        "text": "* 1 \\leq N \\leq 300,000"
+      },
+      {
+        "line": 11,
+        "text": "* 0 \\leq A_i \\leq 300,000"
+      },
+      {
+        "line": 12,
+        "text": "* 0 \\leq K \\leq 300,000"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM019",
+    "recipe_id": "root2_seven",
+    "source_sha256": "71f3122eb7f14e184aea6c425abcf4727f88ddd1fec3c8e6da09093297dc2b1b",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 999999999,
+        "proposed_l2_upper_inclusive": 999999999999
+      }
+    ],
+    "native_invariants": "N>=1 and N<10^9; must preserve strict inequality at the original boundary",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "Constraints"
+      },
+      {
+        "line": 9,
+        "text": "* 1 \\leq N < 10^9"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM020",
+    "recipe_id": "root2_playlist",
+    "source_sha256": "1ec8de2e56ea7f766755ae778489b50e0992501ffcb90c3430337edae7f68d41",
+    "source_url": "https://codeforces.com/problemset/problem/1140/C",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 300000,
+        "proposed_l2_upper_inclusive": 1500000
+      }
+    ],
+    "native_invariants": "1<=k<=n; ti,bi 1..10^6",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "The first line contains two integers n and k (1 ≤ k ≤ n ≤ 3 ⋅ 10^5) – the number of songs in the playlist and the maximum number of songs you can choose, respectively."
+      },
+      {
+        "line": 9,
+        "text": "Each of the next n lines contains two integers t_i and b_i (1 ≤ t_i, b_i ≤ 10^6) — the length and beauty of i-th song."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM021",
+    "recipe_id": "root2_ayoub",
+    "source_sha256": "45fd3428115a5a97d1508c97ad3aae3fc79ea97a9ef5b03011015e62bec672db",
+    "source_url": "https://codeforces.com/problemset/problem/1301/C",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 1000000000,
+        "proposed_l2_upper_inclusive": 2000000000
+      }
+    ],
+    "native_invariants": "t 1..10^5; 0<=m<=n",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "More formally, f(s) is equal to the number of pairs of integers (l, r), such that 1 ≤ l ≤ r ≤ |s| (where |s| is equal to the length of string s), such that at least one of the symbols s_l, s_{l+1}, …, s_r is equal to \"1\". "
+      },
+      {
+        "line": 13,
+        "text": "The input consists of multiple test cases. The first line contains a single integer t (1 ≤ t ≤ 10^5) — the number of test cases. The description of the test cases follows."
+      },
+      {
+        "line": 15,
+        "text": "The only line for each test case contains two integers n, m (1 ≤ n ≤ 10^{9}, 0 ≤ m ≤ n) — the length of the string and the number of symbols equal to \"1\" in it."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM022",
+    "recipe_id": "root2_agency",
+    "source_sha256": "7b326850de39dcb4725d75e6fc57e13a3765da6548afbac35a008c8c89fbe108",
+    "source_url": "https://codeforces.com/problemset/problem/1475/E",
+    "native_axes": [
+      {
+        "name": "n_per_case",
+        "upper_inclusive": 1000,
+        "proposed_l2_upper_inclusive": 10000
+      }
+    ],
+    "native_invariants": "t 1..1000; 1<=k<=n; 1<=ai<=n; sum(n)<=1000 MUST also be expanded consistently if n is expanded",
+    "source_evidence": [
+      {
+        "line": 14,
+        "text": "Since the answer can be quite large, output it modulo 10^9+7."
+      },
+      {
+        "line": 18,
+        "text": "The first line contains one integer t (1 ≤ t ≤ 1000) — the number of test cases. Then t test cases follow."
+      },
+      {
+        "line": 20,
+        "text": "The first line of each test case contains two integers n and k (1 ≤ k ≤ n ≤ 1000) — the number of bloggers and how many of them you can sign a contract with."
+      },
+      {
+        "line": 22,
+        "text": "The second line of each test case contains n integers a_1, a_2, … a_n (1 ≤ a_i ≤ n) — the number of followers of each blogger."
+      },
+      {
+        "line": 24,
+        "text": "It is guaranteed that the sum of n over all test cases does not exceed 1000."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM023",
+    "recipe_id": "root2_power",
+    "source_sha256": "3b971f3441407a5b9262dab66412562de1f5c84c108538298051c55b3f0b5951",
+    "source_url": "https://codeforces.com/problemset/problem/742/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 1000000000,
+        "proposed_l2_upper_inclusive": 1000000000000000000
+      }
+    ],
+    "native_invariants": "n>=0; 1378^n exponent restored from official source",
+    "source_evidence": [
+      {
+        "line": 11,
+        "text": "The single line of input contains one integer n (0 ≤ n ≤ 109)."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM024",
+    "recipe_id": "root2_histogram",
+    "source_sha256": "bc2bf3410e1031ad581d16dc7055849c3054fb7b8b252e56631d42ae420168cb",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "hi 0..10^9",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "Constraints"
+      },
+      {
+        "line": 7,
+        "text": "* $1 \\leq N \\leq 10^5$"
+      },
+      {
+        "line": 8,
+        "text": "* $0 \\leq h_i \\leq 10^9$"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM025",
+    "recipe_id": "root2_cars",
+    "source_sha256": "11a7619d5648716976eed5be1fffe76824996e681de5295451118d09dbd7c707",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 10000,
+        "proposed_l2_upper_inclusive": 100000
+      }
+    ],
+    "native_invariants": "T 1..100; speeds distinct positive signed-32-bit integers; source size line ambiguous: 4 MB versus 4,000,000,000 bytes; quarantine size clause pending source clarification",
+    "source_evidence": [
+      {
+        "line": 27,
+        "text": "Constraints"
+      },
+      {
+        "line": 29,
+        "text": "1 ≤ T ≤ 100"
+      },
+      {
+        "line": 30,
+        "text": "1 ≤ N ≤ 10,000"
+      },
+      {
+        "line": 31,
+        "text": "All speeds are distinct positive integers that fit in a 32 bit signed integer."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM026",
+    "recipe_id": "root2_elevator",
+    "source_sha256": "022569a7bc8659ab94681491734842159121a28b4ccdf37a2f3f34d24f51a6d3",
+    "source_url": "https://codeforces.com/problemset/problem/1084/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "ai 0..100",
+    "source_evidence": [
+      {
+        "line": 15,
+        "text": "The first line contains one integer n (1 ≤ n ≤ 100) — the number of floors."
+      },
+      {
+        "line": 17,
+        "text": "The second line contains n integers a_1, a_2, …, a_n (0 ≤ a_i ≤ 100) — the number of people on each floor."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM027",
+    "recipe_id": "root2_parity",
+    "source_sha256": "130281666731f9b013a0a89c2cd19cf1dd2b329acce36812dc65226aea851fff",
+    "source_url": "https://codeforces.com/problemset/problem/1251/C",
+    "native_axes": [
+      {
+        "name": "length_per_case",
+        "upper_inclusive": 300000,
+        "proposed_l2_upper_inclusive": 1500000
+      }
+    ],
+    "native_invariants": "t 1..10000; decimal integer representation; sum(length)<=300000 MUST expand with per-case bound; positive/no-leading-zero convention comes from rule integer wording",
+    "source_evidence": [
+      {
+        "line": 1,
+        "text": "You are given a huge integer a consisting of n digits (n is between 1 and 3 ⋅ 10^5, inclusive). It may contain leading zeros."
+      },
+      {
+        "line": 25,
+        "text": "The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases in the input."
+      },
+      {
+        "line": 27,
+        "text": "The only line of each test case contains the integer a, its length n is between 1 and 3 ⋅ 10^5, inclusive."
+      },
+      {
+        "line": 29,
+        "text": "It is guaranteed that the sum of all values n does not exceed 3 ⋅ 10^5."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM028",
+    "recipe_id": "root2_tiles",
+    "source_sha256": "f53f5095d755c2f51e020b7b5469dc973a9d7a725d30124289af31f7a13d7100",
+    "source_url": "https://codeforces.com/problemset/problem/1359/B",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 1000
+      }
+    ],
+    "native_invariants": "t 1..500; m 1..1000; x,y 1..1000; exactly n rows of m characters . or *; sum(n*m)<=100000 MUST expand consistently",
+    "source_evidence": [
+      {
+        "line": 25,
+        "text": "The first line contains a single integer t (1 ≤ t ≤ 500) — the number of testcases. Then the description of t testcases follow."
+      },
+      {
+        "line": 27,
+        "text": "The first line of each testcase contains four integers n, m, x and y (1 ≤ n ≤ 100; 1 ≤ m ≤ 1000; 1 ≤ x, y ≤ 1000) — the size of the Theatre square, the price of the 1 × 1 tile and the price of the 1 × 2 tile."
+      },
+      {
+        "line": 31,
+        "text": "It's guaranteed that the sum of n × m over all testcases doesn't exceed 10^5."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM029",
+    "recipe_id": "root2_cypher",
+    "source_sha256": "faf7bfbed06dc4144c0dc2f8914b1014f7ef3ee21b94b689079f9c158741132e",
+    "source_url": "https://codeforces.com/problemset/problem/190/D",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 400000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "1<=k<=n; ai 1..10^9",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "Subarray a[i... j] (1 ≤ i ≤ j ≤ n) of array a = (a1, a2, ..., an) is an array, made from its consecutive elements, starting from the i-th one and ending with the j-th one: a[i... j] = (ai, ai + 1, ..., aj)."
+      },
+      {
+        "line": 11,
+        "text": "The first line contains two space-separated integers n, k (1 ≤ k ≤ n ≤ 4·105), showing how many numbers an array has and how many equal numbers the subarrays are required to have, correspondingly. "
+      },
+      {
+        "line": 13,
+        "text": "The second line contains n space-separated integers ai (1 ≤ ai ≤ 109) — elements of the array."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM030",
+    "recipe_id": "root2_pipeline",
+    "source_sha256": "ff42f975c27ea53a2cec00591b64b26316a3d1d4ffffa8efc402f609d79d4c08",
+    "source_url": "https://codeforces.com/problemset/problem/287/B",
+    "native_axes": [
+      {
+        "name": "k",
+        "upper_inclusive": 1000000000,
+        "proposed_l2_upper_inclusive": 2000000000
+      }
+    ],
+    "native_invariants": "n 1..10^18; k>=2; preserve signed-64-bit-safe arithmetic with wide intermediates",
+    "source_evidence": [
+      {
+        "line": 13,
+        "text": "The first line contains two space-separated integers n and k (1 ≤ n ≤ 1018, 2 ≤ k ≤ 109)."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM031",
+    "recipe_id": "root3_powered",
+    "source_sha256": "e70c810a2b07655243cd73ae4d26bb9329f18722711d31b2f7e33c436afe1419",
+    "source_url": "https://codeforces.com/problemset/problem/1339/C",
+    "native_axes": [
+      {
+        "name": "n_per_case",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "t 1..10000; ai -10^9..10^9; sum(n)<=100000 MUST expand consistently",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "  * Select some distinct indices i_{1}, i_{2}, …, i_{k} which are between 1 and n inclusive, and add 2^{x-1} to each corresponding position of a. Formally, a_{i_{j}} := a_{i_{j}} + 2^{x-1} for j = 1, 2, …, k. Note that you are allowed to not select any indices at all."
+      },
+      {
+        "line": 9,
+        "text": "Array a is nondecreasing if and only if a_{1} ≤ a_{2} ≤ … ≤ a_{n}."
+      },
+      {
+        "line": 15,
+        "text": "The first line contains a single integer t (1 ≤ t ≤ 10^{4}) — the number of test cases."
+      },
+      {
+        "line": 17,
+        "text": "The first line of each test case contains single integer n (1 ≤ n ≤ 10^{5}) — the length of array a. It is guaranteed that the sum of values of n over all test cases in the input does not exceed 10^{5}."
+      },
+      {
+        "line": 19,
+        "text": "The second line of each test case contains n integers a_{1}, a_{2}, …, a_{n} (-10^{9} ≤ a_{i} ≤ 10^{9})."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM032",
+    "recipe_id": "root3_regional",
+    "source_sha256": "1961ce03da2587409ed7aa97f2d3bb3efe0acb44a74de6930e1b0c90a8b77503",
+    "source_url": "https://codeforces.com/problemset/problem/1519/C",
+    "native_axes": [
+      {
+        "name": "n_per_case",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "t 1..1000; ui 1..n; si 1..10^9; sum(n)<=200000 MUST expand consistently",
+    "source_evidence": [
+      {
+        "line": 13,
+        "text": "The first line contains a single integer t (1 ≤ t ≤ 1000) — the number of testcases."
+      },
+      {
+        "line": 15,
+        "text": "The first line of each testcase contains a single integer n (1 ≤ n ≤ 2 ⋅ 10^5) — the number of universities and the number of students."
+      },
+      {
+        "line": 17,
+        "text": "The second line of each testcase contains n integers u_1, u_2, ..., u_n (1 ≤ u_i ≤ n) — the university the i-th student is enrolled at."
+      },
+      {
+        "line": 19,
+        "text": "The third line of each testcase contains n integers s_1, s_2, ..., s_n (1 ≤ s_i ≤ 10^9) — the programming skill of the i-th student."
+      },
+      {
+        "line": 21,
+        "text": "The sum of n over all testcases doesn't exceed 2 ⋅ 10^5."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM033",
+    "recipe_id": "root3_aqua",
+    "source_sha256": "ffc03e7ef8ea782f3fb7fbb7927aa41807e5769a37f53d0ed511ec5c29930695",
+    "source_url": "https://codeforces.com/problemset/problem/1546/C",
+    "native_axes": [
+      {
+        "name": "n_per_case",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "t 1..50; ai 1..10^5; sum(n)<=100000 MUST expand consistently",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "AquaMoon hopes that after some operations, the numbers written on the T-shirt of n friends in the row, read from left to right, become non-decreasing. Also she wants, that all friends will have a direction of right at the end. Please find if it is possible."
+      },
+      {
+        "line": 9,
+        "text": "The input consists of multiple test cases. The first line contains a single integer t (1 ≤ t ≤ 50) — the number of test cases."
+      },
+      {
+        "line": 11,
+        "text": "The first line of each test case contains a single integer n (1 ≤ n ≤ 10^5) — the number of Aquamoon's friends."
+      },
+      {
+        "line": 13,
+        "text": "The second line contains n integers a_1, a_2, ..., a_n (1 ≤ a_i ≤ 10^5) — the numbers, written on the T-shirts."
+      },
+      {
+        "line": 15,
+        "text": "It is guaranteed that the sum of n for all test cases does not exceed 10^5."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM034",
+    "recipe_id": "root3_shift",
+    "source_sha256": "4c79afee47b9e0a07ec06b431cb60846d7910779a628f58376f4cb294cffff69",
+    "source_url": "https://codeforces.com/problemset/problem/454/B",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "n>=2; ai 1..10^5",
+    "source_evidence": [
+      {
+        "line": 1,
+        "text": "One day, Twilight Sparkle is interested in how to sort a sequence of integers a1, a2, ..., an in non-decreasing order. Being a young unicorn, the only operation she can perform is a unit shift. That is, she can move the last element of the sequence to its beginning:"
+      },
+      {
+        "line": 9,
+        "text": "The first line contains an integer n (2 ≤ n ≤ 105). The second line contains n integer numbers a1, a2, ..., an (1 ≤ ai ≤ 105)."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM035",
+    "recipe_id": "root3_substrings",
+    "source_sha256": "e17f77a441ff852a512fbf6ffe4ce858d0345f1e144da2867ba263a15385880d",
+    "source_url": "https://codeforces.com/problemset/problem/550/A",
+    "native_axes": [
+      {
+        "name": "string_length",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "length>=1; uppercase Latin letters A..Z, NOT only A/B",
+    "source_evidence": [],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM036",
+    "recipe_id": "root3_modulo",
+    "source_sha256": "c115b9690c7d5650a9b142b0d6da73cfb35592371449731bc509506d69121187",
+    "source_url": "https://codeforces.com/problemset/problem/577/B",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 1000000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "m 2..1000; ai 0..10^9",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "Check if it is possible to choose a non-empty subsequence aij such that the sum of numbers in this subsequence is divisible by m."
+      },
+      {
+        "line": 7,
+        "text": "The first line contains two numbers, n and m (1 ≤ n ≤ 106, 2 ≤ m ≤ 103) — the size of the original sequence and the number such that sum should be divisible by it."
+      },
+      {
+        "line": 9,
+        "text": "The second line contains n integers a1, a2, ..., an (0 ≤ ai ≤ 109)."
+      },
+      {
+        "line": 62,
+        "text": "In the first sample test you can choose numbers 2 and 3, the sum of which is divisible by 5."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM037",
+    "recipe_id": "root3_dance",
+    "source_sha256": "cfe326182ea5372141eac0b7df4bbbc558afcd6745156fb870940521acfa1e33",
+    "source_url": "https://codeforces.com/problemset/problem/641/C",
+    "native_axes": [
+      {
+        "name": "q",
+        "upper_inclusive": 2000000,
+        "proposed_l2_upper_inclusive": 4000000
+      }
+    ],
+    "native_invariants": "n 2..1000000 even; operation1 x in [-n,n]; operation2 takes no parameter",
+    "source_evidence": [
+      {
+        "line": 14,
+        "text": "The first line of the input contains two integers n and q (2 ≤ n ≤ 1 000 000, 1 ≤ q ≤ 2 000 000) — the number of couples in the rueda and the number of commands to perform, respectively. It's guaranteed that n is even."
+      },
+      {
+        "line": 16,
+        "text": "Next q lines contain the descriptions of the commands. Each command has type as the integer 1 or 2 first. Command of the first type is given as x ( - n ≤ x ≤ n), where 0 ≤ x ≤ n means all boys moves x girls in clockwise direction, while  - x means all boys move x positions in counter-clockwise direction. There is no other input for commands of the second type."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM038",
+    "recipe_id": "root3_lara",
+    "source_sha256": "6eaea5608fe0f82d9ea43f69d024c22a8d4b4a8bd42f0c4c3e953af0d3aca9ce",
+    "source_url": "https://codeforces.com/problemset/problem/976/B",
+    "native_axes": [
+      {
+        "name": "m",
+        "upper_inclusive": 1000000000,
+        "proposed_l2_upper_inclusive": 2000000000
+      }
+    ],
+    "native_invariants": "n 2..10^9 even; m>=2; 0<=k<n*m; original rule guarantees final cell(1,2)",
+    "source_evidence": [
+      {
+        "line": 11,
+        "text": "The only line contains three integers n, m and k (2 ≤ n, m ≤ 109, n is always even, 0 ≤ k < n·m). Note that k doesn't fit into 32-bit integer type!"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM039",
+    "recipe_id": "root3_compositions",
+    "source_sha256": "a7002b032ba51571160384009e09ccffd4da3b71863b4ed0c9904661f89c4126",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "k",
+        "upper_inclusive": 19,
+        "proposed_l2_upper_inclusive": 25
+      }
+    ],
+    "native_invariants": "T 1..100000; N 1..19; k>=1; output exact binomial count, no modulus",
+    "source_evidence": [
+      {
+        "line": 14,
+        "text": "Constraints:"
+      },
+      {
+        "line": 16,
+        "text": "1 ≤ T ≤ 100000"
+      },
+      {
+        "line": 18,
+        "text": "1 ≤ N,k ≤ 19"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM040",
+    "recipe_id": "root3_payment",
+    "source_sha256": "63c6919206c905a27f253eb9af60f030ec08789bdb6469e8766d04979929bb06",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "decimal_exponent_bound",
+        "upper_inclusive": 1000000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "1<=N<=10^1000000: maximum textual length is 1000001, and at that length only 1 followed by 1000000 zeros is allowed; not arbitrary million-and-one-digit N",
+    "source_evidence": [
+      {
+        "line": 1,
+        "text": "In the Kingdom of AtCoder, only banknotes are used as currency. There are 10^{100}+1 kinds of banknotes, with the values of 1, 10, 10^2, 10^3, \\dots, 10^{(10^{100})}. You have come shopping at a mall and are now buying a takoyaki machine with a value of N. (Takoyaki is the name of a Japanese snack.)"
+      },
+      {
+        "line": 9,
+        "text": "Constraints"
+      },
+      {
+        "line": 11,
+        "text": "* N is an integer between 1 and 10^{1,000,000} (inclusive)."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM041",
+    "recipe_id": "root3_taxi",
+    "source_sha256": "9c2f02e4896250092640eceed08b0453bd265a4d1dfbe39c8134fa21ec22505b",
+    "source_url": "https://codeforces.com/problemset/problem/1075/B",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "m 1..100000; coordinates strictly increasing in 1..10^9; n+m flags0/1 with exactly m ones",
+    "source_evidence": [
+      {
+        "line": 15,
+        "text": "The first line contains two integers n and m (1 ≤ n,m ≤ 10^5) — number of riders and taxi drivers."
+      },
+      {
+        "line": 17,
+        "text": "The second line contains n + m integers x_1, x_2, …, x_{n+m} (1 ≤ x_1 < x_2 < … < x_{n+m} ≤ 10^9), where x_i is the coordinate where the i-th resident lives. "
+      },
+      {
+        "line": 19,
+        "text": "The third line contains n + m integers t_1, t_2, …, t_{n+m} (0 ≤ t_i ≤ 1). If t_i = 1, then the i-th resident is a taxi driver, otherwise t_i = 0."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM042",
+    "recipe_id": "root3_doctor",
+    "source_sha256": "42e6f9a50b9909235ab3b69956320d053bcfc2183b5f33be5e58663278c669dd",
+    "source_url": "https://codeforces.com/problemset/problem/1184/B1",
+    "native_axes": [
+      {
+        "name": "s",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "b 1..100000; ship power/base defense 0..10^9; gold0..10^4",
+    "source_evidence": [
+      {
+        "line": 17,
+        "text": "The first line contains integers s and b (1 ≤ s, b ≤ 10^5), the number of spaceships and the number of bases, respectively."
+      },
+      {
+        "line": 19,
+        "text": "The second line contains s integers a (0 ≤ a ≤ 10^9), the attacking power of each spaceship."
+      },
+      {
+        "line": 21,
+        "text": "The next b lines contain integers d, g (0 ≤ d ≤ 10^9, 0 ≤ g ≤ 10^4), the defensive power and the gold of each base, respectively."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM043",
+    "recipe_id": "root3_epic",
+    "source_sha256": "d311d6a9decb5c7adae15315b79c00cde8e48e98172d29f242892f44e74a0bf7",
+    "source_url": "https://codeforces.com/problemset/problem/1506/D",
+    "native_axes": [
+      {
+        "name": "n_per_case",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "t 1..10000; ai 1..10^9; sum(n)<=200000 MUST expand consistently",
+    "source_evidence": [
+      {
+        "line": 19,
+        "text": "The first line contains a single integer t (1 ≤ t ≤ 10^4). Then t test cases follow."
+      },
+      {
+        "line": 21,
+        "text": "The first line of each test case contains a single integer n (1 ≤ n ≤ 2 ⋅ 10^5) is length of the array a."
+      },
+      {
+        "line": 23,
+        "text": "The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9)."
+      },
+      {
+        "line": 25,
+        "text": "It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM044",
+    "recipe_id": "root3_pocket",
+    "source_sha256": "01446b71421264ca48b872553c8bfd43da330f0d9f6924b5200bde4422ce3479",
+    "source_url": "https://codeforces.com/problemset/problem/152/C",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 100000
+      }
+    ],
+    "native_invariants": "m 1..100; exactly n uppercase Latin strings each length m; modulus10^9+7",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "As mom wasn't home, Vasya decided to play with names: he chose three integers i, j, k (1 ≤ i < j ≤ n, 1 ≤ k ≤ m), then he took names number i and j and swapped their prefixes of length k. For example, if we take names \"CBDAD\" and \"AABRD\" and swap their prefixes with the length of 3, the result will be names \"AABAD\" and \"CBDRD\"."
+      },
+      {
+        "line": 9,
+        "text": "The first input line contains two integers n and m (1 ≤ n, m ≤ 100) — the number of names and the length of each name, correspondingly. Then n lines contain names, each name consists of exactly m uppercase Latin letters."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM045",
+    "recipe_id": "root3_languages",
+    "source_sha256": "18c06a320816869274d34271461dd40b4c38e4c2b361063cd3ad02e428ff657e",
+    "source_url": "https://codeforces.com/problemset/problem/277/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 100000
+      }
+    ],
+    "native_invariants": "m 2..100; n>=2; ki 0..m; distinct languageIDs1..m within each employee",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "Find the minimum sum of money the company needs to spend so as any employee could correspond to any other one (their correspondence can be indirect, i. e. other employees can help out translating)."
+      },
+      {
+        "line": 7,
+        "text": "The first line contains two integers n and m (2 ≤ n, m ≤ 100) — the number of employees and the number of languages."
+      },
+      {
+        "line": 9,
+        "text": "Then n lines follow — each employee's language list. At the beginning of the i-th line is integer ki (0 ≤ ki ≤ m) — the number of languages the i-th employee knows. Next, the i-th line contains ki integers — aij (1 ≤ aij ≤ m) — the identifiers of languages the i-th employee knows. It is guaranteed that all the identifiers in one list are distinct. Note that an employee may know zero languages."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM046",
+    "recipe_id": "root3_tavas",
+    "source_sha256": "f159dcdca2da550d72678ecacbdfbe55d2923eca8be52c6caaf22ae24419027e",
+    "source_url": "https://codeforces.com/problemset/problem/536/A",
+    "native_axes": [
+      {
+        "name": "query_count_n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "A,B 1..10^6; l,t,m each1..10^6",
+    "source_evidence": [
+      {
+        "line": 7,
+        "text": "For a given m, let's define an m-bite operation as decreasing the height of at most m distinct not eaten Karafses by 1. Karafs is considered as eaten when its height becomes zero."
+      },
+      {
+        "line": 9,
+        "text": "Now SaDDas asks you n queries. In each query he gives you numbers l, t and m and you should find the largest number r such that l ≤ r and sequence sl, sl + 1, ..., sr can be eaten by performing m-bite no more than t times or print -1 if there is no such number r."
+      },
+      {
+        "line": 13,
+        "text": "The first line of input contains three integers A, B and n (1 ≤ A, B ≤ 106, 1 ≤ n ≤ 105)."
+      },
+      {
+        "line": 15,
+        "text": "Next n lines contain information about queries. i-th line contains integers l, t, m (1 ≤ l, t, m ≤ 106) for i-th query."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM047",
+    "recipe_id": "root3_cellular",
+    "source_sha256": "c3e7e8a710e77c7f1b507fa255cb9383c9690cb1edca97bb140231c09d96a912",
+    "source_url": "https://codeforces.com/problemset/problem/702/C",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "m 1..100000; coordinates -10^9..10^9; both arrays non-decreasing; duplicates permitted",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "The first line contains two positive integers n and m (1 ≤ n, m ≤ 105) — the number of cities and the number of cellular towers."
+      },
+      {
+        "line": 11,
+        "text": "The second line contains a sequence of n integers a1, a2, ..., an ( - 109 ≤ ai ≤ 109) — the coordinates of cities. It is allowed that there are any number of cities in the same point. All coordinates ai are given in non-decreasing order."
+      },
+      {
+        "line": 13,
+        "text": "The third line contains a sequence of m integers b1, b2, ..., bm ( - 109 ≤ bj ≤ 109) — the coordinates of cellular towers. It is allowed that there are any number of towers in the same point. All coordinates bj are given in non-decreasing order."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM048",
+    "recipe_id": "root3_magical",
+    "source_sha256": "c3a57bee4622e489f9ee5e13f9e2ec1cf74675170ae465eed038ac85b56f1f44",
+    "source_url": "https://codeforces.com/problemset/problem/83/A",
+    "native_axes": [
+      {
+        "name": "n",
+        "upper_inclusive": 100000,
+        "proposed_l2_upper_inclusive": 1000000
+      }
+    ],
+    "native_invariants": "ai -10^9..10^9",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "The first line of the input data contains an integer n (1 ≤ n ≤ 105). The second line contains an array of original integers a1, a2, ..., an ( - 109 ≤ ai ≤ 109). "
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM049",
+    "recipe_id": "root3_pairs",
+    "source_sha256": "0d55c2358f84d42005691c3234cb14dfc5126b6cb2299d90d0f5a1393bf60913",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "N>=2; Ai 0..10^9; modulus10^9+7",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "Find the sum of A_i \\times A_j over all pairs (i,j) such that 1\\leq i < j \\leq N, modulo (10^9+7)."
+      },
+      {
+        "line": 5,
+        "text": "Constraints"
+      },
+      {
+        "line": 7,
+        "text": "* 2 \\leq N \\leq 2\\times 10^5"
+      },
+      {
+        "line": 8,
+        "text": "* 0 \\leq A_i \\leq 10^9"
+      },
+      {
+        "line": 22,
+        "text": "Print \\sum_{i=1}^{N-1}\\sum_{j=i+1}^{N} A_i A_j, modulo (10^9+7)."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM050",
+    "recipe_id": "root3_bricks",
+    "source_sha256": "e703e2ae57f98386cab0b4b9cbe3a552be00b1184f2fb92a6048f6442d878fca",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "ai 1..N",
+    "source_evidence": [
+      {
+        "line": 3,
+        "text": "The i-th brick from the left (1 \\leq i \\leq N) has an integer a_i written on it."
+      },
+      {
+        "line": 7,
+        "text": "Let us say there are K bricks remaining. Snuke will be satisfied if, for each integer i (1 \\leq i \\leq K), the i-th of those brick from the left has the integer i written on it."
+      },
+      {
+        "line": 11,
+        "text": "Constraints"
+      },
+      {
+        "line": 14,
+        "text": "* 1 \\leq N \\leq 200000"
+      },
+      {
+        "line": 15,
+        "text": "* 1 \\leq a_i \\leq N"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM051",
+    "recipe_id": "root3_transform",
+    "source_sha256": "4494b8e68bdda8061af73130e86c2668e5a44ccc1ea5dfa4b0a45605a511116c",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "string_length",
+        "upper_inclusive": 200000,
+        "proposed_l2_upper_inclusive": 2000000
+      }
+    ],
+    "native_invariants": "S,T same length>=1; lowercase English letters only",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "Operation: Choose two distinct lowercase English letters c_1 and c_2, then replace every occurrence of c_1 with c_2, and every occurrence of c_2 with c_1."
+      },
+      {
+        "line": 9,
+        "text": "Constraints"
+      },
+      {
+        "line": 11,
+        "text": "* 1 \\leq |S| \\leq 2 \\times 10^5"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM052",
+    "recipe_id": "root3_concat",
+    "source_sha256": "ce140a098a5cd83c9ca8b75dab2d2cb559fa33a2c22118f06fe7350be66500f1",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 100000
+      }
+    ],
+    "native_invariants": "L 1..100; each of N strings length L; lowercase letters",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "* There exists an index i(1≦i≦min(n,m)), such that s_j = t_j for all indices j(1≦j<i), and s_i<t_i."
+      },
+      {
+        "line": 10,
+        "text": "* s_i = t_i for all integers i(1≦i≦min(n,m)), and n<m."
+      },
+      {
+        "line": 12,
+        "text": "Constraints"
+      },
+      {
+        "line": 14,
+        "text": "* 1 ≦ N, L ≦ 100"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM053",
+    "recipe_id": "root3_consecutive",
+    "source_sha256": "6ee18ce3f1d2a55fa4e929af79916a5e2bbc9a88c3d3c200e35994776046db16",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N",
+        "upper_inclusive": 1000,
+        "proposed_l2_upper_inclusive": 1000000000000
+      }
+    ],
+    "native_invariants": "one positive N per dataset; terminating zero required; original has no explicit dataset-count cap",
+    "source_evidence": [
+      {
+        "line": 5,
+        "text": "> How many combinations of two or more consecutive positive integers have a sum of N? For example, 9 has two combinations, 2 + 3 + 4 and 4 + 5."
+      },
+      {
+        "line": 13,
+        "text": "The input is a sequence of datasets. Each dataset is a line of one integer N. Where 1 ≤ N ≤ 1000."
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM054",
+    "recipe_id": "root3_hotel",
+    "source_sha256": "7d6fa6542d5f38f3c1ac75695473c4feb9e74fcdebbffc47be63242b8c1f5e5d",
+    "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+    "native_axes": [
+      {
+        "name": "N_per_case",
+        "upper_inclusive": 100,
+        "proposed_l2_upper_inclusive": 100000
+      }
+    ],
+    "native_invariants": "T 1..100; arrivals/departures 1..1000; departure strictly greater than corresponding arrival; equal event times are NOT simultaneous occupancy",
+    "source_evidence": [
+      {
+        "line": 41,
+        "text": "Constraints"
+      },
+      {
+        "line": 43,
+        "text": "T≤100"
+      },
+      {
+        "line": 44,
+        "text": "N≤100"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  },
+  {
+    "seed_id": "TM055",
+    "recipe_id": "root3_equation",
+    "source_sha256": "830f3ae47254116cd44ca297fe2479e85f69c630bcb2504c2ab7e6c6d08f996c",
+    "source_url": "https://codeforces.com/problemset/problem/1064/B",
+    "native_axes": [
+      {
+        "name": "a",
+        "upper_inclusive": 1073741823,
+        "proposed_l2_upper_inclusive": 9223372036854775807
+      }
+    ],
+    "native_invariants": "t 1..1000; a>=0; original upper bound 2^30-1; expanding to2^63-1 requires output up to2^63, unsigned64 or wider",
+    "source_evidence": [
+      {
+        "line": 9,
+        "text": "Each test contains several possible values of a and your task is to find the number of equation's solution for each of them. The first line contains an integer t (1 ≤ t ≤ 1000) — the number of these values."
+      },
+      {
+        "line": 39,
+        "text": "$$$ r_i = \\left\\{ \\begin{aligned} 1, ~ if ~ x_i ≠ y_i \\\\\\ 0, ~ if ~ x_i = y_i \\end{aligned} \\right. $$$"
+      }
+    ],
+    "status": "contract_transcription_for_implementation; L2 proposal not calibrated",
+    "l2_acceptance": "Require a generated case with measured selected axis > original maximum, all remaining native restrictions unchanged, optimized reference accepted at frozen budget, appropriate slower baseline distinction."
+  }
+]

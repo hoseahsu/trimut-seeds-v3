@@ -1,0 +1,192 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM048",
+  "source_identity": "codeforces:83_A",
+  "source_url": "https://codeforces.com/problemset/problem/83/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:83_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM048/raw.txt",
+      "sha256": "87e16739664802fbc1a8dac1a3650ae0f4265e20ecc254d5ea7e64581e39e49c"
+    },
+    "provenance": {
+      "path": "tasks/TM048/raw_provenance.json",
+      "sha256": "1e242591f29540d5afc9e86ddaedefeb869128d2997ea561e1550dbeb1fd2f57"
+    },
+    "tests": {
+      "path": "tasks/TM048/raw_test_manifest.json",
+      "sha256": "feac615628b9ebcc78265da57ac4c0aed695a0b1c9a8171154ff5f04cefb7445"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM048/l1.txt",
+      "sha256": "2e7e27c0e7dd1fdee0e91722571f630e3ae07d6978488025dd86218f090fc1ba"
+    },
+    "certificate": {
+      "path": "tasks/TM048/l1_certificate.json",
+      "sha256": "e01670f67366f96b5332310ec643374062c353af70aff1789cbf0cb231091be0"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM048/raw_test_manifest.json",
+      "sha256": "feac615628b9ebcc78265da57ac4c0aed695a0b1c9a8171154ff5f04cefb7445"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM048/l2.txt",
+      "sha256": "1da6bd7ef3b4bf2ca762a13e17393a797738dcf8e3f501db56839e259a136856"
+    },
+    "tests": {
+      "path": "tasks/TM048/l2_test_manifest.json",
+      "sha256": "45ed1b8b3a9f31683bc0ca29808923152c7d145820f823b289886ed883e318a7"
+    },
+    "axis": "n",
+    "original_upper": 100000,
+    "expanded_upper": 400000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM048/l3.txt",
+      "sha256": "312064aa003e49b051756312575eb4addaf7fb39cc9e662e1ee74881765e9eeb"
+    },
+    "tests": {
+      "path": "tasks/TM048/l3_test_manifest.json",
+      "sha256": "fe57cdbba508aebcb7720adc1e2909bece4e3c628b5108b72e134da2551b50aa"
+    },
+    "operator": "Count subarrays whose maximum minus minimum is at most1.",
+    "correctness_argument": "Two monotone deques maintain a window with permitted value spread0/1; each right endpoint adds its valid starts. Oracle scans every interval and tracks extrema.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_4",
+      "small_small_9",
+      "small_small_10",
+      "small_small_12",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "magical",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "magical",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "magical",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "magical",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "48",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "48",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_magical"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM048/report.json",
+      "sha256": "8e58b5fdcced23e36332a89a3e5539870c0bff3c43e051c5e2c03cd649f2e3fc"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM048/report.json",
+      "sha256": "86bd40f0903e45720bed3e73a918048fe66a6c2dcbd54ba3732c4a4a6ab4f803"
+    },
+    "resolution": {
+      "path": "tasks/TM048/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM048/mutation_edits.json",
+      "sha256": "cf77dc9c0917b15d30baafe8c65fa27353c73c687cb5b139c586f6d94e73385e"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

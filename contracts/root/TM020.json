@@ -1,0 +1,196 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM020",
+  "source_identity": "codeforces:1140_C",
+  "source_url": "https://codeforces.com/problemset/problem/1140/C",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1140_C"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM020/raw.txt",
+      "sha256": "1ec8de2e56ea7f766755ae778489b50e0992501ffcb90c3430337edae7f68d41"
+    },
+    "provenance": {
+      "path": "tasks/TM020/raw_provenance.json",
+      "sha256": "ca8e7d31cd9009a5f27264f0eb84a597e688ae75dfcb4e2a0ad70d42e8e4f41f"
+    },
+    "tests": {
+      "path": "tasks/TM020/raw_test_manifest.json",
+      "sha256": "2013ce794771f566f6595f244fe65d1acfa67ca6de4be34e428b5026db8ae28a"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM020/l1.txt",
+      "sha256": "16c195f9789203aff4ea2edbe6ac3cc62341d60770c6d688a03b290dc29e3bf0"
+    },
+    "certificate": {
+      "path": "tasks/TM020/l1_certificate.json",
+      "sha256": "3b954da87da475db07e7192ec5a5a72fbcc0af56e1adb5985669445a5c2f5d7d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM020/raw_test_manifest.json",
+      "sha256": "2013ce794771f566f6595f244fe65d1acfa67ca6de4be34e428b5026db8ae28a"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM020/l2.txt",
+      "sha256": "c2705b18107dc7e2432ecc69d61a3e77b19d50f917b322a75e1c7faedb93165c"
+    },
+    "tests": {
+      "path": "tasks/TM020/l2_test_manifest.json",
+      "sha256": "8964b712cdb3f6a0d9e2abed30bcdc8837fbe28a5797cd3f42b1e416375d7ce1"
+    },
+    "axis": "n",
+    "original_upper": 300000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM020/l3.txt",
+      "sha256": "bf9865b129e19c80b37a05aed7202e9b58c62f2702dc0596e4d0fd298eacc27f"
+    },
+    "tests": {
+      "path": "tasks/TM020/l3_test_manifest.json",
+      "sha256": "cdb75e748118967f1e8b79c3b6da52b2cede6a2165ba694c655d70e8fcbc78e0"
+    },
+    "operator": "Use maximum beauty instead of minimum beauty.",
+    "correctness_argument": "Sort by descending/raw or ascending/mutant beauty and force the current song as the extremal-beauty anchor. Maintain k-1 largest previous lengths. Oracle enumerates every subset.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 25,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_0",
+      "small_small_2",
+      "small_small_6",
+      "small_small_7",
+      "small_small_8",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "playlist",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "playlist",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch2/fast.cpp",
+      "sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "playlist",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch2/oracle.cpp",
+      "sha256": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+      "args": [
+        "playlist",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "20",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "20",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch2.py",
+    "recipe_id": "root2_playlist"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM020/report.json",
+      "sha256": "910491fb40938b4d6a7da6c6719af2dedd646ea7dbb3f4fe25eedab484681a41"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM020/report.json",
+      "sha256": "68c5a09ba0733f5e31adc53a37224f660b3a9efa2e40fe6c560daf5bfa5311c8"
+    },
+    "resolution": {
+      "path": "tasks/TM020/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM020/mutation_edits.json",
+      "sha256": "95223694ac18a20a0e53f3d515425d9c4d55d1c3d5c62cad9b551aea0aff7817"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

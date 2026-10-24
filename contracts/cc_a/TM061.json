@@ -1,0 +1,198 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM061",
+  "source_identity": "codecontests:5:p03774 AtCoder Beginner Contest 057 - Checkpoints",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03774 AtCoder Beginner Contest 057 - Checkpoints"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM061/raw.txt",
+      "sha256": "168b4f60f3c803cbd1d79a5cb2f1a32336c4ce10bcc49a098b400ed08adffc8d"
+    },
+    "provenance": {
+      "path": "tasks/TM061/raw_provenance.json",
+      "sha256": "13a46a7c17dfed2e62a01d0a23ec64f189cea927b9c8d51438dd40a072e02276"
+    },
+    "tests": {
+      "path": "tasks/TM061/raw_test_manifest.json",
+      "sha256": "28e1b2cdd6475199e17d5e600db3611c394012334b25d3c1c20ea891a1f11b42"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM061/l1.txt",
+      "sha256": "6377fb27db5364c4b81fb5c97711b292b27e3463fdbab5d6c080d123c78739cb"
+    },
+    "certificate": {
+      "path": "tasks/TM061/l1_certificate.json",
+      "sha256": "1757071b676686cdc556cfecce5041683e1fa1b700bef6ac6fdcc310214d400d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM061/raw_test_manifest.json",
+      "sha256": "28e1b2cdd6475199e17d5e600db3611c394012334b25d3c1c20ea891a1f11b42"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM061/l2.txt",
+      "sha256": "428cb5d944ef767fa10c2d00621f855bb74f6904f42b397ae063e40a53cdb583"
+    },
+    "certificate": {
+      "path": "tasks/TM061/l2_certificate.json",
+      "sha256": "146ac219335149e9f075f086895c5b84c73adb393ed6f6181c119152f8cc2dc0"
+    },
+    "tests": {
+      "path": "tasks/TM061/l2_test_manifest.json",
+      "sha256": "25dd1a835e29ee037e9ba991f56dc60d6df1bf3e8c2003992b2bf48c0c16d850"
+    },
+    "axis": "N",
+    "original_upper": 50,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM061/l3.txt",
+      "sha256": "63387278c7b2b24752272025515c21cfea4d17f888d08a9fc42a87fcb5ebe07c"
+    },
+    "tests": {
+      "path": "tasks/TM061/l3_test_manifest.json",
+      "sha256": "0f7b9b9f0a8f08c3f73fc7a0a832e6cfb016bbed8c726be4677d8e0852d21986"
+    },
+    "operator": "Choose the FARTHEST checkpoint by Manhattan distance instead of the NEAREST checkpoint; ties still use the smallest checkpoint index.",
+    "correctness_argument": "Each checkpoint lies in at least one of four closed quadrants around a query. After sign transforms, a quadrant candidate minimizes distance by maximizing checkpoint x+y subject to x<=query_x,y<=query_y. Sweep x and use a Fenwick maximum over y, retaining minimum index on ties. The minimum over four sweeps is exact. For farthest distance, the identity |dx|+|dy|=max over four signed dx+dy reduces to four coordinate-sum extrema. The oracle scans all checkpoints.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "boundary_extra_03",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/atcoder_abc057_b/raw_fast.cpp",
+      "sha256": "d342908db7b24c67688733bf8d72dbff6f37a565422e56902cc0a1b4862b27bb",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/atcoder_abc057_b/l3_fast.cpp",
+      "sha256": "dbc26ee710f3b3ca9e43bfe6c593b0e4f44919514c128935e3605e4806123a57",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/atcoder_abc057_b/raw_slow.cpp",
+      "sha256": "3a83b068f169dba07802dfd154bf22a46a186564bbac8d09c895ffe192465410",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/atcoder_abc057_b/l3_slow.cpp",
+      "sha256": "02b7b52d1cbd48c0c5990637546e73a4fdb1a436ee79e2fd035a6f81e9d92b0d",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/atcoder_abc057_b/raw_fast.cpp",
+      "sha256": "d342908db7b24c67688733bf8d72dbff6f37a565422e56902cc0a1b4862b27bb",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM061/report.json",
+      "sha256": "20f66d1b33e8dd3e1daee706d2d5e73f246424849207e5a659cb443e3877ad12"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "atcoder_abc057_b",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "atcoder_abc057_b"
+}

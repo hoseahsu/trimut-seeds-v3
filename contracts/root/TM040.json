@@ -1,0 +1,203 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM040",
+  "source_identity": "codecontests:5:p02775 AtCoder Beginner Contest 155 - Payment",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p02775 AtCoder Beginner Contest 155 - Payment"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM040/raw.txt",
+      "sha256": "63c6919206c905a27f253eb9af60f030ec08789bdb6469e8766d04979929bb06"
+    },
+    "provenance": {
+      "path": "tasks/TM040/raw_provenance.json",
+      "sha256": "8eaefdc72ab9b7a3cec468ad392acc488651b47c583f10e41766a449158bf29e"
+    },
+    "tests": {
+      "path": "tasks/TM040/raw_test_manifest.json",
+      "sha256": "5d0fbc2ca4382c81d7093894ad1c4d48be7a1f4199dec4e373e6eddb4b4586f5"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM040/l1.txt",
+      "sha256": "0773092f97ff6f5d99cbdaa3c53748fe324bf02bcf98ecca87ad32b6ada4553b"
+    },
+    "certificate": {
+      "path": "tasks/TM040/l1_certificate.json",
+      "sha256": "15f377a5c2dc2d0de8637b76fc911edf8cda10ac21cccaa3c7a5e358f7a1ae0f"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM040/raw_test_manifest.json",
+      "sha256": "5d0fbc2ca4382c81d7093894ad1c4d48be7a1f4199dec4e373e6eddb4b4586f5"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM040/l2.txt",
+      "sha256": "b255b925447f1aaacd3dcb9eaf69595c6185112851cad74768957b6d51ce88b3"
+    },
+    "tests": {
+      "path": "tasks/TM040/l2_test_manifest.json",
+      "sha256": "d2380c9d73c25768236225b0085c8a1b7dc64375639b81ab7f4c6608644ec809"
+    },
+    "axis": "decimal exponent bound",
+    "original_upper": 1000000,
+    "expanded_upper": 2000000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM040/l3.txt",
+      "sha256": "ee39dbcb141466a1df2255f0993280775884c379ec184b765ff36ab8876c558a"
+    },
+    "tests": {
+      "path": "tasks/TM040/l3_test_manifest.json",
+      "sha256": "a1981f578cc63e160315ed48e261d95e6f699cfd2e42c813945712b3558e7c52"
+    },
+    "operator": "A returned change note costs2 units; a paid note costs1; minimize total cost.",
+    "correctness_argument": "Digit DP tracks carry and chooses paying the current digit or overpaying one higher note and receiving change. Oracle enumerates every payment from N through N+10^digits(N)-1 and counts notes; larger payments have a cancellable note in both payment and change.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 28,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "boundary_boundary_2",
+      "boundary_boundary_3",
+      "small_small_0",
+      "small_small_1",
+      "small_small_2",
+      "small_small_3",
+      "small_small_4",
+      "small_small_8",
+      "small_small_9",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "payment",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "payment",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "payment",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "payment",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "40",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "40",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_payment"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM040/report.json",
+      "sha256": "3dbdfd47399a8ccda84bd49e0ddf9feeb12322c28777e2296f3df8a480f59b51"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM040/report.json",
+      "sha256": "5e0599cf00cbc1456831583de638c14be02faadafe96af26cd47ccfc17ea8a45"
+    },
+    "resolution": {
+      "path": "tasks/TM040/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM040/mutation_edits.json",
+      "sha256": "f0ac1a8331b0b3bdf2f7da711eec1c4a744d813586df255d4430fb95adbf62bc"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

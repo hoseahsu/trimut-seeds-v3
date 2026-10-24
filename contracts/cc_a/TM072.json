@@ -1,0 +1,200 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM072",
+  "source_identity": "codecontests:3:subtraction-game-theory-1",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:3:subtraction-game-theory-1"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM072/raw.txt",
+      "sha256": "c7780c681f5dd8ebf98e198f9e6b38318561bcee6d926c187ef9ae8a4d0ffb67"
+    },
+    "provenance": {
+      "path": "tasks/TM072/raw_provenance.json",
+      "sha256": "60ef060c2fce56c5fc1acf0ed3010926fdc5cb1c268b19f1ea19a849f5bf1cf0"
+    },
+    "tests": {
+      "path": "tasks/TM072/raw_test_manifest.json",
+      "sha256": "d0f56f4594d20f405a34337e983c6e96b12867f6c243e5846bb6fd6acc14bf37"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM072/l1.txt",
+      "sha256": "03a2de71a0c3715368a7142cde5a58d0fa21203be764d84814aacc051338fd86"
+    },
+    "certificate": {
+      "path": "tasks/TM072/l1_certificate.json",
+      "sha256": "6418ab555d52e7778a75ede2e54761972d78a1b2055b473b3a23c874f4915406"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM072/raw_test_manifest.json",
+      "sha256": "d0f56f4594d20f405a34337e983c6e96b12867f6c243e5846bb6fd6acc14bf37"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM072/l2.txt",
+      "sha256": "b784528616feb83057cbe93f1fe2f8bca0ca2ec4ef865e9fbfbe66c58ab1cd23"
+    },
+    "certificate": {
+      "path": "tasks/TM072/l2_certificate.json",
+      "sha256": "e6103e9466d757245dd87832d1713e8dfd2717854da04d2b3d65892f641a4038"
+    },
+    "tests": {
+      "path": "tasks/TM072/l2_test_manifest.json",
+      "sha256": "c24a5755de021bb86953a27222f7c20355c527b78ef66e316eae0858d7a00d6b"
+    },
+    "axis": "n",
+    "original_upper": 1000000,
+    "expanded_upper": 1000000000000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM072/l3.txt",
+      "sha256": "c6112749b7fbe301ca9ce26b11abb40c4aa3844d530ae960efd448cffcfc64a3"
+    },
+    "tests": {
+      "path": "tasks/TM072/l3_test_manifest.json",
+      "sha256": "b50a9f2400a24aefe30e9c53ca71e9ca44ea9dd0d8158306e42f3a1f68c4da33"
+    },
+    "operator": "The player who makes the last move (taking n to zero or below) WINS, instead of loses. Both players remain optimal, Rani starts, and a move subtracts any integer from 1 through k.",
+    "correctness_argument": "Under misere play the losing positive states are n congruent to1 modulo k+1: from those states every nonterminal move reaches a winning state, while every other state can reach one. Under normal play the losing states are n congruent to0. The oracle computes the game graph bottom-up, tries actual legal moves, and handles terminal wins/losses explicitly.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 31,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "boundary_extra_03",
+      "boundary_extra_04",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023",
+      "original_sample_recovered_0"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/hackerearth_subtraction_game_theory/raw_fast.cpp",
+      "sha256": "10a653a26bf3db81d17549ef3b40a8f6c5ab2dea8624f876b2aae5e8f784ec58",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/hackerearth_subtraction_game_theory/l3_fast.cpp",
+      "sha256": "b8c689cc254442d6b120d6ca68948a2866bb1a841effcfd12d60bd8689ba5e62",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/hackerearth_subtraction_game_theory/raw_slow.cpp",
+      "sha256": "eb1ab31a0d4e6a9b526cae445365f4ec6f853a0610cb977c0d1b0604ae1e0e75",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/hackerearth_subtraction_game_theory/l3_slow.cpp",
+      "sha256": "65bd86924bdc49961ae8431124130caf88ab3fb79a2f8a075b0a3b0c3eb3b5f5",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/hackerearth_subtraction_game_theory/raw_fast.cpp",
+      "sha256": "10a653a26bf3db81d17549ef3b40a8f6c5ab2dea8624f876b2aae5e8f784ec58",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM072/report.json",
+      "sha256": "32f8a6d56e1fd7b7087f183e4cdb8411a10ff23a42287d2648bf2ac7768c7241"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "hackerearth_subtraction_game_theory",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "hackerearth_subtraction_game_theory"
+}

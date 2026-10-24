@@ -1,0 +1,181 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM051",
+  "source_identity": "codecontests:5:p03252 AtCoder Beginner Contest 110 - String Transformation",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03252 AtCoder Beginner Contest 110 - String Transformation"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM051/raw.txt",
+      "sha256": "4494b8e68bdda8061af73130e86c2668e5a44ccc1ea5dfa4b0a45605a511116c"
+    },
+    "provenance": {
+      "path": "tasks/TM051/raw_provenance.json",
+      "sha256": "e3a2386830b495c3c74665c484fed3b0e73cea45770e566a294625d6ad0d8f82"
+    },
+    "tests": {
+      "path": "tasks/TM051/raw_test_manifest.json",
+      "sha256": "92050681eecb7a382758e3e56878667d0d9f63b6a37843286d1e64f7e6da8872"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM051/l1.txt",
+      "sha256": "0fbbd4b5aceeb927d00e9e8fefa6ff7c645c1098a8877dda4a6c4bfbcadbd3b2"
+    },
+    "certificate": {
+      "path": "tasks/TM051/l1_certificate.json",
+      "sha256": "81154973e928979658952f90370800250ed4ffb733447d9745d8fc07a9db93d1"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM051/raw_test_manifest.json",
+      "sha256": "92050681eecb7a382758e3e56878667d0d9f63b6a37843286d1e64f7e6da8872"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM051/l2.txt",
+      "sha256": "18c6765c615cc47663233f333f045a80c97098e64ee9632b1c1484ad0d1cde0a"
+    },
+    "tests": {
+      "path": "tasks/TM051/l2_test_manifest.json",
+      "sha256": "50821511c75b3edf3ff38acad3c803d27c65cbce6df748010577d33de6214d69"
+    },
+    "axis": "string length",
+    "original_upper": 200000,
+    "expanded_upper": 600000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM051/l3.txt",
+      "sha256": "6373f4eb6d0b796f73a2b6be05015fabdcd6c05dce9491caca06daeedca39f6a"
+    },
+    "tests": {
+      "path": "tasks/TM051/l3_test_manifest.json",
+      "sha256": "3bb2f2bec68afad2f6e06a209d6051496126981802919fc7b4e1d7d3c324e375"
+    },
+    "operator": "Allow one simultaneous arbitrary letter-to-letter substitution, which need not be injective.",
+    "correctness_argument": "Raw requires a consistent map in both directions; mutant only forward consistency. Oracle checks equality-pattern equivalences or implications over all position pairs.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 27,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "transform",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "transform",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch3/fast.cpp",
+      "sha256": "ae4cf951ab07917064d714553bbd1807e1e55f31b841df84c8d4ab410065fd7a",
+      "args": [
+        "transform",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch3/oracle.cpp",
+      "sha256": "8e1ea558bab4c24da858b5cde3afa03ec41c384997c058eba368d943a096a55e",
+      "args": [
+        "transform",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "51",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "51",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch3.py",
+    "recipe_id": "root3_transform"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM051/report.json",
+      "sha256": "781e9a70158c9199c3a1035efeca29097d7591d97a933dd6352ec493e2817ce3"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM051/report.json",
+      "sha256": "42cd36699964c2decc2bf4cc5d34eaf362bf1ba75f708008f24b0a2fd8fa35fa"
+    },
+    "resolution": {
+      "path": "tasks/TM051/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM051/mutation_edits.json",
+      "sha256": "793a54d071ec7148c6321581f5e2acb513c63328f2c055022eee8b78f4c57d51"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

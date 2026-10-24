@@ -1,0 +1,196 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM065",
+  "source_identity": "codecontests:3:chandu-and-his-girlfriend-returns",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:3:chandu-and-his-girlfriend-returns"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM065/raw.txt",
+      "sha256": "85ab75f8d4a98e6a453dc0bcc7f3d10bb162cb837f0ad6c4449a178f20bcb323"
+    },
+    "provenance": {
+      "path": "tasks/TM065/raw_provenance.json",
+      "sha256": "03fd03ab83819b34d83bf964e04625dc9fe493e6e3ffab2fa4f784fcda2ae5ee"
+    },
+    "tests": {
+      "path": "tasks/TM065/raw_test_manifest.json",
+      "sha256": "f806f7848cf486e54b6d6c44bbdacb66579913142fe0d465cb47d011f46f8d92"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM065/l1.txt",
+      "sha256": "c7b2b3a5d6272c562b0fba43092d6df014fc974f9d6fcdedfefe8e0dfa1247db"
+    },
+    "certificate": {
+      "path": "tasks/TM065/l1_certificate.json",
+      "sha256": "2a00690ffefe770ab755f1a935dde4b71400a7fd99f8099241e081ae5afe4b1d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM065/raw_test_manifest.json",
+      "sha256": "f806f7848cf486e54b6d6c44bbdacb66579913142fe0d465cb47d011f46f8d92"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM065/l2.txt",
+      "sha256": "2a1c5a931fb57f0c4105081f50261c754377aa1f63af4052d45f9763f6359156"
+    },
+    "certificate": {
+      "path": "tasks/TM065/l2_certificate.json",
+      "sha256": "b7893b91d26e31fc3add8bf80387b038933406c6b5d31d33ebffe7c4f64da068"
+    },
+    "tests": {
+      "path": "tasks/TM065/l2_test_manifest.json",
+      "sha256": "02f61c2a8882630bca4fb029cf908774c70b1c2eb5a23ac3c15f92b3e2c6b8ce"
+    },
+    "axis": "N",
+    "original_upper": 50000,
+    "expanded_upper": 150000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM065/l3.txt",
+      "sha256": "0460de38380021f72a53f2ebaf493d195987f844e1337f37b5135a7f45c9bdc3"
+    },
+    "tests": {
+      "path": "tasks/TM065/l3_test_manifest.json",
+      "sha256": "a5e1aa2f8b536d7994b0351093ed5322675e6cae0536d5ea3355ff995196ab8f"
+    },
+    "operator": "The output is the SET UNION of both arrays in non-increasing order: emit each distinct value once, instead of retaining its full multiplicity. Input arrays and input protocol remain unchanged.",
+    "correctness_argument": "At every merge step the greatest remaining value is one of the two heads, so selecting the larger head preserves the descending invariant. L3 suppresses repetitions adjacent in this merged order, yielding exactly the distinct union. The oracle concatenates both arrays, runs literal descending bubble sort, and optionally suppresses repeated sorted values.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 31,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "boundary_extra_03",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/hackerearth_chandu_girlfriend_returns/raw_fast.cpp",
+      "sha256": "31afa533247e26b07811ea1ba8070e62aff6d14d8617b7a6c6b86b7770824e29",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/hackerearth_chandu_girlfriend_returns/l3_fast.cpp",
+      "sha256": "b3c33e846ebe2f6e239d2c494fe2e7e77a76093d47ebacca651a3ae0c0728fcd",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/hackerearth_chandu_girlfriend_returns/raw_slow.cpp",
+      "sha256": "f395796ced110700e7b148c832eb704da388b034cacde6de7a9e9d695459bf2d",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/hackerearth_chandu_girlfriend_returns/l3_slow.cpp",
+      "sha256": "8896b64cf268f91290b302504d7ada080518506abf586832c538338dcbb51d6e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/hackerearth_chandu_girlfriend_returns/raw_fast.cpp",
+      "sha256": "31afa533247e26b07811ea1ba8070e62aff6d14d8617b7a6c6b86b7770824e29",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM065/report.json",
+      "sha256": "9d95a3b34ee0f94d00b248bddec5a2ee3c2f6515dbcde7e2f613049373af82b8"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "hackerearth_chandu_girlfriend_returns",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "hackerearth_chandu_girlfriend_returns"
+}

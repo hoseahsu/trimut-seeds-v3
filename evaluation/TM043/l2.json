@@ -1,0 +1,880 @@
+{
+  "schema": "trimut.experiment-tests.v1",
+  "seed_id": "TM043",
+  "condition": "l2",
+  "cpu_budget_seconds": 5,
+  "memory_mb": 2048,
+  "component_manifests": [
+    {
+      "path": "tasks/TM043/raw_test_manifest.json",
+      "sha256": "b154ce9a12e65b44b562b1da833aace503bda187e291b5160df5e6663157ba1f"
+    },
+    {
+      "path": "tasks/TM043/l2_test_manifest.json",
+      "sha256": "97b9a9a8912d64f808609630853b4dd117cef5be8bcf62bec08a5385abf17644"
+    }
+  ],
+  "records": [
+    {
+      "name": "public_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/public_tests_0000.in",
+      "input_sha256": "006ef10aa3da0ffe1a305d765fbcbcd539a90aed42e78080aaa03fd9df3533c9",
+      "expected_path": "tasks/TM043/tests/raw/public_tests_0000.out",
+      "expected_sha256": "6f4e74f8099a666970772e3f947791ab020d7be388dd644409db44b0f4fb4555",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 21,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "private_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/private_tests_0000.in",
+      "input_sha256": "03d9923618779ab62066468671ca285d42d65a0321a31592ad7405d4950304d3",
+      "expected_path": "tasks/TM043/tests/raw/private_tests_0000.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0000",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0000.in",
+      "input_sha256": "faa2086616ac361b9668114bb68426ce7936c9c7db798e4a272e107a7d62f2cc",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0000.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0001",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0001.in",
+      "input_sha256": "ee6f4240eef8af95b134c6d36a929d8e941d53f570f4902d5fb29847c2d6e3ce",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0001.out",
+      "expected_sha256": "61dcef01761fb6e104559906688d5de6d052ba3c5371c6d3ebb75515eb08e0c5",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 21,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0002",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0002.in",
+      "input_sha256": "1835f715e43c0e765ff4bf15427c457eb5c2d8de67eafceb94aa3af22f0edbff",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0002.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0003",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0003.in",
+      "input_sha256": "f943e7c1ac04554030d5a564ea7518f963d61178f25fbf79ebf08f2e220ae4c3",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0003.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0004",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0004.in",
+      "input_sha256": "f15fabd6712999d2b90113964d93dd11076406175b197c6b674f60779796c970",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0004.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0005",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0005.in",
+      "input_sha256": "ce925acfd3fd669ea7d3f63cfd2d0a3200347125803274bf9bc888e992e50c07",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0005.out",
+      "expected_sha256": "61dcef01761fb6e104559906688d5de6d052ba3c5371c6d3ebb75515eb08e0c5",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 21,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0006",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0006.in",
+      "input_sha256": "92ab257222505418ebb092d5acb70ba70882922f171b5baa15f60820342b8d8b",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0006.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0007",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0007.in",
+      "input_sha256": "f6e9b36886174ad8999ccdc59ae77f9b0c24c3931772b30c1de0b6901bffe04c",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0007.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0008",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0008.in",
+      "input_sha256": "6c6c7baac9d2c82a196b5dd4974c8f4e89f748df892abf12dee1cba023f3507b",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0008.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0009",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0009.in",
+      "input_sha256": "31f8562b82dd49673ec377e24e2aa4cf0012707faaa75464a220036556b280de",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0009.out",
+      "expected_sha256": "61dcef01761fb6e104559906688d5de6d052ba3c5371c6d3ebb75515eb08e0c5",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 21,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0010",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0010.in",
+      "input_sha256": "09ae9054c25cfe89eba1dbac84f223539355f0e931cfc78da64eac4d9a000501",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0010.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "generated_tests_0011",
+      "kind": "source",
+      "input_path": "tasks/TM043/tests/raw/generated_tests_0011.in",
+      "input_sha256": "014b00211becb771d6ee51b3e58c0d664eaa62369da74fd4511b4a0968b8ab7c",
+      "expected_path": "tasks/TM043/tests/raw/generated_tests_0011.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "public_source_test_expected",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 12,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "boundary_boundary_0",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/boundary_boundary_0.in",
+      "input_sha256": "f3cc5088f72c3238d5e88b1a2ba7aae2e1d3a573990632a4e2f92a02f4d01b18",
+      "expected_path": "tasks/TM043/tests/raw/boundary_boundary_0.out",
+      "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 2,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "boundary_boundary_1",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/boundary_boundary_1.in",
+      "input_sha256": "3ad1639a358109c5fb0fdefdb434531474c70bc27d46c05b9ad8f75f541631c3",
+      "expected_path": "tasks/TM043/tests/raw/boundary_boundary_1.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 1,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "boundary_boundary_2",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/boundary_boundary_2.in",
+      "input_sha256": "cbe1ec90d6656a57b1594eb822859eed10d8bae7c90fadb79bb21ac3946dbae2",
+      "expected_path": "tasks/TM043/tests/raw/boundary_boundary_2.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 4,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_0",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_0.in",
+      "input_sha256": "7c0161c8cf800ff3026dc582002210c803ec9a0e9d00186c2d3f8e82daf9f962",
+      "expected_path": "tasks/TM043/tests/raw/small_small_0.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 7,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_1",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_1.in",
+      "input_sha256": "cbb50f1a4440bb55794ee676eebe77a0f6ae239774b09cd650fb9be326065e7f",
+      "expected_path": "tasks/TM043/tests/raw/small_small_1.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 7,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_2",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_2.in",
+      "input_sha256": "3791acca6cc3cfa1dae6974ad3bddbb896b2e9c92f3b630b187eee3e63d0a5d6",
+      "expected_path": "tasks/TM043/tests/raw/small_small_2.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 8,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_3",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_3.in",
+      "input_sha256": "e865f77174e70026c63f8f735b823122004d0c07a786ad807ea10a53c3e8a055",
+      "expected_path": "tasks/TM043/tests/raw/small_small_3.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 2,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_4",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_4.in",
+      "input_sha256": "d4b6a89e6efda091dc772c3295838bb46b21f73314be4496fc6dc20fd80525f3",
+      "expected_path": "tasks/TM043/tests/raw/small_small_4.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_5",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_5.in",
+      "input_sha256": "5656f77b87c2527045accbffb1e935ab54eb8a8da000933ab6db0ba8a07fe6ee",
+      "expected_path": "tasks/TM043/tests/raw/small_small_5.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 6,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_6",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_6.in",
+      "input_sha256": "ece3fc988ab4ba9cc2312a092e1ade09dfe4eaeaacd1786f808544d33e88c2e8",
+      "expected_path": "tasks/TM043/tests/raw/small_small_6.out",
+      "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_7",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_7.in",
+      "input_sha256": "8dbe50a911ff7df146315983f8015bae46e6f6bf132fa8ccbc555e8b47339ea8",
+      "expected_path": "tasks/TM043/tests/raw/small_small_7.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 4,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_8",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_8.in",
+      "input_sha256": "7860b08fbd248598c2e3d40074b4549c76e96ec8682ec79a315421c529b1199d",
+      "expected_path": "tasks/TM043/tests/raw/small_small_8.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 6,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_9",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_9.in",
+      "input_sha256": "ccce065269620747ca153e9a430d44b175cdc1f7e0958741b567250a1d6b1d95",
+      "expected_path": "tasks/TM043/tests/raw/small_small_9.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 1,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_10",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_10.in",
+      "input_sha256": "bb8d4304d3722b24dc81ad7f8978574642db31760edbf401b1513701b847a98f",
+      "expected_path": "tasks/TM043/tests/raw/small_small_10.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_11",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_11.in",
+      "input_sha256": "4fdbdea39105531174e3376b140692e2bd003eafeda055b08ee61540f744d7b2",
+      "expected_path": "tasks/TM043/tests/raw/small_small_11.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_13",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_13.in",
+      "input_sha256": "d122a2b4d1b9cc2aa55a7ae4048e738fd17a9e4b6947ad6339e69856c1a94c96",
+      "expected_path": "tasks/TM043/tests/raw/small_small_13.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_14",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_14.in",
+      "input_sha256": "3d10b3adb36cb0c6857f6d533f3b10619e2434f0d03d8d5fe6fdf7e62cc7446e",
+      "expected_path": "tasks/TM043/tests/raw/small_small_14.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 4,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_15",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_15.in",
+      "input_sha256": "9eaf1b3fcf4098c71aea4be191b233252e8c52576444d2c8fd5a51e03e5f32e3",
+      "expected_path": "tasks/TM043/tests/raw/small_small_15.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 6,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_16",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_16.in",
+      "input_sha256": "f7c5ee22b46ad0f9dd0d67f2612e683316b57c92fbef3b350c4e03c0304c1448",
+      "expected_path": "tasks/TM043/tests/raw/small_small_16.out",
+      "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 1,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_17",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_17.in",
+      "input_sha256": "71311ed87fd056e6c0aac2508f28f8732577a8088436402ae5c2fb0ab4c6cbcb",
+      "expected_path": "tasks/TM043/tests/raw/small_small_17.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 8,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_18",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_18.in",
+      "input_sha256": "311879f251c927efbfab97b331b88bd583c07d20ade25aadabc4216e3ba7f062",
+      "expected_path": "tasks/TM043/tests/raw/small_small_18.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 2,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_19",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_19.in",
+      "input_sha256": "b7f7f97ebcd89aa5dab7f0e5926026b9f0dc70e371ef2a5023ec056b1e84e8bd",
+      "expected_path": "tasks/TM043/tests/raw/small_small_19.out",
+      "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_20",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_20.in",
+      "input_sha256": "92a9b7f0e4657e944d0676ab64ef9bda3cc9da5c9fee03a4eb5878496d4ac98b",
+      "expected_path": "tasks/TM043/tests/raw/small_small_20.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 8,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_21",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_21.in",
+      "input_sha256": "05cfad691df073deba648b27793398d06acba52223537f5f87b4711c5b10ff34",
+      "expected_path": "tasks/TM043/tests/raw/small_small_21.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 2,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "small_small_23",
+      "kind": "small",
+      "input_path": "tasks/TM043/tests/raw/small_small_23.in",
+      "input_sha256": "a6030605d666f15c7afe3d7bf5ceec4f0b144badb5b06e624a994a98cfb60284",
+      "expected_path": "tasks/TM043/tests/raw/small_small_23.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "independent_small_oracle",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 8,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "native_upper",
+      "kind": "native_upper",
+      "input_path": "tasks/TM043/tests/raw/native_upper.in",
+      "input_sha256": "5d5449a48e968b1bf5c027aafe434cac6f577e60c9f34d37c741f61b9bb45e03",
+      "expected_path": "tasks/TM043/tests/raw/native_upper.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "separate_python_scale_implementation",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 200000,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": false
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    },
+    {
+      "name": "l2_upper",
+      "kind": "l2_upper",
+      "input_path": "tasks/TM043/tests/l2/l2_upper.in",
+      "input_sha256": "d9caeef2f88c3425ff72e0cc8ab18f85554348cfd76c3b8cccf66b0b24281c99",
+      "expected_path": "tasks/TM043/tests/l2/l2_upper.out",
+      "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "expected_provenance": "separate_python_scale_implementation",
+      "independent_expected": true,
+      "validity": {
+        "valid": true,
+        "axis": "per-case and total n",
+        "observed": 600000,
+        "original_upper": 200000,
+        "l2_upper": 600000,
+        "outside_original": true
+      },
+      "reference_run_status": "OK",
+      "cpu_budget_seconds": 5,
+      "distinguishing_witness": false
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM062",
+  "source_identity": "codecontests:6:p00167 Bubble Sort",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:6:p00167 Bubble Sort"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM062/raw.txt",
+      "sha256": "10fcd81f43fd4bb5af11c7b7b62cc577e20b2aec81bcd5a8d9c0798d3e737bdd"
+    },
+    "provenance": {
+      "path": "tasks/TM062/raw_provenance.json",
+      "sha256": "0606babf237a64ec059c0d758ca98ca35c541325cc060f74525dfb8c34db1262"
+    },
+    "tests": {
+      "path": "tasks/TM062/raw_test_manifest.json",
+      "sha256": "41fa428d9e09424566a2a14911d870825a8508348bbe027d2a077c07d95866ad"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM062/l1.txt",
+      "sha256": "fead49105cec78969b689cd2eaa5d76f3018f69c5ae3694803da81f51f1455da"
+    },
+    "certificate": {
+      "path": "tasks/TM062/l1_certificate.json",
+      "sha256": "92dcdfa8126d395241d1b04e6f0c324641a180b8d0a5330479f56c9754a689e4"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM062/raw_test_manifest.json",
+      "sha256": "41fa428d9e09424566a2a14911d870825a8508348bbe027d2a077c07d95866ad"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM062/l2.txt",
+      "sha256": "9fdedf4fca78b405a6944e10abed62f9003622aae408801e3c9b0ccd3f73a357"
+    },
+    "certificate": {
+      "path": "tasks/TM062/l2_certificate.json",
+      "sha256": "a2331932405bfad3aa548cf77ba6faf4ba77cb1eb17382ca4caf86d73af08dd4"
+    },
+    "tests": {
+      "path": "tasks/TM062/l2_test_manifest.json",
+      "sha256": "1f0febb292b0316cddce7c31db1279cc3a48f0b1ee94dcf550c9a059ee6bb2ec"
+    },
+    "axis": "n_per_dataset",
+    "original_upper": 100,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM062/l3.txt",
+      "sha256": "fb79390ebee69d08c2151bc4976ea8296852acdffac2c7d5766d6e5b5e35d501"
+    },
+    "tests": {
+      "path": "tasks/TM062/l3_test_manifest.json",
+      "sha256": "66d0d65e6fc61adc42fb28798817d5558f4a29755eb4ef8a692acc1ae51ed1fa"
+    },
+    "operator": "Sort in DESCENDING rather than ASCENDING order using the stated adjacent bubble procedure, and count exchanges. Equal elements are still never swapped.",
+    "correctness_argument": "An adjacent strict-inversion swap reduces the inversion count by exactly one, and sorted output has zero inversions. Thus the raw swap count equals the number of pairs i<j with a_i>a_j. A Fenwick count computes this in O(n log n). Descending swaps similarly equal pairs a_i<a_j. The oracle literally runs all bubble-sort passes and counts performed exchanges.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "boundary_extra_03",
+      "boundary_extra_04",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/codenet_p00167/raw_fast.cpp",
+      "sha256": "2daeadafe486d787f3562193d1ac2a45670084afe1456c030fb9036b76fb66f2",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/codenet_p00167/l3_fast.cpp",
+      "sha256": "c1b67e3157aaefbbad7e65f3ec8954a2d728b2748e18452657fdb1f30731a05b",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/codenet_p00167/raw_slow.cpp",
+      "sha256": "4ccb0924f073e945daf3ccade2ca6430e54dbada2657c5b1b9e290fbba988ac0",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/codenet_p00167/l3_slow.cpp",
+      "sha256": "aee90a5be00f53c6b22efabf16537f0876ec4ff1c65cbbe9765bede72b1c329c",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/codenet_p00167/raw_fast.cpp",
+      "sha256": "2daeadafe486d787f3562193d1ac2a45670084afe1456c030fb9036b76fb66f2",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM062/report.json",
+      "sha256": "248a2ec801e85c43fe6aebe558d0491fd2c779c50478bd8a1f74c0032dcb1abb"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "codenet_p00167",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "codenet_p00167"
+}

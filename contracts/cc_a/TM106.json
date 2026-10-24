@@ -1,0 +1,200 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM106",
+  "source_identity": "codecontests:5:p03634 AtCoder Beginner Contest 070 - Transit Tree Path",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:5:p03634 AtCoder Beginner Contest 070 - Transit Tree Path"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM106/raw.txt",
+      "sha256": "a0d8018d004dfbb18cc34b493e9f3f2e8696346b4f8968676ecb72f03e5ed62d"
+    },
+    "provenance": {
+      "path": "tasks/TM106/raw_provenance.json",
+      "sha256": "a6a828918b4d98f81fb1bf26e767de076a63a305ba919a85b941f27030aa893f"
+    },
+    "tests": {
+      "path": "tasks/TM106/raw_test_manifest.json",
+      "sha256": "9d26fdf6da4c0d125d65748ba629e359aa709a4b823b2d9fb2163fddbf573995"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM106/l1.txt",
+      "sha256": "0f618df9b6a207304262c6ce19009936fd26dcec728d0ea62880273cb89294ff"
+    },
+    "certificate": {
+      "path": "tasks/TM106/l1_certificate.json",
+      "sha256": "7c5dfce59711f6c2c6b099548128e191ca8108fc6141889daad3219afc69bf8d"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM106/raw_test_manifest.json",
+      "sha256": "9d26fdf6da4c0d125d65748ba629e359aa709a4b823b2d9fb2163fddbf573995"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM106/l2.txt",
+      "sha256": "d2e526c624912feec48a8ebce21564aee46d3c5735db17c122327d5627e75db2"
+    },
+    "certificate": {
+      "path": "tasks/TM106/l2_certificate.json",
+      "sha256": "0cb8af6f912a6ee5508ca596c63f6708ee7f362cc80fa7f550faf9256cc0adf7"
+    },
+    "tests": {
+      "path": "tasks/TM106/l2_test_manifest.json",
+      "sha256": "63b6b22e058597f3056687d18b0f232e47bcac8976d2e64aedea5dc9bd93d6cb"
+    },
+    "axis": "N",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM106/l3.txt",
+      "sha256": "4fcf50fcae2aa92ef270091e711bb5ba1375befd6f9adedff4adca769e37a27d"
+    },
+    "tests": {
+      "path": "tasks/TM106/l3_test_manifest.json",
+      "sha256": "79884daf8928bddf58cf3e925f16da620e9fcb008cb2bb18f96add5bea02c761"
+    },
+    "operator": "The walk is no longer required to pass throughK: output the ordinary shortest x-to-y distance.",
+    "correctness_argument": "A tree has a unique path between any two vertices. ViaK length is distK[x]+distK[y]. Ordinary path length subtracts twice the distance of their lowest common ancestor when rooted atK. The oracle traverses the tree independently for each requested source-target distance.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 30,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_0",
+      "boundary_extra_1",
+      "boundary_extra_2",
+      "boundary_extra_3",
+      "boundary_extra_4",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_009",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_020",
+      "small_random_022",
+      "small_random_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/cc_a_batch4/atcoder_abc070_d/raw_fast.cpp",
+      "sha256": "95f31240a82e75e88c36ce816fc991e58684602f645ea9f683faf5d2b99c8012",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/cc_a_batch4/atcoder_abc070_d/l3_fast.cpp",
+      "sha256": "a338e68fb8dd80841c15fee99e17656f1fcb695ea3a688fbaa76a89f4d715683",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/cc_a_batch4/atcoder_abc070_d/raw_oracle.cpp",
+      "sha256": "1aa8da9d73dddc98967e68d8cc899efe6ee87c4d2e8a8c3f2bd6db4bd2053125",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/cc_a_batch4/atcoder_abc070_d/l3_oracle.cpp",
+      "sha256": "0c8498f587dbdf3b0d0566c621576484fb91e25ffb531f28b73c073908671e33",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/cc_a_batch4/atcoder_abc070_d/raw_fast.cpp",
+      "sha256": "95f31240a82e75e88c36ce816fc991e58684602f645ea9f683faf5d2b99c8012",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM106/report.json",
+      "sha256": "fb9824cc18f2e378f04112f17d14dfb60b863d6e5e2d8076700b42480b992ae7"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/cc_a_batch4.py",
+    "recipe_id": "atcoder_abc070_d",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/cc_a_batch4.py",
+  "recipe_id": "atcoder_abc070_d"
+}

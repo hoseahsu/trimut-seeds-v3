@@ -1,0 +1,267 @@
+{
+  "schema": "trimut.strict.cc_b.v1",
+  "seed_id": "TM138",
+  "source_identity": "codecontests:6:p02260 Selection Sort",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codenet_p02260"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM138/raw.txt",
+      "sha256": "bf1ecfe82231b75f81a0abd6b158a37b524336daee4441abf686e058c62e4a08"
+    },
+    "provenance": {
+      "path": "tasks/TM138/raw_provenance.json",
+      "sha256": "7f5337a2f66cc1af8c7b643efd42439e2f3fa86c44826f892b1fb0df8589c1cd"
+    },
+    "tests": {
+      "path": "tasks/TM138/raw_test_manifest.json",
+      "sha256": "588ff2d708427f86efe12d306cad7d8cc9bfe51c26417d6b9c0051316a88a840"
+    },
+    "native_upper_bound_reached": true,
+    "unattainable_literal_cap_note": null,
+    "all_original_examples_included": true,
+    "native_contract": {
+      "seed_id": "TM138",
+      "recipe_id": "codenet_p02260",
+      "source_sha256": "bf1ecfe82231b75f81a0abd6b158a37b524336daee4441abf686e058c62e4a08",
+      "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+      "native_axes": [
+        {
+          "name": "N",
+          "upper_inclusive": 100,
+          "proposed_l2_upper_inclusive": 100000
+        }
+      ],
+      "native_invariants": "sequence elements have no explicit numeric upper/lower bound in source; do not fabricate native bound",
+      "source_evidence": [
+        {
+          "line": 5,
+          "text": "1 for i = 0 to A.length-1"
+        },
+        {
+          "line": 7,
+          "text": "3     for j = i to A.length-1"
+        },
+        {
+          "line": 8,
+          "text": "4         if A[j] < A[mini]"
+        },
+        {
+          "line": 17,
+          "text": "Constraints"
+        },
+        {
+          "line": 19,
+          "text": "1 ≤ N ≤ 100"
+        }
+      ],
+      "status": "contract_transcription_for_implementation;L2proposal_not_yet_validated",
+      "preserve_other_native_bounds": true
+    }
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM138/l1.txt",
+      "sha256": "f5447e393e6b4f7b6d2c133f1a42e9c91a3554ebdee558f31aa54cb5b899f12a"
+    },
+    "certificate": {
+      "path": "tasks/TM138/l1_certificate.json",
+      "sha256": "116913f1303a1e1c7b4e7dc106498298731f7946f36e8e3ba3e13b2a3f6dd87e"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM138/raw_test_manifest.json",
+      "sha256": "588ff2d708427f86efe12d306cad7d8cc9bfe51c26417d6b9c0051316a88a840"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM138/l2.txt",
+      "sha256": "f8917e05153c01c3780d7ac675a98ad57e19b900b65b75d213df63a63a9d418e"
+    },
+    "tests": {
+      "path": "tasks/TM138/l2_test_manifest.json",
+      "sha256": "84946ff1fb3051bc82a4973cccd13d83e76e8aac1a2d19a34f06753832453708"
+    },
+    "axis": "N",
+    "original_upper": 100,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "all_native_inputs_remain_legal": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "The original upper bound is extended. No claim that every native-passing algorithm times out only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM138/l3.txt",
+      "sha256": "46c913019d7b9ba294bc15f6b2e66d806a6d55fc19808064638c387bfc6baff1"
+    },
+    "tests": {
+      "path": "tasks/TM138/l3_test_manifest.json",
+      "sha256": "576fef0312b7db4fca7766da820b88cb548bddd3dbc404c9524a9fd493e6ef36"
+    },
+    "operator": "Run the specified selection-sort pseudocode with the strict comparison A[j] > A[best] instead of <. Return the descending array and the number of nontrivial swaps. Equal values still select the first suffix occurrence.",
+    "correctness_argument": "A segment tree returns the suffix extreme with smallest-index tie breaking; updating both swapped positions exactly simulates selection sort in O(n log n). The independent oracle directly executes the pseudocode.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 28,
+    "independent_structured_native_upper_agreement": true,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "original_statement_sample_1",
+      "boundary_boundary_1",
+      "small_small_00",
+      "small_small_01",
+      "small_small_02",
+      "small_small_03",
+      "small_small_04",
+      "small_small_05",
+      "small_small_06",
+      "small_small_07",
+      "small_small_08",
+      "small_small_09",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23",
+      "arbitrary_precision_boundary"
+    ],
+    "witness_check": "Raw output rejected by L3 semantic checker against independent oracle",
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "native/assets/selection_sort.cpp",
+      "sha256": "4e93572804b9cd89a9688817b7f929bd9f4abf9dd1b4935cb7f0f473b6c38e61",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "native/assets/selection_sort.cpp": "4e93572804b9cd89a9688817b7f929bd9f4abf9dd1b4935cb7f0f473b6c38e61",
+        "native/assets/selection_sort_l3.cpp": "83f22d872befab2bded903c0155c0062ff122b377e5f08796be9730a0629fd15",
+        "native/assets/source_TM162_corrected.cpp": "b51b0d83cbbd25bca646c107ef27c7a6caddf01bd96f1a52410c2e90722ecb75",
+        "native/assets/source_TM163_corrected.cpp": "7eab20dc1c48c20360f8730f7f65384c37f1ea3ab53b5f94cc58980fb949c44f",
+        "native/assets/source_TM201_corrected.cpp": "f5668ebcf92ab7fe68d2022617ec5a6c4f9b2dc07a36a68534483ef3b2c451a4"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "native/assets/selection_sort_l3.cpp",
+      "sha256": "83f22d872befab2bded903c0155c0062ff122b377e5f08796be9730a0629fd15",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "native/assets/selection_sort.cpp": "4e93572804b9cd89a9688817b7f929bd9f4abf9dd1b4935cb7f0f473b6c38e61",
+        "native/assets/selection_sort_l3.cpp": "83f22d872befab2bded903c0155c0062ff122b377e5f08796be9730a0629fd15",
+        "native/assets/source_TM162_corrected.cpp": "b51b0d83cbbd25bca646c107ef27c7a6caddf01bd96f1a52410c2e90722ecb75",
+        "native/assets/source_TM163_corrected.cpp": "7eab20dc1c48c20360f8730f7f65384c37f1ea3ab53b5f94cc58980fb949c44f",
+        "native/assets/source_TM201_corrected.cpp": "f5668ebcf92ab7fe68d2022617ec5a6c4f9b2dc07a36a68534483ef3b2c451a4"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch2/oracle.py",
+      "sha256": "64de3a33af80b761ef390cb21df3f2cbcece316e6c7a13fb21bc118bd89efa2a",
+      "args": [
+        "1",
+        "raw"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch2/oracle.py",
+      "sha256": "64de3a33af80b761ef390cb21df3f2cbcece316e6c7a13fb21bc118bd89efa2a",
+      "args": [
+        "1",
+        "l3"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch2.py",
+    "recipe_id": "codenet_p02260"
+  },
+  "validator": {
+    "path": "native/cc_b83.py",
+    "sha256": "0b1a6d69b5a8f99a4ae66b941682a287bad3aa12e5f71c223ace682b8b8e9f79",
+    "function": "validate",
+    "seed_argument": 138,
+    "conditions": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "l2",
+      "l3": "raw"
+    },
+    "bounds_dependency": {
+      "path": "contracts/cc165_native.json",
+      "sha256": "f9e64ff23d2b03f7c000ec59127c7a0fbaabf47f2e8722332c91740901573dd2"
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap unshare-all, no network; compilation also isolated",
+    "cpu_budget_seconds": 5,
+    "memory_mb": 2048,
+    "experimental_memory_mb": 2048,
+    "original_resource_limit_claim": false,
+    "cpu_core": 3
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_cc_b/TM138/report.json",
+      "sha256": "7190bcd82734ad56f1891ba97ab05d9576537d9d1c786bd04c03cefade3bbd41"
+    },
+    "supplement_report": {
+      "path": "validation/strict_cc_b_supplement/TM138/report.json",
+      "sha256": "75445b2a90185ab8a535696a4dda2d78af7593e27130b2e931996464f95df46d"
+    },
+    "resolution": {
+      "path": "tasks/TM138/validation_resolution.json",
+      "sha256": "7759ecb340cfad1f0642a9454e58f4f38170cfb5d6ea120e515bb98d046dafbc"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM138/mutation_edits.json",
+      "sha256": "83e4a78aeb4817dc48faad0184eb83cf1671f4a93f140760d55ab019d5a8abfd"
+    },
+    "upstream_exclusions": {
+      "path": "tasks/TM138/upstream_exclusion_ledger.json",
+      "sha256": "b3c34d48926e0850e0db382d1ccd42f78d889b4f6514927a27750de83e91a860"
+    },
+    "sample_extractor": {
+      "path": "native/cc_b_samples.py",
+      "sha256": "7051895f4b747a62b74f51b32bc936da0c0ee3909c2ea3a708b22955c997425e"
+    },
+    "scale_certificate_code": {
+      "path": "native/cc_b_extensions.py",
+      "sha256": "57ab2dd1a9ddca30aff74f9be5acab2f4a9c1439e4081a5246d89165d6fb5ac6"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "trimut.strict.root.v1",
+  "seed_id": "TM002",
+  "source_identity": "codeforces:1101_A",
+  "source_url": "https://codeforces.com/problemset/problem/1101/A",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codeforces:1101_A"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM002/raw.txt",
+      "sha256": "94641988fe140d899edb96e1c3d3916c8462f43f10ddc943dab83540de3a6826"
+    },
+    "provenance": {
+      "path": "tasks/TM002/raw_provenance.json",
+      "sha256": "2330ed986c5dfcdf8b84ef3fb1f5df3ce15aab7b0d455a439ef07693a487c3f9"
+    },
+    "tests": {
+      "path": "tasks/TM002/raw_test_manifest.json",
+      "sha256": "16a624de47f39fa872b86bc692288838869973d360d3bad778f96413ebcc1fe4"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM002/l1.txt",
+      "sha256": "94d1cf6d5ba17ffb61e7003d98b723c83eb390b43ed17a64a77f6e9b8971d1da"
+    },
+    "certificate": {
+      "path": "tasks/TM002/l1_certificate.json",
+      "sha256": "e8a0b264be823d985c5186279db600fe6081dc6e0c887fb899ff25bfbd6ba9db"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM002/raw_test_manifest.json",
+      "sha256": "16a624de47f39fa872b86bc692288838869973d360d3bad778f96413ebcc1fe4"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM002/l2.txt",
+      "sha256": "61f3e8b19be67429904304753496941e61655e6875989b0b5578d0e2afd5f891"
+    },
+    "tests": {
+      "path": "tasks/TM002/l2_test_manifest.json",
+      "sha256": "6becf6bb8d09e7a3a9569d0e1ab71345011b7de793cc5092e27d1d02803efa80"
+    },
+    "axis": "q",
+    "original_upper": 500,
+    "expanded_upper": 50000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "Genuine original-bound expansion, not evidence of a forced algorithm change."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM002/l3.txt",
+      "sha256": "56dc738ce3cd27b8bd7034ba0598a6a6e8c2a725728b2c1831c7c576ad970da7"
+    },
+    "tests": {
+      "path": "tasks/TM002/l3_test_manifest.json",
+      "sha256": "27a1dead73ed97dace88bb425ede2fc5e61c5b77ec6b4d1b61752143b766cfeb"
+    },
+    "operator": "Return the smallest positive multiple of d inside [l,r], or -1 if none exists.",
+    "correctness_argument": "Outside: d if d<l, otherwise (floor(r/d)+1)d. Inside: ceil(l/d)d if at most r. The oracle enumerates positive multiples.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_000",
+      "boundary_boundary_001",
+      "small_small_000",
+      "small_small_001",
+      "small_small_002",
+      "small_small_003",
+      "small_small_004",
+      "small_small_005",
+      "small_small_006",
+      "small_small_007",
+      "small_small_008",
+      "small_small_009",
+      "small_small_010",
+      "small_small_011",
+      "small_small_012",
+      "small_small_013",
+      "small_small_014",
+      "small_small_015",
+      "small_small_016",
+      "small_small_017",
+      "small_small_018",
+      "small_small_019",
+      "small_small_020",
+      "small_small_021",
+      "small_small_022",
+      "small_small_023"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "integer",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "integer",
+        "0"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/root_batch/fast.cpp",
+      "sha256": "2296ff6ac93462da4ad8dfec82fadd7b97162707e22c9bc2c54aa9356e495255",
+      "args": [
+        "integer",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/root_batch/oracle.cpp",
+      "sha256": "11c822b42d952bc62b3779516fd722feee69b05f8594d877a6b095db885aa753",
+      "args": [
+        "integer",
+        "1"
+      ],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "scale_raw_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "2",
+        "0"
+      ]
+    },
+    "scale_l3_oracle": {
+      "path": "validation/source_snapshots/4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0.py",
+      "sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/root_batch.py",
+    "recipe_id": "cf_1101_A"
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_root/TM002/report.json",
+      "sha256": "d9be4032b8e41e3a18441967d994e69f916adc7a165b506b2e2606c4e737eabb"
+    },
+    "independent_scale_report": {
+      "path": "validation/root_scale/TM002/report.json",
+      "sha256": "67ab56b7dffdf114ba9388022b6e5bc744d4b98024ad6730a25089a2c03b353d"
+    },
+    "resolution": {
+      "path": "tasks/TM002/validation_resolution.json",
+      "sha256": "cb4e5d2a9322375da8f49b1dd749396a977f39f81442af4cf1427d8b1a258ab7"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM002/mutation_edits.json",
+      "sha256": "4ac5dad13866d44fc0546b8807a8a14a56c30e49844f09574f054dbca38fd58c"
+    },
+    "current_validator": {
+      "path": "native/root55.py",
+      "sha256": "406f0b87872ad88c80610956b7f4745ea5290753d0d92b7b29fc9e4733363a77"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

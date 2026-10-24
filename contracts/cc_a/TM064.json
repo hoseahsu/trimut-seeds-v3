@@ -1,0 +1,199 @@
+{
+  "schema": "trimut.strict.cc_a.v1",
+  "seed_id": "TM064",
+  "source_identity": "codecontests:3:discover-the-monk",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codecontests:3:discover-the-monk"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM064/raw.txt",
+      "sha256": "47f4618c0fb9fd1faf0a7a60982dd03214c67b71975ca7d9cadd319080ea115c"
+    },
+    "provenance": {
+      "path": "tasks/TM064/raw_provenance.json",
+      "sha256": "224cb905a9bd0130e4f061970fab899edbf6a191546cd1d18a85ce0c1be4d7ef"
+    },
+    "tests": {
+      "path": "tasks/TM064/raw_test_manifest.json",
+      "sha256": "c8b1884ab98a6a1cdc77a9e6ec8230deaf17e12466ba6a09b6aba631ce6721c2"
+    },
+    "native_upper_bound_reached": true,
+    "all_original_examples_included": true
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM064/l1.txt",
+      "sha256": "8ed6fc08e16ca8dd053537d4a14c83f68ab319158377da6b73dac6987c491663"
+    },
+    "certificate": {
+      "path": "tasks/TM064/l1_certificate.json",
+      "sha256": "9bb940d4eb8b7f772b92e2b551a587f62282f71c53eaf93319a9c4cbea4b29bf"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM064/raw_test_manifest.json",
+      "sha256": "c8b1884ab98a6a1cdc77a9e6ec8230deaf17e12466ba6a09b6aba631ce6721c2"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM064/l2.txt",
+      "sha256": "fb99a25785c38bb6c33ee37ba356dd5360dc0ba61bb9abdc026debcc71fe1882"
+    },
+    "certificate": {
+      "path": "tasks/TM064/l2_certificate.json",
+      "sha256": "d19d2cebc28de42f2b591df8b46b5f05c26204ee5f4695636ce4eee19e2281bd"
+    },
+    "tests": {
+      "path": "tasks/TM064/l2_test_manifest.json",
+      "sha256": "b1bb56c77d638bb0af1cd1d8b2ca35dd3ee603723c6c46554e0ebeeadb82040f"
+    },
+    "axis": "N",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "A strict original-bound expansion with measured execution, not evidence that passing the original maximum forces algorithm replacement."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM064/l3.txt",
+      "sha256": "a7eacb61bfee34a181b594dbdc6a7347efb020ea7d17f224cec0fc083a0f66ef"
+    },
+    "tests": {
+      "path": "tasks/TM064/l3_test_manifest.json",
+      "sha256": "9260620e4d9b419310f24a59ac9fdc4900f9d5f2919cd2643b2fe8d4441d3b79"
+    },
+    "operator": "For each query X print YES exactly when X occurs AT LEAST TWICE in the array, instead of at least once.",
+    "correctness_argument": "A balanced map counts each value exactly once per occurrence and answers whether its count reaches the required threshold (raw 1, L3 2). The oracle independently scans the entire array for every query and counts equality matches.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 31,
+    "native_domain_runs_passed": true,
+    "native_upper_independent_check_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_semantic_witness",
+      "boundary_extra_00",
+      "boundary_extra_01",
+      "boundary_extra_02",
+      "boundary_extra_03",
+      "small_random_000",
+      "small_random_001",
+      "small_random_002",
+      "small_random_003",
+      "small_random_004",
+      "small_random_005",
+      "small_random_006",
+      "small_random_007",
+      "small_random_008",
+      "small_random_010",
+      "small_random_011",
+      "small_random_012",
+      "small_random_013",
+      "small_random_014",
+      "small_random_015",
+      "small_random_016",
+      "small_random_017",
+      "small_random_018",
+      "small_random_019",
+      "small_random_021",
+      "small_random_022",
+      "small_random_023",
+      "original_sample_recovered_0"
+    ],
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch/hackerearth_discover_the_monk/raw_fast.cpp",
+      "sha256": "cc707a575b7dc22735726a5cb312e6ada40e3af30f6224d2f1859af781dbaa2e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch/hackerearth_discover_the_monk/l3_fast.cpp",
+      "sha256": "f5d905ae9750afc331fda4cd42e5f935075526f5f0bbc4972bb9137aac4f2381",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch/hackerearth_discover_the_monk/raw_slow.cpp",
+      "sha256": "508455f05df52d32d8ceaf0ac1113ad766887f6d5f0b92222541d963539fb695",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch/hackerearth_discover_the_monk/l3_slow.cpp",
+      "sha256": "929b85d8754117f84565845afa4ff118f0aedf20525d722ab19a45dc608d84fb",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l2_fast": {
+      "path": "assets/codecontests_batch/hackerearth_discover_the_monk/raw_fast.cpp",
+      "sha256": "cc707a575b7dc22735726a5cb312e6ada40e3af30f6224d2f1859af781dbaa2e",
+      "args": [],
+      "include_dirs": [],
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    }
+  },
+  "native_input_contract": {
+    "path": "native/cc_a82.py",
+    "sha256": "03b38fe921af676cb37185dbecd354103151ae23436e74743ae7a010fcbe98b6"
+  },
+  "validation": {
+    "execution": {
+      "path": "validation/strict_cc_a/TM064/report.json",
+      "sha256": "06ef5176585d4d16fa81354b551b0acabe5d3ab0f98044691ee053a1596dc922"
+    },
+    "independent_scale": {
+      "path": "validation/cc_a_scale_audit.json",
+      "sha256": "62623c733056b998b3a288bcd20dc130a4f318d0aecf615ee7d5dd1875c1d7e2"
+    },
+    "source_portability_adjudication": null
+  },
+  "budget": {
+    "cpu_seconds": 5,
+    "memory_mb": 2048,
+    "origin": "research protocol, identical in Raw/L1/L2/L3"
+  },
+  "admitted": true,
+  "limitations": [
+    "Finite tests and constructive oracle checks do not prove correctness on all legal inputs.",
+    "Large arbitrary source inputs may use fast reference outputs; per-case independent checking is explicitly marked.",
+    "L2 expands a real original bound; no general forced algorithm-separation claim."
+  ],
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch.py",
+    "recipe_id": "hackerearth_discover_the_monk",
+    "output_comparator": "source-matching comparator in recipe; TM137 absolute tolerance<1e-6"
+  },
+  "recipe_module": "recipes/codecontests_batch.py",
+  "recipe_id": "hackerearth_discover_the_monk"
+}

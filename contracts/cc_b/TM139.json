@@ -1,0 +1,350 @@
+{
+  "schema": "trimut.strict.cc_b.v1",
+  "seed_id": "TM139",
+  "source_identity": "codecontests:1:walk",
+  "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "codechef_walk"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM139/raw.txt",
+      "sha256": "a658f02907df4191712565f4c01337711d6176a2d6fac9b1e6e65a9bf4d3b660"
+    },
+    "provenance": {
+      "path": "tasks/TM139/raw_provenance.json",
+      "sha256": "7eb9615d581b43907aceaa2813c5e714be740f3a838376e869e44643935a43f1"
+    },
+    "tests": {
+      "path": "tasks/TM139/raw_test_manifest.json",
+      "sha256": "3f0645215a56e2775d8159496909782dd4f6588738fa550eba75fa3a58b12925"
+    },
+    "native_upper_bound_reached": true,
+    "unattainable_literal_cap_note": null,
+    "all_original_examples_included": true,
+    "native_contract": {
+      "seed_id": "TM139",
+      "recipe_id": "codechef_walk",
+      "source_sha256": "a658f02907df4191712565f4c01337711d6176a2d6fac9b1e6e65a9bf4d3b660",
+      "source_url": "https://huggingface.co/datasets/deepmind/code_contests",
+      "native_axes": [
+        {
+          "name": "N",
+          "upper_inclusive": 100000,
+          "proposed_l2_upper_inclusive": 300000
+        }
+      ],
+      "native_invariants": "T1..10;Wi1..10^6",
+      "source_evidence": [
+        {
+          "line": 6,
+          "text": " There is exactly one shop on each segment. Each shop has an attractiveness. If it's attractiveness is W and Chef and his girlfriend move with velocity V then if V < W girlfriend will run away into the shop and the promenade will become ruined. "
+        },
+        {
+          "line": 25,
+          "text": "Constraints"
+        },
+        {
+          "line": 27,
+          "text": "1 ≤ T ≤ 10"
+        },
+        {
+          "line": 28,
+          "text": "1 ≤ N ≤ 10^5"
+        },
+        {
+          "line": 29,
+          "text": "1 ≤ Wi ≤ 10^6"
+        },
+        {
+          "line": 50,
+          "text": " If we choose velocity 6, on the first step we have 6 ≥ 6 everything is OK, then we should decrease the velocity to 5 and on the 2nd segment we'll receive 5 ≥ 5, again OK, and so on. "
+        }
+      ],
+      "status": "contract_transcription_for_implementation;L2proposal_not_yet_validated",
+      "preserve_other_native_bounds": true
+    }
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM139/l1.txt",
+      "sha256": "7ce636bf37ccb1bf932aa89f855592e0d6efe2d608917407a91d6c78bd8cec00"
+    },
+    "certificate": {
+      "path": "tasks/TM139/l1_certificate.json",
+      "sha256": "3f27cfb23bbabe48cb5c5b2aed28a42d9ad4121445a35c2ebea4fa23f848e9f9"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM139/raw_test_manifest.json",
+      "sha256": "3f0645215a56e2775d8159496909782dd4f6588738fa550eba75fa3a58b12925"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM139/l2.txt",
+      "sha256": "56442cd98ee39c4d55450f3f6fa7c99dec00acb2713cfa17ab7454a848518218"
+    },
+    "tests": {
+      "path": "tasks/TM139/l2_test_manifest.json",
+      "sha256": "0e32f016844bf253c979257ea7f0845d12845be65b769a4d779cbc75182c96e7"
+    },
+    "axis": "N",
+    "original_upper": 100000,
+    "expanded_upper": 300000,
+    "native_upper_bound_strictly_expanded": true,
+    "all_native_inputs_remain_legal": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "The original upper bound is extended. No claim that every native-passing algorithm times out only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM139/l3.txt",
+      "sha256": "0ad253bea76eaf4144607b83e6d67c4947403e8f28912f79a3bcfa4813e4f2f3"
+    },
+    "tests": {
+      "path": "tasks/TM139/l3_test_manifest.json",
+      "sha256": "81c0aa9b61d196a855553629c2176eb88c98f2fbb4850ab48765b38435725189"
+    },
+    "operator": "Between consecutive segments, decrease the velocity by at least 2 instead of at least 1. Retain the no-shopping condition V_i >= W_i, integer velocities, and minimization of the first velocity.",
+    "correctness_argument": "For decay d, every feasible initial velocity satisfies V_0 >= W_i+d*i; their maximum is feasible by decreasing exactly d. The oracle independently searches initial velocities and simulates every segment.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 25,
+    "independent_structured_native_upper_agreement": true,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_0",
+      "small_small_00",
+      "small_small_01",
+      "small_small_02",
+      "small_small_03",
+      "small_small_04",
+      "small_small_05",
+      "small_small_06",
+      "small_small_07",
+      "small_small_08",
+      "small_small_09",
+      "small_small_10",
+      "small_small_11",
+      "small_small_13",
+      "small_small_14",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_18",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_22",
+      "small_small_23"
+    ],
+    "witness_check": "Raw output rejected by L3 semantic checker against independent oracle",
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch2/codechef_walk_raw.cpp",
+      "sha256": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "assets/codecontests_batch2/atcoder_abc140_b_l3.cpp": "8f18de37991bb93e912be72ced8f17d23ac17bd97aaf608d4b0c2eb159d4ee6e",
+        "assets/codecontests_batch2/atcoder_abc140_b_raw.cpp": "3aa0144536b6b90cb1235bde08cb30269654f27d91ba21c1057a5d7a5c26dffd",
+        "assets/codecontests_batch2/atcoder_abc140_b_slow.cpp": "fbe2be99a7cc87ea5c72b45b36d8e954a2c83babea75a9e501871eda1868bdc4",
+        "assets/codecontests_batch2/atcoder_abc154_e_l3.cpp": "cfb75961409191ea674662b54118e386a3dfc4b46ce2ba833835b0f622319f4b",
+        "assets/codecontests_batch2/atcoder_abc154_e_raw.cpp": "07e017d9847dd4e5a51c4b45688483e1d56a529c700772a6f1ca1a16102ed7f6",
+        "assets/codecontests_batch2/atcoder_abc154_e_slow.cpp": "be15debb9f41aefb748c8d6f1448c729fb21fee4a3a9ce2de1596bfddc78cd0a",
+        "assets/codecontests_batch2/cf_1155_a_l3.cpp": "e2b6cd4aeb8641a77e31ada0739f918df2825729392f774e5ec6466c2ea20191",
+        "assets/codecontests_batch2/cf_1155_a_raw.cpp": "f1f217b3d6bd16e9d0ebd144cdd04a4b88359a9e0336e60c59b9d1cabed4d7a8",
+        "assets/codecontests_batch2/cf_1155_a_slow.cpp": "a321b720f76ce25ee3ad9a189933359440924be904f86391e7c0f67385aec050",
+        "assets/codecontests_batch2/cf_339_a_l3.cpp": "c1a6f938c9ca4f6383c970d3f922504c634ec64ae80699ef486e044c7fc89012",
+        "assets/codecontests_batch2/cf_339_a_raw.cpp": "aa39912c9a22d9329140e62f2bf9885fb1284ad6a24bcc5eb4e20c6a0902dcac",
+        "assets/codecontests_batch2/cf_339_a_slow.cpp": "9b2d63b1b158a5f6caf9cae05d47b2542a364284d4f65748ed79ca117c13a72a",
+        "assets/codecontests_batch2/cf_433_a_l3.cpp": "bce5bde31cb5beb966a67b93d0304b841f89cb37d2fd82f9345b3c0363da00eb",
+        "assets/codecontests_batch2/cf_433_a_raw.cpp": "3c626d518c867e179cc1d689313eb5d5b1e6bbd05cf49541684ccfdec83720d4",
+        "assets/codecontests_batch2/cf_433_a_slow.cpp": "57b710ea5e69c0aa2aefdc0bbe3fee35a6f2e5727ce11d460bfddb6b37515ba9",
+        "assets/codecontests_batch2/cf_500_c_l3.cpp": "1237a1c3b0505793294f0d9682669f51f5cf31cc58aea0fc251229747a66fa0a",
+        "assets/codecontests_batch2/cf_500_c_raw.cpp": "2f254139450b5302248ae51f6ce86f4ac1589e82b10a02bf2cf1998ef7f87399",
+        "assets/codecontests_batch2/cf_500_c_slow.cpp": "57886e5b88d11f5364217889ba1a976dc1413e7a4ff355987f5d1b30249c6cfc",
+        "assets/codecontests_batch2/cf_5_a_l3.cpp": "416d8ddeaf8a45c3c66442b2002c3467f9f8dc2a34f6d7265616a9df1752c1b9",
+        "assets/codecontests_batch2/cf_5_a_raw.cpp": "405a1538abc4c2d937494e454f7d22568c1c576811e5844c526a1caf3b26f990",
+        "assets/codecontests_batch2/cf_5_a_slow.cpp": "b630e823dc1a168bc52b34411806b3bbf497678a35f2a1c3c80fd4de0ec2adaa",
+        "assets/codecontests_batch2/cf_670_b_l3.cpp": "2c027d8b9b38c9cbfee860df063ec0e8e1d515e19a61ba2821bf73972eee0cf9",
+        "assets/codecontests_batch2/cf_670_b_raw.cpp": "2cf47047b005e64ac316ad4f4fd638a0255fa00a0ca1b0a6a74ae1ed62d9e8f0",
+        "assets/codecontests_batch2/cf_670_b_slow.cpp": "85084c39ad3097a76a6a6d853d5df13829fbbe46f5b801151ad102969294d627",
+        "assets/codecontests_batch2/cf_691_d_l3.cpp": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+        "assets/codecontests_batch2/cf_691_d_raw.cpp": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+        "assets/codecontests_batch2/cf_691_d_slow.cpp": "dadb30ab81a4d73549a91c98c7988173a152fa03e0d8c5ecb6dd1c3186202ad8",
+        "assets/codecontests_batch2/cf_977_b_l3.cpp": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+        "assets/codecontests_batch2/cf_977_b_raw.cpp": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+        "assets/codecontests_batch2/cf_977_b_slow.cpp": "d4f8ee3d30f7762f19bc7538cd0e357eedca1727dbb5a744137cba8b7ce8e625",
+        "assets/codecontests_batch2/codechef_walk_l3.cpp": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+        "assets/codecontests_batch2/codechef_walk_raw.cpp": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+        "assets/codecontests_batch2/codechef_walk_slow.cpp": "2e162829a34e73dd5b753c848a33426b5cb72099ff04c5e956ab1efeef020a5b",
+        "assets/codecontests_batch2/codenet_p02260_l3.cpp": "a91de935180eb15eadcfa152b6119a71cae684b3462ec64a38a3c16ca9ea8465",
+        "assets/codecontests_batch2/codenet_p02260_raw.cpp": "f266ee5a061653db099f4ba5eb6595d1a3c55649915d48a85094825111565565",
+        "assets/codecontests_batch2/codenet_p02260_slow.cpp": "47870f085b5b493ad2fde6e786e7749cc87c40d86b417673b5a2f386d17cf566",
+        "assets/codecontests_batch2/hackerearth_new_world_11_l3.cpp": "c631f7972bd9769c2e51a87b4a87e060a416a27ea1c2bf8891c827b09d8cacd6",
+        "assets/codecontests_batch2/hackerearth_new_world_11_raw.cpp": "fef7bd31122ff8dfa0079a2e20f4d298f91d42ce257050bf94f317b63e76b42f",
+        "assets/codecontests_batch2/hackerearth_new_world_11_slow.cpp": "9e6b3bb2fbf366751e53fabec4e0a3266c75a1e10f1a17fb7125311d9d805f8a",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_l3.cpp": "60b433a93377abc3b85a160805a0dde0125e8e05ef0c6c5c8da93eaa6ab0d0cf",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_raw.cpp": "e5fcd2c5db333b7ada1133784c1a9ec81bbb2d971cd9182c7f839662e28e414c",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_slow.cpp": "e6a3579affa2c51a0dfba9695be056a030c3626aca287c4a0e6985702e0c44a7",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_l3.cpp": "8ed307ee8b85f887d2b9ee5cd75c80d2aa00082c85e8b6fbe465d9be1c47f635",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_raw.cpp": "733518928f269f45aa3eb0954ea430334bca05d894764b76ee431f85fd6d2e97",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_slow.cpp": "ad87a3095b97d85abb0ea0ce90bcf6fb45409957b485c39b864ac75c1b0b4af3",
+        "assets/codecontests_batch2/solver.cpp": "a1eae581db4e8ace4a9fc86e4d465531d19d320505d3ae2f92ce5f1844667b53"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch2/codechef_walk_l3.cpp",
+      "sha256": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "assets/codecontests_batch2/atcoder_abc140_b_l3.cpp": "8f18de37991bb93e912be72ced8f17d23ac17bd97aaf608d4b0c2eb159d4ee6e",
+        "assets/codecontests_batch2/atcoder_abc140_b_raw.cpp": "3aa0144536b6b90cb1235bde08cb30269654f27d91ba21c1057a5d7a5c26dffd",
+        "assets/codecontests_batch2/atcoder_abc140_b_slow.cpp": "fbe2be99a7cc87ea5c72b45b36d8e954a2c83babea75a9e501871eda1868bdc4",
+        "assets/codecontests_batch2/atcoder_abc154_e_l3.cpp": "cfb75961409191ea674662b54118e386a3dfc4b46ce2ba833835b0f622319f4b",
+        "assets/codecontests_batch2/atcoder_abc154_e_raw.cpp": "07e017d9847dd4e5a51c4b45688483e1d56a529c700772a6f1ca1a16102ed7f6",
+        "assets/codecontests_batch2/atcoder_abc154_e_slow.cpp": "be15debb9f41aefb748c8d6f1448c729fb21fee4a3a9ce2de1596bfddc78cd0a",
+        "assets/codecontests_batch2/cf_1155_a_l3.cpp": "e2b6cd4aeb8641a77e31ada0739f918df2825729392f774e5ec6466c2ea20191",
+        "assets/codecontests_batch2/cf_1155_a_raw.cpp": "f1f217b3d6bd16e9d0ebd144cdd04a4b88359a9e0336e60c59b9d1cabed4d7a8",
+        "assets/codecontests_batch2/cf_1155_a_slow.cpp": "a321b720f76ce25ee3ad9a189933359440924be904f86391e7c0f67385aec050",
+        "assets/codecontests_batch2/cf_339_a_l3.cpp": "c1a6f938c9ca4f6383c970d3f922504c634ec64ae80699ef486e044c7fc89012",
+        "assets/codecontests_batch2/cf_339_a_raw.cpp": "aa39912c9a22d9329140e62f2bf9885fb1284ad6a24bcc5eb4e20c6a0902dcac",
+        "assets/codecontests_batch2/cf_339_a_slow.cpp": "9b2d63b1b158a5f6caf9cae05d47b2542a364284d4f65748ed79ca117c13a72a",
+        "assets/codecontests_batch2/cf_433_a_l3.cpp": "bce5bde31cb5beb966a67b93d0304b841f89cb37d2fd82f9345b3c0363da00eb",
+        "assets/codecontests_batch2/cf_433_a_raw.cpp": "3c626d518c867e179cc1d689313eb5d5b1e6bbd05cf49541684ccfdec83720d4",
+        "assets/codecontests_batch2/cf_433_a_slow.cpp": "57b710ea5e69c0aa2aefdc0bbe3fee35a6f2e5727ce11d460bfddb6b37515ba9",
+        "assets/codecontests_batch2/cf_500_c_l3.cpp": "1237a1c3b0505793294f0d9682669f51f5cf31cc58aea0fc251229747a66fa0a",
+        "assets/codecontests_batch2/cf_500_c_raw.cpp": "2f254139450b5302248ae51f6ce86f4ac1589e82b10a02bf2cf1998ef7f87399",
+        "assets/codecontests_batch2/cf_500_c_slow.cpp": "57886e5b88d11f5364217889ba1a976dc1413e7a4ff355987f5d1b30249c6cfc",
+        "assets/codecontests_batch2/cf_5_a_l3.cpp": "416d8ddeaf8a45c3c66442b2002c3467f9f8dc2a34f6d7265616a9df1752c1b9",
+        "assets/codecontests_batch2/cf_5_a_raw.cpp": "405a1538abc4c2d937494e454f7d22568c1c576811e5844c526a1caf3b26f990",
+        "assets/codecontests_batch2/cf_5_a_slow.cpp": "b630e823dc1a168bc52b34411806b3bbf497678a35f2a1c3c80fd4de0ec2adaa",
+        "assets/codecontests_batch2/cf_670_b_l3.cpp": "2c027d8b9b38c9cbfee860df063ec0e8e1d515e19a61ba2821bf73972eee0cf9",
+        "assets/codecontests_batch2/cf_670_b_raw.cpp": "2cf47047b005e64ac316ad4f4fd638a0255fa00a0ca1b0a6a74ae1ed62d9e8f0",
+        "assets/codecontests_batch2/cf_670_b_slow.cpp": "85084c39ad3097a76a6a6d853d5df13829fbbe46f5b801151ad102969294d627",
+        "assets/codecontests_batch2/cf_691_d_l3.cpp": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+        "assets/codecontests_batch2/cf_691_d_raw.cpp": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+        "assets/codecontests_batch2/cf_691_d_slow.cpp": "dadb30ab81a4d73549a91c98c7988173a152fa03e0d8c5ecb6dd1c3186202ad8",
+        "assets/codecontests_batch2/cf_977_b_l3.cpp": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+        "assets/codecontests_batch2/cf_977_b_raw.cpp": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+        "assets/codecontests_batch2/cf_977_b_slow.cpp": "d4f8ee3d30f7762f19bc7538cd0e357eedca1727dbb5a744137cba8b7ce8e625",
+        "assets/codecontests_batch2/codechef_walk_l3.cpp": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+        "assets/codecontests_batch2/codechef_walk_raw.cpp": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+        "assets/codecontests_batch2/codechef_walk_slow.cpp": "2e162829a34e73dd5b753c848a33426b5cb72099ff04c5e956ab1efeef020a5b",
+        "assets/codecontests_batch2/codenet_p02260_l3.cpp": "a91de935180eb15eadcfa152b6119a71cae684b3462ec64a38a3c16ca9ea8465",
+        "assets/codecontests_batch2/codenet_p02260_raw.cpp": "f266ee5a061653db099f4ba5eb6595d1a3c55649915d48a85094825111565565",
+        "assets/codecontests_batch2/codenet_p02260_slow.cpp": "47870f085b5b493ad2fde6e786e7749cc87c40d86b417673b5a2f386d17cf566",
+        "assets/codecontests_batch2/hackerearth_new_world_11_l3.cpp": "c631f7972bd9769c2e51a87b4a87e060a416a27ea1c2bf8891c827b09d8cacd6",
+        "assets/codecontests_batch2/hackerearth_new_world_11_raw.cpp": "fef7bd31122ff8dfa0079a2e20f4d298f91d42ce257050bf94f317b63e76b42f",
+        "assets/codecontests_batch2/hackerearth_new_world_11_slow.cpp": "9e6b3bb2fbf366751e53fabec4e0a3266c75a1e10f1a17fb7125311d9d805f8a",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_l3.cpp": "60b433a93377abc3b85a160805a0dde0125e8e05ef0c6c5c8da93eaa6ab0d0cf",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_raw.cpp": "e5fcd2c5db333b7ada1133784c1a9ec81bbb2d971cd9182c7f839662e28e414c",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_slow.cpp": "e6a3579affa2c51a0dfba9695be056a030c3626aca287c4a0e6985702e0c44a7",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_l3.cpp": "8ed307ee8b85f887d2b9ee5cd75c80d2aa00082c85e8b6fbe465d9be1c47f635",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_raw.cpp": "733518928f269f45aa3eb0954ea430334bca05d894764b76ee431f85fd6d2e97",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_slow.cpp": "ad87a3095b97d85abb0ea0ce90bcf6fb45409957b485c39b864ac75c1b0b4af3",
+        "assets/codecontests_batch2/solver.cpp": "a1eae581db4e8ace4a9fc86e4d465531d19d320505d3ae2f92ce5f1844667b53"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch2/oracle.py",
+      "sha256": "64de3a33af80b761ef390cb21df3f2cbcece316e6c7a13fb21bc118bd89efa2a",
+      "args": [
+        "2",
+        "raw"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch2/oracle.py",
+      "sha256": "64de3a33af80b761ef390cb21df3f2cbcece316e6c7a13fb21bc118bd89efa2a",
+      "args": [
+        "2",
+        "l3"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch2.py",
+    "recipe_id": "codechef_walk"
+  },
+  "validator": {
+    "path": "native/cc_b83.py",
+    "sha256": "0b1a6d69b5a8f99a4ae66b941682a287bad3aa12e5f71c223ace682b8b8e9f79",
+    "function": "validate",
+    "seed_argument": 139,
+    "conditions": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "l2",
+      "l3": "raw"
+    },
+    "bounds_dependency": {
+      "path": "contracts/cc165_native.json",
+      "sha256": "f9e64ff23d2b03f7c000ec59127c7a0fbaabf47f2e8722332c91740901573dd2"
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap unshare-all, no network; compilation also isolated",
+    "cpu_budget_seconds": 5,
+    "memory_mb": 2048,
+    "experimental_memory_mb": 2048,
+    "original_resource_limit_claim": false,
+    "cpu_core": 3
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_cc_b/TM139/report.json",
+      "sha256": "ed5fe61b5509ebdc15ad9be8527d474a78179f88ab2222fdf5eed751c2866550"
+    },
+    "supplement_report": {
+      "path": "validation/strict_cc_b_supplement/TM139/report.json",
+      "sha256": "a4a49b9675f68fc443c35bb4e410b19608d5fc5715fb116f1b40829943324e28"
+    },
+    "resolution": {
+      "path": "tasks/TM139/validation_resolution.json",
+      "sha256": "430ed63861588e125ad623400c6d6f814974bedabca751a8d0f56ff0dab38ab1"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM139/mutation_edits.json",
+      "sha256": "6b8ff4897c7ae4162951478599d94e70ff829f30d61dc69b16e2b01220843704"
+    },
+    "upstream_exclusions": {
+      "path": "tasks/TM139/upstream_exclusion_ledger.json",
+      "sha256": "5ffb7e4b52a4063a56a1be5b8950efd73b4ef7de5a0ec212f9cb0d19796812cc"
+    },
+    "sample_extractor": {
+      "path": "native/cc_b_samples.py",
+      "sha256": "7051895f4b747a62b74f51b32bc936da0c0ee3909c2ea3a708b22955c997425e"
+    },
+    "scale_certificate_code": {
+      "path": "native/cc_b_extensions.py",
+      "sha256": "57ab2dd1a9ddca30aff74f9be5acab2f4a9c1439e4081a5246d89165d6fb5ac6"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}

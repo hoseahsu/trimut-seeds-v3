@@ -1,0 +1,329 @@
+{
+  "schema": "trimut.strict.cc_b.v1",
+  "seed_id": "TM147",
+  "source_identity": "codeforces:977_B",
+  "source_url": "https://codeforces.com/problemset/problem/977/B",
+  "distinct_public_original": true,
+  "family_split_groups": [
+    "cf_977_b"
+  ],
+  "raw": {
+    "statement": {
+      "path": "tasks/TM147/raw.txt",
+      "sha256": "31f8ee251e704b750d9120b0ee01ca75fafdf322aad9385082844dedd9af32f0"
+    },
+    "provenance": {
+      "path": "tasks/TM147/raw_provenance.json",
+      "sha256": "a92529f51b4871aad265c89c1822a400b699419f78b20d2dfa479bad228735a3"
+    },
+    "tests": {
+      "path": "tasks/TM147/raw_test_manifest.json",
+      "sha256": "4f4f3a9eb70aefb87572fc9fee3171d9bf04aa400cd4a19cdc83183e3c76b75a"
+    },
+    "native_upper_bound_reached": true,
+    "unattainable_literal_cap_note": null,
+    "all_original_examples_included": true,
+    "native_contract": {
+      "seed_id": "TM147",
+      "recipe_id": "cf_977_b",
+      "source_sha256": "31f8ee251e704b750d9120b0ee01ca75fafdf322aad9385082844dedd9af32f0",
+      "source_url": "https://codeforces.com/problemset/problem/977/B",
+      "native_axes": [
+        {
+          "name": "n",
+          "upper_inclusive": 100,
+          "proposed_l2_upper_inclusive": 100000
+        }
+      ],
+      "native_invariants": "n>=2;uppercaseLatin;mostfrequenttwo-gram output nonunique",
+      "source_evidence": [
+        {
+          "line": 1,
+          "text": "Two-gram is an ordered pair (i.e. string of length two) of capital Latin letters. For example, \"AZ\", \"AA\", \"ZA\" — three distinct two-grams."
+        },
+        {
+          "line": 9,
+          "text": "The first line of the input contains integer number n (2 ≤ n ≤ 100) — the length of string s. The second line of the input contains the string s consisting of n capital Latin letters."
+        }
+      ],
+      "status": "contract_transcription_for_implementation;L2proposal_not_yet_validated",
+      "preserve_other_native_bounds": true
+    }
+  },
+  "l1": {
+    "statement": {
+      "path": "tasks/TM147/l1.txt",
+      "sha256": "3378cbec005cd88c340709e804bcb62ebd04f0f8f2de3d8d3c8f4e4b8ef1f760"
+    },
+    "certificate": {
+      "path": "tasks/TM147/l1_certificate.json",
+      "sha256": "4cac4601784852c4c5cabcf060223a20a62b2c8673481e2a6ffd1ca4186a1ed5"
+    },
+    "tests_must_equal_raw_manifest": {
+      "path": "tasks/TM147/raw_test_manifest.json",
+      "sha256": "4f4f3a9eb70aefb87572fc9fee3171d9bf04aa400cd4a19cdc83183e3c76b75a"
+    },
+    "constraints_unchanged": true
+  },
+  "l2": {
+    "statement": {
+      "path": "tasks/TM147/l2.txt",
+      "sha256": "244b1502997bce6d7f1c1db72cdcaa9390debc33a0bfbc67ef6c9d8cc622a0fc"
+    },
+    "tests": {
+      "path": "tasks/TM147/l2_test_manifest.json",
+      "sha256": "7304801c06f9105924c1a6f3943f067799966f71d0f243c1747173b73016cc71"
+    },
+    "axis": "n",
+    "original_upper": 100,
+    "expanded_upper": 100000,
+    "native_upper_bound_strictly_expanded": true,
+    "all_native_inputs_remain_legal": true,
+    "fast_program_passed_frozen_expanded_tests": true,
+    "algorithm_resource_separation_validated": false,
+    "separation_note": "The original upper bound is extended. No claim that every native-passing algorithm times out only after expansion."
+  },
+  "l3": {
+    "statement": {
+      "path": "tasks/TM147/l3.txt",
+      "sha256": "07876f45ffd9a19efd20cfa95cea9e6a67e18040d8bab546fa0db7618879c1bd"
+    },
+    "tests": {
+      "path": "tasks/TM147/l3_test_manifest.json",
+      "sha256": "b1cb9c6f2d21c7b668aa3b022662342e1073f4ecf379fa9fc392075543e82d87"
+    },
+    "operator": "Return any occurring two-gram with the minimum positive occurrence count, instead of maximum count. Occurrences may still overlap; absent two-grams are ineligible.",
+    "correctness_argument": "A histogram counts all overlapping windows exactly; taking the minimum over its support realizes the new objective. The independent oracle recounts each distinct candidate by scanning the entire string.",
+    "independent_small_oracle_agreement": true,
+    "independent_small_cases": 26,
+    "independent_structured_native_upper_agreement": true,
+    "native_domain_runs_passed": true,
+    "distinguishing_witnesses": [
+      "boundary_boundary_2",
+      "small_small_00",
+      "small_small_01",
+      "small_small_02",
+      "small_small_05",
+      "small_small_06",
+      "small_small_07",
+      "small_small_08",
+      "small_small_09",
+      "small_small_10",
+      "small_small_11",
+      "small_small_12",
+      "small_small_15",
+      "small_small_16",
+      "small_small_17",
+      "small_small_19",
+      "small_small_20",
+      "small_small_21",
+      "small_small_23"
+    ],
+    "witness_check": "Raw output rejected by L3 semantic checker against independent oracle",
+    "native_constraints_preserved": true
+  },
+  "programs": {
+    "raw_fast": {
+      "path": "assets/codecontests_batch2/cf_977_b_raw.cpp",
+      "sha256": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "assets/codecontests_batch2/atcoder_abc140_b_l3.cpp": "8f18de37991bb93e912be72ced8f17d23ac17bd97aaf608d4b0c2eb159d4ee6e",
+        "assets/codecontests_batch2/atcoder_abc140_b_raw.cpp": "3aa0144536b6b90cb1235bde08cb30269654f27d91ba21c1057a5d7a5c26dffd",
+        "assets/codecontests_batch2/atcoder_abc140_b_slow.cpp": "fbe2be99a7cc87ea5c72b45b36d8e954a2c83babea75a9e501871eda1868bdc4",
+        "assets/codecontests_batch2/atcoder_abc154_e_l3.cpp": "cfb75961409191ea674662b54118e386a3dfc4b46ce2ba833835b0f622319f4b",
+        "assets/codecontests_batch2/atcoder_abc154_e_raw.cpp": "07e017d9847dd4e5a51c4b45688483e1d56a529c700772a6f1ca1a16102ed7f6",
+        "assets/codecontests_batch2/atcoder_abc154_e_slow.cpp": "be15debb9f41aefb748c8d6f1448c729fb21fee4a3a9ce2de1596bfddc78cd0a",
+        "assets/codecontests_batch2/cf_1155_a_l3.cpp": "e2b6cd4aeb8641a77e31ada0739f918df2825729392f774e5ec6466c2ea20191",
+        "assets/codecontests_batch2/cf_1155_a_raw.cpp": "f1f217b3d6bd16e9d0ebd144cdd04a4b88359a9e0336e60c59b9d1cabed4d7a8",
+        "assets/codecontests_batch2/cf_1155_a_slow.cpp": "a321b720f76ce25ee3ad9a189933359440924be904f86391e7c0f67385aec050",
+        "assets/codecontests_batch2/cf_339_a_l3.cpp": "c1a6f938c9ca4f6383c970d3f922504c634ec64ae80699ef486e044c7fc89012",
+        "assets/codecontests_batch2/cf_339_a_raw.cpp": "aa39912c9a22d9329140e62f2bf9885fb1284ad6a24bcc5eb4e20c6a0902dcac",
+        "assets/codecontests_batch2/cf_339_a_slow.cpp": "9b2d63b1b158a5f6caf9cae05d47b2542a364284d4f65748ed79ca117c13a72a",
+        "assets/codecontests_batch2/cf_433_a_l3.cpp": "bce5bde31cb5beb966a67b93d0304b841f89cb37d2fd82f9345b3c0363da00eb",
+        "assets/codecontests_batch2/cf_433_a_raw.cpp": "3c626d518c867e179cc1d689313eb5d5b1e6bbd05cf49541684ccfdec83720d4",
+        "assets/codecontests_batch2/cf_433_a_slow.cpp": "57b710ea5e69c0aa2aefdc0bbe3fee35a6f2e5727ce11d460bfddb6b37515ba9",
+        "assets/codecontests_batch2/cf_500_c_l3.cpp": "1237a1c3b0505793294f0d9682669f51f5cf31cc58aea0fc251229747a66fa0a",
+        "assets/codecontests_batch2/cf_500_c_raw.cpp": "2f254139450b5302248ae51f6ce86f4ac1589e82b10a02bf2cf1998ef7f87399",
+        "assets/codecontests_batch2/cf_500_c_slow.cpp": "57886e5b88d11f5364217889ba1a976dc1413e7a4ff355987f5d1b30249c6cfc",
+        "assets/codecontests_batch2/cf_5_a_l3.cpp": "416d8ddeaf8a45c3c66442b2002c3467f9f8dc2a34f6d7265616a9df1752c1b9",
+        "assets/codecontests_batch2/cf_5_a_raw.cpp": "405a1538abc4c2d937494e454f7d22568c1c576811e5844c526a1caf3b26f990",
+        "assets/codecontests_batch2/cf_5_a_slow.cpp": "b630e823dc1a168bc52b34411806b3bbf497678a35f2a1c3c80fd4de0ec2adaa",
+        "assets/codecontests_batch2/cf_670_b_l3.cpp": "2c027d8b9b38c9cbfee860df063ec0e8e1d515e19a61ba2821bf73972eee0cf9",
+        "assets/codecontests_batch2/cf_670_b_raw.cpp": "2cf47047b005e64ac316ad4f4fd638a0255fa00a0ca1b0a6a74ae1ed62d9e8f0",
+        "assets/codecontests_batch2/cf_670_b_slow.cpp": "85084c39ad3097a76a6a6d853d5df13829fbbe46f5b801151ad102969294d627",
+        "assets/codecontests_batch2/cf_691_d_l3.cpp": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+        "assets/codecontests_batch2/cf_691_d_raw.cpp": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+        "assets/codecontests_batch2/cf_691_d_slow.cpp": "dadb30ab81a4d73549a91c98c7988173a152fa03e0d8c5ecb6dd1c3186202ad8",
+        "assets/codecontests_batch2/cf_977_b_l3.cpp": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+        "assets/codecontests_batch2/cf_977_b_raw.cpp": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+        "assets/codecontests_batch2/cf_977_b_slow.cpp": "d4f8ee3d30f7762f19bc7538cd0e357eedca1727dbb5a744137cba8b7ce8e625",
+        "assets/codecontests_batch2/codechef_walk_l3.cpp": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+        "assets/codecontests_batch2/codechef_walk_raw.cpp": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+        "assets/codecontests_batch2/codechef_walk_slow.cpp": "2e162829a34e73dd5b753c848a33426b5cb72099ff04c5e956ab1efeef020a5b",
+        "assets/codecontests_batch2/codenet_p02260_l3.cpp": "a91de935180eb15eadcfa152b6119a71cae684b3462ec64a38a3c16ca9ea8465",
+        "assets/codecontests_batch2/codenet_p02260_raw.cpp": "f266ee5a061653db099f4ba5eb6595d1a3c55649915d48a85094825111565565",
+        "assets/codecontests_batch2/codenet_p02260_slow.cpp": "47870f085b5b493ad2fde6e786e7749cc87c40d86b417673b5a2f386d17cf566",
+        "assets/codecontests_batch2/hackerearth_new_world_11_l3.cpp": "c631f7972bd9769c2e51a87b4a87e060a416a27ea1c2bf8891c827b09d8cacd6",
+        "assets/codecontests_batch2/hackerearth_new_world_11_raw.cpp": "fef7bd31122ff8dfa0079a2e20f4d298f91d42ce257050bf94f317b63e76b42f",
+        "assets/codecontests_batch2/hackerearth_new_world_11_slow.cpp": "9e6b3bb2fbf366751e53fabec4e0a3266c75a1e10f1a17fb7125311d9d805f8a",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_l3.cpp": "60b433a93377abc3b85a160805a0dde0125e8e05ef0c6c5c8da93eaa6ab0d0cf",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_raw.cpp": "e5fcd2c5db333b7ada1133784c1a9ec81bbb2d971cd9182c7f839662e28e414c",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_slow.cpp": "e6a3579affa2c51a0dfba9695be056a030c3626aca287c4a0e6985702e0c44a7",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_l3.cpp": "8ed307ee8b85f887d2b9ee5cd75c80d2aa00082c85e8b6fbe465d9be1c47f635",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_raw.cpp": "733518928f269f45aa3eb0954ea430334bca05d894764b76ee431f85fd6d2e97",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_slow.cpp": "ad87a3095b97d85abb0ea0ce90bcf6fb45409957b485c39b864ac75c1b0b4af3",
+        "assets/codecontests_batch2/solver.cpp": "a1eae581db4e8ace4a9fc86e4d465531d19d320505d3ae2f92ce5f1844667b53"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "l3_fast": {
+      "path": "assets/codecontests_batch2/cf_977_b_l3.cpp",
+      "sha256": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+      "args": [],
+      "include_dirs": [],
+      "dependency_sha256": {
+        "assets/codecontests_batch2/atcoder_abc140_b_l3.cpp": "8f18de37991bb93e912be72ced8f17d23ac17bd97aaf608d4b0c2eb159d4ee6e",
+        "assets/codecontests_batch2/atcoder_abc140_b_raw.cpp": "3aa0144536b6b90cb1235bde08cb30269654f27d91ba21c1057a5d7a5c26dffd",
+        "assets/codecontests_batch2/atcoder_abc140_b_slow.cpp": "fbe2be99a7cc87ea5c72b45b36d8e954a2c83babea75a9e501871eda1868bdc4",
+        "assets/codecontests_batch2/atcoder_abc154_e_l3.cpp": "cfb75961409191ea674662b54118e386a3dfc4b46ce2ba833835b0f622319f4b",
+        "assets/codecontests_batch2/atcoder_abc154_e_raw.cpp": "07e017d9847dd4e5a51c4b45688483e1d56a529c700772a6f1ca1a16102ed7f6",
+        "assets/codecontests_batch2/atcoder_abc154_e_slow.cpp": "be15debb9f41aefb748c8d6f1448c729fb21fee4a3a9ce2de1596bfddc78cd0a",
+        "assets/codecontests_batch2/cf_1155_a_l3.cpp": "e2b6cd4aeb8641a77e31ada0739f918df2825729392f774e5ec6466c2ea20191",
+        "assets/codecontests_batch2/cf_1155_a_raw.cpp": "f1f217b3d6bd16e9d0ebd144cdd04a4b88359a9e0336e60c59b9d1cabed4d7a8",
+        "assets/codecontests_batch2/cf_1155_a_slow.cpp": "a321b720f76ce25ee3ad9a189933359440924be904f86391e7c0f67385aec050",
+        "assets/codecontests_batch2/cf_339_a_l3.cpp": "c1a6f938c9ca4f6383c970d3f922504c634ec64ae80699ef486e044c7fc89012",
+        "assets/codecontests_batch2/cf_339_a_raw.cpp": "aa39912c9a22d9329140e62f2bf9885fb1284ad6a24bcc5eb4e20c6a0902dcac",
+        "assets/codecontests_batch2/cf_339_a_slow.cpp": "9b2d63b1b158a5f6caf9cae05d47b2542a364284d4f65748ed79ca117c13a72a",
+        "assets/codecontests_batch2/cf_433_a_l3.cpp": "bce5bde31cb5beb966a67b93d0304b841f89cb37d2fd82f9345b3c0363da00eb",
+        "assets/codecontests_batch2/cf_433_a_raw.cpp": "3c626d518c867e179cc1d689313eb5d5b1e6bbd05cf49541684ccfdec83720d4",
+        "assets/codecontests_batch2/cf_433_a_slow.cpp": "57b710ea5e69c0aa2aefdc0bbe3fee35a6f2e5727ce11d460bfddb6b37515ba9",
+        "assets/codecontests_batch2/cf_500_c_l3.cpp": "1237a1c3b0505793294f0d9682669f51f5cf31cc58aea0fc251229747a66fa0a",
+        "assets/codecontests_batch2/cf_500_c_raw.cpp": "2f254139450b5302248ae51f6ce86f4ac1589e82b10a02bf2cf1998ef7f87399",
+        "assets/codecontests_batch2/cf_500_c_slow.cpp": "57886e5b88d11f5364217889ba1a976dc1413e7a4ff355987f5d1b30249c6cfc",
+        "assets/codecontests_batch2/cf_5_a_l3.cpp": "416d8ddeaf8a45c3c66442b2002c3467f9f8dc2a34f6d7265616a9df1752c1b9",
+        "assets/codecontests_batch2/cf_5_a_raw.cpp": "405a1538abc4c2d937494e454f7d22568c1c576811e5844c526a1caf3b26f990",
+        "assets/codecontests_batch2/cf_5_a_slow.cpp": "b630e823dc1a168bc52b34411806b3bbf497678a35f2a1c3c80fd4de0ec2adaa",
+        "assets/codecontests_batch2/cf_670_b_l3.cpp": "2c027d8b9b38c9cbfee860df063ec0e8e1d515e19a61ba2821bf73972eee0cf9",
+        "assets/codecontests_batch2/cf_670_b_raw.cpp": "2cf47047b005e64ac316ad4f4fd638a0255fa00a0ca1b0a6a74ae1ed62d9e8f0",
+        "assets/codecontests_batch2/cf_670_b_slow.cpp": "85084c39ad3097a76a6a6d853d5df13829fbbe46f5b801151ad102969294d627",
+        "assets/codecontests_batch2/cf_691_d_l3.cpp": "488dd626019435c5cb46a849695b55ae822a5428e4292dcc5c8bf8d781ebca35",
+        "assets/codecontests_batch2/cf_691_d_raw.cpp": "f99ef22b109ed02a3113f96125ac0723ce50d89f022251351a1b8cb5d1493031",
+        "assets/codecontests_batch2/cf_691_d_slow.cpp": "dadb30ab81a4d73549a91c98c7988173a152fa03e0d8c5ecb6dd1c3186202ad8",
+        "assets/codecontests_batch2/cf_977_b_l3.cpp": "c1f8c5195114f0e663f60c02012a20da5dc8650eacae87a0f4807520f2f9a9a7",
+        "assets/codecontests_batch2/cf_977_b_raw.cpp": "5fba5d01e8c6b07e74d8ab55c8c519a79fa29a45eee63428dcfca466e86f4096",
+        "assets/codecontests_batch2/cf_977_b_slow.cpp": "d4f8ee3d30f7762f19bc7538cd0e357eedca1727dbb5a744137cba8b7ce8e625",
+        "assets/codecontests_batch2/codechef_walk_l3.cpp": "59a912519fa2ce901a5ba41fec6ea5dbb3b3bfc09265a8797ec49bf33c362361",
+        "assets/codecontests_batch2/codechef_walk_raw.cpp": "bdb0304b6a530fe9dd096aa290e52b5ea199d7ea614b3b07f371175e664ce697",
+        "assets/codecontests_batch2/codechef_walk_slow.cpp": "2e162829a34e73dd5b753c848a33426b5cb72099ff04c5e956ab1efeef020a5b",
+        "assets/codecontests_batch2/codenet_p02260_l3.cpp": "a91de935180eb15eadcfa152b6119a71cae684b3462ec64a38a3c16ca9ea8465",
+        "assets/codecontests_batch2/codenet_p02260_raw.cpp": "f266ee5a061653db099f4ba5eb6595d1a3c55649915d48a85094825111565565",
+        "assets/codecontests_batch2/codenet_p02260_slow.cpp": "47870f085b5b493ad2fde6e786e7749cc87c40d86b417673b5a2f386d17cf566",
+        "assets/codecontests_batch2/hackerearth_new_world_11_l3.cpp": "c631f7972bd9769c2e51a87b4a87e060a416a27ea1c2bf8891c827b09d8cacd6",
+        "assets/codecontests_batch2/hackerearth_new_world_11_raw.cpp": "fef7bd31122ff8dfa0079a2e20f4d298f91d42ce257050bf94f317b63e76b42f",
+        "assets/codecontests_batch2/hackerearth_new_world_11_slow.cpp": "9e6b3bb2fbf366751e53fabec4e0a3266c75a1e10f1a17fb7125311d9d805f8a",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_l3.cpp": "60b433a93377abc3b85a160805a0dde0125e8e05ef0c6c5c8da93eaa6ab0d0cf",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_raw.cpp": "e5fcd2c5db333b7ada1133784c1a9ec81bbb2d971cd9182c7f839662e28e414c",
+        "assets/codecontests_batch2/hackerearth_the_competitive_class_3_slow.cpp": "e6a3579affa2c51a0dfba9695be056a030c3626aca287c4a0e6985702e0c44a7",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_l3.cpp": "8ed307ee8b85f887d2b9ee5cd75c80d2aa00082c85e8b6fbe465d9be1c47f635",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_raw.cpp": "733518928f269f45aa3eb0954ea430334bca05d894764b76ee431f85fd6d2e97",
+        "assets/codecontests_batch2/hackerearth_xenny_range_sums_slow.cpp": "ad87a3095b97d85abb0ea0ce90bcf6fb45409957b485c39b864ac75c1b0b4af3",
+        "assets/codecontests_batch2/solver.cpp": "a1eae581db4e8ace4a9fc86e4d465531d19d320505d3ae2f92ce5f1844667b53"
+      },
+      "compiler_options": [
+        "-std=c++17",
+        "-O2",
+        "-pipe"
+      ]
+    },
+    "raw_oracle": {
+      "path": "assets/codecontests_batch2/oracle.py",
+      "sha256": "64de3a33af80b761ef390cb21df3f2cbcece316e6c7a13fb21bc118bd89efa2a",
+      "args": [
+        "10",
+        "raw"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    },
+    "l3_oracle": {
+      "path": "assets/codecontests_batch2/oracle.py",
+      "sha256": "64de3a33af80b761ef390cb21df3f2cbcece316e6c7a13fb21bc118bd89efa2a",
+      "args": [
+        "10",
+        "l3"
+      ],
+      "include_dirs": [],
+      "dependency_sha256": {},
+      "compiler_options": []
+    }
+  },
+  "checker": {
+    "recipe_module": "recipes/codecontests_batch2.py",
+    "recipe_id": "cf_977_b"
+  },
+  "validator": {
+    "path": "native/cc_b83.py",
+    "sha256": "0b1a6d69b5a8f99a4ae66b941682a287bad3aa12e5f71c223ace682b8b8e9f79",
+    "function": "validate",
+    "seed_argument": 147,
+    "conditions": {
+      "raw": "raw",
+      "l1": "raw",
+      "l2": "l2",
+      "l3": "raw"
+    },
+    "bounds_dependency": {
+      "path": "contracts/cc165_native.json",
+      "sha256": "f9e64ff23d2b03f7c000ec59127c7a0fbaabf47f2e8722332c91740901573dd2"
+    }
+  },
+  "execution": {
+    "sandbox": "bubblewrap unshare-all, no network; compilation also isolated",
+    "cpu_budget_seconds": 5,
+    "memory_mb": 2048,
+    "experimental_memory_mb": 2048,
+    "original_resource_limit_claim": false,
+    "cpu_core": 3
+  },
+  "evidence": {
+    "finite_program_report": {
+      "path": "validation/strict_cc_b/TM147/report.json",
+      "sha256": "4910e03f6596cdb86f518f1aa07c1ad00d2218e3cd0cdf86b1b90a6cab17e8ec"
+    },
+    "supplement_report": {
+      "path": "validation/strict_cc_b_supplement/TM147/report.json",
+      "sha256": "9a27678180937fbc7ab4e64821d1af4c79c42bddbbc445fb68c00badb7064230"
+    },
+    "resolution": {
+      "path": "tasks/TM147/validation_resolution.json",
+      "sha256": "ba9f77175c22556d05e2cff0ea5c3177468fcbd8867e09c5728b0f4fd60868bd"
+    },
+    "mutation_edits": {
+      "path": "tasks/TM147/mutation_edits.json",
+      "sha256": "23eaec7375d26e2feaf556fdebf12de005bf2af734ae616a37fe7bd85bb90fd2"
+    },
+    "upstream_exclusions": {
+      "path": "tasks/TM147/upstream_exclusion_ledger.json",
+      "sha256": "dec64d3ec2b6c36e773bba7e9d0a89ac8113241480617113d4bf2a04c8a08148"
+    },
+    "sample_extractor": {
+      "path": "native/cc_b_samples.py",
+      "sha256": "7051895f4b747a62b74f51b32bc936da0c0ee3909c2ea3a708b22955c997425e"
+    },
+    "scale_certificate_code": {
+      "path": "native/cc_b_extensions.py",
+      "sha256": "57ab2dd1a9ddca30aff74f9be5acab2f4a9c1439e4081a5246d89165d6fb5ac6"
+    }
+  },
+  "strict_l2_l3_validation_complete": true,
+  "universal_correctness_claim": false,
+  "human_review_status": "not_performed",
+  "model_evaluation_status": "not_performed"
+}
