@@ -1,0 +1,108 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "vertex_add_path_sum",
+  "seed_id": "TM238",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/vertex_add_path_sum/gen/max_random.cpp",
+      "generator_sha256": "399980319250dde2748028eea5c70d04d2041e097522802114c33f9714e91f36",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM238/tests/l2/expanded_00.in",
+      "input_sha256": "f8ccbf83926de5d9e3dcb880bd244b0b2a9696130cbfa73f34cb936e5d6571e0",
+      "expected_path": "tasks/TM238/tests/l2/expanded_00.out",
+      "expected_sha256": "63b423d5c2cc1d48156ff0d1dfbac062b7a6e55bc7f00fe0413c7c3b4df6d751",
+      "source_reference_run": "validation/library_l2_expanded/vertex_add_path_sum/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 1.06,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 2.4,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/vertex_add_path_sum/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/vertex_add_path_sum/gen/max_random.cpp",
+      "generator_sha256": "399980319250dde2748028eea5c70d04d2041e097522802114c33f9714e91f36",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM238/tests/l2/expanded_01.in",
+      "input_sha256": "d000dba7a60e32c5b346cc6913e1e93a0db78c6cde20f0230b34e8f76d1cd8fe",
+      "expected_path": "tasks/TM238/tests/l2/expanded_01.out",
+      "expected_sha256": "cddb00a73f36d0e9fe3b87c5342e367564f5829eeaee5eee4023da13cb96ebef",
+      "source_reference_run": "validation/library_l2_expanded/vertex_add_path_sum/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 1.05,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 2.47,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/vertex_add_path_sum/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/vertex_add_path_sum/gen/max_random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "original hard-coded size equivalent to expanded parameter; non-size values unchanged"
+    }
+  ]
+}

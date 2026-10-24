@@ -1,0 +1,127 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "vertex_add_subtree_sum",
+  "seed_id": "TM239",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "N,Q",
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/vertex_add_subtree_sum/gen/max_random.cpp",
+      "generator_sha256": "ded525533428a32449823ca25a3ae0e4659c3abd30af538075932c4cbd033cf0",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM239/tests/l2/expanded_00.in",
+      "input_sha256": "1e844aaae4409d4eedf456e93b89cc95d02b8f6c6905ab4befa476338ecedf19",
+      "expected_path": "tasks/TM239/tests/l2/expanded_00.out",
+      "expected_sha256": "8ba45ab835f34c3b86ab6f5b00c7205a8d723483a45bf9ea0c33e0377147a2b6",
+      "source_reference_run": "validation/library_l2_expanded/vertex_add_subtree_sum/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.57,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 1.18,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/vertex_add_subtree_sum/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/vertex_add_subtree_sum/gen/max_random.cpp",
+      "generator_sha256": "ded525533428a32449823ca25a3ae0e4659c3abd30af538075932c4cbd033cf0",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM239/tests/l2/expanded_01.in",
+      "input_sha256": "2bab471892441ab0ffec5dead6780b9803be0c8c95ac14b8fffb515a936707e2",
+      "expected_path": "tasks/TM239/tests/l2/expanded_01.out",
+      "expected_sha256": "ca69cfe1a7df5b6ac30f544920d97ed536bc31c783f553ccd22f7940bf3a00cd",
+      "source_reference_run": "validation/library_l2_expanded/vertex_add_subtree_sum/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.57,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 1.19,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/vertex_add_subtree_sum/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/vertex_add_subtree_sum/verifier.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/vertex_add_subtree_sum/gen/max_random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/vertex_add_subtree_sum/gen/line.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/vertex_add_subtree_sum/gen/random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}

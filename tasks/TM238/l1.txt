@@ -1,0 +1,61 @@
+# Junctions
+
+Junctions of a tree carry recorded quantities.
+
+
+## Problem Statement
+
+
+Given a tree of $N$ junctions. Connections are $(u_i, v_i)$. Value $a_i$ is written on the junction $i$.
+
+Process the following $Q$ queries in order:
+
+- `0 $p$ $x$`: $a_p \gets a_p + x$
+- `1 $u$ $v$`: Print the sum of the values of junctions of the path between junction $u$ and $v$ (inclusive).
+
+
+## Constraints
+
+- $1 \leq N, Q \leq 500000$
+- $0 \leq a_i, x \leq 1000000000$
+- $0 \leq p, u_i, v_i < N$
+
+## Input
+
+~~~
+$N$ $Q$
+$a_0$ $a_1$ ... $a_{N - 1}$
+$u_0$ $v_0$
+$u_1$ $v_1$
+:
+$u_{N - 2}$ $v_{N - 2}$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q - 1}$
+~~~
+
+## Sample Input 1
+
+```
+5 5
+1 10 100 1000 10000
+0 1
+1 2
+2 3
+1 4
+1 0 3
+1 2 4
+0 1 100000
+1 1 3
+1 3 2
+```
+
+## Sample Output 1
+
+```
+1111
+10110
+101110
+1100
+```

@@ -1,0 +1,62 @@
+# Linear calibration functions
+
+The functions are adjustable calibration stages in an ordered chain.
+
+
+## Problem Statement
+
+
+Given a size $N$ sequence of linear calibration functions $f _ 0, f _ 1, ..., f _ {N-1}$. For all $i$, $f _ i(x) = a _ i x + b _ i$. Process $Q$ calibration requests as follows:
+
+- `0 $l$ $r$ $c$ $d$`: For each $i = l, l+1, \dots, {r - 1}$, $f _ i \gets cx + d$.
+- `1 $l$ $r$ $x$`: Print $f _ {r-1}(f _ {r-2}(...f _ l(x))) \bmod 998244353$.
+
+
+## Constraints
+
+- $1 \leq N, Q \leq 500000$
+- $1 \leq a _ i, c < 998244353$
+- $0 \leq b _ i, d, x < 998244353$
+- $0 \leq l < r \leq N$
+
+## Input
+
+~~~
+$N$ $Q$
+$a _ 0$ $b _ 0$
+$a _ 1$ $b _ 1$
+:
+$a _ {N - 1}$ $b _ {N - 1}$
+$\textrm{Query} _ 0$
+$\textrm{Query} _ 1$
+:
+$\textrm{Query} _ {Q - 1}$
+~~~
+
+## Sample Input 1
+
+```
+5 7
+1 2
+3 4
+5 6
+7 8
+9 10
+1 0 5 11
+1 2 4 12
+0 1 2 13 14
+1 0 4 15
+1 2 5 16
+0 0 5 10 1
+1 0 5 1
+```
+
+## Sample Output 1
+
+```
+14005
+470
+8275
+5500
+111111
+```

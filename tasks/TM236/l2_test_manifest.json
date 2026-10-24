@@ -1,0 +1,121 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "deque_operate_all_composite",
+  "seed_id": "TM236",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "Q",
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/deque_operate_all_composite/gen/max_random.cpp",
+      "generator_sha256": "afcda93179c69c4e78117c85a8759eca0b58376d4f96e44d6ccff512739140eb",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "Q": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM236/tests/l2/expanded_00.in",
+      "input_sha256": "0ca29b2f238acea9801698738fc280483aeb764afde4f7f39783fd5fe667b416",
+      "expected_path": "tasks/TM236/tests/l2/expanded_00.out",
+      "expected_sha256": "32618ba71cb2a300496def6e62da8a4e7d0c079ea0899813708b290948ed586c",
+      "source_reference_run": "validation/library_l2_expanded/deque_operate_all_composite/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.11,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.19,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/deque_operate_all_composite/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/deque_operate_all_composite/gen/max_random.cpp",
+      "generator_sha256": "afcda93179c69c4e78117c85a8759eca0b58376d4f96e44d6ccff512739140eb",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "Q": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM236/tests/l2/expanded_01.in",
+      "input_sha256": "fdc7404c0639d29f60d37d0b49cbbfb9fc477326d2992544a708d204c52db4ca",
+      "expected_path": "tasks/TM236/tests/l2/expanded_01.out",
+      "expected_sha256": "1a1b50ebb6a57f74754a78a3d528411a79347f60a1e214e8b0702920048cee10",
+      "source_reference_run": "validation/library_l2_expanded/deque_operate_all_composite/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.11,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.19,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/deque_operate_all_composite/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/deque_operate_all_composite/verifier.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/deque_operate_all_composite/gen/max_random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/deque_operate_all_composite/gen/large_max.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/deque_operate_all_composite/gen/large_triangle.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/deque_operate_all_composite/gen/random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/deque_operate_all_composite/gen/large_min.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}

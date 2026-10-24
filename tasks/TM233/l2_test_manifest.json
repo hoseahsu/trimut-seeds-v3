@@ -1,0 +1,121 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "point_set_range_composite",
+  "seed_id": "TM233",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "N,Q",
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/point_set_range_composite/gen/max_random.cpp",
+      "generator_sha256": "963c25f13be53053573e38d2a709095602b250c5bc7661ddbae1c01b185c6248",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM233/tests/l2/expanded_00.in",
+      "input_sha256": "35ab97aaf55bcfc7fe760613182682d62a71acbcefc8bddb283850e49ac531cd",
+      "expected_path": "tasks/TM233/tests/l2/expanded_00.out",
+      "expected_sha256": "ac2b51573001b8f711de0e2f2f68d287294baebf5de292b09405148ba488358f",
+      "source_reference_run": "validation/library_l2_expanded/point_set_range_composite/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.44,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.75,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/point_set_range_composite/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/point_set_range_composite/gen/max_random.cpp",
+      "generator_sha256": "963c25f13be53053573e38d2a709095602b250c5bc7661ddbae1c01b185c6248",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM233/tests/l2/expanded_01.in",
+      "input_sha256": "0706ecb0aed821395af23f36772d1cf76a1de65dee9455eafede4735b417ff63",
+      "expected_path": "tasks/TM233/tests/l2/expanded_01.out",
+      "expected_sha256": "e686c6c8671c1a8320f604e1ac0bf81f45f065ab21cd7e22c14dd264b25d09ac",
+      "source_reference_run": "validation/library_l2_expanded/point_set_range_composite/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.44,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.73,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/point_set_range_composite/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/point_set_range_composite/verifier.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/point_set_range_composite/gen/max_random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/point_set_range_composite/gen/random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}

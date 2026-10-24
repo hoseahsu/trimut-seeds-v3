@@ -1,0 +1,121 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "queue_operate_all_composite",
+  "seed_id": "TM235",
+  "changes": {
+    "literal_upper_bound": {
+      "dimension": "Q",
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/queue_operate_all_composite/gen/max_random.cpp",
+      "generator_sha256": "c88630b1d915118ece56ef50556114821fa3c6c5f25044d872288f8a90ee83a0",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "Q": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM235/tests/l2/expanded_00.in",
+      "input_sha256": "899d9e10d688898ea6415d8853a3ccc83f5b65d15d9b02e0c026564eac57fb26",
+      "expected_path": "tasks/TM235/tests/l2/expanded_00.out",
+      "expected_sha256": "6891db14db15bc653433221fad22b41091337b238ea2a12e70ecd5ac9781c015",
+      "source_reference_run": "validation/library_l2_expanded/queue_operate_all_composite/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.1,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.19,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/queue_operate_all_composite/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/queue_operate_all_composite/gen/max_random.cpp",
+      "generator_sha256": "c88630b1d915118ece56ef50556114821fa3c6c5f25044d872288f8a90ee83a0",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "Q": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "literal_upper_bound",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM235/tests/l2/expanded_01.in",
+      "input_sha256": "5f501fb5875b572fdcad2d3da7befce57499056334c459cc5218b1b059bcbf62",
+      "expected_path": "tasks/TM235/tests/l2/expanded_01.out",
+      "expected_sha256": "0676595a3f9ddc5b22fa1475964e131ad211cd0ea3bbf993dbe05be070cab980",
+      "source_reference_run": "validation/library_l2_expanded/queue_operate_all_composite/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.09,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.19,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/queue_operate_all_composite/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/queue_operate_all_composite/verifier.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/queue_operate_all_composite/gen/max_random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/queue_operate_all_composite/gen/large_max.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/queue_operate_all_composite/gen/large_triangle.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/queue_operate_all_composite/gen/random.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    },
+    {
+      "path": "library_work/l2_packages/queue_operate_all_composite/gen/large_min.cpp",
+      "replace": "500'000",
+      "with": "1000000",
+      "reason": "specified size upper bound only"
+    }
+  ]
+}
