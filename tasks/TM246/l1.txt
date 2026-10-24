@@ -1,0 +1,54 @@
+# Integer vote log
+
+The sequence records category votes in an indexed log.
+
+
+## Problem Statement
+
+
+You are given an integer vote log $a_0, a_1, ..., a_{N-1}$ with the length $N$.
+Process the following $Q$ vote-log requests in order:
+
+- `0 $p$ $x$`: $a_p \gets x$
+- `1 $l$ $r$`: Print the majority element in $(a_l, a_{l+1}, ..., a_{r-1})$. If there is no majority element, print $-1$.
+
+
+
+## Constraints
+
+- $1 \leq N \leq 500000$
+- $1 \leq Q \leq 500000$
+- $0 \leq a_i \leq 1000000000$
+- $0 \leq p < N$
+- $0 \leq x \leq 1000000000$
+- $0 \leq l < r \leq N$
+
+## Input
+
+~~~
+$N$ $Q$
+$a_0$ $a_1$ ... $a_{N-1}$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q-1}$
+~~~
+
+## Sample Input 1
+
+```
+7 4
+1 5 5 2 4 3 2
+1 1 4
+1 3 7
+0 5 2
+1 3 7
+```
+
+## Sample Output 1
+
+```
+5
+-1
+2
+```

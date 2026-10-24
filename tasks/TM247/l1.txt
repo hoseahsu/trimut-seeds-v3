@@ -1,0 +1,56 @@
+# Arrival queue
+
+The sequences are versioned arrival queues.
+
+
+## Problem Statement
+
+
+Let $S_{-1}$ be an empty arrival queue.
+Process the following $Q$ queue requests.
+The $i$-th queue request is given in the following form.
+
+- `0 $t_i$ $x_i$`: Define $S_i$ as the arrival queue obtained by adding $x_i$ to the end of $S_{t_i}$.
+- `1 $t_i$`: Define $S_i$ as the arrival queue obtained by deleting the front element of $S_{t_i}$. Print the deleted element.
+
+
+## Constraints
+
+
+- $1 \leq Q \leq 500000$
+- $-1 \leq t_i < i$
+- $0 \leq x_i \leq 1000000000$
+- In queue request 1, $S_{t_i}$ is not empty.
+
+
+## Input
+
+~~~
+$Q$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q-1}$
+~~~
+
+## Sample
+
+## Sample Input 1
+
+```
+6
+0 -1 6
+0 0 7
+1 0
+0 -1 8
+1 3
+1 1
+```
+
+## Sample Output 1
+
+```
+6
+8
+6
+```
