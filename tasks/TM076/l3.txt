@@ -1,0 +1,52 @@
+You want to perform the combo on your opponent in one popular fighting game. The combo is the string s consisting of n lowercase Latin letters. To perform the combo, you have to press all buttons in the order they appear in s. I.e. if s="abca" then you have to press 'a', then 'b', 'c' and 'a' again.
+
+You make m failed practice attempts. During the i-th attempt you press the last p_i buttons of s, in their original left-to-right order, where 1 ≤ p_i < n. After these failed attempts you make one successful attempt pressing all n buttons in order.
+
+For example, if s="abca", m=2 and p=[1,3], the attempts press "a", then "bca", then the successful full string "abca".
+
+Your task is to calculate for each button (letter) the number of times you'll press it.
+
+You have to answer t independent test cases.
+
+Input
+
+The first line of the input contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases.
+
+Then t test cases follow.
+
+The first line of each test case contains two integers n and m (2 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 2 ⋅ 10^5) — the length of s and the number of tries correspondingly.
+
+The second line of each test case contains the string s consisting of n lowercase Latin letters.
+
+The third line of each test case contains m integers p_1, p_2, ..., p_m (1 ≤ p_i < n) — the number of suffix characters pressed during the i-th failed attempt.
+
+It is guaranteed that the sum of n and the sum of m both does not exceed 2 ⋅ 10^5 (∑ n ≤ 2 ⋅ 10^5, ∑ m ≤ 2 ⋅ 10^5).
+
+The input retains this guarantee: if the failed attempts used the first p_i characters instead, followed by the full string, each letter would be pressed at most 2 ⋅ 10^9 times. The requested suffix-based counts must be printed exactly and may exceed that value.
+
+Output
+
+For each test case, print the answer — 26 integers: the number of times you press the button 'a', the number of times you press the button 'b', ..., the number of times you press the button 'z'.
+
+Sample Input 1
+
+```text
+3
+4 2
+abca
+1 3
+10 5
+codeforces
+2 8 3 2 9
+26 10
+qwertyuioplkjhgfdsazxcvbnm
+20 10 1 2 3 5 10 5 9 4
+```
+
+Sample Output 1
+
+```text
+4 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 5 3 9 3 0 0 0 0 0 0 0 0 5 0 0 3 6 0 0 0 0 0 0 0 
+5 9 7 4 1 2 2 2 2 2 2 2 11 10 2 2 1 1 5 1 2 8 1 5 1 5
+```

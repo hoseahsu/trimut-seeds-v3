@@ -1,0 +1,35 @@
+{
+  "seed_id": "TM181",
+  "source_snapshot": "sources/codecontests/src6_p00451_Common_Sub-String/original_statement.md",
+  "source_snapshot_sha256": "aa08da18a0041b9dab6814ea5f219b53f9ed7b90965c0d2863ba6fd116257fbb",
+  "raw_path": "tasks/TM181/raw.txt",
+  "raw_sha256": "cd1f07031405ed3c8c19ba7151b9233e5e869d1c6a58118624e3ae64d68b75de",
+  "official_url": "https://huggingface.co/datasets/deepmind/code_contests",
+  "operations": [
+    {
+      "kind": "repair_machine_translation_from_official_AOJ0528",
+      "before": "The strings consist of uppercase letters and each string is 1 in length. More than 4000 and less.",
+      "after": "The strings consist of uppercase letters, and each string has length between 1 and 4000, inclusive.",
+      "occurrences": 1,
+      "evidence_url": "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0528"
+    },
+    {
+      "kind": "remove_snapshot_artifact_absent_from_official_AOJ0528",
+      "before": "\n\nInput\n\nNone\n\n\nOutput\n\nNone",
+      "after": "",
+      "occurrences": 1,
+      "evidence_url": "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0528"
+    },
+    {
+      "kind": "restore_omitted_original_example_explanation_translated_from_AOJ0528",
+      "before": "\n\ninput\n",
+      "after": "\n\nExamples explained\n\nFor ABRACADABRA and ECADADABRBCRDARA, common substrings include CA, CADA, ADABR, and the empty string. The longest is ADABR, of length 5, at the positions shown below:\n\nABRAC ADABR A\nECAD ADABR BCRDARA\n\nFor UPWJCIRUCAXIIRGL and SBQNYBSBZDFNEV, only the empty string is common, so its length is 0.\n\ninput\n",
+      "occurrences": 1,
+      "evidence_url": "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0528"
+    }
+  ],
+  "warnings": [],
+  "raw_ready_for_l1": true,
+  "status": "unmutated_source_with_verified_typographic_restoration",
+  "native_contract_and_solution_validation": "separate; not implied by textual restoration"
+}

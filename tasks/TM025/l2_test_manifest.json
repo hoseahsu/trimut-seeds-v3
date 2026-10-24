@@ -1,0 +1,32 @@
+{
+  "schema_version": "replacement-native-tests-v1",
+  "seed_id": "TM025",
+  "condition": "l2",
+  "test_scope": "reproducible selected original samples and authored native-domain/expanded cases",
+  "cpu_budget_seconds": 2,
+  "memory_mb": 1024,
+  "contains_all_original_samples": false,
+  "native_upper_bound_reached": false,
+  "records": [
+    {
+      "name": "stress_stress_0",
+      "kind": "stress",
+      "input_path": "tasks/TM025/tests/l2/stress_stress_0.in",
+      "input_sha256": "b6ba19ad356fcc8754b56cbe8ed191aa275aeeb57cc1825881b1c35127a00290",
+      "expected_path": "tasks/TM025/tests/l2/stress_stress_0.out",
+      "expected_sha256": "e2f38bb7378afda3e866375073953a93c1ed7f18c082a1b91c5ef98a4e88f20b",
+      "native_validity": {
+        "valid": true,
+        "outside_original": true
+      },
+      "independently_checked_this_input": true,
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.001630999999999716,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/replacements_cpu2/replacement_abc145_c-4186d5650f/report.json",
+        "case": "stress_0"
+      }
+    }
+  ]
+}

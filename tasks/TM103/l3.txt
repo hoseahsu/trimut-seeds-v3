@@ -1,0 +1,51 @@
+An array of positive integers a1, a2, ..., an is given. Let us consider its arbitrary subarray al, al + 1..., ar, where 1 ≤ l ≤ r ≤ n. For every positive integer s denote by Ks the number of occurrences of s into the subarray. We call the power of the subarray the sum of products Ks·Ks·Ks·s for every positive integer s. The sum contains only finite number of nonzero summands as the number of different values in the array is indeed finite.
+
+You should calculate the power of t given subarrays.
+
+Input
+
+First line contains two integers n and t (1 ≤ n, t ≤ 200000) — the array length and the number of queries correspondingly.
+
+Second line contains n positive integers ai (1 ≤ ai ≤ 10^6) — the elements of the array.
+
+Next t lines contain two positive integers l, r (1 ≤ l ≤ r ≤ n) each — the indices of the left and the right ends of the corresponding subarray.
+
+Output
+
+Output t lines, the i-th line of the output should contain single positive integer — the power of the i-th query subarray.
+
+Print exact integers. The cubic-frequency answers may exceed the signed 64-bit integer range.
+
+Sample Input 1
+
+```text
+3 2
+1 2 1
+1 2
+1 3
+```
+
+Sample Output 1
+
+```text
+3
+10
+```
+
+Sample Input 2
+
+```text
+8 3
+1 1 2 2 1 3 1 1
+2 7
+1 6
+2 7
+```
+
+Sample Output 2
+
+```text
+46
+46
+46
+```

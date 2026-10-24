@@ -1,0 +1,55 @@
+An exhibition curator selects timed presentations with appeal ratings.
+
+You have a exhibition catalog consisting of n presentations. The i-th presentation is characterized by two numbers t_i and b_i — its length and appeal respectively. The exhibition score of viewing to set of presentations is equal to the total length of the presentations in the set multiplied by the minimum appeal among them. For example, the exhibition score of viewing to a set of 3 presentations having lengths [5, 7, 4] and appeal values [11, 14, 6] is equal to (5 + 7 + 4) ⋅ 6 = 96.
+
+You need to choose at most k presentations from your exhibition catalog, so the exhibition score of viewing to the set of these presentations them is maximum possible.
+
+Input
+
+The first line contains two integers n and k (1 ≤ k ≤ n ≤ 3 ⋅ 10^5) – the number of presentations in the exhibition catalog and the maximum number of presentations you can choose, respectively.
+
+Each of the next n lines contains two integers t_i and b_i (1 ≤ t_i, b_i ≤ 10^6) — the length and appeal of i-th presentation.
+
+Output
+
+Print one integer — the maximum exhibition score you can get.
+
+Examples
+
+Input
+
+
+4 3
+4 7
+15 1
+3 6
+6 8
+
+
+Output
+
+
+78
+
+
+Input
+
+
+5 3
+12 31
+112 4
+100 100
+13 55
+55 50
+
+
+Output
+
+
+10000
+
+Note
+
+In the first test case we can choose presentations {1, 3, 4}, so the total exhibition score is (4 + 3 + 6) ⋅ 6 = 78.
+
+In the second test case we can choose presentation 3. The total exhibition score will be equal to 100 ⋅ 100 = 10000.

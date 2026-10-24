@@ -1,0 +1,48 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM214",
+  "raw_path": "tasks/TM214/raw.txt",
+  "raw_sha256": "ebad99cd29d8740be6306a7a4ce076f032643b02826871d9d00022abd6ae1f68",
+  "l1_path": "tasks/TM214/l1.txt",
+  "l1_sha256": "1c83ebb7366b2ab7b839d5724e79ba155261bfc61cc4e02a1853a9ba536227ca",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The real values are calibration readings; their arithmetic interpretation is unchanged.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "ebad99cd29d8740be6306a7a4ce076f032643b02826871d9d00022abd6ae1f68",
+  "edits": [
+    {
+      "start": 16,
+      "end": 27,
+      "before": "real values",
+      "after": "real calibration readings",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "real values": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 443,
+      "raw_end": 611,
+      "sha256": "208b9e18e9e11c507161a49a6a903aef93ae2fb01604d2d72cfd2e7763b102a5"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The real values are calibration readings; their arithmetic interpretation is unchanged.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

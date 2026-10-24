@@ -1,0 +1,84 @@
+A curator selects score-bearing display elements by intervals.
+
+Little Mira is celebrating Happy Birthday! Her mentor has an array of n display elements. Each display element has some rating, the rating of i-th display element is ai. The rating can be positive, zero or negative.
+
+Let's define a subarray as a segment of consecutive display elements. The mentor suggested some set of subarrays. Mira wants to choose several of the subarrays suggested by her mentor. After that, each of the display elements will add to the girl's exhibition score its rating multiplied by the number of chosen subarrays the display element is in.
+
+For example, consider the case when the mentor has 5 display elements, and their moods are equal to 1, - 2, 1, 3, - 4. Suppose the mentor suggested subarrays (1, - 2), (3, - 4), (1, 3), (1, - 2, 1, 3). Then if the girl chooses the third and the fourth subarrays then: 
+
+  * the first display element adds 1·1 = 1 to the girl's exhibition score, because he is in one of chosen subarrays, 
+  * the second display element adds ( - 2)·1 = - 2, because he is in one of chosen subarrays, 
+  * the third display element adds 1·2 = 2, because he is in two of chosen subarrays, 
+  * the fourth display element adds 3·2 = 6, because he is in two of chosen subarrays, 
+  * the fifth display element adds ( - 4)·0 = 0, because he is in no chosen subarrays. 
+
+
+
+Thus, in total 1 + ( - 2) + 2 + 6 + 0 = 7 is added to the girl's exhibition score. Mira wants to choose such subarrays from those suggested by the mentor that the value added to her exhibition score would be as large as possible. Help her do this!
+
+Mira can choose any number of the subarrays, even 0 or all suggested by her mentor.
+
+Input
+
+The first line contains two integers n and m (1 ≤ n, m ≤ 100) — the number of display elements and the number of subarrays suggested by the mentor.
+
+The second line contains the display elements moods — n integers a1, a2, ..., an ( - 100 ≤ ai ≤ 100).
+
+The next m lines contain the description of the subarrays suggested by the mentor. The i-th of these lines contain two integers li and ri (1 ≤ li ≤ ri ≤ n) denoting the subarray a[li], a[li + 1], ..., a[ri].
+
+Each subarray can encounter more than once.
+
+Output
+
+Print single integer — the maximum possible value added to the Mira's exhibition score.
+
+Examples
+
+Input
+
+5 4
+1 -2 1 3 -4
+1 2
+4 5
+3 4
+1 4
+
+
+Output
+
+7
+
+
+Input
+
+4 3
+1 2 3 4
+1 3
+2 4
+1 1
+
+
+Output
+
+16
+
+
+Input
+
+2 2
+-1 -2
+1 1
+1 2
+
+
+Output
+
+0
+
+Note
+
+The first example is the situation described in the statements.
+
+In the second example Mira should choose all subarrays.
+
+The third example has answer 0 because Mira can choose none of the subarrays.

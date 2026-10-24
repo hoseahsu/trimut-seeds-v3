@@ -1,0 +1,45 @@
+{
+  "seed_id": "TM111",
+  "raw_sha256": "6a7c9bb6c5f8229feded081b52c3b81476b32c6ff3e258788063e8472dcadc40",
+  "status": "rendered",
+  "l3_sha256": "1b560cedc1d7270f254ee52d018bafb503fb6bbde7f130269ec2d72d2918e1c5",
+  "edits": [
+    {
+      "old": "so that no person is in more than one pair",
+      "new": "so that exactly one person belongs to both selected pairs",
+      "occurrences": 1
+    },
+    {
+      "old": "then the following combinations of two pairs are possible (not all possible options are listed below):",
+      "new": "then the following combinations are not eligible because the two pairs have no dancer in common:",
+      "occurrences": 1
+    },
+    {
+      "old": "But the following combinations are not possible:",
+      "new": "The following combinations are eligible because they share exactly one dancer:",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "3\n3 4 4\n1 1 2 3\n2 3 2 4\n1 1 1\n1\n1\n2 2 4\n1 1 2 2\n1 2 1 2\n",
+      "output": "2\n0\n4\n",
+      "input_sha256": "1eeca8c995d6ba798c4caa2ff382ea87721a0b17ffc3b1e051a0d41f8216ab05",
+      "output_sha256": "c5cef1a2070eb17ccad8b5a0fd981afd8e7806279f094c53ba68e83eed055bab",
+      "run_report": "validation/strict_cc_a/TM111/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "k_and_total_k",
+        "observed": 9,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

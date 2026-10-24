@@ -1,0 +1,35 @@
+{
+  "seed_id": "TM095",
+  "raw_sha256": "917f277c62ba330221154b64cad7b62efc64739ef0f6ba9d5b77dc8dd15ab49a",
+  "status": "rendered",
+  "l3_sha256": "6d9c1d11378796cf0d124dacade13479e620db85f725f36844b8c1727f87b9eb",
+  "edits": [
+    {
+      "old": "then the next slip that he can choose to pick will be A[i+K+1]. \nIt means there should be a difference of atleast K between the indices of slips picked.",
+      "new": "then every subsequently chosen slip A[j] must satisfy j ≥ i+K+2. Thus consecutive selected indices differ by at least K+2; at least K+1 unselected positions separate them.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "2\n10 1\n1 2 -3 -5 4 6 -3 2 -1 2\n10 2\n1 2 -3 -5 4 6 -3 2 -1 2\n",
+      "output": "10\n10\n",
+      "input_sha256": "cea93321ae6485ce52709c20b41e0910e120fa48d9bbdffe27319300c212b1a7",
+      "output_sha256": "1286c4c74194e75cffa46c8e560ae72c829e1f554b2a1bed4549ba13b7ca59c8",
+      "run_report": "validation/strict_cc_a/TM095/report.json",
+      "case": "original_sample_recovered_0",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 10,
+        "original_upper": 10000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

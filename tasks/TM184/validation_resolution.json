@@ -1,0 +1,24 @@
+{
+  "initial_main_failures": [],
+  "first_expanded_failure_report": {
+    "path": "validation/strict_cc_b_supplement_history/TM184_before_widening/report.json",
+    "sha256": "a0e562813b7de1543af04f061b168f9c1b41832ce21a9560b807961e45a9ae92"
+  },
+  "resolution": "Complete native grammar, independently derived native and enlarged boundary certificates, full statement samples, and independent small oracles passed. Downloaded submission outputs outside their original domains are not ground truth. Three source portability/overflow repairs and two authored expanded-domain repairs are separately retained.",
+  "excluded_cases": [
+    {
+      "name": "native_upper",
+      "input_sha256": "9bba3e6944034b9da29c19d94f5bc07e9212a5372c29121e8835e078365af02a",
+      "reason": "untrusted_or_unavailable_source_reference_expected; native certificate retained instead"
+    },
+    {
+      "name": "l2_upper",
+      "input_sha256": "af28a2f73ab5f67906d35082a91ccafe7cf6a7eb8bb65906e34c1a1d0745ebdf",
+      "reason": "replaced_by_independent_expanded_certificate; source submission is not an oracle outside its declared domain"
+    }
+  ],
+  "reference_corrections": {
+    "path": "cc_audit/reference_corrections.json",
+    "sha256": "80b3a7990dc2bebf135ea57ed11603352165615468c1a26d359848dc799077c7"
+  }
+}

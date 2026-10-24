@@ -1,0 +1,59 @@
+An artisan assembles layered souvenirs from three material types.
+
+Marek loves souvenirs very much. He especially adores the souvenirs he makes with his own hands. Marek thinks that there are only three decent materials to make souvenirs from: a board, silk and cork. He writes down the assembly plan of his favorite "Le Hamburger de Polycarpus" as a string of letters 'B' (board), 'S' (silk) и 'C' (cork). The materials in the assembly plan go from bottom to top, for example, assembly plan "ВSCBS" represents the souvenir where the materials go from bottom to top as board, silk, cork, board and silk again.
+
+Marek has nb pieces of board, ns pieces of silk and nc pieces of cork in the workshop. Besides, the shop nearby has all three materials, the prices are pb rubles for a piece of board, ps for a piece of silk and pc for a piece of cork.
+
+Marek has r rubles and he is ready to shop on them. What maximum number of souvenirs can he assemble? You can assume that Marek cannot break or slice any of the pieces of board, silk or cork. Besides, the shop has an unlimited number of pieces of each material.
+
+Input
+
+The first line of the input contains a non-empty string that describes the assembly plan of "Le Hamburger de Polycarpus". The length of the string doesn't exceed 100, the string contains only letters 'B' (uppercase English B), 'S' (uppercase English S) and 'C' (uppercase English C).
+
+The second line contains three integers nb, ns, nc (1 ≤ nb, ns, nc ≤ 100) — the number of the pieces of board, silk and cork on Marek' workshop. The third line contains three integers pb, ps, pc (1 ≤ pb, ps, pc ≤ 100) — the price of one piece of board, silk and cork in the shop. Finally, the fourth line contains integer r (1 ≤ r ≤ 10^12) — the number of rubles Marek has.
+
+Please, do not write the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin, cout streams or the %I64d specifier.
+
+Output
+
+Print the maximum number of souvenirs Marek can make. If he can't make any souvenir, print 0.
+
+Examples
+
+Input
+
+BBBSSC
+6 4 1
+1 2 3
+4
+
+
+Output
+
+2
+
+
+Input
+
+BBC
+1 10 1
+1 10 1
+21
+
+
+Output
+
+7
+
+
+Input
+
+BSC
+1 1 1
+1 1 3
+1000000000000
+
+
+Output
+
+200000000001

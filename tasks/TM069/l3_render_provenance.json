@@ -1,0 +1,57 @@
+{
+  "seed_id": "TM069",
+  "raw_sha256": "f8c7ebab165bd1c56a2ff60ec1c208f1a3aadf1ac9ee09b757f07b9a3f4ba341",
+  "status": "rendered",
+  "l3_sha256": "95f88b0b58b66771365a4a69aed54aaa65e7d76cda5660f176355e9d2d740e61",
+  "edits": [
+    {
+      "old": "s \\leq t holds. Here \\leq denotes lexicographic comparison.",
+      "new": "s \\geq t holds. Here \\geq denotes lexicographic comparison.",
+      "occurrences": 1
+    },
+    {
+      "old": "For example, `abcac` is in normal form, but `zyxzx` is not since it is isomorphic to `abcac`, which is lexicographically smaller than `zyxzx`.",
+      "new": "For example, `zyxzx` is in normal form, but `abcac` is not since it is isomorphic to `zyxzx`, which is lexicographically larger than `abcac`.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "1\n",
+      "output": "z\n",
+      "input_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "output_sha256": "c865f6c5ab8d1b0bcd383a5e1e3879d22681c96bf462c269b7581d523fbe70ab",
+      "run_report": "validation/strict_cc_a/TM069/report.json",
+      "case": "boundary_semantic_witness",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 10,
+        "l2_upper": 11,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "2\n",
+      "output": "zy\nzz\n",
+      "input_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "output_sha256": "7f66c9c2ebb45bf5ff8e5dc40095fca859a0f1f8965b95895d8a2beb093dc839",
+      "run_report": "validation/strict_cc_a/TM069/report.json",
+      "case": "small_random_001",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 10,
+        "l2_upper": 11,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

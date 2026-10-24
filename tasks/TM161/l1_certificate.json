@@ -1,0 +1,58 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM161",
+  "raw_path": "tasks/TM161/raw.txt",
+  "raw_sha256": "c6828a8f5df55260e66faef52e5cbb39bfd4e3a0bfae54287f82a60df65f4dc8",
+  "l1_path": "tasks/TM161/l1.txt",
+  "l1_sha256": "9bed68a25856c59fd9e966f111ac3f9d95763944912a94104981ad1e40f50d79",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The sequences are integer event logs with selected subsequences.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "c6828a8f5df55260e66faef52e5cbb39bfd4e3a0bfae54287f82a60df65f4dc8",
+  "edits": [
+    {
+      "start": 18,
+      "end": 35,
+      "before": "integer sequences",
+      "after": "integer event logs",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 282,
+      "end": 290,
+      "before": "sequence",
+      "after": "event sequence",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "integer sequences": 1,
+    "sequence": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [
+    "sequences"
+  ],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 1080,
+      "raw_end": 1376,
+      "sha256": "34479ace2109041afa424b0bd90ee53e1c1d10f826feaf701bb80ebe7a3649af"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The sequences are integer event logs with selected subsequences.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

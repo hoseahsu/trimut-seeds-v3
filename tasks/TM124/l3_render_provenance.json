@@ -1,0 +1,45 @@
+{
+  "seed_id": "TM124",
+  "raw_sha256": "d6d6cc9e54e3818e5d506ff7780ae79ba6a1c9d5f5b23697a1331a04a934d0bd",
+  "status": "rendered",
+  "l3_sha256": "023b26a5000f16839cf6a3853621a0ff1e7326203da733b56b3f37e01ee9326b",
+  "edits": [
+    {
+      "old": "which has at least one common point with each of the given segments",
+      "new": "which contains each of the given segments completely",
+      "occurrences": 1
+    },
+    {
+      "old": "[a; b] and every [l_i; r_i] have a common point for each i",
+      "new": "a ≤ l_i and r_i ≤ b for every i",
+      "occurrences": 1
+    },
+    {
+      "old": "which has at least one common point with all given segments",
+      "new": "which contains all given segments completely",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4\n3\n4 5\n5 9\n7 7\n5\n11 19\n4 17\n16 16\n3 12\n14 17\n1\n1 10\n1\n1 1\n",
+      "output": "5\n16\n9\n0\n",
+      "input_sha256": "140788bb33750dd2faf67320df54bd6c71a1cb2ad10ea22b08e7aed452e3b173",
+      "output_sha256": "9a5247109bf4ec41d69256a787fc4225042a61dd0e870c530e750e9fd8b8d34c",
+      "run_report": "validation/strict_cc_a/TM124/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n_and_total_n",
+        "observed": 10,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

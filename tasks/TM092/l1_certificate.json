@@ -1,0 +1,56 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM092",
+  "raw_path": "tasks/TM092/raw.txt",
+  "raw_sha256": "995729dcec2595b70cef23e7e6bca33da0b0eee860190c1ebcda635eb7b277e3",
+  "l1_path": "tasks/TM092/l1.txt",
+  "l1_sha256": "f6f86546b7c036fe476d52b788249fba7e6193d4f168245e2f15c102cb42ddaa",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The positive integer is an accounting target for numerical decompositions.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "995729dcec2595b70cef23e7e6bca33da0b0eee860190c1ebcda635eb7b277e3",
+  "edits": [
+    {
+      "start": 11,
+      "end": 29,
+      "before": "positive integer N",
+      "after": "positive integer target N",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 40,
+      "end": 46,
+      "before": "tuples",
+      "after": "decomposition tuples",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "positive integer N": 1,
+    "tuples": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 276,
+      "raw_end": 369,
+      "sha256": "efac33632f9a009d03984ca09ffa0e19d8061d7289a86021f309acb0a4177890"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The positive integer is an accounting target for numerical decompositions.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

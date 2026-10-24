@@ -1,0 +1,52 @@
+A planner branches a supply network using multi-outlet junctions.
+
+Marek, the Arden new planner, wants to build a supply network. As there are exactly n buildings in Arden, Marek wants the city to have exactly n pipes, each such pipe should be connected to the water supply. A pipe can be connected to the water supply if there's water flowing out of it. Initially Marek has only one pipe with flowing water. Besides, Marek has several junctions.
+
+A junction is a construction that consists of one input (it can be connected to a water pipe) and x output pipes. When a junction is connected to a water pipe, water flows from each output pipe. You can assume that the output pipes are ordinary pipes. For example, you can connect water supply to such pipe if there's water flowing out from it. At most one junction can be connected to any water pipe.
+
+![Original illustration 1](https://espresso.codeforces.com/c0ed2dfca233f5178237c977e6afa00a5760235e.png) The figure shows a 4-output junction
+
+Marek has one junction of each kind: with 2, 3, 4, ..., k outputs. Help Marek use the minimum number of junctions to build the required supply network or otherwise state that it's impossible.
+
+Marek needs the supply network to have exactly n pipes with flowing out water. Note that some of those pipes can be the output pipes of the junctions.
+
+Input
+
+The first line contains two space-separated integers n and k (1 ≤ n ≤ 10^18, 2 ≤ k ≤ 10^9).
+
+Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin, cout streams or the %I64d specifier.
+
+Output
+
+Print a single integer — the minimum number of junctions needed to build the supply network. If it is impossible to build a supply network with the given junctions, print -1.
+
+Examples
+
+Input
+
+4 3
+
+
+Output
+
+2
+
+
+Input
+
+5 5
+
+
+Output
+
+1
+
+
+Input
+
+8 4
+
+
+Output
+
+-1

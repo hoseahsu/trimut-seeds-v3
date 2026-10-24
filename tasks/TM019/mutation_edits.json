@@ -1,0 +1,45 @@
+{
+  "seed_id": "TM019",
+  "status": "rendered",
+  "raw_sha256": "71f3122eb7f14e184aea6c425abcf4727f88ddd1fec3c8e6da09093297dc2b1b",
+  "l2_edits": [
+    {
+      "old": "N < 10^9",
+      "new": "N < 10^{12}",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "each of the digits `7`, `5` and `3` appears at least once, and the other digits never appear.",
+      "new": "at least two distinct digits among `7`, `5` and `3` appear, and no other digit appears.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "c71264d96fdcc863c1ece93b799a492dea94cba357789156cb41d650b1530da3",
+  "l3_sha256": "f3b7098ea03e0851adcfc11f0f487dedad3901122d5f3e871610027989248ed4",
+  "samples": [
+    {
+      "input": "575",
+      "output": "21\n",
+      "input_sha256": "fb84a9739699e1a2c6c56b5baa0a16047a4d845a5c6615ab9e18bafe688f45d6",
+      "output_sha256": "6e2ae11dad0616f66bbb2b6e6556f580bb987fd911d7132aa6bee2bfc7cc7b52",
+      "run_path": "validation/strict_root/TM019/report.json"
+    },
+    {
+      "input": "3600",
+      "output": "47\n",
+      "input_sha256": "8b34042b7a96b3ba94b27ad723ca8f57787eefbab2083b3098173c444aefbfdf",
+      "output_sha256": "e3667f7d8c030260bf49046f955ec9bebdb9a4cb8a66b812fd498ded5431a821",
+      "run_path": "validation/strict_root/TM019/report.json"
+    },
+    {
+      "input": "999999999",
+      "output": "29496\n",
+      "input_sha256": "bb421fa35db885ce507b0ef5c3f23cb09c62eb378fae3641c165bdf4c0272949",
+      "output_sha256": "1ed5abdab8e894dfa9c5d60a0a4d2b9b49d5ade33261aabd45032d03642259c7",
+      "run_path": "validation/strict_root/TM019/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

@@ -1,0 +1,35 @@
+{
+  "seed_id": "TM068",
+  "raw_sha256": "3492550e1b7e054b8b18b91685ee1e2bac204c6e401b5d1f0d47aa073cec2688",
+  "status": "rendered",
+  "l3_sha256": "0b89a24ff11f06bca49162c83481fcffc80cc216fc8e2584e4f48705cabac068",
+  "edits": [
+    {
+      "old": "In a single operation, you must replace every digit d of the number with the decimal representation of integer d + 1. For example, 1912 becomes 21023 after applying the operation once.",
+      "new": "In a single operation, simultaneously replace every digit d from 0 through 8 by the digit d+1, and replace every digit 9 by the two-digit string 11. For example, 1912 becomes 21123 after one operation.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "5\n1912 1\n5 6\n999 1\n88 2\n12 100\n",
+      "output": "5\n2\n6\n4\n4096\n",
+      "input_sha256": "032c354f356a583fb8887bf4097cb284b6ee176bac275427554ffb8b5d8afe9b",
+      "output_sha256": "eec1ac676d50905d1dca3c4c9bd43b387302c11b6a8c234ede0d192716546c5f",
+      "run_report": "validation/strict_cc_a/TM068/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "m",
+        "observed": 100,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

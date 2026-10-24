@@ -1,0 +1,55 @@
+{
+  "seed_id": "TM051",
+  "status": "rendered",
+  "raw_sha256": "4494b8e68bdda8061af73130e86c2668e5a44ccc1ea5dfa4b0a45605a511116c",
+  "l2_edits": [
+    {
+      "old": "|S| \\leq 2 \\times 10^5",
+      "new": "|S| \\leq 600000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "You can perform the following operation on S any number of times:",
+      "new": "You can apply one simultaneous letter substitution to S:",
+      "occurrences": 1
+    },
+    {
+      "old": "Operation: Choose two distinct lowercase English letters c_1 and c_2, then replace every occurrence of c_1 with c_2, and every occurrence of c_2 with c_1.",
+      "new": "Choose an arbitrary function f from lowercase English letters to lowercase English letters, and simultaneously replace each original character c in S by f(c). The function need not be injective: distinct original letters may map to the same target letter.",
+      "occurrences": 1
+    },
+    {
+      "old": "by performing the operation zero or more times.",
+      "new": "by one such substitution, allowing the identity function.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "18c6765c615cc47663233f333f045a80c97098e64ee9632b1c1484ad0d1cde0a",
+  "l3_sha256": "6373f4eb6d0b796f73a2b6be05015fabdcd6c05dce9491caca06daeedca39f6a",
+  "samples": [
+    {
+      "input": "azzel\napple",
+      "output": "Yes\n",
+      "input_sha256": "4d665860906ae5945ad5787d95ca4fe3c23a912b7e8ed95b59673d6a6cc174ca",
+      "output_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b",
+      "run_path": "validation/strict_root/TM051/report.json"
+    },
+    {
+      "input": "abcdefghijklmnopqrstuvwxyz\nibyhqfrekavclxjstdwgpzmonu",
+      "output": "Yes\n",
+      "input_sha256": "2c40efebc4d3c6302af98beaf7c0c5dec19f309d1c8e8c53fdae31f27288f3bc",
+      "output_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b",
+      "run_path": "validation/strict_root/TM051/report.json"
+    },
+    {
+      "input": "chokudai\nredcoder",
+      "output": "Yes\n",
+      "input_sha256": "f4a6ab502d485579667f31d96ac2c7819b7a55a3185260e30808fe5d3d93887a",
+      "output_sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b",
+      "run_path": "validation/strict_root/TM051/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

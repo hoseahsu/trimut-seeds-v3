@@ -1,0 +1,57 @@
+{
+  "seed_id": "TM103",
+  "raw_sha256": "d99e217ba8a3d626df84041801f6bdbf44de9f392cdbd14479b939546f513090",
+  "status": "rendered",
+  "l3_sha256": "f4d2e78d402d52bbde2cb93a6f4e4d1bed1041ab17f0a6be108790e2e7abe2e9",
+  "edits": [
+    {
+      "old": "Ks·Ks·s",
+      "new": "Ks·Ks·Ks·s",
+      "occurrences": 1
+    },
+    {
+      "old": "Please, do not use %lld specificator to read or write 64-bit integers in C++. It is preferred to use cout stream (also you may use %I64d).",
+      "new": "Print exact integers. The cubic-frequency answers may exceed the signed 64-bit integer range.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "3 2\n1 2 1\n1 2\n1 3\n",
+      "output": "3\n10\n",
+      "input_sha256": "e1fed72795387eec030bc1d3a67fd6da4a133ad05405ee25992c631311043d77",
+      "output_sha256": "de4d5ccb376d4bda77ef940f5d1a17660a9d9c5f4800c4fe454a786936f3eb9a",
+      "run_report": "validation/strict_cc_a/TM103/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "8 3\n1 1 2 2 1 3 1 1\n2 7\n1 6\n2 7\n",
+      "output": "46\n46\n46\n",
+      "input_sha256": "70a525112e5fcc9ec0f71610b62bc523160215c63e20bc5262ca1d1e13da4cf1",
+      "output_sha256": "7ebabbad96a1dfbd14e363e96f0c15511cdfb4bbbb4cbf3962d49ae3609a6808",
+      "run_report": "validation/strict_cc_a/TM103/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 8,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

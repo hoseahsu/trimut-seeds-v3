@@ -1,0 +1,69 @@
+{
+  "seed_id": "TM106",
+  "raw_sha256": "a0d8018d004dfbb18cc34b493e9f3f2e8696346b4f8968676ecb72f03e5ed62d",
+  "status": "rendered",
+  "l3_sha256": "4fcf50fcae2aa92ef270091e711bb5ba1375befd6f9adedff4adca769e37a27d",
+  "edits": [
+    {
+      "old": "find the length of the shortest path from Vertex x_j and Vertex y_j via Vertex K.",
+      "new": "find the length of the ordinary shortest path from Vertex x_j to Vertex y_j, with no requirement to pass through Vertex K. The input integer K and all its existing input restrictions remain unchanged.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "5\n1 2 1\n1 3 1\n2 4 1\n3 5 1\n3 1\n2 4\n2 3\n4 5\n",
+      "output": "1\n2\n4\n",
+      "input_sha256": "350d589eadbf562b6324c1bc21f2b54b320dd3906287b9641fa0a18b122e9df0",
+      "output_sha256": "e216afc4532b022721cd1b6d1bc7be479f0aff07caeebbc78e3315164d1703aa",
+      "run_report": "validation/strict_cc_a/TM106/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "7\n1 2 1\n1 3 3\n1 4 5\n1 5 7\n1 6 9\n1 7 11\n3 2\n1 3\n4 5\n6 7\n",
+      "output": "3\n12\n20\n",
+      "input_sha256": "c4cdb341230f3ec95c5c7251bdb73da92ac1013999b198417b3cbea504ad2625",
+      "output_sha256": "7c1d821797ac12e6c12d19e7455a40e0f4916dd50ba3f168b1a1efecc47ebcbb",
+      "run_report": "validation/strict_cc_a/TM106/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 7,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "10\n1 2 1000000000\n2 3 1000000000\n3 4 1000000000\n4 5 1000000000\n5 6 1000000000\n6 7 1000000000\n7 8 1000000000\n8 9 1000000000\n9 10 1000000000\n1 1\n9 10\n",
+      "output": "1000000000\n",
+      "input_sha256": "d227aa104d42c8b9306d21fcbc80d0bbec7536a8c02dbac150601acccd578ae8",
+      "output_sha256": "8bd5a23c3aef1243c78bac155b39b9d57a43d8c49665ccf6f42acf2992a94afa",
+      "run_report": "validation/strict_cc_a/TM106/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 10,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

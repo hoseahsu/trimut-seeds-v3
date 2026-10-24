@@ -1,0 +1,49 @@
+Little Susie listens to fairy tales before bed every day. Today's fairy tale was about wood cutters and the little girl immediately started imagining the choppers cutting wood. She imagined the situation that is described below.
+
+There are n trees located along the road at points with coordinates x1, x2, ..., xn. Each tree has its height hi. Woodcutters can cut down a tree and fell it to the left or to the right. After that it occupies one of the segments [xi - hi, xi] or [xi;xi + hi]. The tree that is not cut down occupies a single point with coordinate xi. Woodcutters can fell a tree provided the final occupied intervals of consecutive trees may share an endpoint but have no other intersection. In order of increasing tree coordinates, this means right_i ≤ left_(i+1), including intervals consisting of a standing tree's single point. The woodcutters want to process as many trees as possible, so Susie wonders, what is the maximum number of trees to fell. 
+
+Input
+
+The first line contains integer n (1 ≤ n ≤ 10^5) — the number of trees.
+
+Next n lines contain pairs of integers xi, hi (1 ≤ xi, hi ≤ 10^9) — the coordinate and the height of the і-th tree.
+
+The pairs are given in the order of ascending xi. No two trees are located at the point with the same coordinate.
+
+Output
+
+Print a single number — the maximum number of trees that you can cut down by the given rules.
+
+Sample Input 1
+
+```text
+5
+1 2
+2 1
+5 10
+10 9
+19 1
+```
+
+Sample Output 1
+
+```text
+4
+```
+
+Sample Input 2
+
+```text
+5
+1 2
+2 1
+5 10
+10 9
+20 1
+```
+
+Sample Output 2
+
+```text
+4
+```

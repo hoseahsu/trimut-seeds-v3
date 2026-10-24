@@ -1,0 +1,26 @@
+{
+  "initial_main_failures": [
+    {
+      "case": "native_upper",
+      "reason": "raw_expected_mismatch"
+    }
+  ],
+  "first_expanded_failure_report": null,
+  "resolution": "Complete native grammar, independently derived native and enlarged boundary certificates, full statement samples, and independent small oracles passed. Downloaded submission outputs outside their original domains are not ground truth. Three source portability/overflow repairs and two authored expanded-domain repairs are separately retained.",
+  "excluded_cases": [
+    {
+      "name": "native_upper",
+      "input_sha256": "42a52fa18549a642df71ec414a044d5e3f1265b49e78c534e4b212e052e7c077",
+      "reason": "untrusted_or_unavailable_source_reference_expected; native certificate retained instead"
+    },
+    {
+      "name": "l2_upper",
+      "input_sha256": "8d184d265337853219abcfc20a022cd02f8ade1056ad99449520443a1bba0680",
+      "reason": "replaced_by_independent_expanded_certificate; source submission is not an oracle outside its declared domain"
+    }
+  ],
+  "reference_corrections": {
+    "path": "cc_audit/reference_corrections.json",
+    "sha256": "80b3a7990dc2bebf135ea57ed11603352165615468c1a26d359848dc799077c7"
+  }
+}

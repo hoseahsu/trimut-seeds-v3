@@ -1,0 +1,63 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM133",
+  "raw_path": "tasks/TM133/raw.txt",
+  "raw_sha256": "db00fc9e89f8544b962a1a81bbd1c829cfa466746b12d58a8377f6e42606f078",
+  "l1_path": "tasks/TM133/l1.txt",
+  "l1_sha256": "34c8611569ef329ef1760a1cceefa406491051ce9f969ac3e062f9403920d2ae",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The array stores job weights to be grouped into pairs.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "db00fc9e89f8544b962a1a81bbd1c829cfa466746b12d58a8377f6e42606f078",
+  "edits": [
+    {
+      "start": 17,
+      "end": 22,
+      "before": "array",
+      "after": "job-weight array",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 80,
+      "end": 87,
+      "before": "numbers",
+      "after": "job weights",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 329,
+      "end": 334,
+      "before": "array",
+      "after": "job-weight array",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "array": 2,
+    "numbers": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 468,
+      "raw_end": 516,
+      "sha256": "c67b294869c63165b9f996000498c72b996c47e01ef5146cc7f0fd55831db206"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The array stores job weights to be grouped into pairs.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

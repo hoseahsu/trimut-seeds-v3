@@ -1,0 +1,60 @@
+An inspection system reports independent faults while a technician repairs them.
+
+A and B are preparing themselves for equipment inspections.
+
+B loves to repair his equipment. But before he runs the equipment and starts repairing, he has to first inspect the equipment.
+
+Initially, the inspection console displayed n inspection faults, each of them is represented as a positive integer. After some effort, B managed to fix some fault and then another one fault.
+
+However, despite the fact that B is sure that he corrected the two faults, he can not understand exactly what inspection faults disappeared — the inspection console of the system which B uses shows faults in the new order every time! B is sure that unlike many other inspection systems, inspection faults for his inspection system do not depend on each other, that is, if you correct one fault, the set of other fault does not change.
+
+Can you help B find out exactly what two faults he corrected?
+
+Input
+
+The first line of the input contains integer n (3 ≤ n ≤ 10^5) — the initial number of inspection faults.
+
+The second line contains n space-separated integers a1, a2, ..., an (1 ≤ ai ≤ 10^9) — the faults the inspection console displayed for the first time. 
+
+The third line contains n - 1 space-separated integers b1, b2, ..., bn - 1 — the faults displayed at the second inspection. It is guaranteed that the sequence in the third line contains all numbers of the second string except for exactly one. 
+
+The fourth line contains n - 2 space-separated integers с1, с2, ..., сn - 2 — the faults displayed at the third inspection. It is guaranteed that the sequence in the fourth line contains all numbers of the third line except for exactly one. 
+
+Output
+
+Print two numbers on a single line: the numbers of the inspection faults that disappeared after B made the first and the second correction, respectively. 
+
+Examples
+
+Input
+
+5
+1 5 8 123 7
+123 7 5 1
+5 1 7
+
+
+Output
+
+8
+123
+
+
+Input
+
+6
+1 4 3 3 5 7
+3 7 5 4 3
+4 3 7 5
+
+
+Output
+
+1
+3
+
+Note
+
+In the first test sample B first corrects the fault number 8, then the fault number 123.
+
+In the second test sample B first corrects the fault number 1, then the fault number 3. Note that if there are multiple faults with the same number, B can correct only one of them in one step. 

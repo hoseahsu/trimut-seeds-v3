@@ -1,0 +1,51 @@
+A warehouse shuttle serves vertically numbered levels.
+
+The Warehouse Clerk lives in n story warehouse. a_i workers live on the i-th floor of the warehouse. Every worker uses cargo shuttle twice a day: to get from the floor where he/she lives to the ground (first) floor and to get from the first floor to the floor where he/she lives, when he/she comes back home in the evening. 
+
+It was decided that cargo shuttle, when it is not used, will stay on the x-th floor, but x hasn't been chosen yet. When a worker needs to get from floor a to floor b, cargo shuttle follows the simple algorithm: 
+
+  * Moves from the x-th floor (initially it stays on the x-th floor) to the a-th and takes the rider. 
+  * Moves from the a-th floor to the b-th floor and lets out the rider (if a equals b, cargo shuttle just opens and closes the doors, but still comes to the floor from the x-th floor). 
+  * Moves from the b-th floor back to the x-th. 
+
+The cargo shuttle never transposes more than one worker and always goes back to the floor x before transposing a next rider. The cargo shuttle spends one unit of energy to move between neighboring floors. So moving from the a-th floor to the b-th floor requires |a - b| units of energy.
+
+Your task is to help Clerk to find the minimum number of energy units, that it would be enough for one day, by choosing an optimal the x-th floor. Don't forget than cargo shuttle initially stays on the x-th floor. 
+
+Input
+
+The first line contains one integer n (1 ≤ n ≤ 100) — the number of floors.
+
+The second line contains n integers a_1, a_2, …, a_n (0 ≤ a_i ≤ 100) — the number of workers on each floor.
+
+Output
+
+In a single line, print the answer to the problem — the minimum number of energy units.
+
+Examples
+
+Input
+
+3
+0 2 1
+
+
+Output
+
+16
+
+Input
+
+2
+1 1
+
+
+Output
+
+4
+
+Note
+
+In the first example, the answer can be achieved by choosing the second floor as the x-th floor. Each worker from the second floor (there are two of them) would spend 4 units of energy per day (2 to get down and 2 to get up), and one worker from the third would spend 8 units of energy per day (4 to get down and 4 to get up). 4 ⋅ 2 + 8 ⋅ 1 = 16.
+
+In the second example, the answer can be achieved by choosing the first floor as the x-th floor.

@@ -1,0 +1,53 @@
+A fleet planner compares expedition craft against fortified stations.
+
+Mira and Captain Nolan hopped out of the Shuttle and found themselves at Arden in 2018. They were surrounded by guards and Commander Voss was approaching. Miraculously, they managed to escape to a nearby rebel station but the Captain was very confused. Mira reminded him that last year's HC2 theme was Star Voyagers. Now he understood, and he's ready to face the evils of the Dominion!
+
+The rebels have s expedition craft, each with a certain attacking power a.
+
+They want to send their expedition craft to destroy the Dominion stations and steal enough supply credits and supplies in order to keep the rebellion alive.
+
+The Dominion has b stations, each with a certain defensive power d, and a certain amount of supply credits g.
+
+A expedition craft can attack all the stations which have a defensive power less than or equal to its attacking power.
+
+If a expedition craft attacks a station, it steals all the supply credits in that station.
+
+The rebels are still undecided which expedition craft to send out first, so they asked for the Captain's help. They would like to know, for each expedition craft, the maximum amount of supply credits it can steal.
+
+Input
+
+The first line contains integers s and b (1 ≤ s, b ≤ 10^5), the number of expedition craft and the number of stations, respectively.
+
+The second line contains s integers a (0 ≤ a ≤ 10^9), the attacking power of each expedition craft.
+
+The next b lines contain integers d, g (0 ≤ d ≤ 10^9, 0 ≤ g ≤ 10^4), the defensive power and the supply credits of each station, respectively.
+
+Output
+
+Print s integers, the maximum amount of supply credits each expedition craft can steal, in the same order as the expedition craft are given in the input.
+
+Example
+
+Input
+
+
+5 4
+1 3 5 2 4
+0 1
+4 2
+2 8
+9 4
+
+
+Output
+
+
+1 9 11 9 11
+
+Note
+
+The first expedition craft can only attack the first station.
+
+The second expedition craft can attack the first and third stations.
+
+The third expedition craft can attack the first, second and third stations.

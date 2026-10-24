@@ -1,0 +1,44 @@
+{
+  "initial_main_failures": [
+    {
+      "case": "native_upper",
+      "reason": "raw_expected_mismatch"
+    }
+  ],
+  "first_expanded_failure_report": null,
+  "resolution": "Complete native grammar, independently derived native and enlarged boundary certificates, full statement samples, and independent small oracles passed. Downloaded submission outputs outside their original domains are not ground truth. Three source portability/overflow repairs and two authored expanded-domain repairs are separately retained.",
+  "excluded_cases": [
+    {
+      "name": "generated_tests_0034",
+      "input_sha256": "72e61a025670ae1e70ae892eecd3382b378b30c8e2cb5f11884a4c04a362ead9",
+      "reason": "current_native_domain_rejected",
+      "validation": {
+        "valid": false,
+        "reason": "B_i equals C_i"
+      }
+    },
+    {
+      "name": "generated_tests_0043",
+      "input_sha256": "7f412b2dbf2364bbac1e760bb882d5890c0fb968cde4faf45b5b95e970d696ec",
+      "reason": "current_native_domain_rejected",
+      "validation": {
+        "valid": false,
+        "reason": "B_i equals C_i"
+      }
+    },
+    {
+      "name": "native_upper",
+      "input_sha256": "13529a05f787b89cc88e1b1696adb54634955ae6d2e34d17b779d8b89e59eb83",
+      "reason": "untrusted_or_unavailable_source_reference_expected; native certificate retained instead"
+    },
+    {
+      "name": "l2_upper",
+      "input_sha256": "af63cfe907e5d456e4b6cdb47f523b5b34485e4eeadea3f74fa2e4d0e034e7f7",
+      "reason": "replaced_by_independent_expanded_certificate; source submission is not an oracle outside its declared domain"
+    }
+  ],
+  "reference_corrections": {
+    "path": "cc_audit/reference_corrections.json",
+    "sha256": "80b3a7990dc2bebf135ea57ed11603352165615468c1a26d359848dc799077c7"
+  }
+}

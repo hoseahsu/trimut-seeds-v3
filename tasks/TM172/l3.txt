@@ -1,0 +1,68 @@
+We call a string good if the string itself is a palindrome, without merging any characters. For example, "aabba" is not good, while "abba" is good.
+
+Given a string, you have to find two values:
+
+  1. the number of good substrings of even length; 
+  2. the number of good substrings of odd length. 
+
+Input
+
+The first line of the input contains a single string of length n (1 ≤ n ≤ 10^5). Each character of the string will be either 'a' or 'b'.
+
+Output
+
+Print two space-separated integers: the number of good substrings of even length and the number of good substrings of odd length.
+
+Definitions
+
+A substring s[l, r] (1 ≤ l ≤ r ≤ n) of string s = s1s2... sn is string slsl + 1... sr.
+
+A string s = s1s2... sn is a palindrome if it is equal to string snsn - 1... s1.
+
+Sample Input 1
+
+```text
+bb
+```
+
+Sample Output 1
+
+```text
+1 2
+```
+
+Sample Input 2
+
+```text
+baab
+```
+
+Sample Output 2
+
+```text
+2 4
+```
+
+Sample Input 3
+
+```text
+babb
+```
+
+Sample Output 3
+
+```text
+1 5
+```
+
+Sample Input 4
+
+```text
+babaa
+```
+
+Sample Output 4
+
+```text
+1 7
+```

@@ -1,0 +1,94 @@
+We have an undirected graph G with N vertices numbered 1 to N and N edges as follows:
+
+* For each i=1,2,...,N-1, there is an edge of weight 1 between Vertex i and Vertex i+1.
+* There is an edge of weight 2 between Vertex X and Vertex Y.
+
+
+
+For each k=1,2,...,N-1, solve the problem below:
+
+* Find the number of pairs of integers (i,j) (1 \leq i < j \leq N) such that the minimum sum of edge weights along a path between Vertex i and Vertex j in G is k.
+
+Constraints
+
+* 3 \leq N \leq 2 \times 10^3
+* 1 \leq X,Y \leq N
+* X+1 < Y
+* All values in input are integers.
+
+Input
+
+Input is given from Standard Input in the following format:
+
+
+N X Y
+
+
+Output
+
+For each k=1, 2, ..., N-1 in this order, print a line containing the answer to the problem.
+
+Sample Input 1
+
+```text
+5 2 4
+```
+
+Sample Output 1
+
+```text
+4
+3
+2
+1
+```
+
+Sample Input 2
+
+```text
+3 1 3
+```
+
+Sample Output 2
+
+```text
+2
+1
+```
+
+Sample Input 3
+
+```text
+7 3 7
+```
+
+Sample Output 3
+
+```text
+6
+6
+5
+3
+1
+0
+```
+
+Sample Input 4
+
+```text
+10 4 8
+```
+
+Sample Output 4
+
+```text
+9
+9
+9
+8
+6
+3
+1
+0
+0
+```

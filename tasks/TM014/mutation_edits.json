@@ -1,0 +1,31 @@
+{
+  "seed_id": "TM014",
+  "status": "rendered",
+  "raw_sha256": "855ffffde7dbf1dc57844c09147228d1e376b0fb5734809b5189100a0c89ee16",
+  "l2_edits": [
+    {
+      "old": "q ≤ 500",
+      "new": "q ≤ 2000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "((x mod a) mod b) ≠ ((x mod b) mod a)",
+      "new": "((x mod a) mod b) = ((x mod b) mod a)",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "560c249e2b979692f33bcda1ef232f710643121159ac2607ce8ce16851443bb5",
+  "l3_sha256": "d204009484538318442ae004b6440b97a1e2391974a35f9a4c16d9fea4294ea3",
+  "samples": [
+    {
+      "input": "2\n4 6 5\n1 1\n1 3\n1 5\n1 7\n1 9\n7 10 2\n7 8\n100 200\n",
+      "output": "1 3 5 5 5 \n2 10 \n",
+      "input_sha256": "4955500bdcde2c61af7e949ece48899b6cc06cec44c891ad7af3ea07b913709a",
+      "output_sha256": "426922dd5fe363a8587aea61b8aa91be550e286a98cb5802177af213bf0afe48",
+      "run_path": "validation/strict_root/TM014/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

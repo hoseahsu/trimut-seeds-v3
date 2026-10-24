@@ -1,0 +1,75 @@
+A workshop schedules jobs on indexed machines.
+
+There are n machines in a workshop, each of them can perform jobs. Each machine has a unique id — integer from 1 to n.
+
+It is known that during the day q jobs will come, the i-th of them is characterized with three integers: ti — the moment in seconds in which the job will come, ki — the number of machines needed to perform it, and di — the time needed to perform this job in seconds. All ti are distinct.
+
+To perform the i-th job you need ki machines which are unoccupied in the second ti. After the machines begin to perform the job, each of them will be busy over the next di seconds. Thus, they will be busy in seconds ti, ti + 1, ..., ti + di - 1. For performing the job, ki machines with the smallest ids will be chosen from all the unoccupied machines. If in the second ti there are not enough unoccupied machines, the job is ignored.
+
+Write the program that determines which jobs will be performed and which will be ignored.
+
+Input
+
+The first line contains two positive integers n and q (1 ≤ n ≤ 100, 1 ≤ q ≤ 10^5) — the number of machines and the number of jobs. 
+
+Next q lines contains three integers each, the i-th line contains integers ti, ki and di (1 ≤ ti ≤ 10^6, 1 ≤ ki ≤ n, 1 ≤ di ≤ 1000) — the moment in seconds in which the i-th job will come, the number of machines needed to perform it, and the time needed to perform this job in seconds. The jobs are given in a chronological order and they will come in distinct seconds. 
+
+Output
+
+Print q lines. If the i-th job will be performed by the machines, print in the i-th line the sum of machines' ids on which this job will be performed. Otherwise, print -1.
+
+Examples
+
+Input
+
+4 3
+1 3 2
+2 2 1
+3 4 3
+
+
+Output
+
+6
+-1
+10
+
+
+Input
+
+3 2
+3 2 3
+5 1 2
+
+
+Output
+
+3
+3
+
+
+Input
+
+8 6
+1 3 20
+4 2 1
+6 5 5
+10 1 1
+15 3 6
+21 8 8
+
+
+Output
+
+6
+9
+30
+-1
+15
+36
+
+Note
+
+In the first example in the second 1 the first job will come, it will be performed on the machines with ids 1, 2 and 3 (the sum of the ids equals 6) during two seconds. In the second 2 the second job will come, it will be ignored, because only the machine 4 will be unoccupied at that second. In the second 3 the third job will come. By this time, machines with the ids 1, 2 and 3 will be unoccupied again, so the third job will be done on all the machines with the ids 1, 2, 3 and 4 (the sum of the ids is 10).
+
+In the second example in the second 3 the first job will come, it will be performed on the machines with ids 1 and 2 (the sum of the ids is 3) during three seconds. In the second 5 the second job will come, it will be performed on the machine 3, because the first two machines will be busy performing the first job.

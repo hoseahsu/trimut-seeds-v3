@@ -1,0 +1,49 @@
+A traveler counts visible route beacons from a moving shuttle.
+
+Marek plans to go to the meeting by shuttle. Initially, the shuttle is at the point 1 and the destination point of the path is the point L. The speed of the shuttle is 1 length unit per minute (i.e. at the first minute the shuttle is at the point 1, at the second minute — at the point 2 and so on).
+
+There are route beacons on the path. They are placed at the points with coordinates divisible by v (i.e. the first route beacon is at the point v, the second is at the point 2v and so on).
+
+There is also exactly one standing shuttle which occupies all the points from l to r inclusive.
+
+Marek can see the route beacon at the point p if p is divisible by v and there is no standing shuttle at this position (p not∈ [l; r]). Thus, if the point with the route beacon is one of the points covered by the standing shuttle, Marek can't see this route beacon.
+
+Your problem is to say the number of route beacons Marek will see during the path. Marek plans to go to t different meetings, so you should answer t independent queries.
+
+Input
+
+The first line of the input contains one integer t (1 ≤ t ≤ 10^4) — the number of queries.
+
+Then t lines follow. The i-th line contains four integers L_i, v_i, l_i, r_i (1 ≤ L, v ≤ 10^9, 1 ≤ l ≤ r ≤ L) — destination point of the i-th path, the period of the route beacon appearance and the segment occupied by the standing shuttle.
+
+Output
+
+Print t lines. The i-th line should contain one integer — the answer for the i-th query.
+
+Example
+
+Input
+
+4
+10 2 3 7
+100 51 51 51
+1234 1 100 199
+1000000000 1 1 1000000000
+
+
+Output
+
+3
+0
+1134
+0
+
+Note
+
+For the first example query, the answer is 3. There are route beacons at positions 2, 4, 6, 8 and 10, but Marek didn't see the route beacons at positions 4 and 6 because of the standing shuttle.
+
+For the second example query, the answer is 0 because the only route beacon is at the point 51 and there is also a standing shuttle at this point.
+
+For the third example query, the answer is 1134 because there are 1234 route beacons, but Marek didn't see the route beacons from the position 100 to the position 199 inclusive.
+
+For the fourth example query, the answer is 0 because the standing shuttle covers the whole path.

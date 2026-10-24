@@ -1,0 +1,74 @@
+An explorer matches numbered access passes to storage lockers.
+
+On a random day, Mira found n storage lockers and m access passes. The i-th locker has an integer a_i written on it and the j-th access pass has an integer b_j on it. Mira knows those lockers contain the powerful mysterious green Artifacts, thus Mira wants to open as many storage lockers as possible.
+
+The j-th access pass can be used to unlock the i-th locker if and only if the sum of the access pass number and the locker number is an odd number. Formally, a_i + b_j ≡ 1 \pmod{2}. One access pass can be used to open at most one locker, and one locker can be opened at most once.
+
+Find the maximum number of lockers Mira can open.
+
+Input
+
+The first line contains integers n and m (1 ≤ n, m ≤ 10^5) — the number of lockers and the number of access passes.
+
+The second line contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the numbers written on the storage lockers.
+
+The third line contains m integers b_1, b_2, …, b_m (1 ≤ b_i ≤ 10^9) — the numbers written on the access passes.
+
+Output
+
+Print the maximum number of lockers you can open.
+
+Examples
+
+Input
+
+
+5 4
+9 14 6 2 11
+8 4 7 20
+
+
+Output
+
+
+3
+
+Input
+
+
+5 1
+2 4 6 8 10
+5
+
+
+Output
+
+
+1
+
+Input
+
+
+1 4
+10
+20 30 40 50
+
+
+Output
+
+
+0
+
+Note
+
+In the first example, one possible way to unlock 3 lockers is as follows:
+
+  * Use first access pass to unlock the fifth locker, 
+  * Use third access pass to unlock the second locker, 
+  * Use fourth access pass to unlock the first locker. 
+
+
+
+In the second example, you can use the only access pass to unlock any single locker (note that one access pass can't be used twice).
+
+In the third example, no access pass can unlock the given locker.

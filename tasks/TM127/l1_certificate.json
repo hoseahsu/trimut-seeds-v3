@@ -1,0 +1,62 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM127",
+  "raw_path": "tasks/TM127/raw.txt",
+  "raw_sha256": "3c5b0639323c01a596f1dbb77cde02b87dd75584025eccc3025fcb857f919c38",
+  "l1_path": "tasks/TM127/l1.txt",
+  "l1_sha256": "2de62f3f1f459c78b6c0cd4d0b0b65b07cad36a4a3a713afabdd63a0b4ad1260",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The divisor sum is interpreted as an identifier score.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "3c5b0639323c01a596f1dbb77cde02b87dd75584025eccc3025fcb857f919c38",
+  "edits": [
+    {
+      "start": 53,
+      "end": 61,
+      "before": "number n",
+      "after": "identifier n",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 160,
+      "end": 168,
+      "before": "number c",
+      "after": "target score c",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "number n": 1,
+    "number c": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "quoted_literal",
+      "raw_start": 406,
+      "raw_end": 410,
+      "sha256": "6b54ef0f2b5a5ef8e655f3ee42f1630f4f098d1007decc5ca13855879dd63657"
+    },
+    {
+      "kind": "sample_block",
+      "raw_start": 469,
+      "raw_end": 557,
+      "sha256": "afa82ebdb8f36edfe4cf9ebcb60576cb366fbeb72a0a55e840f6f8889a70adf9"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The divisor sum is interpreted as an identifier score.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

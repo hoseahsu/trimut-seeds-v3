@@ -1,0 +1,35 @@
+{
+  "seed_id": "TM107",
+  "raw_sha256": "ed0ef75012da3186fbaba90fc72de61dc8a39bcd3841289ea4fbc15577c532a0",
+  "status": "rendered",
+  "l3_sha256": "9654b28a77a04bb607ae9fbb2779c9c28b3d4ad7e5804b9a33354ac3002013d0",
+  "edits": [
+    {
+      "old": "Then t is dominated (by v) if (and only if) occ(v) > occ(v') for any other number v'. For example, arrays [1, 2, 3, 4, 5, 2], [11, 11] and [3, 2, 3, 2, 3] are dominated (by 2, 11 and 3 respectevitely) but arrays [3], [1, 2] and [3, 3, 2, 2, 1] are not.",
+      "new": "Then t is dominated by v if and only if occ(v) ≥ 3 and occ(v) > occ(v') for every other number v'. For example, [3,2,3,2,3] is dominated by 3. Arrays [1,2,3,4,5,2], [11,11], [3], [1,2] and [3,3,2,2,1] are not dominated under this rule.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4\n1\n1\n6\n1 2 3 4 5 1\n9\n4 1 2 4 5 4 3 2 1\n4\n3 3 3 3\n",
+      "output": "-1\n-1\n6\n3\n",
+      "input_sha256": "a0d15772c99b1688e9af2522e394ace633a0d4651d916cc01cf6d3fb997f8218",
+      "output_sha256": "d6feef306f83af4c9c200eb2ec54c789b5aab23f44e66c1e1b680bc63720c3aa",
+      "run_report": "validation/strict_cc_a/TM107/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n_and_total_n",
+        "observed": 20,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

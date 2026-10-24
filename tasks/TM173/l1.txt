@@ -1,0 +1,50 @@
+Two integer registers are aligned to produce a combined register.
+
+You are given two integer registers a and b, both of length n. All register entries of both integer registers are from 0 to n-1.
+
+You can reorder register entries of the integer register b (if you want, you may leave the order of register entries as it is). After that, let integer register c be the integer register of length n, the i-th register entry of this integer register is c_i = (a_i + b_i) \% n, where x \% y is x modulo y.
+
+Your task is to reorder register entries of the integer register b to obtain the lexicographically minimum possible integer register c.
+
+Integer register x of length n is lexicographically less than integer register y of length n, if there exists such i (1 ≤ i ≤ n), that x_i < y_i, and for any j (1 ≤ j < i) x_j = y_j.
+
+Input
+
+The first line of the input contains one integer n (1 ≤ n ≤ 2 ⋅ 10^5) — the number of register entries in a, b and c.
+
+The second line of the input contains n integers a_1, a_2, ..., a_n (0 ≤ a_i < n), where a_i is the i-th register entry of a.
+
+The third line of the input contains n integers b_1, b_2, ..., b_n (0 ≤ b_i < n), where b_i is the i-th register entry of b.
+
+Output
+
+Print the lexicographically minimum possible integer register c. Recall that your task is to reorder register entries of the integer register b and obtain the lexicographically minimum possible integer register c, where the i-th register entry of c is c_i = (a_i + b_i) \% n.
+
+Examples
+
+Input
+
+
+4
+0 1 2 1
+3 2 1 1
+
+
+Output
+
+
+1 0 0 2 
+
+
+Input
+
+
+7
+2 5 1 5 3 4 3
+2 4 3 5 6 5 1
+
+
+Output
+
+
+0 0 0 1 0 2 4 

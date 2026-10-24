@@ -1,0 +1,38 @@
+{
+  "seed_id": "TM023",
+  "status": "rendered",
+  "raw_sha256": "60f30d2469acc950eb1f55e84a7cf3812b634c9974ad858ca76db7694ff286fe",
+  "l2_edits": [
+    {
+      "old": "n ≤ 10^9",
+      "new": "n ≤ 10^18",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "last digit of 1378^n",
+      "new": "last two digits of 1378^n (as an integer in [0,99], without mandatory leading zero padding)",
+      "occurrences": 2
+    }
+  ],
+  "l2_sha256": "8a23ce24dc90ba248ca8f5890473359f646a658927032dd94a9725dc4691f810",
+  "l3_sha256": "860e69c33ee2f4944840eb7f2babf76f077f18b7b752fa7f5942880ebc35fa4a",
+  "samples": [
+    {
+      "input": "2\n",
+      "output": "84\n",
+      "input_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "output_sha256": "4b9258d432ecb4511cfe5471a58f3feea9e8aa513e1d32294894693827d3b0d4",
+      "run_path": "validation/strict_root/TM023/report.json"
+    },
+    {
+      "input": "1\n",
+      "output": "78\n",
+      "input_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "output_sha256": "b03c70ff0d641a363f1a021413a098dce02e4c68b75f3a47aa10044f42ee1784",
+      "run_path": "validation/strict_root/TM023/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

@@ -1,0 +1,88 @@
+# B - Coins
+
+## Problem Statement
+
+You have $A$ $500$-yen coins, $B$ $100$-yen coins and $C$ $50$-yen coins (yen is the currency of Japan).
+In how many ways can we select some of these coins so that they are at most $X$ yen in total? The empty selection is allowed.
+
+Coins of the same kind cannot be distinguished. Two ways to select coins are distinguished when, for some kind of coin, the numbers of that coin are different.
+
+## Constraints
+
+- $0 \leq A, B, C \leq 50$
+
+- $A + B + C \geq 1$
+
+- $50 \leq X \leq 20$ $000$
+
+- $A$, $B$ and $C$ are integers.
+
+- $X$ is a multiple of $50$.
+
+## Input
+
+Input is given from Standard Input in the following format:
+
+```
+A
+B
+C
+X
+
+```
+
+## Output
+
+Print the number of ways to select coins.
+
+## Sample Input 1
+
+```
+2
+2
+2
+100
+
+```
+
+## Sample Output 1
+
+```
+4
+```
+
+There are four choices: take no coins; take one 50-yen coin; take two 50-yen coins; or take one 100-yen coin.
+
+## Sample Input 2
+
+```
+5
+1
+0
+150
+
+```
+
+## Sample Output 2
+
+```
+2
+```
+
+The total need not equal X. The empty selection and the selection of one 100-yen coin are both valid.
+
+## Sample Input 3
+
+```
+30
+40
+50
+6000
+
+```
+
+## Sample Output 3
+
+```
+12653
+```

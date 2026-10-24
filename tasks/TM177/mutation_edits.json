@@ -1,0 +1,47 @@
+{
+  "seed_id": "TM177",
+  "raw_sha256": "20f402fa151cedbade374713c3de364ac516a68d86af7b444fd5107ce0b6448f",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "1 ≤ n, m ≤ 100",
+      "new": "1 ≤ n ≤ 10000, 1 ≤ m ≤ 100",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "To solve the crossword you should cross out all repeated letters in rows and columns. In other words, a letter should only be crossed out if and only if the corresponding column or row contains at least one more letter that is exactly the same. Besides, all such letters are crossed out simultaneously.",
+      "new": "Retain a cell if and only if its letter occurs at least twice in its row and at least twice in its column. Cross out every other cell simultaneously.",
+      "occurrences": 1
+    },
+    {
+      "old": "When all repeated letters have been crossed out,",
+      "new": "When all the specified cells have been crossed out,",
+      "occurrences": 1
+    },
+    {
+      "old": "It is guaranteed that the answer consists of at least one letter.",
+      "new": "The input guarantees that at least one cell has a letter occurring exactly once in its row and exactly once in its column. The output under the retention rule may be empty; in that case print an empty line.",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "bfc5853b8c518d8e2140085a99052c14f535d3892d22da8685cdde29fabdc0c9",
+      "l3_output_sha256": "a3a5e715f0cc574a73c3f9bebb6bc24f32ffd5b67b387244c2c909da779a1478",
+      "run_report": "validation/strict_cc_b_supplement/TM177/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "d539b45a84fb84f403a502be9e9ed2750abc983d1b489bc6a8b4448803e959aa",
+      "l3_output_sha256": "e7680bee1b57cff7d83992e599197637d38a76b26f420f324fb71caf7ee41dca",
+      "run_report": "validation/strict_cc_b_supplement/TM177/report.json",
+      "case": "original_statement_sample_2"
+    }
+  ],
+  "l2_sha256": "a566cb1132b5b113bd389fa8e74f587b4b8331aa5aef48e1a3e5c24b6feac952",
+  "l3_sha256": "0b4b61a1e95e8d8d6944bb466c9514a9bdd9c761136e6eec5234c8c6385c44ee",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

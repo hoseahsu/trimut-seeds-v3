@@ -1,0 +1,62 @@
+An encoded message is shortened by deleting repeated symbols.
+
+You are given a encoded message s, consisting of lowercase Latin letters. While there is at least one character in the encoded message s that is repeated at least twice, you perform the following operation: 
+
+  * you choose the index i (1 ≤ i ≤ |s|) such that the character at position i occurs at least two times in the encoded message s, and delete the character at position i, that is, replace s with s_1 s_2 … s_{i-1} s_{i+1} s_{i+2} … s_n. 
+
+
+
+For example, if s="codeforces", then you can apply the following sequence of operations: 
+
+  * i=6 ⇒ s="codefrces"; 
+  * i=1 ⇒ s="odefrces"; 
+  * i=7 ⇒ s="odefrcs"; 
+
+
+
+Given a given encoded message s, find the lexicographically maximum encoded message that can be obtained after applying a certain sequence of operations after which all characters in the encoded message become unique.
+
+A encoded message a of length n is lexicographically less than a encoded message b of length m, if: 
+
+  * there is an index i (1 ≤ i ≤ min(n, m)) such that the first i-1 characters of the encoded messages a and b are the same, and the i-th character of the encoded message a is less than i-th character of encoded message b; 
+  * or the first min(n, m) characters in the encoded messages a and b are the same and n < m. 
+
+
+
+For example, the encoded message a="aezakmi" is lexicographically less than the encoded message b="aezus".
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4). Then t test cases follow.
+
+Each test case is characterized by a encoded message s, consisting of lowercase Latin letters (1 ≤ |s| ≤ 2 ⋅ 10^5).
+
+It is guaranteed that the sum of the lengths of the encoded messages in all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output the lexicographically maximum encoded message that can be obtained after applying a certain sequence of operations after which all characters in the encoded message become unique.
+
+Example
+
+Input
+
+
+6
+codeforces
+aezakmi
+abacaba
+convexhull
+swflldjgpaxs
+myneeocktxpqjpz
+
+
+Output
+
+
+odfrces
+ezakmi
+cba
+convexhul
+wfldjgpaxs
+myneocktxqjpz

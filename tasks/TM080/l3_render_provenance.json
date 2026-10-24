@@ -1,0 +1,89 @@
+{
+  "seed_id": "TM080",
+  "raw_sha256": "1d62ddbdbef46647a2fd1c9858e318a3e63826cb11c6878f11e8e9695163ceac",
+  "status": "rendered",
+  "l3_sha256": "3232e95147966763ddcd45ad00f755e2b2952acff2faded519fd4724242a171a",
+  "edits": [
+    {
+      "old": "Nadeko will repaint at most m of the pieces to give each of them an arbitrary new colour (still denoted by a lowercase English letter). After this work, she finds out all subsegments of the garland containing pieces of only colour c — Brother Koyomi's favourite one, and takes the length of the longest among them to be the Koyomity of the garland.",
+      "new": "For a plan (m,c), Nadeko must select a contiguous subsegment containing exactly m pieces whose initial colour differs from c. She repaints precisely those m pieces to c; all other pieces are left unchanged. The score of the plan is the length of the longest eligible selected subsegment, or 0 if none exists.",
+      "occurrences": 1
+    },
+    {
+      "old": "Thus the Koyomity of this garland equals 3.",
+      "new": "For the changed task, if m=1 and c=\"o\", the subsegment \"ooomo\" is eligible and has length 5; no length-6 subsegment has exactly one mismatch.",
+      "occurrences": 1
+    },
+    {
+      "old": "the maximum amount of pieces to repaint",
+      "new": "the exact number of mismatching pieces in the selected subsegment",
+      "occurrences": 1
+    },
+    {
+      "old": "the maximum Koyomity achievable after repainting the garland according to each plan",
+      "new": "the maximum eligible selected-subsegment length for each plan",
+      "occurrences": 1
+    },
+    {
+      "old": "the largest Koyomity achievable after repainting the garland according to it",
+      "new": "the largest eligible selected-subsegment length, or 0 if no such subsegment exists",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "6\nkoyomi\n3\n1 o\n4 o\n4 m\n",
+      "output": "3\n6\n5\n",
+      "input_sha256": "23ab21f3bf70ff41dc084376480a17a19c70f70dc9d3f454c7b8d7ea88b85156",
+      "output_sha256": "e1253a53f9d235fc2ff3bc4c7f5a53d250c02d478149c3f57646c42e52d413d4",
+      "run_report": "validation/strict_cc_a/TM080/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "q",
+        "observed": 3,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "15\nyamatonadeshiko\n10\n1 a\n2 a\n3 a\n4 a\n5 a\n1 b\n2 b\n3 b\n4 b\n5 b\n",
+      "output": "3\n4\n5\n7\n8\n1\n2\n3\n4\n5\n",
+      "input_sha256": "58b9fb070d6a93015b4857caa3346ce6394d5f16e0d137f07b47d9c10adcac24",
+      "output_sha256": "8ba14e902927b1ffa7d83744a20ae0320f214051faaeefcdc473dd60f084fa9b",
+      "run_report": "validation/strict_cc_a/TM080/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "q",
+        "observed": 10,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "10\naaaaaaaaaa\n2\n10 b\n10 z\n",
+      "output": "10\n10\n",
+      "input_sha256": "0d95034d29fc3c26850526e745f923fbeb228b919e2cf6f2c648d150688c6684",
+      "output_sha256": "1286c4c74194e75cffa46c8e560ae72c829e1f554b2a1bed4549ba13b7ca59c8",
+      "run_report": "validation/strict_cc_a/TM080/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "q",
+        "observed": 2,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

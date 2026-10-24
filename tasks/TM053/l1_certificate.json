@@ -1,0 +1,109 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM053",
+  "raw_path": "tasks/TM053/raw.txt",
+  "raw_sha256": "6ee18ce3f1d2a55fa4e929af79916a5e2bbc9a88c3d3c200e35994776046db16",
+  "l1_path": "tasks/TM053/l1.txt",
+  "l1_sha256": "5d92f429d50707f9752bde65a65ce65047016e3efdf74293c19d5931115284dc",
+  "mutation_kind": "narrative_entity_relabel",
+  "raw_ready_for_l1": true,
+  "interpretation": "A new apprentice receives numerical puzzles at an academy.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "6ee18ce3f1d2a55fa4e929af79916a5e2bbc9a88c3d3c200e35994776046db16",
+  "edits": [
+    {
+      "start": 64,
+      "end": 79,
+      "before": "ICPC University",
+      "after": "Arden Academy",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 162,
+      "end": 169,
+      "before": "circles",
+      "after": "study groups",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 177,
+      "end": 183,
+      "before": "campus",
+      "after": "grounds",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 191,
+      "end": 201,
+      "before": "university",
+      "after": "academy",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 238,
+      "end": 247,
+      "before": "pamphlets",
+      "after": "briefing sheets",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 312,
+      "end": 321,
+      "before": "pamphlets",
+      "after": "briefing sheets",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 359,
+      "end": 367,
+      "before": "pamphlet",
+      "after": "briefing sheet",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 385,
+      "end": 395,
+      "before": "university",
+      "after": "academy",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 473,
+      "end": 481,
+      "before": "pamphlet",
+      "after": "briefing sheet",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "ICPC University": 1,
+    "circles": 1,
+    "campus": 1,
+    "university": 2,
+    "pamphlets": 2,
+    "pamphlet": 2
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 1244,
+      "raw_end": 1281,
+      "sha256": "436fdb2ad9cbf7cd6948369d14a48381917d023bc7f96ca6344c5cafed6043b8"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "A new apprentice receives numerical puzzles at an academy.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

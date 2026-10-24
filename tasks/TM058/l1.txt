@@ -1,0 +1,62 @@
+A crew lowers upright poles along a road.
+
+Little Mira listens to fairy tales before bed every day. Today's fairy tale was about pole crews and the little girl immediately started imagining the crew members cutting poles. She imagined the situation that is described below.
+
+There are n poles located along the road at points with coordinates x1, x2, ..., xn. Each pole has its height hi. Pole crews can cut down a pole and fell it to the left or to the right. After that it occupies one of the segments [xi - hi, xi] or [xi;xi + hi]. The pole that is not cut down occupies a single point with coordinate xi. Pole crews can fell a pole if the segment to be occupied by the fallen pole doesn't contain any occupied point. The Pole crews want to process as many poles as possible, so Mira wonders, what is the maximum number of poles to fell. 
+
+Input
+
+The first line contains integer n (1 ≤ n ≤ 10^5) — the number of poles.
+
+Next n lines contain pairs of integers xi, hi (1 ≤ xi, hi ≤ 10^9) — the coordinate and the height of the і-th pole.
+
+The pairs are given in the order of ascending xi. No two poles are located at the point with the same coordinate.
+
+Output
+
+Print a single number — the maximum number of poles that you can cut down by the given rules.
+
+Examples
+
+Input
+
+5
+1 2
+2 1
+5 10
+10 9
+19 1
+
+
+Output
+
+3
+
+
+Input
+
+5
+1 2
+2 1
+5 10
+10 9
+20 1
+
+
+Output
+
+4
+
+Note
+
+In the first sample you can fell the poles like that: 
+
+  * fell the 1-st pole to the left — now it occupies segment [ - 1;1]
+  * fell the 2-nd pole to the right — now it occupies segment [2;3]
+  * leave the 3-rd pole — it occupies point 5
+  * leave the 4-th pole — it occupies point 10
+  * fell the 5-th pole to the right — now it occupies segment [19;20]
+
+
+
+In the second sample you can also fell 4-th pole to the right, after that it will occupy segment [10;19].

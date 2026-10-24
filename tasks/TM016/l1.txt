@@ -1,0 +1,51 @@
+A host invites a delegation while balancing its members' money and rapport.
+
+Marek wants to celebrate his first big salary by going to banquet hall. However, he needs delegation. 
+
+Marek has n delegates, each delegate will agree to go to the banquet hall if Marek asks. Each delegate is characterized by the amount of money he has and the rapport score in respect to Marek. The host doesn't want any delegate to feel poor compared to somebody else in the delegation (Marek doesn't count). A delegate feels poor if in the delegation there is someone who has at least d units of money more than he does. Also, Marek wants the total rapport score of the members of the delegation to be maximum. Help him invite an optimal delegation!
+
+Input
+
+The first line of the input contains two space-separated integers, n and d (1 ≤ n ≤ 10^5, 1 ≤ d ≤ 10^9) — the number of Marek's delegates and the minimum difference between the amount of money in order to feel poor, respectively.
+
+Next n lines contain the descriptions of Marek's delegates, the (i + 1)-th line contains the description of the i-th delegate of type mi, si (0 ≤ mi, si ≤ 10^9) — the amount of money and the rapport score, respectively. 
+
+Output
+
+Print the maximum total friendship factir that can be reached.
+
+Examples
+
+Input
+
+4 5
+75 5
+0 100
+150 20
+75 1
+
+
+Output
+
+100
+
+
+Input
+
+5 100
+0 7
+11 32
+99 10
+46 8
+87 54
+
+
+Output
+
+111
+
+Note
+
+In the first sample test the most profitable strategy is to form a delegation from only the second delegate. At all other variants the total degree of friendship will be worse.
+
+In the second sample test we can take all the delegates.

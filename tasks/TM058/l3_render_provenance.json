@@ -1,0 +1,52 @@
+{
+  "seed_id": "TM058",
+  "raw_sha256": "7c989cd3f0998f6c3fc110eae1591111b44e097e40965f7986997d7d95161e4e",
+  "status": "rendered",
+  "l3_sha256": "baac9d2abfa00b49d02e53e08a4e177c76c8a1ac4b2ee28a15e3cbb73277e064",
+  "edits": [
+    {
+      "old": "if the segment to be occupied by the fallen tree doesn't contain any occupied point",
+      "new": "provided the final occupied intervals of consecutive trees may share an endpoint but have no other intersection. In order of increasing tree coordinates, this means right_i ≤ left_(i+1), including intervals consisting of a standing tree's single point",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "5\n1 2\n2 1\n5 10\n10 9\n19 1\n",
+      "output": "4\n",
+      "input_sha256": "fa7e8343353cf1862324c4727a91231b2defed8ca5caad746fc752b27f3d2a05",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_report": "validation/strict_cc_a/TM058/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "5\n1 2\n2 1\n5 10\n10 9\n20 1\n",
+      "output": "4\n",
+      "input_sha256": "10b34d338dacb754528918f6f35618cb680b18aec26d34baa12d845ba51243d7",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_report": "validation/strict_cc_a/TM058/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

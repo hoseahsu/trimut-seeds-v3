@@ -1,0 +1,50 @@
+{
+  "seed_id": "TM076",
+  "raw_sha256": "2c1d905b3fe7f8ea76f739878ebea6b8ce32e5cf0ad55c40ec30c2e774e1791f",
+  "status": "rendered",
+  "l3_sha256": "d0d8859b7fd5b59fd212452e13bbbd1e8fa0f04fb9d258365a57e28d47a1e930",
+  "edits": [
+    {
+      "old": "You know that you will spend m wrong tries to perform the combo and during the i-th try you will make a mistake right after p_i-th button (1 ≤ p_i < n) (i.e. you will press first p_i buttons right and start performing the combo from the beginning). It is guaranteed that during the m+1-th try you press all buttons right and finally perform the combo.",
+      "new": "You make m failed practice attempts. During the i-th attempt you press the last p_i buttons of s, in their original left-to-right order, where 1 ≤ p_i < n. After these failed attempts you make one successful attempt pressing all n buttons in order.",
+      "occurrences": 1
+    },
+    {
+      "old": "I.e. if s=\"abca\", m=2 and p = [1, 3] then the sequence of pressed buttons will be 'a' (here you're making a mistake and start performing the combo from the beginning), 'a', 'b', 'c', (here you're making a mistake and start performing the combo from the beginning), 'a' (note that at this point you will not perform the combo because of the mistake), 'b', 'c', 'a'.",
+      "new": "For example, if s=\"abca\", m=2 and p=[1,3], the attempts press \"a\", then \"bca\", then the successful full string \"abca\".",
+      "occurrences": 1
+    },
+    {
+      "old": "the number of characters pressed right during the i-th try",
+      "new": "the number of suffix characters pressed during the i-th failed attempt",
+      "occurrences": 1
+    },
+    {
+      "old": "It is guaranteed that the answer for each letter does not exceed 2 ⋅ 10^9.",
+      "new": "The input retains this guarantee: if the failed attempts used the first p_i characters instead, followed by the full string, each letter would be pressed at most 2 ⋅ 10^9 times. The requested suffix-based counts must be printed exactly and may exceed that value.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "3\n4 2\nabca\n1 3\n10 5\ncodeforces\n2 8 3 2 9\n26 10\nqwertyuioplkjhgfdsazxcvbnm\n20 10 1 2 3 5 10 5 9 4\n",
+      "output": "4 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 5 3 9 3 0 0 0 0 0 0 0 0 5 0 0 3 6 0 0 0 0 0 0 0 \n5 9 7 4 1 2 2 2 2 2 2 2 11 10 2 2 1 1 5 1 2 8 1 5 1 5 \n",
+      "input_sha256": "3beb56c7aa57e82a1b99475347d01a82f76f33656d2280c06658d0d708829f83",
+      "output_sha256": "4ac98d45239ea074494e4099926c30381aa75bb9343a26211310394eff3b1059",
+      "run_report": "validation/strict_cc_a/TM076/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n_and_total_n",
+        "observed": 40,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

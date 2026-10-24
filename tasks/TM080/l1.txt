@@ -1,0 +1,95 @@
+A decorator recolors a display chain for a colleague.
+
+Mira's birthday is approaching! As she decorated the room for the party, a long display chain of Star-shaped paper pieces was placed on a prominent part of the wall. Colleague Nolan will like it!
+
+Still unsatisfied with the display chain, Mira decided to polish it again. The display chain has n pieces numbered from 1 to n from left to right, and the i-th piece has a colour si, denoted by a lowercase English letter. Mira will repaint at most m of the pieces to give each of them an arbitrary new colour (still denoted by a lowercase English letter). After this work, she finds out all subsegments of the display chain containing pieces of only colour c — Colleague Nolan's favourite one, and takes the length of the longest among them to be the Uniformity score of the display chain.
+
+For instance, let's say the display chain is represented by "kooomo", and Colleague Nolan's favourite colour is "o". Among all subsegments containing pieces of "o" only, "ooo" is the longest, with a length of 3. Thus the Uniformity score of this display chain equals 3.
+
+But problem arises as Mira is unsure about Colleague Nolan's favourite colour, and has swaying ideas on the amount of work to do. She has q plans on this, each of which can be expressed as a pair of an integer mi and a lowercase letter ci, meanings of which are explained above. You are to find out the maximum Uniformity score achievable after repainting the display chain according to each plan.
+
+Input
+
+The first line of input contains a positive integer n (1 ≤ n ≤ 1 500) — the length of the display chain.
+
+The second line contains n lowercase English letters s1s2... sn as a string — the initial colours of paper pieces on the display chain.
+
+The third line contains a positive integer q (1 ≤ q ≤ 200 000) — the number of plans Mira has.
+
+The next q lines describe one plan each: the i-th among them contains an integer mi (1 ≤ mi ≤ n) — the maximum amount of pieces to repaint, followed by a space, then by a lowercase English letter ci — Koyomi's possible favourite colour.
+
+Output
+
+Output q lines: for each work plan, output one line containing an integer — the largest Uniformity score achievable after repainting the display chain according to it.
+
+Examples
+
+Input
+
+6
+koyomi
+3
+1 o
+4 o
+4 m
+
+
+Output
+
+3
+6
+5
+
+
+Input
+
+15
+yamatonadeshiko
+10
+1 a
+2 a
+3 a
+4 a
+5 a
+1 b
+2 b
+3 b
+4 b
+5 b
+
+
+Output
+
+3
+4
+5
+7
+8
+1
+2
+3
+4
+5
+
+
+Input
+
+10
+aaaaaaaaaa
+2
+10 b
+10 z
+
+
+Output
+
+10
+10
+
+Note
+
+In the first sample, there are three plans: 
+
+  * In the first plan, at most 1 piece can be repainted. Repainting the "y" piece to become "o" results in "kooomi", whose Uniformity score of 3 is the best achievable; 
+  * In the second plan, at most 4 pieces can be repainted, and "oooooo" results in a Uniformity score of 6; 
+  * In the third plan, at most 4 pieces can be repainted, and "mmmmmi" and "kmmmmm" both result in a Uniformity score of 5. 

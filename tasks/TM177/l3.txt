@@ -1,0 +1,47 @@
+An African crossword is a rectangular table n × m in size. Each cell of the table contains exactly one letter. This table (it is also referred to as grid) contains some encrypted word that needs to be decoded.
+
+Retain a cell if and only if its letter occurs at least twice in its row and at least twice in its column. Cross out every other cell simultaneously.
+
+When all the specified cells have been crossed out, we should write the remaining letters in a string. The letters that occupy a higher position follow before the letters that occupy a lower position. If the letters are located in one row, then the letter to the left goes first. The resulting word is the answer to the problem.
+
+You are suggested to solve an African crossword and print the word encrypted there.
+
+Input
+
+The first line contains two integers n and m (1 ≤ n, m ≤ 100). Next n lines contain m lowercase Latin letters each. That is the crossword grid.
+
+Output
+
+Print the encrypted word on a single line. The input guarantees that at least one cell has a letter occurring exactly once in its row and exactly once in its column. The output under the retention rule may be empty; in that case print an empty line.
+
+Sample Input 1
+
+```text
+3 3
+cba
+bcd
+cbc
+```
+
+Sample Output 1
+
+```text
+c
+```
+
+Sample Input 2
+
+```text
+5 5
+fcofd
+ooedo
+afaoa
+rdcdf
+eofsf
+```
+
+Sample Output 2
+
+```text
+odf
+```

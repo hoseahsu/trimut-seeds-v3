@@ -1,0 +1,69 @@
+A cooperative teaches communication protocols to its staff.
+
+The "BerCorp" cooperative has got n staff members. These staff members can use m approved official communication protocols for the formal correspondence. The communication protocols are numbered with integers from 1 to m. For each staff member we have the list of communication protocols, which he knows. This list could be empty, i. e. an staff member may know no official communication protocols. But the staff members are willing to learn any number of official communication protocols, as long as the cooperative pays their lessons. A study course in one communication protocol for one staff member costs 1 credit.
+
+Find the minimum sum of money the cooperative needs to spend so as any staff member could correspond to any other one (their correspondence can be indirect, i. e. other staff members can help out translating).
+
+Input
+
+The first line contains two integers n and m (2 ≤ n, m ≤ 100) — the number of staff members and the number of communication protocols.
+
+Then n lines follow — each staff member's communication protocol list. At the beginning of the i-th line is integer ki (0 ≤ ki ≤ m) — the number of communication protocols the i-th staff member knows. Next, the i-th line contains ki integers — aij (1 ≤ aij ≤ m) — the identifiers of communication protocols the i-th staff member knows. It is guaranteed that all the identifiers in one list are distinct. Note that an staff member may know zero communication protocols.
+
+The numbers in the lines are separated by single spaces.
+
+Output
+
+Print a single integer — the minimum amount of money to pay so that in the end every staff member could write a letter to every other one (other staff members can help out translating).
+
+Examples
+
+Input
+
+5 5
+1 2
+2 2 3
+2 3 4
+2 4 5
+1 5
+
+
+Output
+
+0
+
+
+Input
+
+8 7
+0
+3 1 2 3
+1 1
+2 5 4
+2 6 7
+1 3
+2 7 4
+1 1
+
+
+Output
+
+2
+
+
+Input
+
+2 2
+1 2
+0
+
+
+Output
+
+1
+
+Note
+
+In the second sample the staff member 1 can learn communication protocol 2, and staff member 8 can learn communication protocol 4.
+
+In the third sample staff member 2 must learn communication protocol 2.

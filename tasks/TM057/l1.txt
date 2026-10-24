@@ -1,0 +1,81 @@
+Two reviewers select documents from an archive.
+
+Easy and hard versions are actually different problems, so review statements of both problems completely and carefully.
+
+Summer vacation has started so Mira and Nolan want to play and joy, but... Their supervisor doesn't think so. She says that they have to review some amount of documents before all entertainments. Mira and Nolan will review each document together to end this exercise faster.
+
+There are n documents in the shared archive. The i-th document is described by three integers: t_i — the amount of time Mira and Nolan need to spend to review it, a_i (equals 1 if Mira likes the i-th document and 0 if not), and b_i (equals 1 if Nolan likes the i-th document and 0 if not).
+
+So they need to choose some documents from the given n documents in such a way that:
+
+  * Mira likes at least k documents from the chosen set and Nolan likes at least k documents from the chosen set; 
+  * the total reviewing time of these documents is minimized (they are reviewers and want to play and joy as soon a possible). 
+
+
+
+The set they choose is the same for both Mira an Nolan (it's shared between them) and they review all documents together, so the total reviewing time is the sum of t_i over all documents that are in the chosen set.
+
+Your task is to help them and find any suitable set of documents or determine that it is impossible to find such a set.
+
+Input
+
+The first line of the input contains two integers n and k (1 ≤ k ≤ n ≤ 2 ⋅ 10^5).
+
+The next n lines contain descriptions of documents, one description per line: the i-th line contains three integers t_i, a_i and b_i (1 ≤ t_i ≤ 10^4, 0 ≤ a_i, b_i ≤ 1), where:
+
+  * t_i — the amount of time required for reviewing the i-th document; 
+  * a_i equals 1 if Mira likes the i-th document and 0 otherwise; 
+  * b_i equals 1 if Nolan likes the i-th document and 0 otherwise. 
+
+Output
+
+If there is no solution, print only one integer -1. Otherwise print one integer T — the minimum total reviewing time of the suitable set of documents.
+
+Examples
+
+Input
+
+8 4
+7 1 1
+2 1 1
+4 0 1
+8 1 1
+1 0 1
+1 1 1
+1 0 1
+3 0 0
+
+
+Output
+
+18
+
+
+Input
+
+5 2
+6 0 0
+9 0 0
+1 0 1
+2 1 1
+5 1 0
+
+
+Output
+
+8
+
+
+Input
+
+5 3
+3 0 0
+2 1 0
+3 1 0
+5 0 1
+3 0 1
+
+
+Output
+
+-1

@@ -1,0 +1,36 @@
+{
+  "seed_id": "TM198",
+  "raw_sha256": "670abca3d03544668e20c6960805098a28be3fdb0018a40b6eed11e1c640fd2a",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "length of h does not exceed 100",
+      "new": "length of h does not exceed 100000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "  2. generate two random strings, consisting of lowercase Latin letters, s_1 and s_2 (any of these strings can be empty); \n  3. the resulting hash h = s_1 + p' + s_2, where addition is string concatenation.",
+      "new": "  2. insert any number of lowercase Latin letters before, between, or after the letters of p', retaining the relative order of the letters of p';\n  3. the resulting string is the hash h.",
+      "occurrences": 1
+    },
+    {
+      "old": "Random strings s1 = \"zyx\" and s2 = \"kjh\". Then h = \"zyxaabcaabkjh\".",
+      "new": "Inserting \"zyx\" before it and \"kjh\" after it gives h = \"zyxaabcaabkjh\"; insertion between its letters is also permitted.",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "7c3ccfad606325e60306d95783dd27078bf98499e19989a81d818e3ee8185418",
+      "l3_output_sha256": "4017c2e03c4d6ee09e9fcc80b264f57565db3d0c6e08bfd4a8875acd1194a564",
+      "run_report": "validation/strict_cc_b_supplement/TM198/report.json",
+      "case": "original_statement_sample_1"
+    }
+  ],
+  "l2_sha256": "8709fc5f813ba338ac842d4c1632de6d8f8575259c0821dcb67143dd21001cc2",
+  "l3_sha256": "6e75d1a9f277c75c79b521cf71b4b2a5a56aaeec62ee17ff799d6ca46b5ef2b4",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

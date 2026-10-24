@@ -1,0 +1,48 @@
+Couriers collect access passes before reaching a depot.
+
+There are n couriers and k access passes on a straight line. Every courier wants to get to the depot which is located on the line as well. To do that, he needs to reach some point with a access pass, take the access pass and then go to the depot. Once a access pass is taken by somebody, it couldn't be taken by anybody else.
+
+You are to determine the minimum time needed for all n couriers to get to the depot with access passes. Assume that couriers move a unit distance per 1 second. If two couriers reach a access pass at the same time, only one of them can take the access pass. A courier can pass through a point with a access pass without taking it.
+
+Input
+
+The first line contains three integers n, k and p (1 ≤ n ≤ 1 000, n ≤ k ≤ 2 000, 1 ≤ p ≤ 10^9) — the number of couriers, the number of access passes and the depot location.
+
+The second line contains n distinct integers a1, a2, ..., an (1 ≤ ai ≤ 10^9) — positions in which couriers are located initially. The positions are given in arbitrary order.
+
+The third line contains k distinct integers b1, b2, ..., bk (1 ≤ bj ≤ 10^9) — positions of the access passes. The positions are given in arbitrary order.
+
+Note that there can't be more than one courier or more than one access pass in the same point. A courier and a access pass can be located in the same point.
+
+Output
+
+Print the minimum time (in seconds) needed for all n to reach the depot with access passes.
+
+Examples
+
+Input
+
+2 4 50
+20 100
+60 10 40 80
+
+
+Output
+
+50
+
+
+Input
+
+1 2 10
+11
+15 7
+
+
+Output
+
+7
+
+Note
+
+In the first example the courier located at point 20 should take the access pass located at point 40 and go with it to the depot located at point 50. He spends 30 seconds. The courier located at point 100 can take the access pass located at point 80 and go to the depot with it. He spends 50 seconds. Thus, after 50 seconds everybody is in depot with access passes.

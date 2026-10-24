@@ -1,0 +1,54 @@
+Control levers activate indicator beacons.
+
+You are given n control levers and m indicator beacons. The i-th control lever turns on some subset of the indicator beacons. This information is given as the matrix a consisting of n rows and m columns where ai, j = 1 if the i-th control lever turns on the j-th indicator beacon and ai, j = 0 if the i-th control lever is not connected to the j-th indicator beacon.
+
+Initially all m indicator beacons are turned off.
+
+Control levers change state only from "off" to "on". It means that if you press two or more control levers connected to the same indicator beacon then the indicator beacon will be turned on after any of this control levers is pressed and will remain its state even if any control lever connected to this indicator beacon is pressed afterwards.
+
+It is guaranteed that if you push all n control levers then all m indicator beacons will be turned on.
+
+Your think that you have too many control levers and you would like to ignore one of them. 
+
+Your task is to say if there exists such a control lever that if you will ignore (not use) it but press all the other n - 1 control levers then all the m indicator beacons will be turned on.
+
+Input
+
+The first line of the input contains two integers n and m (1 ≤ n, m ≤ 2000) — the number of the control levers and the number of the indicator beacons.
+
+The following n lines contain m characters each. The character ai, j is equal to '1' if the i-th control lever turns on the j-th indicator beacon and '0' otherwise.
+
+It is guaranteed that if you press all n control levers all m indicator beacons will be turned on.
+
+Output
+
+Print "YES" if there is a control lever that if you will ignore it and press all the other n - 1 control levers then all m indicator beacons will be turned on. Print "NO" if there is no such control lever.
+
+Examples
+
+Input
+
+4 5
+10101
+01000
+00111
+10000
+
+
+Output
+
+YES
+
+
+Input
+
+4 5
+10100
+01000
+00110
+00101
+
+
+Output
+
+NO

@@ -1,0 +1,90 @@
+An operator tracks a ranked contact roster as contacts become available.
+
+Marek is a little arctic explorer. He loves connecting with other explorers via social networks. He has n contacts and his relation with the i-th of them is described by a unique integer ti. The bigger this value is, the better the rapport is. No two contacts have the same value ti.
+
+Spring is starting and the Winter sleep is over for explorers. Marek has just woken up and logged in. All his contacts still sleep and thus none of them is online. Some (maybe all) of them will appear online in the next hours, one at a time.
+
+The system displays contacts who are online. On the screen there is space to display at most k contacts. If there are more than k contacts online then the system displays only k best of them — those with biggest ti.
+
+Your task is to handle queries of two types:
+
+  * "1 id" — Contact id becomes online. It's guaranteed that he wasn't online before. 
+  * "2 id" — Check whether contact id is displayed by the system. Print "YES" or "NO" in a separate line. 
+
+
+
+Are you able to help Marek and answer all queries of the second type?
+
+Input
+
+The first line contains three integers n, k and q (1 ≤ n, q ≤ 150 000, 1 ≤ k ≤ min(6, n)) — the number of contacts, the maximum number of displayed online contacts and the number of queries, respectively.
+
+The second line contains n integers t1, t2, ..., tn (1 ≤ ti ≤ 10^9) where ti describes how good is Marek's relation with the i-th contact.
+
+The i-th of the following q lines contains two integers typei and idi (1 ≤ typei ≤ 2, 1 ≤ idi ≤ n) — the i-th query. If typei = 1 then a contact idi becomes online. If typei = 2 then you should check whether a contact idi is displayed.
+
+It's guaranteed that no two queries of the first type will have the same idi becuase one contact can't become online twice. Also, it's guaranteed that at least one query will be of the second type (typei = 2) so the output won't be empty.
+
+Output
+
+For each query of the second type print one line with the answer — "YES" (without quotes) if the given contact is displayed and "NO" (without quotes) otherwise.
+
+Examples
+
+Input
+
+4 2 8
+300 950 500 200
+1 3
+2 4
+2 3
+1 1
+1 2
+2 1
+2 2
+2 3
+
+
+Output
+
+NO
+YES
+NO
+YES
+YES
+
+
+Input
+
+6 3 9
+50 20 51 17 99 24
+1 3
+1 4
+1 5
+1 2
+2 4
+2 2
+1 1
+2 4
+2 3
+
+
+Output
+
+NO
+YES
+NO
+YES
+
+Note
+
+In the first sample, Marek has 4 contacts who all sleep initially. At first, the system displays nobody because nobody is online. There are the following 8 queries:
+
+  1. "1 3" — Contact 3 becomes online. 
+  2. "2 4" — We should check if contact 4 is displayed. He isn't even online and thus we print "NO". 
+  3. "2 3" — We should check if contact 3 is displayed. Right now he is the only contact online and the system displays him. We should print "YES". 
+  4. "1 1" — Contact 1 becomes online. The system now displays both contact 1 and contact 3. 
+  5. "1 2" — Contact 2 becomes online. There are 3 contacts online now but we were given k = 2 so only two contacts can be displayed. Marek has worse relation with contact 1 than with other two online contacts (t1 < t2, t3) so contact 1 won't be displayed 
+  6. "2 1" — Print "NO". 
+  7. "2 2" — Print "YES". 
+  8. "2 3" — Print "YES". 

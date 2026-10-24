@@ -1,0 +1,41 @@
+{
+  "seed_id": "TM156",
+  "raw_sha256": "102757e54ab4f160c714f4c505cd1d819ef4b3676d45a90df3ccf46e9c7356bb",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "n ≤ 100,",
+      "new": "n ≤ 100000,",
+      "occurrences": 1
+    },
+    {
+      "old": "does not exceed 100.",
+      "new": "does not exceed 100000.",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "How many minimum subscriptions do you need to buy in order to have the opportunity to watch episodes of purchased shows d (1 ≤ d ≤ n) days in a row? In other words, you want to buy the minimum number of TV shows so that there is some segment of d consecutive days in which all episodes belong to the purchased shows.",
+      "new": "For each segment of d (1 ≤ d ≤ n) consecutive days, count the minimum number of show subscriptions needed to watch every episode in that segment. Find the maximum of this count over all such segments.",
+      "occurrences": 1
+    },
+    {
+      "old": "The answer to a test case is the minimum number of TV shows for which you need to purchase a subscription so that you can watch episodes of the purchased TV shows on BerTV for d consecutive days. Please note that it is permissible that you will be able to watch more than d days in a row.",
+      "new": "The answer to a test case is the maximum number of distinct TV shows among all segments of exactly d consecutive days.",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "255136b1c3e8438f6dd2be75824cea634f1ccaa3f97bba832f2deb98a539fc3c",
+      "l3_output_sha256": "2d2aa5c1f0abe605d4d7c5221492e8f882a79c4fa29254a4c5f2919508bb78fb",
+      "run_report": "validation/strict_cc_b_supplement/TM156/report.json",
+      "case": "original_statement_sample_1"
+    }
+  ],
+  "l2_sha256": "39585477e8ddc1a19a3f88bcd6d2b7c9cbae20603616c48ef12090d89cfdfddb",
+  "l3_sha256": "c5bc157f48fde671905e5761c6f278133d99875027284f5b45bf1e34fd66388f",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

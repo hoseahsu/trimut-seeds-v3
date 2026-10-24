@@ -1,0 +1,37 @@
+{
+  "seed_id": "TM202",
+  "raw_sha256": "c0e33458ac2c30888cafd1f8931990d6d64dcd8ec92670f23fda872afa7e75fe",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "length does not exceed 10^6",
+      "new": "length does not exceed 2000000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "We should remind you that a bracket sequence is called regular, if by inserting «+» and «1» into it we can get a correct mathematical expression. For example, sequences «(())()», «()» and «(()(()))» are regular, while «)(», «(()» and «(()))(» are not.",
+      "new": "For this task, interpret «)» as an opening bracket and «(» as a closing bracket. A sequence is regular when, scanning left to right, every prefix has at least as many «)» as «(», and the two counts are equal in the complete sequence. Thus «)(» is regular and «()» is not.",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "ba4988ac21587526f9d841d76c126d216f96c606411b5dd1d422adab2a4f893d",
+      "l3_output_sha256": "23774b2bfd1c1daf1c0ca673780fc6393c8d5659adffc93627634de656a35c26",
+      "run_report": "validation/strict_cc_b_supplement/TM202/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "60bc226998216b1e4c60c58fde2870320441a9b5ac0a55c9cb59747678f034ea",
+      "l3_output_sha256": "e57acc10f53c55bd65c8462f1402834edd30e4f41203988a0cac5aff6122a614",
+      "run_report": "validation/strict_cc_b_supplement/TM202/report.json",
+      "case": "original_statement_sample_2"
+    }
+  ],
+  "l2_sha256": "29115819ff291b652ad71a6ad6b8eabca22f545447942c07f2e29154b424b9b5",
+  "l3_sha256": "c1a885565360d6b3a67883414f283b6e37127773d5a53cb1a2a5e4ff9987ff01",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

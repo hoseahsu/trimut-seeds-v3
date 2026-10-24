@@ -1,0 +1,45 @@
+{
+  "seed_id": "TM037",
+  "status": "rendered",
+  "raw_sha256": "cfe326182ea5372141eac0b7df4bbbc558afcd6745156fb870940521acfa1e33",
+  "l2_edits": [
+    {
+      "old": "q ≤ 2 000 000",
+      "new": "q ≤ 3000000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Boys dancing with even-indexed girls swap positions with boys who are dancing with odd-indexed girls. That is the one who was dancing with the girl 1 swaps with the one who was dancing with the girl number 2, while the one who was dancing with girl number 3 swaps with the one who was dancing with the girl number 4 and so one.",
+      "new": "The boys swap simultaneously across position pairs (2,3), (4,5), ..., (n,1), where each position is the index of the girl they currently dance with.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "bd2c6fb55741d3cd661d096284e55ed94c458bf3e30f15dd06ca20a17f722e90",
+  "l3_sha256": "fdc774e53dc32ea4ed0058ef4fdcb75fa41141c46d32b54e185f7501235354d9",
+  "samples": [
+    {
+      "input": "2 3\n1 1\n2\n1 -2\n",
+      "output": "1 2 \n",
+      "input_sha256": "32093131b29ef63b82f2390401a2a53aa2c4acfba3e142fd5e730252833b3d46",
+      "output_sha256": "4ca26e3b46917b5fecd4c98bd906853f7d08ecae9fcb9379ff43180abe857590",
+      "run_path": "validation/strict_root/TM037/report.json"
+    },
+    {
+      "input": "4 2\n2\n1 3\n",
+      "output": "3 2 1 4 \n",
+      "input_sha256": "eb95dbc676c86054a531f529ab3df057e71bd65382b6a7ce0e40f452dbd4aec8",
+      "output_sha256": "6a6ed7ce4b715968870c20fac2cb7d46cc8faab6103887df4a8495d7fa0b107d",
+      "run_path": "validation/strict_root/TM037/report.json"
+    },
+    {
+      "input": "6 3\n1 2\n2\n1 2\n",
+      "output": "2 5 4 1 6 3 \n",
+      "input_sha256": "58909c3d4289cc825a0a74ce5693535de0f43fcef632b3b9e792169a9232978e",
+      "output_sha256": "ef770c40e6d8217b1b055846318b02b88ec74aa1b5885aea7f19eb7e0ac78771",
+      "run_path": "validation/strict_root/TM037/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

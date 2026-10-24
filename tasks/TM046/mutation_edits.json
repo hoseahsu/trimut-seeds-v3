@@ -1,0 +1,38 @@
+{
+  "seed_id": "TM046",
+  "status": "rendered",
+  "raw_sha256": "d7938873a350d9b8bbd7881e7b23bf579679ff55dda323be9a2e596dd1281542",
+  "l2_edits": [
+    {
+      "old": "n ≤ 10^5",
+      "new": "n ≤ 300000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "can be eaten by performing m-bite no more than t times or print -1 if there is no such number r.",
+      "new": "can be eaten by performing m-bite no more than t times, and the total number of height units eaten is strictly less than m × t, or print -1 if there is no such number r. The per-vegetable limit of at most t bites is unchanged.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "5abe36d834874e3228712ba9d4bfa902f0bdea3dc4b4cb9aac343c470c63934d",
+  "l3_sha256": "7b4a69178b4ba84d4b15935ed11fca2bc634079b51a8b99d9a4440c89214bb78",
+  "samples": [
+    {
+      "input": "1 5 2\n1 5 10\n2 7 4\n",
+      "output": "1\n2\n",
+      "input_sha256": "52e0b5fb0fe6dfdfd66930c2f6bce99a9443032953edded49fb635030bc504e3",
+      "output_sha256": "a6e2b7a040683432de03a18fd8a1939a2fdf82585b364bfc874bdd4095c4cae1",
+      "run_path": "validation/strict_root/TM046/report.json"
+    },
+    {
+      "input": "2 1 4\n1 5 3\n3 3 10\n7 10 2\n6 4 8\n",
+      "output": "4\n-1\n8\n-1\n",
+      "input_sha256": "5d79ec01ff0e0e28a4d0f42ec9d25a43127378f5ba5c06eb3605d03658d1277a",
+      "output_sha256": "11a5a7cbb834292a9f6b3efac0496bb9b552a42ac9116f640be47cee2f0f4acb",
+      "run_path": "validation/strict_root/TM046/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

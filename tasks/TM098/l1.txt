@@ -1,0 +1,35 @@
+An instructor builds expedition crews from trainees with strength ratings.
+
+Instructor Marek is forming a crew for the Annual Expedition Trial. He has N trainees that train under him and he knows their strengths. The strength of a trainee is represented by a positive integer.
+
+The Instructor has to form a crew of K trainees. The strength of a crew is defined by the strength of the weakest trainee in the crew. Now he wants to know the sum of strengths of all the crews of size K that can be formed modulo 1000000007. Please help him.
+
+Input
+The first line contains the number of test cases T.
+Each case begins with a line containing integers N and K. The next line contains N space-separated numbers which describe the strengths of the trainees.
+
+Output
+For test case output a single integer, the answer as described in the problem statement.
+
+Constraints:
+1 ≤ T ≤ 100
+1 ≤ N ≤ 100000
+1 ≤ K ≤ N
+0 ≤ Strength of each trainee ≤ 2000000000
+Strength of all the trainees are different.
+
+SAMPLE INPUT
+2
+2 1
+5 4
+3 2
+1 0 2
+
+SAMPLE OUTPUT
+9
+1
+
+Explanation
+
+For first test case: 5+4=9, as crew can only consist of 1 trainee.
+For second test case: min(1,0) + min(1,2) + min(0,2) = 0+1+0 =1

@@ -1,0 +1,71 @@
+An organizer groups trainees from different academies into contest crews.
+
+Marek is an organizer of a Arden ICPC regional event. There are n academies in Arden numbered from 1 to n. Marek knows all competitive trainees in the region. There are n trainees: the i-th trainee is enrolled at a academy u_i and has a technical skill s_i.
+
+Marek has to decide on the rules now. In particular, the number of members in the crew.
+
+Marek knows that if he chooses the size of the crew to be some integer k, each academy will send their k strongest (with the highest technical skill s) trainees in the first crew, the next k strongest trainees in the second crew and so on. If there are fewer than k trainees left, then the crew can't be formed. Note that there might be academies that send zero crews.
+
+The strength of the region is the total skill of the members of all present crews. If there are no crews present, then the strength is 0.
+
+Help Marek to find the strength of the region for each choice of k from 1 to n.
+
+Input
+
+The first line contains a single integer t (1 ≤ t ≤ 1000) — the number of testcases.
+
+The first line of each testcase contains a single integer n (1 ≤ n ≤ 2 ⋅ 10^5) — the number of academies and the number of trainees.
+
+The second line of each testcase contains n integers u_1, u_2, ..., u_n (1 ≤ u_i ≤ n) — the academy the i-th trainee is enrolled at.
+
+The third line of each testcase contains n integers s_1, s_2, ..., s_n (1 ≤ s_i ≤ 10^9) — the technical skill of the i-th trainee.
+
+The sum of n over all testcases doesn't exceed 2 ⋅ 10^5.
+
+Output
+
+For each testcase print n integers: the strength of the region — the total skill of the members of the present crews — for each choice of crew size k.
+
+Example
+
+Input
+
+
+4
+7
+1 2 1 2 1 2 1
+6 8 3 1 5 1 5
+10
+1 1 1 2 2 2 2 3 3 3
+3435 3014 2241 2233 2893 2102 2286 2175 1961 2567
+6
+3 3 3 3 3 3
+5 9 6 7 9 7
+1
+1
+3083
+
+
+Output
+
+
+29 28 26 19 0 0 0 
+24907 20705 22805 9514 0 0 0 0 0 0 
+43 43 43 32 38 43 
+3083 
+
+Note
+
+In the first testcase the crews from each academy for each k are: 
+
+  * k=1: 
+    * academy 1: [6], [5], [5], [3]; 
+    * academy 2: [8], [1], [1]; 
+  * k=2: 
+    * academy 1: [6, 5], [5, 3]; 
+    * academy 2: [8, 1]; 
+  * k=3: 
+    * academy 1: [6, 5, 5]; 
+    * academy 2: [8, 1, 1]; 
+  * k=4: 
+    * academy 1: [6, 5, 5, 3]; 

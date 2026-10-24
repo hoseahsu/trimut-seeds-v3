@@ -1,0 +1,74 @@
+{
+  "seed_id": "TM093",
+  "raw_sha256": "02acd7cbb8c388cce214b66f897fc5b6f2f2c75417b8b760cea1ac59e90a9ad3",
+  "status": "rendered",
+  "l3_sha256": "5ef8f5eddf0c2ba58932831cc21ea303919272867b6490601e82c4fd6c4f910b",
+  "edits": [
+    {
+      "old": "It is fine to have more pizzas than necessary by rearranging pizzas.",
+      "new": "Surplus pizzas are forbidden: after rearranging, the quantities must be exactly X A-pizzas and exactly Y B-pizzas.",
+      "occurrences": 1
+    },
+    {
+      "old": "Print the minimum amount of money required to prepare X A-pizzas and Y B-pizzas.",
+      "new": "Print the minimum amount of money required to prepare exactly X A-pizzas and exactly Y B-pizzas, with no surplus.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "1500 2000 1600 3 2\n",
+      "output": "7900\n",
+      "input_sha256": "6aedb8208db6663fded839dd3444774cac44c89a4a92071aa5a1e4f2b8541d59",
+      "output_sha256": "8e9f1eceb83532ff337c4a3e483a2168ff85c46690524c5ad42ae04b10a590c3",
+      "run_report": "validation/strict_cc_a/TM093/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "X",
+        "observed": 3,
+        "original_upper": 100000,
+        "l2_upper": 1000000000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "1500 2000 1900 3 2\n",
+      "output": "8500\n",
+      "input_sha256": "ab7658f55edbfbf9aaaaa35d3d6777ebc2e2497471f27d5315979aa7c566e1e1",
+      "output_sha256": "40a3c13fde0f96e24e7eaa0ae4947690e8787fbce3d47a71c1bfe1f692f94f88",
+      "run_report": "validation/strict_cc_a/TM093/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "X",
+        "observed": 3,
+        "original_upper": 100000,
+        "l2_upper": 1000000000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "1500 2000 500 90000 100000\n",
+      "output": "110000000\n",
+      "input_sha256": "13bd7c38ac238ba668deccad8ce7fe691abaf535537dc5620a4a13bff195e80b",
+      "output_sha256": "24442316bb12541b6380af1980f946075f9f153f17d70091c1af872bc50d894e",
+      "run_report": "validation/strict_cc_a/TM093/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "X",
+        "observed": 90000,
+        "original_upper": 100000,
+        "l2_upper": 1000000000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

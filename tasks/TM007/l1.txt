@@ -1,0 +1,61 @@
+A tournament observer tracks teams exchanging their display badges.
+
+Nolan works on a sports TV. He's spent much time watching the robotics games of some country. After a while he began to notice different patterns. For example, each team has two sets of display badges: home display badge and guest display badge. When a team plays a game at home, the operators put on the home display badge. When a team plays as a guest on somebody else's arena, the operators put on the guest display badge. The only exception to that rule is: when the home display badge color of the host team matches the guests' display badge, the host team puts on its guest display badge as well. For each team the color of the home and guest display badge is different.
+
+There are n teams taking part in the national championship. The championship consists of n·(n - 1) games: each team invites each other team to its arena. At this point Nolan wondered: how many times during the championship is a host team going to put on the guest display badge? Note that the order of the games does not affect this number.
+
+You know the colors of the home and guest display badge for each team. For simplicity, the colors are numbered by integers in such a way that no two distinct colors have the same number. Help Nolan find the answer to his question.
+
+Input
+
+The first line contains an integer n (2 ≤ n ≤ 30). Each of the following n lines contains a pair of distinct space-separated integers hi, ai (1 ≤ hi, ai ≤ 100) — the colors of the i-th team's home and guest display badges, respectively.
+
+Output
+
+In a single line print the number of games where the host team is going to play in the guest display badge.
+
+Examples
+
+Input
+
+3
+1 2
+2 4
+3 4
+
+
+Output
+
+1
+
+
+Input
+
+4
+100 42
+42 100
+5 42
+100 5
+
+
+Output
+
+5
+
+
+Input
+
+2
+1 2
+1 2
+
+
+Output
+
+0
+
+Note
+
+In the first test case the championship consists of 6 games. The only game with the event in question is the game between teams 2 and 1 on the arena of team 2.
+
+In the second test sample the host team will have to wear guest display badge in the games between teams: 1 and 2, 2 and 1, 2 and 3, 3 and 4, 4 and 2 (the host team is written first).

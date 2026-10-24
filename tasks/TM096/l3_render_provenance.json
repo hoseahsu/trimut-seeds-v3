@@ -1,0 +1,40 @@
+{
+  "seed_id": "TM096",
+  "raw_sha256": "5e3771f5b307d9cc5829d416c757df5889030fc31e4ede18471e71f6fc2db4bf",
+  "status": "rendered",
+  "l3_sha256": "5422b51c85688c9fe62c3c4640e2d1b1a644cac8ae68c5daf25b488b03179c0d",
+  "edits": [
+    {
+      "old": "Following method describes the way in which this startup's engineers save the data in the structure.",
+      "new": "The engineers now reverse each word before inserting it into a trie. Consequently the structure shares suffixes of the original words, rather than prefixes. Count every trie node, including the empty root.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [
+    {
+      "before": "Suppose they have 5 strings/words: et,eq,bd,be,bdp\nA empty node is kept NULL, and strings are inserted into the structure one by one. \nInitially the structure is this:\n\nNULL\n\nAfter inserting \"et\", the structure is this:\n\nNULL\n |\n e\n |\n t\n\nAfter inserting \"eq\", the structure is this:\n\n   NULL\n   /\n  e\n / \\\nt   q\n\nAfter inserting \"bd\", the structure is this:\n\n   NULL\n   /  \\\n  e    b\n / \\    \\\nt   q    d\n\nAfter inserting \"be\", the structure is this:\n\n     NULL\n   /     \\\n  e       b\n / \\     / \\\nt   q   e   d\n\nAfter inserting \"bdp\", the structure is this:\n\n    NULL\n   /     \\\n  e       b\n / \\     / \\\nt   q   e   d\n             \\\n              p\n\nTherefore a total of 8 nodes are used here.    \n\n",
+      "after": "For example, for the five words et, eq, bd, be, bdp, insert te, qe, db, eb, pdb into the trie. The root has children t, q, d, e and p. Their respective branches contain 2, 2, 2, 2 and 3 nodes excluding the root, so the total required number of nodes is 12.\n\n"
+    }
+  ],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "5\net\neq\nbd\nbe\nbdp\n",
+      "output": "12\n",
+      "input_sha256": "41d5ce83e39db601871c57a1ac6b88fb874630f539c14b60e15d323e5616169b",
+      "output_sha256": "a1fb50e6c86fae1679ef3351296fd6713411a08cf8dd1790a4fd05fae8688164",
+      "run_report": "validation/strict_cc_a/TM096/report.json",
+      "case": "original_sample_recovered_0",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 200000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

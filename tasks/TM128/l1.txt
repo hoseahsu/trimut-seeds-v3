@@ -1,0 +1,59 @@
+A technician blocks outlets in a liquid distribution manifold.
+
+Marek wants to water his only planter. Unfortunately, he has a very poor distribution manifold that was designed for n planters and so it looks like a conduit with n outlets. Marek can only use the water that flows from the first outlet.
+
+Marek can block some of the outlets, and then pour A liters of water into the conduit. After that, the water will flow out from the non-blocked outlets proportionally to their sizes s_1, s_2, …, s_n. In other words, if the sum of sizes of non-blocked outlets is S, and the i-th outlet is not blocked, (s_i ⋅ A)/(S) liters of water will flow out of it.
+
+What is the minimum number of outlets Marek should block to make at least B liters of water flow out of the first outlet?
+
+Input
+
+The first line contains three integers n, A, B (1 ≤ n ≤ 100 000, 1 ≤ B ≤ A ≤ 10^4) — the number of outlets, the volume of water Marek will pour into the system, and the volume he wants to get out of the first outlet.
+
+The second line contains n integers s_1, s_2, …, s_n (1 ≤ s_i ≤ 10^4) — the sizes of the outlets.
+
+Output
+
+Print a single integer — the number of outlets Marek should block.
+
+Examples
+
+Input
+
+4 10 3
+2 2 2 2
+
+
+Output
+
+1
+
+
+Input
+
+4 80 20
+3 2 1 4
+
+
+Output
+
+0
+
+
+Input
+
+5 10 10
+1000 1 1 1 1
+
+
+Output
+
+4
+
+Note
+
+In the first example Marek should block at least one outlet. After that, (10 ⋅ 2)/(6) ≈ 3.333 liters of water will flow out of the first outlet, and that suits Marek.
+
+In the second example even without blocking any outlet, (80 ⋅ 3)/(10) = 24 liters will flow out of the first outlet, that is not less than 20.
+
+In the third example Marek has to block all outlets except the first to make all water flow out of the first outlet.

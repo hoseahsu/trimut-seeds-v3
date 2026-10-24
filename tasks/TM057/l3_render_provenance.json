@@ -1,0 +1,69 @@
+{
+  "seed_id": "TM057",
+  "raw_sha256": "32da372d8369dac5f4fa8b899e91ebce6b21fc307cfbc6d701535d99220157a1",
+  "status": "rendered",
+  "l3_sha256": "0ae058fcec16e3c3a4fe2f60cd47cf2733ec894d732e8b23db44e5d32f4e2ac1",
+  "edits": [
+    {
+      "old": "Alice likes at least k books from the chosen set and Bob likes at least k books from the chosen set",
+      "new": "Alice likes at least k books from the chosen set or Bob likes at least k books from the chosen set (inclusive OR: either or both conditions may hold)",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "8 4\n7 1 1\n2 1 1\n4 0 1\n8 1 1\n1 0 1\n1 1 1\n1 0 1\n3 0 0\n",
+      "output": "5\n",
+      "input_sha256": "4da7ac22d04e79435c079b2bbcba2ca99977d63367bffca35efc572a61ce76a1",
+      "output_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "run_report": "validation/strict_cc_a/TM057/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 8,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "5 2\n6 0 0\n9 0 0\n1 0 1\n2 1 1\n5 1 0\n",
+      "output": "3\n",
+      "input_sha256": "da6d1f6edbba81f7fc8156d83314da5115bb2b4644a707f69e8a8fb6ed4680df",
+      "output_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "run_report": "validation/strict_cc_a/TM057/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "5 3\n3 0 0\n2 1 0\n3 1 0\n5 0 1\n3 0 1\n",
+      "output": "-1\n",
+      "input_sha256": "8221dcaefe0053ced56596b3df4c8bfab35b7a33700c510992b3be82483eee7d",
+      "output_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "run_report": "validation/strict_cc_a/TM057/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 200000,
+        "l2_upper": 400000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM101",
+  "raw_path": "tasks/TM101/raw.txt",
+  "raw_sha256": "885550ab2d43627029f057e42be15c77fc29f2197d468a6194b7806eb2b5c2d0",
+  "l1_path": "tasks/TM101/l1.txt",
+  "l1_sha256": "f69c9183ff181462044d97b59d557e3a96c4c82b88a81d3a3ceb5d1fd2502f6e",
+  "mutation_kind": "narrative_entity_relabel",
+  "raw_ready_for_l1": true,
+  "interpretation": "A monitoring robot follows an Evaluate-Rest-Compute schedule and records its activities.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "885550ab2d43627029f057e42be15c77fc29f2197d468a6194b7806eb2b5c2d0",
+  "edits": [
+    {
+      "start": 0,
+      "end": 193,
+      "before": "Roy is going through the dark times of his life. Recently his girl friend broke up with him and to overcome the pain of acute misery he decided to restrict himself to Eat-Sleep-Code life cycle.",
+      "after": "A monitoring robot named Marek follows an Evaluate-Rest-Compute work schedule.",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 224,
+      "end": 227,
+      "before": "eat",
+      "after": "Evaluate",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 229,
+      "end": 234,
+      "before": "sleep",
+      "after": "Rest",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 239,
+      "end": 243,
+      "before": "code",
+      "after": "Compute",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 250,
+      "end": 262,
+      "before": "close friend",
+      "after": "supervisor",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 266,
+      "end": 269,
+      "before": "Roy",
+      "after": "Marek",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 359,
+      "end": 362,
+      "before": "Roy",
+      "after": "Marek",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 388,
+      "end": 396,
+      "before": "log file",
+      "after": "activity register",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 405,
+      "end": 413,
+      "before": "log file",
+      "after": "activity register",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 597,
+      "end": 600,
+      "before": "Eat",
+      "after": "Evaluate",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 602,
+      "end": 607,
+      "before": "Sleep",
+      "after": "Rest",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 612,
+      "end": 616,
+      "before": "Code",
+      "after": "Compute",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 677,
+      "end": 680,
+      "before": "Roy",
+      "after": "Marek",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 725,
+      "end": 728,
+      "before": "Roy",
+      "after": "Marek",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 731,
+      "end": 737,
+      "before": "friend",
+      "after": "supervisor",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 794,
+      "end": 800,
+      "before": "coding",
+      "after": "computing",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 858,
+      "end": 864,
+      "before": "coding",
+      "after": "computing",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 887,
+      "end": 893,
+      "before": "Coding",
+      "after": "Computing",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "Roy is going through the dark times of his life. Recently his girl friend broke up with him and to overcome the pain of acute misery he decided to restrict himself to Eat-Sleep-Code life cycle.": 1,
+    "Eat": 2,
+    "Sleep": 2,
+    "Code": 2,
+    "close friend": 1,
+    "Roy": 4,
+    "log file": 2,
+    "friend": 1,
+    "coding": 3
+  },
+  "protected_mapping_hits": {
+    "coding": 7,
+    "Roy": 2,
+    "Code": 1
+  },
+  "unused_mapping_keys": [
+    "Eat-Sleep-Code"
+  ],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 1540,
+      "raw_end": 2196,
+      "sha256": "7f1b0fb16b57d55e120b69d71f795ddb8cd0f7dafce2647b011b630b1f5a2bc1"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "A monitoring robot follows an Evaluate-Rest-Compute schedule and records its activities.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

@@ -1,0 +1,93 @@
+Couriers report to checkpoints selected by rectilinear distance.
+
+There are N couriers and M rendezvous points on the xy-plane.
+The coordinates of the i-th courier (1 \leq i \leq N) is (a_i,b_i), and the coordinates of the rendezvous point numbered j (1 \leq j \leq M) is (c_j,d_j).
+When the dispatcher gives a signal, each courier has to go to the nearest rendezvous point measured in Manhattan distance.
+The Manhattan distance between two points (x_1,y_1) and (x_2,y_2) is |x_1-x_2|+|y_1-y_2|.
+Here, |x| denotes the absolute value of x.
+If there are multiple nearest rendezvous points for a courier, he/she will select the rendezvous point with the smallest index.
+Which rendezvous point will each courier go to?
+
+Constraints
+
+* 1 \leq N,M \leq 50
+* -10^8 \leq a_i,b_i,c_j,d_j \leq 10^8
+* All input values are integers.
+
+Input
+
+The input is given from Standard Input in the following format:
+
+
+N M
+a_1 b_1
+:
+a_N b_N
+c_1 d_1
+:
+c_M d_M
+
+
+Output
+
+Print N lines.
+The i-th line (1 \leq i \leq N) should contain the index of the rendezvous point for the i-th courier to go.
+
+Examples
+
+Input
+
+2 2
+2 0
+0 0
+-1 0
+1 0
+
+
+Output
+
+2
+1
+
+
+Input
+
+3 4
+10 10
+-10 -10
+3 3
+1 2
+2 3
+3 5
+3 5
+
+
+Output
+
+3
+1
+2
+
+
+Input
+
+5 5
+-100000000 -100000000
+-100000000 100000000
+100000000 -100000000
+100000000 100000000
+0 0
+0 0
+100000000 100000000
+100000000 -100000000
+-100000000 100000000
+-100000000 -100000000
+
+
+Output
+
+5
+4
+3
+2
+1

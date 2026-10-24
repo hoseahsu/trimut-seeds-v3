@@ -1,0 +1,43 @@
+{
+  "seed_id": "TM016",
+  "status": "rendered",
+  "raw_sha256": "63ef08ff44651585d574425c1d2d5d472d3a88d2c148d84e592b76fdc8b00323",
+  "l2_edits": [
+    {
+      "old": "n ≤ 10^5",
+      "new": "n ≤ 400000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "at least d units of money more",
+      "new": "strictly more than d units of money more",
+      "occurrences": 1
+    },
+    {
+      "old": "the minimum difference between the amount of money in order to feel poor",
+      "new": "the difference threshold above which a friend feels poor",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "ff4805fc03382ce98e2b460e58d172f7d8d4987f5c26a3de76303b3cfaeaf201",
+  "l3_sha256": "d45a4cdd1f14ea59b7f32782d61264f7c78540e3895f3b9c1d3f1ea4214ab7fb",
+  "samples": [
+    {
+      "input": "5 100\n0 7\n11 32\n99 10\n46 8\n87 54\n",
+      "output": "111\n",
+      "input_sha256": "001bb27c7b77823b8eea7679e7f2388bcc4f9b59bd1eb3b84cadcbd3ef688c69",
+      "output_sha256": "1fc917c7ad66487470e466c0ad40ddd45b9f7730a4b43e1b2542627f0596bbdc",
+      "run_path": "validation/strict_root/TM016/report.json"
+    },
+    {
+      "input": "4 5\n75 5\n0 100\n150 20\n75 1\n",
+      "output": "100\n",
+      "input_sha256": "7fa0759359b93cc0cfc7170d579e0035a73272dd56c6876e447736a52f0b4a61",
+      "output_sha256": "eea8254c7500ba3de996aa8ad6af399183f04e17d4a8102fde539dbc93a90012",
+      "run_path": "validation/strict_root/TM016/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

@@ -1,0 +1,41 @@
+In late autumn evening n robots gathered in the cheerful company of friends. Each robot has a unique identifier — an integer from 1 to 10^9.
+
+At some moment, robots decided to play the game "Snowball". Below there are the rules of this game. First, all robots stand in a row. Then the first robot says his identifier. After that the second robot says his own identifier and then the identifier of the first robot. In general, robot r says the identifiers of robots r, r-1, ..., 1 in that order. The robots take their turns from left to right through robot n.
+
+Your task is to determine the k-th identifier to be pronounced.
+
+Input
+
+The first line contains two positive integers n and k (1 ≤ n ≤ 100 000, 1 ≤ k ≤ min(2·10^9, n·(n + 1) / 2).
+
+The second line contains the sequence id1, id2, ..., idn (1 ≤ idi ≤ 10^9) — identifiers of roborts. It is guaranteed that all identifiers are different.
+
+Output
+
+Print the k-th pronounced identifier (assume that the numeration starts from 1).
+
+Sample Input 1
+
+```text
+2 2
+1 2
+```
+
+Sample Output 1
+
+```text
+2
+```
+
+Sample Input 2
+
+```text
+4 5
+10 4 18 3
+```
+
+Sample Output 2
+
+```text
+4
+```

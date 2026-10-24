@@ -1,0 +1,40 @@
+{
+  "seed_id": "TM097",
+  "raw_sha256": "70e8c71527aab7cb99d6ceb946c071b840e0d7dbd9e5c9e96bed235adef087db",
+  "status": "rendered",
+  "l3_sha256": "b85731a2295cabbbfd20406045e6ad9bee3e131d0e2c2dfe2ab5fd33b5662efc",
+  "edits": [
+    {
+      "old": "Monk hates redundancy and hence, enlists the names only once.",
+      "new": "Monk rejects every name that Puchi mentioned more than once, and enlists only names mentioned exactly once.",
+      "occurrences": 1
+    },
+    {
+      "old": "Find the final invite-list, that contain names without any repetition.",
+      "new": "Find the final invite-list consisting of exactly the names whose occurrence count is one.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "1\n7\nchandu\nparo\nrahul\nmohi\nparo\narindam\nrahul\n",
+      "output": "arindam\nchandu\nmohi\n",
+      "input_sha256": "8502a482216be84d84b6822fdaaeb00551d7dd1f4efeab8fccd9ba08a1a007d2",
+      "output_sha256": "aa7e527b9f54186269914e2041cce035b9571afec18b344fe885c3bd7246d60b",
+      "run_report": "validation/strict_cc_a/TM097/report.json",
+      "case": "original_sample_recovered_0",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 7,
+        "original_upper": 100000,
+        "l2_upper": 200000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

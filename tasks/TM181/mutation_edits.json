@@ -1,0 +1,47 @@
+{
+  "seed_id": "TM181",
+  "raw_sha256": "cd1f07031405ed3c8c19ba7151b9233e5e869d1c6a58118624e3ae64d68b75de",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "between 1 and 4000, inclusive",
+      "new": "between 1 and 100000, inclusive",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Given two strings, find the longest of the strings contained in both strings and write a program that answers that length.",
+      "new": "Given two strings, find the length of their longest common subsequence.",
+      "occurrences": 1
+    },
+    {
+      "old": "Here, the string s included in the string t means that s appears consecutively in t. An empty string, that is, a string of length 0, is included in any string. For example, the string ABRACADABRA contains the following strings: ABRA, RAC, D, ACADABRA, ABRACADABRA, the empty string, etc. On the other hand, the string ABRACADABRA does not contain the following strings: ABRC, RAA, BA , K etc.",
+      "new": "Here s is a subsequence of t if s can be obtained by removing zero or more characters from t without changing the order of the remaining characters. The empty string is a subsequence of every string.",
+      "occurrences": 1
+    },
+    {
+      "old": "Outputs the length of the longest string contained in both of the two strings",
+      "new": "Outputs the length of the longest common subsequence of the two strings",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [
+    {
+      "before": "Examples explained\n\nFor ABRACADABRA and ECADADABRBCRDARA, common substrings include CA, CADA, ADABR, and the empty string. The longest is ADABR, of length 5, at the positions shown below:\n\nABRAC ADABR A\nECAD ADABR BCRDARA\n\nFor UPWJCIRUCAXIIRGL and SBQNYBSBZDFNEV, only the empty string is common, so its length is 0.\n",
+      "after": "",
+      "reason": "The original common-substring illustration does not define common subsequences."
+    }
+  ],
+  "original_samples": [
+    {
+      "original_input_sha256": "5c838e85872b6626352c86dc1c68d927f56b1ab0d14205fd9125d617b6ae20be",
+      "l3_output_sha256": "a48ff92ccec3ac4a42d5f5bf19f90c7922a0a95314b742206b5fea5157f649fa",
+      "run_report": "validation/strict_cc_b_supplement/TM181/report.json",
+      "case": "original_statement_sample_1"
+    }
+  ],
+  "l2_sha256": "2b0f790480ce8ddcd558749e75a6088b7687fd730bc94f2b125e4df60ec9d776",
+  "l3_sha256": "47458c2dc8bebe1ac54d257984488a51ec3d59e426a169033cdce5083744efc2",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

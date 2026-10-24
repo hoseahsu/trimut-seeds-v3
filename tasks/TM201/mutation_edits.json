@@ -1,0 +1,52 @@
+{
+  "seed_id": "TM201",
+  "raw_sha256": "c8d002d31c2c60001d7156904a15f96b30774f9933db006e7d1f5a57d20656dd",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "m ≤ 5·10^4",
+      "new": "m ≤ 150000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Calculate the sum of current array elements on the segment [l, r], that is, count value al + al + 1 + ... + ar.",
+      "new": "Calculate the bitwise XOR of current array elements on the segment [l, r], that is, a_l XOR a_{l+1} XOR ... XOR a_r.",
+      "occurrences": 1
+    },
+    {
+      "old": "for each sum query",
+      "new": "for each XOR-aggregate query",
+      "occurrences": 1
+    },
+    {
+      "old": "this is the query of the sum",
+      "new": "this is the query of the bitwise XOR aggregate",
+      "occurrences": 1
+    },
+    {
+      "old": "the sum of numbers on the given segment",
+      "new": "the bitwise XOR of numbers on the given segment",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "55e27bffe9b9563167c1e0589b15fdc3c572186cad5b44e44ffe58b24940f889",
+      "l3_output_sha256": "b08a23076dd91ccb7c1dd34f5ccf95775de8b6d32ba8ea5d73395673c1da6bea",
+      "run_report": "validation/strict_cc_b_supplement/TM201/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "e10c771976ff2d4fb18d8747338bcc1f17a2a8b9e31e31e484fda2ea11b65c9a",
+      "l3_output_sha256": "409f9891ad678ea20e4b20e862d56f23c9b29ed02f40cbdd3a9257821638a85d",
+      "run_report": "validation/strict_cc_b_supplement/TM201/report.json",
+      "case": "original_statement_sample_2"
+    }
+  ],
+  "l2_sha256": "820494d70b89b0010d764659a303652e9f810aac1711d47542adeccef273caba",
+  "l3_sha256": "03040f49b70a4f02a60a2f8450fea869dd0a5626c08340a9e566f8db136add87",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

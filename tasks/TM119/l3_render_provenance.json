@@ -1,0 +1,62 @@
+{
+  "seed_id": "TM119",
+  "raw_sha256": "86deee1a082232433d5a8b0b47b727d5e2b4a0f3c84c5d74d7eb0f14f41a6f1b",
+  "status": "rendered",
+  "l3_sha256": "20501aec34e7ccce577175f63d651153cd7adc8a8827ad35939d41764e6d32b9",
+  "edits": [
+    {
+      "old": "ignore one of them",
+      "new": "ignore exactly two distinct switches",
+      "occurrences": 1
+    },
+    {
+      "old": "if there exists such a switch that if you will ignore (not use) it but press all the other n - 1 switches",
+      "new": "if there exist two distinct switches that you can ignore while pressing all the other n - 2 switches",
+      "occurrences": 1
+    },
+    {
+      "old": "Print \"YES\" if there is a switch that if you will ignore it and press all the other n - 1 switches then all m lamps will be turned on. Print \"NO\" if there is no such switch.",
+      "new": "Print \"YES\" if two distinct switches can be ignored while all other switches still turn on every lamp. Otherwise print \"NO\"; in particular, print \"NO\" when n < 2.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4 5\n10101\n01000\n00111\n10000\n",
+      "output": "NO\n",
+      "input_sha256": "3cb414a742211c3951a6c6d261fa71c560452cf517f31167d209d170c75c6ea7",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_report": "validation/strict_cc_a/TM119/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 4,
+        "original_upper": 2000,
+        "l2_upper": 4000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "4 5\n10100\n01000\n00110\n00101\n",
+      "output": "NO\n",
+      "input_sha256": "9e176b409aaf33e9511e893dad7c6176e8a3869a34d3fee3ff45e6778420ba13",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_report": "validation/strict_cc_a/TM119/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 4,
+        "original_upper": 2000,
+        "l2_upper": 4000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

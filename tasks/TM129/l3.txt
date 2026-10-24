@@ -1,0 +1,90 @@
+You are going out for a walk, when you suddenly encounter a monster. Fortunately, you have N katana (swords), Katana 1, Katana 2, …, Katana N, and can perform the following two kinds of attacks in any order:
+
+* Wield one of the katana you have. When you wield Katana i (1 ≤ i ≤ N), the monster receives a_i points of damage. The same katana can be wielded any number of times. Each wield takes one time unit.
+* Throw one of the katana you have. When you throw Katana i (1 ≤ i ≤ N) at the monster, it receives b_i points of damage, and you lose the katana. That is, you can no longer wield or throw that katana. Each throw takes two time units.
+
+
+
+The monster will vanish when the total damage it has received is H points or more. What is the minimum total time needed to make it vanish?
+
+Constraints
+
+* 1 ≤ N ≤ 10^5
+* 1 ≤ H ≤ 10^9
+* 1 ≤ a_i ≤ b_i ≤ 10^9
+* All input values are integers.
+
+Input
+
+Input is given from Standard Input in the following format:
+
+
+N H
+a_1 b_1
+:
+a_N b_N
+
+
+Output
+
+Print the minimum total time required to vanish the monster.
+
+Sample Input 1
+
+```text
+1 10
+3 5
+```
+
+Sample Output 1
+
+```text
+4
+```
+
+Sample Input 2
+
+```text
+2 10
+3 5
+2 6
+```
+
+Sample Output 2
+
+```text
+4
+```
+
+Sample Input 3
+
+```text
+4 1000000000
+1 1
+1 10000000
+1 30000000
+1 99999999
+```
+
+Sample Output 3
+
+```text
+860000007
+```
+
+Sample Input 4
+
+```text
+5 500
+35 44
+28 83
+46 62
+31 79
+40 43
+```
+
+Sample Output 4
+
+```text
+11
+```

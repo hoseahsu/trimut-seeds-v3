@@ -1,0 +1,43 @@
+{
+  "seed_id": "TM049",
+  "status": "rendered",
+  "raw_sha256": "0d55c2358f84d42005691c3234cb14dfc5126b6cb2299d90d0f5a1393bf60913",
+  "l2_edits": [
+    {
+      "old": "N \\leq 2\\times 10^5",
+      "new": "N \\leq 600000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "A_i \\times A_j",
+      "new": "|A_i-A_j|",
+      "occurrences": 1
+    },
+    {
+      "old": "A_i A_j, modulo",
+      "new": "|A_i-A_j|, modulo",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "91099d6b5f80cb80f3a4780f7ae9362bc198abe71a334db48cfe77f6996def0d",
+  "l3_sha256": "ab9bdf3d441341d11c1c53d8b80444225e129055ee723054239b7cb81417d459",
+  "samples": [
+    {
+      "input": "3\n1 2 3",
+      "output": "4\n",
+      "input_sha256": "fcf1118351be8397e5f451ca4bc45bff96a26824f71e01f56a13fcd16e2702f7",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_path": "validation/strict_root/TM049/report.json"
+    },
+    {
+      "input": "4\n141421356 17320508 22360679 244949",
+      "output": "428569392\n",
+      "input_sha256": "663e12f795a77e6a5ac9751af71e3645b89ea01a7651330d43978b77abdba2e5",
+      "output_sha256": "f2a6d73cc1de95a4c033072f22f9f2425950aa1abcae9d2fdf6e34786615c92a",
+      "run_path": "validation/strict_root/TM049/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

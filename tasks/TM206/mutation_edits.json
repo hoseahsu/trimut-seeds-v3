@@ -1,0 +1,51 @@
+{
+  "seed_id": "TM206",
+  "raw_sha256": "3a7285e1d8853868c60be879a5fb087425406d5ae189270f6faa4220309db557",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "n ≤ 2 ⋅ 10^5",
+      "new": "n ≤ 400000",
+      "occurrences": 1
+    },
+    {
+      "old": "does not exceed 2 ⋅ 10^5",
+      "new": "does not exceed 400000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "greater than or equal to l and less than or equal to r",
+      "new": "strictly greater than l and strictly less than r",
+      "occurrences": 1
+    },
+    {
+      "old": "l ≤ a_i + a_j ≤ r",
+      "new": "l < a_i + a_j < r",
+      "occurrences": 2
+    },
+    {
+      "old": "then two pairs are suitable:",
+      "new": "then one pair is suitable:",
+      "occurrences": 1
+    },
+    {
+      "old": "  * i=1 and j=2 (4 ≤ 5 + 1 ≤ 7); \n  * i=1 and j=3 (4 ≤ 5 + 2 ≤ 7).",
+      "new": "  * i=1 and j=2 (4 < 5 + 1 < 7).",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "c4081d6eb83209c0a0a99e1daa6ab70394b6b41bead32a0188673fc2a632f7da",
+      "l3_output_sha256": "42587f69276f7ff1696679fda99b607c36153f2eb27b8c743def62190b7524b2",
+      "run_report": "validation/strict_cc_b_supplement/TM206/report.json",
+      "case": "original_statement_sample_1"
+    }
+  ],
+  "l2_sha256": "1e73515259a01e68852f0e7f4565583b41abbbeb865f3e96610cb6ff72dad717",
+  "l3_sha256": "8f9cbc427b3c1cb090e1c01071c44971424082f8d7b226f32cc60e83d1b933ac",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

@@ -1,0 +1,50 @@
+{
+  "seed_id": "TM110",
+  "raw_sha256": "0adb885e2dda97a62006af1d51d9f4f46c4c09b45f4c9947f39aa855cfebeaa5",
+  "status": "rendered",
+  "l3_sha256": "2b29ab7abc62323654f72a6d749a1e81d68dd4f04e60323bd2c83f7134d292e2",
+  "edits": [
+    {
+      "old": "the first half of the string consists of only the character c (i.e. s_1=s_2=...=s_{n/2}=c)",
+      "new": "the first half of the string consists of only the character c+1 (i.e. s_1=s_2=...=s_{n/2}=c+1)",
+      "occurrences": 1
+    },
+    {
+      "old": "the second half of the string consists of only the character c (i.e. s_{n/2 + 1}=s_{n/2 + 2}=...=s_n=c)",
+      "new": "the second half of the string consists of only the character c+1 (i.e. s_{n/2 + 1}=s_{n/2 + 2}=...=s_n=c+1)",
+      "occurrences": 1
+    },
+    {
+      "old": "For example: \"aabc\" is 'a'-good, \"ffgheeee\" is 'e'-good.",
+      "new": "For example, \"bbcc\" is 'a'-good: the first half is all 'b', and \"cc\" is 'b'-good. Also \"ff\" is 'e'-good. The length-one base case is unchanged.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [
+    {
+      "before": "Another example of an 'a'-good string is as follows. Consider the string s = \"cdbbaaaa\". It is an 'a'-good string, because:\n\n  * the second half of the string (\"aaaa\") consists of only the character 'a'; \n  * the first half of the string (\"cdbb\") is 'b'-good string, because: \n    * the second half of the string (\"bb\") consists of only the character 'b'; \n    * the first half of the string (\"cd\") is 'c'-good string, because: \n      * the first half of the string (\"c\") consists of only the character 'c'; \n      * the second half of the string (\"d\") is 'd'-good string. \n\n",
+      "after": "Another example is \"ddccbbbb\". It is 'a'-good because the right half \"bbbb\" is constant 'b' and the left half \"ddcc\" is 'b'-good: its right half is constant 'c' and \"dd\" is 'c'-good, ending in the unchanged 'd' base case.\n\n"
+    }
+  ],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "6\n8\nbbdcaaaa\n8\nasdfghjk\n8\nceaaaabb\n8\nbbaaddcc\n1\nz\n2\nac\n",
+      "output": "6\n7\n5\n2\n1\n2\n",
+      "input_sha256": "41e0ae1a736a78e46e0e700243712ba1c04eb1ceee9fa1cd809c348738f01102",
+      "output_sha256": "66089e2a3424a38b80e3f72f481f2cbc4c55f8c6d19e191f8e5decdc1874bcf4",
+      "run_report": "validation/strict_cc_a/TM110/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n_and_total_n",
+        "observed": 8,
+        "original_upper": 131072,
+        "l2_upper": 262144,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

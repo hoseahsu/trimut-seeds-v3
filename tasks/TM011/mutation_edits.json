@@ -1,0 +1,43 @@
+{
+  "seed_id": "TM011",
+  "status": "rendered",
+  "raw_sha256": "f2d012996c95047c1d687b5584f518b0ec00c51c0170e8c4fa01a4547fae2acb",
+  "l2_edits": [
+    {
+      "old": "N ≤ 100",
+      "new": "N ≤ 200",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "* The items have combined weight at most W, that is capacity of the knapsack.",
+      "new": "* The items have combined weight at most W, that is capacity of the knapsack.\n* The number of chosen items must be odd.",
+      "occurrences": 1
+    },
+    {
+      "old": "Print the maximum total values of the items in a line.",
+      "new": "Print the maximum total value among feasible odd-cardinality subsets, or -1 if none exists.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "ff11b2e71282946f527277a1103dae50329708ba9cd59d1dcdf66eb631b655f7",
+  "l3_sha256": "0f30e93e98cd4466cbe5e9865e7034688581afeb7fe209d4897acc95351384e6",
+  "samples": [
+    {
+      "input": "4 5\n4 2\n5 2\n2 1\n8 3",
+      "output": "11\n",
+      "input_sha256": "7749d80adc9c88f617c774cd9f078e51c8dace0955b215526d0ec8b76a5342b9",
+      "output_sha256": "25d4f2a86deb5e2574bb3210b67bb24fcc4afb19f93a7b65a057daa874a9d18e",
+      "run_path": "validation/strict_root/TM011/report.json"
+    },
+    {
+      "input": "2 20\n5 9\n4 10",
+      "output": "5\n",
+      "input_sha256": "33f374ea7d2ffdc543a6a11cec0ebba0b6ec53914ff717916fe65336ad359cbf",
+      "output_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06",
+      "run_path": "validation/strict_root/TM011/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

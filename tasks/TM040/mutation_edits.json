@@ -1,0 +1,50 @@
+{
+  "seed_id": "TM040",
+  "status": "rendered",
+  "raw_sha256": "63c6919206c905a27f253eb9af60f030ec08789bdb6469e8766d04979929bb06",
+  "l2_edits": [
+    {
+      "old": "10^{1,000,000}",
+      "new": "10^{2,000,000}",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "What will be the minimum possible number of total banknotes used by you and the clerk, when both choose the combination of banknotes to minimize this count?",
+      "new": "A banknote you pay has cost 1, while a banknote returned by the clerk has cost 2, regardless of denomination. What is the minimum total cost when both choose banknotes to minimize this weighted cost?",
+      "occurrences": 1
+    },
+    {
+      "old": "Print the minimum possible number of total banknotes used by you and the clerk.",
+      "new": "Print the minimum total weighted cost of paid and returned banknotes.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "b255b925447f1aaacd3dcb9eaf69595c6185112851cad74768957b6d51ce88b3",
+  "l3_sha256": "ee39dbcb141466a1df2255f0993280775884c379ec184b765ff36ab8876c558a",
+  "samples": [
+    {
+      "input": "91",
+      "output": "4\n",
+      "input_sha256": "1da51b8d8ff98f6a48f80ae79fe3ca6c26e1abb7b7d125259255d6d2b875ea08",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_path": "validation/strict_root/TM040/report.json"
+    },
+    {
+      "input": "314159265358979323846264338327950288419716939937551058209749445923078164062862089986280348253421170",
+      "output": "313\n",
+      "input_sha256": "ab03831e5e70e0aebf000a362f1656b179e25b7d8888bfed2de599f5503eb34f",
+      "output_sha256": "dbe8338192fb354ca88b7a9af39b867e0a0d7764006e537bdde93b6a4527388b",
+      "run_path": "validation/strict_root/TM040/report.json"
+    },
+    {
+      "input": "36",
+      "output": "9\n",
+      "input_sha256": "76a50887d8f1c2e9301755428990ad81479ee21c25b43215cf524541e0503269",
+      "output_sha256": "2e6d31a5983a91251bfae5aefa1c0a19d8ba3cf601d0e8a706b4cfa9661a6b8a",
+      "run_path": "validation/strict_root/TM040/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

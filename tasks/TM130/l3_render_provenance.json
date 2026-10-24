@@ -1,0 +1,57 @@
+{
+  "seed_id": "TM130",
+  "raw_sha256": "fc536da7edf1ea396dae51c55ec52be6cb22f68f40b78ce46e8e16160e95cde3",
+  "status": "rendered",
+  "l3_sha256": "c1cf8b0d3f5dd7fa5ccd9bc778008020cb65989ed2764012781ce81a80b2c2be",
+  "edits": [
+    {
+      "old": "count all right triangles with two sides parallel to the square sides, whose vertices are in the centers of '*'-cells.",
+      "new": "count right triangles whose horizontal leg extends rightward and whose vertical leg extends downward from the right-angle vertex, with every vertex at the center of a '*'-cell.",
+      "occurrences": 1
+    },
+    {
+      "old": "total number of square triangles in the field",
+      "new": "total number of right triangles with the specified rightward and downward leg directions",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "2 2\n**\n*.\n",
+      "output": "1\n",
+      "input_sha256": "c038832a5e41f090ab5dfc9bebd9bbf32cd613f0a76ee770a58563e6318026f9",
+      "output_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "run_report": "validation/strict_cc_a/TM130/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 2,
+        "original_upper": 1000,
+        "l2_upper": 2000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "3 4\n*..*\n.**.\n*.**\n",
+      "output": "1\n",
+      "input_sha256": "764fd7a7b1540af76e7a04082123bbe6124cedee02eba3713bc8e66f77d854b4",
+      "output_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "run_report": "validation/strict_cc_a/TM130/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 1000,
+        "l2_upper": 2000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

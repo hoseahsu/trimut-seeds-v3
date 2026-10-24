@@ -1,0 +1,36 @@
+You are given an integer n. You have to apply m operations to it.
+
+In a single operation, simultaneously replace every digit d from 0 through 8 by the digit d+1, and replace every digit 9 by the two-digit string 11. For example, 1912 becomes 21123 after one operation.
+
+You have to find the length of n after applying m operations. Since the answer can be very large, print it modulo 10^9+7.
+
+Input
+
+The first line contains a single integer t (1 ≤ t ≤ 2 ⋅ 10^5) — the number of test cases.
+
+The only line of each test case contains two integers n (1 ≤ n ≤ 10^9) and m (1 ≤ m ≤ 2 ⋅ 10^5) — the initial number and the number of operations. 
+
+Output
+
+For each test case output the length of the resulting number modulo 10^9+7.
+
+Sample Input 1
+
+```text
+5
+1912 1
+5 6
+999 1
+88 2
+12 100
+```
+
+Sample Output 1
+
+```text
+5
+2
+6
+4
+4096
+```

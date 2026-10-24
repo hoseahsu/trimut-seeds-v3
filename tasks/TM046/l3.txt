@@ -1,0 +1,53 @@
+Karafs is some kind of vegetable in shape of an 1 × h rectangle. Tavaspolis people love Karafs and they use Karafs in almost any kind of food. Tavas, himself, is crazy about Karafs.
+
+![Original illustration 1](https://espresso.codeforces.com/490095996c5002df1b561c10c9d09a5f14620af0.png)
+
+Each Karafs has a positive integer height. Tavas has an infinite 1-based sequence of Karafses. The height of the i-th Karafs is si = A + (i - 1) × B.
+
+For a given m, let's define an m-bite operation as decreasing the height of at most m distinct not eaten Karafses by 1. Karafs is considered as eaten when its height becomes zero.
+
+Now SaDDas asks you n queries. In each query he gives you numbers l, t and m and you should find the largest number r such that l ≤ r and sequence sl, sl + 1, ..., sr can be eaten by performing m-bite no more than t times, and the total number of height units eaten is strictly less than m × t, or print -1 if there is no such number r. The per-vegetable limit of at most t bites is unchanged.
+
+Input
+
+The first line of input contains three integers A, B and n (1 ≤ A, B ≤ 10^6, 1 ≤ n ≤ 10^5).
+
+Next n lines contain information about queries. i-th line contains integers l, t, m (1 ≤ l, t, m ≤ 10^6) for i-th query.
+
+Output
+
+For each query, print its answer in a single line.
+
+Sample Input 1
+
+```text
+1 5 2
+1 5 10
+2 7 4
+```
+
+Sample Output 1
+
+```text
+1
+2
+```
+
+Sample Input 2
+
+```text
+2 1 4
+1 5 3
+3 3 10
+7 10 2
+6 4 8
+```
+
+Sample Output 2
+
+```text
+4
+-1
+8
+-1
+```

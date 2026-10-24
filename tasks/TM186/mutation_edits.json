@@ -1,0 +1,37 @@
+{
+  "seed_id": "TM186",
+  "raw_sha256": "251b9592cc87d8f2a610c9319f94d03444f821b9e6f43ccd90b0f56773d6ea31",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "n ≤ 10^5",
+      "new": "n ≤ 300000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "a_i = t_i | t_{i + 1} (where | denotes the [bitwise OR operation](https://en.wikipedia.org/wiki/Bitwise_operation#OR))",
+      "new": "a_i = t_i XOR t_{i + 1} (where XOR denotes the bitwise exclusive-or operation)",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "23beb33bc9159f3d838c2e3fbcad6d675ac07afe9743d51b2c9a939820f28dfd",
+      "l3_output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_report": "validation/strict_cc_b_supplement/TM186/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "39a690ba77045059e0cb737497511974c639f335843744959c3b1f7f84d1f5fa",
+      "l3_output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_report": "validation/strict_cc_b_supplement/TM186/report.json",
+      "case": "original_statement_sample_2"
+    }
+  ],
+  "l2_sha256": "1531fc369b2682f5c378abf99efcf97b3ac545da0ceec6018341f9e65872377a",
+  "l3_sha256": "62e65465214e1cd216f25ac6f8feba775f75f2446fe26f1824487f783b1aa51a",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

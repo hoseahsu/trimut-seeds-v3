@@ -1,0 +1,46 @@
+An operator activates indicator beacons using control pads.
+
+Marek wants to turn on A display panel consisting of m beacons. Initially, all beacons are turned off. There are n control pads, each of them is connected to some set of beacons. Marek can press any of these control pads. When the control pad is pressed, it turns on all the beacons it's connected to. Can Marek light up all the beacons?
+
+If Marek presses the control pad such that some beacons connected to it are already turned on, they do not change their state, i.e. remain turned on.
+
+Input
+
+The first line of the input contains integers n and m (1 ≤ n, m ≤ 100) — the number of control pads and the number of beacons respectively. 
+
+Each of the next n lines contains xi (0 ≤ xi ≤ m) — the number of beacons that are turned on by the i-th control pad, and then xi numbers yij (1 ≤ yij ≤ m) — the numbers of these beacons.
+
+Output
+
+If it's possible to turn on all m beacons print "YES", otherwise print "NO".
+
+Examples
+
+Input
+
+3 4
+2 1 4
+3 1 3 1
+1 2
+
+
+Output
+
+YES
+
+
+Input
+
+3 3
+1 1
+1 2
+1 1
+
+
+Output
+
+NO
+
+Note
+
+In the first sample you can press each control pad once and turn on all the beacons. In the 2 sample it is impossible to turn on the 3-rd beacon.

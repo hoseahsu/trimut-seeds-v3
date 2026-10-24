@@ -1,0 +1,70 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM126",
+  "raw_path": "tasks/TM126/raw.txt",
+  "raw_sha256": "eed70ff2259818edf929d1c91f06c56d3c3e69b9a22d005c3752306f627917c2",
+  "l1_path": "tasks/TM126/l1.txt",
+  "l1_sha256": "85375681c9d620c1ffb0e120858ee96843fd0fb2f7b098696eec0ac5608dd9fa",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The selected integers are interpreted as cycle lengths.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "eed70ff2259818edf929d1c91f06c56d3c3e69b9a22d005c3752306f627917c2",
+  "edits": [
+    {
+      "start": 213,
+      "end": 230,
+      "before": "positive integers",
+      "after": "positive integer cycle lengths",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 364,
+      "end": 384,
+      "before": "these three integers",
+      "after": "these three cycle lengths",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 575,
+      "end": 592,
+      "before": "positive integers",
+      "after": "positive integer cycle lengths",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 722,
+      "end": 739,
+      "before": "positive integers",
+      "after": "positive integer cycle lengths",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "positive integers": 3,
+    "these three integers": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 623,
+      "raw_end": 682,
+      "sha256": "e50505d6ea56cb649628ac1d6a9f55a483796f6a339311917b96cad79f5feb06"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The selected integers are interpreted as cycle lengths.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

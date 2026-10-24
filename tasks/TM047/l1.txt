@@ -1,0 +1,44 @@
+Service beacons cover settlements along a straight route.
+
+You are given n points on the straight line — the positions (x-coordinates) of the settlements and m points on the same line — the positions (x-coordinates) of the service beacons. All beacons work in the same way — they provide service coverage for all settlements, which are located at the distance which is no more than r from this beacon.
+
+Your task is to find minimal r that each settlement has been provided by service coverage, i.e. for each settlement there is at least one service beacon at the distance which is no more than r.
+
+If r = 0 then a beacon provides service coverage only for the point where it is located. One beacon can provide service coverage for any number of settlements, but all these settlements must be at the distance which is no more than r from this beacon.
+
+Input
+
+The first line contains two positive integers n and m (1 ≤ n, m ≤ 10^5) — the number of settlements and the number of service beacons.
+
+The second line contains a sequence of n integers a1, a2, ..., an ( - 10^9 ≤ ai ≤ 10^9) — the coordinates of settlements. It is allowed that there are any number of settlements in the same point. All coordinates ai are given in non-decreasing order.
+
+The third line contains a sequence of m integers b1, b2, ..., bm ( - 10^9 ≤ bj ≤ 10^9) — the coordinates of service beacons. It is allowed that there are any number of beacons in the same point. All coordinates bj are given in non-decreasing order.
+
+Output
+
+Print minimal r so that each settlement will be covered by service coverage.
+
+Examples
+
+Input
+
+3 2
+-2 2 4
+-3 0
+
+
+Output
+
+4
+
+
+Input
+
+5 3
+1 5 10 14 17
+4 11 15
+
+
+Output
+
+3

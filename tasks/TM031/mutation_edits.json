@@ -1,0 +1,41 @@
+{
+  "seed_id": "TM031",
+  "status": "rendered",
+  "raw_sha256": "e70c810a2b07655243cd73ae4d26bb9329f18722711d31b2f7e33c436afe1419",
+  "l2_edits": [
+    {
+      "old": "n ≤ 10^{5}",
+      "new": "n ≤ 400000",
+      "occurrences": 1
+    },
+    {
+      "old": "does not exceed 10^{5}",
+      "new": "does not exceed 400000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "nondecreasing",
+      "new": "strictly increasing",
+      "occurrences": 4
+    },
+    {
+      "old": "a_{1} ≤ a_{2} ≤ … ≤ a_{n}",
+      "new": "a_{1} < a_{2} < … < a_{n}",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "22cc556d74646e38c641a6d25c1c392dd6211b0b02ece84cdec485d3bdb8c3c7",
+  "l3_sha256": "64ebcf1dafc787299916a311b5588dcd115cb97f5774c3e4e09321792fe061f4",
+  "samples": [
+    {
+      "input": "3\n4\n1 7 6 5\n5\n1 2 3 4 5\n2\n0 -4\n",
+      "output": "3\n0\n3\n",
+      "input_sha256": "29ebf24b4dffc7bbc9646bff940ad6d6e1e8593e403cadaac057f95e884d3b31",
+      "output_sha256": "2dc62c3eaa2dd72af13936e80847caaebbace77c7f4513d08e689be4bbaccda6",
+      "run_path": "validation/strict_root/TM031/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

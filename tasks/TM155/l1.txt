@@ -1,0 +1,60 @@
+A selection system chooses representatives from training clubs.
+
+Everybody knows that the m-coder Tournament will happen soon. m training clubs participate in the tournament, and only one trainee from each training club participates.
+
+There are a total of n trainees in those training clubs. Before the tournament, all trainees put their names and the names of their training clubs into the Selection Registry. After that, Registry selects the strongest trainee from each training club to participate. 
+
+Marek is a planner who wants to have k Chosen Ones selected by the Registry. Unfortunately, not all of them are the strongest in their training clubs, but Marek can make up some new training club names and replace some names from Registry with those. You can't use each made-up name more than once. In that case, Registry would select the strongest trainee in those made-up training clubs too.
+
+You know the power of each trainee and training clubs they study in. Calculate the minimal number of training clubs Marek has to make up so that k Chosen Ones would be selected by the Registry.
+
+Input
+
+The first line contains three integers n, m and k (1 ≤ n ≤ 100, 1 ≤ m, k ≤ n) — the total number of trainees, the number of training clubs and the number of the Chosen Ones.
+
+The second line contains n different integers p_1, p_2, …, p_n (1 ≤ p_i ≤ n), where p_i denotes the power of i-th trainee. The bigger the power, the stronger the trainee.
+
+The third line contains n integers s_1, s_2, …, s_n (1 ≤ s_i ≤ m), where s_i denotes the training club the i-th trainee goes to. At least one trainee studies in each of the training clubs. 
+
+The fourth line contains k different integers c_1, c_2, …, c_k (1 ≤ c_i ≤ n) — the id's of the Chosen Ones.
+
+Output
+
+Output a single integer — the minimal number of training clubs to be made up by Marek so that k Chosen Ones would be selected by the Registry.
+
+Examples
+
+Input
+
+
+7 3 1
+1 5 3 4 6 7 2
+1 3 1 2 1 2 3
+3
+
+
+Output
+
+
+1
+
+
+Input
+
+
+8 4 4
+1 2 3 4 5 6 7 8
+4 3 2 1 4 3 2 1
+3 4 5 6
+
+
+Output
+
+
+2
+
+Note
+
+In the first example there's just a single Chosen One with id 3. His power is equal to 3, but in the same training club 1, there's a trainee with id 5 and power 6, and that means inaction would not lead to the latter being chosen. If we, however, make up a new training club (let its id be 4) for the Chosen One, Registry would select trainees with ids 2 (strongest in 3), 5 (strongest in 1), 6 (strongest in 2) and 3 (strongest in 4).
+
+In the second example, you can change the training club of trainee 3 to the made-up 5 and the training club of trainee 4 to the made-up 6. It will cause the Registry to choose trainees 8, 7, 6, 5, 3 and 4.

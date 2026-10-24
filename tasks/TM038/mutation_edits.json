@@ -1,0 +1,45 @@
+{
+  "seed_id": "TM038",
+  "status": "rendered",
+  "raw_sha256": "3ffd73c44aa3faa6068b83bb3ceb75d0cbcdbe7801e3b9c4dea2f0469a1f6ec6",
+  "l2_edits": [
+    {
+      "old": "2 ≤ n, m ≤ 10^9",
+      "new": "2 ≤ n ≤ 10^9, 2 ≤ m ≤ 2000000000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Then she goes down all the way to cell (n, 1) — the bottom left corner. Then she starts moving in the snake fashion — all the way to the right, one cell up, then to the left to the cell in 2-nd column, one cell up. She moves until she runs out of non-visited cells. n and m given are such that she always end up in cell (1, 2).",
+      "new": "Then she goes right all the way to cell (1, m). She next moves down the last column to row n, one cell left, up to row 2, one cell left, and continues snaking through rows 2 through n while moving toward column 1. She stops after visiting every cell. The final cell is (2,1) when m is even and (n,1) when m is odd.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "ddbf37b94cc303caedfe97497a3e8c5ec2f107b1bb362711e353939a84dea1a4",
+  "l3_sha256": "482a9b24f36ad7b47162cb76d2aeafb8390052883f2f681e9cedbdf411051206",
+  "samples": [
+    {
+      "input": "4 3 0\n",
+      "output": "1 1\n",
+      "input_sha256": "4804cf1176ef013094587c39bade87d597ece6a9bc2d2560d5d191a2ddb3a26f",
+      "output_sha256": "3f11ad6bbc7ecca0b2416b713dee77f1a635c00aaeaa946e14cde1c2bfae56d5",
+      "run_path": "validation/strict_root/TM038/report.json"
+    },
+    {
+      "input": "4 3 7\n",
+      "output": "3 2\n",
+      "input_sha256": "db79f90430d95c9a030036c540771d0a39f44624aba645312a222b50c68344b7",
+      "output_sha256": "ece3d232c1ca9ef8a80b6fdb1585b8f5cf653b9dd023b0521c8da64db859ffac",
+      "run_path": "validation/strict_root/TM038/report.json"
+    },
+    {
+      "input": "4 3 11\n",
+      "output": "4 1\n",
+      "input_sha256": "e6468c429cf75ec8859cf4a9a2bd5aa2303bd7165be13bee2826fc8a2c1e236a",
+      "output_sha256": "8e426e752417be3d8fad586a3f1b24129da1d1f5b504a0201057acb0e66fdc5c",
+      "run_path": "validation/strict_root/TM038/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

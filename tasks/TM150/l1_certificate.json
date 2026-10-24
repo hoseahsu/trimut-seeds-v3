@@ -1,0 +1,48 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM150",
+  "raw_path": "tasks/TM150/raw.txt",
+  "raw_sha256": "78b2ee4406b80b06734ad6ebc7accc4558965e319002794dc7d035c406d8c78e",
+  "l1_path": "tasks/TM150/l1.txt",
+  "l1_sha256": "f4f14b775b621188e605ea1870191c3f26a831baaea27f4a2fcaf1d43ce5eec3",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The integers are interpreted as decimal catalog identifiers.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "78b2ee4406b80b06734ad6ebc7accc4558965e319002794dc7d035c406d8c78e",
+  "edits": [
+    {
+      "start": 19,
+      "end": 27,
+      "before": "integers",
+      "after": "integer identifiers",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "integers": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 278,
+      "raw_end": 504,
+      "sha256": "806dabe4a5b5af6139a6b967bd7508f9ad841d2f23b4c47a5ba5d2a1cef19df6"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The integers are interpreted as decimal catalog identifiers.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

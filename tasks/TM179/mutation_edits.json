@@ -1,0 +1,53 @@
+{
+  "seed_id": "TM179",
+  "raw_sha256": "28bd006f755857e1a17e6c5332e2c889ca1b26edefd22ca267572969e30e26ce",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "N \\leq 3 \\times 10^5",
+      "new": "N \\leq 600000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "XOR",
+      "new": "AND",
+      "occurrences": 8
+    },
+    {
+      "old": "1 if either A or B, but not both, has 1",
+      "new": "1 if both A and B have 1",
+      "occurrences": 1
+    },
+    {
+      "old": "3 \\mbox{ AND } 5 = 6. (In base two: 011 \\mbox{ AND } 101 = 110.)",
+      "new": "3 \\mbox{ AND } 5 = 1. (In base two: 011 \\mbox{ AND } 101 = 001.)",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "6b3272564201ddb9c9af54f753cb42a5c57b80c776cdd05f049d26c8695e2079",
+      "l3_output_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+      "run_report": "validation/strict_cc_b_supplement/TM179/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "d6837a2a054f220140ea9f479b13a151d91c551659bd9acc0dff6ec6467d8140",
+      "l3_output_sha256": "1326faec3eb42dc72ddffe46daf3940b932f48b9799f6cbf28e80504e7b34958",
+      "run_report": "validation/strict_cc_b_supplement/TM179/report.json",
+      "case": "original_statement_sample_2"
+    },
+    {
+      "original_input_sha256": "af809013dd9201ab93a84c190e0cf7e25225fe05293eb9a052d93c409971ce2b",
+      "l3_output_sha256": "2128348d3423403ca3b3fc19ed11e390552ec9799d70b169b2257f4821381ad0",
+      "run_report": "validation/strict_cc_b_supplement/TM179/report.json",
+      "case": "original_statement_sample_3"
+    }
+  ],
+  "l2_sha256": "77ac165b198a6c2719098238f4de4d876bb57d4f19a3e1d536885466022ff881",
+  "l3_sha256": "25b542b50648983b1ae2cdf476d39808c575f63b41aa104347dcae192a8e8791",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

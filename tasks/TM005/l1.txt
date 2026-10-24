@@ -1,0 +1,48 @@
+An artisan coats a strip using interchangeable applicators.
+
+Nora thinks about coating her strip. The strip can be represented as a segment of length k. Nora has got n applicators, the i-th applicator allows her to coat some continuous subsegment of strip of length exactly ai each hour. Nora can't coat any parts of the strip that were already coated, also she can't coat the surface outside the strip.
+
+Nora has to choose one of the applicators in order to coat the strip as fast as possible (as mentioned above, each hour she will coat some continuous subsegment of length ai if she chooses the i-th applicator). Help her to determine the minimum number of hours she has to spend coating the strip. It is guaranteed that Nora can always choose a applicator so it is possible coat the strip.
+
+See the examples for better understanding.
+
+Input
+
+The first line of input contains two integer numbers n and k (1 ≤ n, k ≤ 100) — the number of applicators and the length of the strip, respectively.
+
+The second line of input contains n integer numbers ai (1 ≤ ai ≤ 100) — the length of the segment that can be coated by the i-th applicator in one hour.
+
+It is guaranteed that there is at least one applicator such that it is possible to coat the strip in integer number of hours using only this applicator.
+
+Output
+
+Print one integer number — the minimum number of hours required to coat the strip.
+
+Examples
+
+Input
+
+3 6
+2 3 5
+
+
+Output
+
+2
+
+
+Input
+
+6 7
+1 2 3 4 5 6
+
+
+Output
+
+7
+
+Note
+
+In the first test the best option is to choose the applicator that allows to coat the segment of length 3. We can't choose the applicator that allows to coat the segment of length 5 because then we can't coat the whole strip.
+
+In the second test we can choose only the applicator that allows us to coat the segment of length 1.

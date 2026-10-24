@@ -1,0 +1,78 @@
+Operators relocate occupants among indexed benches.
+
+There are n benches, numbered from 1 to n from left to right. Some benches are occupied by visitors (at most one visitor per bench), others are not. The number of occupied benches is not greater than n/2.
+
+For some reason, you would like to tell visitors to move from their benches to some other ones. If the i-th bench is occupied by someone and the j-th bench is not, you can tell the visitor sitting in the i-th bench to move to the j-th bench. The time it takes a visitor to move from the i-th bench to the j-th one is |i - j| minutes. You may perform this operation any number of times, but these operations must be done sequentially, i. e. you cannot tell a visitor to move until the visitor you asked to move in the last operation has finished moving to their destination bench.
+
+You want to achieve the following situation: every bench that was initially occupied must be free. What is the minimum time you need to do it?
+
+Input
+
+The first line contains one integer n (2 ≤ n ≤ 5000) — the number of benches.
+
+The second line contains n integers a_1, a_2, ..., a_n (0 ≤ a_i ≤ 1). a_i = 1 means that the i-th bench is initially occupied, a_i = 0 means that it is initially free. The number of occupied benches is at most n/2.
+
+Output
+
+Print one integer — the minimum number of minutes you have to spend to achieve the following situation: every bench that was initially occupied must be free.
+
+Examples
+
+Input
+
+
+7
+1 0 0 1 0 0 1
+
+
+Output
+
+
+3
+
+
+Input
+
+
+6
+1 1 1 0 0 0
+
+
+Output
+
+
+9
+
+
+Input
+
+
+5
+0 0 0 0 0
+
+
+Output
+
+
+0
+
+Note
+
+In the first test, you can perform the following sequence:
+
+  1. ask a visitor to move from bench 1 to bench 2, it takes 1 minute; 
+  2. ask a visitor to move from bench 7 to bench 6, it takes 1 minute; 
+  3. ask a visitor to move from bench 4 to bench 5, it takes 1 minute. 
+
+
+
+In the second test, you can perform the following sequence:
+
+  1. ask a visitor to move from bench 1 to bench 4, it takes 3 minutes; 
+  2. ask a visitor to move from bench 2 to bench 6, it takes 4 minutes; 
+  3. ask a visitor to move from bench 4 to bench 5, it takes 1 minute; 
+  4. ask a visitor to move from bench 3 to bench 4, it takes 1 minute. 
+
+
+
+In the third test, no bench is occupied so your goal is achieved instantly.

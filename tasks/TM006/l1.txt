@@ -1,0 +1,45 @@
+Two contestants receive scoring tokens from judges in a club final.
+
+Kiran is taking part in a club contest in his club. It is the final round. He has only one opponent — Soren. The are n judges in the club. Each judge has exactly k scoring tokens and is obligated to use all of them. So Kiran knows that if a person gives a_i scoring tokens for Soren, than he will get exactly k - a_i scoring tokens from this person. Of course 0 ≤ k - a_i holds.
+
+Kiran knows that if he loses his life is over. He has been speaking a lot with his friends and now he knows a_1, a_2, ..., a_n — how many scoring tokens for Soren each judge wants to give. Now he wants to change the number k to win the a club contest. Of course he knows that bigger k means bigger chance that somebody may notice that he has changed something and then he will be disqualified.
+
+So, Kiran knows a_1, a_2, ..., a_n — how many scoring tokens each judge will give to his opponent. Help him select the smallest winning number k. In order to win, Kiran needs to get strictly more scoring tokens than Soren.
+
+Input
+
+The first line contains integer n (1 ≤ n ≤ 100) — the number of judges in the club.
+
+The second line contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 100) — the number of scoring tokens each judge gives to Soren.
+
+Output
+
+Output the smallest integer k (k ≥ max a_i) which gives Kiran the victory. In order to win, Kiran needs to get strictly more scoring tokens than Soren.
+
+Examples
+
+Input
+
+5
+1 1 1 5 1
+
+
+Output
+
+5
+
+Input
+
+5
+2 2 3 2 2
+
+
+Output
+
+5
+
+Note
+
+In the first example, Soren gets 1 + 1 + 1 + 5 + 1 = 9 scoring tokens. The smallest possible k is 5 (it surely can't be less due to the fourth person), and it leads to 4 + 4 + 4 + 0 + 4 = 16 scoring tokens for Kiran, which is enough to win.
+
+In the second example, Soren gets 11 scoring tokens. If k = 4, Kiran gets 9 scoring tokens and loses to Soren.

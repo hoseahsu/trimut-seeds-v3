@@ -1,0 +1,109 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM055",
+  "raw_path": "tasks/TM055/raw.txt",
+  "raw_sha256": "830f3ae47254116cd44ca297fe2479e85f69c630bcb2504c2ab7e6c6d08f996c",
+  "l1_path": "tasks/TM055/l1.txt",
+  "l1_sha256": "ef7ef22291bb7ff0097f1c6ec1eb5bbb3390fb460c0576a06b22b63fea3120fb",
+  "mutation_kind": "narrative_entity_relabel",
+  "raw_ready_for_l1": true,
+  "interpretation": "Two researchers examine an equation from a technical notebook.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "830f3ae47254116cd44ca297fe2479e85f69c630bcb2504c2ab7e6c6d08f996c",
+  "edits": [
+    {
+      "start": 158,
+      "end": 162,
+      "before": "book",
+      "after": "notebook",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 197,
+      "end": 212,
+      "before": "Roman Oira-Oira",
+      "after": "Nolan Reed",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 217,
+      "end": 232,
+      "before": "Cristobal Junta",
+      "after": "Marek Voss",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 444,
+      "end": 453,
+      "before": "Oira-Oira",
+      "after": "Nolan",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 519,
+      "end": 534,
+      "before": "Cristobal Junta",
+      "after": "Marek Voss",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 548,
+      "end": 557,
+      "before": "Oira-Oira",
+      "after": "Nolan",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 721,
+      "end": 730,
+      "before": "Oira-Oira",
+      "after": "Nolan",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "book": 1,
+    "Roman Oira-Oira": 1,
+    "Cristobal Junta": 2,
+    "Oira-Oira": 3
+  },
+  "protected_mapping_hits": {
+    "Equations of Mathematical Magic": 1
+  },
+  "unused_mapping_keys": [
+    "Equations of Mathematical Magic"
+  ],
+  "protected_spans": [
+    {
+      "kind": "quoted_literal",
+      "raw_start": 163,
+      "raw_end": 196,
+      "sha256": "c68f86e24eb9bbfac754c8a6d229deac5fcc57ea9ea90ad6bb6591f750a68874"
+    },
+    {
+      "kind": "sample_block",
+      "raw_start": 1364,
+      "raw_end": 1423,
+      "sha256": "f5e05be88fea27e2b9547870eb44ffa9be4598e006af85bee32b62afb5bba9ff"
+    },
+    {
+      "kind": "display_math",
+      "raw_start": 1820,
+      "raw_end": 1922,
+      "sha256": "ad1b9a07928d5ac0d679caad332cf1833f8ad4c6b6227fb9048080a8386176b3"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "Two researchers examine an equation from a technical notebook.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

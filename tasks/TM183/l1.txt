@@ -1,0 +1,70 @@
+An archivist chains abbreviated names of successive guild leaders.
+
+The ancient Ardeners believed that the longer the name, the more important its bearer is. Thus, Arden guild leaders were famous for their long names. But long names are somewhat inconvenient, so the Ardeners started to abbreviate the names of their guild leaders. They called every guild leader by the first letters of its name. Thus, the guild leader, whose name was Victorious Vasily Pupkin, was always called by the Ardeners VVP.
+
+In Arden over its long history many guild successions of guild leaders replaced each other, but they were all united by common traditions. Thus, according to one Arden traditions, to maintain stability in the country, the first name of the heir should be the same as the last name his predecessor (hence, the first letter of the abbreviated name of the heir coincides with the last letter of the abbreviated name of the predecessor). Ardeners appreciate stability, so this tradition has never been broken. Also Ardeners like perfection, so another tradition requires that the first name of the first guild leader in the guild succession coincides with the last name of the last guild leader in this guild succession (hence, the first letter of the abbreviated name of the first guild leader coincides with the last letter of the abbreviated name of the last guild leader). This tradition, of course, has also been always observed.
+
+The name of a guild succession is formed by very simple rules: we take all the short names of the guild leaders in the order in which they ruled, and write them in one line. Thus, a guild succession of guild leaders "ab" and "ba" is called "abba", and the guild succession, which had only the guild leader "abca", is called "abca".
+
+Marek, a archivist, has recently found a list of abbreviated names of all Arden guild leaders and their relatives. Help Marek to find the maximally long name of the guild succession that could have existed in Arden.
+
+Note that in his list all the names are ordered by the time, that is, if name A is earlier in the list than B, then if A and B were guild leaders, then guild leader A ruled before guild leader B.
+
+Input
+
+The first line contains integer n (1 ≤ n ≤ 5·10^5) — the number of names in Marek's list. Next n lines contain n abbreviated names, one per line. An abbreviated name is a non-empty sequence of lowercase Latin letters. Its length does not exceed 10 characters.
+
+Output
+
+Print a single number — length of the sought guild succession's name in letters.
+
+If Marek's list is wrong and no guild succession can be found there, print a single number 0.
+
+Examples
+
+Input
+
+3
+abc
+ca
+cba
+
+
+Output
+
+6
+
+
+Input
+
+4
+vvp
+vvp
+dam
+vvp
+
+
+Output
+
+0
+
+
+Input
+
+3
+ab
+c
+def
+
+
+Output
+
+1
+
+Note
+
+In the first sample two guild successions can exist: the one called "abcca" (with the first and second guild leaders) and the one called "abccba" (with the first and third guild leaders). 
+
+In the second sample there aren't acceptable guild successions.
+
+The only guild succession in the third sample consists of one guild leader, his name is "c".

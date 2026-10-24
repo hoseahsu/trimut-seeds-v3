@@ -1,0 +1,65 @@
+You are given strings S and T consisting of lowercase English letters.
+
+You can apply one simultaneous letter substitution to S:
+
+Choose an arbitrary function f from lowercase English letters to lowercase English letters, and simultaneously replace each original character c in S by f(c). The function need not be injective: distinct original letters may map to the same target letter.
+
+Determine if S and T can be made equal by one such substitution, allowing the identity function.
+
+Constraints
+
+* 1 \leq |S| \leq 2 \times 10^5
+* |S| = |T|
+* S and T consists of lowercase English letters.
+
+Input
+
+Input is given from Standard Input in the following format:
+
+
+S
+T
+
+
+Output
+
+If S and T can be made equal, print `Yes`; otherwise, print `No`.
+
+Sample Input 1
+
+```text
+azzel
+apple
+```
+
+Sample Output 1
+
+```text
+Yes
+```
+
+Sample Input 2
+
+```text
+abcdefghijklmnopqrstuvwxyz
+ibyhqfrekavclxjstdwgpzmonu
+```
+
+Sample Output 2
+
+```text
+Yes
+```
+
+Sample Input 3
+
+```text
+chokudai
+redcoder
+```
+
+Sample Output 3
+
+```text
+Yes
+```

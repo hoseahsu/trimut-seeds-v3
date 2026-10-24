@@ -1,0 +1,78 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM018",
+  "raw_path": "tasks/TM018/raw.txt",
+  "raw_sha256": "e9c8ec85d6d11871a41dbb3e1c8f4b46cb0c7cbce09c7d72cb2588529c4b9f75",
+  "l1_path": "tasks/TM018/l1.txt",
+  "l1_sha256": "5b179f7c844ad3409162f1035ffe866f99cf3bdf61be428349af351b6500bc96",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "A telemetry log supplies readings from which a selected log is formed.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "e9c8ec85d6d11871a41dbb3e1c8f4b46cb0c7cbce09c7d72cb2588529c4b9f75",
+  "edits": [
+    {
+      "start": 16,
+      "end": 24,
+      "before": "sequence",
+      "after": "telemetry sequence",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 102,
+      "end": 110,
+      "before": "sequence",
+      "after": "telemetry sequence",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 193,
+      "end": 204,
+      "before": "subsequence",
+      "after": "selected telemetry subsequence",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 240,
+      "end": 248,
+      "before": "elements",
+      "after": "readings",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 286,
+      "end": 294,
+      "before": "elements",
+      "after": "readings",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "sequence": 2,
+    "subsequence": 1,
+    "elements": 2
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 550,
+      "raw_end": 602,
+      "sha256": "6333d81d23c90ea6831b92766ae93f95f07746fd94889b7f1deb8ed119603d7c"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "A telemetry log supplies readings from which a selected log is formed.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

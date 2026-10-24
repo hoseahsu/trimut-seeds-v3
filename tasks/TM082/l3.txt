@@ -1,0 +1,61 @@
+There are N cubes stacked vertically on a desk.
+
+You are given a string S of length N. The color of the i-th cube from the bottom is red if the i-th character in S is `0`, and blue if that character is `1`.
+
+You can perform the following operation any number of times: choose two adjacent cubes of the same color, and remove them. Here, the cubes that were stacked on the removed cubes will fall down onto the object below them.
+
+At most how many cubes can be removed?
+
+Constraints
+
+* 1 \leq N \leq 10^5
+* |S| = N
+* Each character in S is `0` or `1`.
+
+Input
+
+Input is given from Standard Input in the following format:
+
+
+S
+
+
+Output
+
+Print the maximum number of cubes that can be removed.
+
+Sample Input 1
+
+```text
+0011
+```
+
+Sample Output 1
+
+```text
+4
+```
+
+Sample Input 2
+
+```text
+11011010001011
+```
+
+Sample Output 2
+
+```text
+10
+```
+
+Sample Input 3
+
+```text
+0
+```
+
+Sample Output 3
+
+```text
+0
+```

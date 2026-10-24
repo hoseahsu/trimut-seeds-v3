@@ -1,0 +1,43 @@
+A traveler crosses a line of stepping platforms during a transfer mission.
+
+The time has arrived when the world is going to end. But don't worry, because the new world era will start soon. Marek (carrier of the travelers) has been assigned the job to carry all the necessary elements of current era to the upcoming era.
+
+There are N stepping platforms arranged in a straight line. In order to fulfill the task, Marek has to travel from the first stepping platform to the last one in a very specific way. First of all, he has to do it using exactly K jumps. In a single jump, he can jump from a stepping platform with coordinate xi to a stepping platform with coordinate xj if and only if xi < xj. We denote the value xj - xi as the length of such a jump.
+
+Your task is to help Marek minimize the maximum length of a jump he makes in his journey, in order to reach the last stepping platform in exactly K jumps and save the the travelers. This is the answer you have to provide.
+
+Input:
+
+In the first line, there is a single integer T denoting the number of test cases to handle. Then, description of T tests follow. In the first line of each such description, two integers N and K are given. This is followed by N space separated integers in the second line, each one denoting a single stepping platform location.
+
+Output:
+
+Output exactly T lines, and in the i^th of them, print a single integer denoting the answer to the i^th test case.
+
+Constraints:
+
+1 ≤ T ≤ 10
+2 ≤ N ≤ 10^5
+1 ≤ K ≤ (N-1)
+1 ≤ Coordinates of stepping platforms ≤ 10^9
+
+Note:
+
+It is not necessary that Marek steps on each stepping platform.
+
+Location of all stepping platforms are given in ascending order.SAMPLE INPUT
+2
+4 1
+2 15 36 43 
+3 2
+27 30 35 
+
+SAMPLE OUTPUT
+41
+5
+
+Explanation
+
+Case #1: Since we have to make exactly 1 jump, we need to jump directly from the first stepping platform to the last one, so the result equals 43 - 2 = 41.
+
+Case#2: Since we have to make exactly 2 jumps, we need to jump to all of the stepping platforms. The minimal longest jump to do this is 5, because 35 - 30 = 5.

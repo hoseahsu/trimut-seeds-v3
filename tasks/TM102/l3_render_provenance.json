@@ -1,0 +1,56 @@
+{
+  "seed_id": "TM102",
+  "raw_sha256": "70c2941a0bd008b92426951fa343917f2a3f58d730f7d084017982fae959ddd1",
+  "status": "rendered",
+  "l3_sha256": "81e32b4b4fbe2269eb9fc9effd0c6f329a4880dcdda2a19a62777cfad64eb6bd",
+  "edits": [
+    {
+      "old": "gcd(s1, s2, s3, ..., sk) = 1",
+      "new": "gcd(s1, s2, s3, ..., sk) ≤ 2",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [
+    {
+      "preserved_original_definition": "gcd (greatest common divisor) of positive integers set {a1, a2, ..., an} is the maximum positive integer that divides all the integers {a1, a2, ..., an}."
+    }
+  ],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "3\n2 3 4\n",
+      "output": "1\n",
+      "input_sha256": "548bb1619ab1dcb6c9b90f1d794a35eac248a93d3ca6bada3b9e06ced5f09b95",
+      "output_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "run_report": "validation/strict_cc_a/TM102/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "5\n2 3 4 6 7\n",
+      "output": "2\n",
+      "input_sha256": "f8f6310e607b8f1421240159a05ab9bec72367743d9ec7c5de814cb1767eac72",
+      "output_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "run_report": "validation/strict_cc_a/TM102/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

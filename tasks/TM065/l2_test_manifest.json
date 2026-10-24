@@ -1,0 +1,39 @@
+{
+  "schema_version": "cc-native-tests-v1",
+  "seed_id": "TM065",
+  "condition": "l2",
+  "test_scope": "selected reproducible experimental subset; not entire official hidden suite",
+  "cpu_budget_seconds": 5,
+  "memory_mb": 2048,
+  "budget_origin": "frozen research execution budget, not asserted to be the source judge budget",
+  "records": [
+    {
+      "name": "l2_upper",
+      "kind": "l2_upper",
+      "input_path": "tasks/TM065/tests/l2/l2_upper.in",
+      "input_sha256": "2ad3157cfc945635d7e82d8be8aefdc8bf7f9da3b894cb70a6d32c5e8a03f128",
+      "expected_path": "tasks/TM065/tests/l2/l2_upper.out",
+      "expected_sha256": "a9d9b53ef1ca2fcea0d57ed57336194a2f324f1cf3262d6b6ac28b8aa75077a8",
+      "native_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 150000,
+        "original_upper": 50000,
+        "l2_upper": 150000,
+        "outside_original": true
+      },
+      "reference_execution": {
+        "status": "OK",
+        "cpu_seconds": 0.0021719999999998407,
+        "cpu_affinity": 2,
+        "evidence_report": "validation/strict_cc_a/TM065/report.json",
+        "case": "l2_upper",
+        "role": "raw_fast"
+      },
+      "independently_checked_this_input": true,
+      "reference_output_provenance": "independent_oracle_or_analytical_scale_expectation"
+    }
+  ],
+  "strictly_outside_original_bound": true,
+  "algorithm_separation_claim": false
+}

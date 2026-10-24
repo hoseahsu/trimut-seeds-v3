@@ -1,0 +1,43 @@
+{
+  "seed_id": "TM044",
+  "status": "rendered",
+  "raw_sha256": "13fbdd323af152ac2116170184222cfae62fc124a30486f5ce7f6ed3e2da232b",
+  "l2_edits": [
+    {
+      "old": "1 ≤ n, m ≤ 100",
+      "new": "1 ≤ n ≤ 10000, 1 ≤ m ≤ 100",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "he chose three integers i, j, k (1 ≤ i < j ≤ n, 1 ≤ k ≤ m), then he took names number i and j and swapped their prefixes of length k. For example, if we take names \"CBDAD\" and \"AABRD\" and swap their prefixes with the length of 3, the result will be names \"AABAD\" and \"CBDRD\".",
+      "new": "he chose two integers i, j (1 ≤ i < j ≤ n), then swapped the entire names at positions i and j. For example, the names \"CBDAD\" and \"AABRD\" become \"AABRD\" and \"CBDAD\".",
+      "occurrences": 1
+    },
+    {
+      "old": "he chooses numbers i, j, k independently",
+      "new": "he chooses numbers i, j independently",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "6e77dac5ebb474a8ed226b7331a21e10fbc693bf193dbb892ce3a06f8834b2ca",
+  "l3_sha256": "b46bc160a312a707ceca33f06b0de59d25540e26362389048f7e5c70a70140a8",
+  "samples": [
+    {
+      "input": "2 3\nAAB\nBAA\n",
+      "output": "2\n",
+      "input_sha256": "4bb085c53a545d024aa153ea18662515e04ff71024f5ccc9610cb5d9a40db10b",
+      "output_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "run_path": "validation/strict_root/TM044/report.json"
+    },
+    {
+      "input": "4 5\nABABA\nBCGDG\nAAAAA\nYABSA\n",
+      "output": "4\n",
+      "input_sha256": "520b8d93d3f6d1c36c0a0c375de8560f1f089ae243cf31491850dfe7aa98df92",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_path": "validation/strict_root/TM044/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

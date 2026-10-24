@@ -1,0 +1,45 @@
+{
+  "seed_id": "TM137",
+  "raw_sha256": "882faabbca26d3b7896110404b80569654ea42ec2fe709b8ccd10516235c3722",
+  "status": "rendered",
+  "l3_sha256": "771efc39a4eb98ffc91e552f2ad1ebdeb8cc72839ec1d1f55bd04440fea19bc5",
+  "edits": [
+    {
+      "old": "not less than k consecutive days",
+      "new": "exactly k consecutive days",
+      "occurrences": 2
+    },
+    {
+      "old": "segments [3, 4, 1], [4, 1, 2] and [3, 4, 1, 2]",
+      "new": "segments [3, 4, 1] and [4, 1, 2]",
+      "occurrences": 1
+    },
+    {
+      "old": "the minimum number of days in a segment",
+      "new": "the required exact number of days in a segment",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4 3\n3 4 1 2\n",
+      "output": "2.6666666667\n",
+      "input_sha256": "161ec6042cec93dff6bcce7da35551067fefa8178a2609b90e1de54d0e5b4367",
+      "output_sha256": "8534c926c48799634133bcd9f974691dee23e9c9430e9d543b636f580c375fd1",
+      "run_report": "validation/strict_cc_a/TM137/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 4,
+        "original_upper": 5000,
+        "l2_upper": 20000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

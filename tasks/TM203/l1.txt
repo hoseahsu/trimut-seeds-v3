@@ -1,0 +1,52 @@
+An artisan assembles souvenirs using materials and universal filler.
+
+This problem is given in two versions that differ only by constraints. If you can solve this problem in large constraints, then you can just write a single solution to the both versions. If you find the problem too difficult in large constraints, you can write solution to the simplified version only.
+
+Waking up in the morning, Mira decided to assemble souvenirs. To assemble one souvenir, she needs n materials, and for each material she knows the value ai — how many grams of this material one needs to assemble a souvenir. To prepare one souvenir Mira needs to use all n materials.
+
+Mira has bi gram of the i-th material. Also she has k grams of a universal filler. Each gram of universal filler can be turned to exactly 1 gram of any of the n materials and can be used for assembly souvenirs.
+
+Your task is to determine the maximum number of souvenirs, which Mira is able to assemble using the materials that she has and the universal filler.
+
+Input
+
+The first line of the input contains two positive integers n and k (1 ≤ n, k ≤ 1000) — the number of materials and the number of grams of the universal filler.
+
+The second line contains the sequence a1, a2, ..., an (1 ≤ ai ≤ 1000), where the i-th number is equal to the number of grams of the i-th material, needed to assemble one souvenir.
+
+The third line contains the sequence b1, b2, ..., bn (1 ≤ bi ≤ 1000), where the i-th number is equal to the number of grams of the i-th material, which Mira has.
+
+Output
+
+Print the maximum number of souvenirs, which Mira will be able to assemble using the materials that she has and the universal filler.
+
+Examples
+
+Input
+
+3 1
+2 1 4
+11 3 16
+
+
+Output
+
+4
+
+
+Input
+
+4 3
+4 3 5 6
+11 12 14 20
+
+
+Output
+
+3
+
+Note
+
+In the first sample it is profitably for Mira to make the existing 1 gram of her universal filler to material with the index 2, then Mira will be able to assemble 4 souvenirs.
+
+In the second sample Mira should turn 1 gram of universal filler to material with the index 1 and 1 gram of universal filler to material with the index 3. Then Mira will be able to assemble 3 souvenirs. The remaining 1 gram of the universal filler can be left, because it can't be used to increase the answer.

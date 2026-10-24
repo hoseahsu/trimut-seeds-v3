@@ -1,0 +1,40 @@
+An identifier register is queried for labels shared by all fixed-length intervals.
+
+You are given an identifier register a consisting of n integers numbered from 1 to n.
+
+Let's define the k-amazing number of the identifier register as the minimum number that occurs in all of the register intervals of the identifier register having length k (recall that a register interval of a of length k is a contiguous part of a containing exactly k elements). If there is no integer occuring in all register intervals of length k for some value of k, then the k-amazing number is -1.
+
+For each k from 1 to n calculate the k-amazing number of the identifier register a.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 1000) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains one integer n (1 ≤ n ≤ 3 ⋅ 10^5) — the number of elements in the identifier register. The second line contains n integers a_1, a_2, ..., a_n (1 ≤ a_i ≤ n) — the elements of the identifier register. 
+
+It is guaranteed that the sum of n over all test cases does not exceed 3 ⋅ 10^5.
+
+Output
+
+For each test case print n integers, where the i-th integer is equal to the i-amazing number of the identifier register.
+
+Example
+
+Input
+
+
+3
+5
+1 2 3 4 5
+5
+4 4 4 4 2
+6
+1 3 1 5 3 1
+
+
+Output
+
+
+-1 -1 3 2 1 
+-1 4 4 4 2 
+-1 -1 1 1 1 1 

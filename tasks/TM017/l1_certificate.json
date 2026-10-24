@@ -1,0 +1,93 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM017",
+  "raw_path": "tasks/TM017/raw.txt",
+  "raw_sha256": "b72ac0f4d5f55fda5da9f9a4039655a55674c7367a1c65c3844dd79590f6fa1f",
+  "l1_path": "tasks/TM017/l1.txt",
+  "l1_sha256": "60640fc089e1da3cf2938a6fe245ed4140ac9db4ad7e8861bdb9283373dd5b51",
+  "mutation_kind": "narrative_entity_relabel",
+  "raw_ready_for_l1": true,
+  "interpretation": "A tournament observer reviews a hockey scoring log.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "b72ac0f4d5f55fda5da9f9a4039655a55674c7367a1c65c3844dd79590f6fa1f",
+  "edits": [
+    {
+      "start": 0,
+      "end": 14,
+      "before": "# A. Football\n",
+      "after": "# Marek\n",
+      "kind": "contextual_title"
+    },
+    {
+      "start": 23,
+      "end": 28,
+      "before": "Vasya",
+      "after": "Marek",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 70,
+      "end": 77,
+      "before": "Berland",
+      "after": "Arden",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 83,
+      "end": 91,
+      "before": "Football",
+      "after": "Hockey",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 92,
+      "end": 104,
+      "before": "Championship",
+      "after": "Tournament",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 405,
+      "end": 410,
+      "before": "Vasya",
+      "after": "Marek",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 981,
+      "end": 989,
+      "before": "football",
+      "after": "hockey",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "football": 3,
+    "Vasya": 2,
+    "Berland": 1,
+    "Championship": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 1049,
+      "raw_end": 1120,
+      "sha256": "ab6dcca98dd1fd8f404ef6a0eee2b528d9bfbd74ecc131555ac73fd37b1a7c2c"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 8,
+    "text": "\nA tournament observer reviews a hockey scoring log.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

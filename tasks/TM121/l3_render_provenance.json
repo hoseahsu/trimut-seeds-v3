@@ -1,0 +1,86 @@
+{
+  "seed_id": "TM121",
+  "raw_sha256": "5dfd12e3797bed9a6ea77d90d367d25ab335ff18c5b1e75cb60f81dd24763be6",
+  "status": "rendered",
+  "l3_sha256": "572816d9fa2f9d8bb9d6c0e6bda106056d9f6e3a18718e150578d15e374bf7e2",
+  "edits": [
+    {
+      "old": "Takahashi will now announce a string, and then check every card. Each time he finds a blue card with the string announced by him, he will earn 1 yen (the currency of Japan); each time he finds a red card with that string, he will lose 1 yen.",
+      "new": "Takahashi announces a string. If it appears on at least one blue card and at least one red card, he earns 1 yen for every matching blue card and loses 1 yen for every matching red card. Otherwise his net earning is 0.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "3\napple\norange\napple\n1\ngrape\n",
+      "output": "0\n",
+      "input_sha256": "09966a3114195e15389c01129416313fbef9783f9aa7bae9f7397dcf114d8e73",
+      "output_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "run_report": "validation/strict_cc_a/TM121/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 3,
+        "original_upper": 100,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "3\napple\norange\napple\n5\napple\napple\napple\napple\napple\n",
+      "output": "0\n",
+      "input_sha256": "357c0899ddf4a4a54f0346a69844762efc81a03c314eb89b0e91441ea253c687",
+      "output_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "run_report": "validation/strict_cc_a/TM121/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 3,
+        "original_upper": 100,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "1\nvoldemort\n10\nvoldemort\nvoldemort\nvoldemort\nvoldemort\nvoldemort\nvoldemort\nvoldemort\nvoldemort\nvoldemort\nvoldemort\n",
+      "output": "0\n",
+      "input_sha256": "7782ca84297be20f2109370a5a14babcd0f648efdcbca61b389ccfeb505d63ee",
+      "output_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "run_report": "validation/strict_cc_a/TM121/report.json",
+      "case": "public_tests_0003",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 100,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "6\nred\nred\nblue\nyellow\nyellow\nred\n5\nred\nred\nyellow\ngreen\nblue\n",
+      "output": "1\n",
+      "input_sha256": "ddab07522737e7a3687090f71dcb973a6948de1be92ae90e317212a5a19b202d",
+      "output_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "run_report": "validation/strict_cc_a/TM121/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 6,
+        "original_upper": 100,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

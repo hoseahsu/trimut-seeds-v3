@@ -1,0 +1,52 @@
+{
+  "seed_id": "TM136",
+  "raw_sha256": "6e1bd9ae0f2210d8927aa9fe34ac570fcb4f48e599ecefdba32012fa366718ca",
+  "status": "rendered",
+  "l3_sha256": "807c569899397a997d237290070843ab9de1a06b3b12d5bba92a148c46f62faf",
+  "edits": [
+    {
+      "old": "than wins the one of them who scored at least m points first.",
+      "new": "then consider, for each of those final-maximum players, the first round after which that player reached at least m points. The winner is the player whose first such round occurred latest.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "3\nmike 3\nandrew 5\nmike 2\n",
+      "output": "mike\n",
+      "input_sha256": "2789e836f89ba4c4c31c892002937299b6142ffee154c4136b162656af0a597d",
+      "output_sha256": "1c17d07a2762f6baab41004b57eec113774bc3f745d4c1d64c0fe464720a2126",
+      "run_report": "validation/strict_cc_a/TM136/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "3\nandrew 3\nandrew 2\nmike 5\n",
+      "output": "mike\n",
+      "input_sha256": "0e46c64735438a20d1fbff925c9fddfbd448eafc712fc0e17fc0933778df5a2b",
+      "output_sha256": "1c17d07a2762f6baab41004b57eec113774bc3f745d4c1d64c0fe464720a2126",
+      "run_report": "validation/strict_cc_a/TM136/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 1000,
+        "l2_upper": 100000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

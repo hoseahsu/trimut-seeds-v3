@@ -1,0 +1,43 @@
+{
+  "seed_id": "TM003",
+  "status": "rendered",
+  "raw_sha256": "bfac12e78beb131122a58fe7ae3472f19a04bd3dd1e84ef8b9e487e4df1bae70",
+  "l2_edits": [
+    {
+      "old": "n ≤ 10^5",
+      "new": "n ≤ 500000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Can you help B find out exactly what two errors he corrected?",
+      "new": "Can you help B find the smallest one-based position of each corrected error in the immediately preceding displayed list? If the corrected error value occurs more than once, use its first occurrence.",
+      "occurrences": 1
+    },
+    {
+      "old": "the numbers of the compilation errors that disappeared after B made the first and the second correction, respectively.",
+      "new": "the smallest one-based indices of the disappeared values in arrays a and b after the first and second correction, respectively.",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "ab7463e037cf9aefc40607090d1e1a85893b162ecd07b00e52601fa55a14780e",
+  "l3_sha256": "37b3d5a42094b0a1cd0fe43ec67bfe6e3da9e5e388406d8ddee36925d3abd2e3",
+  "samples": [
+    {
+      "input": "6\n1 4 3 3 5 7\n3 7 5 4 3\n4 3 7 5\n",
+      "output": "1 1\n",
+      "input_sha256": "c387e2a42bbe4d3ca4e43ba31ec2671da552e6413728c242c92f75e38bad5be7",
+      "output_sha256": "3f11ad6bbc7ecca0b2416b713dee77f1a635c00aaeaa946e14cde1c2bfae56d5",
+      "run_path": "validation/strict_root/TM003/report.json"
+    },
+    {
+      "input": "5\n1 5 8 123 7\n123 7 5 1\n5 1 7\n",
+      "output": "3 1\n",
+      "input_sha256": "4a439f3bf8137f8e0b089b4bbbb0be63742c12b780737051e97b8730b3aabeed",
+      "output_sha256": "a279f0fe018bb1305d69ee251cd2a29919d20c910b86e3730fc1b857dd3c573a",
+      "run_path": "validation/strict_root/TM003/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

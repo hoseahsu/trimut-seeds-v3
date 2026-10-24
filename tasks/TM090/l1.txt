@@ -1,0 +1,76 @@
+A technician untangles signal cables connected to a detector.
+
+Mad technician Marek has just finished constructing a new detector to search for extraterrestrial intelligence! He was in such a hurry to launch it for the first time that he plugged in the power signal cables without giving it a proper glance and started experimenting right away. After a while Marek observed that the signal cables ended up entangled and now have to be untangled again.
+
+The detector is powered by two signal cables "plus" and "minus". The signal cables run along the floor from the wall (on the left) to the detector (on the right). Both the wall and the detector have two sockets in them on the same level, into which the signal cables are plugged in some order. The signal cables are considered entangled if there are one or more places where one signal cable runs above the other one. For example, the picture below has four such places (top view):
+
+![Original illustration 1](https://espresso.codeforces.com/1309816e52de0c0bf3660cd3ab3757d3db8267fb.png)
+
+Marek knows the sequence in which the signal cables run above each other. Marek also noticed that on the left side, the "plus" signal cable is always plugged into the top socket (as seen on the picture). He would like to untangle the signal cables without unplugging them and without moving the detector. Determine if it is possible to do that. A signal cable can be freely moved and stretched on the floor, but cannot be cut.
+
+To understand the problem better please read the notes to the test samples.
+
+Input
+
+The single line of the input contains a sequence of characters "+" and "-" of length n (1 ≤ n ≤ 100000). The i-th (1 ≤ i ≤ n) position of the sequence contains the character "+", if on the i-th step from the wall the "plus" signal cable runs above the "minus" signal cable, and the character "-" otherwise.
+
+Output
+
+Print either "Yes" (without the quotes) if the signal cables can be untangled or "No" (without the quotes) if the signal cables cannot be untangled.
+
+Examples
+
+Input
+
+-++-
+
+
+Output
+
+Yes
+
+
+Input
+
++-
+
+
+Output
+
+No
+
+
+Input
+
+++
+
+
+Output
+
+Yes
+
+
+Input
+
+-
+
+
+Output
+
+No
+
+Note
+
+The first testcase corresponds to the picture in the statement. To untangle the signal cables, one can first move the "plus" signal cable lower, thus eliminating the two crosses in the middle, and then draw it under the "minus" signal cable, eliminating also the remaining two crosses.
+
+In the second testcase the "plus" signal cable makes one full revolution around the "minus" signal cable. Thus the signal cables cannot be untangled: 
+
+![Original illustration 2](https://espresso.codeforces.com/94481ff58b8789cb514d3430a4d76be9477aeff1.png)
+
+In the third testcase the "plus" signal cable simply runs above the "minus" signal cable twice in sequence. The signal cables can be untangled by lifting "plus" and moving it higher: 
+
+![Original illustration 3](https://espresso.codeforces.com/114e8a8b1f051256f7436bd6bec7b9ffd4525286.png)
+
+In the fourth testcase the "minus" signal cable runs above the "plus" signal cable once. The signal cables cannot be untangled without moving the detector itself: 
+
+![Original illustration 4](https://espresso.codeforces.com/f75ea84222f5fce465aeb9cd90ee0a43ac529e1d.png)

@@ -1,0 +1,88 @@
+An observer tracks connectivity between stations as links fail.
+
+There are N stations and M links.
+
+The i-th link connects the A_i-th and B_i-th stations bidirectionally.
+
+Initially, we can travel between any two stations using some of these links.
+
+However, the results of a survey show that these links will all fail because of wear, in the order from the first link to the M-th link.
+
+Let the inconvenience be the number of pairs of stations (a, b) (a < b) such that we are no longer able to travel between the a-th and b-th stations using some of the links remaining.
+
+For each i (1 \leq i \leq M), find the inconvenience just after the i-th link fails.
+
+Constraints
+
+* All values in input are integers.
+* 2 \leq N \leq 10^5
+* 1 \leq M \leq 10^5
+* 1 \leq A_i < B_i \leq N
+* All pairs (A_i, B_i) are distinct.
+* The inconvenience is initially 0.
+
+Input
+
+Input is given from Standard Input in the following format:
+
+
+N M
+A_1 B_1
+A_2 B_2
+\vdots
+A_M B_M
+
+
+Output
+
+In the order i = 1, 2, ..., M, print the inconvenience just after the i-th link fails. Note that the answer may not fit into a 32-bit integer type.
+
+Examples
+
+Input
+
+4 5
+1 2
+3 4
+1 3
+2 3
+1 4
+
+
+Output
+
+0
+0
+4
+5
+6
+
+
+Input
+
+6 5
+2 3
+1 2
+5 6
+3 4
+4 5
+
+
+Output
+
+8
+9
+12
+14
+15
+
+
+Input
+
+2 1
+1 2
+
+
+Output
+
+1

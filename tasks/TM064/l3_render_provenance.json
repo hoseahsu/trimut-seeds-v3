@@ -1,0 +1,40 @@
+{
+  "seed_id": "TM064",
+  "raw_sha256": "47f4618c0fb9fd1faf0a7a60982dd03214c67b71975ca7d9cadd319080ea115c",
+  "status": "rendered",
+  "l3_sha256": "a7eacb61bfee34a181b594dbdc6a7347efb020ea7d17f224cec0fc083a0f66ef",
+  "edits": [
+    {
+      "old": "if X is present in the array A or not",
+      "new": "whether X occurs at least twice in the array A",
+      "occurrences": 1
+    },
+    {
+      "old": "if the X is in the array",
+      "new": "if X occurs at least twice in the array",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "5 10\n50 40 30 20 10\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n",
+      "output": "NO\nNO\nNO\nNO\nNO\nNO\nNO\nNO\nNO\nNO\n",
+      "input_sha256": "3bab45474886aa8a75f8972898c80f68f890b81195931ea1537bbfd8d45a884b",
+      "output_sha256": "7a5b5b54aaf3c2ef50f1451cbb377ed66e14be4fe745143402e7fad80e4bc2a7",
+      "run_report": "validation/strict_cc_a/TM064/report.json",
+      "case": "original_sample_recovered_0",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

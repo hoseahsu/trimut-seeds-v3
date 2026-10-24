@@ -1,0 +1,50 @@
+{
+  "seed_id": "TM035",
+  "status": "rendered",
+  "raw_sha256": "07159ab139c659c67fd352d25fc6b19014e1b04ec089d913d64103df8ae1a9de",
+  "l2_edits": [
+    {
+      "old": "length between 1 and 10^5",
+      "new": "length between 1 and 400000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "(the substrings can go in any order)",
+      "new": "(the substring \"AB\" must come before the substring \"BA\")",
+      "occurrences": 1
+    },
+    {
+      "old": "if string s contains two non-overlapping substrings \"AB\" and \"BA\",",
+      "new": "if string s contains non-overlapping \"AB\" followed by \"BA\",",
+      "occurrences": 1
+    }
+  ],
+  "l2_sha256": "1f21509771672c0fd5fd75e848389d18f08a8071ae2bd856f572babbfc2fdbcc",
+  "l3_sha256": "7483290d44af34a432da54b21797489c7f6b26bc61261f3767b8496a24f89e8d",
+  "samples": [
+    {
+      "input": "ABA\n",
+      "output": "NO\n",
+      "input_sha256": "ef7093e7abf59d7f83e770053fa921305d10636b06f36179ab29e2b04a6c96dd",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_path": "validation/strict_root/TM035/report.json"
+    },
+    {
+      "input": "AXBYBXA\n",
+      "output": "NO\n",
+      "input_sha256": "baf6aff7c408571d10606474af7903ddfe60a5b4f6bff3d9f13df06cf40f7ea9",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_path": "validation/strict_root/TM035/report.json"
+    },
+    {
+      "input": "BACFAB\n",
+      "output": "NO\n",
+      "input_sha256": "4ddf3156d83f44abba2bcd26dbb3965a90d763f35fb50841784a21953ae3c851",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_path": "validation/strict_root/TM035/report.json"
+    }
+  ],
+  "original_sample_explanations": "Replaced together with samples because logical mutation may invalidate their answers or explanations; original source retains them."
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM188",
+  "raw_path": "tasks/TM188/raw.txt",
+  "raw_sha256": "c0386b2d199d5c73ffa8cd1134dad0303d46e34f0ae509a62d5f9ea930c1acde",
+  "l1_path": "tasks/TM188/l1.txt",
+  "l1_sha256": "8f4b01cc0d73961a08cc4622f62341d653bd21496bdeb8fae064565f8da63640",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "The given integers specify a numeric interval and a target identifier.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "c0386b2d199d5c73ffa8cd1134dad0303d46e34f0ae509a62d5f9ea930c1acde",
+  "edits": [
+    {
+      "start": 48,
+      "end": 62,
+      "before": "three integers",
+      "after": "three integer parameters",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 100,
+      "end": 113,
+      "before": "divisors of c",
+      "after": "divisors of target c",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 183,
+      "end": 197,
+      "before": "Three integers",
+      "after": "Three integer parameters",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "three integers": 2,
+    "divisors of c": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 308,
+      "raw_end": 343,
+      "sha256": "6aa49db6f028991fe5ce2489bdb523d12915be229f36ca3679449881551c58fc"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "The given integers specify a numeric interval and a target identifier.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

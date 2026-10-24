@@ -1,0 +1,61 @@
+Mobile and stationary performers take part in a circular drill.
+
+Young Marek is fond of dancing. Most of all dances Marek likes the circular drill — Cuban dance that is danced by pairs of mobile performers and stationary performers forming a circle and dancing together.
+
+More detailed, there are n pairs of mobile performers and stationary performers standing in a circle. Initially, mobile performer number 1 dances with a stationary performer number 1, mobile performer number 2 dances with a stationary performer number 2 and so on. Stationary performers are numbered in the clockwise order. During the dance different moves are announced and all pairs perform this moves. While performing moves mobile performers move along the circle, while stationary performers always stay at their initial position. For the purpose of this problem we consider two different types of moves:
+
+  1. Value x and some direction are announced, and all mobile performers move x positions in the corresponding direction. 
+  2. Mobile performers dancing with even-indexed stationary performers swap positions with mobile performers who are dancing with odd-indexed stationary performers. That is the one who was dancing with the stationary performer 1 swaps with the one who was dancing with the stationary performer number 2, while the one who was dancing with stationary performer number 3 swaps with the one who was dancing with the stationary performer number 4 and so one. It's guaranteed that n is even. 
+
+
+
+Your task is to determine the final position of each mobile performer.
+
+Input
+
+The first line of the input contains two integers n and q (2 ≤ n ≤ 1 000 000, 1 ≤ q ≤ 2 000 000) — the number of couples in the the circular drill and the number of commands to perform, respectively. It's guaranteed that n is even.
+
+Next q lines contain the descriptions of the commands. Each command has type as the integer 1 or 2 first. Command of the first type is given as x ( - n ≤ x ≤ n), where 0 ≤ x ≤ n means all mobile performers moves x stationary performers in clockwise direction, while  - x means all mobile performers move x positions in counter-clockwise direction. There is no other input for commands of the second type.
+
+Output
+
+Output n integers, the i-th of them should be equal to the index of mobile performer the i-th stationary performer is dancing with after performing all q moves.
+
+Examples
+
+Input
+
+6 3
+1 2
+2
+1 2
+
+
+Output
+
+4 3 6 5 2 1
+
+
+Input
+
+2 3
+1 1
+2
+1 -2
+
+
+Output
+
+1 2
+
+
+Input
+
+4 2
+2
+1 3
+
+
+Output
+
+1 4 3 2

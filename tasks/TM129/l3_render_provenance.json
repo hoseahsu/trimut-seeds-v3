@@ -1,0 +1,101 @@
+{
+  "seed_id": "TM129",
+  "raw_sha256": "2873ea3c6d2d94692731a6614586bc5b9ceabcf8ed4b49c8b23bc4ccb6c35e36",
+  "status": "rendered",
+  "l3_sha256": "a476bc679690d4bc4a31a39e9e6024b756ff43fd79e99e25dcbfe36b6f7b668b",
+  "edits": [
+    {
+      "old": "The same katana can be wielded any number of times.",
+      "new": "The same katana can be wielded any number of times. Each wield takes one time unit.",
+      "occurrences": 1
+    },
+    {
+      "old": "That is, you can no longer wield or throw that katana.",
+      "new": "That is, you can no longer wield or throw that katana. Each throw takes two time units.",
+      "occurrences": 1
+    },
+    {
+      "old": "At least how many attacks do you need in order to vanish it in total?",
+      "new": "What is the minimum total time needed to make it vanish?",
+      "occurrences": 1
+    },
+    {
+      "old": "minimum total number of attacks",
+      "new": "minimum total time",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "1 10\n3 5\n",
+      "output": "4\n",
+      "input_sha256": "aa99d9e29d23f6bc79d4f8244e6f5aced55dd6a4033e0519f40af4e91d0af430",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_report": "validation/strict_cc_a/TM129/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 1,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "2 10\n3 5\n2 6\n",
+      "output": "4\n",
+      "input_sha256": "df4c45b8b7335b6261f43f40dcd609ea644763d2c63286fc053540106884f246",
+      "output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_report": "validation/strict_cc_a/TM129/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 2,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "4 1000000000\n1 1\n1 10000000\n1 30000000\n1 99999999\n",
+      "output": "860000007\n",
+      "input_sha256": "c385bceb5364b7a363670911410a0e33088bc3b89977f4dddd19c86d200cf4c6",
+      "output_sha256": "6159cf5ed3ce4bd359e7473be4dfff3b698dbcd4f7bbd6600bfecd1ada88b428",
+      "run_report": "validation/strict_cc_a/TM129/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 4,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "5 500\n35 44\n28 83\n46 62\n31 79\n40 43\n",
+      "output": "11\n",
+      "input_sha256": "afcf810f14c8196b8fa46e7418d2581c9e6e4e22d489e359ddec0dd7eb5f2e93",
+      "output_sha256": "25d4f2a86deb5e2574bb3210b67bb24fcc4afb19f93a7b65a057daa874a9d18e",
+      "run_report": "validation/strict_cc_a/TM129/report.json",
+      "case": "public_tests_0003",
+      "input_validity": {
+        "valid": true,
+        "axis": "N",
+        "observed": 5,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM104",
+  "raw_path": "tasks/TM104/raw.txt",
+  "raw_sha256": "1a60072c3223f782e3457a0543e3962379f1edc0451ef2e164166cba87226a46",
+  "l1_path": "tasks/TM104/l1.txt",
+  "l1_sha256": "fd5c0c722cb40c79aa5c06ba1b4d6339ace3b9a306c4206bd735cb045cf7e32d",
+  "mutation_kind": "narrative_entity_relabel",
+  "raw_ready_for_l1": true,
+  "interpretation": "A vendor offers souvenir types at stated item prices.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "1a60072c3223f782e3457a0543e3962379f1edc0451ef2e164166cba87226a46",
+  "edits": [
+    {
+      "start": 2,
+      "end": 6,
+      "before": "shop",
+      "after": "stall",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 24,
+      "end": 30,
+      "before": "fruits",
+      "after": "souvenirs",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 32,
+      "end": 37,
+      "before": "Fruit",
+      "after": "Souvenir",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 175,
+      "end": 181,
+      "before": "fruits",
+      "after": "souvenirs",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 262,
+      "end": 268,
+      "before": "fruits",
+      "after": "souvenirs",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 540,
+      "end": 546,
+      "before": "fruits",
+      "after": "souvenirs",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "shop": 1,
+    "fruits": 4,
+    "fruit": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 549,
+      "raw_end": 633,
+      "sha256": "4eb3d9372782a2c3c563d8cab5773aedccbd429591148beca415eeb38e4ab8de"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "A vendor offers souvenir types at stated item prices.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

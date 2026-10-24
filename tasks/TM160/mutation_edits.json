@@ -1,0 +1,37 @@
+{
+  "seed_id": "TM160",
+  "raw_sha256": "389b0bd28d2112adecd419c8a6353dd590603f69dc3735e1fc4b4111a2179b42",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "N ≤ 3·10^5",
+      "new": "N ≤ 600000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Initially you own zero shares, and you cannot sell shares when you don't own any. At the end of the N days you would like to again own zero shares, but want to have as much money as possible.",
+      "new": "Initially your inventory is zero. A sale decreases your inventory by one and credits the day's price; a purchase increases your inventory by one and debits that price. Your inventory must never be positive: you may sell borrowed shares and later buy them back. At the end of the N days your inventory must again be zero, and you want to have as much money as possible.",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "4ae400ee4f1dc537cdcbfd460a12a88e1db0e179f6aeb059bcc2365f676e94da",
+      "l3_output_sha256": "a9742eb8ee320e006666aef25ae9aeed948247f3125c9cafa7cf97b7e7467dd5",
+      "run_report": "validation/strict_cc_b_supplement/TM160/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "c577879e8fdc38535dcc35fd8d238c6ecdc7227ab1610397ce7a10fe4ff32d8c",
+      "l3_output_sha256": "b58a3da5fde2680191877ec88a1aa7d06927cc3b30cdf0d0db8c39b488891576",
+      "run_report": "validation/strict_cc_b_supplement/TM160/report.json",
+      "case": "original_statement_sample_2"
+    }
+  ],
+  "l2_sha256": "b355ed68f9f18b2713c042538601787fd8af0392a7a25a69099a712856d1f217",
+  "l3_sha256": "6f82b0a55dc562dba5370301b4a19e98cf76d66b03e98fcd167e3a4748e4bd6c",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

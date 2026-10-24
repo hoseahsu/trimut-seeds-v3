@@ -1,0 +1,57 @@
+{
+  "seed_id": "TM084",
+  "raw_sha256": "39091f4f3f57f5d36fe60d30f891ac62b62ebd3b832fec33454b80e5ffda3af0",
+  "status": "rendered",
+  "l3_sha256": "80bbb0923afed272bdeab8afc54d682fdffadc4af168b2f7847535a49e4adc63",
+  "edits": [
+    {
+      "old": "a sequence of zero or more synchronization operations",
+      "new": "a sequence containing zero or one synchronization operation",
+      "occurrences": 1
+    },
+    {
+      "old": "a (possibly empty) sequence of synchronization operations",
+      "new": "a sequence of at most one synchronization operation",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4\n7 2 4 12\n7 15 10 12\n",
+      "output": "No\n",
+      "input_sha256": "d3772238d4be3289acf2c8e1858bb7083902dda0bddd529810c2efeed124be03",
+      "output_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab",
+      "run_report": "validation/strict_cc_a/TM084/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 4,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "3\n4 4 4\n1 2 3\n",
+      "output": "No\n",
+      "input_sha256": "40d7036da94a205b637ea2034fa79612e698bdb172bb41f149db0f55c84e3266",
+      "output_sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab",
+      "run_report": "validation/strict_cc_a/TM084/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "n",
+        "observed": 3,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

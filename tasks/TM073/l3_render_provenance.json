@@ -1,0 +1,40 @@
+{
+  "seed_id": "TM073",
+  "raw_sha256": "4e8d57eac7b1735dda028087b3ae966f57bbec1482d02e99419ca27a1ea23d80",
+  "status": "rendered",
+  "l3_sha256": "e8120c432b6e0c42fc1dc065e055919f86ee5168db034c07bfd7ae40b59d8a01",
+  "edits": [
+    {
+      "old": "is equal to the number of digits 7",
+      "new": "is strictly greater than the number of digits 7",
+      "occurrences": 1
+    },
+    {
+      "old": "S[1, 4] = 7477 has 1 digit 4 and S[5, 7] = 447 has 1 digit 7",
+      "new": "S[1, 5] = 74774 has 2 digits 4 and S[6, 7] = 47 has 1 digit 7",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4\n47\n74\n477\n4747477\n",
+      "output": "0\n0\n0\n11\n",
+      "input_sha256": "1af9d055c4894ece070240cca29ff999a32d523a5cec75947fc003928f3aa90f",
+      "output_sha256": "7e762a2e1ef5f74cb180da0d93a6bc01092d7115b5db4f4555c701f7ad0a36cb",
+      "run_report": "validation/strict_cc_a/TM073/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "string_length",
+        "observed": 7,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

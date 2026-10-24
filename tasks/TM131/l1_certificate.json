@@ -1,0 +1,70 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM131",
+  "raw_path": "tasks/TM131/raw.txt",
+  "raw_sha256": "4d1cb85a81a720301d564ffb136a43d7f6ebea6eb623e7384bd8407ae1fe741f",
+  "l1_path": "tasks/TM131/l1.txt",
+  "l1_sha256": "559bf034f40e305f0eb601417f9bcfee3b309436a3a3ab05885610e6b4261f92",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "A directed graph models a route network of stops and connections.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "4d1cb85a81a720301d564ffb136a43d7f6ebea6eb623e7384bd8407ae1fe741f",
+  "edits": [
+    {
+      "start": 30,
+      "end": 35,
+      "before": "graph",
+      "after": "route graph",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 204,
+      "end": 210,
+      "before": "vertex",
+      "after": "stop",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 424,
+      "end": 429,
+      "before": "graph",
+      "after": "route graph",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 435,
+      "end": 440,
+      "before": "graph",
+      "after": "route graph",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "graph": 3,
+    "vertex": 1
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 729,
+      "raw_end": 842,
+      "sha256": "573693b58add929d68e10aca7b8bbc50d5641fa070996a016de8980c7ec154d5"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "A directed graph models a route network of stops and connections.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

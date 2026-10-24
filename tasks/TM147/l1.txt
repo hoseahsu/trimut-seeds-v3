@@ -1,0 +1,44 @@
+The letter pairs are read as two-symbol signal codes.
+
+Signal pair is an ordered pair (i.e. string of length two) of capital Latin letters. For example, "AZ", "AA", "ZA" — three distinct signal pairs.
+
+You are given a string s consisting of n capital Latin letters. Your task is to find any Signal pair contained in the given string as a substring (i.e. two consecutive characters of the string) maximal number of times. For example, for string s = "BBAABBBA" the answer is Signal pair "BB", which contained in s three times. In other words, find any most frequent Signal pair.
+
+Note that occurrences of the Signal pair can overlap with each other.
+
+Input
+
+The first line of the input contains integer number n (2 ≤ n ≤ 100) — the length of string s. The second line of the input contains the string s consisting of n capital Latin letters.
+
+Output
+
+Print the only line containing exactly two capital Latin letters — any Signal pair contained in the given string s as a substring (i.e. two consecutive characters of the string) maximal number of times.
+
+Examples
+
+Input
+
+7
+ABACABA
+
+
+Output
+
+AB
+
+
+Input
+
+5
+ZZZAA
+
+
+Output
+
+ZZ
+
+Note
+
+In the first example "BA" is also valid answer.
+
+In the second example the only Signal pair "ZZ" can be printed because it contained in the string "ZZZAA" two times.

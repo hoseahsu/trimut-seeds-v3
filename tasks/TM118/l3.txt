@@ -1,0 +1,56 @@
+In the school computer room there are n servers which are responsible for processing several computing tasks. You know the number of scheduled tasks for each server: there are mi tasks assigned to the i-th server.
+
+The target is a perfectly balanced integer distribution: the difference between the most and least loaded server must be 0 when the total number of tasks is divisible by n, and 1 otherwise. This target condition is fixed even if the allowed moves make it unreachable.
+
+In one second choose two distinct servers and move exactly two tasks from one to the other. The source server must currently hold at least two tasks.
+
+Write a program to find the minimum number of seconds needed to balance the load of servers.
+
+Input
+
+The first line contains positive number n (1 ≤ n ≤ 10^5) — the number of the servers. 
+
+The second line contains the sequence of non-negative integers m1, m2, ..., mn (0 ≤ mi ≤ 2·10^4), where mi is the number of tasks assigned to the i-th server.
+
+Output
+
+Print the minimum number of seconds required to reach the specified balanced target, or -1 if it is unreachable.
+
+Sample Input 1
+
+```text
+2
+1 6
+```
+
+Sample Output 1
+
+```text
+1
+```
+
+Sample Input 2
+
+```text
+7
+10 11 10 11 10 11 11
+```
+
+Sample Output 2
+
+```text
+0
+```
+
+Sample Input 3
+
+```text
+5
+1 2 3 4 5
+```
+
+Sample Output 3
+
+```text
+-1
+```

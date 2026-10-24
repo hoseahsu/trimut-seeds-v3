@@ -1,0 +1,74 @@
+{
+  "seed_id": "TM117",
+  "raw_sha256": "fb8bcf096994ef4aba299c025dfe935bc38216fde3b9981bcd0c3e8d98112fd0",
+  "status": "rendered",
+  "l3_sha256": "fd4d7a33e44cde6d276542b412d47cd52d570de5126c2f776fda6d74080af33b",
+  "edits": [
+    {
+      "old": "Besides, the shop nearby has all three ingredients, the prices are pb rubles for a piece of bread, ps for a piece of sausage and pc for a piece of cheese.",
+      "new": "The nearby shop sells ingredients only in packs of two pieces of the same ingredient. A bread pack costs 2·pb rubles, a sausage pack 2·ps and a cheese pack 2·pc. Existing stock may be used piece by piece, and leftover purchased pieces are allowed.",
+      "occurrences": 1
+    },
+    {
+      "old": "the price of one piece of bread, sausage and cheese in the shop",
+      "new": "the per-piece unit prices; each purchasable pack contains two identical pieces and costs twice the corresponding unit price",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "BBBSSC\n6 4 1\n1 2 3\n4\n",
+      "output": "1\n",
+      "input_sha256": "0e5004f09ec222732ed068f5d94553a639b8a0c75afe2112eb1b65516eabd36a",
+      "output_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "run_report": "validation/strict_cc_a/TM117/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "r",
+        "observed": 4,
+        "original_upper": 1000000000000,
+        "l2_upper": 1000000000000000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "BBC\n1 10 1\n1 10 1\n21\n",
+      "output": "7\n",
+      "input_sha256": "ad3da8dd21395100523a4317c748764cbc008109190b0ef5f3b197e8a3fd6d67",
+      "output_sha256": "10159baf262b43a92d95db59dae1f72c645127301661e0a3ce4e38b295a97c58",
+      "run_report": "validation/strict_cc_a/TM117/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "r",
+        "observed": 21,
+        "original_upper": 1000000000000,
+        "l2_upper": 1000000000000000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "BSC\n1 1 1\n1 1 3\n1000000000000\n",
+      "output": "200000000001\n",
+      "input_sha256": "7a87d1c507f4074298cf6cfc5a435a3e1a2cd450fe953199ef7d837b2c1a1cfa",
+      "output_sha256": "562533935ddcc81723456a76ab6fba393b263b57be77a03fbc7f081e61af308f",
+      "run_report": "validation/strict_cc_a/TM117/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "r",
+        "observed": 1000000000000,
+        "original_upper": 1000000000000,
+        "l2_upper": 1000000000000000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

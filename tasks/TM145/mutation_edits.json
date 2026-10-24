@@ -1,0 +1,37 @@
+{
+  "seed_id": "TM145",
+  "raw_sha256": "61a2262877bc1f5599a4c415566388d33ef7e3b67911e9e672d272c8335de631",
+  "status": "rendered",
+  "l2_edits": [
+    {
+      "old": "n ≤ 100 000",
+      "new": "n ≤ 300000",
+      "occurrences": 1
+    }
+  ],
+  "l3_edits": [
+    {
+      "old": "Then the first robot says his identifier. After that the second robot says the identifier of the first robot and then says his own identifier. Then the third robot says the identifier of the first robot, then says the identifier of the second robot and after that says his own. This process continues from left to right until the n-th robot says his identifier.",
+      "new": "Then the first robot says his identifier. After that the second robot says his own identifier and then the identifier of the first robot. In general, robot r says the identifiers of robots r, r-1, ..., 1 in that order. The robots take their turns from left to right through robot n.",
+      "occurrences": 1
+    }
+  ],
+  "dependent_inline_examples_replaced": [],
+  "original_samples": [
+    {
+      "original_input_sha256": "286a2c542ee54c518cc4ead68f68665907a0af444b8f3ebc34e88d72291b45bf",
+      "l3_output_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "run_report": "validation/strict_cc_b_supplement/TM145/report.json",
+      "case": "original_statement_sample_1"
+    },
+    {
+      "original_input_sha256": "7740c9cbd9fb0820124e83e9b4b2df57f1878062baf8cb7a673b1d594a44abb6",
+      "l3_output_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+      "run_report": "validation/strict_cc_b_supplement/TM145/report.json",
+      "case": "original_statement_sample_2"
+    }
+  ],
+  "l2_sha256": "98921df6d6cc7f08436d23f054578d2ac66534ac0e80a7dee98fe01d401bb64a",
+  "l3_sha256": "3d410f9c8dde6121b2d1074f5e92e973d6478b1b375952a121af7e5e39b4d66d",
+  "sample_explanation_policy": "Original sample inputs retained in full. Outputs regenerated using isolated L3 reference. Old output-dependent explanations replaced; post-sample definitions and constraints retained."
+}

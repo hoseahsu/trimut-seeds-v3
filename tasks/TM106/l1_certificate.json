@@ -1,0 +1,100 @@
+{
+  "schema_version": "strict_l1_span_transform.v1",
+  "seed_id": "TM106",
+  "raw_path": "tasks/TM106/raw.txt",
+  "raw_sha256": "a0d8018d004dfbb18cc34b493e9f3f2e8696346b4f8968676ecb72f03e5ed62d",
+  "l1_path": "tasks/TM106/l1.txt",
+  "l1_sha256": "0f618df9b6a207304262c6ce19009936fd26dcec728d0ea62880273cb89294ff",
+  "mutation_kind": "formal_object_reinterpretation",
+  "raw_ready_for_l1": true,
+  "interpretation": "A tree models a route network with junctions linked by weighted connections.",
+  "semantic_contract": "Terminology and object roles only; the original mathematical relations, bounds, variable symbols, input/output protocol, literal outputs, sample I/O and evaluation tests are retained. Formal-object cases do not claim removal of an original story.",
+  "reference_program_condition": "raw",
+  "oracle_condition": "raw",
+  "test_set_condition": "raw",
+  "budget_condition": "raw",
+  "numeric_token_sequence_identical": true,
+  "mathematical_symbol_sequence_identical_outside_title": true,
+  "exact_source_reconstruction": true,
+  "reconstructed_raw_sha256": "a0d8018d004dfbb18cc34b493e9f3f2e8696346b4f8968676ecb72f03e5ed62d",
+  "edits": [
+    {
+      "start": 28,
+      "end": 36,
+      "before": "vertices",
+      "after": "junctions",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 132,
+      "end": 137,
+      "before": "edges",
+      "after": "connections",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 168,
+      "end": 176,
+      "before": "vertices",
+      "after": "junctions",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 187,
+      "end": 191,
+      "before": "edge",
+      "after": "connection",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 211,
+      "end": 219,
+      "before": "Vertices",
+      "after": "Junctions",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 378,
+      "end": 384,
+      "before": "Vertex",
+      "after": "Junction",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 393,
+      "end": 399,
+      "before": "Vertex",
+      "after": "Junction",
+      "kind": "entity_or_narrative_phrase"
+    },
+    {
+      "start": 408,
+      "end": 414,
+      "before": "Vertex",
+      "after": "Junction",
+      "kind": "entity_or_narrative_phrase"
+    }
+  ],
+  "mapping_hits": {
+    "vertices": 3,
+    "edges": 1,
+    "edge": 1,
+    "vertex": 3
+  },
+  "protected_mapping_hits": {},
+  "unused_mapping_keys": [],
+  "protected_spans": [
+    {
+      "kind": "sample_block",
+      "raw_start": 859,
+      "raw_end": 1194,
+      "sha256": "f2a043829ae7f4bea9240ea3f2a9f00a7b16c6dd9de1021d40a3ce1a5b9e6441"
+    }
+  ],
+  "interpretation_insertion": {
+    "position_in_changed": 0,
+    "text": "A tree models a route network with junctions linked by weighted connections.\n\n"
+  },
+  "validation_limits": "Controlled lexical/object-isomorphism construction, checked finite text invariants. No independent blind semantic review or L1-only solver regeneration is claimed.",
+  "author_spec_sha256": "e25897249f622d26ecdfe3626b26f61432cf477c0f963b1498478c60bec44c8a"
+}

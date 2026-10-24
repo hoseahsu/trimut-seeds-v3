@@ -1,0 +1,50 @@
+Two operators toggle detail cards on a notice board.
+
+Little kids, Marek and Nolan like playing their favorite game Tile-and-Counter. Today they want to play something new and came across NoticeBoard on their father's terminal.
+
+They saw it for the first time but were already getting bored to see a bunch of sentences having at most 140 characters each. The only thing they liked to play with it is, closing and opening detail cards.
+
+There are N detail cards on the page and each detail card can be opened by clicking on it, to see some statistics related to that detail card. Initially all the detail cards are closed. Clicking on an open detail card closes it and clicking on a closed detail card opens it. There is also a button to close all the open detail cards. Given a sequence of K clicks by Marek, Nolan has to guess the total number of open detail cards just after each click. Please help Nolan in this game.
+
+
+Input
+First line contains two integers N K, the number of detail cards (numbered 1 to N) and the number of clicks respectively (1 ≤ N, K ≤ 1000). Each of the following K lines has one of the following.
+
+CLICK X , where X is the detail card number (1 ≤ X ≤ N)
+CLOSEALL
+
+
+
+Output
+Output K lines, where the i^th line should contain the number of open detail cards just after the i^th click.
+
+
+Example
+
+Input:
+3 6
+CLICK 1
+CLICK 2
+CLICK 3
+CLICK 2
+CLOSEALL
+CLICK 1
+
+Output:
+1
+2
+3
+2
+0
+1
+
+
+Explanation:
+Let open[x] = 1 if the x^th detail card is open and 0 if its closed.
+Initially open[1..3] = { 0 , 0 , 0 }. Here is the state of open[1..3] after each click and corresponding count of open detail cards.
+CLICK 1 : { 1, 0, 0 }, open count = 1
+CLICK 2 : { 1, 1, 0 }, open count = 2
+CLICK 3 : { 1, 1, 1 }, open count = 3
+CLICK 2 : { 1, 0, 1 }, open count = 2
+CLOSEALL : { 0, 0, 0 }, open count = 0
+CLICK 1 : { 1, 0, 0 }, open count = 1

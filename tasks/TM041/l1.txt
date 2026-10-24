@@ -1,0 +1,70 @@
+A dispatch service matches clients to transport operators on a line.
+
+Arden City is an unusual city because it is an endless coordinate line. It is also known for the office of Relay Level 5.
+
+Relay has become so popular so that it is now used by all m transport operators in the city, who every day transport the rest of the city residents — n clients.
+
+Each resident (including transport operators) of Arden City lives in its unique location (there is no such pair of residents that their coordinates are the same).
+
+The Relay system is very clever: when a client calls a vehicle, his call does not go to all transport operators, but only to the one that is the closest to that person. If there are multiple ones with the same distance, then to transport operator with a smaller coordinate is selected.
+
+But one morning the transport operators wondered: how many clients are there that would call the given transport operator if they were the first to order a vehicle on that day? In other words, you need to find for each transport operator i the number a_{i} — the number of clients that would call the i-th transport operator when all drivers and clients are at their home?
+
+The transport operator can neither transport himself nor other transport operators.
+
+Input
+
+The first line contains two integers n and m (1 ≤ n,m ≤ 10^5) — number of clients and transport operators.
+
+The second line contains n + m integers x_1, x_2, …, x_{n+m} (1 ≤ x_1 < x_2 < … < x_{n+m} ≤ 10^9), where x_i is the coordinate where the i-th resident lives. 
+
+The third line contains n + m integers t_1, t_2, …, t_{n+m} (0 ≤ t_i ≤ 1). If t_i = 1, then the i-th resident is a transport operator, otherwise t_i = 0.
+
+It is guaranteed that the number of i such that t_i = 1 is equal to m.
+
+Output
+
+Print m integers a_1, a_2, …, a_{m}, where a_i is the answer for the i-th transport operator. The transport operator has the number i if among all the transport operators he lives in the i-th smallest coordinate (see examples for better understanding).
+
+Examples
+
+Input
+
+3 1
+1 2 3 10
+0 0 1 0
+
+
+Output
+
+3 
+
+Input
+
+3 2
+2 3 4 5 6
+1 0 0 0 1
+
+
+Output
+
+2 1 
+
+Input
+
+1 4
+2 4 6 10 15
+1 1 1 1 0
+
+
+Output
+
+0 0 0 1 
+
+Note
+
+In the first example, we have only one transport operator, which means an order from any of n clients will go to him.
+
+In the second example, the first transport operator lives at the point with the coordinate 2, and the second one lives at the point with the coordinate 6. Obviously, the nearest transport operator to the client who lives on the 3 coordinate is the first one, and to the client who lives on the coordinate 5 is the second one. The client who lives on the 4 coordinate has the same distance to the first and the second transport operators, but since the first transport operator has a smaller coordinate, the call from this client will go to the first transport operator.
+
+In the third example, we have one client and the transport operator nearest to him is the fourth one.

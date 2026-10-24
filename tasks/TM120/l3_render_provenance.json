@@ -1,0 +1,94 @@
+{
+  "seed_id": "TM120",
+  "raw_sha256": "66af61f108396c4a719acb2418a373c292358663cc25036154556c0e7a466529",
+  "status": "rendered",
+  "l3_sha256": "e790005359deeeb5b9f2b613e215d432abbc1b120e2a58b300e90bf50a9279b2",
+  "edits": [
+    {
+      "old": "Initially, we can travel between any two islands using some of these bridges.",
+      "new": "Initially no bridge has been built, so distinct islands are disconnected. The complete set of M proposed bridges connects all N islands.",
+      "occurrences": 1
+    },
+    {
+      "old": "However, the results of a survey show that these bridges will all collapse because of aging, in the order from the first bridge to the M-th bridge.",
+      "new": "Build the bridges in the order from the first bridge to the M-th bridge.",
+      "occurrences": 1
+    },
+    {
+      "old": "we are no longer able to travel",
+      "new": "we are unable to travel",
+      "occurrences": 1
+    },
+    {
+      "old": "using some of the bridges remaining",
+      "new": "using some of the bridges built so far",
+      "occurrences": 1
+    },
+    {
+      "old": "just after the i-th bridge collapses",
+      "new": "just after the i-th bridge is built",
+      "occurrences": 2
+    },
+    {
+      "old": "The inconvenience is initially 0.",
+      "new": "The graph formed by all M listed bridges is connected; after all bridges are built, the inconvenience is 0.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "4 5\n1 2\n3 4\n1 3\n2 3\n1 4\n",
+      "output": "5\n4\n0\n0\n0\n",
+      "input_sha256": "1f4a63ea1cebb75e0d0eab0066d0bdb34afe41757afee14798d13a09d295319a",
+      "output_sha256": "9d1ab6de32a20a03ef8860097bce2db5ac9a100b3da7b2a4c695abe7809eac20",
+      "run_report": "validation/strict_cc_a/TM120/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "N_and_M",
+        "observed": 4,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "6 5\n2 3\n1 2\n5 6\n3 4\n4 5\n",
+      "output": "14\n12\n11\n8\n0\n",
+      "input_sha256": "5e0040df0d4445e068b094afa9eebc221441d6b39987ef79aaba0924b447fd79",
+      "output_sha256": "6b45db4901f37e06ded4a9c0e6be6d6d91ca6937f3ac435fd407ce0b60cb3604",
+      "run_report": "validation/strict_cc_a/TM120/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "N_and_M",
+        "observed": 6,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "2 1\n1 2\n",
+      "output": "0\n",
+      "input_sha256": "7219e739ac6abf6a39e141de2cb2077c9232bf435e87f0480dfa0c026523e347",
+      "output_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "run_report": "validation/strict_cc_a/TM120/report.json",
+      "case": "small_random_007",
+      "input_validity": {
+        "valid": true,
+        "axis": "N_and_M",
+        "observed": 2,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}

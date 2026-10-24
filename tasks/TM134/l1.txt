@@ -1,0 +1,50 @@
+A decorator colors panels along a display strip.
+
+On his free time, Marek likes doing some display work. He has got one new task, paint some panels in the exhibit area.
+
+There are n panels lined in a row on the display floor. Marek has got m paint buckets of different colors at hand, so he painted each panel in one of those m colors.
+
+Having finished painting all panels, Marek was satisfied. He stood back and decided to find something fun with these panels. After some counting, he found there are k panels with a color different from the color of the panel on its left (the first panel is not counted, for sure).
+
+So as usual, he needs your help in counting how many ways could he paint the panels. Two ways of painting panels are different if there is at least one panel painted in different colors in these two ways. Because the answer might be quite big, you only need to output the number of ways modulo 998 244 353.
+
+Input
+
+The first and only line contains three integers n, m and k (1 ≤ n,m ≤ 2000, 0 ≤ k ≤ n-1) — the number of panels, the number of colors, and the number of panels, such that its color differs from the color of panel to the left of it.
+
+Output
+
+Print one integer — the number of ways to color panels modulo 998 244 353.
+
+Examples
+
+Input
+
+
+3 3 0
+
+
+Output
+
+
+3
+
+
+Input
+
+
+3 2 1
+
+
+Output
+
+
+4
+
+Note
+
+In the first example, since k=0, the color of every panel should be the same, so there will be exactly m=3 ways to color the panels.
+
+In the second example, suppose the two colors in the buckets are yellow and lime, the following image shows all 4 possible colorings.
+
+![Original illustration 1](https://espresso.codeforces.com/f2b62925cc9bfa9f420c66d8f1f0ce20219e0c11.png)

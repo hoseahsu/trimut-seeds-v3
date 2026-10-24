@@ -1,0 +1,91 @@
+{
+  "seed_id": "TM090",
+  "raw_sha256": "b45e2e6a062aa7b75969fd74db6ebcdcca7664e28e44a20476d4a92f9e73a8cc",
+  "status": "rendered",
+  "l3_sha256": "2e5b291df782c7e42826d4ec7c5c2b38a0164047006943230b22fe124e3c5c8b",
+  "edits": [
+    {
+      "old": "He would like to untangle the wires without unplugging them and without moving the device. Determine if it is possible to do that. A wire can be freely moved and stretched on the floor, but cannot be cut.",
+      "new": "For this task, untangling is defined by the following symbolic operation on the crossing sequence: delete two adjacent opposite signs, either \"+-\" or \"-+\". After a deletion the remaining signs close the gap. No other operation is allowed. Determine whether the entire sequence can be deleted.",
+      "occurrences": 1
+    },
+    {
+      "old": "To understand the problem better please read the notes to the test samples.",
+      "new": "For example, \"+-\" can be deleted completely, while \"++\" cannot.",
+      "occurrences": 1
+    }
+  ],
+  "region_edits": [],
+  "illustrations_removed": false,
+  "samples": [
+    {
+      "input": "-++-\n",
+      "output": "YES\n",
+      "input_sha256": "fe41953113acbfa36ae77a8edbebfa4c336ef8636d8394a49e4ea7af6af49e6f",
+      "output_sha256": "a115e91c2e84c3078fa06914eff28d07590ddfaa47a55fb4f31dd7c5b3566194",
+      "run_report": "validation/strict_cc_a/TM090/report.json",
+      "case": "public_tests_0000",
+      "input_validity": {
+        "valid": true,
+        "axis": "string_length",
+        "observed": 4,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "+-\n",
+      "output": "YES\n",
+      "input_sha256": "027b02b04524bb6176305c84957318322d3153a656c1b324359ad97650334a7b",
+      "output_sha256": "a115e91c2e84c3078fa06914eff28d07590ddfaa47a55fb4f31dd7c5b3566194",
+      "run_report": "validation/strict_cc_a/TM090/report.json",
+      "case": "public_tests_0002",
+      "input_validity": {
+        "valid": true,
+        "axis": "string_length",
+        "observed": 2,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "++\n",
+      "output": "NO\n",
+      "input_sha256": "41a4d3bd02c37bb1db04eee4eedb3ab7d28beae1330d1e9f69acd29109099c94",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_report": "validation/strict_cc_a/TM090/report.json",
+      "case": "public_tests_0001",
+      "input_validity": {
+        "valid": true,
+        "axis": "string_length",
+        "observed": 2,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    },
+    {
+      "input": "-\n",
+      "output": "NO\n",
+      "input_sha256": "61d1954b9aba0c9aedb8d1338804e817c7262cfc36da94161dab8e3ed7a3a43a",
+      "output_sha256": "cfe72034a9f298fb79a6c1f2302673bb449c826d446b3efafdde95e6c48dc3ca",
+      "run_report": "validation/strict_cc_a/TM090/report.json",
+      "case": "public_tests_0003",
+      "input_validity": {
+        "valid": true,
+        "axis": "string_length",
+        "observed": 1,
+        "original_upper": 100000,
+        "l2_upper": 300000,
+        "outside_original": false
+      },
+      "original_abbreviated_sample": false
+    }
+  ],
+  "original_sample_explanations": "Replaced with computed L3 sample answers; unchanged Raw retains original explanations."
+}
