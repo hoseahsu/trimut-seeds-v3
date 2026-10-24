@@ -1,0 +1,99 @@
+# Persistent Range Affine Range Sum
+
+## Problem Statement
+
+
+Given a size $N$ integer sequence $a _ 0, a _ 1, \dots, a _ {N - 1}$.
+Let $A _ {-1}$ be the sequence $(a _ 0, a _ 1, \dots, a _ {N - 1})$.
+
+For $i=0,1,\ldots ,Q-1$ , process a query as follows:
+
+- `0 $k$ $l$ $r$ $b$ $c$`: Make a copy of $A _ {k}$ as $A _ i$ . For each $j = l, l+1, \dots, {r - 1}$ , on $A _ i$ , $a _ j \gets b \times a _ j + c$.
+- `1 $k$ $s$ $l$ $r$`: Make a copy of $A _ {k}$ as $A _ i$ . For each $j = l, l+1, \dots, {r - 1}$ , on $A _ i$ , $a _ j \gets a ^ {\prime} _ j$ (where $a ^ {\prime} _ j$ is the value of $a _ j$ in $A _ {s}$ ).
+- `2 $k$ $l$ $r$`: Print $\sum_{j = l} ^ {r - 1} a _ j \bmod 998244353$ from $A _ {k}$.
+
+
+## Constraints
+
+
+Let $t _ i$ as the type of the $i$-th query ($0\leq i \lt Q$ , $t _ i\in\lbrace 0,1,2\rbrace$) .
+
+- $1 \leq N \leq 100000$
+- $1 \leq Q \leq 200000$
+- $0 \leq a \lt 998244353$
+- $1 \leq b \lt 998244353$
+- $0 \leq c \lt 998244353$
+- $-1 \leq k \lt i$
+- $k=-1$ or $t _ k\in \lbrace 0,1\rbrace$
+- $-1 \leq s \lt i$
+- $s=-1$ or $t _ s\in \lbrace 0,1\rbrace$
+- $0 \leq l \lt r \leq N$
+
+
+## Input
+
+~~~
+$N$ $Q$
+$a _ 0$ $a _ 1$ ... $a _ {N - 1}$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q - 1}$
+~~~
+
+## Sample Input 1
+
+```
+5 11
+1 2 3 4 5
+2 -1 0 5
+0 -1 2 4 100 1
+0 1 1 3 100 3
+2 2 1 5
+2 2 0 5
+1 2 -1 1 3
+2 5 0 1
+2 5 0 2
+2 5 0 3
+2 5 0 4
+2 5 0 5
+```
+
+## Sample Output 1
+
+```
+15
+30712
+30713
+1
+3
+6
+407
+412
+```
+
+## Sample Input 2
+
+```
+10 10
+98571302 347764691 874908879 522525408 665451426 585614689 752625419 867933974 588349757 331245164
+2 -1 5 7
+1 -1 -1 8 9
+0 -1 3 4 559932567 67455332
+1 1 1 0 8
+1 3 1 5 9
+2 1 1 2
+1 2 -1 5 6
+0 -1 0 9 703344909 379527638
+2 6 2 9
+2 7 7 9
+```
+
+## Sample Output 2
+
+```
+339995755
+347764691
+266369014
+783560804
+```

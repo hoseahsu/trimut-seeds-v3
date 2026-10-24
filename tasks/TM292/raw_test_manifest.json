@@ -1,0 +1,515 @@
+{
+  "schema_version": "library-native-tests-v1",
+  "seed_id": "TM292",
+  "source_id": "dynamic_tree_vertex_set_path_composite",
+  "test_scope": "selected reproducible native-domain experimental subset; not complete official hidden test suite",
+  "raw_l1_policy": "Raw and L1 must reference this exact same immutable manifest and all input/expected bytes",
+  "contains_all_original_samples": true,
+  "native_upper_bound_reached": true,
+  "source_verifier_path": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_set_path_composite/verifier.cpp",
+  "source_verifier_sha256": "f0591d6009e1488a9654fc9c3cb98392c6ef45d40b36d838e94b3becd73dc8bf",
+  "native_params": {
+    "N_AND_Q_MIN": 1,
+    "N_AND_Q_MAX": 200000,
+    "MOD": 998244353
+  },
+  "records": [
+    {
+      "name": "example_00",
+      "kind": "original_sample",
+      "official_name": "example_00",
+      "input_path": "tasks/TM292/tests/raw/example_00.in",
+      "input_sha256": "fecff4beb4e6621fbe0c96792ebd8ba5a8f46ae9365205d6f35c579f468bfc82",
+      "expected_path": "tasks/TM292/tests/raw/example_00.out",
+      "expected_sha256": "1a77bd6c4cac5c36f63d4717c70470f79e51a1cb00820cb19d5b35dd187f8276",
+      "dimensions": {
+        "N": 5,
+        "Q": 7,
+        "M": 7
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/example_00.run.json",
+      "reference_cpu_seconds": 0.0030119999999999817,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.002848000000000017,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/example_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "example_01",
+      "kind": "original_sample",
+      "official_name": "example_01",
+      "input_path": "tasks/TM292/tests/raw/example_01.in",
+      "input_sha256": "5b39e2806559fb1ce74485c2ec435925b05a24b1f444f9383989926160329190",
+      "expected_path": "tasks/TM292/tests/raw/example_01.out",
+      "expected_sha256": "738b5d64b5d687acfd72e5df6497a0d10b22e873ef8843b03677cb32a61cecd1",
+      "dimensions": {
+        "N": 7,
+        "Q": 7,
+        "M": 7
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/example_01.run.json",
+      "reference_cpu_seconds": 0.0029759999999999787,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0033329999999999974,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/example_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "small_00",
+      "kind": "native_small_structural",
+      "official_name": "small_00",
+      "generator": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_set_path_composite/gen/small.cpp",
+      "generator_sha256": "278d0b8c30244d2b64d17530a454382fa5807e8bfdec3e72f33c1cee750819c1",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM292/tests/raw/small_00.in",
+      "input_sha256": "ae577512c72f89119ccf81cdc791410a87fc710c5494933c8a3c2c28e5b35bcd",
+      "expected_path": "tasks/TM292/tests/raw/small_00.out",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dimensions": {
+        "N": 5,
+        "Q": 1,
+        "M": 1
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/small_00.run.json",
+      "reference_cpu_seconds": 0.0028749999999999887,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0026920000000000277,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/small_00.run.json"
+      }
+    },
+    {
+      "name": "random_00",
+      "kind": "native_random",
+      "official_name": "random_00",
+      "generator": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_set_path_composite/gen/random.cpp",
+      "generator_sha256": "89143901329e5d66f8809638ef06e4963c4ba56f7459c3baed35286a1f4dcafc",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM292/tests/raw/random_00.in",
+      "input_sha256": "888a709a3a655e9449d993bfd28e95cbd8cc9502ddd42a53f91a2002b58dfb02",
+      "expected_path": "tasks/TM292/tests/raw/random_00.out",
+      "expected_sha256": "d5912e2023e3d9eeeca3fcce5d4ef3fca32552905d378af0c714edb20ea9fe90",
+      "dimensions": {
+        "N": 127669,
+        "Q": 148779,
+        "M": 148779
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/random_00.run.json",
+      "reference_cpu_seconds": 0.23,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.28,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/random_00.run.json"
+      }
+    },
+    {
+      "name": "max_random_00",
+      "kind": "native_scale_candidate",
+      "official_name": "max_random_00",
+      "generator": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_set_path_composite/gen/max_random.cpp",
+      "generator_sha256": "f86be703b07867c0fe5db76e9a762d69362b6fc7c3223aa7a6f968bee7e988e1",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM292/tests/raw/max_random_00.in",
+      "input_sha256": "0e830fe6d5484850919ae2a36eda2bd742525ff8080e9706872083571f78315f",
+      "expected_path": "tasks/TM292/tests/raw/max_random_00.out",
+      "expected_sha256": "fd0206a6db336f67a74a2dfa6433e270f17cb15412c9666107911ac58ad65734",
+      "dimensions": {
+        "N": 200000,
+        "Q": 200000,
+        "M": 200000
+      },
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "value": 200000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "value": 200000
+        }
+      ],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/max_random_00.run.json",
+      "reference_cpu_seconds": 0.45,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.45,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/max_random_00.run.json"
+      }
+    },
+    {
+      "name": "almost_line_00",
+      "kind": "native_structural_boundary",
+      "official_name": "almost_line_00",
+      "generator": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_set_path_composite/gen/almost_line.cpp",
+      "generator_sha256": "e0c3c5fb3451ae2496839425863fbd081b7aed507ee6b6f6a76c09e2ba495ffd",
+      "seed": 0,
+      "generator_input_sha256_matches_official": true,
+      "input_path": "tasks/TM292/tests/raw/almost_line_00.in",
+      "input_sha256": "aa8ae75ea9ad5d4a180954c35ebad8a71fc458f0ec907cd867b0dde7a6821345",
+      "expected_path": "tasks/TM292/tests/raw/almost_line_00.out",
+      "expected_sha256": "6b7a81db430668305a73a01c85502e0e14f5e5208020f1207c6d9a1e2168e564",
+      "dimensions": {
+        "N": 200000,
+        "Q": 200000,
+        "M": 200000
+      },
+      "native_upper_bound_hits": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "value": 200000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "value": 200000
+        }
+      ],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/almost_line_00.run.json",
+      "reference_cpu_seconds": 0.83,
+      "official_expected_sha256_matches": true,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.63,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/almost_line_00.run.json"
+      }
+    },
+    {
+      "name": "authored_boundary_00",
+      "kind": "authored_boundary",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_boundary_00.in",
+      "input_sha256": "f1b5519fdfc2e756f4705324a9634e26e162476b68c406f32c337bc77943348d",
+      "expected_path": "tasks/TM292/tests/raw/authored_boundary_00.out",
+      "expected_sha256": "c4f258696d6c830a82e94ec6e65433b56db1eac4bc883b057c99cf06c2d8fdea",
+      "dimensions": {
+        "N": 3,
+        "Q": 4,
+        "M": 4
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_boundary_00.run.json",
+      "reference_cpu_seconds": 0.0022719999999999685,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0020749999999999935,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_boundary_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_00",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_00.in",
+      "input_sha256": "c89c3b008c68f7db11178160167718a445ef930bbd1e3edf6ac3a47968b9cc1a",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_00.out",
+      "expected_sha256": "4919c9c02e9e478cd9001aa0b9f35d889562454b7589e8c126a30881ced87f25",
+      "dimensions": {
+        "N": 7,
+        "Q": 7,
+        "M": 7
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_00.run.json",
+      "reference_cpu_seconds": 0.0019529999999999513,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017669999999999977,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_00.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_01",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_01.in",
+      "input_sha256": "d6ee81baca07e2bc24c9cf49e8584c4341a182bca41a2ac660119a4b5e03be55",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_01.out",
+      "expected_sha256": "c75c4ee2c0bacc036fbd73cbad32ac8562125da1b7d259dd11349e1e57cb3039",
+      "dimensions": {
+        "N": 10,
+        "Q": 10,
+        "M": 10
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_01.run.json",
+      "reference_cpu_seconds": 0.0016349999999999976,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.00165299999999996,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_01.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_02",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_02.in",
+      "input_sha256": "f5eb6d6eae861601042b9a740da44173d1c0af24c0dedb0c53e39f5b4d53b8e3",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_02.out",
+      "expected_sha256": "fd3ace1aec22e6b21eab6a4755840bd5945c69fa649a9ceeceddc58033d93f21",
+      "dimensions": {
+        "N": 10,
+        "Q": 10,
+        "M": 10
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_02.run.json",
+      "reference_cpu_seconds": 0.0020059999999999523,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0019120000000000248,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_02.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_03",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_03.in",
+      "input_sha256": "83e58468e53dc5e37190c98cfdef89d47ba877ba802bce15d10d00ac9087d859",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_03.out",
+      "expected_sha256": "4729e68035042a56f1fd1b76c7b64c795ed6dc8092170ea17735b37039d6f61a",
+      "dimensions": {
+        "N": 2,
+        "Q": 2,
+        "M": 2
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_03.run.json",
+      "reference_cpu_seconds": 0.0020919999999999828,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0020600000000000063,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_03.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": true,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_04",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_04.in",
+      "input_sha256": "5e695b050a6393ee78cd7e34c0c2806f55f338796ec32c8c9d9f46677befb79a",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_04.out",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dimensions": {
+        "N": 2,
+        "Q": 2,
+        "M": 2
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_04.run.json",
+      "reference_cpu_seconds": 0.0016579999999999928,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0017559999999999798,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_04.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_05",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_05.in",
+      "input_sha256": "1fbae0b4ccb30040e18647b81be16a2f5795832f75c5809873b0daab67f6e32b",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_05.out",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dimensions": {
+        "N": 4,
+        "Q": 4,
+        "M": 4
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_05.run.json",
+      "reference_cpu_seconds": 0.0016160000000000063,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0016630000000000256,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_05.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_06",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_06.in",
+      "input_sha256": "b33274179ec219d51e8e467a8c71742c1d6aba1b627009d9cca47a9fc80945d3",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_06.out",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dimensions": {
+        "N": 2,
+        "Q": 2,
+        "M": 2
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_06.run.json",
+      "reference_cpu_seconds": 0.0022220000000000295,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0024399999999999977,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_06.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    },
+    {
+      "name": "authored_small_07",
+      "kind": "authored_small",
+      "generator_recipe": "recipes/library_batch7.py",
+      "generator_recipe_sha256": "8eab7d3b600fd28af97234a11aa64ec1b6e99b4770e1671f7119b31fdcda033c",
+      "seed": 20261022,
+      "not_an_original_official_test": true,
+      "input_path": "tasks/TM292/tests/raw/authored_small_07.in",
+      "input_sha256": "35951091eb108a34f8d594a8b3dbc58f41d479c516459951c26b28c575d4b215",
+      "expected_path": "tasks/TM292/tests/raw/authored_small_07.out",
+      "expected_sha256": "1840bc4eb5605ae967ecbfcd89d3c141fa30c5edfd281deb0d283be27c533367",
+      "dimensions": {
+        "N": 3,
+        "Q": 3,
+        "M": 3
+      },
+      "native_upper_bound_hits": [],
+      "source_verifier": "passed",
+      "reference_run": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/raw_reference/authored_small_07.run.json",
+      "reference_cpu_seconds": 0.0027519999999999767,
+      "l3_native_run": {
+        "status": "OK",
+        "cpu_seconds": 0.0027850000000000374,
+        "report": "validation/library_native_domain/dynamic_tree_vertex_set_path_composite/l3_fast/authored_small_07.run.json"
+      },
+      "small_independent_oracles": {
+        "l3_status": "OK",
+        "raw_status": "OK",
+        "l3_agrees": true,
+        "raw_answer_rejected_by_l3": false,
+        "source_raw_agrees": true
+      }
+    }
+  ],
+  "rejected_authored_cases": [],
+  "test_count": 15,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false
+}

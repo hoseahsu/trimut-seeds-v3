@@ -1,0 +1,114 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "dynamic_tree_vertex_add_path_sum",
+  "seed_id": "TM291",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 200000,
+      "expanded": 400000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/dynamic_tree_vertex_add_path_sum/gen/max_random.cpp",
+      "generator_sha256": "179ae75ae91e96f0892c99749d4421701ee9479cb503e7846e4172fcfa254dbc",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM291/tests/l2/expanded_00.in",
+      "input_sha256": "95562ee33c11994ed713b4b8ac0f5bd4c88d8ffe6381eb42c3a0757e665cbaca",
+      "expected_path": "tasks/TM291/tests/l2/expanded_00.out",
+      "expected_sha256": "68ad2a7cc72afde91be96a8472c356c89b3b8eb3480400459770c73b1e606e9a",
+      "source_reference_run": "validation/library_l2_expanded/dynamic_tree_vertex_add_path_sum/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 1.62,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 1.57,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/dynamic_tree_vertex_add_path_sum/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/dynamic_tree_vertex_add_path_sum/gen/max_random.cpp",
+      "generator_sha256": "179ae75ae91e96f0892c99749d4421701ee9479cb503e7846e4172fcfa254dbc",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 400000,
+        "Q": 400000,
+        "M": 400000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 200000,
+          "actual": 400000,
+          "expanded_upper_bound": 400000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM291/tests/l2/expanded_01.in",
+      "input_sha256": "c526f863dee2644bbdf45d3da636bee92efa4f0395dfc686f713305ea86dce11",
+      "expected_path": "tasks/TM291/tests/l2/expanded_01.out",
+      "expected_sha256": "9659747490e5e311b355cb269ef3a3d900702bf88c9a0d22a687c55c5bfbb809",
+      "source_reference_run": "validation/library_l2_expanded/dynamic_tree_vertex_add_path_sum/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 1.61,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 1.58,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/dynamic_tree_vertex_add_path_sum/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/dynamic_tree_vertex_add_path_sum/gen/toptree.hpp",
+      "replace": "ns[1010101]",
+      "with": "ns[2020202]",
+      "reason": "double the generator node-pool capacity to match the doubled N,Q limit; topology and random-generation algorithm unchanged"
+    },
+    {
+      "path": "library_work/l2_packages/dynamic_tree_vertex_add_path_sum/sol/correct.cpp",
+      "replace": "ns[2020202]",
+      "with": "ns[4040404]",
+      "reason": "double the source-reference node-pool capacity to match the doubled N,Q limit; no algorithm change"
+    }
+  ]
+}

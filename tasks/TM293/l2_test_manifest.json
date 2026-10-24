@@ -1,0 +1,104 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "dynamic_sequence_range_affine_range_sum",
+  "seed_id": "TM293",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261022,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM293/tests/l2/expanded_00.in",
+      "input_sha256": "7baefe63dcff2f3a800e4669e0cf254865ec1bc8917a842ac8e08bc819819a42",
+      "expected_path": "tasks/TM293/tests/l2/expanded_00.out",
+      "expected_sha256": "5a7efd20b63f4518708f75777c1e003ceb8ecd60d9f6aa28c963ecc069238940",
+      "source_reference_run": "validation/library_l2_expanded/dynamic_sequence_range_affine_range_sum/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.55,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.44,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/dynamic_sequence_range_affine_range_sum/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "authored_expanded_pressure",
+      "seed": 20261023,
+      "generator_program": "library_work/build_l2_tests.py",
+      "dimensions": {
+        "N": 1000000,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM293/tests/l2/expanded_01.in",
+      "input_sha256": "7baefe63dcff2f3a800e4669e0cf254865ec1bc8917a842ac8e08bc819819a42",
+      "expected_path": "tasks/TM293/tests/l2/expanded_01.out",
+      "expected_sha256": "5a7efd20b63f4518708f75777c1e003ceb8ecd60d9f6aa28c963ecc069238940",
+      "source_reference_run": "validation/library_l2_expanded/dynamic_sequence_range_affine_range_sum/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.55,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.43,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/dynamic_sequence_range_affine_range_sum/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": [
+    {
+      "path": "library_work/l2_packages/dynamic_sequence_range_affine_range_sum/sol/correct.cpp",
+      "replace": "new Node[1000001]",
+      "with": "new Node[2000001]",
+      "reason": "increase the reference AVL pool to N_max+Q_max+1 for the expanded domain; no algorithm change"
+    }
+  ]
+}

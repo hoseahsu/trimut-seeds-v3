@@ -1,0 +1,87 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "range_parallel_unionfind",
+  "seed_id": "TM290",
+  "changes": {
+    "MAX_Q": {
+      "native": 500000,
+      "expanded": 1000000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 5.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/range_parallel_unionfind/gen/random.cpp",
+      "generator_sha256": "7db5cca26983e803543be02a03e7c73f607d2f370d0744ef3d71193c2b26bbca",
+      "seed": 2,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 53336,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "MAX_Q",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM290/tests/l2/expanded_00.in",
+      "input_sha256": "4cf34cbf3c50e8a530a912cc2c48761a39a1f427bfdd90cbba086786074c5331",
+      "expected_path": "tasks/TM290/tests/l2/expanded_00.out",
+      "expected_sha256": "53cf0c94c10d329f141b21a18b23167accd71c90c22c3f0fbe7a2a91520d21ce",
+      "source_reference_run": "validation/library_l2_expanded/range_parallel_unionfind/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.12,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.14,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/range_parallel_unionfind/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/range_parallel_unionfind/gen/random.cpp",
+      "generator_sha256": "7db5cca26983e803543be02a03e7c73f607d2f370d0744ef3d71193c2b26bbca",
+      "seed": 3,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 429249,
+        "Q": 1000000,
+        "M": 1000000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "MAX_Q",
+          "dimension": "Q",
+          "native_upper_bound": 500000,
+          "actual": 1000000,
+          "expanded_upper_bound": 1000000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM290/tests/l2/expanded_01.in",
+      "input_sha256": "7046cd51390c1cff872072fbc2b43c3d093acdae159f14a16fcca3f0777cfd6d",
+      "expected_path": "tasks/TM290/tests/l2/expanded_01.out",
+      "expected_sha256": "51139384ecbedece15479250432286e1f79a73b3d0fd0e53460b5749b5dc9f2e",
+      "source_reference_run": "validation/library_l2_expanded/range_parallel_unionfind/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.32,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.34,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/range_parallel_unionfind/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

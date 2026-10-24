@@ -1,0 +1,101 @@
+{
+  "schema_version": "library-l2-expanded-v1",
+  "id": "dynamic_graph_vertex_add_component_sum",
+  "seed_id": "TM297",
+  "changes": {
+    "N_AND_Q_MAX": {
+      "native": 300000,
+      "expanded": 600000
+    }
+  },
+  "scale_expansion_valid": true,
+  "fast_reference_validated": true,
+  "algorithm_resource_separation_validated": false,
+  "algorithm_resource_separation_reason": "No natural baseline has yet been shown to pass native upper bounds and fail only in this expanded domain. Old weak-domain comparisons are inapplicable.",
+  "cpu_budget_seconds": 10.0,
+  "experimental_memory_mb": 1024,
+  "memory_is_original_source_claim": false,
+  "records": [
+    {
+      "name": "expanded_00",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/dynamic_graph_vertex_add_component_sum/gen/max_random.cpp",
+      "generator_sha256": "800e5edabd4dfae184fa649c3e4f29de787d4182ed0c064eecdac9ab799ec049",
+      "seed": 0,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 600000,
+        "Q": 600000,
+        "M": 600000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 300000,
+          "actual": 600000,
+          "expanded_upper_bound": 600000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 300000,
+          "actual": 600000,
+          "expanded_upper_bound": 600000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM297/tests/l2/expanded_00.in",
+      "input_sha256": "d19197c0d47d4050e8a2689b2885c9463091d97018e323e035fc25230008f901",
+      "expected_path": "tasks/TM297/tests/l2/expanded_00.out",
+      "expected_sha256": "a9875062d8bf94359a5992ac0b1dd377f75151f5adfc0df0d2017ccbda57ce19",
+      "source_reference_run": "validation/library_l2_expanded/dynamic_graph_vertex_add_component_sum/source_reference/expanded_00.run.json",
+      "source_reference_cpu_seconds": 0.54,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.54,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/dynamic_graph_vertex_add_component_sum/fast/expanded_00.run.json"
+    },
+    {
+      "name": "expanded_01",
+      "kind": "upstream_generator_with_only_expanded_size_constants",
+      "generator": "library_work/l2_packages/dynamic_graph_vertex_add_component_sum/gen/max_random.cpp",
+      "generator_sha256": "800e5edabd4dfae184fa649c3e4f29de787d4182ed0c064eecdac9ab799ec049",
+      "seed": 1,
+      "not_an_original_official_test": true,
+      "dimensions": {
+        "N": 600000,
+        "Q": 600000,
+        "M": 600000
+      },
+      "strictly_exceeds_native": [
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "N",
+          "native_upper_bound": 300000,
+          "actual": 600000,
+          "expanded_upper_bound": 600000
+        },
+        {
+          "parameter": "N_AND_Q_MAX",
+          "dimension": "Q",
+          "native_upper_bound": 300000,
+          "actual": 600000,
+          "expanded_upper_bound": 600000
+        }
+      ],
+      "expanded_verifier_passed": true,
+      "input_path": "tasks/TM297/tests/l2/expanded_01.in",
+      "input_sha256": "5a087e6198f4232861e264ad0da58b0d3dddb4d421d7a5506be5b3468a9f07ef",
+      "expected_path": "tasks/TM297/tests/l2/expanded_01.out",
+      "expected_sha256": "1d4c8eb6f1a8580aa6788c7940fb0c91474cabd1d124177d1e4e5aa60aff4b41",
+      "source_reference_run": "validation/library_l2_expanded/dynamic_graph_vertex_add_component_sum/source_reference/expanded_01.run.json",
+      "source_reference_cpu_seconds": 0.47,
+      "fast_status": "OK",
+      "fast_cpu_seconds": 0.46,
+      "fast_answer_agrees_with_source_reference": true,
+      "fast_run": "validation/library_l2_expanded/dynamic_graph_vertex_add_component_sum/fast/expanded_01.run.json"
+    }
+  ],
+  "source_code_edits": []
+}

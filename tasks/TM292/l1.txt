@@ -1,0 +1,110 @@
+# Junctions
+
+A changing tree connects junctions carrying calibration functions.
+
+
+## Problem Statement
+
+
+Given an $N$ junctions tree. Connections are $(u_i, v_i)$ and a linear calibration function $f_i(x) = a_i x + b_i$ is written on the junction $i$ for each $i$.
+
+Process $Q$ queries as follows. The graph remains a tree even after queries have been processed.
+
+- `0 $u$ $v$ $w$ $x$`: Remove the existing connection $(u, v)$ and add the new connection $(w, x)$
+- `1 $p$ $c$ $d$`: Set $f_p \gets cx + d$
+- `2 $u$ $v$ $x$`: Let junctions on the path between $u$ and $v$ be $p_1 = u, p_2, ..., p_k = v$. Print $f_{p_k}(...f_{p_2}(f_{p_1}(x))) \bmod 998244353$
+
+
+## Constraints
+
+- $1 \leq N, Q \leq 200000$
+- $1 \leq a_i, c < 998244353$
+- $0 \leq b_i, d, x < 998244353$
+- $0 \leq p < N$
+- $0 \leq u, v < N$
+
+## Input
+
+~~~
+$N$ $Q$
+$a_0$ $b_0$
+$a_1$ $b_1$
+:
+$a_{N - 1}$ $b_{N - 1}$
+$u_0$ $v_0$
+$u_1$ $v_1$
+:
+$u_{N - 2}$ $v_{N - 2}$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q - 1}$
+~~~
+
+## Sample Input 1
+
+```
+5 7
+1 2
+3 4
+5 6
+7 8
+9 10
+0 1
+1 2
+2 3
+1 4
+2 0 3 10
+1 1 100000 0
+2 3 4 11
+0 1 2 2 0
+2 3 4 12
+0 2 3 3 1
+2 2 3 13
+```
+
+## Sample Output 1
+
+```
+1450
+387900010
+421200010
+51100008
+```
+
+## Sample Input 2
+
+```
+7 7
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+0 1
+1 2
+0 3
+3 4
+0 5
+5 6
+2 2 4 1
+2 4 6 1
+2 6 2 1
+0 0 5 3 5
+2 2 4 1
+2 4 6 1
+2 6 2 1
+```
+
+## Sample Output 2
+
+```
+411
+2199
+607
+411
+2115
+2383
+```

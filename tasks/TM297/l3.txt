@@ -1,0 +1,70 @@
+# maximum vertex value
+
+## Problem Statement
+
+
+You are given an empty graph with $N$ vertices. The $i$-th vertex has a value $a_i$ written on it.
+
+Process $Q$ queries:
+
+- `0 $u$ $v$` : Add an edge between vertex $u$ and vertex $v$. (It is guaranteed that, immediately before this query, there is no edge between vertex $u$ and vertex $v$)
+- `1 $u$ $v$` : Remove the edge between vertex $u$ and vertex $v$. (It is guaranteed that, immediately before this query, there is an edge between vertex $u$ and vertex $v$)
+- `2 $v$ $x$` : $a_v \gets a_v + x$
+- `3 $v$ `   : Output the maximum value on all vertices that are connected to vertex $v$ by a path.
+
+
+
+
+
+## Constraints
+
+- $1 \leq N, Q \leq 300000$
+- $0 \leq a_i, x \leq 1000000000$
+- $0 \leq u_i, v_i < N$
+- $u_i \neq v_i$
+
+## Input
+
+~~~
+$N$ $Q$
+$a_0$ $a_1$ ... $a_{N - 1}$
+$\textrm{Query}_0$
+$\textrm{Query}_1$
+:
+$\textrm{Query}_{Q - 1}$
+~~~
+
+
+## Sample Input 1
+
+```
+5 16
+1 10 100 1000 10000
+0 0 1
+0 1 2
+0 2 3
+0 3 4
+0 0 4
+3 3
+1 1 2
+3 1
+1 3 4
+3 0
+2 1 100000
+3 1
+0 1 4
+3 2
+0 3 4
+3 0
+```
+
+## Sample Output 1
+
+```
+10000
+10000
+10000
+100010
+1000
+100010
+```

@@ -1,0 +1,72 @@
+# weak directed connectivity
+
+## Problem Statement
+
+
+
+Given a directed graph with $N$ vertices and $M$ edges. $i$-th edge is $(a_i, b_i)$. This graph may not be simple.
+
+Please ignore edge directions and decompose this graph into weakly connected components, in any order.
+
+
+
+
+## Constraints
+
+- $1 \leq N \leq 500,000$
+- $1 \leq M \leq 500,000$
+- $0 \leq a_i, b_i < N$
+
+## Input
+
+~~~
+$N$ $M$
+$a_0$ $b_0$
+$a_1$ $b_1$
+:
+$a_{M - 1}$ $b_{M - 1}$
+~~~
+
+## Output
+
+
+
+First line, print the number of weakly connected components $K$.
+Following $K$ line, we print the information of weakly connected component for each line as follows.
+$l$ is the number of vertices of weakly connected component, and $v_i$ is the vertex index.
+
+
+
+~~~
+$l$ $v_0$ $v_1$ ... $v_{l-1}$
+~~~
+
+
+
+There is no ordering requirement among distinct components.
+
+If there is a multiple solution, print any of them.
+
+
+
+
+## Sample Input 1
+
+```
+6 7
+1 4
+5 2
+3 0
+5 5
+4 1
+0 3
+4 2
+```
+
+## Sample Output 1
+
+```
+2
+4 1 2 4 5
+2 0 3
+```
