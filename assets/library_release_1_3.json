@@ -1,0 +1,362 @@
+{
+  "staticrmq": {
+    "canonical_raw": "For each query l r, return min(a_i : l<=i<r). The array is fixed.",
+    "canonical_l3": "For each query l r, return max(a_i : l<=i<r). The array is fixed.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one integer per query in input order. Each query is l r.",
+    "shared_constraints": "N,Q>=1; initial values are in[0,10^9]. Every query satisfies0<=l<r<=N. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/staticrmq/task.md",
+    "source_task_sha256": "7690bc99e3640decd640bf8cf0feb604b7a8d9359480698e38666670e7a7a532",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "range_kth_smallest": {
+    "canonical_raw": "For each query l r k, sort the multiset of values a_l..a_(r-1) in ascending order and return its zero-based rankk element. Repeated values retain their multiplicities.",
+    "canonical_l3": "For each query l r k, sort the multiset of values a_l..a_(r-1) in descending order and return its zero-based rankk element. Repeated values retain their multiplicities.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one integer per query in input order. Each query is l r k.",
+    "shared_constraints": "N,Q>=1; initial values are in[0,10^9]. 0<=l<r<=N and0<=k<r-l. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/range_kth_smallest/task.md",
+    "source_task_sha256": "a98f35d63f839bfa48aa92134bc9ab9a1faef81fc98d0f015e2c08a1e5e859ad",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "longest_increasing_subsequence": {
+    "canonical_raw": "Find a longest subsequence whose VALUES are strictly increasing. Chosen indices must increase strictly. Return any optimal sequence of indices.",
+    "canonical_l3": "Find a longest subsequence whose VALUES are nondecreasing. Chosen indices must increase strictly. Return any optimal sequence of indices.",
+    "io_protocol": "Input N, then N integers a_i. Output maximum lengthK on the first line and K chosen indices i_0<...<i_(K-1) on the second. Any optimum is accepted.",
+    "shared_constraints": "N>=1;0<=a_i<=10^9. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/other/longest_increasing_subsequence/task.md",
+    "source_task_sha256": "e86310396c5e6bde1b1c4bd68450626068e09d1d1e45ef19fa6f02a6364d0eff",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "line_add_get_min": {
+    "canonical_raw": "Maintain a collection of lines y=a*x+b. Operation0 a b adds that line. Operation1 p returns the minimum value a*p+b over every currently stored line, including the initial lines.",
+    "canonical_l3": "Maintain a collection of lines y=a*x+b. Operation0 a b adds that line. Operation1 p returns the maximum value a*p+b over every currently stored line, including the initial lines.",
+    "io_protocol": "Input N Q; N lines a_i b_i; Q operations0 a b or1 p. Output one exact integer per type1 operation.",
+    "shared_constraints": "N,Q>=1; all slopes and query coordinates have absolute value<=10^9; all intercepts have absolute value<=10^18. Lines are never removed. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/line_add_get_min/task.md",
+    "source_task_sha256": "e67bc9bc571e90804bb96d03977aad0de810c79c0c504e83b9686f7ae100e17d",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "segment_add_get_min": {
+    "canonical_raw": "Maintain line segments y=a*x+b with domain l<=x<r. Operation0 l r a b inserts a segment. Operation1 p returns the minimum value a*p+b among segments coveringp, or the token INFINITY if no segment coversp.",
+    "canonical_l3": "Maintain line segments y=a*x+b with domain l<=x<r. Operation0 l r a b inserts a segment. Operation1 p returns the maximum value a*p+b among segments coveringp, or the token INFINITY if no segment coversp.",
+    "io_protocol": "Input N Q; N initial segments l_i r_i a_i b_i; Q operations0 l r a b or1 p. Output one exact integer or INFINITY per type1 operation.",
+    "shared_constraints": "N,Q>=1;-10^9<=l<r<=10^9; slopes and query coordinates have absolute value<=10^9; intercepts have absolute value<=10^18. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/segment_add_get_min/task.md",
+    "source_task_sha256": "8f8f70d5fde5ea197c082026d8cef93fb844fa61e3f679f21944c0463f6d70ba",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "cartesian_tree": {
+    "canonical_raw": "Build the binary Cartesian tree on the distinct array values: the index of the minimum value is the root, and the left and right intervals are processed recursively. The inorder vertex order is0..N-1. Output the parent of every vertex.",
+    "canonical_l3": "Build the binary Cartesian tree on the distinct array values: the index of the maximum value is the root, and the left and right intervals are processed recursively. The inorder vertex order is0..N-1. Output the parent of every vertex.",
+    "io_protocol": "Input N and N values a_i. Output N parents p_i. The rootr has p_r=r; all other parents are zero-based vertex indices.",
+    "shared_constraints": "N>=1;0<=a_i<=10^9; all a_i are distinct. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/tree/cartesian_tree/task.md",
+    "source_task_sha256": "2c62e5f63abd685fd53a9aa62f89d354d0ab8063de455dcf9f4034fbb63c7e05",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "minimum_spanning_tree": {
+    "canonical_raw": "Find a spanning tree of minimum total edge weight in the given connected undirected weighted graph. A spanning tree uses N-1 distinct edges, connects all vertices, and has no cycle.",
+    "canonical_l3": "Find a spanning tree of maximum total edge weight in the given connected undirected weighted graph. A spanning tree uses N-1 distinct edges, connects all vertices, and has no cycle.",
+    "io_protocol": "Input N M, then M lines u_i v_i w_i, indexed0..M-1. Output the optimum total weightX, then N-1 edge indices of an attaining spanning tree. Any optimum and any edge order are accepted. ForN=1 outputX=0 and no edge indices.",
+    "shared_constraints": "N>=1;M>=N-1;0<=u_i,v_i<N;0<=w_i<=10^9. Self-loops and parallel edges are allowed. The graph is connected. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/graph/minimum_spanning_tree/task.md",
+    "source_task_sha256": "a90ae21c42847a67859da57677d37d8783134ed76d5745eae0728a9ffcd8d81b",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "assignment": {
+    "canonical_raw": "Find a permutationp of0..N-1 minimizing sum overi of a_(i,p_i). Return both the optimum cost and an attaining permutation.",
+    "canonical_l3": "Find a permutationp of0..N-1 maximizing sum overi of a_(i,p_i). Return both the optimum cost and an attaining permutation.",
+    "io_protocol": "Input N, then N rows of N matrix entries. Output optimum costX on the first line and permutation p_0..p_(N-1) on the second. Any optimum is accepted.",
+    "shared_constraints": "N>=1; each matrix entry is in[-10^9,10^9]. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/graph/assignment/task.md",
+    "source_task_sha256": "b9dc64fb8cb4300c0678bff450c96c252081563a4b750fc64603d49dbd98a370",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "static_range_frequency": {
+    "canonical_raw": "For each query l r x, count indicesi with l<=i<r and a_i=x.",
+    "canonical_l3": "For each query l r x, count indicesi with l<=i<r and a_i<x.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one integer per query in input order. Each query is l r x. Empty ranges return0.",
+    "shared_constraints": "N,Q>=0;0<=a_i,x<=10^9;0<=l<=r<=N. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/static_range_frequency/task.md",
+    "source_task_sha256": "90d7041c253f59250c085eb09e4be34ca8197fae6b2fe1c27937558790cc9e7a",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "static_range_inversions_query": {
+    "canonical_raw": "For every query l r, count ordered index pairs(i,j) with l<=i<j<r and a_i>a_j.",
+    "canonical_l3": "For every query l r, count ordered index pairs(i,j) with l<=i<j<r and a_i>=a_j.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one integer per query in input order. Each query is l r.",
+    "shared_constraints": "N,Q>=1; initial values are in[0,10^9]. 0<=l<r<=N. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/static_range_inversions_query/task.md",
+    "source_task_sha256": "b8d02eb7eed81b2b89d0e6b050df53494a13a40fee78f8398562faef3f1b72fe",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "range_add_range_min": {
+    "canonical_raw": "Operation0 l r x addsx to every a_i with l<=i<r. Operation1 l r returns the minimum current value in that range.",
+    "canonical_l3": "Operation0 l r x addsx to every a_i with l<=i<r. Operation1 l r returns the maximum current value in that range.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one answer per query that requests a value, in chronological order. Operation lines are0 l r x or1 l r.",
+    "shared_constraints": "N,Q>=1; each initial a_i and updatex is in[-10^9,10^9];0<=l<r<=N. Updated values are not clipped to the input range. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/range_add_range_min/task.md",
+    "source_task_sha256": "09d78955c161586fbb383592808d603213d47ed80674fe2496dde9a8d2cfac4d",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "set_xor_min": {
+    "canonical_raw": "Start with an empty setS. Operation0 x insertsx if absent;1 x removesx if present;2 x outputs min(y XOR x : y inS). XOR is bitwise exclusive OR.",
+    "canonical_l3": "Start with an empty setS. Operation0 x insertsx if absent;1 x removesx if present;2 x outputs max(y XOR x : y inS). XOR is bitwise exclusive OR.",
+    "io_protocol": "Input Q then Q lines t x with t in{0,1,2}. Output one integer per type2 operation.",
+    "shared_constraints": "Q>=1;0<=x<2^30. The set is nonempty for every type2 query. Duplicate insertion and deletion of an absent key do nothing. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/set_xor_min/task.md",
+    "source_task_sha256": "f60a59234c2d8309397bcef42e11fa93170f9289baef06c4048f6fd928b33c62",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "point_set_range_composite": {
+    "canonical_raw": "Maintain functions f_i(z)=a_i*z+b_i over residues modulo998244353. Operation0 p c d replaces only function f_p by z->c*z+d. For operation1 l r x, start withx and apply f_l,f_(l+1),...,f_(r-1) in that order, reducing modulo998244353; output the final residue.",
+    "canonical_l3": "Maintain functions f_i(z)=a_i*z+b_i over residues modulo998244353. Operation0 p c d replaces only function f_p by z->c*z+d. For operation1 l r x, start withx and apply f_(r-1),f_(r-2),...,f_l in that order, reducing modulo998244353; output the final residue.",
+    "io_protocol": "Input N Q; N coefficient pairs a_i b_i; Q operation lines 0 p c d or1 l r x. Output one canonical residue per type1 query.",
+    "shared_constraints": "N,Q>=1;1<=a_i,c<998244353;0<=b_i,d,x<998244353;0<=l<r<=N;  Point index p satisfies 0<=p<N. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/point_set_range_composite/task.md",
+    "source_task_sha256": "86dc6871ff1fa8601881dd6d6762261e714ba6f79b136780d8ae805c43cbd626",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "range_set_range_composite": {
+    "canonical_raw": "Maintain functions f_i(z)=a_i*z+b_i over residues modulo998244353. Operation0 l r c d replaces every f_i with l<=i<r by z->c*z+d. For operation1 l r x, start withx and apply f_l,f_(l+1),...,f_(r-1) in that order, reducing modulo998244353; output the final residue.",
+    "canonical_l3": "Maintain functions f_i(z)=a_i*z+b_i over residues modulo998244353. Operation0 l r c d replaces every f_i with l<=i<r by z->c*z+d. For operation1 l r x, start withx and apply f_(r-1),f_(r-2),...,f_l in that order, reducing modulo998244353; output the final residue.",
+    "io_protocol": "Input N Q; N coefficient pairs a_i b_i; Q operation lines 0 l r c d or1 l r x. Output one canonical residue per type1 query.",
+    "shared_constraints": "N,Q>=1;1<=a_i,c<998244353;0<=b_i,d,x<998244353;0<=l<r<=N;  All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/range_set_range_composite/task.md",
+    "source_task_sha256": "3dee1c5b3dbb05ef5f88ab0d3ca4db3b0b375b148a828dc68e62f251232735cf",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "queue_operate_all_composite": {
+    "canonical_raw": "Start with an empty ordered sequence of affine functions modulo998244353. Operation0 a b appends z->a*z+b;1 removes the first function. For query2 x, start withx and apply all functions from FRONT TO BACK, outputting the final residue. An empty sequence returnsx.",
+    "canonical_l3": "Start with an empty ordered sequence of affine functions modulo998244353. Operation0 a b appends z->a*z+b;1 removes the first function. For query2 x, start withx and apply all functions from BACK TO FRONT, outputting the final residue. An empty sequence returnsx.",
+    "io_protocol": "Input Q followed by Q operation lines in the stated formats. Output one canonical residue per query2 x.",
+    "shared_constraints": "Q>=1;1<=a<998244353;0<=b,x<998244353. A removal operation is issued only when the sequence is nonempty. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/queue_operate_all_composite/task.md",
+    "source_task_sha256": "a27557a1ded1a708163496934028f0356450d650e2e9b0169e76a78518baabfe",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "deque_operate_all_composite": {
+    "canonical_raw": "Start with an empty ordered sequence of affine functions modulo998244353. Operation0 a b prepends z->a*z+b;1 a b appends it;2 removes the first function;3 removes the last function. For query4 x, start withx and apply all functions from FRONT TO BACK, outputting the final residue. An empty sequence returnsx.",
+    "canonical_l3": "Start with an empty ordered sequence of affine functions modulo998244353. Operation0 a b prepends z->a*z+b;1 a b appends it;2 removes the first function;3 removes the last function. For query4 x, start withx and apply all functions from BACK TO FRONT, outputting the final residue. An empty sequence returnsx.",
+    "io_protocol": "Input Q followed by Q operation lines in the stated formats. Output one canonical residue per query4 x.",
+    "shared_constraints": "Q>=1;1<=a<998244353;0<=b,x<998244353. A removal operation is issued only when the sequence is nonempty. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/deque_operate_all_composite/task.md",
+    "source_task_sha256": "b6c8c2aa46dff3b0c48d9ec5f3d56825a4f672b1de0f8ed91ad3bdc463cb522f",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "point_add_range_sum": {
+    "canonical_raw": "Operation0 p x addsx to a_p. Operation1 l r returns the sum of current values a_l..a_(r-1).",
+    "canonical_l3": "Operation0 p x addsx to a_p. Operation1 l r returns the maximum current value among a_l..a_(r-1).",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one answer per query that requests a value, in chronological order. Operation lines are0 p x or1 l r.",
+    "shared_constraints": "N,Q>=1;0<=initial a_i,x<=10^9;0<=p<N;0<=l<r<=N. Later values may exceed10^9. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/point_add_range_sum/task.md",
+    "source_task_sha256": "dbc0e31eea2326becc0ed5d5fc4e9abd56599692c7e1b1a2198b4d5e268ddb88",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "vertex_add_path_sum": {
+    "canonical_raw": "On the fixed tree, operation0 p x addsx to vertexp. Operation1 u v returns the sum of vertex values along the unique path fromu tov, INCLUDING both endpoints.",
+    "canonical_l3": "On the fixed tree, operation0 p x addsx to vertexp. Operation1 u v returns the maximum vertex value along the unique path fromu tov, INCLUDING both endpoints.",
+    "io_protocol": "Input N Q; N initial vertex values; N-1 undirected edges u_i v_i; Q operations0 p x or1 u v. Output one exact integer per type1 query.",
+    "shared_constraints": "N,Q>=1; vertex indices are0..N-1; edges form a tree;0<=initial values,x<=10^9. Query endpoints may coincide; such a path consists of one vertex. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/tree/vertex_add_path_sum/task.md",
+    "source_task_sha256": "83c104a09096bce7eb102071e4ffaed69aa3bc1263ad19c2bd7226e9c03d8b3a",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "vertex_add_subtree_sum": {
+    "canonical_raw": "The tree is rooted at vertex0. Operation0 u x addsx to vertexu. Operation1 u returns the sum of values in the subtree rooted atu, INCLUDINGu itself.",
+    "canonical_l3": "The tree is rooted at vertex0. Operation0 u x addsx to vertexu. Operation1 u returns the maximum value in the subtree rooted atu, INCLUDINGu itself.",
+    "io_protocol": "Input N Q; N initial values; N-1 parents p_1..p_(N-1); Q operations0 u x or1 u. Output one exact integer per type1 query.",
+    "shared_constraints": "N,Q>=1;0<=p_i<i for1<=i<N;0<=u<N;0<=initial values,x<=10^9. ForN=1 the parent list is empty. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/tree/vertex_add_subtree_sum/task.md",
+    "source_task_sha256": "7de531a8dce1791087cb1c8bd7ce0445a202b4628a24afbb8b30ecd4294b3133",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "range_reverse_range_sum": {
+    "canonical_raw": "Operation0 l r reverses the current subsequence a_l..a_(r-1). Operation1 l r returns the sum of that current range, with empty-range sum0.",
+    "canonical_l3": "Operation0 l r reverses the current subsequence a_l..a_(r-1). Operation1 l r returns max({0} union {a_i:l<=i<r}); thus an empty range returns0.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one answer per query that requests a value, in chronological order. Every operation line is t l r, with t in{0,1}.",
+    "shared_constraints": "N,Q>=0;0<=a_i<=10^9;0<=l<=r<=N. Empty sequences and empty updates/queries are allowed. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/range_reverse_range_sum/task.md",
+    "source_task_sha256": "d95b2fcf1ff43d6611bb449612dbb202019bdea8d82dccd6177ceea7d6d77cac",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "range_affine_range_sum": {
+    "canonical_raw": "Operation0 l r b c replaces each a_i with b*a_i+c for l<=i<r. Operation1 l r returns sum(a_i:l<=i<r) modulo998244353. All arithmetic may be reduced modulo998244353.",
+    "canonical_l3": "Operation0 l r b c replaces each a_i with b*a_i+c for l<=i<r. Operation1 l r returns sum(a_i^2:l<=i<r) modulo998244353. All arithmetic may be reduced modulo998244353.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one answer per query that requests a value, in chronological order. Operations are0 l r b c or1 l r. Print canonical residues in[0,998244352].",
+    "shared_constraints": "N,Q>=1;0<=initial a_i,c<998244353;1<=b<998244353;0<=l<r<=N. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/range_affine_range_sum/task.md",
+    "source_task_sha256": "ce46165674209f80bb331078c5961682074d7b0ac7621e750d9e51e56ac84e64",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "static_range_count_distinct": {
+    "canonical_raw": "For each query l r, count the number of distinct values occurring in a_l..a_(r-1).",
+    "canonical_l3": "For each query l r, count the distinct values that occur EXACTLY ONCE in a_l..a_(r-1). Values occurring twice or more contribute0.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one integer per query in input order. Each query is l r. Empty ranges return0.",
+    "shared_constraints": "N,Q>=0;0<=a_i<=10^9;0<=l<=r<=N. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/static_range_count_distinct/task.md",
+    "source_task_sha256": "8f8d281b91fc93097d967471c5a20991249f5d1116e6576cf3df59fcbfcb9e2c",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "ordered_set": {
+    "canonical_raw": "Maintain the initial setS. Operation0 x insertsx if absent;1 x removesx if present;3 x counts members<=x;4 x returns the largest member<=x or-1 if absent;5 x returns the smallest member>=x or-1 if absent. Operation2 x returns the x-th SMALLEST member (one-based rank), or-1 if x>|S|.",
+    "canonical_l3": "Maintain the initial setS. Operation0 x insertsx if absent;1 x removesx if present;3 x counts members<=x;4 x returns the largest member<=x or-1 if absent;5 x returns the smallest member>=x or-1 if absent. Operation2 x returns the x-th LARGEST member (one-based rank), or-1 if x>|S|.",
+    "io_protocol": "Input N Q; N initial keys in strictly increasing order; Q operations t x with0<=t<=5. Output one integer per operation of type2,3,4,5.",
+    "shared_constraints": "N>=0,Q>=1;0<=initial keys,x<=10^9; type2 requiresx>=1. Duplicate insertion and absent-key deletion do nothing. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/ordered_set/task.md",
+    "source_task_sha256": "6e0d4f4fe4eeeb6716a0e458eacd7974ef0a23b17578ca36561d14b93fa1edf8",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "predecessor_problem": {
+    "canonical_raw": "S initially contains exactly indices whose bit inT is1. Operation0 k insertsk if absent;1 k removesk if present;2 k returns1 ifk is present and0 otherwise;4 k returns the largest member<=k or-1 if none exists. Operation3 k returns the smallest member>=k, or-1 if none exists.",
+    "canonical_l3": "S initially contains exactly indices whose bit inT is1. Operation0 k insertsk if absent;1 k removesk if present;2 k returns1 ifk is present and0 otherwise;4 k returns the largest member<=k or-1 if none exists. Operation3 k returns the smallest member STRICTLY GREATER THANk, or-1 if none exists.",
+    "io_protocol": "Input N Q; a lengthN bitstringT; Q operations t k with0<=t<=4. Output one integer for each operation of type2,3,4.",
+    "shared_constraints": "N,Q>=1;0<=k<N;T contains only0 and1. The set may be empty. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/predecessor_problem/task.md",
+    "source_task_sha256": "5de2ebf500f8a43669ff4be23f40baf097a6df337f7799e551eaf77a7f76bba4",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "associative_array": {
+    "canonical_raw": "An integer-indexed array is initially zero at every nonnegative index. Operation0 k v SETS a[k]=v; operation1 k prints the current a[k].",
+    "canonical_l3": "An integer-indexed array is initially zero at every nonnegative index. Operation0 k v ADDS v to a[k]; operation1 k prints the current a[k]. Values accumulate without a modulus and may exceed64-bit integer range.",
+    "io_protocol": "Input Q then Q operations0 k v or1 k. Output the exact nonnegative decimal integer for each type1 operation.",
+    "shared_constraints": "Q>=1;0<=k,v<=10^18. Reading a key never written returns0. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/associative_array/task.md",
+    "source_task_sha256": "b09c2d849bd141744824df5c89580a7d2e811a3161bcb51902defc783a27700b",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "majority_voting": {
+    "canonical_raw": "Operation0 p x assigns a_p=x. Operation1 l r returns a value whose frequencyf in a_l..a_(r-1) satisfies2*f>r-l, or-1 if no such value exists.",
+    "canonical_l3": "Operation0 p x assigns a_p=x. Operation1 l r returns a value whose frequencyf in a_l..a_(r-1) satisfies3*f>2*(r-l), or-1 if no such value exists.",
+    "io_protocol": "Input N Q; then N array values a_0..a_(N-1); then Q query lines. Output one answer per query that requests a value, in chronological order. Operations are0 p x or1 l r.",
+    "shared_constraints": "N,Q>=1;0<=initial a_i,x<=10^9;0<=p<N;0<=l<r<=N. At most one value can satisfy either stated threshold. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/majority_voting/task.md",
+    "source_task_sha256": "eed5a1f0a59d957ad9ede08f808675ab71d1225a6fa37a12ac529ee8aa9b5b68",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "persistent_queue": {
+    "canonical_raw": "Let versionS_-1 be empty. For operationi of form0 t x, createS_i by appendingx toS_t. For form1 t, createS_i by removing the FRONT element ofS_t and print that removed element. Previously created versions never change.",
+    "canonical_l3": "Let versionS_-1 be empty. For operationi of form0 t x, createS_i by appendingx toS_t. For form1 t, createS_i by removing the BACK element ofS_t and print that removed element. Previously created versions never change.",
+    "io_protocol": "Input Q; Q operations indexed i=0..Q-1, each0 t x or1 t. Output one removed value per type1 operation.",
+    "shared_constraints": "Q>=1;-1<=t<i;0<=x<=10^9. Every referenced version for type1 is nonempty. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/persistent_queue/task.md",
+    "source_task_sha256": "5027cfe6f27b77422939ae920966c905772a2a9c8945b9d76033928fdeb0b1b0",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "bitwise_and_convolution": {
+    "canonical_raw": "Given arraysa,b indexed0..2^N-1, for everyk in that index range compute c_k=sum(a_i*b_j over all ordered pairs(i,j) satisfying i AND j=k) modulo998244353. AND, OR and XOR denote the corresponding bitwise operations.",
+    "canonical_l3": "Given arraysa,b indexed0..2^N-1, for everyk in that index range compute c_k=sum(a_i*b_j over all ordered pairs(i,j) satisfying i OR j=k) modulo998244353. AND, OR and XOR denote the corresponding bitwise operations.",
+    "io_protocol": "Input N;2^N coefficientsa;2^N coefficientsb. Output2^N canonical residues c_0..c_(2^N-1) in increasing index order.",
+    "shared_constraints": "N>=0;0<=a_i,b_i<998244353. Repeated coefficients are permitted; all index pairs are ordered. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/convolution/bitwise_and_convolution/task.md",
+    "source_task_sha256": "f46d4948e2004fb465ff214e510158a27e83b719a221f3bbf038bc511d0b6d1a",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "bitwise_xor_convolution": {
+    "canonical_raw": "Given arraysa,b indexed0..2^N-1, for everyk in that index range compute c_k=sum(a_i*b_j over all ordered pairs(i,j) satisfying i XOR j=k) modulo998244353. AND, OR and XOR denote the corresponding bitwise operations.",
+    "canonical_l3": "Given arraysa,b indexed0..2^N-1, for everyk in that index range compute c_k=sum(a_i*b_j over all ordered pairs(i,j) satisfying i AND j=k) modulo998244353. AND, OR and XOR denote the corresponding bitwise operations.",
+    "io_protocol": "Input N;2^N coefficientsa;2^N coefficientsb. Output2^N canonical residues c_0..c_(2^N-1) in increasing index order.",
+    "shared_constraints": "N>=0;0<=a_i,b_i<998244353. Repeated coefficients are permitted; all index pairs are ordered. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/convolution/bitwise_xor_convolution/task.md",
+    "source_task_sha256": "c999e1542d5393fe6b3a13d1bc643b938f7cca8c7e947e1697edab2efc144709",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "subset_convolution": {
+    "canonical_raw": "Given arraysa,b indexed0..2^N-1, for everyk in that index range compute c_k=sum(a_i*b_j over all ordered pairs(i,j) satisfying (i AND j)=0 and (i OR j)=k) modulo998244353. AND, OR and XOR denote the corresponding bitwise operations.",
+    "canonical_l3": "Given arraysa,b indexed0..2^N-1, for everyk in that index range compute c_k=sum(a_i*b_j over all ordered pairs(i,j) satisfying i OR j=k) modulo998244353. AND, OR and XOR denote the corresponding bitwise operations.",
+    "io_protocol": "Input N;2^N coefficientsa;2^N coefficientsb. Output2^N canonical residues c_0..c_(2^N-1) in increasing index order.",
+    "shared_constraints": "N>=0;0<=a_i,b_i<998244353. Repeated coefficients are permitted; all index pairs are ordered. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/set_power_series/subset_convolution/task.md",
+    "source_task_sha256": "0061c6ab1454958765f7cd83fc03ebb3d76b7e4a7a2818a82b965ec6c19cbe13",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "gcd_convolution": {
+    "canonical_raw": "Given arraysa,b indexed1..N, compute c_k=sum(a_i*b_j over ordered pairs1<=i,j<=N with gcd(i,j)=k) modulo998244353, for everyk=1..N. Only theseN coefficients are output; pairs whose gcd exceedsN contribute to no output. gcd means greatest common divisor and lcm means least common multiple.",
+    "canonical_l3": "Given arraysa,b indexed1..N, compute c_k=sum(a_i*b_j over ordered pairs1<=i,j<=N with lcm(i,j)=k) modulo998244353, for everyk=1..N. Only theseN coefficients are output; pairs whose lcm exceedsN contribute to no output. gcd means greatest common divisor and lcm means least common multiple.",
+    "io_protocol": "Input N;N coefficientsa_1..a_N;N coefficientsb_1..b_N. OutputN canonical residues c_1..c_N in increasing index order.",
+    "shared_constraints": "N>=1;0<=a_i,b_i<998244353. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/convolution/gcd_convolution/task.md",
+    "source_task_sha256": "8069e3fd223744bf147711d840b2273696a374d36edfd9582cfeddbd4a7e8045",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "lcm_convolution": {
+    "canonical_raw": "Given arraysa,b indexed1..N, compute c_k=sum(a_i*b_j over ordered pairs1<=i,j<=N with lcm(i,j)=k) modulo998244353, for everyk=1..N. Only theseN coefficients are output; pairs whose lcm exceedsN contribute to no output. gcd means greatest common divisor and lcm means least common multiple.",
+    "canonical_l3": "Given arraysa,b indexed1..N, compute c_k=sum(a_i*b_j over ordered pairs1<=i,j<=N with gcd(i,j)=k) modulo998244353, for everyk=1..N. Only theseN coefficients are output; pairs whose gcd exceedsN contribute to no output. gcd means greatest common divisor and lcm means least common multiple.",
+    "io_protocol": "Input N;N coefficientsa_1..a_N;N coefficientsb_1..b_N. OutputN canonical residues c_1..c_N in increasing index order.",
+    "shared_constraints": "N>=1;0<=a_i,b_i<998244353. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/convolution/lcm_convolution/task.md",
+    "source_task_sha256": "b00a82a663911e8ff891b27cc7abd43cfdac233f83cd0331bab1624f4cd4967a",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "sum_of_floor_of_linear": {
+    "canonical_raw": "For each(N,M,A,B), compute the exact integer sum over0<=i<N of floor((A*i+B)/M), where floor is rounding down to an integer.",
+    "canonical_l3": "For each(N,M,A,B), compute the exact integer sum over0<=i<N of ceil((A*i+B)/M), where ceil is rounding up to an integer.",
+    "io_protocol": "Input T; then T lines N M A B. Output one exact integer per line.",
+    "shared_constraints": "T,N>=1;1<=M<=10^9;0<=A,B<M. No floating-point rounding is intended. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/number_theory/sum_of_floor_of_linear/task.md",
+    "source_task_sha256": "8f6c9705d4281c24fb390ceb09805190008c2992aea2fe5fe3680047966faba5",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "kth_root_integer": {
+    "canonical_raw": "For each nonnegativeA and positiveK, output the GREATEST nonnegative integerr satisfying r^K<=A.",
+    "canonical_l3": "For each nonnegativeA and positiveK, output the LEAST nonnegative integerr satisfying r^K>=A.",
+    "io_protocol": "Input T;T pairs A K. Output one exact integer root per case.",
+    "shared_constraints": "T>=1;0<=A<2^64;1<=K<=64. Integer powers and comparisons are exact, including at unsigned64-bit boundaries. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/number_theory/kth_root_integer/task.md",
+    "source_task_sha256": "c1debb58a6f1895cc88d56ed112827a4105e2121ca4fee61aed3c97423b2670f",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "rectangle_sum": {
+    "canonical_raw": "For each rectangle query l d r u, sum weights of all input point occurrences satisfying l<=x<r and d<=y<u. Coincident points retain separate weights.",
+    "canonical_l3": "For each rectangle query l d r u, sum weights of all input point occurrences satisfying l<=x<=r and d<=y<u. Coincident points retain separate weights.",
+    "io_protocol": "Input N Q;N weighted points x_i y_i w_i;Q rectangles l d r u. Output one exact weighted sum per rectangle.",
+    "shared_constraints": "N,Q>=1;0<=x_i,y_i,w_i<=10^9;0<=l<r<=10^9;0<=d<u<=10^9. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/rectangle_sum/task.md",
+    "source_task_sha256": "8343384607443dea8807c294c99c75d80218836bb661cd656599393ddff96b0b",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "point_add_rectangle_sum": {
+    "canonical_raw": "Initially store the given weighted points. Operation0 x y w inserts a new point occurrence with weightw, even if its coordinates already exist. Operation1 l d r u returns the sum of weights of stored occurrences with l<=x<r and d<=y<u.",
+    "canonical_l3": "Initially store the given weighted points. Operation0 x y w inserts a new point occurrence with weightw, even if its coordinates already exist. Operation1 l d r u returns the sum of weights of stored occurrences with l<=x<=r and d<=y<u.",
+    "io_protocol": "Input N Q;N initial points x_i y_i w_i;Q operations0 x y w or1 l d r u. Output one exact integer per type1 operation.",
+    "shared_constraints": "N,Q>=1; coordinates and weights are in[0,10^9];0<=l<r<=10^9;0<=d<u<=10^9. Updates and queries are processed chronologically. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/point_add_rectangle_sum/task.md",
+    "source_task_sha256": "320115dd8bd1118f91d832617f6c2f8b5c7dcad51c032741b3bec34656d57c2e",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "rectangle_add_point_get": {
+    "canonical_raw": "Maintain weighted rectangles, each covering l<=x<r and d<=y<u. Operation0 l d r u w inserts a new rectangle occurrence of weightw. Operation1 x y sums weights of all currently stored rectangles covering that point.",
+    "canonical_l3": "Maintain weighted rectangles, each covering l<=x<=r and d<=y<u. Operation0 l d r u w inserts a new rectangle occurrence of weightw. Operation1 x y sums weights of all currently stored rectangles covering that point.",
+    "io_protocol": "Input N Q;N initial rectangles l_i d_i r_i u_i w_i;Q operations0 l d r u w or1 x y. Output one exact weighted sum per type1 operation.",
+    "shared_constraints": "N,Q>=1;0<=l<r<=10^9;0<=d<u<=10^9;0<=query x,query y,w<=10^9. Initial and inserted rectangles obey the same bounds. Identical rectangles remain separate weighted occurrences. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/data_structure/rectangle_add_point_get/task.md",
+    "source_task_sha256": "e9a6c6d551760a59b069c94e14e0ed268016c0ac10f7343eaa3bc4656836f6e6",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "number_of_substrings": {
+    "canonical_raw": "Count the number of DISTINCT NONEMPTY contiguous substrings ofS. Equal strings at different positions are counted only once.",
+    "canonical_l3": "Count the number of DISTINCT NONEMPTY contiguous substrings ofS whose length is EVEN. Equal strings at different positions are counted only once.",
+    "io_protocol": "Input one stringS. Output one integer.",
+    "shared_constraints": "S is nonempty and consists only of lowercase English letters. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/string/number_of_substrings/task.md",
+    "source_task_sha256": "7fcde3653e17c99421bcc092822cd880eb7ac5bcab6384b8c6dc6cda860a74ac",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "wildcard_pattern_matching": {
+    "canonical_raw": "For every offseti with0<=i<=|S|-|T|, compareS[i:i+|T|] withT. The alignment matches iff at each position the two characters are equal OR the text character is* OR the pattern character is*. Each* matches exactly one character, not a variable-length string.",
+    "canonical_l3": "For every offseti with0<=i<=|S|-|T|, compareS[i:i+|T|] withT. The alignment matches iff at each position the pattern character is* OR the text character equals the pattern character. A pattern* matches any single character, including a text*. A text* has no wildcard power and fails against every lowercase pattern letter.",
+    "io_protocol": "Input textS then patternT as two whitespace-separated strings. Output ONE BITSTRING of length |S|-|T|+1, with no spaces: characteri is1 for a matching alignment and0 otherwise.",
+    "shared_constraints": "1<=|T|<=|S|. Both strings contain only lowercase English letters and*. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/string/wildcard_pattern_matching/task.md",
+    "source_task_sha256": "4998a20707427f1f6f49f98358899f89c2563432082ee616085ec036535c4d6a",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  },
+  "lyndon_factorization": {
+    "canonical_raw": "A nonempty word is Lyndon if it is strictly lexicographically smaller than each of its nonempty proper suffixes. A Lyndon factorization partitionsS into a sequence of Lyndon words in NONINCREASING lexicographic order. Lexicographic comparisons treat a proper prefix as smaller. Use the alphabet ordera<b<...<z and output the unique factor boundaries.",
+    "canonical_l3": "A nonempty word is Lyndon if it is strictly lexicographically smaller than each of its nonempty proper suffixes. A Lyndon factorization partitionsS into a sequence of Lyndon words in NONINCREASING lexicographic order. Lexicographic comparisons treat a proper prefix as smaller. Use the REVERSED alphabet orderz<y<...<a and output the unique factor boundaries. Characters inS itself are not rewritten.",
+    "io_protocol": "Input one stringS of lengthN. Output boundary indices0=a_0<a_1<...<a_k=N; factorj isS[a_j:a_(j+1)]. Output only thosek+1 indices, without a preceding count.",
+    "shared_constraints": "S is nonempty and consists only of lowercase English letters. All numeric inputs are integers. Indices are zero-based unless explicitly stated otherwise.",
+    "source_task_path": "sources/library-checker-problems-master/string/lyndon_factorization/task.md",
+    "source_task_sha256": "4bd36d833d711495bdda02bf061db4ae3bd6bdfa413192c7e4e11deaeb424bbe",
+    "statement_review": "Agent-authored standalone restatement checked against archived task.md, parameter domains, mutation SPEC and executable protocols; no original examples reused."
+  }
+}

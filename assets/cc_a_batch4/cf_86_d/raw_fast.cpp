@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+using i128=__int128_t;void put(i128 x){if(x>=10)put(x/10);cout<<char('0'+x%10);}int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n,q;cin>>n>>q;vector<int>a(n);for(int&x:a)cin>>x;struct Q{int l,r,id;};vector<Q>v(q);for(int i=0;i<q;i++)cin>>v[i].l>>v[i].r,v[i].l--,v[i].r--,v[i].id=i;int b=max(1,(int)sqrt(n));sort(v.begin(),v.end(),[&](Q x,Q y){if(x.l/b!=y.l/b)return x.l/b<y.l/b;return (x.l/b)%2?x.r>y.r:x.r<y.r;});vector<ll>cnt(1000001);vector<i128>ans(q);i128 sum=0;auto value=[](ll k){return MOD?(i128)k*k*k:(i128)k*k;};auto change=[&](int p,int d){ll &k=cnt[a[p]];sum-=value(k)*a[p];k+=d;sum+=value(k)*a[p];};int l=0,r=-1;for(Q z:v){while(l>z.l)change(--l,1);while(r<z.r)change(++r,1);while(l<z.l)change(l++,-1);while(r>z.r)change(r--,-1);ans[z.id]=sum;}for(auto x:ans)put(x),cout<<'\n';}

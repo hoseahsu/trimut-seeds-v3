@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;cin>>n;vector<vector<pair<int,int>>>g(n);for(int i=1,u,v,w;i<n;i++){cin>>u>>v>>w;--u,--v;g[u].push_back({v,w});g[v].push_back({u,w});}int q,k;cin>>q>>k;--k;vector<array<int,20>>up(n);vector<int>dep(n),p(n,-1),order{k};vector<ll>d(n);p[k]=k;up[k].fill(k);for(int h=0;h<(int)order.size();h++){int u=order[h];for(auto [v,w]:g[u])if(v!=p[u]){p[v]=u;dep[v]=dep[u]+1;d[v]=d[u]+w;up[v][0]=u;for(int j=1;j<20;j++)up[v][j]=up[up[v][j-1]][j-1];order.push_back(v);}}auto lca=[&](int u,int v){if(dep[u]<dep[v])swap(u,v);for(int j=19;j>=0;j--)if(dep[u]-(1<<j)>=dep[v])u=up[u][j];if(u==v)return u;for(int j=19;j>=0;j--)if(up[u][j]!=up[v][j])u=up[u][j],v=up[v][j];return up[u][0];};while(q--){int u,v;cin>>u>>v;--u,--v;cout<<d[u]+d[v]-(MOD?2*d[lca(u,v)]:0)<<'\n';}}

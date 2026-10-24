@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n,m;cin>>n>>m;vector<string>a(n);for(string&s:a)cin>>s;vector<bool>essential(n);vector<pair<int,int>>pairs;for(int j=0;j<m;j++){int cnt=0,u=-1,v=-1;for(int i=0;i<n;i++)if(a[i][j]=='1'){cnt++;v=u;u=i;}if(cnt==1)essential[u]=true;if(cnt==2)pairs.push_back({min(u,v),max(u,v)});}ll free=count(essential.begin(),essential.end(),false);bool ok=free>=1;if(MOD){set<pair<int,int>>bad;for(auto e:pairs)if(!essential[e.first]&&!essential[e.second])bad.insert(e);ok=free*(free-1)/2>(ll)bad.size();}cout<<(ok?"YES":"NO")<<'\n';}

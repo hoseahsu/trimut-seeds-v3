@@ -1,0 +1,2155 @@
+[
+  {
+    "seed_id": "TM001",
+    "raw_sha256": "4015438e78f92a903cb64e092ad73b895ca2f2c0f10e4c5e0c75b2fd4f27ea8b",
+    "scenario": "A calibration panel assembles identifiers from a pool of serial tiles. Each tile carries one decimal digit and can belong to only one assembled identifier.",
+    "entity_mapping": [
+      {
+        "raw": "digit cards",
+        "mutated": "serial tiles"
+      },
+      {
+        "raw": "phone numbers",
+        "mutated": "identifiers"
+      },
+      {
+        "raw": "cards",
+        "mutated": "tiles"
+      },
+      {
+        "raw": "card",
+        "mutated": "tile"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'digit cards', 'phone numbers', 'cards', 'card' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM002",
+    "raw_sha256": "ffa5a2b3628b657cbbebaac2999504831e4c6ee5203dfdd9d3e733da149c2cdb",
+    "scenario": "A numerical registry reserves a closed band of identifier values. A request seeks a positive identifier on its specified divisibility grid outside that reserved band.",
+    "entity_mapping": [
+      {
+        "raw": "closed interval",
+        "mutated": "closed reserved band"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'closed interval' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM003",
+    "raw_sha256": "ca1f814cfb3604f4cc79709f61153b38fcba8c54d1d141eb571a258b81927213",
+    "scenario": "A warehouse keeps successive inventory records after individual stock removals. The records retain every remaining unit, although their listed order may change.",
+    "entity_mapping": [
+      {
+        "raw": "Arrays",
+        "mutated": "Inventory records"
+      },
+      {
+        "raw": "multiset",
+        "mutated": "stock bag"
+      },
+      {
+        "raw": "occurrence",
+        "mutated": "stock unit"
+      },
+      {
+        "raw": "array",
+        "mutated": "inventory record"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'Arrays', 'multiset', 'occurrence', 'array' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM004",
+    "raw_sha256": "6b32572d1b847fefda87a5322d9da29b8d3347e17e73a5b1e2fa8d5b489179c8",
+    "scenario": "A software control panel manages binary indicators through activation commands. An indicator records whether its associated condition has been activated.",
+    "entity_mapping": [
+      {
+        "raw": "bulb",
+        "mutated": "indicator"
+      },
+      {
+        "raw": "button",
+        "mutated": "activation command"
+      },
+      {
+        "raw": "bulbs",
+        "mutated": "indicators"
+      },
+      {
+        "raw": "buttons",
+        "mutated": "activation commands"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'bulb', 'button', 'bulbs', 'buttons' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM005",
+    "raw_sha256": "6fd8866076e76a3469fe1d101b4d8e0b9afe8487dec81ce1187be82621614c4d",
+    "scenario": "A layout editor fills a one-dimensional strip with repeated copies of one template. Its placement count is the number of copies used.",
+    "entity_mapping": [
+      {
+        "raw": "bucket",
+        "mutated": "template"
+      },
+      {
+        "raw": "hours",
+        "mutated": "placements"
+      },
+      {
+        "raw": "segment",
+        "mutated": "strip"
+      },
+      {
+        "raw": "hour",
+        "mutated": "placement"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'bucket', 'hours', 'segment', 'hour' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM006",
+    "raw_sha256": "c10b83ace1053da12572428990953d1a3aa1d6eadc7b0f2de898df954133720f",
+    "scenario": "A provisioning dashboard assigns each account the same capacity k. The entries a_i record used capacity, and the dashboard compares the aggregate unused capacity with the aggregate used capacity using the stated strict inequality.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The Raw rule has no replaceable entity phrase: only a formula and its mathematical operators. This record adds a domain interpretation with identity variable mapping and makes no claim of narrative removal; every Raw byte remains unchanged.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM007",
+    "raw_sha256": "01dcb26352d880886c3f1bc89b3bc7bf50c555d10b0285b5ae19760b50accb09",
+    "scenario": "A network directory gives each endpoint a primary tag and a secondary tag. Ordered communication events are checked using the two endpoint roles specified below.",
+    "entity_mapping": [
+      {
+        "raw": "team",
+        "mutated": "endpoint"
+      },
+      {
+        "raw": "home colour",
+        "mutated": "primary tag"
+      },
+      {
+        "raw": "away colour",
+        "mutated": "secondary tag"
+      },
+      {
+        "raw": "teams",
+        "mutated": "endpoints"
+      },
+      {
+        "raw": "colour",
+        "mutated": "tag"
+      },
+      {
+        "raw": "colours",
+        "mutated": "tags"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'team', 'home colour', 'away colour', 'teams', 'colour', 'colours' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM008",
+    "raw_sha256": "fa5d7d1b48f8e5e944c7e05dcd5938503ceab3094e27a787c6d0f7a31c4ff82b",
+    "scenario": "A courier simulation must assign distinct transfer tokens at pickup coordinates to people. Service cost is the sum of the two coordinate distances stated below.",
+    "entity_mapping": [
+      {
+        "raw": "key",
+        "mutated": "transfer token"
+      },
+      {
+        "raw": "travel time",
+        "mutated": "service cost"
+      },
+      {
+        "raw": "keys",
+        "mutated": "transfer tokens"
+      },
+      {
+        "raw": "Travel cost",
+        "mutated": "Service cost"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'key', 'travel time', 'keys', 'Travel cost' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM009",
+    "raw_sha256": "d7ab2e90ecd853d55970eda024eaae63e65e506a3f0ba9a32086358f7a19b9bb",
+    "scenario": "An inspection log lists the quality score of each submitted item in order. An item is flagged by comparing its score with those of earlier submissions.",
+    "entity_mapping": [
+      {
+        "raw": "height",
+        "mutated": "quality score"
+      },
+      {
+        "raw": "heights",
+        "mutated": "quality scores"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'height', 'heights' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM010",
+    "raw_sha256": "f74e17bf7d3052471f5bf9e9474533b3f8d8d5deaaaf921d874bac3317167793",
+    "scenario": "An accounting audit examines consecutive blocks of a signed ledger. A qualifying block has exactly the balance required below.",
+    "entity_mapping": [
+      {
+        "raw": "subarrays",
+        "mutated": "contiguous ledger blocks"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subarrays' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM011",
+    "raw_sha256": "653fe2b9aa9f4de5844e9605a41e75e277a8667e758fccbf4725baa4a86a5333",
+    "scenario": "An archive selects records for a storage allocation. Each selected record contributes utility and consumes a stated amount of storage.",
+    "entity_mapping": [
+      {
+        "raw": "value",
+        "mutated": "utility"
+      },
+      {
+        "raw": "weight",
+        "mutated": "storage load"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'value', 'weight' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM012",
+    "raw_sha256": "169af342b4f4e5a594439ede868ddc44f61f34ed771587209c46eecf4733303c",
+    "scenario": "Two publication catalogs list their identifiers in increasing order. Produce the identifiers that belong to both catalogs.",
+    "entity_mapping": [
+      {
+        "raw": "sets",
+        "mutated": "catalogs"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'sets' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM013",
+    "raw_sha256": "f798ce7e872fa430ec69025604ea35d669de7b588346fa596f7465a8350019f8",
+    "scenario": "An access-control designer rearranges the decimal symbols of an access code. A proposed code is judged against the required ordering and leading-zero convention.",
+    "entity_mapping": [
+      {
+        "raw": "string",
+        "mutated": "access code"
+      },
+      {
+        "raw": "strings",
+        "mutated": "access codes"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'string', 'strings' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM014",
+    "raw_sha256": "9212bab321150a963c637bbcf2192e2fe9767098a43d80451289e756cb45d4f1",
+    "scenario": "A registry audit examines identifier values inside each requested window. Each value is tested against the two remainder expressions stated below.",
+    "entity_mapping": [
+      {
+        "raw": "interval",
+        "mutated": "registry window"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'interval' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM015",
+    "raw_sha256": "1283884ddf9a37f6ccae6de62f97b6d7d14cac6804a41ba6f7f6e4c08ba85715",
+    "scenario": "A quality-control archive records one score per inspection. It counts inspections that establish either kind of strict record specified below.",
+    "entity_mapping": [
+      {
+        "raw": "contest",
+        "mutated": "inspection"
+      },
+      {
+        "raw": "contests",
+        "mutated": "inspections"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'contest', 'contests' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM016",
+    "raw_sha256": "18c41a4cdf2547a2bb3022ae4b458358ca2748c2cc93b178cce50149fb1db0e1",
+    "scenario": "A systems catalog assigns each module a resource rating and a nonnegative compatibility factor. A chosen group is evaluated by its total compatibility and rating spread.",
+    "entity_mapping": [
+      {
+        "raw": "friendship",
+        "mutated": "compatibility"
+      },
+      {
+        "raw": "friends",
+        "mutated": "modules"
+      },
+      {
+        "raw": "wealth",
+        "mutated": "resource rating"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'friendship', 'friends', 'wealth' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM017",
+    "raw_sha256": "0661d9c9f72f5f15350ab73786cb7f6949fb5ebd2c482fb8eba2d1b1aac78072",
+    "scenario": "Two audit departments publish ranked lists of numerical measurements. Their positions are paired according to the comparison and index-span rule below.",
+    "entity_mapping": [
+      {
+        "raw": "arrays",
+        "mutated": "audit lists"
+      },
+      {
+        "raw": "array",
+        "mutated": "audit list"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'arrays', 'array' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM018",
+    "raw_sha256": "06ca845aa10e42a163c5aa7e2b65f89dcaa85c2a812de9e66521eb364d7fbf2a",
+    "scenario": "A telemetry analyst retains selected measurements from an ordered record. The retained measurement trail is judged by the difference between consecutive retained values.",
+    "entity_mapping": [
+      {
+        "raw": "subsequence",
+        "mutated": "retained measurement trail"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subsequence' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM019",
+    "raw_sha256": "a0a45e70b395191a123972b9e3384e292a0fc4f58128756f5296d59ba258add2",
+    "scenario": "A display designer uses a restricted set of numeric glyphs to form positive identifiers. Count identifiers that meet the stated magnitude and glyph-presence requirements.",
+    "entity_mapping": [
+      {
+        "raw": "digits",
+        "mutated": "numeric glyphs"
+      },
+      {
+        "raw": "digit",
+        "mutated": "numeric glyph"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'digits', 'digit' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM020",
+    "raw_sha256": "d1c7bf7587d25301d824893ef415d9e4da0749afa7e7ffd94b919aa326ec6a54",
+    "scenario": "A media curator chooses clips with durations and relevance scores. The quality of a selection combines its total duration with its least relevance score.",
+    "entity_mapping": [
+      {
+        "raw": "songs",
+        "mutated": "media clips"
+      },
+      {
+        "raw": "length",
+        "mutated": "duration"
+      },
+      {
+        "raw": "beauty",
+        "mutated": "relevance score"
+      },
+      {
+        "raw": "pleasure",
+        "mutated": "curation value"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'songs', 'length', 'beauty', 'pleasure' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM021",
+    "raw_sha256": "b69ab0d344e9f47c41d3d80947fb8a7ba545037c8bca2a915e5927b40dd59fc0",
+    "scenario": "A shelf-layout editor encodes occupied and unoccupied positions as binary layouts. It evaluates how many contiguous sections contain an occupied position.",
+    "entity_mapping": [
+      {
+        "raw": "binary strings",
+        "mutated": "binary layouts"
+      },
+      {
+        "raw": "substrings",
+        "mutated": "contiguous sections"
+      },
+      {
+        "raw": "binary string",
+        "mutated": "binary layout"
+      },
+      {
+        "raw": "substring",
+        "mutated": "contiguous section"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'binary strings', 'substrings', 'binary string', 'substring' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM022",
+    "raw_sha256": "744df1d704cfdb90159568dfee439cb8d3e7384c60ab0e73ab07e6b0e4f92a25",
+    "scenario": "A grant office forms panels from numerically scored applications. Count the panels whose total score attains the stated optimum.",
+    "entity_mapping": [
+      {
+        "raw": "subsets",
+        "mutated": "grant panels"
+      },
+      {
+        "raw": "follower counts",
+        "mutated": "application ratings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subsets', 'follower counts' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM023",
+    "raw_sha256": "571544840ce524abcfce5d86a7b08b3a7f95bc491a9337f7d11de5400a0052a3",
+    "scenario": "A decimal display follows a multiplicative calibration rule with base 1378 over n cycles. Its displayed value is exactly the residue specified by the expression below.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The Raw rule has no replaceable entity phrase: only a formula and its mathematical operators. This record adds a domain interpretation with identity variable mapping and makes no claim of narrative removal; every Raw byte remains unchanged.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM024",
+    "raw_sha256": "041bc83c381ba12b88da21c16e6ed27473856e9e24e43d28b50cdb9282bebb02",
+    "scenario": "A resource display shows unit-width capacity columns. Find the largest rectangular reservation that fits below their displayed capacities.",
+    "entity_mapping": [
+      {
+        "raw": "histogram",
+        "mutated": "capacity diagram"
+      },
+      {
+        "raw": "bar",
+        "mutated": "capacity column"
+      },
+      {
+        "raw": "bars",
+        "mutated": "capacity columns"
+      },
+      {
+        "raw": "rectangle",
+        "mutated": "rectangular reservation"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'histogram', 'bar', 'bars', 'rectangle' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM025",
+    "raw_sha256": "0cc917075240507c34f375ef06b2767f1924b20f68109a100b0979fc9780d603",
+    "scenario": "A processing queue lists items by their fixed order and assigns each a throughput rating. An item qualifies according to how its rating compares with earlier items.",
+    "entity_mapping": [
+      {
+        "raw": "car",
+        "mutated": "queue item"
+      },
+      {
+        "raw": "speed",
+        "mutated": "throughput rating"
+      },
+      {
+        "raw": "cars",
+        "mutated": "queue items"
+      },
+      {
+        "raw": "speeds",
+        "mutated": "throughput ratings"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'car', 'speed', 'cars', 'speeds' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM026",
+    "raw_sha256": "498a52a5a5e1bc1d987bb126cb8b33694c6781fc3cb1eb7026dd26edbd4d9ab1",
+    "scenario": "A service agent moves between numbered stations to serve clients and returns to a chosen rest station. The specified client journeys determine the total daily movement cost.",
+    "entity_mapping": [
+      {
+        "raw": "elevator",
+        "mutated": "service agent"
+      },
+      {
+        "raw": "floor",
+        "mutated": "station"
+      },
+      {
+        "raw": "resident",
+        "mutated": "client"
+      },
+      {
+        "raw": "electricity",
+        "mutated": "movement cost"
+      },
+      {
+        "raw": "floors",
+        "mutated": "stations"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'elevator', 'floor', 'resident', 'electricity', 'floors' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM027",
+    "raw_sha256": "20cd032c13e55c29951d78882e7150981d449d76484cdd953a3537a7d261f2eb",
+    "scenario": "A stock-label editor rearranges a numeric inventory label through the allowed adjacent exchanges. The full label, including its leading zeros, remains significant.",
+    "entity_mapping": [
+      {
+        "raw": "digit string",
+        "mutated": "numeric inventory label"
+      },
+      {
+        "raw": "decimal strings",
+        "mutated": "decimal inventory labels"
+      },
+      {
+        "raw": "string",
+        "mutated": "inventory label"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'digit string', 'decimal strings', 'string' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM028",
+    "raw_sha256": "1f0a603dd79854a649f3836661a8caf7db121c9de93acb48d261bb68a7124c34",
+    "scenario": "A memory-layout diagram contains available slots and blocked slots. Cover the available slots with the permitted patches at minimum cost.",
+    "entity_mapping": [
+      {
+        "raw": "cells",
+        "mutated": "slots"
+      },
+      {
+        "raw": "cell",
+        "mutated": "slot"
+      },
+      {
+        "raw": "tiles",
+        "mutated": "patches"
+      },
+      {
+        "raw": "tile",
+        "mutated": "patch"
+      },
+      {
+        "raw": "white",
+        "mutated": "available"
+      },
+      {
+        "raw": "black",
+        "mutated": "blocked"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'cells', 'cell', 'tiles', 'tile', 'white', 'black' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM029",
+    "raw_sha256": "631e2fa8e0516f3c28ac7aa622044d74b574e0e25df160ca6ff43df6311f5f90",
+    "scenario": "A transmission audit examines consecutive blocks of reported values. A block qualifies when a reported value reaches the specified repetition threshold.",
+    "entity_mapping": [
+      {
+        "raw": "subarrays",
+        "mutated": "contiguous transmission blocks"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subarrays' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM030",
+    "raw_sha256": "d0fb0068e883717456928e7082b73bd8685dc450aceb9855edbeb0c973748156",
+    "scenario": "An abstract connector system starts with one active output channel. Fan-out adapters change the number of available outputs by exactly the rule stated below.",
+    "entity_mapping": [
+      {
+        "raw": "splitter",
+        "mutated": "fan-out adapter"
+      },
+      {
+        "raw": "terminal pipes",
+        "mutated": "active output channels"
+      },
+      {
+        "raw": "splitters",
+        "mutated": "fan-out adapters"
+      },
+      {
+        "raw": "terminal pipe",
+        "mutated": "active output channel"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'splitter', 'terminal pipes', 'splitters', 'terminal pipe' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM031",
+    "raw_sha256": "475315b94ecb931a35afb32fcf38f2cbea4d8d06f4aeca1732963f933133cbb9",
+    "scenario": "A calibration profile contains adjustable integer readings. Calibration rounds offer exactly the addition sizes specified below, and the target is the stated order of readings.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "calibration profile"
+      },
+      {
+        "raw": "second",
+        "mutated": "calibration round"
+      },
+      {
+        "raw": "seconds",
+        "mutated": "calibration rounds"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'array', 'second', 'seconds' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM032",
+    "raw_sha256": "bf1a27f8e6dd24a81b63e816b7ee939dfd5c80afb8d69bc1b133e975f9b25077",
+    "scenario": "Distribution depots group packages into shipments according to their priority scores. Each depot follows the stated selection order independently for every requested shipment size.",
+    "entity_mapping": [
+      {
+        "raw": "team",
+        "mutated": "shipment"
+      },
+      {
+        "raw": "university",
+        "mutated": "depot"
+      },
+      {
+        "raw": "students",
+        "mutated": "packages"
+      },
+      {
+        "raw": "skills",
+        "mutated": "priority scores"
+      },
+      {
+        "raw": "teams",
+        "mutated": "shipments"
+      },
+      {
+        "raw": "skill",
+        "mutated": "priority score"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'team', 'university', 'students', 'skills', 'teams', 'skill' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM033",
+    "raw_sha256": "caa936e9a7777e47822f2e9f5076425f603352527ed2b5b64d8e1204c149a844",
+    "scenario": "A display contains numbered tokens with two orientation states. Exchanging adjacent tokens changes their states as prescribed, and the final display must satisfy the stated ordering and orientation requirements.",
+    "entity_mapping": [
+      {
+        "raw": "friends",
+        "mutated": "display tokens"
+      },
+      {
+        "raw": "directions",
+        "mutated": "orientation states"
+      },
+      {
+        "raw": "Friends",
+        "mutated": "Display tokens"
+      },
+      {
+        "raw": "direction",
+        "mutated": "orientation state"
+      },
+      {
+        "raw": "shirt numbers",
+        "mutated": "token labels"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'friends', 'directions', 'Friends', 'direction', 'shirt numbers' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM034",
+    "raw_sha256": "4e26b4cddcb3cf0193825c739b0ecbcfb0c21d0c0403f163511dcc3bdd0aeb7d",
+    "scenario": "A circular display can be rotated while preserving the relative order of its entries. Determine whether a permitted carousel alignment satisfies the requested numerical order.",
+    "entity_mapping": [
+      {
+        "raw": "cyclic shifts",
+        "mutated": "carousel rotations"
+      },
+      {
+        "raw": "cyclic shift",
+        "mutated": "carousel rotation"
+      },
+      {
+        "raw": "shifts",
+        "mutated": "rotations"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'cyclic shifts', 'cyclic shift', 'shifts' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM035",
+    "raw_sha256": "5723b094da910ac7fbada3c60cda4ab79d520e92c9f019a0b818f4b167dcc130",
+    "scenario": "An event-code audit searches for two specified two-character motifs. Their occurrences must obey the stated separation rule.",
+    "entity_mapping": [
+      {
+        "raw": "string",
+        "mutated": "event code"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'string' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM036",
+    "raw_sha256": "284efdbca0e240ca63e6c6ff38ef8e036176bd87f803b3801bc6630cb5a6d1ef",
+    "scenario": "An accountant chooses an ordered selection of ledger entries. The total of the chosen entries must meet the divisibility requirement below.",
+    "entity_mapping": [
+      {
+        "raw": "subsequence",
+        "mutated": "ordered ledger selection"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subsequence' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM037",
+    "raw_sha256": "0ede1ef8e07cd4848c2dedfdbaaa588383d79f6cfa0f5bbccc3ba51d9d708479",
+    "scenario": "A circular interface contains numbered display markers in slots. Apply the specified rotations and paired exchanges, then report the marker occupying every slot.",
+    "entity_mapping": [
+      {
+        "raw": "boy",
+        "mutated": "display marker"
+      },
+      {
+        "raw": "position",
+        "mutated": "slot"
+      },
+      {
+        "raw": "positions",
+        "mutated": "slots"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'boy', 'position', 'positions' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM038",
+    "raw_sha256": "1d14ce3d85e71ccc2b133cb967fe0f03eca059afbf451a73e501fa8303be40b6",
+    "scenario": "A rack-inspection display uses row and lane addresses. An inspection marker follows the prescribed traversal, and its address is required after the specified number of transitions.",
+    "entity_mapping": [
+      {
+        "raw": "column",
+        "mutated": "rack lane"
+      },
+      {
+        "raw": "position",
+        "mutated": "rack address"
+      },
+      {
+        "raw": "moves",
+        "mutated": "step transitions"
+      },
+      {
+        "raw": "move",
+        "mutated": "step transition"
+      },
+      {
+        "raw": "columns",
+        "mutated": "rack lanes"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'column', 'position', 'moves', 'move', 'columns' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM039",
+    "raw_sha256": "c4b6ce0b6b79d500900aa2c55aafda1ac4cef37a650e9360b3b611138f29f818",
+    "scenario": "An allocation record lists an ordered amount for each of its entries. Count records whose nonnegative integer amounts have the required total.",
+    "entity_mapping": [
+      {
+        "raw": "sequences",
+        "mutated": "allocation records"
+      },
+      {
+        "raw": "moves",
+        "mutated": "amounts"
+      },
+      {
+        "raw": "move",
+        "mutated": "amount"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'sequences', 'moves', 'move' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM040",
+    "raw_sha256": "3c10b58103cd48b1a11106456b6b7e3f267d739c2ae31d9f88a638d1b4797d96",
+    "scenario": "A digital accounting system settles a charge using coupons with decimal-power denominations. Issued coupons and coupons returned as change contribute to the stated total cost.",
+    "entity_mapping": [
+      {
+        "raw": "banknotes",
+        "mutated": "accounting coupons"
+      },
+      {
+        "raw": "banknote",
+        "mutated": "accounting coupon"
+      },
+      {
+        "raw": "notes",
+        "mutated": "coupons"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'banknotes', 'banknote', 'notes' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM041",
+    "raw_sha256": "e80c354c519ef68ed4bc988b2a68494912f6bc3612715be63367a9047138eeae",
+    "scenario": "A service directory places data requests and service nodes on a numerical coordinate line. Each request is attributed independently to a nearest node using the specified tie rule.",
+    "entity_mapping": [
+      {
+        "raw": "rider",
+        "mutated": "data request"
+      },
+      {
+        "raw": "taxi",
+        "mutated": "service node"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'rider', 'taxi' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM042",
+    "raw_sha256": "d57956ed567b3bc44b7b6f14a038bf53be9f0115bd7f87229fa9ddba9fbb3e2c",
+    "scenario": "Retrieval agents inspect archives with numerical eligibility ratings. Each agent collects the payload from every archive that its rating permits under the stated comparison.",
+    "entity_mapping": [
+      {
+        "raw": "spaceship",
+        "mutated": "retrieval agent"
+      },
+      {
+        "raw": "base",
+        "mutated": "archive"
+      },
+      {
+        "raw": "gold",
+        "mutated": "payload"
+      },
+      {
+        "raw": "ship",
+        "mutated": "collector"
+      },
+      {
+        "raw": "bases",
+        "mutated": "archives"
+      },
+      {
+        "raw": "attack",
+        "mutated": "clearance rating"
+      },
+      {
+        "raw": "defense",
+        "mutated": "access rating"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'spaceship', 'base', 'gold', 'ship', 'bases', 'attack', 'defense' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM043",
+    "raw_sha256": "76e92e2f810f4f1406ba4cb8d81d09063607d73135e20356a88f94c5357ac648",
+    "scenario": "A stock-reconciliation system holds inventory tokens with type labels. It repeatedly cancels eligible pairs and seeks the smallest remaining inventory.",
+    "entity_mapping": [
+      {
+        "raw": "elements",
+        "mutated": "inventory tokens"
+      },
+      {
+        "raw": "values",
+        "mutated": "type labels"
+      },
+      {
+        "raw": "value",
+        "mutated": "type label"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'elements', 'values', 'value' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM044",
+    "raw_sha256": "9238f65732f15e5cddc97d55a3dcead85938eb1d3cc65163cdce99b71f2f4ec1",
+    "scenario": "A label editor stores symbols in a rectangular matrix. Independent column rearrangements determine which complete labels can be assembled.",
+    "entity_mapping": [
+      {
+        "raw": "word table",
+        "mutated": "label matrix"
+      },
+      {
+        "raw": "letters",
+        "mutated": "symbols"
+      },
+      {
+        "raw": "words",
+        "mutated": "labels"
+      },
+      {
+        "raw": "word",
+        "mutated": "label"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'word table', 'letters', 'words', 'word' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM045",
+    "raw_sha256": "8ef123f5a9ce6ebad3da3492852ccb65374d1c27c016911266991a29180c1fa9",
+    "scenario": "A software registry links service accounts through supported formats. Configuration changes add individual format support, and relay services may enable indirect interoperability.",
+    "entity_mapping": [
+      {
+        "raw": "employee",
+        "mutated": "service account"
+      },
+      {
+        "raw": "language",
+        "mutated": "format"
+      },
+      {
+        "raw": "courses",
+        "mutated": "configuration changes"
+      },
+      {
+        "raw": "translators",
+        "mutated": "relay services"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'employee', 'language', 'courses', 'translators' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM046",
+    "raw_sha256": "5b95154da85c38fd2e2af973f8df6810d6af0be331647cdff728a53ab3747ebf",
+    "scenario": "An audit request inspects a consecutive run of numbered batches. Their loads follow the stated arithmetic progression and must satisfy both capacity comparisons.",
+    "entity_mapping": [
+      {
+        "raw": "query",
+        "mutated": "audit request"
+      },
+      {
+        "raw": "height",
+        "mutated": "batch load"
+      },
+      {
+        "raw": "queries",
+        "mutated": "audit requests"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'query', 'height', 'queries' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM047",
+    "raw_sha256": "9d06e00643a8e72dfb817a3d45800713d9c0c297a568e1445de6c5e86acf8262",
+    "scenario": "A calibration worksheet places measurements and reference marks at numerical coordinates. Find the least tolerance that gives each measurement the required reference coverage.",
+    "entity_mapping": [
+      {
+        "raw": "radius",
+        "mutated": "tolerance"
+      },
+      {
+        "raw": "city",
+        "mutated": "measurement"
+      },
+      {
+        "raw": "tower",
+        "mutated": "reference mark"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'radius', 'city', 'tower' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM048",
+    "raw_sha256": "d1e7413cf095d0f6c92040703347964753bf91dc89f1fcddabb91af6faa7f7e0",
+    "scenario": "An inspection record contains an ordered series of numerical readings. Count contiguous inspection blocks satisfying the equality of extrema below.",
+    "entity_mapping": [
+      {
+        "raw": "subarrays",
+        "mutated": "contiguous inspection blocks"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subarrays' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM049",
+    "raw_sha256": "870a5db87fe4f72b904c95af5621370f2403248280f1b907ad5487587a9a44f1",
+    "scenario": "A scoring model assigns coefficient A_i to each indexed participant. The interaction contribution of a pair is the product of its two coefficients, and the required aggregate uses exactly the index condition and modulus below.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The Raw rule has no replaceable entity phrase: only a formula and its mathematical operators. This record adds a domain interpretation with identity variable mapping and makes no claim of narrative removal; every Raw byte remains unchanged.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM050",
+    "raw_sha256": "943a6304dd4fc64968892e7eac87e986238684cf9a62fcde27397db5a8b25734",
+    "scenario": "A catalog editor deletes label tokens while retaining the order of surviving entries. The resulting nonempty catalog must have the target label pattern stated below.",
+    "entity_mapping": [
+      {
+        "raw": "bricks",
+        "mutated": "label tokens"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'bricks' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM051",
+    "raw_sha256": "c1b78d583cb7e32ce4fb6f61b37cc2f44e27dfc15e8bdf9e92568b8c5519977f",
+    "scenario": "A data-format migration renames alphabet labels consistently throughout a text. The allowed renaming operation is exactly the global exchange specified below.",
+    "entity_mapping": [
+      {
+        "raw": "letter identities",
+        "mutated": "alphabet labels"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'letter identities' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM052",
+    "raw_sha256": "a1144c27b6da1253cb19a0ddb072d9c536f68addd2fbb833181a9eb437918d07",
+    "scenario": "A naming system builds one composite identifier from fixed-length identifier blocks. Every supplied block must appear in the composite under the stated ordering objective.",
+    "entity_mapping": [
+      {
+        "raw": "strings",
+        "mutated": "identifier blocks"
+      },
+      {
+        "raw": "string",
+        "mutated": "identifier block"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'strings', 'string' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM053",
+    "raw_sha256": "81428e54ffcb2614030d5e001f504ed37746efc9c9d34bf4be9ddc8f93981034",
+    "scenario": "An allocation planner represents a total using consecutive positive quota amounts. An allocation plan is distinguished by its first amount and its number of entries.",
+    "entity_mapping": [
+      {
+        "raw": "representations",
+        "mutated": "allocation plans"
+      },
+      {
+        "raw": "representation",
+        "mutated": "allocation plan"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'representations', 'representation' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM054",
+    "raw_sha256": "17cf69dc4a4e965a8a8910f99f44fbc74c4cf80af7dcdfc8e53f8c5b96e0fcdb",
+    "scenario": "A scheduler tracks reservations by their start and finish instants. Concurrent occupancy follows the endpoint convention specified below.",
+    "entity_mapping": [
+      {
+        "raw": "guests",
+        "mutated": "active reservations"
+      },
+      {
+        "raw": "arrivals",
+        "mutated": "start instants"
+      },
+      {
+        "raw": "departures",
+        "mutated": "finish instants"
+      },
+      {
+        "raw": "arrival",
+        "mutated": "start instant"
+      },
+      {
+        "raw": "departure",
+        "mutated": "finish instant"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'guests', 'arrivals', 'departures', 'arrival', 'departure' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM055",
+    "raw_sha256": "449eb614f9b80f364c3bd1500d9fb7da303f4642b7cf8ee3a9fb96fcf439fc9d",
+    "scenario": "A bit-pattern audit considers nonnegative integer mask assignments. An assignment is admissible precisely when it satisfies the stated arithmetic and XOR equation.",
+    "entity_mapping": [
+      {
+        "raw": "integer solutions",
+        "mutated": "integer mask assignments"
+      },
+      {
+        "raw": "solution",
+        "mutated": "mask assignment"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'integer solutions', 'solution' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM056",
+    "raw_sha256": "1a90970935d6c596f68d7060453bbbd069605db76ec09b8c34ce057ff946319e",
+    "scenario": "An analysis system tracks affine signal traces x_i+t*v_i. A trace pair contributes its least separation over the stated nonnegative parameter range.",
+    "entity_mapping": [
+      {
+        "raw": "unordered pair",
+        "mutated": "unordered trace pair"
+      },
+      {
+        "raw": "velocities",
+        "mutated": "rates of change"
+      },
+      {
+        "raw": "coordinates",
+        "mutated": "initial signal values"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'unordered pair', 'velocities', 'coordinates' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM057",
+    "raw_sha256": "d05fc373a001d3966dd7be9051aac0702c78f734ca5e085fdf7a49206941f474",
+    "scenario": "Two reviewers approve training modules independently. Select a collection that meets both approval quotas while minimizing its total processing time.",
+    "entity_mapping": [
+      {
+        "raw": "books",
+        "mutated": "training modules"
+      },
+      {
+        "raw": "Alice",
+        "mutated": "reviewer A"
+      },
+      {
+        "raw": "Bob",
+        "mutated": "reviewer B"
+      },
+      {
+        "raw": "reading time",
+        "mutated": "processing time"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'books', 'Alice', 'Bob', 'reading time' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM058",
+    "raw_sha256": "0e8f3408d07944607ebbe904db5d45f1f55d700c5e41724bacf7ab8b126c731a",
+    "scenario": "A deployment drawing assigns each unit an anchor and an extension length. Each unit occupies one of the three allowed footprints, and the selected footprints must satisfy the stated disjointness requirement.",
+    "entity_mapping": [
+      {
+        "raw": "tree",
+        "mutated": "deployment unit"
+      },
+      {
+        "raw": "trees",
+        "mutated": "deployment units"
+      },
+      {
+        "raw": "heights",
+        "mutated": "extension lengths"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'tree', 'trees', 'heights' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM059",
+    "raw_sha256": "475df8a0b60b94d507c7c9ace9504a7568ad0169b2214ddda856e1e62440885b",
+    "scenario": "A processing calendar receives indexed requests and contains a maintenance lock. The lock and the surrounding index slots determine which of the stated capacity limits applies.",
+    "entity_mapping": [
+      {
+        "raw": "orders",
+        "mutated": "requests"
+      },
+      {
+        "raw": "repairs",
+        "mutated": "maintenance locks"
+      },
+      {
+        "raw": "day",
+        "mutated": "index slot"
+      },
+      {
+        "raw": "order",
+        "mutated": "request"
+      },
+      {
+        "raw": "days",
+        "mutated": "index slots"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'orders', 'repairs', 'day', 'order', 'days' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM060",
+    "raw_sha256": "7fbadf6a80c33f9cd461a2ddd75570e1b395dcdef4288d89a18df3fae8beb5bd",
+    "scenario": "An execution trace progresses through numbered states using the permitted forward transitions. Disabled states may not be visited.",
+    "entity_mapping": [
+      {
+        "raw": "broken step",
+        "mutated": "disabled state"
+      },
+      {
+        "raw": "jumps",
+        "mutated": "forward transitions"
+      },
+      {
+        "raw": "paths",
+        "mutated": "execution traces"
+      },
+      {
+        "raw": "broken steps",
+        "mutated": "disabled states"
+      },
+      {
+        "raw": "broken-step",
+        "mutated": "disabled-state"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'broken step', 'jumps', 'paths', 'broken steps', 'broken-step' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM061",
+    "raw_sha256": "eba922f7b69d904c5b8aa8b63513837eb72e2a66e2d4ca55cc2c90a24a51ebf0",
+    "scenario": "A calibration tool compares sensor samples with a list of reference anchors. Each sample is assigned the closest anchor under the stated distance and tie rules.",
+    "entity_mapping": [
+      {
+        "raw": "student",
+        "mutated": "sensor sample"
+      },
+      {
+        "raw": "checkpoint",
+        "mutated": "reference anchor"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'student', 'checkpoint' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM062",
+    "raw_sha256": "b223ca4c45add9b534569217e0bed33cd530f924c74d801a248e08b4d7ad7855",
+    "scenario": "An ordered-record exhibit is rearranged by the exact adjacent-comparison process below. The requested statistic is how many exchanges that process performs.",
+    "entity_mapping": [
+      {
+        "raw": "entries",
+        "mutated": "ordered records"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'entries' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM063",
+    "raw_sha256": "878a478feb95b1432376b7c9f929c43dfea0bd206e74636cd32f8d134411d03e",
+    "scenario": "A feature-selection panel treats each supplied integer as a feature mask. It chooses the required number of mask instances to maximize the sum of their enabled-feature counts; a shared bit position contributes separately for each chosen instance.",
+    "entity_mapping": [
+      {
+        "raw": "values",
+        "mutated": "feature masks"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'values' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM064",
+    "raw_sha256": "7dd0bf6df750a5f1ce7ab8f4ea4bc701f15956cf740f0e6b3f58f1b5ac5d7b85",
+    "scenario": "An inventory ledger stores numerical identifiers, including repeated identifiers. Each lookup request asks whether its identifier is present.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "inventory ledger"
+      },
+      {
+        "raw": "query",
+        "mutated": "lookup request"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'array', 'query' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM065",
+    "raw_sha256": "d75068cbab5dead963614c91d151fe176d6beeb15e5607a2b8e20dbdf2c10af6",
+    "scenario": "Two ranked feeds list items in non-increasing priority order. Produce a combined ranked feed that retains every listed occurrence.",
+    "entity_mapping": [
+      {
+        "raw": "arrays",
+        "mutated": "ranked feeds"
+      },
+      {
+        "raw": "occurrences",
+        "mutated": "feed items"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'arrays', 'occurrences' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM066",
+    "raw_sha256": "69cf5f5884569ab478beff783600916b1a67e3e985ccb45fc40e7dc766da561f",
+    "scenario": "A report editor retains a prescribed number of ordered entries. The report is selected by the stated score and tie rule, and a requested entry of that report must be returned.",
+    "entity_mapping": [
+      {
+        "raw": "subsequence",
+        "mutated": "retained report"
+      },
+      {
+        "raw": "element",
+        "mutated": "report entry"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'subsequence', 'element' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM067",
+    "raw_sha256": "7b70485cf3d9fbd591ea3263b98001096afd0f40a23eb9882d14522ed3bfcd97",
+    "scenario": "An accounting simulator repeats the same transaction log indefinitely. Each threshold request asks for the first entry index at which the accumulated balance meets its target.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "transaction log"
+      },
+      {
+        "raw": "time",
+        "mutated": "entry index"
+      },
+      {
+        "raw": "running sum",
+        "mutated": "accumulated balance"
+      },
+      {
+        "raw": "times",
+        "mutated": "entry indices"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'array', 'time', 'running sum', 'times' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM068",
+    "raw_sha256": "a769d997be47194faf8bd1f397d381145d961e989f57aee6404e11a35a1ddeae",
+    "scenario": "A numeric display rewrites all of its glyphs simultaneously under the specified decimal rule. Only the final display length is requested.",
+    "entity_mapping": [
+      {
+        "raw": "digit",
+        "mutated": "numeric glyph"
+      },
+      {
+        "raw": "digits",
+        "mutated": "numeric glyphs"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'digit', 'digits' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM069",
+    "raw_sha256": "033c57f9bebcf994b0bc282d2d6aa33ce9dd4ed9ead0f04b695a69ba473028fe",
+    "scenario": "A labeling system groups label sequences by which positions have equal labels. One canonical representative is required for each equality-pattern class.",
+    "entity_mapping": [
+      {
+        "raw": "strings",
+        "mutated": "label sequences"
+      },
+      {
+        "raw": "isomorphism class",
+        "mutated": "equality-pattern class"
+      },
+      {
+        "raw": "member",
+        "mutated": "class delegate"
+      },
+      {
+        "raw": "members",
+        "mutated": "class delegates"
+      },
+      {
+        "raw": "representative",
+        "mutated": "canonical exemplar"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'strings', 'isomorphism class', 'member', 'members', 'representative' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM070",
+    "raw_sha256": "2ce381c7cf60528646db985a92b2493d876d159f5daf3a91a818389d867b48c9",
+    "scenario": "A source-format inspector checks delimiter traces containing opening and closing markers. Valid traces follow the stated matching and nesting rules.",
+    "entity_mapping": [
+      {
+        "raw": "parenthesis strings",
+        "mutated": "delimiter traces"
+      },
+      {
+        "raw": "opening parenthesis",
+        "mutated": "opening marker"
+      },
+      {
+        "raw": "closing parenthesis",
+        "mutated": "closing marker"
+      },
+      {
+        "raw": "strings",
+        "mutated": "symbol traces"
+      },
+      {
+        "raw": "string",
+        "mutated": "symbol trace"
+      },
+      {
+        "raw": "parentheses",
+        "mutated": "round delimiters"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'parenthesis strings', 'opening parenthesis', 'closing parenthesis', 'strings', 'string', 'parentheses' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM071",
+    "raw_sha256": "ba280077648662195528d4888857b6101a83d8f7d99b1691132bb5f06c81f887",
+    "scenario": "A kit planner chooses component instances with nonnegative integer weights. A collection is feasible exactly when its weight reaches the requested total.",
+    "entity_mapping": [
+      {
+        "raw": "input occurrences",
+        "mutated": "component instances"
+      },
+      {
+        "raw": "subset",
+        "mutated": "component collection"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'input occurrences', 'subset' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM072",
+    "raw_sha256": "a8b58772423c3f53525c97d77eebd4c21dd6693b30ce3cbe734125b49f700ab3",
+    "scenario": "Rani and Nandu operate a reserve-reduction protocol in alternating turns. Exhausting the reserve has the losing consequence stated below, and both operators choose optimally.",
+    "entity_mapping": [
+      {
+        "raw": "pile",
+        "mutated": "reserve"
+      },
+      {
+        "raw": "player",
+        "mutated": "operator"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'pile', 'player' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM073",
+    "raw_sha256": "78d769fedff60f0d935b15d2ea075eabd899ed5127e96ae6f75aeb213e085ddb",
+    "scenario": "A label-stream audit examines contiguous segments of a tape over the two permitted symbols. A segment qualifies according to the stated split-position balance condition.",
+    "entity_mapping": [
+      {
+        "raw": "substrings",
+        "mutated": "contiguous label segments"
+      },
+      {
+        "raw": "substring",
+        "mutated": "contiguous label segment"
+      },
+      {
+        "raw": "strings",
+        "mutated": "label tapes"
+      },
+      {
+        "raw": "string",
+        "mutated": "label tape"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'substrings', 'substring', 'strings', 'string' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM074",
+    "raw_sha256": "2bebcbf61112c68477b5ef4b6271e6c933c947426be9af565f010be6027bc88c",
+    "scenario": "A calibration worksheet contains positive integer readings and a required central reading. Unit adjustments to individual calibration readings are charged exactly as specified below.",
+    "entity_mapping": [
+      {
+        "raw": "individual values",
+        "mutated": "individual calibration readings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'individual values' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM075",
+    "raw_sha256": "d084a3b142373aeaca4f2302e19c47ced223ce6a20e522bcb99dc6c2de31e984",
+    "scenario": "An inventory reconciliation system cyclically adjusts numerical labels within a fixed modulus. Its inventory bags must agree with multiplicity after the adjustment.",
+    "entity_mapping": [
+      {
+        "raw": "multiset",
+        "mutated": "inventory bag"
+      },
+      {
+        "raw": "offset",
+        "mutated": "label adjustment"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'multiset', 'offset' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM076",
+    "raw_sha256": "478a2a7140842551228bb7c52b585bcb920f727a33d0970134f264dc1c214492",
+    "scenario": "A symbol sequencer performs partial playback attempts followed by a complete playback attempt. Count the emissions of each lowercase symbol across those attempts.",
+    "entity_mapping": [
+      {
+        "raw": "button presses",
+        "mutated": "symbol emissions"
+      },
+      {
+        "raw": "failed attempts",
+        "mutated": "partial playback attempts"
+      },
+      {
+        "raw": "successful full-string attempt",
+        "mutated": "complete playback attempt"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'button presses', 'failed attempts', 'successful full-string attempt' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM077",
+    "raw_sha256": "d50da6361ae1620c1f8ea25f521eeec69ba8ee871afc7f98c23e17cff28fc4fc",
+    "scenario": "A telemetry editor repairs a lowercase recording by substituting symbols. Its repaired recording must avoid the specified palindromic patterns.",
+    "entity_mapping": [
+      {
+        "raw": "string",
+        "mutated": "recording"
+      },
+      {
+        "raw": "character replacements",
+        "mutated": "symbol substitutions"
+      },
+      {
+        "raw": "strings",
+        "mutated": "recordings"
+      },
+      {
+        "raw": "replacement",
+        "mutated": "substitution"
+      },
+      {
+        "raw": "replacements",
+        "mutated": "substitutions"
+      },
+      {
+        "raw": "character",
+        "mutated": "symbol"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'string', 'character replacements', 'strings', 'replacement', 'replacements', 'character' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM078",
+    "raw_sha256": "865fee5e630a51cc69cf27721a2bd223566b662f0be27e7468acb64c81787126",
+    "scenario": "A ranking display organizes contiguous rank blocks into a binary hierarchy. Each block chooses its leader by the stated extremal rule, and every item receives a hierarchy level.",
+    "entity_mapping": [
+      {
+        "raw": "permutation interval",
+        "mutated": "contiguous rank block"
+      },
+      {
+        "raw": "binary-tree root",
+        "mutated": "hierarchy leader"
+      },
+      {
+        "raw": "depth",
+        "mutated": "hierarchy level"
+      },
+      {
+        "raw": "depths",
+        "mutated": "hierarchy levels"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'permutation interval', 'binary-tree root', 'depth', 'depths' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM079",
+    "raw_sha256": "774d28afb449cf17c4e1b8180142a6e3d2593c61dbcde2832521f41ecc3e4830",
+    "scenario": "An archive stores document occurrences with topic tags. Count pairs from different tags while treating duplicate document occurrences as separate items.",
+    "entity_mapping": [
+      {
+        "raw": "book",
+        "mutated": "document"
+      },
+      {
+        "raw": "genre",
+        "mutated": "topic tag"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'book', 'genre' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM080",
+    "raw_sha256": "369e5657f57544e6ea33cd91077c5ccff71768c1654fc29492c2f9605668cc49",
+    "scenario": "A display editor may change a bounded number of glyphs to a chosen symbol. For each request, find the longest contiguous display strip satisfying the stated edit allowance.",
+    "entity_mapping": [
+      {
+        "raw": "substring",
+        "mutated": "contiguous display strip"
+      },
+      {
+        "raw": "characters",
+        "mutated": "glyphs"
+      },
+      {
+        "raw": "repaintings",
+        "mutated": "pixel edits"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'substring', 'characters', 'repaintings' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM081",
+    "raw_sha256": "a506733e88a0c1ccce50408578b0d612a529f6db2b027f10c77107ccffe39243",
+    "scenario": "A comparison dashboard temporarily excludes one stored reading instance at a time. Report the largest remaining reading for each excluded position.",
+    "entity_mapping": [
+      {
+        "raw": "array occurrences",
+        "mutated": "stored reading instances"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'array occurrences' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM082",
+    "raw_sha256": "f3a257b7e411358ea086c8f3ff87f1fa63c7da1f6768a7e0a16c5ed45513d65b",
+    "scenario": "A digital token stream uses two labels. Adjacent tokens with different labels can cancel according to the stated removal rule.",
+    "entity_mapping": [
+      {
+        "raw": "cube",
+        "mutated": "token"
+      },
+      {
+        "raw": "colors",
+        "mutated": "labels"
+      },
+      {
+        "raw": "characters",
+        "mutated": "token symbols"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'cube', 'colors', 'characters' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM083",
+    "raw_sha256": "027631c4ad4d54324476f3a514e925f5b8f56d2749846483111a9814956437f9",
+    "scenario": "A resource allocator has a multiset of power-of-two bundles. Each independent request seeks an exact total using as few available bundles as possible.",
+    "entity_mapping": [
+      {
+        "raw": "coins",
+        "mutated": "resource bundles"
+      },
+      {
+        "raw": "target",
+        "mutated": "requested total"
+      },
+      {
+        "raw": "coin",
+        "mutated": "resource bundle"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'coins', 'target', 'coin' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM084",
+    "raw_sha256": "cc6734cf31027426b82240077337624b33342c004f7c04ad9cf70d987a567222",
+    "scenario": "A register editor transforms one numerical profile into another through the stated local rebalancing action. Only interior register positions may be selected for an action.",
+    "entity_mapping": [
+      {
+        "raw": "internal indices",
+        "mutated": "interior register positions"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'internal indices' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM085",
+    "raw_sha256": "796faa64b18177a73be06c0312ad27c47620970e8b3c1aca4d175eab530a1ae8",
+    "scenario": "A routing scheme sends records between integer-indexed hash slots. Determine whether the stated reassignment leaves exactly one record in every slot.",
+    "entity_mapping": [
+      {
+        "raw": "room",
+        "mutated": "hash slot"
+      },
+      {
+        "raw": "guest",
+        "mutated": "record"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'room', 'guest' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM086",
+    "raw_sha256": "0dd66a125cdbe7983033849bcb6a7108875788dc8c627f6c762fc39297cb22f0",
+    "scenario": "A fabrication planner builds two module types from A-units and B-units. Each module type consumes exactly the quantities specified below.",
+    "entity_mapping": [
+      {
+        "raw": "stick",
+        "mutated": "A-unit"
+      },
+      {
+        "raw": "diamond",
+        "mutated": "B-unit"
+      },
+      {
+        "raw": "shovel",
+        "mutated": "module P"
+      },
+      {
+        "raw": "sword",
+        "mutated": "module Q"
+      },
+      {
+        "raw": "sticks",
+        "mutated": "A-units"
+      },
+      {
+        "raw": "diamonds",
+        "mutated": "B-units"
+      },
+      {
+        "raw": "tools",
+        "mutated": "assembled modules"
+      },
+      {
+        "raw": "tool",
+        "mutated": "assembled module"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'stick', 'diamond', 'shovel', 'sword', 'sticks', 'diamonds', 'tools', 'tool' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM087",
+    "raw_sha256": "91ece866d0c87862734d38155ca048b003cd75f2c474f4a5b7160cc33c8a47d7",
+    "scenario": "An archive removes stored-package instances to recover storage. It must recover the required amount while minimizing the associated removal penalties.",
+    "entity_mapping": [
+      {
+        "raw": "application occurrences",
+        "mutated": "stored-package instances"
+      },
+      {
+        "raw": "memory units",
+        "mutated": "storage units"
+      },
+      {
+        "raw": "convenience costs",
+        "mutated": "removal penalties"
+      },
+      {
+        "raw": "memory",
+        "mutated": "storage demand"
+      },
+      {
+        "raw": "importance costs",
+        "mutated": "deletion weights"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'application occurrences', 'memory units', 'convenience costs', 'memory', 'importance costs' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM088",
+    "raw_sha256": "b41873ccfa758dd85b3138fd60d111b34f7b2de4449224260a48c2da711cc367",
+    "scenario": "A linear allocation display contains active markers in occupied slots. Transfer markers into empty slots to vacate the initially occupied positions, paying the stated coordinate-distance cost.",
+    "entity_mapping": [
+      {
+        "raw": "seated people",
+        "mutated": "active markers"
+      },
+      {
+        "raw": "seats",
+        "mutated": "slots"
+      },
+      {
+        "raw": "time",
+        "mutated": "relocation expenditure"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'seated people', 'seats', 'time' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM089",
+    "raw_sha256": "0e238b4140eab33d447956591f81769b79a9b68f370da9da5d26f2f0a14797d5",
+    "scenario": "An audit compares the feature counts of encoded log records. A record pair qualifies exactly when the stated function gives equal values for its two encodings.",
+    "entity_mapping": [
+      {
+        "raw": "pairs",
+        "mutated": "paired log records"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'pairs' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM090",
+    "raw_sha256": "c3af0889097a3846b1defc91189821b9ad4e219268d48ec9b1d71def03da1264",
+    "scenario": "A dependency audit represents transaction dependencies by a cancellation trace. The trace is discharged using exactly the adjacent-symbol cancellation rule below.",
+    "entity_mapping": [
+      {
+        "raw": "wires",
+        "mutated": "transaction dependencies"
+      },
+      {
+        "raw": "crossing-sign representation",
+        "mutated": "cancellation trace"
+      },
+      {
+        "raw": "signs",
+        "mutated": "trace symbols"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'wires', 'crossing-sign representation', 'signs' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM091",
+    "raw_sha256": "75dfa7cd59d972c8db9e5c13e947ecd23c0d638859cba5839fa769b12a719d0d",
+    "scenario": "A ledger network links accounts carrying numerical balances. Removing an account incurs the balances of the linked accounts still present under the stated charging rule.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "account"
+      },
+      {
+        "raw": "values",
+        "mutated": "balances"
+      },
+      {
+        "raw": "neighbors",
+        "mutated": "linked accounts"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'vertex', 'values', 'neighbors' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM092",
+    "raw_sha256": "d4a8985ab402d5e57a13c2224167955303ade313eac709c43e0ed97284f88173",
+    "scenario": "A packing plan uses A containers holding B units each and C additional units. Count positive-integer plans that give the stated total N.",
+    "entity_mapping": [
+      {
+        "raw": "triples",
+        "mutated": "packing plans"
+      },
+      {
+        "raw": "triple",
+        "mutated": "packing plan"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'triples', 'triple' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM093",
+    "raw_sha256": "e7037699fee87173050c4448b611add0122dd062236c516d51afbebcff474b13",
+    "scenario": "A layout studio purchases whole themed panels or paired split panels. It must meet both theme demands and may retain surplus panels.",
+    "entity_mapping": [
+      {
+        "raw": "pizza",
+        "mutated": "panel"
+      },
+      {
+        "raw": "pizzas",
+        "mutated": "panels"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'pizza', 'pizzas' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM094",
+    "raw_sha256": "d66c964cd38c93c3359ec7934116ad479ecff7c8b6061926955db78d86c6c634",
+    "scenario": "A procurement analyst chooses a fixed number of rated lot instances. The objective is to minimize the range of ratings in the chosen collection.",
+    "entity_mapping": [
+      {
+        "raw": "input occurrences",
+        "mutated": "lot instances"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'input occurrences' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM095",
+    "raw_sha256": "f86787209d5b42bb01dc959c193300952acbae106cb1afb1f678d1167f7126ac",
+    "scenario": "An annotation editor selects weighted records from an ordered file. Selected positions must retain the stated gap, and the empty selection is permitted.",
+    "entity_mapping": [
+      {
+        "raw": "slip",
+        "mutated": "record"
+      },
+      {
+        "raw": "slips",
+        "mutated": "records"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'slip', 'slips' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM096",
+    "raw_sha256": "81a03f9ff6af6ccabcaa2af87f4b450ea183d1531826516d99d1e3e9458927f7",
+    "scenario": "A catalog index organizes distinct keys by their prefixes, with the empty prefix at its root. Count every state of that index.",
+    "entity_mapping": [
+      {
+        "raw": "words",
+        "mutated": "catalog keys"
+      },
+      {
+        "raw": "prefix trie",
+        "mutated": "catalog index"
+      },
+      {
+        "raw": "node",
+        "mutated": "prefix state"
+      },
+      {
+        "raw": "trie",
+        "mutated": "prefix catalog"
+      },
+      {
+        "raw": "nodes",
+        "mutated": "prefix states"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'words', 'prefix trie', 'node', 'trie', 'nodes' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM097",
+    "raw_sha256": "6fb48364a02b9e3b01ef39cfe0528363a0dcea208c603887d6dd37ad3e177872",
+    "scenario": "A repository export contains artifact-name inventories with possible repetitions. Produce a lexicographically ordered list of distinct identifiers for each inventory.",
+    "entity_mapping": [
+      {
+        "raw": "invitation-name lists",
+        "mutated": "artifact-name inventories"
+      },
+      {
+        "raw": "names",
+        "mutated": "identifiers"
+      },
+      {
+        "raw": "Names",
+        "mutated": "Artifact identifiers"
+      },
+      {
+        "raw": "name",
+        "mutated": "artifact identifier"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'invitation-name lists', 'names', 'Names', 'name' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM098",
+    "raw_sha256": "94364fd351e64f6fe2d4a5e4204311960fd76b7316309a66ca81250661f595f9",
+    "scenario": "A component bundle receives the rating of its weakest unit. Aggregate that rating over all bundles of the required size under the stated modulus.",
+    "entity_mapping": [
+      {
+        "raw": "team",
+        "mutated": "bundle"
+      },
+      {
+        "raw": "students",
+        "mutated": "units"
+      },
+      {
+        "raw": "strength",
+        "mutated": "rating"
+      },
+      {
+        "raw": "strengths",
+        "mutated": "ratings"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'team', 'students', 'strength', 'strengths' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM099",
+    "raw_sha256": "20586390db7cc4379f292416309622f2fbf2a2533a06e29a7fdea0f6b5112199",
+    "scenario": "A delivery system permutes addressed packets among their recipients. The statistic of interest is how many recipients obtain a packet belonging to someone else.",
+    "entity_mapping": [
+      {
+        "raw": "paper",
+        "mutated": "packet"
+      },
+      {
+        "raw": "papers",
+        "mutated": "packets"
+      },
+      {
+        "raw": "students",
+        "mutated": "recipients"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "The aliases reinterpret 'paper', 'papers', 'students' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  },
+  {
+    "seed_id": "TM100",
+    "raw_sha256": "9c8b8b59f02ef43d68fded679a2cb59272b00fc1d2ad6ffaef890a7e3085112d",
+    "scenario": "A scoreboard lists a rank-label arrangement. Find the immediately preceding arrangement in lexicographic order, retaining the least arrangement when no predecessor exists.",
+    "entity_mapping": [
+      {
+        "raw": "permutation",
+        "mutated": "rank-label arrangement"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The aliases reinterpret 'permutation' in the stated domain, including the entity forms present in the I/O prose. All numerical values, symbolic names, mathematical predicates and literal output tokens are retained; the declared inverse recovers the exact Raw prose.",
+    "variable_mapping": "identity"
+  }
+]

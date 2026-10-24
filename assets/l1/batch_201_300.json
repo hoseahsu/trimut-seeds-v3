@@ -1,0 +1,1621 @@
+[
+  {
+    "seed_id": "TM201",
+    "raw_sha256": "27d9f9b9b13a4f2bd5675fbaad1fc04f062f94ec6be9640486b8c1538c13a992",
+    "scenario": "A telemetry console maintains an indexed bank of integer registers. Its commands alter selected registers and request totals from specified portions of the bank.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "telemetry bank"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: XOR updates, inclusive endpoints, and arithmetic sums."
+  },
+  {
+    "seed_id": "TM202",
+    "raw_sha256": "c601a9e51aa20a6882fcd13167a86310812b6f5dae7c234228db56500cd4f37d",
+    "scenario": "A monitoring log records opening and closing events with the given parenthesis symbols. Analysts compare log spans that represent complete nested sessions.",
+    "entity_mapping": [
+      {
+        "raw": "substring",
+        "mutated": "log span"
+      },
+      {
+        "raw": "regular",
+        "mutated": "session-complete"
+      },
+      {
+        "raw": "balance",
+        "mutated": "nesting tally"
+      },
+      {
+        "raw": "substrings",
+        "mutated": "log spans"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The prefix inequality, zero total, maximum length, and counting objective."
+  },
+  {
+    "seed_id": "TM203",
+    "raw_sha256": "8e66e55cd658af576bbe7dbec845cd74b632e2df05b1098bb14ddf30bd305918",
+    "scenario": "A workshop assembles prototypes from measured components and a shared reserve compound. It wants the number of complete prototypes supported by its inventory.",
+    "entity_mapping": [
+      {
+        "raw": "cookie",
+        "mutated": "prototype"
+      },
+      {
+        "raw": "cookies",
+        "mutated": "prototypes"
+      },
+      {
+        "raw": "ingredient",
+        "mutated": "component"
+      },
+      {
+        "raw": "ingredients",
+        "mutated": "components"
+      },
+      {
+        "raw": "Powder",
+        "mutated": "Reserve compound"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Grams, per-item requirements, the shared conversion budget, and whole-item maximization."
+  },
+  {
+    "seed_id": "TM204",
+    "raw_sha256": "783cf4730e77071175e75e4b2e451207c27259f30e229343ec55c94e76eda4eb",
+    "scenario": "A calibration panel adjusts indexed gauge readings through its controls. Each gauge must finish at a multiple of its supplied calibration interval.",
+    "entity_mapping": [
+      {
+        "raw": "entries",
+        "mutated": "gauge readings"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Prefix increments, divisibility, allowed signs, and press minimization."
+  },
+  {
+    "seed_id": "TM205",
+    "raw_sha256": "ac67845eec1f7f9a353ffcd0c403f06de442e6ccfb3316128c0c5ad64dbe6dda",
+    "scenario": "A collector groups numbered samples into compatible two-sample bundles. The recorded quantities determine which bundles qualify and their total contribution.",
+    "entity_mapping": [
+      {
+        "raw": "index pairs",
+        "mutated": "sample-position pairs"
+      },
+      {
+        "raw": "elements",
+        "mutated": "sample quantities"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Disjointness, the strict difference threshold, and the summed objective."
+  },
+  {
+    "seed_id": "TM206",
+    "raw_sha256": "0580c4a373c68a6aeb23996b581105f7f98a0a52085eb1aa087e762ffbff5964",
+    "scenario": "A laboratory screens pairs of readings against an admissible combined-value band. Each screening decision concerns their positions in the original record.",
+    "entity_mapping": [
+      {
+        "raw": "index pairs",
+        "mutated": "reading-position pairs"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Index ordering and both inclusive sum bounds."
+  },
+  {
+    "seed_id": "TM207",
+    "raw_sha256": "b87b130ddebb92210e43e22344038381e545aa6340ae33c41b67ba2a5e978ce4",
+    "scenario": "A distribution line uses receptacles that receive tokens during interval-based deliveries. Inspectors ask how many receptacles have accumulated the requested token count.",
+    "entity_mapping": [
+      {
+        "raw": "box",
+        "mutated": "receptacle"
+      },
+      {
+        "raw": "boxes",
+        "mutated": "receptacles"
+      },
+      {
+        "raw": "coin",
+        "mutated": "token"
+      },
+      {
+        "raw": "coins",
+        "mutated": "tokens"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Initial counts, inclusive interval coverage, unit additions, and the at-least threshold."
+  },
+  {
+    "seed_id": "TM208",
+    "raw_sha256": "86b9c36981c672ec8f7b96dd72b3832b2d77bcdebab2881f0ea7da671aa3bed3",
+    "scenario": "Mira and Noah divide numbered vouchers in an alternating selection session. Their accumulated voucher values determine the final score difference.",
+    "entity_mapping": [
+      {
+        "raw": "Alice",
+        "mutated": "Mira"
+      },
+      {
+        "raw": "Bob",
+        "mutated": "Noah"
+      },
+      {
+        "raw": "card",
+        "mutated": "voucher"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Turn order, optimal-play assumptions, scoring, and subtraction order."
+  },
+  {
+    "seed_id": "TM209",
+    "raw_sha256": "c541a46aa108378b17eadb413ff75d0fa12f7f6901ddc375d0cc78204d90639e",
+    "scenario": "A transport inspector reviews a network of terminals and checks whether travel between nominated terminals is possible. The connection rule is the walk relation stated below.",
+    "entity_mapping": [
+      {
+        "raw": "queried pair",
+        "mutated": "requested terminal pair"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The undirected walk relation and unrestricted walk length."
+  },
+  {
+    "seed_id": "TM210",
+    "raw_sha256": "f692705d6bbfb40f171256f4ef5b3c3e3e4b95383941445f1750c3e4f4848e55",
+    "scenario": "A display controller may reorder its signed markers separately for each inspection. The requested display window is evaluated using the stated zero-total condition.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "display row"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The two signs, full rearrangement permission, independent queries, and zero target."
+  },
+  {
+    "seed_id": "TM211",
+    "raw_sha256": "072fc606cb402f80cf4892b1d9ce9fc25c9c3a7abd7ae578ef8174059fbce323",
+    "scenario": "An observation archive selects fixed-length windows of readings for a report. The windows contribute their recorded quantities to the report total.",
+    "entity_mapping": [
+      {
+        "raw": "intervals",
+        "mutated": "observation windows"
+      },
+      {
+        "raw": "elements",
+        "mutated": "readings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Exact count, common length, disjointness, contiguity, and maximization."
+  },
+  {
+    "seed_id": "TM212",
+    "raw_sha256": "3098cea2e138902e52bbf068f08f2ebe5af21f7662db20b03c00ff0e558f4c5b",
+    "scenario": "An operations desk receives incident reports from named services and tracks which reports have been read. Desk commands follow the chronological handling rules below.",
+    "entity_mapping": [
+      {
+        "raw": "notification",
+        "mutated": "incident report"
+      },
+      {
+        "raw": "notifications",
+        "mutated": "incident reports"
+      },
+      {
+        "raw": "application",
+        "mutated": "service"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Append order, unread state, per-source reads, and prefix reads."
+  },
+  {
+    "seed_id": "TM213",
+    "raw_sha256": "b019075ec527234b899e42553e75df41db89f4ef84527b411a03f35644b716b9",
+    "scenario": "A catalog display reorders a selected segment for each request. After each reversal, an auditor reports the parity of the specified ordering discrepancies.",
+    "entity_mapping": [
+      {
+        "raw": "permutation",
+        "mutated": "catalog ordering"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Segment reversal and the precise inversion predicate."
+  },
+  {
+    "seed_id": "TM214",
+    "raw_sha256": "0faeb03a2be7b3c1db3291d9f63126b10893826954fbe56db315cc4f878cfcbe",
+    "scenario": "A metrology ledger pairs decimal measurements and reports how often their exact combined product is integral. The formula below defines the test for every pair.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The arithmetic-only rule is unchanged; the external context names the measurements without editing the product or integrality test."
+  },
+  {
+    "seed_id": "TM215",
+    "raw_sha256": "1517e776ca018fac3f184037204296cdddfdd5bb06b9de28acc64934f3ac21b6",
+    "scenario": "An archive labels its entry tally by f(n). The recurrence below is the complete definition of that tally.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The formula-only recurrence is unchanged; the external context does not edit any function expression."
+  },
+  {
+    "seed_id": "TM216",
+    "raw_sha256": "fac6d6aff96f6e2cb91ba06f0135886dd40a2c536cb4b4b5026f99329eeeac61",
+    "scenario": "A dashboard tracks which inspection tiles are expanded. Operators toggle individual tiles or close the full dashboard through the given commands.",
+    "entity_mapping": [
+      {
+        "raw": "tweet",
+        "mutated": "dashboard tile"
+      },
+      {
+        "raw": "tweets",
+        "mutated": "dashboard tiles"
+      },
+      {
+        "raw": "Tweet",
+        "mutated": "Dashboard tile"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Command tokens, toggle behavior, initial state, and reported count."
+  },
+  {
+    "seed_id": "TM217",
+    "raw_sha256": "ae52f01907e74b1582cf556b225d1e6966ca9cd825b9ca9fc89c6742bb03b2ed",
+    "scenario": "A training center seats pilots in single and tandem capsules. Pairing discomfort is measured by the weight-based rule below.",
+    "entity_mapping": [
+      {
+        "raw": "people",
+        "mutated": "pilots"
+      },
+      {
+        "raw": "kayaks",
+        "mutated": "capsules"
+      },
+      {
+        "raw": "occupants",
+        "mutated": "riders"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Exact seating counts and the absolute weight difference."
+  },
+  {
+    "seed_id": "TM218",
+    "raw_sha256": "703a955d00947a265337c24c48816ab93656bffc741d1d050dc881f09533dcd3",
+    "scenario": "A simulated arena contains battle drones whose charge changes during encounters. An emitter affects a receiver according to the stated subtraction rule.",
+    "entity_mapping": [
+      {
+        "raw": "monsters",
+        "mutated": "battle drones"
+      },
+      {
+        "raw": "attacker",
+        "mutated": "emitter"
+      },
+      {
+        "raw": "target",
+        "mutated": "receiver"
+      },
+      {
+        "raw": "health",
+        "mutated": "charge"
+      },
+      {
+        "raw": "Health",
+        "mutated": "Charge"
+      }
+    ],
+    "mutation_kind": "narrative_entity_relabel",
+    "rationale": "Relabels the listed entities while preserving: Legal choices, subtraction, death threshold, and final minimization."
+  },
+  {
+    "seed_id": "TM219",
+    "raw_sha256": "5d088e614c182aa418afd6346698c0fc79e65fd577d4efbb8f34feadc1e7fedc",
+    "scenario": "A craft archive divides an emblem ribbon into contiguous sections. Each section must meet the even-occurrence rule before it can be filed.",
+    "entity_mapping": [
+      {
+        "raw": "string",
+        "mutated": "emblem ribbon"
+      },
+      {
+        "raw": "character",
+        "mutated": "glyph"
+      },
+      {
+        "raw": "pieces",
+        "mutated": "sections"
+      },
+      {
+        "raw": "strings",
+        "mutated": "emblem ribbons"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Nonemptiness, parity, contiguity, full coverage, and minimum section count."
+  },
+  {
+    "seed_id": "TM220",
+    "raw_sha256": "6d03fdc4239eba1fae0f4b42a9f021bd3890594bdf8c1e6a5fdb001737f6ea04",
+    "scenario": "A corridor network has numbered checkpoints and a designated shortcut. Its audit tabulates checkpoint pairs at each travel distance.",
+    "entity_mapping": [
+      {
+        "raw": "Graph",
+        "mutated": "Corridor network"
+      },
+      {
+        "raw": "edges",
+        "mutated": "corridor links"
+      },
+      {
+        "raw": "edge",
+        "mutated": "corridor link"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: All endpoints, undirected relations, unit weights, and distance counts."
+  },
+  {
+    "seed_id": "TM221",
+    "raw_sha256": "db1f89fa2cb8ea99ab653dd256a3a73d093646daf2be59c7248c46cbd5489b17",
+    "scenario": "A quality archive stores a fixed ledger of sample readings. Each inspection requests the smallest reading within its specified span.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "sample ledger"
+      },
+      {
+        "raw": "query",
+        "mutated": "inspection request"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Fixed data, the half-open interval, and the minimum expression."
+  },
+  {
+    "seed_id": "TM222",
+    "raw_sha256": "e8c6006db1bb982c178afda496485a8bd13a47ad9e7cf1c55d5309a9241d0b5d",
+    "scenario": "A grading archive reviews batches of recorded readings. A request identifies an ordered rank within its selected batch, retaining repeated readings.",
+    "entity_mapping": [
+      {
+        "raw": "multiset of values",
+        "mutated": "batch of readings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Ascending order, zero-based rank, and multiplicities."
+  },
+  {
+    "seed_id": "TM223",
+    "raw_sha256": "b903bee0c0f3227a7248538f75dfd1e7679862bb217ecb2c816bd932900d708a",
+    "scenario": "A timeline curator selects an observation trail from indexed records. Its reported record positions must satisfy the stated progression rules.",
+    "entity_mapping": [
+      {
+        "raw": "subsequence",
+        "mutated": "observation trail"
+      },
+      {
+        "raw": "indices",
+        "mutated": "record positions"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Both strict inequalities and acceptance of any optimum."
+  },
+  {
+    "seed_id": "TM224",
+    "raw_sha256": "a70190a76782e0d636a28321b4da2bd8b0dfb8fbe268ca2fa5922bc84c1a5fd5",
+    "scenario": "A pricing desk keeps a catalog of tariffs whose quoted values depend on the supplied coordinate. Each request compares the currently available tariffs.",
+    "entity_mapping": [
+      {
+        "raw": "collection of lines",
+        "mutated": "catalog of tariffs"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Line equations, insertion, initial availability, and minimum evaluation."
+  },
+  {
+    "seed_id": "TM225",
+    "raw_sha256": "ed834a1d85ba33e16102eb3b5f543d9ae084e8c21abeb2506b3458aff66ed923",
+    "scenario": "A pricing bulletin lists tariff offers valid over specified coordinate windows. A quote request considers only the offers covering its coordinate.",
+    "entity_mapping": [
+      {
+        "raw": "line segments",
+        "mutated": "tariff offers"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Linear equations, half-open validity windows, minimization, and the missing-result token."
+  },
+  {
+    "seed_id": "TM226",
+    "raw_sha256": "f6dda49ea24e623930ffa0a73b7bcd680187fb807fba8f5b337d850b877e6aab",
+    "scenario": "An inspection archive arranges records into a hierarchy from their distinct priorities. It reports the parent record assigned by the recursive rule below.",
+    "entity_mapping": [
+      {
+        "raw": "array values",
+        "mutated": "inspection priorities"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "record node"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Minimum-root recursion, left/right intervals, inorder order, and parent output."
+  },
+  {
+    "seed_id": "TM227",
+    "raw_sha256": "11753528e4881ff1cd4809964484fa1c531e8557ba9c018934e490e9ab0b0b37",
+    "scenario": "Relay sites are joined by weighted links. A network planner selects a spanning connection plan with the stated minimum total cost.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "relay sites"
+      },
+      {
+        "raw": "edge",
+        "mutated": "link"
+      },
+      {
+        "raw": "edges",
+        "mutated": "links"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Connectivity, acyclicity, edge count, and minimum total weight."
+  },
+  {
+    "seed_id": "TM228",
+    "raw_sha256": "af8f1e7fb8a6c2706774119f9c810e8190596adc2c80a0077f9ca010d754c0b8",
+    "scenario": "An allocation office scores one-to-one schedules using the supplied matrix. Its report gives the least assignment expense and a schedule attaining it.",
+    "entity_mapping": [
+      {
+        "raw": "cost",
+        "mutated": "assignment expense"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The permutation domain and matrix-sum formula."
+  },
+  {
+    "seed_id": "TM229",
+    "raw_sha256": "29c910b65c72e45e1d31321724d53ced28d2aaea50f67f0518c4cebd800202f8",
+    "scenario": "A catalog audit counts matching codes at specified item positions. Each catalog check uses the exact span and comparison value provided.",
+    "entity_mapping": [
+      {
+        "raw": "query",
+        "mutated": "catalog check"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Index bounds and equality to the queried value."
+  },
+  {
+    "seed_id": "TM230",
+    "raw_sha256": "700f2ff50cf83cce9f88fcb9535d425127d8947ff274deac18f016941bf81146",
+    "scenario": "A screening desk reviews pairs of reading positions within a requested span. It counts the pairs satisfying the stated order discrepancy.",
+    "entity_mapping": [
+      {
+        "raw": "index pairs",
+        "mutated": "reading-position pairs"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Ordered positions, the half-open span, and strict value comparison."
+  },
+  {
+    "seed_id": "TM231",
+    "raw_sha256": "58a244feef8bd87ea4799702bc6976e7bcad1ba75bb2069c65d5a2c12a9bc30b",
+    "scenario": "A sensor recorder accepts instructions that adjust a span or inspect its smallest current reading. The numeric rules below govern each instruction.",
+    "entity_mapping": [
+      {
+        "raw": "Operation",
+        "mutated": "Recorder instruction"
+      },
+      {
+        "raw": "current value",
+        "mutated": "sensor reading"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Range addition and minimum selection."
+  },
+  {
+    "seed_id": "TM232",
+    "raw_sha256": "5412a0727da589d32570ca54dab5c89a27c33b42a68e6d5e627a4406c27a4ee7",
+    "scenario": "An access registry maintains a roster of numeric identifiers. A lookup compares a supplied identifier with the active roster using the stated bitwise measure.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The available entity or command word is fused to a symbolic identifier or numeric opcode in Raw. A safe word-level replacement would not hit it without touching that protected string, so the complete rule remains verbatim and only the external scenario is added."
+  },
+  {
+    "seed_id": "TM233",
+    "raw_sha256": "d8abf6127955d01faf2396ba5fe05665c72c91a6a2d7b2bccc68a36f0d8f089f",
+    "scenario": "A calibration line consists of indexed transformation stages. A request follows the specified span of stages after any individual replacement.",
+    "entity_mapping": [
+      {
+        "raw": "functions",
+        "mutated": "calibration stages"
+      },
+      {
+        "raw": "function",
+        "mutated": "calibration stage"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Coefficients, modular arithmetic, point replacement, and composition order."
+  },
+  {
+    "seed_id": "TM234",
+    "raw_sha256": "f8493a908021ac1786c8409f40a2a5a66f45c6e9a6c6ccc65c1208179ab54083",
+    "scenario": "A conversion facility keeps indexed units whose settings may be replaced across a whole span. Requests pass through the specified units in their given order.",
+    "entity_mapping": [
+      {
+        "raw": "functions",
+        "mutated": "conversion units"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Range assignment, affine formulas, modular reduction, and evaluation order."
+  },
+  {
+    "seed_id": "TM235",
+    "raw_sha256": "a41515572717ff3989b25dedc8606148c6c60082b0908fefccb8c2cbbc9ef825",
+    "scenario": "A signal station keeps an ordered chain of converters. Commands add a converter at the back or remove a converter from the front under the stated rules.",
+    "entity_mapping": [
+      {
+        "raw": "functions",
+        "mutated": "signal converters"
+      },
+      {
+        "raw": "function",
+        "mutated": "signal converter"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Queue behavior, front-to-back application, and empty behavior."
+  },
+  {
+    "seed_id": "TM236",
+    "raw_sha256": "8f4ecee1fe1903df47c8420cdcf3290a40d0d944888f3b5fc332d0ed5bd0f6cc",
+    "scenario": "A processing line keeps modules that may be added or removed at either end. Its signal requests follow the specified direction through the current line.",
+    "entity_mapping": [
+      {
+        "raw": "functions",
+        "mutated": "processing modules"
+      },
+      {
+        "raw": "function",
+        "mutated": "processing module"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Both-end updates, front-to-back composition, and empty behavior."
+  },
+  {
+    "seed_id": "TM237",
+    "raw_sha256": "7a9c9a9a7ebeeceb7529735bffb3f2a7e153d6ad79e682689720f369d4a37c21",
+    "scenario": "An inventory ledger stores readings at indexed positions. Commands adjust an individual reading or request a span total.",
+    "entity_mapping": [
+      {
+        "raw": "current values",
+        "mutated": "inventory readings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Point addition and the exact half-open summation."
+  },
+  {
+    "seed_id": "TM238",
+    "raw_sha256": "27e5a0fac72bb5c64b0ffab40143e18c8b03a0660731dfe566dd1c6f118b5d76",
+    "scenario": "A transport tree carries readings at its stations. An audit combines readings along the unique route between nominated stations.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "station"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The fixed tree, point increments, unique path, and inclusion of both endpoints."
+  },
+  {
+    "seed_id": "TM239",
+    "raw_sha256": "fba6ba8a99a41e072cc3dc981aa5121eab8436441e247c4ac9a38445f4614f5d",
+    "scenario": "An organization chart stores numeric accounts at departments. A department branch contains its root and all of that root's descendants.",
+    "entity_mapping": [
+      {
+        "raw": "tree",
+        "mutated": "department hierarchy"
+      },
+      {
+        "raw": "subtree",
+        "mutated": "department branch"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The root identifier, update, rooted subtree, and inclusion of its root."
+  },
+  {
+    "seed_id": "TM240",
+    "raw_sha256": "078368626df612b25668877961f0b37a244b5ae12261ce43b39ff417bcccfdae",
+    "scenario": "A display controller can reverse a selected strip of numbered items. Its inspections total the current contents of a specified range.",
+    "entity_mapping": [
+      {
+        "raw": "subsequence",
+        "mutated": "display strip"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Reversal, current range sums, and empty-range behavior."
+  },
+  {
+    "seed_id": "TM241",
+    "raw_sha256": "b80335c88dce429a1750dc6e486f3462a1dcec63b62f1f802fea318524235f23",
+    "scenario": "A modular account ledger accepts span-adjustment and total-request instructions. Each instruction follows the arithmetic definition below.",
+    "entity_mapping": [
+      {
+        "raw": "Operation",
+        "mutated": "Account instruction"
+      },
+      {
+        "raw": "Operations",
+        "mutated": "Account instructions"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "The operation description receives an account-instruction label while every numeric opcode, parameter, affine formula, modular sum, and wire-format field remains unchanged."
+  },
+  {
+    "seed_id": "TM242",
+    "raw_sha256": "f08bbbce4535fc31609eaaed53de7975020dccf3e2978b442047bfbbec116607",
+    "scenario": "A category register stores numeric codes along an indexed record. A request asks how many different codes occur in its selected span.",
+    "entity_mapping": [
+      {
+        "raw": "values",
+        "mutated": "category codes"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Distinctness and the queried range."
+  },
+  {
+    "seed_id": "TM243",
+    "raw_sha256": "c27d1d2540cd8c74d2407dd97b49f4557113d483e84eaaf22b017cf8b70a7dd4",
+    "scenario": "A numeric registry maintains registered codes and answers membership-order requests. The exact insertion, deletion, counting, and rank conventions follow below.",
+    "entity_mapping": [
+      {
+        "raw": "member",
+        "mutated": "registered code"
+      },
+      {
+        "raw": "members",
+        "mutated": "registered codes"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Every order relation, rank, sentinel, and update convention."
+  },
+  {
+    "seed_id": "TM244",
+    "raw_sha256": "c8dd0a6e7d4ecfa6b3a1f981501985890a77f704ea49cf674414049dedb98f71",
+    "scenario": "A service board marks which numbered slots are active. Requests update or inspect this active-slot roster using the stated order relations.",
+    "entity_mapping": [
+      {
+        "raw": "indices",
+        "mutated": "slot numbers"
+      },
+      {
+        "raw": "member",
+        "mutated": "active slot"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The initial bitstring, membership operations, predecessor/successor bounds, and sentinels."
+  },
+  {
+    "seed_id": "TM245",
+    "raw_sha256": "df03aff3458560ab9bcb96d73ae2ef497f778b42e7c5bb0cc4cb6e94875b3573",
+    "scenario": "A register service assigns numeric addresses to stored readings. An address without an assignment retains the stated initial reading.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "register store"
+      },
+      {
+        "raw": "index",
+        "mutated": "address"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Initial zero, assignment, lookup, and the key domain."
+  },
+  {
+    "seed_id": "TM246",
+    "raw_sha256": "ffe205884c648e663acc93942ad8a274cd6b94e8ff935811b9227742a334db82",
+    "scenario": "A polling ledger records a ballot code at each position. A span report identifies a code only when it satisfies the stated frequency threshold.",
+    "entity_mapping": [
+      {
+        "raw": "value",
+        "mutated": "ballot code"
+      },
+      {
+        "raw": "values",
+        "mutated": "ballot codes"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Point assignment, the strict frequency condition, and the absent-result sentinel."
+  },
+  {
+    "seed_id": "TM247",
+    "raw_sha256": "33ccebe35668a58505eea0d6010b5b823011aa4f3bcda7440c29c07e96e55939",
+    "scenario": "A dispatch archive keeps immutable snapshots of an ordered pending list. Each command derives a snapshot through the specified back insertion or front removal.",
+    "entity_mapping": [
+      {
+        "raw": "versions",
+        "mutated": "snapshots"
+      },
+      {
+        "raw": "element",
+        "mutated": "pending item"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Version references, append/remove ends, output, and persistence."
+  },
+  {
+    "seed_id": "TM248",
+    "raw_sha256": "539500cec4ab95c44d45e556fe4d6790726b485fb3ab061c207ba74adc2a0599",
+    "scenario": "A permissions audit groups weighted capability-mask pairs by their shared bits. Its compatibility profiles supply the weights for each mask.",
+    "entity_mapping": [
+      {
+        "raw": "ordered pairs",
+        "mutated": "ordered mask combinations"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The AND relation, ordered pairs, coefficient products, and modulus."
+  },
+  {
+    "seed_id": "TM249",
+    "raw_sha256": "10025ff94760e2ac39b428ff75dc5b8e6c0ef3bf5d59fff7d6be472c17de30bf",
+    "scenario": "A switchboard audit groups weighted state pairs by the bits on which they differ. Its state profiles hold the supplied weights.",
+    "entity_mapping": [
+      {
+        "raw": "ordered pairs",
+        "mutated": "ordered state combinations"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The XOR relation, coefficient arithmetic, index domain, and output order."
+  },
+  {
+    "seed_id": "TM250",
+    "raw_sha256": "5ecce25e3ab34f8eccf1df9860729f212ab81629d9d9cb75301cb91636c79a90",
+    "scenario": "A scheduling archive groups weighted cycle pairs by their common rhythm. Cycle-weight tables supply the entries for the specified grouping rule.",
+    "entity_mapping": [
+      {
+        "raw": "coefficients",
+        "mutated": "cycle weights"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The gcd predicate, ordered-pair sum, bounds, and modulus."
+  },
+  {
+    "seed_id": "TM251",
+    "raw_sha256": "a9e6dd34348174c2f19ebf63c6f78f3db6000a45150d1fa561b6e9170482ccff",
+    "scenario": "A synchronization archive groups weighted cycle pairs by their joint repetition period. Its synchronization profiles supply the recorded weights.",
+    "entity_mapping": [
+      {
+        "raw": "coefficients",
+        "mutated": "synchronization weights"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The lcm predicate, output-index truncation, and arithmetic."
+  },
+  {
+    "seed_id": "TM252",
+    "raw_sha256": "0796c23c02b999a4e031f8ac947451a34745226752a14717bfb2c479f0e90da1",
+    "scenario": "An equipment archive combines disjoint capability selections into a joint inventory mask. Equipment profiles supply the weights used in the stated report.",
+    "entity_mapping": [
+      {
+        "raw": "ordered pairs",
+        "mutated": "ordered equipment combinations"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Disjointness, the union mask, ordered pairing, and modular products."
+  },
+  {
+    "seed_id": "TM253",
+    "raw_sha256": "397cb71a18404c664766e416afd2d8306e6ed9c6676a81a22f2ca40b8a87cdcc",
+    "scenario": "A timing instrument records accumulated complete ticks along a calibration sweep. The formula below is its measurement definition.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The floor-sum formula and arithmetic definitions remain verbatim; the added timing scenario is external context only."
+  },
+  {
+    "seed_id": "TM254",
+    "raw_sha256": "06d2a951bd12134bdac17fae153b38c7319f3cc82b4c88c1044b92247b3a1625",
+    "scenario": "A dimensional packing display reports an integer capacity setting from a volume index and dimension count. The extremal inequality below defines that setting.",
+    "entity_mapping": [],
+    "mutation_kind": "context_only_formula",
+    "rationale": "The integer-root extremum remains verbatim, including integer types, extremal qualifiers, variables, exponent, and inequality."
+  },
+  {
+    "seed_id": "TM255",
+    "raw_sha256": "a439a85def89924f2a87aaff1ac813f602a1164a84eaa8859ba18e61204f3493",
+    "scenario": "A map inspector totals sensor-marker weights inside a requested window. Coincident records retain the individual contributions specified below.",
+    "entity_mapping": [
+      {
+        "raw": "point",
+        "mutated": "sensor marker"
+      },
+      {
+        "raw": "rectangle query",
+        "mutated": "map inspection"
+      },
+      {
+        "raw": "points",
+        "mutated": "sensor markers"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Coordinate inequalities, separate occurrences, and weight sums."
+  },
+  {
+    "seed_id": "TM256",
+    "raw_sha256": "702715ebf39bb8d4cb824df3bb3672a8cbe2f568262a7b9436a07052bec4d729",
+    "scenario": "A beacon archive records weighted detections at coordinates. New detections remain separate records even when they share a location.",
+    "entity_mapping": [
+      {
+        "raw": "point",
+        "mutated": "beacon"
+      },
+      {
+        "raw": "points",
+        "mutated": "beacons"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Insertion of separate occurrences and half-open rectangle weight sums."
+  },
+  {
+    "seed_id": "TM257",
+    "raw_sha256": "15e8aa344c20637278ac45014d06496c844f105bb86efd077c1604b7ad3b2d09",
+    "scenario": "A coverage ledger stores weighted zones and evaluates probe locations. Each probe accumulates the contributions of currently covering zones.",
+    "entity_mapping": [
+      {
+        "raw": "rectangle",
+        "mutated": "coverage zone"
+      },
+      {
+        "raw": "point",
+        "mutated": "probe location"
+      },
+      {
+        "raw": "rectangles",
+        "mutated": "coverage zones"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Half-open geometry, occurrence insertion, and weight addition."
+  },
+  {
+    "seed_id": "TM258",
+    "raw_sha256": "cc474b084c2610302819faf1c7023e611716bdf78ad624337aac771cf773fee9",
+    "scenario": "A message archive inventories the distinct contiguous fragments appearing in a transmission. Repeated occurrences of the same fragment share one inventory entry.",
+    "entity_mapping": [
+      {
+        "raw": "substrings",
+        "mutated": "message fragments"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Nonemptiness, contiguity, equality, and distinct counting."
+  },
+  {
+    "seed_id": "TM259",
+    "raw_sha256": "97f6b2c6456cd3ae9442aeded6b0b9db3267c4fbf5c783978d388a9aa8bffd1d",
+    "scenario": "A transcription checker slides a template over a recorded text. Each comparison slot uses the stated ordinary-symbol and wildcard rules.",
+    "entity_mapping": [
+      {
+        "raw": "alignment",
+        "mutated": "comparison slot"
+      },
+      {
+        "raw": "text character",
+        "mutated": "record symbol"
+      },
+      {
+        "raw": "pattern character",
+        "mutated": "template symbol"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Equality, either-side wildcard matching, offsets, and exactly-one-character behavior."
+  },
+  {
+    "seed_id": "TM260",
+    "raw_sha256": "07e203394f7ff3a36e0561e78c77841d54f611996f7b00724ae3f12228bbfe87",
+    "scenario": "A lexical catalog divides an encoded entry into catalog tokens. The ordering definitions below determine the required token boundaries.",
+    "entity_mapping": [
+      {
+        "raw": "word",
+        "mutated": "catalog token"
+      },
+      {
+        "raw": "words",
+        "mutated": "catalog tokens"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The Lyndon predicate, suffix comparisons, nonincreasing factor order, and alphabet order."
+  },
+  {
+    "seed_id": "TM261",
+    "raw_sha256": "df0a75ee8f2baa546d2b1e42328d8f49802e51c4d3894468eb82e878a515361b",
+    "scenario": "A floor-plan auditor overlays rectangular panels on a coordinate drawing. It reports the total area covered by the panel collection.",
+    "entity_mapping": [
+      {
+        "raw": "rectangles",
+        "mutated": "floor panels"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Axis alignment and union-area semantics."
+  },
+  {
+    "seed_id": "TM262",
+    "raw_sha256": "189e5bfbd6340ab947695c08dc0e805a34995559c27f8821b32ce7ca16bfadfd",
+    "scenario": "An event archive inventories distinct nonempty observation patterns from its integer event stream. Patterns agree exactly under the value-sequence rule below.",
+    "entity_mapping": [
+      {
+        "raw": "integer sequence",
+        "mutated": "integer event stream"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Subsequence selection and equality of value sequences."
+  },
+  {
+    "seed_id": "TM263",
+    "raw_sha256": "e34cc6832866b04c54897cca1ba2654bd2305660fee86c87b44645008d852a2e",
+    "scenario": "A ribbon inspector measures the largest mirrored emblem span around each allowed center. Matching mirrored positions use the exact equality rule below.",
+    "entity_mapping": [
+      {
+        "raw": "string",
+        "mutated": "emblem ribbon"
+      },
+      {
+        "raw": "characters",
+        "mutated": "glyphs"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Nonemptiness, centers, maximum length, and palindrome equality."
+  },
+  {
+    "seed_id": "TM264",
+    "raw_sha256": "113a962d9418932f0d1d3c67eb2e4f7c636673c7549b2ae45447e63434b477e7",
+    "scenario": "A transmission auditor compares the beginning of a record with each transmission tail. The report uses the common-prefix measure specified below.",
+    "entity_mapping": [
+      {
+        "raw": "suffix",
+        "mutated": "transmission tail"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The longest-common-prefix operation, S[i:] expression, and i=0 result."
+  },
+  {
+    "seed_id": "TM265",
+    "raw_sha256": "697e1cbb94aa306fc1a1d699794b8d8db1d18ab828636065d7c6209fdc333e68",
+    "scenario": "A transmitter survey selects the closest pair of distinct recorded identifiers. Survey coordinates and Euclidean separation follow the rules below.",
+    "entity_mapping": [
+      {
+        "raw": "point indices",
+        "mutated": "transmitter identifiers"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Distinct indices, Euclidean distance, and minimization."
+  },
+  {
+    "seed_id": "TM266",
+    "raw_sha256": "bdb79056ef87f92f3e61233e6a67c10bd603f62198420ae2bfb314973c9821e6",
+    "scenario": "An observation survey selects the most widely separated pair of distinct recorded identifiers. Its separation measure is the Euclidean one stated below.",
+    "entity_mapping": [
+      {
+        "raw": "point indices",
+        "mutated": "observation identifiers"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Distinctness, Euclidean distance, and maximization."
+  },
+  {
+    "seed_id": "TM267",
+    "raw_sha256": "9fafafdab6c9cc859dd79c19a70a8b1535b8cd8bdaf9cb0c5086cbd40f8c8e7e",
+    "scenario": "A patrol follows the corners of a convex survey perimeter. Each survey station identifies a most distant station on that perimeter.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "survey station"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Convexity, per-vertex selection, Euclidean distance, and acceptance of any farthest answer."
+  },
+  {
+    "seed_id": "TM268",
+    "raw_sha256": "9b0424ff02506af599edd2b040f88b6a87f644b3ec9f13137d4ef9aadbcac871",
+    "scenario": "A mapping desk extracts the outer boundary of a survey collection. Its report follows the stated rules for straight boundary runs, repeated locations, and degenerate surveys.",
+    "entity_mapping": [
+      {
+        "raw": "point",
+        "mutated": "marker"
+      },
+      {
+        "raw": "points",
+        "mutated": "markers"
+      },
+      {
+        "raw": "vertices",
+        "mutated": "boundary stations"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "boundary station"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The convex hull, collinearity, duplicate removal, and endpoint cases."
+  },
+  {
+    "seed_id": "TM269",
+    "raw_sha256": "c7a06117362b735807213415ee663f2aadd6fc40e5f7da23956ca669a8c2d266",
+    "scenario": "A shelf catalog stores numeric item codes along an indexed row. An inspection window requests a code with the highest observed frequency.",
+    "entity_mapping": [
+      {
+        "raw": "value",
+        "mutated": "catalog code"
+      },
+      {
+        "raw": "interval",
+        "mutated": "shelf range"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Nonempty ranges and maximum-frequency selection."
+  },
+  {
+    "seed_id": "TM270",
+    "raw_sha256": "56363e356af316b10eb594da8e4e303db3470cce8396ccc2d0d095b66d15fae6",
+    "scenario": "A survey office places a circular coverage region around recorded test sites. It identifies the sites lying exactly on the boundary of the smallest qualifying region.",
+    "entity_mapping": [
+      {
+        "raw": "input points",
+        "mutated": "test sites"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The smallest closed disk and exact boundary-membership objective."
+  },
+  {
+    "seed_id": "TM271",
+    "raw_sha256": "d80d7bc50d38cce6b2c953798815c48a41fc1c87236e48e75495b0c8623bf8fa",
+    "scenario": "An organization chart connects departments in a rooted hierarchy. Each report identifies the shared superior defined by the ancestor rule below.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "departments"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "department"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Vertex0 as root and the lowest-common-ancestor operation."
+  },
+  {
+    "seed_id": "TM272",
+    "raw_sha256": "8e4e150c5c396f8d5ff1dfae8bf288f4162b782865c3b17be5dec84f86f27f6d",
+    "scenario": "A field inspection follows the unique route between two nominated locations. A request identifies the route position specified in the rule below.",
+    "entity_mapping": [
+      {
+        "raw": "path",
+        "mutated": "inspection route"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The explicit ordered vertex sequence, requested index, and out-of-range sentinel."
+  },
+  {
+    "seed_id": "TM273",
+    "raw_sha256": "0407fd043e381305d08935b3edc4684552f0d21e26e6185d85b05ff881ca6a47",
+    "scenario": "A route archive associates a toll with each connection. It asks for the simple itinerary having the largest stated total.",
+    "entity_mapping": [
+      {
+        "raw": "edge weights",
+        "mutated": "connection tolls"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Path simplicity, summation, and maximization."
+  },
+  {
+    "seed_id": "TM274",
+    "raw_sha256": "995f19ce871dc23264e1032ab6247c5ab5a812fee5d72385b38c3e66b0390d53",
+    "scenario": "A module archive compares the descendant hierarchies below each module. Its equivalence test treats sibling arrangements according to the unordered-tree rule below.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "module"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Root0, descendant subtrees, unordered isomorphism, and permutable children."
+  },
+  {
+    "seed_id": "TM275",
+    "raw_sha256": "b2222653e434200a738713d315581517aa0bae4c8f91314995aac66315a32e07",
+    "scenario": "A routed processing tree places a conversion module at each location. A signal follows the specified path through the current module settings.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "processing module"
+      },
+      {
+        "raw": "vertices",
+        "mutated": "processing modules"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Affine maps, modular arithmetic, point replacement, and u-to-v application order."
+  },
+  {
+    "seed_id": "TM276",
+    "raw_sha256": "12fcab8aaabaa9dfc4116d5c5fb1bf9f0c6be93faf6a9d1d9143d7ca1c553696",
+    "scenario": "A planning desk chooses stations that may operate together under a supplied conflict graph. It seeks the largest qualifying station selection.",
+    "entity_mapping": [
+      {
+        "raw": "vertex set",
+        "mutated": "station selection"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Maximum cardinality and the absence of edges between selected vertices."
+  },
+  {
+    "seed_id": "TM277",
+    "raw_sha256": "96c6d4b25182f27682ac4ece332de003b212faa8be8b58db986630a8f198022e",
+    "scenario": "A communications planner assigns channel labels to transmitters. Every supplied interference link imposes the stated separation condition.",
+    "entity_mapping": [
+      {
+        "raw": "colors",
+        "mutated": "channel labels"
+      },
+      {
+        "raw": "vertices",
+        "mutated": "transmitters"
+      },
+      {
+        "raw": "edge",
+        "mutated": "interference link"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The minimum color count and inequality across each edge."
+  },
+  {
+    "seed_id": "TM278",
+    "raw_sha256": "d7f68228c21fae3c6fe69248437b37abb74af3431e72482a90d5ce4fa596f750",
+    "scenario": "A network archive counts alternative spanning layouts from recorded links. Separate records for parallel links remain separate choices in its accounting.",
+    "entity_mapping": [
+      {
+        "raw": "edge instances",
+        "mutated": "link records"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Undirected spanning trees, multiplicity, and exclusion of self-loops."
+  },
+  {
+    "seed_id": "TM279",
+    "raw_sha256": "6ea464f4c8b45bdc313fe10f524abee081b073e2e481e8d9bbe8d49f944a89cd",
+    "scenario": "A relay network counts directed broadcast layouts from its designated origin. Every qualifying layout must reach the relays under the stated incoming-link rule.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "relay"
+      },
+      {
+        "raw": "arc",
+        "mutated": "relay link"
+      },
+      {
+        "raw": "arcs",
+        "mutated": "relay links"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Root reachability, arborescence size, and the incoming-arc condition."
+  },
+  {
+    "seed_id": "TM280",
+    "raw_sha256": "25d2a1e8f39098f090636ca6c11fa38f7e1f703cb31db4f323fd10f48bf3fa01",
+    "scenario": "A broadcast planner chooses a weighted directed layout from its nominated source. The layout must reach every terminal at the least total cost.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "terminal"
+      },
+      {
+        "raw": "arcs",
+        "mutated": "communication links"
+      },
+      {
+        "raw": "vertices",
+        "mutated": "terminals"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The directed spanning arborescence, source S, reachability, and minimum total weight."
+  },
+  {
+    "seed_id": "TM281",
+    "raw_sha256": "288bad6af8d8b40f9bf47a81f845079dd505cba0ff76ff73c70068dfde40e7ad",
+    "scenario": "A tag ledger records numeric codes at indexed positions. Commands replace a tag or count matching tags in a requested span.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "tag ledger"
+      },
+      {
+        "raw": "entries",
+        "mutated": "recorded tags"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Point assignment, equality counting, and half-open bounds."
+  },
+  {
+    "seed_id": "TM282",
+    "raw_sha256": "b4d7d24aae596ed95987d2f3b78447e55fcf586dd0059b2dbf14e880073f2913",
+    "scenario": "An inventory audit stores a recorded amount at each numeric position. An inventory request totals exactly the positions specified below.",
+    "entity_mapping": [
+      {
+        "raw": "query",
+        "mutated": "inventory request"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The summation expression and its index endpoints."
+  },
+  {
+    "seed_id": "TM283",
+    "raw_sha256": "fb39b6503a6a5a8f2213c0160c235f3dd94ff522601e37aa217bf28bb80ee84d",
+    "scenario": "An account-screening desk reviews readings within a requested span. Each report gives both the count and total for readings passing the stated threshold.",
+    "entity_mapping": [
+      {
+        "raw": "query",
+        "mutated": "screening request"
+      },
+      {
+        "raw": "array entries",
+        "mutated": "account readings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The interval, at-most comparison, count, and sum."
+  },
+  {
+    "seed_id": "TM284",
+    "raw_sha256": "7105b5709d4e795438b036b6548adf8edd4a2f3a6aa913f4de33da3be15cec91",
+    "scenario": "A modular recorder maintains a bank of residue registers. Span commands recalibrate registers, and inspections request an individual stored reading.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "indexed residue bank"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Affine updates, the modular domain, and point retrieval."
+  },
+  {
+    "seed_id": "TM285",
+    "raw_sha256": "b78f06ed830891170e720e1fa79b5359478ed6feb345f742c65bad3af94d1fb1",
+    "scenario": "A calibration archive stores an indexed row of integer measurements. It applies the position-dependent adjustment below before reporting a selected minimum.",
+    "entity_mapping": [
+      {
+        "raw": "integer array",
+        "mutated": "integer measurement row"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The b*i+c adjustment, half-open range, and minimum query."
+  },
+  {
+    "seed_id": "TM286",
+    "raw_sha256": "712557c3dfa043a9c87a3beb6e0c77197416e24b154e4d45378ec108c6a56b15",
+    "scenario": "A timeline auditor selects observation trails inside requested inspection windows. It reports the longest trail meeting the stated strict progression rule.",
+    "entity_mapping": [
+      {
+        "raw": "interval",
+        "mutated": "inspection window"
+      },
+      {
+        "raw": "subsequence",
+        "mutated": "observation trail"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Strict increase, preserved position order, and maximum length."
+  },
+  {
+    "seed_id": "TM287",
+    "raw_sha256": "da475449e3126af6ee4cf6e51043d642a144bac40570532292ec1f2f2286e215",
+    "scenario": "A relay tree stores a reading at each site. An inspection totals readings at relay sites within the specified distance band.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "relay sites"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "relay site"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Point addition, edge distance, and the inclusive/exclusive distance bounds."
+  },
+  {
+    "seed_id": "TM288",
+    "raw_sha256": "9ae8d926f87b952f801ba2477eaace8705ed834bb4b6723d609c0374e5cce561",
+    "scenario": "A distribution tree maintains numeric readings for receiving stations. A distance-band command changes the selected receivers before point inspections occur.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "receiving stations"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "receiving station"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Edge distances, the half-open band, additive update, and point retrieval."
+  },
+  {
+    "seed_id": "TM289",
+    "raw_sha256": "7b8900100ef99cb99458205a4ba80f21008e7d9e72c438343243f6ede5e36a29",
+    "scenario": "A workflow archive orders work items from a rooted dependency hierarchy. Its score is defined by the supplied coefficient formula.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "work items"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Permutation coverage, every ancestor-before-descendant relation, and the exact objective formula."
+  },
+  {
+    "seed_id": "TM290",
+    "raw_sha256": "539736f74a366a0371257f9bdc828e5bb2f6a4950b4a3fcfe64071cb6d37e638",
+    "scenario": "A laboratory connects indexed stations through batches of supplied links. After each batch it reports the aggregate associated with mutually connected station pairs.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "laboratory stations"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Batch endpoints, connectivity, query progression, and the pair-product sum."
+  },
+  {
+    "seed_id": "TM291",
+    "raw_sha256": "cfefd8a449bc829953bd1960ace7603403db99e8d02723d925f8df52f7347090",
+    "scenario": "A monitoring tree stores readings at its stations and may replace selected links. Each report totals the readings along the nominated unique route.",
+    "entity_mapping": [
+      {
+        "raw": "vertex values",
+        "mutated": "station readings"
+      },
+      {
+        "raw": "edge",
+        "mutated": "link"
+      },
+      {
+        "raw": "edges",
+        "mutated": "links"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Tree-preserving replacement, point addition, endpoint inclusion, and path sums."
+  },
+  {
+    "seed_id": "TM292",
+    "raw_sha256": "2f44743dfa898645a1a8e7746435f850f058ae1d5650541c122b2f809db679c7",
+    "scenario": "A reconfigurable signal tree keeps a transformation at each transformer station. Requests evaluate the conversions along the specified route after any rewiring or replacement.",
+    "entity_mapping": [
+      {
+        "raw": "vertex",
+        "mutated": "transformer station"
+      },
+      {
+        "raw": "functions",
+        "mutated": "conversion rules"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Affine formulas, tree preservation, point assignment, and endpoint-inclusive u-to-v evaluation."
+  },
+  {
+    "seed_id": "TM293",
+    "raw_sha256": "2d8283bbe130590f791ebc2e07f1a2eced891c263433d411b5809047b079dbec",
+    "scenario": "An editing console maintains an indexed data reel. Its commands insert, remove, reverse, transform, or total the reel portions described below.",
+    "entity_mapping": [
+      {
+        "raw": "sequence",
+        "mutated": "data reel"
+      },
+      {
+        "raw": "current subarray",
+        "mutated": "active reel segment"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Dynamic indexing, every operation, modular arithmetic, and query sums."
+  },
+  {
+    "seed_id": "TM294",
+    "raw_sha256": "7ab01a78e926f04bbd6499d30ff60c053939a0b2b79215d49ac4c6e9c1dc7348",
+    "scenario": "A register archive keeps snapshots that can be derived from earlier sheets. Commands follow the stated transformation, copying, and inspection rules.",
+    "entity_mapping": [
+      {
+        "raw": "version",
+        "mutated": "snapshot"
+      },
+      {
+        "raw": "array",
+        "mutated": "register sheet"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Version identifiers, source references, copy semantics, affine updates, and query behavior."
+  },
+  {
+    "seed_id": "TM295",
+    "raw_sha256": "38292c797d21cf60c03889da9de30cfd400f9d65dac7d1374baeb9e20dd65059",
+    "scenario": "A gauge console maintains an indexed row of readings. Commands cap, floor, or offset selected readings before exact-total reports.",
+    "entity_mapping": [
+      {
+        "raw": "array",
+        "mutated": "gauge row"
+      },
+      {
+        "raw": "selected values",
+        "mutated": "selected readings"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Min/max/add operations, index ranges, and exact summation."
+  },
+  {
+    "seed_id": "TM296",
+    "raw_sha256": "f34daa1b7a4c57cb5a1cb367f94da58263dac0a74fec462f6cb90dd4bb305102",
+    "scenario": "A sortable catalog associates each record with a priority key and a conversion rule. Requests reorder selected records or evaluate their conversions in the stated order.",
+    "entity_mapping": [
+      {
+        "raw": "triples",
+        "mutated": "catalog records"
+      },
+      {
+        "raw": "triple",
+        "mutated": "catalog record"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Key variables, replacement, ascending/descending sorting, affine maps, and composition order."
+  },
+  {
+    "seed_id": "TM297",
+    "raw_sha256": "783579614710a934519c21f35d1eaa8e49f249f0f25fbb5ce1257e3877690e64",
+    "scenario": "A service network keeps numeric readings at its stations as links appear and disappear. A station report aggregates the readings in its current connected group.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "service stations"
+      },
+      {
+        "raw": "edge",
+        "mutated": "service link"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "service station"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Valid edge insertion/deletion, point additions, connected components, and sums."
+  },
+  {
+    "seed_id": "TM298",
+    "raw_sha256": "0d6b418cb35f837765fd7f3827f89712a6769d0b3946aa2cdc0dac0788207b39",
+    "scenario": "A partnership planner chooses weighted pairing links between participants. Its objective follows the weight-first rule below.",
+    "entity_mapping": [
+      {
+        "raw": "matching",
+        "mutated": "partnership arrangement"
+      },
+      {
+        "raw": "edges",
+        "mutated": "pairing links"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "participant"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Endpoint disjointness, total-weight maximization, and the role of cardinality."
+  },
+  {
+    "seed_id": "TM299",
+    "raw_sha256": "e82ccc5bd879ebf2e53ea380ade6f27f8269ac6d2696c871a389829ddf42511d",
+    "scenario": "A communications audit groups stations by mutual directed reachability. It lists the groups in the order required by transmissions between them.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "communication stations"
+      },
+      {
+        "raw": "arc",
+        "mutated": "transmission link"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "communication station"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: Strong connectivity, directed paths, and topological output order."
+  },
+  {
+    "seed_id": "TM300",
+    "raw_sha256": "d6e0a28947d36a41372ba387e50577d1b2efba650f224b79a301485a2de36a19",
+    "scenario": "A workstation catalog supplies compatibility links between pairs. It groups workstations through the missing-link relation specified below.",
+    "entity_mapping": [
+      {
+        "raw": "vertices",
+        "mutated": "workstations"
+      },
+      {
+        "raw": "edge",
+        "mutated": "compatibility link"
+      },
+      {
+        "raw": "vertex",
+        "mutated": "workstation"
+      }
+    ],
+    "mutation_kind": "formal_context_reframing",
+    "rationale": "Relabels the listed entities while preserving: The simple undirected graph, complement adjacency, and connected-component partition."
+  }
+]

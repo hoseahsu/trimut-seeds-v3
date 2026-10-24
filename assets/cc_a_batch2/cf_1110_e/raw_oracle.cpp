@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;cin>>n;vector<ll>a(n),b(n);for(auto&x:a)cin>>x;for(auto&x:b)cin>>x;bool ok=false;if(MOD){ok=a==b;for(int i=1;i+1<n;i++){vector<ll>v=a;v[i]=a[i-1]+a[i+1]-a[i];if(v==b)ok=true;}}else if(a[0]==b[0]&&a.back()==b.back()){vector<ll>d;for(int i=1;i<n;i++)d.push_back(a[i]-a[i-1]);sort(d.begin(),d.end());do{ll cur=a[0];bool match=true;for(int i=1;i<n;i++){cur+=d[i-1];if(cur!=b[i]){match=false;break;}}if(match){ok=true;break;}}while(next_permutation(d.begin(),d.end()));}cout<<(ok?"Yes":"No")<<'\n';}

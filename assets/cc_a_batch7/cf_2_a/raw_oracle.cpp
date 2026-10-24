@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;cin>>n;vector<pair<string,int>>e(n);set<string>names;for(auto &[s,x]:e)cin>>s>>x,names.insert(s);ll bestscore=LLONG_MIN;int besttime=MOD?-1:INT_MAX;string ans;for(string who:names){ll score=0;for(auto [s,x]:e)if(s==who)score+=x;ll running=0;int first=n;for(int i=0;i<n;i++)if(e[i].first==who){running+=e[i].second;if(running>=score&&first==n)first=i;}if(score>bestscore||(score==bestscore&&(MOD?first>besttime:first<besttime)))bestscore=score,besttime=first,ans=who;}cout<<ans<<'\n';}

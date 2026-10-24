@@ -1,0 +1,263 @@
+{
+  "records": [
+    {
+      "seed_id": "TM070",
+      "replaces_source_identity": "codecontests:1:brcktsrm",
+      "replacement_reason": "Original source contains unresolved contradictory semantic or numerical statements.",
+      "source_identity": "atcoder:abc083_b",
+      "source": {
+        "source_identity": "atcoder:abc083_b",
+        "source_dataset": "AtCoder official",
+        "source_problem_id": "abc083_b",
+        "source_url": "https://atcoder.jp/contests/abc083/tasks/abc083_b?lang=en",
+        "original_statement": "sources/replacement_official/abc083_b/original_statement.md",
+        "source_package": "sources/replacement_official/abc083_b",
+        "source_tests": "sources/replacement_official/abc083_b/source_tests.json",
+        "title": "B - Some Sums",
+        "statement_sha256": "6167bb155ee437438ed70af3219e7dc5039dd1bb18a913fdcba6aced4f8bf9d6",
+        "native_budget_seconds": 2,
+        "source_reference": null,
+        "license_note": "AtCoder publisher copyright retained; local research source snapshot; no blanket redistribution licence asserted."
+      },
+      "recipe_id": "replacement_abc083_b",
+      "recipe_module": "recipes/replacements.py",
+      "prompts": {
+        "raw": "tasks/TM070/raw.txt",
+        "l1": "tasks/TM070/l1.txt",
+        "l2": "tasks/TM070/l2.txt",
+        "l3": "tasks/TM070/l3.txt"
+      },
+      "native_bounds": {
+        "N": 10000,
+        "B": 36
+      },
+      "l2_bounds": {
+        "N": 1000000000,
+        "B": 36
+      },
+      "l3_operator": "Change upper digit-sum comparison from <= B to < B; lower comparison stays >= A.",
+      "native_samples": "tasks/TM070/native_samples.json",
+      "validation_directory": "validation/replacement5_cpu2",
+      "status": "finite_validation_passed",
+      "validation_report": "validation/replacement5_cpu2/replacement_abc083_b-5d6f5a47e8/report.json",
+      "public_samples_executed_match": true,
+      "strict_scale_witnesses": [
+        {
+          "input_path": "validation/replacement5_cpu2/replacement_abc083_b-5d6f5a47e8/cases/stress/0000-stress_0-5c40174183/input.txt",
+          "valid_l2": true,
+          "invalid_raw_because_expanded_upper_bound": true
+        }
+      ],
+      "l1_certificate": "tasks/TM070/l1_certificate.json"
+    },
+    {
+      "seed_id": "TM001",
+      "replaces_source_identity": "codeforces:1060_A",
+      "replacement_reason": "Original source contains unresolved contradictory semantic or numerical statements.",
+      "source_identity": "codeforces:337_A",
+      "source": {
+        "source_identity": "codeforces:337_A",
+        "source_dataset": "Codeforces official",
+        "source_problem_id": "337_A",
+        "source_url": "https://codeforces.com/problemset/problem/337/A",
+        "original_statement": "sources/replacement_official/cf_337_A/original_statement.md",
+        "source_package": "sources/replacement_official/cf_337_A",
+        "source_tests": "sources/replacement_official/cf_337_A/source_tests.json",
+        "title": "A. Puzzles",
+        "statement_sha256": "4fa40c0e960ff566db4178e6629bcd5d1e20fcb2f84d1d0adf34535fe083bb62",
+        "native_budget_seconds": 1,
+        "source_reference": null,
+        "license_note": "Original publisher copyright retained; official source snapshot for local research; no blanket redistribution licence asserted."
+      },
+      "recipe_id": "replacement_cf337_A",
+      "recipe_module": "recipes/replacements.py",
+      "prompts": {
+        "raw": "tasks/TM001/raw.txt",
+        "l1": "tasks/TM001/l1.txt",
+        "l2": "tasks/TM001/l2.txt",
+        "l3": "tasks/TM001/l3.txt"
+      },
+      "native_bounds": {
+        "n": 50,
+        "m": 50,
+        "f": 1000
+      },
+      "l2_bounds": {
+        "n": 200000,
+        "m": 200000,
+        "f": 1000
+      },
+      "l3_operator": "Change minimum range of selected puzzle sizes to maximum range.",
+      "native_samples": "tasks/TM001/native_samples.json",
+      "validation_directory": "validation/replacements_cpu2",
+      "status": "finite_validation_passed",
+      "validation_report": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/report.json",
+      "public_samples_executed_match": true,
+      "strict_scale_witnesses": [
+        {
+          "input_path": "validation/replacements_cpu2/replacement_cf337_A-6e44c897bd/cases/stress/0000-stress_0-5c40174183/input.txt",
+          "valid_l2": true,
+          "invalid_raw_because_expanded_upper_bound": true
+        }
+      ],
+      "l1_certificate": "tasks/TM001/l1_certificate.json"
+    },
+    {
+      "seed_id": "TM017",
+      "replaces_source_identity": "codecontests:3:the-old-monk",
+      "replacement_reason": "Original source contains unresolved contradictory semantic or numerical statements.",
+      "source_identity": "codeforces:43_A",
+      "source": {
+        "source_identity": "codeforces:43_A",
+        "source_dataset": "Codeforces official",
+        "source_problem_id": "43_A",
+        "source_url": "https://codeforces.com/problemset/problem/43/A",
+        "original_statement": "sources/replacement_official/cf_43_A/original_statement.md",
+        "source_package": "sources/replacement_official/cf_43_A",
+        "source_tests": "sources/replacement_official/cf_43_A/source_tests.json",
+        "title": "A. Football",
+        "statement_sha256": "b72ac0f4d5f55fda5da9f9a4039655a55674c7367a1c65c3844dd79590f6fa1f",
+        "native_budget_seconds": 2,
+        "source_reference": null,
+        "license_note": "Original publisher copyright retained; official source snapshot for local research; no blanket redistribution licence asserted."
+      },
+      "recipe_id": "replacement_cf43_A",
+      "recipe_module": "recipes/replacements.py",
+      "prompts": {
+        "raw": "tasks/TM017/raw.txt",
+        "l1": "tasks/TM017/l1.txt",
+        "l2": "tasks/TM017/l2.txt",
+        "l3": "tasks/TM017/l3.txt"
+      },
+      "native_bounds": {
+        "n": 100,
+        "name_length": 10
+      },
+      "l2_bounds": {
+        "n": 200000,
+        "name_length": 10
+      },
+      "l3_operator": "Change argmax goal count to argmin goal count among names occurring in the input.",
+      "native_samples": "tasks/TM017/native_samples.json",
+      "validation_directory": "validation/replacements_cpu2",
+      "status": "finite_validation_passed",
+      "validation_report": "validation/replacements_cpu2/replacement_cf43_A-f08306da99/report.json",
+      "public_samples_executed_match": true,
+      "strict_scale_witnesses": [
+        {
+          "input_path": "validation/replacements_cpu2/replacement_cf43_A-f08306da99/cases/stress/0000-stress_0-5c40174183/input.txt",
+          "valid_l2": true,
+          "invalid_raw_because_expanded_upper_bound": true
+        }
+      ],
+      "l1_certificate": "tasks/TM017/l1_certificate.json"
+    },
+    {
+      "seed_id": "TM025",
+      "replaces_source_identity": "codecontests:1:carvans",
+      "replacement_reason": "Original source contains unresolved contradictory semantic or numerical statements.",
+      "source_identity": "atcoder:abc145_c",
+      "source": {
+        "source_identity": "atcoder:abc145_c",
+        "source_dataset": "AtCoder official",
+        "source_problem_id": "abc145_c",
+        "source_url": "https://atcoder.jp/contests/abc145/tasks/abc145_c?lang=en",
+        "original_statement": "sources/replacement_official/abc145_c/original_statement.md",
+        "source_package": "sources/replacement_official/abc145_c",
+        "source_tests": "sources/replacement_official/abc145_c/source_tests.json",
+        "title": "C - Average Length",
+        "statement_sha256": "4a5ab9735e3b563718cb7ab77c748bf287ebeae2ea82813bb2640c819589cef6",
+        "native_budget_seconds": 2,
+        "source_reference": null,
+        "license_note": "AtCoder publisher copyright retained; local research source snapshot; no blanket redistribution licence asserted."
+      },
+      "recipe_id": "replacement_abc145_c",
+      "recipe_module": "recipes/replacements.py",
+      "prompts": {
+        "raw": "tasks/TM025/raw.txt",
+        "l1": "tasks/TM025/l1.txt",
+        "l2": "tasks/TM025/l2.txt",
+        "l3": "tasks/TM025/l3.txt"
+      },
+      "native_bounds": {
+        "N": 8,
+        "coordinate_abs": 1000
+      },
+      "l2_bounds": {
+        "N": 2000,
+        "coordinate_abs": 1000
+      },
+      "l3_operator": "Change aggregation over all Hamiltonian path lengths from arithmetic mean to minimum.",
+      "native_samples": "tasks/TM025/native_samples.json",
+      "validation_directory": "validation/replacements_cpu2",
+      "status": "finite_validation_passed",
+      "validation_report": "validation/replacements_cpu2/replacement_abc145_c-4186d5650f/report.json",
+      "public_samples_executed_match": true,
+      "strict_scale_witnesses": [
+        {
+          "input_path": "validation/replacements_cpu2/replacement_abc145_c-4186d5650f/cases/stress/0000-stress_0-5c40174183/input.txt",
+          "valid_l2": true,
+          "invalid_raw_because_expanded_upper_bound": true
+        }
+      ],
+      "l1_certificate": "tasks/TM025/l1_certificate.json"
+    },
+    {
+      "seed_id": "TM149",
+      "replaces_source_identity": "codecontests:3:xenny-and-range-sums",
+      "replacement_reason": "Original source contains unresolved contradictory semantic or numerical statements.",
+      "source_identity": "atcoder:abc087_b",
+      "source": {
+        "source_identity": "atcoder:abc087_b",
+        "source_dataset": "AtCoder official",
+        "source_problem_id": "abc087_b",
+        "source_url": "https://atcoder.jp/contests/abc087/tasks/abc087_b?lang=en",
+        "original_statement": "sources/replacement_official/abc087_b/original_statement.md",
+        "source_package": "sources/replacement_official/abc087_b",
+        "source_tests": "sources/replacement_official/abc087_b/source_tests.json",
+        "title": "B - Coins",
+        "statement_sha256": "360bf2beafd56b702ff561dbbe6f67aba3d6be5d2f6622c7df8e03b73fa186f3",
+        "native_budget_seconds": 2,
+        "source_reference": null,
+        "license_note": "AtCoder publisher copyright retained; local research source snapshot; no blanket redistribution licence asserted."
+      },
+      "recipe_id": "replacement_abc087_b",
+      "recipe_module": "recipes/replacements.py",
+      "prompts": {
+        "raw": "tasks/TM149/raw.txt",
+        "l1": "tasks/TM149/l1.txt",
+        "l2": "tasks/TM149/l2.txt",
+        "l3": "tasks/TM149/l3.txt"
+      },
+      "native_bounds": {
+        "A": 50,
+        "B": 50,
+        "C": 50,
+        "X": 20000
+      },
+      "l2_bounds": {
+        "A": 200000,
+        "B": 200000,
+        "C": 200000,
+        "X": 130000000
+      },
+      "l3_operator": "Change total value = X to total value <= X; the empty selection is consequently included.",
+      "native_samples": "tasks/TM149/native_samples.json",
+      "validation_directory": "validation/replacements_cpu2",
+      "status": "finite_validation_passed",
+      "validation_report": "validation/replacements_cpu2/replacement_abc087_b-eda6a280ea/report.json",
+      "public_samples_executed_match": true,
+      "strict_scale_witnesses": [
+        {
+          "input_path": "validation/replacements_cpu2/replacement_abc087_b-eda6a280ea/cases/stress/0000-stress_0-5c40174183/input.txt",
+          "valid_l2": true,
+          "invalid_raw_because_expanded_upper_bound": true
+        }
+      ],
+      "l1_certificate": "tasks/TM149/l1_certificate.json"
+    }
+  ],
+  "previous_seed_index_modified": false,
+  "all_source_identities_distinct": true,
+  "validation_scope": "Finite public/sample/random/boundary/scale differential tests; no proof over all possible inputs or guarantee of model performance."
+}

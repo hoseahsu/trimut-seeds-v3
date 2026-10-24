@@ -1,0 +1,98 @@
+{
+  "cf_967_b": {
+    "source_id": "cf_967_b",
+    "source_name": "967_B. Watering System",
+    "source_row_index": 1213,
+    "canonical_raw": "Block the fewest holes other than the first so its proportional share s1*A/(sum of unblocked sizes) is at leastB liters.\n\nInput: n A B with 1<=B<=A<=10000; n positive hole sizes s_i<=10000. Hole1 must remain open. Output: minimum holes blocked, or-1 if the stated target is impossible.\n\nBenchmark constraints: n<=15. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Block the fewest holes other than the first so its proportional share s1*A/(sum of unblocked sizes) is at leastB liters.\n\nInput: n A B with 1<=B<=A<=10000; n positive hole sizes s_i<=10000. Hole1 must remain open. Output: minimum holes blocked, or-1 if the stated target is impossible.\n\nBenchmark constraints: n<=100000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Block as few holes as possible, never blocking hole1, so the share s1*A/(sum of unblocked sizes) is STRICTLY GREATER THANB. Output-1 if impossible.\n\nInput: n A B with 1<=B<=A<=10000; n positive hole sizes s_i<=10000. Hole1 must remain open. Output: minimum holes blocked, or-1 if the stated target is impossible.\n\nBenchmark constraints: n<=15. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: n A B with 1<=B<=A<=10000; n positive hole sizes s_i<=10000. Hole1 must remain open. Output: minimum holes blocked, or-1 if the stated target is impossible.",
+    "weak_constraints": "n<=15",
+    "strong_constraints": "n<=100000",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "atcoder_abc085_d": {
+    "source_id": "atcoder_abc085_d",
+    "source_name": "p03472 AtCoder Beginner Contest 085 - Katana Thrower",
+    "source_row_index": 1231,
+    "canonical_raw": "Defeat a monster of healthH. Swinging retained katana i dealsa_i and may be repeated; throwing it dealsb_i and permanently removes it. Each attack costs one time unit. Minimize total time.\n\nInput: N H with 1<=H<=10^9; N pairs a_i b_i with 1<=a_i<=b_i<=10^9. Output: minimum total attack time.\n\nBenchmark constraints: N<=15. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Defeat a monster of healthH. Swinging retained katana i dealsa_i and may be repeated; throwing it dealsb_i and permanently removes it. Each attack costs one time unit. Minimize total time.\n\nInput: N H with 1<=H<=10^9; N pairs a_i b_i with 1<=a_i<=b_i<=10^9. Output: minimum total attack time.\n\nBenchmark constraints: N<=100000,H<=10^9. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Swinging retained katanai dealsa_i damage and costs1 time unit; throwing it dealsb_i damage, removes it permanently, and costs2 time units. Defeat healthH using minimum total time. Attacks may be ordered arbitrarily.\n\nInput: N H with 1<=H<=10^9; N pairs a_i b_i with 1<=a_i<=b_i<=10^9. Output: minimum total attack time.\n\nBenchmark constraints: N<=15. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: N H with 1<=H<=10^9; N pairs a_i b_i with 1<=a_i<=b_i<=10^9. Output: minimum total attack time.",
+    "weak_constraints": "N<=15",
+    "strong_constraints": "N<=100000,H<=10^9",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "cf_52_b": {
+    "source_id": "cf_52_b",
+    "source_name": "52_B. Right Triangles",
+    "source_row_index": 1299,
+    "canonical_raw": "Count right triangles whose vertices are starred grid-cell centers and whose two perpendicular legs are parallel to the grid axes.\n\nInput: H W; H strings of lengthW over {.,*}. Output: count of qualifying triangles, each triangle counted once at its unique right-angle vertex.\n\nBenchmark constraints: H,W<=6. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Count right triangles whose vertices are starred grid-cell centers and whose two perpendicular legs are parallel to the grid axes.\n\nInput: H W; H strings of lengthW over {.,*}. Output: count of qualifying triangles, each triangle counted once at its unique right-angle vertex.\n\nBenchmark constraints: H,W<=1000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Count axis-aligned right triangles of starred cell centers whose horizontal leg goes RIGHT and vertical leg goes DOWN from the right-angle vertex.\n\nInput: H W; H strings of lengthW over {.,*}. Output: count of qualifying triangles, each triangle counted once at its unique right-angle vertex.\n\nBenchmark constraints: H,W<=6. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: H W; H strings of lengthW over {.,*}. Output: count of qualifying triangles, each triangle counted once at its unique right-angle vertex.",
+    "weak_constraints": "H,W<=6",
+    "strong_constraints": "H,W<=1000",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "codenet_p02323": {
+    "source_id": "codenet_p02323",
+    "source_name": "p02323 Traveling Salesman Problem",
+    "source_row_index": 1355,
+    "canonical_raw": "Find the minimum total weight of a directed Hamiltonian cycle, visiting every vertex exactly once and returning to its start. Output-1 if none exists.\n\nInput: V E; E directed edges source target weight. Vertices are0..V-1, weights are in[0,1000], and no directed edge repeats. Output: optimal Hamiltonian-cycle weight, or-1 if absent.\n\nBenchmark constraints: V<=8. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Find the minimum total weight of a directed Hamiltonian cycle, visiting every vertex exactly once and returning to its start. Output-1 if none exists.\n\nInput: V E; E directed edges source target weight. Vertices are0..V-1, weights are in[0,1000], and no directed edge repeats. Output: optimal Hamiltonian-cycle weight, or-1 if absent.\n\nBenchmark constraints: V<=15. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Find the MAXIMUM total weight of a directed Hamiltonian cycle visiting every vertex exactly once and returning to its start. Output-1 if none exists.\n\nInput: V E; E directed edges source target weight. Vertices are0..V-1, weights are in[0,1000], and no directed edge repeats. Output: optimal Hamiltonian-cycle weight, or-1 if absent.\n\nBenchmark constraints: V<=8. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: V E; E directed edges source target weight. Vertices are0..V-1, weights are in[0,1000], and no directed edge repeats. Output: optimal Hamiltonian-cycle weight, or-1 if absent.",
+    "weak_constraints": "V<=8",
+    "strong_constraints": "V<=15",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "codenet_p02326": {
+    "source_id": "codenet_p02326",
+    "source_name": "p02326 Largest Square",
+    "source_row_index": 1460,
+    "canonical_raw": "Find the area of the largest axis-aligned square submatrix consisting entirely of zeros in a binary matrix.\n\nInput: H W; H rows each containing W space-separated bits. Output: maximum square AREA, or0 if no cell is eligible.\n\nBenchmark constraints: H,W<=8. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Find the area of the largest axis-aligned square submatrix consisting entirely of zeros in a binary matrix.\n\nInput: H W; H rows each containing W space-separated bits. Output: maximum square AREA, or0 if no cell is eligible.\n\nBenchmark constraints: H,W<=1400. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Find the area of the largest axis-aligned square submatrix consisting entirely of ONES.\n\nInput: H W; H rows each containing W space-separated bits. Output: maximum square AREA, or0 if no cell is eligible.\n\nBenchmark constraints: H,W<=8. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: H W; H rows each containing W space-separated bits. Output: maximum square AREA, or0 if no cell is eligible.",
+    "weak_constraints": "H,W<=8",
+    "strong_constraints": "H,W<=1400",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "hackerearth_minimise_maximum_sum": {
+    "source_id": "hackerearth_minimise_maximum_sum",
+    "source_name": "minimise-maximum-sum",
+    "source_row_index": 1534,
+    "canonical_raw": "Partition all2N positive input occurrences intoN pairs so that the MAXIMUM pair sum is as small as possible. Output that minimum achievable maximum.\n\nInput: T (1..100); each case N followed by2N integers in [1,100000]. All occurrences must be paired. Output: one optimal bottleneck pair sum per case.\n\nBenchmark constraints: N<=4. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Partition all2N positive input occurrences intoN pairs so that the MAXIMUM pair sum is as small as possible. Output that minimum achievable maximum.\n\nInput: T (1..100); each case N followed by2N integers in [1,100000]. All occurrences must be paired. Output: one optimal bottleneck pair sum per case.\n\nBenchmark constraints: N<=100000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Partition all2N input occurrences intoN pairs to MAXIMIZE the MINIMUM pair sum. Output this optimal minimum sum.\n\nInput: T (1..100); each case N followed by2N integers in [1,100000]. All occurrences must be paired. Output: one optimal bottleneck pair sum per case.\n\nBenchmark constraints: N<=4. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: T (1..100); each case N followed by2N integers in [1,100000]. All occurrences must be paired. Output: one optimal bottleneck pair sum per case.",
+    "weak_constraints": "N<=4",
+    "strong_constraints": "N<=100000",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "cf_1081_c": {
+    "source_id": "cf_1081_c",
+    "source_name": "1081_C. Colorful Bricks",
+    "source_row_index": 1575,
+    "canonical_raw": "Count colorings ofn ordered bricks withm labeled colors having exactlyk adjacent color changes; output modulo998244353.\n\nInput: n m k, with n,m>=1 and0<=k<n. Colors are labeled1..m. Output: one count modulo998244353.\n\nBenchmark constraints: n<=7,m<=3. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Count colorings ofn ordered bricks withm labeled colors having exactlyk adjacent color changes; output modulo998244353.\n\nInput: n m k, with n,m>=1 and0<=k<n. Colors are labeled1..m. Output: one count modulo998244353.\n\nBenchmark constraints: n,m<=2000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Count colorings ofn ordered bricks withm labeled colors having AT MOSTk adjacent color changes. Output modulo998244353.\n\nInput: n m k, with n,m>=1 and0<=k<n. Colors are labeled1..m. Output: one count modulo998244353.\n\nBenchmark constraints: n<=7,m<=3. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: n m k, with n,m>=1 and0<=k<n. Colors are labeled1..m. Output: one count modulo998244353.",
+    "weak_constraints": "n<=7,m<=3",
+    "strong_constraints": "n,m<=2000",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "cf_1490_c": {
+    "source_id": "cf_1490_c",
+    "source_name": "1490_C. Sum of Cubes",
+    "source_row_index": 1594,
+    "canonical_raw": "Decide whetherx can be written asa^3+b^3 for positive integersa,b.\n\nInput: t (1..100); t positive integers x. Output: YES or NO per integer.\n\nBenchmark constraints: x<=10000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Decide whetherx can be written asa^3+b^3 for positive integersa,b.\n\nInput: t (1..100); t positive integers x. Output: YES or NO per integer.\n\nBenchmark constraints: t<=100,x<=10^12. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Decide whetherx=a^3+b^3 for NONNEGATIVE integersa,b. Either base may be zero.\n\nInput: t (1..100); t positive integers x. Output: YES or NO per integer.\n\nBenchmark constraints: x<=10000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: t (1..100); t positive integers x. Output: YES or NO per integer.",
+    "weak_constraints": "x<=10000",
+    "strong_constraints": "t<=100,x<=10^12",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  }
+}

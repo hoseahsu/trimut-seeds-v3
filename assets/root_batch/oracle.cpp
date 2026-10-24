@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+int main(int argc,char**argv){ios::sync_with_stdio(false);cin.tie(nullptr);string id=argv[1];bool mut=atoi(argv[2]);
+ if(id=="phone"){int n;string s;cin>>n>>s;int a=count(s.begin(),s.end(),mut?'0':'8'),b=n-a;map<pair<int,int>,int>memo;function<int(int,int)>f=[&](int x,int y){auto key=make_pair(x,y);if(memo.count(key))return memo[key];int best=0;if(x)for(int z=0;z<=10;z++)if(x>=1+z&&y>=10-z)best=max(best,1+f(x-1-z,y-10+z));return memo[key]=best;};cout<<f(a,b)<<'\n';}
+ else if(id=="integer"){int q;cin>>q;while(q--){ll l,r,d;cin>>l>>r>>d;ll z=d;if(mut){while(z<l)z+=d;cout<<(z<=r?z:-1)<<'\n';}else{while(l<=z&&z<=r)z+=d;cout<<z<<'\n';}}}
+ else if(id=="errors"){int n;cin>>n;vector<ll>a(n),b(n-1),c(n-2);for(auto&v:a)cin>>v;for(auto&v:b)cin>>v;for(auto&v:c)cin>>v;auto solve=[&](vector<ll>x,vector<ll>y){sort(y.begin(),y.end());for(int i=0;i<(int)x.size();i++){vector<ll>z=x;z.erase(z.begin()+i);sort(z.begin(),z.end());if(z==y)return mut?ll(i+1):x[i];}return -1LL;};cout<<solve(a,b)<<' '<<solve(b,c)<<'\n';}
+ else if(id=="bulbs"){int n,m;cin>>n>>m;vector<vector<int>>a(n);for(auto&r:a){int k;cin>>k;r.resize(k);for(auto&v:r)cin>>v;sort(r.begin(),r.end());r.erase(unique(r.begin(),r.end()),r.end());}if(!mut){for(int x=1;x<=m;x++){bool found=false;for(auto&r:a)for(int y:r)if(x==y)found=true;if(!found){cout<<"NO\n";return 0;}}cout<<"YES\n";return 0;}vector<int>v(m+1);bool ok=false;function<void(int)>go=[&](int i){if(ok)return;if(i==n){bool all=true;for(int j=1;j<=m;j++)all&=v[j]==1;ok|=all;return;}go(i+1);for(int x:a[i])v[x]^=1;go(i+1);for(int x:a[i])v[x]^=1;};go(0);cout<<(ok?"YES":"NO")<<'\n';}
+ else if(id=="garden"){int n;ll k;cin>>n>>k;ll best=mut?0:LLONG_MAX;while(n--){ll a;cin>>a;ll covered=0,h=0;while(covered<k){covered+=a;h++;}if(covered==k)best=mut?max(best,h):min(best,h);}cout<<best<<'\n';}
+ else if(id=="elections"){int n;cin>>n;vector<ll>a(n);for(auto&v:a)cin>>v;ll k=*max_element(a.begin(),a.end());while(true){ll ours=0,theirs=0;for(ll x:a){ours+=k-x;theirs+=x;}if(mut?ours>=theirs:ours>theirs)break;k++;}cout<<k<<'\n';}
+ else if(id=="games"){int n;cin>>n;vector<pair<int,int>>a(n);for(auto&[h,g]:a)cin>>h>>g;ll ans=0;for(int i=0;i<n;i++)for(int j=0;j<n;j++)if(i!=j&&a[i].first==(mut?a[j].first:a[j].second))ans++;cout<<ans<<'\n';}
+ else if(id=="keys"){int n,k;ll p;cin>>n>>k>>p;vector<ll>a(n),b(k);for(auto&v:a)cin>>v;for(auto&v:b)cin>>v;vector<bool>used(k);ll best=LLONG_MAX;function<void(int,ll)>go=[&](int i,ll value){if(i==n){best=min(best,value);return;}for(int j=0;j<k;j++)if(!used[j]){used[j]=true;ll cost=abs(a[i]-b[j])+abs(b[j]-p);go(i+1,mut?value+cost:max(value,cost));used[j]=false;}};go(0,0);cout<<best<<'\n';}
+ else return 2;
+}

@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+const ll P=1000000007;ll power(ll a,ll b){ll r=1;for(;b;b>>=1,a=a*a%P)if(b&1)r=r*a%P;return r;}int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int T;cin>>T;while(T--){int n,k;cin>>n>>k;vector<ll>a(n),f(n+1,1),iv(n+1,1);for(auto&x:a)cin>>x;sort(a.begin(),a.end());for(int i=1;i<=n;i++)f[i]=f[i-1]*i%P;iv[n]=power(f[n],P-2);for(int i=n;i;i--)iv[i-1]=iv[i]*i%P;auto choose=[&](int nn,int kk){return nn<kk?0LL:f[nn]*iv[kk]%P*iv[nn-kk]%P;};ll ans=0;for(int i=0;i<n;i++)ans=(ans+a[i]%P*choose(MOD?i:n-i-1,k-1))%P;cout<<ans<<'\n';}}

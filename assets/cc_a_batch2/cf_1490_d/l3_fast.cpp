@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 1
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int T;cin>>T;while(T--){int n;cin>>n;vector<int>a(n),left(n,-1),right(n,-1),st,dep(n);for(auto&x:a)cin>>x;for(int i=0;i<n;i++){int last=-1;while(!st.empty()&&(MOD?a[st.back()]>a[i]:a[st.back()]<a[i]))last=st.back(),st.pop_back();if(!st.empty())right[st.back()]=i;left[i]=last;st.push_back(i);}int root=st.front();vector<int>walk(1,root);while(!walk.empty()){int v=walk.back();walk.pop_back();for(int u:{left[v],right[v]})if(u!=-1)dep[u]=dep[v]+1,walk.push_back(u);}for(int d:dep)cout<<d<<' ';cout<<'\n';}}

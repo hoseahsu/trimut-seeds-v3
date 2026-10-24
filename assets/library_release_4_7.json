@@ -1,0 +1,522 @@
+{
+  "area_of_union_of_rectangles": {
+    "canonical_raw": "Compute the area of the union of N axis-aligned rectangles.\n\nInput: N, followed by N lines l d r u describing [l,r)×[d,u).\n\nOutput: One integer area.\n\nConstraints: N>=1; all coordinates are integers in[0,10^9]; l<r and d<u.",
+    "canonical_l3": "Compute the area covered by at least two of the N rectangle instances. Identical input rectangles count as separate covering instances.\n\nInput: N, followed by N lines l d r u describing [l,r)×[d,u).\n\nOutput: One integer area.\n\nConstraints: N>=1; all coordinates are integers in[0,10^9]; l<r and d<u.",
+    "io_protocol": {
+      "input": "N, followed by N lines l d r u describing [l,r)×[d,u).",
+      "raw_output": "One integer area.",
+      "l3_output": "One integer area."
+    },
+    "shared_constraints": "N>=1; all coordinates are integers in[0,10^9]; l<r and d<u.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/area_of_union_of_rectangles/task.md",
+    "source_statement_sha256": "e491bf3fec19cbc276745e5362747d20b65fcb3ac95f1a5f0d45e82f7bcee071",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "number_of_subsequences": {
+    "canonical_raw": "Count distinct nonempty subsequences of the integer sequence. Two subsequences are identical when their value sequences agree.\n\nInput: N followed by N integers a_0,...,a_(N-1).\n\nOutput: The count modulo998244353.\n\nConstraints: N>=1; 0<=a_i<=10^9.",
+    "canonical_l3": "Count distinct nonempty subsequences of even length of the integer sequence. Two subsequences are identical when their value sequences agree.\n\nInput: N followed by N integers a_0,...,a_(N-1).\n\nOutput: The count modulo998244353.\n\nConstraints: N>=1; 0<=a_i<=10^9.",
+    "io_protocol": {
+      "input": "N followed by N integers a_0,...,a_(N-1).",
+      "raw_output": "The count modulo998244353.",
+      "l3_output": "The count modulo998244353."
+    },
+    "shared_constraints": "N>=1; 0<=a_i<=10^9.",
+    "source_statement_file": "sources/library-checker-problems-master/enumerative_combinatorics/number_of_subsequences/task.md",
+    "source_statement_sha256": "513b754d18301fce465440712b481f57049d4d2334fea6469b12dfeb65673b67",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "enumerate_palindromes": {
+    "canonical_raw": "For each center of a nonempty string, find the greatest length of a palindrome centered there; equal characters must occupy mirrored positions.\n\nInput: One lowercase English string S of length N.\n\nOutput: 2N-1 integers. Entry k is the maximum length r-l+1 with 0<=l<=r<N, l+r=k, and the required mirror property; use0 when no nonempty substring qualifies.\n\nConstraints: 1<=N; S contains only a,...,z.",
+    "canonical_l3": "For each center find the greatest length of a contiguous substring whose mirrored letters are alphabet complements: a pairs with z, b with y,...,z with a. Check the center itself for odd length. No letter complements itself, so every odd-center answer is0.\n\nInput: One lowercase English string S of length N.\n\nOutput: 2N-1 integers. Entry k is the maximum length r-l+1 with 0<=l<=r<N, l+r=k, and the required mirror property; use0 when no nonempty substring qualifies.\n\nConstraints: 1<=N; S contains only a,...,z.",
+    "io_protocol": {
+      "input": "One lowercase English string S of length N.",
+      "raw_output": "2N-1 integers. Entry k is the maximum length r-l+1 with 0<=l<=r<N, l+r=k, and the required mirror property; use0 when no nonempty substring qualifies.",
+      "l3_output": "2N-1 integers. Entry k is the maximum length r-l+1 with 0<=l<=r<N, l+r=k, and the required mirror property; use0 when no nonempty substring qualifies."
+    },
+    "shared_constraints": "1<=N; S contains only a,...,z.",
+    "source_statement_file": "sources/library-checker-problems-master/string/enumerate_palindromes/task.md",
+    "source_statement_sha256": "c92ed622067e10abf4b0d9a3431b27fca65b3aa2e8030365719368ed76934aa8",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "zalgorithm": {
+    "canonical_raw": "For every i, find the longest common prefix of S and the suffix S[i:]. Thus the answer at i=0 is N.\n\nInput: One lowercase English string S of length N.\n\nOutput: N integers, the answer for i=0,...,N-1.\n\nConstraints: N>=1; only lowercase English letters.",
+    "canonical_l3": "For every i, find the largest k with 0<=k<=N-i such that for every0<=j<k, S[j] is the alphabet complement of S[i+j]. Alphabet complements pair a with z,b with y,and so on.\n\nInput: One lowercase English string S of length N.\n\nOutput: N integers, the answer for i=0,...,N-1.\n\nConstraints: N>=1; only lowercase English letters.",
+    "io_protocol": {
+      "input": "One lowercase English string S of length N.",
+      "raw_output": "N integers, the answer for i=0,...,N-1.",
+      "l3_output": "N integers, the answer for i=0,...,N-1."
+    },
+    "shared_constraints": "N>=1; only lowercase English letters.",
+    "source_statement_file": "sources/library-checker-problems-master/string/zalgorithm/task.md",
+    "source_statement_sha256": "2b291b403bf6d2148f097d591486fc0bf0ab1ff8f3d7dbe8190ee9d144d837c4",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "closest_pair": {
+    "canonical_raw": "For each case find two distinct point indices whose Euclidean distance minimizes the distance among all pairs.\n\nInput: T; for each case N followed by N lines x_i y_i.\n\nOutput: For each case one line of two0-based distinct indices i j. Any optimal pair is valid.\n\nConstraints: T>=1; each N>=2; integer coordinates in[-10^9,10^9]; duplicate coordinates are allowed. The source also limits sum N<=500000.",
+    "canonical_l3": "For each case find two distinct point indices whose Manhattan distance |x_i-x_j|+|y_i-y_j| minimizes the distance among all pairs.\n\nInput: T; for each case N followed by N lines x_i y_i.\n\nOutput: For each case one line of two0-based distinct indices i j. Any optimal pair is valid.\n\nConstraints: T>=1; each N>=2; integer coordinates in[-10^9,10^9]; duplicate coordinates are allowed. The source also limits sum N<=500000.",
+    "io_protocol": {
+      "input": "T; for each case N followed by N lines x_i y_i.",
+      "raw_output": "For each case one line of two0-based distinct indices i j. Any optimal pair is valid.",
+      "l3_output": "For each case one line of two0-based distinct indices i j. Any optimal pair is valid."
+    },
+    "shared_constraints": "T>=1; each N>=2; integer coordinates in[-10^9,10^9]; duplicate coordinates are allowed. The source also limits sum N<=500000.",
+    "source_statement_file": "sources/library-checker-problems-master/geo/closest_pair/task.md",
+    "source_statement_sha256": "bf0d7055960ab201f90664342f4c9ac04b8962b91079332650ea0d38c016ac41",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "furthest_pair": {
+    "canonical_raw": "For each case find two distinct point indices whose Euclidean distance maximizes the distance among all pairs.\n\nInput: T; for each case N followed by N lines x_i y_i.\n\nOutput: For each case one line of two0-based distinct indices i j. Any optimal pair is valid.\n\nConstraints: T>=1; each N>=2; integer coordinates in[-10^9,10^9]; duplicate coordinates are allowed. The source also limits sum N<=500000.",
+    "canonical_l3": "For each case find two distinct point indices whose Manhattan distance |x_i-x_j|+|y_i-y_j| maximizes the distance among all pairs.\n\nInput: T; for each case N followed by N lines x_i y_i.\n\nOutput: For each case one line of two0-based distinct indices i j. Any optimal pair is valid.\n\nConstraints: T>=1; each N>=2; integer coordinates in[-10^9,10^9]; duplicate coordinates are allowed. The source also limits sum N<=500000.",
+    "io_protocol": {
+      "input": "T; for each case N followed by N lines x_i y_i.",
+      "raw_output": "For each case one line of two0-based distinct indices i j. Any optimal pair is valid.",
+      "l3_output": "For each case one line of two0-based distinct indices i j. Any optimal pair is valid."
+    },
+    "shared_constraints": "T>=1; each N>=2; integer coordinates in[-10^9,10^9]; duplicate coordinates are allowed. The source also limits sum N<=500000.",
+    "source_statement_file": "sources/library-checker-problems-master/geo/furthest_pair/task.md",
+    "source_statement_sha256": "11a3ca8b2b75a2003a2e6763595ea5004babe1235baed4e5cdd64a55ece91c18",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "all_furthest_neighbors": {
+    "canonical_raw": "For every vertex of each convex polygon find any vertex farthest from it in Euclidean distance.\n\nInput: T; for each case N followed by the N coordinate pairs in polygon order.\n\nOutput: For each case N0-based indices; output entry i is a farthest vertex from vertex i.\n\nConstraints: T>=1; each N>=3; vertices are distinct, strictly convex and counterclockwise; integer coordinates in[-10^9,10^9]; source sum N<=500000.",
+    "canonical_l3": "For every vertex of each convex polygon find any vertex maximizing Manhattan distance from it.\n\nInput: T; for each case N followed by the N coordinate pairs in polygon order.\n\nOutput: For each case N0-based indices; output entry i is a farthest vertex from vertex i.\n\nConstraints: T>=1; each N>=3; vertices are distinct, strictly convex and counterclockwise; integer coordinates in[-10^9,10^9]; source sum N<=500000.",
+    "io_protocol": {
+      "input": "T; for each case N followed by the N coordinate pairs in polygon order.",
+      "raw_output": "For each case N0-based indices; output entry i is a farthest vertex from vertex i.",
+      "l3_output": "For each case N0-based indices; output entry i is a farthest vertex from vertex i."
+    },
+    "shared_constraints": "T>=1; each N>=3; vertices are distinct, strictly convex and counterclockwise; integer coordinates in[-10^9,10^9]; source sum N<=500000.",
+    "source_statement_file": "sources/library-checker-problems-master/geo/all_furthest_neighbors/task.md",
+    "source_statement_sha256": "ceea178e6de1c54fba42af633e947d843ae5129efa1d584c0ab6837635f58edb",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "static_convex_hull": {
+    "canonical_raw": "For each point set output the vertices of its convex hull. Omit interior collinear points on hull edges, and omit duplicate coordinates. For a collinear set output only the two extreme distinct endpoints, or its single point.\n\nInput: T; for each case N followed by N coordinate pairs.\n\nOutput: For each case print K followed by K lines of coordinates. A nondegenerate hull is counterclockwise with any starting vertex; an empty input has K=0. Degenerate hull points may be ordered in either monotone direction.\n\nConstraints: T>=1; N>=0; integer coordinates in[-10^9,10^9]; duplicates are allowed; source sum N<=500000.",
+    "canonical_l3": "For each point set output every distinct input point on the boundary of its convex hull, including points in the interior of straight hull edges. For a collinear set output all distinct points in monotone order along its segment.\n\nInput: T; for each case N followed by N coordinate pairs.\n\nOutput: For each case print K followed by K lines of coordinates. A nondegenerate hull is counterclockwise with any starting vertex; an empty input has K=0. Degenerate hull points may be ordered in either monotone direction.\n\nConstraints: T>=1; N>=0; integer coordinates in[-10^9,10^9]; duplicates are allowed; source sum N<=500000.",
+    "io_protocol": {
+      "input": "T; for each case N followed by N coordinate pairs.",
+      "raw_output": "For each case print K followed by K lines of coordinates. A nondegenerate hull is counterclockwise with any starting vertex; an empty input has K=0. Degenerate hull points may be ordered in either monotone direction.",
+      "l3_output": "For each case print K followed by K lines of coordinates. A nondegenerate hull is counterclockwise with any starting vertex; an empty input has K=0. Degenerate hull points may be ordered in either monotone direction."
+    },
+    "shared_constraints": "T>=1; N>=0; integer coordinates in[-10^9,10^9]; duplicates are allowed; source sum N<=500000.",
+    "source_statement_file": "sources/library-checker-problems-master/geo/static_convex_hull/task.md",
+    "source_statement_sha256": "621a43660bbd1b91a50d8e55d6c657e06a7a94c9a9e1cfebc2d8fb1dbf2b9748",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "static_range_mode_query": {
+    "canonical_raw": "For each nonempty interval find a value with maximum frequency in that interval.\n\nInput: N Q; N integers a_i; Q lines l r describing a[l:r].\n\nOutput: For each query print a qualifying value and its occurrence count. Any value attaining the required optimum is valid.\n\nConstraints: N>=1; Q>=0;0<=a_i<=10^9;0<=l<r<=N.",
+    "canonical_l3": "For each nonempty interval find a present value with minimum positive frequency. Values absent from the interval are ineligible.\n\nInput: N Q; N integers a_i; Q lines l r describing a[l:r].\n\nOutput: For each query print a qualifying value and its occurrence count. Any value attaining the required optimum is valid.\n\nConstraints: N>=1; Q>=0;0<=a_i<=10^9;0<=l<r<=N.",
+    "io_protocol": {
+      "input": "N Q; N integers a_i; Q lines l r describing a[l:r].",
+      "raw_output": "For each query print a qualifying value and its occurrence count. Any value attaining the required optimum is valid.",
+      "l3_output": "For each query print a qualifying value and its occurrence count. Any value attaining the required optimum is valid."
+    },
+    "shared_constraints": "N>=1; Q>=0;0<=a_i<=10^9;0<=l<r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/static_range_mode_query/task.md",
+    "source_statement_sha256": "61f981bb3ba1706354b8cf91ee2ed1c8c5b6825f2bdfa7cd8ba51eb9d144daf3",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "minimum_enclosing_circle": {
+    "canonical_raw": "Find the smallest closed disk containing all input points. Identify which input points lie on its boundary circle.\n\nInput: N followed by N lines x_i y_i.\n\nOutput: A string of N bits; bit i is1 iff input point i is on the target boundary, otherwise0.\n\nConstraints: N>=2; points are distinct; all coordinates are integers in[-10000,10000].",
+    "canonical_l3": "Find the smallest axis-aligned closed rectangle containing all input points. Identify input points on its boundary, including degenerate rectangles.\n\nInput: N followed by N lines x_i y_i.\n\nOutput: A string of N bits; bit i is1 iff input point i is on the target boundary, otherwise0.\n\nConstraints: N>=2; points are distinct; all coordinates are integers in[-10000,10000].",
+    "io_protocol": {
+      "input": "N followed by N lines x_i y_i.",
+      "raw_output": "A string of N bits; bit i is1 iff input point i is on the target boundary, otherwise0.",
+      "l3_output": "A string of N bits; bit i is1 iff input point i is on the target boundary, otherwise0."
+    },
+    "shared_constraints": "N>=2; points are distinct; all coordinates are integers in[-10000,10000].",
+    "source_statement_file": "sources/library-checker-problems-master/geo/minimum_enclosing_circle/task.md",
+    "source_statement_sha256": "86a5f22443b476c3c11a6d7472212f84ffabb5202ac0118e95dd9a1e85579007",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "lca": {
+    "canonical_raw": "The root is vertex0. For every query output the lowest common ancestor of its two vertices.\n\nInput: N Q; parent list p_1,...,p_(N-1); then Q lines u v.\n\nOutput: One vertex index per query.\n\nConstraints: N>=2;Q>=1;0<=p_i<i;0<=u<v<N; vertices are0-based.",
+    "canonical_l3": "Treat the supplied parent pairs as undirected edges and root the tree at vertex N-1. For every query output the lowest common ancestor under this root.\n\nInput: N Q; parent list p_1,...,p_(N-1); then Q lines u v.\n\nOutput: One vertex index per query.\n\nConstraints: N>=2;Q>=1;0<=p_i<i;0<=u<v<N; vertices are0-based.",
+    "io_protocol": {
+      "input": "N Q; parent list p_1,...,p_(N-1); then Q lines u v.",
+      "raw_output": "One vertex index per query.",
+      "l3_output": "One vertex index per query."
+    },
+    "shared_constraints": "N>=2;Q>=1;0<=p_i<i;0<=u<v<N; vertices are0-based.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/lca/task.md",
+    "source_statement_sha256": "9d5265e5fae1e580528497cd86658b01d5bd6c575cb5aa6571f7d4c48b417748",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "jump_on_tree": {
+    "canonical_raw": "On the unique path(s=v_0,v_1,...,v_k=t), output v_i, or-1 if i>k.\n\nInput: N Q; N-1 undirected edge lines u v; Q query lines s t i.\n\nOutput: One vertex index or-1 per query.\n\nConstraints: N>=2;Q>=1; edges form a tree; all vertices are0-based in[0,N);0<=i<N.",
+    "canonical_l3": "On the unique path(t=v_0,v_1,...,v_k=s), output v_i, or-1 if i>k.\n\nInput: N Q; N-1 undirected edge lines u v; Q query lines s t i.\n\nOutput: One vertex index or-1 per query.\n\nConstraints: N>=2;Q>=1; edges form a tree; all vertices are0-based in[0,N);0<=i<N.",
+    "io_protocol": {
+      "input": "N Q; N-1 undirected edge lines u v; Q query lines s t i.",
+      "raw_output": "One vertex index or-1 per query.",
+      "l3_output": "One vertex index or-1 per query."
+    },
+    "shared_constraints": "N>=2;Q>=1; edges form a tree; all vertices are0-based in[0,N);0<=i<N.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/jump_on_tree/task.md",
+    "source_statement_sha256": "68d16953667a89e7b05644d0379fd7fc2c70266111b8e4904950404bcea3ba0d",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "tree_diameter": {
+    "canonical_raw": "Find a simple path maximizing the sum of its edge weights.\n\nInput: N followed by N-1 lines u v w describing an undirected weighted tree.\n\nOutput: Print score X and number of path vertices K, then the K0-based vertex indices in path order. Any optimal simple path is valid.\n\nConstraints: N>=1;0<=u,v<N;u!=v;1<=w<=10^9; input edges form a tree.",
+    "canonical_l3": "Define the score of a nonempty simple path as its largest edge weight; a path with one vertex has score0. Find a path maximizing this score.\n\nInput: N followed by N-1 lines u v w describing an undirected weighted tree.\n\nOutput: Print score X and number of path vertices K, then the K0-based vertex indices in path order. Any optimal simple path is valid.\n\nConstraints: N>=1;0<=u,v<N;u!=v;1<=w<=10^9; input edges form a tree.",
+    "io_protocol": {
+      "input": "N followed by N-1 lines u v w describing an undirected weighted tree.",
+      "raw_output": "Print score X and number of path vertices K, then the K0-based vertex indices in path order. Any optimal simple path is valid.",
+      "l3_output": "Print score X and number of path vertices K, then the K0-based vertex indices in path order. Any optimal simple path is valid."
+    },
+    "shared_constraints": "N>=1;0<=u,v<N;u!=v;1<=w<=10^9; input edges form a tree.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/tree_diameter/task.md",
+    "source_statement_sha256": "fea06ec302d480c8a0787d3b4bd6549f838b2a19f45138fac214ed79553d8ddf",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "rooted_tree_isomorphism_classification": {
+    "canonical_raw": "Consider the descendant subtree rooted at each vertex of a tree rooted at0. Classify these as unordered rooted trees: children may be permuted in an isomorphism.\n\nInput: N then parent list p_1,...,p_(N-1), with a blank parent line allowed for N=1.\n\nOutput: Print number of classes K, then N labels c_i in[0,K). Every label must occur, and c_i=c_j iff the two rooted subtrees are isomorphic under the stated definition.\n\nConstraints: N>=1;0<=p_i<i; vertices are0-based.",
+    "canonical_l3": "Consider the descendant subtree rooted at each vertex of a tree rooted at0. At every vertex order children by increasing original vertex index. Classify these as ordered rooted trees: an isomorphism must preserve the child sequence at every vertex.\n\nInput: N then parent list p_1,...,p_(N-1), with a blank parent line allowed for N=1.\n\nOutput: Print number of classes K, then N labels c_i in[0,K). Every label must occur, and c_i=c_j iff the two rooted subtrees are isomorphic under the stated definition.\n\nConstraints: N>=1;0<=p_i<i; vertices are0-based.",
+    "io_protocol": {
+      "input": "N then parent list p_1,...,p_(N-1), with a blank parent line allowed for N=1.",
+      "raw_output": "Print number of classes K, then N labels c_i in[0,K). Every label must occur, and c_i=c_j iff the two rooted subtrees are isomorphic under the stated definition.",
+      "l3_output": "Print number of classes K, then N labels c_i in[0,K). Every label must occur, and c_i=c_j iff the two rooted subtrees are isomorphic under the stated definition."
+    },
+    "shared_constraints": "N>=1;0<=p_i<i; vertices are0-based.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/rooted_tree_isomorphism_classification/task.md",
+    "source_statement_sha256": "20b10361728701f5cd5d6421839f5fca88f30489cf1824e18e8f3b9150a51aa9",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "vertex_set_path_composite": {
+    "canonical_raw": "Each vertex v holds f_v(x)=a_v*x+b_v modulo998244353. Operation0 p c d assigns f_p(x)=c*x+d. Operation1 u v x applies the functions of vertices on the unique u-to-v path, starting at u and ending at v, to x.\n\nInput: N Q; N lines a_i b_i; N-1 undirected edge lines; Q operation lines.\n\nOutput: For each type1 operation output the resulting value modulo998244353.\n\nConstraints: N,Q>=1; edges form a tree; all vertices are0-based in[0,N);1<=a_i,c<998244353;0<=b_i,d,x<998244353.",
+    "canonical_l3": "Each vertex v holds f_v(x)=a_v*x+b_v modulo998244353. Operation0 p c d assigns f_p(x)=c*x+d. Operation1 u v x applies the functions of vertices on the unique v-to-u path, starting at v and ending at u, to x.\n\nInput: N Q; N lines a_i b_i; N-1 undirected edge lines; Q operation lines.\n\nOutput: For each type1 operation output the resulting value modulo998244353.\n\nConstraints: N,Q>=1; edges form a tree; all vertices are0-based in[0,N);1<=a_i,c<998244353;0<=b_i,d,x<998244353.",
+    "io_protocol": {
+      "input": "N Q; N lines a_i b_i; N-1 undirected edge lines; Q operation lines.",
+      "raw_output": "For each type1 operation output the resulting value modulo998244353.",
+      "l3_output": "For each type1 operation output the resulting value modulo998244353."
+    },
+    "shared_constraints": "N,Q>=1; edges form a tree; all vertices are0-based in[0,N);1<=a_i,c<998244353;0<=b_i,d,x<998244353.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/vertex_set_path_composite/task.md",
+    "source_statement_sha256": "d1084168fa6073ab5d3922f12f426f036476ae3925c8ab809f918ba59da0890e",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "maximum_independent_set": {
+    "canonical_raw": "Find a largest vertex set containing no edge between two selected vertices.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: Print set size K, then K distinct0-based selected vertices. Any optimal set is valid.\n\nConstraints: N>=1;0<=M<=N(N-1)/2;0<=u,v<N;no loops or duplicate undirected edges.",
+    "canonical_l3": "Find a largest vertex set in which every pair of distinct selected vertices is joined by an input edge.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: Print set size K, then K distinct0-based selected vertices. Any optimal set is valid.\n\nConstraints: N>=1;0<=M<=N(N-1)/2;0<=u,v<N;no loops or duplicate undirected edges.",
+    "io_protocol": {
+      "input": "N M followed by M undirected edge lines u v.",
+      "raw_output": "Print set size K, then K distinct0-based selected vertices. Any optimal set is valid.",
+      "l3_output": "Print set size K, then K distinct0-based selected vertices. Any optimal set is valid."
+    },
+    "shared_constraints": "N>=1;0<=M<=N(N-1)/2;0<=u,v<N;no loops or duplicate undirected edges.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/maximum_independent_set/task.md",
+    "source_statement_sha256": "542de2e2ba9e30fe0bd4cb2b159193d38ba23d4d08c7144634d866fbc030b797",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "chromatic_number": {
+    "canonical_raw": "Find the minimum number of colors needed to color all vertices so that endpoints of each edge have different colors.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: One integer, the required optimum.\n\nConstraints: N>=1;0<=M<=N(N-1)/2;0<=u,v<N;no loops or duplicate undirected edges.",
+    "canonical_l3": "Find the largest number of vertices forming a clique: every pair of distinct chosen vertices must be joined by an edge.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: One integer, the required optimum.\n\nConstraints: N>=1;0<=M<=N(N-1)/2;0<=u,v<N;no loops or duplicate undirected edges.",
+    "io_protocol": {
+      "input": "N M followed by M undirected edge lines u v.",
+      "raw_output": "One integer, the required optimum.",
+      "l3_output": "One integer, the required optimum."
+    },
+    "shared_constraints": "N>=1;0<=M<=N(N-1)/2;0<=u,v<N;no loops or duplicate undirected edges.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/chromatic_number/task.md",
+    "source_statement_sha256": "bec37ac16ea906fe7740b5b57c7b1785b248755f08f9ef7c0ecd907891251473",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "counting_spanning_tree_undirected": {
+    "canonical_raw": "Count spanning trees of the undirected graph. Different parallel edge instances are distinct choices; self-loops cannot be selected.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: The count modulo998244353.\n\nConstraints: N>=1;M>=0;0<=u,v<N;parallel edges and self-loops are allowed.",
+    "canonical_l3": "Count pairs(F,R) where F is a spanning forest and R chooses exactly one root vertex in each component of F. Different parallel edge instances are distinct choices; self-loops cannot be selected. Isolated vertices are components with their sole vertex as root.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: The count modulo998244353.\n\nConstraints: N>=1;M>=0;0<=u,v<N;parallel edges and self-loops are allowed.",
+    "io_protocol": {
+      "input": "N M followed by M undirected edge lines u v.",
+      "raw_output": "The count modulo998244353.",
+      "l3_output": "The count modulo998244353."
+    },
+    "shared_constraints": "N>=1;M>=0;0<=u,v<N;parallel edges and self-loops are allowed.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/counting_spanning_tree_undirected/task.md",
+    "source_statement_sha256": "53f93bf4a9b5e61e36ac941198e2639bd4bcc49284a74d004ce608f968551d6c",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "counting_spanning_tree_directed": {
+    "canonical_raw": "Count directed spanning arborescences rooted at r, with every vertex reachable from r. A selected arborescence has N-1 arcs and each vertex other than r has one incoming arc.\n\nInput: N M r followed by M directed arc lines u v, oriented u→v.\n\nOutput: The count modulo998244353.\n\nConstraints: N>=1;M>=0;0<=r,u,v<N;parallel arcs and self-loops are allowed. Distinct parallel instances are distinct choices; self-loops cannot be selected.",
+    "canonical_l3": "Count directed spanning arborescences toward r, with r reachable from every vertex. A selected arborescence has N-1 arcs and each vertex other than r has one outgoing arc.\n\nInput: N M r followed by M directed arc lines u v, oriented u→v.\n\nOutput: The count modulo998244353.\n\nConstraints: N>=1;M>=0;0<=r,u,v<N;parallel arcs and self-loops are allowed. Distinct parallel instances are distinct choices; self-loops cannot be selected.",
+    "io_protocol": {
+      "input": "N M r followed by M directed arc lines u v, oriented u→v.",
+      "raw_output": "The count modulo998244353.",
+      "l3_output": "The count modulo998244353."
+    },
+    "shared_constraints": "N>=1;M>=0;0<=r,u,v<N;parallel arcs and self-loops are allowed. Distinct parallel instances are distinct choices; self-loops cannot be selected.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/counting_spanning_tree_directed/task.md",
+    "source_statement_sha256": "93c19e473d46b54203574816dcf02646a3a24f0928f054c5d986af0733026b0c",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "directedmst": {
+    "canonical_raw": "Find a minimum-total-weight spanning directed arborescence rooted at S, so S reaches every vertex through selected arcs.\n\nInput: N M S followed by M lines u v w for arcs u→v.\n\nOutput: Print total weight, then N parent vertices p_v. Require p_S=S; for v!=S the selected arc is p_v→v. Any optimal arborescence is valid.\n\nConstraints: N>=1;M>=N-1;0<=S,u,v<N;no loops or repeated directed arcs;0<=w<=10^9; every vertex is reachable from S in the input.",
+    "canonical_l3": "Find a maximum-total-weight spanning directed arborescence rooted at S, so S reaches every vertex through selected arcs.\n\nInput: N M S followed by M lines u v w for arcs u→v.\n\nOutput: Print total weight, then N parent vertices p_v. Require p_S=S; for v!=S the selected arc is p_v→v. Any optimal arborescence is valid.\n\nConstraints: N>=1;M>=N-1;0<=S,u,v<N;no loops or repeated directed arcs;0<=w<=10^9; every vertex is reachable from S in the input.",
+    "io_protocol": {
+      "input": "N M S followed by M lines u v w for arcs u→v.",
+      "raw_output": "Print total weight, then N parent vertices p_v. Require p_S=S; for v!=S the selected arc is p_v→v. Any optimal arborescence is valid.",
+      "l3_output": "Print total weight, then N parent vertices p_v. Require p_S=S; for v!=S the selected arc is p_v→v. Any optimal arborescence is valid."
+    },
+    "shared_constraints": "N>=1;M>=N-1;0<=S,u,v<N;no loops or repeated directed arcs;0<=w<=10^9; every vertex is reachable from S in the input.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/directedmst/task.md",
+    "source_statement_sha256": "03a231dde9cdb15680bfb80603bdf0742c662dc00c84da5c27d429623f7f909f",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "point_set_range_frequency": {
+    "canonical_raw": "Maintain an integer array. Operation0 k v assigns a_k=v. Operation1 l r x counts entries equal to x among a_l,...,a_(r-1).\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One integer for each type1 query; an empty interval returns0.\n\nConstraints: N,Q>=0;0<=a_i,v,x<=10^9;0<=k<N for assignments;0<=l<=r<=N.",
+    "canonical_l3": "Maintain an integer array. Operation0 k v assigns a_k=v. Operation1 l r x counts entries strictly smaller than x among a_l,...,a_(r-1).\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One integer for each type1 query; an empty interval returns0.\n\nConstraints: N,Q>=0;0<=a_i,v,x<=10^9;0<=k<N for assignments;0<=l<=r<=N.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q operation lines.",
+      "raw_output": "One integer for each type1 query; an empty interval returns0.",
+      "l3_output": "One integer for each type1 query; an empty interval returns0."
+    },
+    "shared_constraints": "N,Q>=0;0<=a_i,v,x<=10^9;0<=k<N for assignments;0<=l<=r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/point_set_range_frequency/task.md",
+    "source_statement_sha256": "a58e571fdec6bd550a994ede200826b7a8a3ebcec28f78373e823e7e1d453770",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "static_range_sum": {
+    "canonical_raw": "For every query return a_l+...+a_(r-1).\n\nInput: N Q; N initial values; Q lines l r.\n\nOutput: One integer per query.\n\nConstraints: N,Q>=1;0<=a_i<=10^9;0<=l<r<=N.",
+    "canonical_l3": "For every query return a_l-a_(l+1)+a_(l+2)-...+(-1)^(r-l-1)*a_(r-1). The first sign is positive at the query left endpoint.\n\nInput: N Q; N initial values; Q lines l r.\n\nOutput: One integer per query.\n\nConstraints: N,Q>=1;0<=a_i<=10^9;0<=l<r<=N.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q lines l r.",
+      "raw_output": "One integer per query.",
+      "l3_output": "One integer per query."
+    },
+    "shared_constraints": "N,Q>=1;0<=a_i<=10^9;0<=l<r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/static_range_sum/task.md",
+    "source_statement_sha256": "72cf64daabca9e98dc2770c2fd3f11feb317097204256de2a94541f7fd82b926",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "static_range_sum_with_upper_bound": {
+    "canonical_raw": "For every query count and sum the array entries in[l,r) whose values are at most x.\n\nInput: N Q; N array values; Q lines l r x.\n\nOutput: For each query print count and sum; both are0 for an empty selected set.\n\nConstraints: N,Q>=1;0<=a_i,x<=10^9;0<=l<=r<=N.",
+    "canonical_l3": "For every query count and sum the array entries in[l,r) whose values are at least x.\n\nInput: N Q; N array values; Q lines l r x.\n\nOutput: For each query print count and sum; both are0 for an empty selected set.\n\nConstraints: N,Q>=1;0<=a_i,x<=10^9;0<=l<=r<=N.",
+    "io_protocol": {
+      "input": "N Q; N array values; Q lines l r x.",
+      "raw_output": "For each query print count and sum; both are0 for an empty selected set.",
+      "l3_output": "For each query print count and sum; both are0 for an empty selected set."
+    },
+    "shared_constraints": "N,Q>=1;0<=a_i,x<=10^9;0<=l<=r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/static_range_sum_with_upper_bound/task.md",
+    "source_statement_sha256": "2ec0f03d3603707aba8f29c0d62147aed69e086fdaffa4516e3efc535f7926d7",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "range_affine_point_get": {
+    "canonical_raw": "Maintain an array modulo998244353. Operation0 l r b c replaces each a_i in[l,r) by b*a_i+c. Operation1 i returns a_i.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One residue in[0,998244353) for each type1 query.\n\nConstraints: N,Q>=1;0<=a_i,c<998244353;1<=b<998244353;0<=l<r<=N;0<=i<N.",
+    "canonical_l3": "Maintain an array modulo998244353. Operation0 l r b c first adds c and then multiplies by b: each selected a_i becomes b*(a_i+c). Operation1 i returns a_i.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One residue in[0,998244353) for each type1 query.\n\nConstraints: N,Q>=1;0<=a_i,c<998244353;1<=b<998244353;0<=l<r<=N;0<=i<N.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q operation lines.",
+      "raw_output": "One residue in[0,998244353) for each type1 query.",
+      "l3_output": "One residue in[0,998244353) for each type1 query."
+    },
+    "shared_constraints": "N,Q>=1;0<=a_i,c<998244353;1<=b<998244353;0<=l<r<=N;0<=i<N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/range_affine_point_get/task.md",
+    "source_statement_sha256": "82f2d09abb82b873ed237c87b985ce14aed534c5d7e3cc6afbff7446161261eb",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "range_linear_add_range_min": {
+    "canonical_raw": "Maintain an integer array. Operation0 l r b c adds b*i+c to a_i for every i in[l,r). Operation1 l r returns the minimum selected array value.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One integer per type1 query.\n\nConstraints: N,Q>=1;|initial a_i|<10^9;|b|<100;|c|<10^7;0<=l<r<=N; indices i are0-based.",
+    "canonical_l3": "Maintain an integer array. Operation0 l r b c adds b*i+c to a_i for every i in[l,r). Operation1 l r returns the maximum selected array value.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One integer per type1 query.\n\nConstraints: N,Q>=1;|initial a_i|<10^9;|b|<100;|c|<10^7;0<=l<r<=N; indices i are0-based.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q operation lines.",
+      "raw_output": "One integer per type1 query.",
+      "l3_output": "One integer per type1 query."
+    },
+    "shared_constraints": "N,Q>=1;|initial a_i|<10^9;|b|<100;|c|<10^7;0<=l<r<=N; indices i are0-based.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/range_linear_add_range_min/task.md",
+    "source_statement_sha256": "3925d632eb7eb4adf881884805c1bd5e16214fcb5ada2e737e393b9a14279536",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "static_range_lis_query": {
+    "canonical_raw": "For each interval find the length of its longest strictly increasing subsequence, preserving original position order.\n\nInput: N Q; a permutation a of0,...,N-1; Q lines l r.\n\nOutput: One length per query; empty interval returns0.\n\nConstraints: N,Q>=1; each0,...,N-1 appears exactly once;0<=l<=r<=N.",
+    "canonical_l3": "For each interval find the length of its longest strictly decreasing subsequence, preserving original position order.\n\nInput: N Q; a permutation a of0,...,N-1; Q lines l r.\n\nOutput: One length per query; empty interval returns0.\n\nConstraints: N,Q>=1; each0,...,N-1 appears exactly once;0<=l<=r<=N.",
+    "io_protocol": {
+      "input": "N Q; a permutation a of0,...,N-1; Q lines l r.",
+      "raw_output": "One length per query; empty interval returns0.",
+      "l3_output": "One length per query; empty interval returns0."
+    },
+    "shared_constraints": "N,Q>=1; each0,...,N-1 appears exactly once;0<=l<=r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/static_range_lis_query/task.md",
+    "source_statement_sha256": "a027622cfed8fa3d1be07097f48260c6980bfe1863edfb769466c9e59d635d2e",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "vertex_add_range_contour_sum_on_tree": {
+    "canonical_raw": "A tree vertex i holds integer a_i. Operation0 p x adds x to a_p. Operation1 p l r sums values at vertices whose edge distance from p satisfies l<=distance<r.\n\nInput: N Q; N initial values; N-1 undirected edge lines u v; Q operation lines.\n\nOutput: One integer sum per type1 query; an empty selected set has sum0.\n\nConstraints: N,Q>=1; edges form a tree;0<=p,u,v<N;initial a_i and update x are integers in[-10^9,10^9];0<=l<r<=N.",
+    "canonical_l3": "A tree vertex i holds integer a_i. Operation0 p x adds x to a_p. Operation1 p l r sums values at vertices whose edge distance from p satisfies l<distance<=r.\n\nInput: N Q; N initial values; N-1 undirected edge lines u v; Q operation lines.\n\nOutput: One integer sum per type1 query; an empty selected set has sum0.\n\nConstraints: N,Q>=1; edges form a tree;0<=p,u,v<N;initial a_i and update x are integers in[-10^9,10^9];0<=l<r<=N.",
+    "io_protocol": {
+      "input": "N Q; N initial values; N-1 undirected edge lines u v; Q operation lines.",
+      "raw_output": "One integer sum per type1 query; an empty selected set has sum0.",
+      "l3_output": "One integer sum per type1 query; an empty selected set has sum0."
+    },
+    "shared_constraints": "N,Q>=1; edges form a tree;0<=p,u,v<N;initial a_i and update x are integers in[-10^9,10^9];0<=l<r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/vertex_add_range_contour_sum_on_tree/task.md",
+    "source_statement_sha256": "65782297d702d79fde7a5d3e77d68f362aa03598df6542c0068e04c1d69e9808",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "vertex_get_range_contour_add_on_tree": {
+    "canonical_raw": "A tree vertex i holds integer a_i. Operation0 p l r x adds x to all vertices whose edge distance from p satisfies l<=distance<r. Operation1 p returns a_p.\n\nInput: N Q; N initial values; N-1 undirected edge lines u v; Q operation lines.\n\nOutput: One integer value per type1 query.\n\nConstraints: N,Q>=1; edges form a tree;0<=p,u,v<N;initial a_i and update x are integers in[-10^9,10^9];0<=l<r<=N.",
+    "canonical_l3": "A tree vertex i holds integer a_i. Operation0 p l r x adds x to all vertices whose edge distance from p satisfies l<distance<=r. Operation1 p returns a_p.\n\nInput: N Q; N initial values; N-1 undirected edge lines u v; Q operation lines.\n\nOutput: One integer value per type1 query.\n\nConstraints: N,Q>=1; edges form a tree;0<=p,u,v<N;initial a_i and update x are integers in[-10^9,10^9];0<=l<r<=N.",
+    "io_protocol": {
+      "input": "N Q; N initial values; N-1 undirected edge lines u v; Q operation lines.",
+      "raw_output": "One integer value per type1 query.",
+      "l3_output": "One integer value per type1 query."
+    },
+    "shared_constraints": "N,Q>=1; edges form a tree;0<=p,u,v<N;initial a_i and update x are integers in[-10^9,10^9];0<=l<r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/vertex_get_range_contour_add_on_tree/task.md",
+    "source_statement_sha256": "235df395b8076463bb7596adec6afa2c2e67e4555f357314aff839fca82be227",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "rooted_tree_topological_order_with_minimum_inversions": {
+    "canonical_raw": "Find a permutation p of all vertices in which each ancestor precedes every descendant, minimizing X=sum_(0<=j<i<N)c[p_i]*d[p_j].\n\nInput: N; parent list p_1,...,p_(N-1) of a tree rooted at0; N values c_i; N values d_i. The output permutation is separate from the input parent list.\n\nOutput: Print optimum X, then a valid optimizing permutation of0,...,N-1. Any optimum is valid.\n\nConstraints: N>=1;0<=parent_i<i;0<=c_i,d_i<=10^9;sum c_i<=10^9 and sum d_i<=10^9.",
+    "canonical_l3": "Find a permutation p of all vertices in which each ancestor precedes every descendant, maximizing X=sum_(0<=j<i<N)c[p_i]*d[p_j].\n\nInput: N; parent list p_1,...,p_(N-1) of a tree rooted at0; N values c_i; N values d_i. The output permutation is separate from the input parent list.\n\nOutput: Print optimum X, then a valid optimizing permutation of0,...,N-1. Any optimum is valid.\n\nConstraints: N>=1;0<=parent_i<i;0<=c_i,d_i<=10^9;sum c_i<=10^9 and sum d_i<=10^9.",
+    "io_protocol": {
+      "input": "N; parent list p_1,...,p_(N-1) of a tree rooted at0; N values c_i; N values d_i. The output permutation is separate from the input parent list.",
+      "raw_output": "Print optimum X, then a valid optimizing permutation of0,...,N-1. Any optimum is valid.",
+      "l3_output": "Print optimum X, then a valid optimizing permutation of0,...,N-1. Any optimum is valid."
+    },
+    "shared_constraints": "N>=1;0<=parent_i<i;0<=c_i,d_i<=10^9;sum c_i<=10^9 and sum d_i<=10^9.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/rooted_tree_topological_order_with_minimum_inversions/task.md",
+    "source_statement_sha256": "081c8a9211031ed66d3a4b2f8342246821c3b7031a287e00f540400471f01a4f",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "range_parallel_unionfind": {
+    "canonical_raw": "Start with an empty undirected graph on N vertices carrying fixed values x_i. Query k a b adds every edge(a+i,b+i),0<=i<k. After every query compute sum_(i<j,connected(i,j))x_i*x_j.\n\nInput: N Q; N values x_i; Q lines k a b.\n\nOutput: One answer modulo998244353 after each query.\n\nConstraints: N,Q>=1;0<=x_i<998244353;0<=k<=N;0<=a,b<=N-k. Repeated edges and self-edges do not alter connectivity.",
+    "canonical_l3": "Start with an empty undirected graph on N vertices carrying fixed values x_i. Query k a b adds every edge(a+i,b+i),0<=i<k. After every query compute sum_(i<j,connected(i,j))(x_i-x_j)^2.\n\nInput: N Q; N values x_i; Q lines k a b.\n\nOutput: One answer modulo998244353 after each query.\n\nConstraints: N,Q>=1;0<=x_i<998244353;0<=k<=N;0<=a,b<=N-k. Repeated edges and self-edges do not alter connectivity.",
+    "io_protocol": {
+      "input": "N Q; N values x_i; Q lines k a b.",
+      "raw_output": "One answer modulo998244353 after each query.",
+      "l3_output": "One answer modulo998244353 after each query."
+    },
+    "shared_constraints": "N,Q>=1;0<=x_i<998244353;0<=k<=N;0<=a,b<=N-k. Repeated edges and self-edges do not alter connectivity.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/range_parallel_unionfind/task.md",
+    "source_statement_sha256": "ca0967e656ad378242d9daed880a71fd0def66ec1b1992b1dd3c1e181ced9f7b",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "dynamic_tree_vertex_add_path_sum": {
+    "canonical_raw": "Maintain a tree with vertex values. Operation0 u v w x removes existing edge(u,v) then adds(w,x), producing a tree. Operation1 p x adds x to a_p. Operation2 u v returns the sum of values on the unique u-v path, including endpoints.\n\nInput: N Q; N initial values; N-1 undirected tree edges; Q operations.\n\nOutput: One integer per type2 query.\n\nConstraints: N,Q>=1;all vertex indices in[0,N);initial values and additions in[0,10^9];each removal names an existing edge and each replacement reconnects the two resulting components.",
+    "canonical_l3": "Maintain a tree with vertex values. Operation0 u v w x removes existing edge(u,v) then adds(w,x), producing a tree. Operation1 p x adds x to a_p. Operation2 u v returns the largest vertex value on the unique u-v path, including endpoints.\n\nInput: N Q; N initial values; N-1 undirected tree edges; Q operations.\n\nOutput: One integer per type2 query.\n\nConstraints: N,Q>=1;all vertex indices in[0,N);initial values and additions in[0,10^9];each removal names an existing edge and each replacement reconnects the two resulting components.",
+    "io_protocol": {
+      "input": "N Q; N initial values; N-1 undirected tree edges; Q operations.",
+      "raw_output": "One integer per type2 query.",
+      "l3_output": "One integer per type2 query."
+    },
+    "shared_constraints": "N,Q>=1;all vertex indices in[0,N);initial values and additions in[0,10^9];each removal names an existing edge and each replacement reconnects the two resulting components.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_add_path_sum/task.md",
+    "source_statement_sha256": "31b47a3e5f7d13f3eb76718d8aa907f2167b48837fb0b9251670666973bdb8e6",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "dynamic_tree_vertex_set_path_composite": {
+    "canonical_raw": "Maintain a tree whose vertex i holds f_i(x)=a_i*x+b_i modulo998244353. Operation0 u v w x removes edge(u,v) and adds(w,x), preserving a tree. Operation1 p c d replaces f_p by c*x+d. Operation2 u v x applies functions along the path from u to v to x, including both endpoints.\n\nInput: N Q; N lines a_i b_i; N-1 undirected tree edges; Q operations.\n\nOutput: One residue modulo998244353 per type2 query.\n\nConstraints: N,Q>=1;vertex indices in[0,N);1<=a_i,c<998244353;0<=b_i,d,query x<998244353;each removed edge exists and replacement reconnects the two components.",
+    "canonical_l3": "Maintain a tree whose vertex i holds f_i(x)=a_i*x+b_i modulo998244353. Operation0 u v w x removes edge(u,v) and adds(w,x), preserving a tree. Operation1 p c d replaces f_p by c*x+d. Operation2 u v x applies functions along the path from v to u to x, including both endpoints.\n\nInput: N Q; N lines a_i b_i; N-1 undirected tree edges; Q operations.\n\nOutput: One residue modulo998244353 per type2 query.\n\nConstraints: N,Q>=1;vertex indices in[0,N);1<=a_i,c<998244353;0<=b_i,d,query x<998244353;each removed edge exists and replacement reconnects the two components.",
+    "io_protocol": {
+      "input": "N Q; N lines a_i b_i; N-1 undirected tree edges; Q operations.",
+      "raw_output": "One residue modulo998244353 per type2 query.",
+      "l3_output": "One residue modulo998244353 per type2 query."
+    },
+    "shared_constraints": "N,Q>=1;vertex indices in[0,N);1<=a_i,c<998244353;0<=b_i,d,query x<998244353;each removed edge exists and replacement reconnects the two components.",
+    "source_statement_file": "sources/library-checker-problems-master/tree/dynamic_tree_vertex_set_path_composite/task.md",
+    "source_statement_sha256": "2649cb6cfa396b82a94f2fcaf8230241a0c2f379be2b2c9fdea285387410a0c0",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "dynamic_sequence_range_affine_range_sum": {
+    "canonical_raw": "Maintain a sequence modulo998244353. Operation0 i x inserts x immediately before current index i (i=length appends). Operation1 i removes current index i. Operation2 l r reverses the current subarray[l,r). Operation3 l r b c replaces each selected value z by b*z+c modulo998244353. Operation4 l r returns the sum of current values in[l,r) modulo998244353.\n\nInput: N Q; N initial values; Q operations. Indices refer to the sequence after all previous operations.\n\nOutput: One residue per type4 query.\n\nConstraints: N,Q>=1;0<=initial values,inserted x,b,c<998244353;insert0<=i<=current length;delete0<=i<current length;types2,3,4 require0<=l<r<=current length. Sequence may become empty, after which only insertion is valid.",
+    "canonical_l3": "Maintain a sequence modulo998244353. Operation0 i x inserts x immediately before current index i (i=length appends). Operation1 i removes current index i. Operation2 l r reverses the current subarray[l,r). Operation3 l r b c replaces each selected value z by b*z+c modulo998244353. Operation4 l r returns the sum of squares of current values in[l,r) modulo998244353.\n\nInput: N Q; N initial values; Q operations. Indices refer to the sequence after all previous operations.\n\nOutput: One residue per type4 query.\n\nConstraints: N,Q>=1;0<=initial values,inserted x,b,c<998244353;insert0<=i<=current length;delete0<=i<current length;types2,3,4 require0<=l<r<=current length. Sequence may become empty, after which only insertion is valid.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q operations. Indices refer to the sequence after all previous operations.",
+      "raw_output": "One residue per type4 query.",
+      "l3_output": "One residue per type4 query."
+    },
+    "shared_constraints": "N,Q>=1;0<=initial values,inserted x,b,c<998244353;insert0<=i<=current length;delete0<=i<current length;types2,3,4 require0<=l<r<=current length. Sequence may become empty, after which only insertion is valid.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/dynamic_sequence_range_affine_range_sum/task.md",
+    "source_statement_sha256": "ee3db25c9f39d012a1a86296634e8ee5b9570517ffa758e212296a884699a263",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "persistent_range_affine_range_sum": {
+    "canonical_raw": "Let version A_-1 be the initial array. Query i has one of three forms. Operation0 k l r b c creates A_i as a copy of A_k, replacing selected values z in[l,r) by b*z+c modulo998244353. Operation1 k s l r creates A_i as a copy of A_k, replacing its[l,r) with the same positions of A_s. Operation2 k l r returns the sum of values in A_k[l:r] modulo998244353 and creates no version.\n\nInput: N Q; N initial values; Q query lines numbered0,...,Q-1.\n\nOutput: One residue for each type2 query.\n\nConstraints: N,Q>=1;0<=initial values,c<998244353;1<=b<998244353;0<=l<r<=N;k and s must be-1 or an earlier query index whose type was0 or1.",
+    "canonical_l3": "Let version A_-1 be the initial array. Query i has one of three forms. Operation0 k l r b c creates A_i as a copy of A_k, replacing selected values z in[l,r) by b*z+c modulo998244353. Operation1 k s l r creates A_i as a copy of A_k, replacing its[l,r) with the same positions of A_s. Operation2 k l r returns the sum of squares of values in A_k[l:r] modulo998244353 and creates no version.\n\nInput: N Q; N initial values; Q query lines numbered0,...,Q-1.\n\nOutput: One residue for each type2 query.\n\nConstraints: N,Q>=1;0<=initial values,c<998244353;1<=b<998244353;0<=l<r<=N;k and s must be-1 or an earlier query index whose type was0 or1.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q query lines numbered0,...,Q-1.",
+      "raw_output": "One residue for each type2 query.",
+      "l3_output": "One residue for each type2 query."
+    },
+    "shared_constraints": "N,Q>=1;0<=initial values,c<998244353;1<=b<998244353;0<=l<r<=N;k and s must be-1 or an earlier query index whose type was0 or1.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/persistent_range_affine_range_sum/task.md",
+    "source_statement_sha256": "86922e16779e0a030e0b20fbc8354adaa1a1f385e312c57edf345ef8e6ff216d",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "range_chmin_chmax_add_range_sum": {
+    "canonical_raw": "Maintain an integer array. Operation0 l r b replaces a_i by min(a_i,b) on[l,r). Operation1 l r b replaces a_i by max(a_i,b). Operation2 l r b adds b to each selected a_i. Operation3 l r returns the exact sum of selected values.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One exact integer for each type3 query; do not reduce modulo any number.\n\nConstraints: N,Q>=1;|initial a_i|<=10^12;update parameter|b|<=2*10^12;0<=l<r<=N;after every operation, every current value must remain in[-10^12,10^12].",
+    "canonical_l3": "Maintain an integer array. Operation0 l r b replaces a_i by min(a_i,b) on[l,r). Operation1 l r b replaces a_i by max(a_i,b). Operation2 l r b adds b to each selected a_i. Operation3 l r returns the exact sum of squares of selected values.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One exact integer for each type3 query; do not reduce modulo any number.\n\nConstraints: N,Q>=1;|initial a_i|<=10^12;update parameter|b|<=2*10^12;0<=l<r<=N;after every operation, every current value must remain in[-10^12,10^12].",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q operation lines.",
+      "raw_output": "One exact integer for each type3 query; do not reduce modulo any number.",
+      "l3_output": "One exact integer for each type3 query; do not reduce modulo any number."
+    },
+    "shared_constraints": "N,Q>=1;|initial a_i|<=10^12;update parameter|b|<=2*10^12;0<=l<r<=N;after every operation, every current value must remain in[-10^12,10^12].",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/range_chmin_chmax_add_range_sum/task.md",
+    "source_statement_sha256": "59c6c9a172c985e4656eed92637f78d0b08deb45adbf93b6ac02700d0612818d",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "point_set_range_sort_range_composite": {
+    "canonical_raw": "Maintain triples(key_i,a_i,b_i) with f_i(x)=a_i*x+b_i modulo998244353. Operation0 i p a b replaces the triple at current index i. Operation2 l r sorts the triples in[l,r) by increasing key. Operation3 l r sorts them by decreasing key. Operation1 l r x applies the current functions at indices l,l+1,...,r-1 in this order to x.\n\nInput: N Q; N triple lines key a b; Q operation lines.\n\nOutput: One residue modulo998244353 per type1 query.\n\nConstraints: N,Q>=1;0<=all keys<=10^9;every key in the initial array or any later assignment must be globally unique, including keys of triples that were overwritten;1<=a<998244353;0<=b,x<998244353;0<=i<N;0<=l<r<=N.",
+    "canonical_l3": "Maintain triples(key_i,a_i,b_i) with f_i(x)=a_i*x+b_i modulo998244353. Operation0 i p a b replaces the triple at current index i. Operation2 l r sorts the triples in[l,r) by increasing key. Operation3 l r sorts them by decreasing key. Operation1 l r x applies the current functions at indices r-1,r-2,...,l in this order to x.\n\nInput: N Q; N triple lines key a b; Q operation lines.\n\nOutput: One residue modulo998244353 per type1 query.\n\nConstraints: N,Q>=1;0<=all keys<=10^9;every key in the initial array or any later assignment must be globally unique, including keys of triples that were overwritten;1<=a<998244353;0<=b,x<998244353;0<=i<N;0<=l<r<=N.",
+    "io_protocol": {
+      "input": "N Q; N triple lines key a b; Q operation lines.",
+      "raw_output": "One residue modulo998244353 per type1 query.",
+      "l3_output": "One residue modulo998244353 per type1 query."
+    },
+    "shared_constraints": "N,Q>=1;0<=all keys<=10^9;every key in the initial array or any later assignment must be globally unique, including keys of triples that were overwritten;1<=a<998244353;0<=b,x<998244353;0<=i<N;0<=l<r<=N.",
+    "source_statement_file": "sources/library-checker-problems-master/data_structure/point_set_range_sort_range_composite/task.md",
+    "source_statement_sha256": "ff81ab08e59b9a1cf41390b42e4b3460d43223c2e23e10c41507b279942199a5",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "dynamic_graph_vertex_add_component_sum": {
+    "canonical_raw": "Start with an empty simple undirected graph on N vertices carrying values a_i. Operation0 u v inserts an absent edge. Operation1 u v deletes an existing edge. Operation2 p x adds x to vertex p. Operation3 p returns the sum of values in the connected component containing p.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One integer per type3 query.\n\nConstraints: N,Q>=1;vertex indices in[0,N);edge endpoints distinct;insertion/deletion prerequisites must hold;0<=initial values,x<=10^9.",
+    "canonical_l3": "Start with an empty simple undirected graph on N vertices carrying values a_i. Operation0 u v inserts an absent edge. Operation1 u v deletes an existing edge. Operation2 p x adds x to vertex p. Operation3 p returns the maximum vertex value in the connected component containing p.\n\nInput: N Q; N initial values; Q operation lines.\n\nOutput: One integer per type3 query.\n\nConstraints: N,Q>=1;vertex indices in[0,N);edge endpoints distinct;insertion/deletion prerequisites must hold;0<=initial values,x<=10^9.",
+    "io_protocol": {
+      "input": "N Q; N initial values; Q operation lines.",
+      "raw_output": "One integer per type3 query.",
+      "l3_output": "One integer per type3 query."
+    },
+    "shared_constraints": "N,Q>=1;vertex indices in[0,N);edge endpoints distinct;insertion/deletion prerequisites must hold;0<=initial values,x<=10^9.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/dynamic_graph_vertex_add_component_sum/task.md",
+    "source_statement_sha256": "2fbcf5b4b021ddee81b7ac9a768acdefa9c9b0afcfb09f6baaaccfcf199fcf9c",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "general_weighted_matching": {
+    "canonical_raw": "Find a matching maximizing total weight; no two selected edges may share a vertex. Cardinality is not the primary objective.\n\nInput: N M followed by M lines u v w describing a simple undirected weighted graph.\n\nOutput: Print number of selected edges K and their total original weight W, followed by K edge endpoint pairs. Any matching attaining the stated optimum is valid.\n\nConstraints: N>=1;0<=M<=N(N-1)/2;0<=u,v<N;u!=v;no duplicate undirected edges;1<=w<=10^6.",
+    "canonical_l3": "Find a matching with maximum possible number of edges. Among all such matchings, minimize total weight. No two selected edges may share a vertex.\n\nInput: N M followed by M lines u v w describing a simple undirected weighted graph.\n\nOutput: Print number of selected edges K and their total original weight W, followed by K edge endpoint pairs. Any matching attaining the stated optimum is valid.\n\nConstraints: N>=1;0<=M<=N(N-1)/2;0<=u,v<N;u!=v;no duplicate undirected edges;1<=w<=10^6.",
+    "io_protocol": {
+      "input": "N M followed by M lines u v w describing a simple undirected weighted graph.",
+      "raw_output": "Print number of selected edges K and their total original weight W, followed by K edge endpoint pairs. Any matching attaining the stated optimum is valid.",
+      "l3_output": "Print number of selected edges K and their total original weight W, followed by K edge endpoint pairs. Any matching attaining the stated optimum is valid."
+    },
+    "shared_constraints": "N>=1;0<=M<=N(N-1)/2;0<=u,v<N;u!=v;no duplicate undirected edges;1<=w<=10^6.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/general_weighted_matching/task.md",
+    "source_statement_sha256": "4dcd6959638eba9c83c7d7172415748f724f6305e6e65da7e93678c60ab18afc",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "scc": {
+    "canonical_raw": "Partition a directed graph into strongly connected components: two vertices belong together iff each can reach the other by directed paths. List components in a topological order so every input arc crossing between components points from an earlier to a later component.\n\nInput: N M followed by M directed arc lines u v.\n\nOutput: Print component count K. Then print K lines, each containing the component size followed by its0-based vertices. Every vertex must occur exactly once.\n\nConstraints: N,M>=1;0<=u,v<N;self-loops and repeated arcs are allowed.",
+    "canonical_l3": "Partition the vertices of a directed graph into weakly connected components: ignore directions and group vertices reachable by undirected paths. Components may be listed in any order.\n\nInput: N M followed by M directed arc lines u v.\n\nOutput: Print component count K. Then print K lines, each containing the component size followed by its0-based vertices. Every vertex must occur exactly once.\n\nConstraints: N,M>=1;0<=u,v<N;self-loops and repeated arcs are allowed.",
+    "io_protocol": {
+      "input": "N M followed by M directed arc lines u v.",
+      "raw_output": "Print component count K. Then print K lines, each containing the component size followed by its0-based vertices. Every vertex must occur exactly once.",
+      "l3_output": "Print component count K. Then print K lines, each containing the component size followed by its0-based vertices. Every vertex must occur exactly once."
+    },
+    "shared_constraints": "N,M>=1;0<=u,v<N;self-loops and repeated arcs are allowed.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/scc/task.md",
+    "source_statement_sha256": "1543ae3f756ae7a7a7c6694957d10ee89499d1670df85203b35f44ae1b192f9f",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  },
+  "connected_components_of_complement_graph": {
+    "canonical_raw": "Given a simple undirected graph G, partition vertices into connected components of its complement: distinct vertices are adjacent in the complement iff their edge is absent from G.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: Print component count K. Then K lines, each containing component size followed by its0-based vertices. Every vertex occurs exactly once. Components and their vertices may be in any order.\n\nConstraints: N>=1;M>=0;0<=u,v<N;u!=v;no duplicate undirected edges.",
+    "canonical_l3": "Given a simple undirected graph G, partition vertices into connected components of G itself, using only supplied edges.\n\nInput: N M followed by M undirected edge lines u v.\n\nOutput: Print component count K. Then K lines, each containing component size followed by its0-based vertices. Every vertex occurs exactly once. Components and their vertices may be in any order.\n\nConstraints: N>=1;M>=0;0<=u,v<N;u!=v;no duplicate undirected edges.",
+    "io_protocol": {
+      "input": "N M followed by M undirected edge lines u v.",
+      "raw_output": "Print component count K. Then K lines, each containing component size followed by its0-based vertices. Every vertex occurs exactly once. Components and their vertices may be in any order.",
+      "l3_output": "Print component count K. Then K lines, each containing component size followed by its0-based vertices. Every vertex occurs exactly once. Components and their vertices may be in any order."
+    },
+    "shared_constraints": "N>=1;M>=0;0<=u,v<N;u!=v;no duplicate undirected edges.",
+    "source_statement_file": "sources/library-checker-problems-master/graph/connected_components_of_complement_graph/task.md",
+    "source_statement_sha256": "43367f268e5f6607fff9578d1b906f9f827b8dce9b42292c7b35b855a88391cb",
+    "size_caps_location": "assets/library_release_bounds.json; each canonical task must be rendered with the selected version caps."
+  }
+}

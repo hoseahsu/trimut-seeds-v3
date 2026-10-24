@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;cin>>n;vector<ll>a(n),b(n);for(auto&x:a)cin>>x;for(auto&x:b)cin>>x;bool ok=false;if(MOD){vector<int>mis;for(int i=0;i<n;i++)if(a[i]!=b[i])mis.push_back(i);if(mis.empty())ok=true;else if(mis.size()==1){int i=mis[0];ok=i>0&&i<n-1&&a[i-1]+a[i+1]-a[i]==b[i];}}else if(a[0]==b[0]&&a.back()==b.back()){vector<ll>x,y;for(int i=1;i<n;i++)x.push_back(a[i]-a[i-1]),y.push_back(b[i]-b[i-1]);sort(x.begin(),x.end());sort(y.begin(),y.end());ok=x==y;}cout<<(ok?"Yes":"No")<<'\n';}

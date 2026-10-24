@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n,m;cin>>n>>m;vector<pair<int,int>>e(m);for(auto &[u,v]:e)cin>>u>>v,--u,--v;vector<int>p(n),sz(n,1);iota(p.begin(),p.end(),0);function<int(int)>find=[&](int x){while(p[x]!=x)x=p[x]=p[p[x]];return x;};ll disconnected=1LL*n*(n-1)/2;auto add=[&](pair<int,int>e){int u=find(e.first),v=find(e.second);if(u==v)return;if(sz[u]<sz[v])swap(u,v);disconnected-=1LL*sz[u]*sz[v];p[v]=u;sz[u]+=sz[v];};vector<ll>ans(m);if(MOD){for(int i=0;i<m;i++){add(e[i]);ans[i]=disconnected;}}else for(int i=m-1;i>=0;i--){ans[i]=disconnected;add(e[i]);}for(ll x:ans)cout<<x<<'\n';}

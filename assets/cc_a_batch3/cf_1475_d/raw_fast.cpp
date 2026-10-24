@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int T;cin>>T;while(T--){int n;ll m;cin>>n>>m;vector<ll>a(n),one,two;for(auto&x:a)cin>>x;for(int i=0,b;i<n;i++){cin>>b;if(b==1)one.push_back(a[i]);else if(!MOD)two.push_back(a[i]);}sort(one.rbegin(),one.rend());sort(two.rbegin(),two.rend());vector<ll>p(1),q(1);for(ll x:one)p.push_back(p.back()+x);for(ll x:two)q.push_back(q.back()+x);ll ans=1LL<<60;for(int i=0;i<(int)q.size();i++){ll rem=max(0LL,m-q[i]);auto it=lower_bound(p.begin(),p.end(),rem);if(it!=p.end())ans=min(ans,2LL*i+(it-p.begin()));}cout<<(ans==(1LL<<60)?-1:ans)<<'\n';}}

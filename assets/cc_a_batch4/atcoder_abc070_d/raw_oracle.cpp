@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;cin>>n;vector<vector<pair<int,int>>>g(n);for(int i=1,u,v,w;i<n;i++){cin>>u>>v>>w;--u,--v;g[u].push_back({v,w});g[v].push_back({u,w});}int q,k;cin>>q>>k;--k;auto distance=[&](int start,int target){vector<int>p(n,-1),v{start};vector<ll>d(n);p[start]=start;for(int i=0;i<(int)v.size();i++){int u=v[i];if(u==target)return d[u];for(auto [z,w]:g[u])if(p[z]<0)p[z]=u,d[z]=d[u]+w,v.push_back(z);}return -1LL;};while(q--){int u,v;cin>>u>>v;--u,--v;cout<<(MOD?distance(u,v):distance(u,k)+distance(k,v))<<'\n';}}

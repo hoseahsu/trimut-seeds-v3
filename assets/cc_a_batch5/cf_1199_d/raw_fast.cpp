@@ -1,0 +1,4 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;
+#define MOD 0
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;cin>>n;vector<ll>a(n);for(ll&x:a)cin>>x;int q;cin>>q;struct E{int type,p;ll x;};vector<E>e(q);for(auto &v:e){cin>>v.type;if(v.type==1)cin>>v.p,v.p--;cin>>v.x;}vector<bool>done(n);ll cap=MOD?1000000000:0;auto apply=[&](ll x){return MOD?min(x,cap):max(x,cap);};for(int i=q-1;i>=0;i--){E v=e[i];if(v.type==2)cap=MOD?min(cap,v.x):max(cap,v.x);else if(!done[v.p])a[v.p]=apply(v.x),done[v.p]=true;}for(int i=0;i<n;i++)cout<<(done[i]?a[i]:apply(a[i]))<<' ';cout<<'\n';}

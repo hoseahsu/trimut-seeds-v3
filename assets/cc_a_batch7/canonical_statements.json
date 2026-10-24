@@ -1,0 +1,26 @@
+{
+  "cf_2_a": {
+    "source_id": "cf_2_a",
+    "source_name": "2_A. Winner",
+    "source_row_index": 1499,
+    "canonical_raw": "Compute every named player final score. Among players tied at the final positive maximumM, the winner is the player whose running score first reached at leastM earliest. Output the winner name.\n\nInput: n; n chronological records name score. Name is1..32 lowercase letters; score is in[-1000,1000]. All scores begin at0. At least one final score is positive. Output: one winning name.\n\nBenchmark constraints: n<=35. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Compute every named player final score. Among players tied at the final positive maximumM, the winner is the player whose running score first reached at leastM earliest. Output the winner name.\n\nInput: n; n chronological records name score. Name is1..32 lowercase letters; score is in[-1000,1000]. All scores begin at0. At least one final score is positive. Output: one winning name.\n\nBenchmark constraints: n<=200000 (explicit L2 extension from source n<=1000). All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Compute the final maximum scoreM. Among players with final scoreM, choose the one whose FIRST running-score attainment of at leastM occurred LATEST. Output its name.\n\nInput: n; n chronological records name score. Name is1..32 lowercase letters; score is in[-1000,1000]. All scores begin at0. At least one final score is positive. Output: one winning name.\n\nBenchmark constraints: n<=35. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: n; n chronological records name score. Name is1..32 lowercase letters; score is in[-1000,1000]. All scores begin at0. At least one final score is positive. Output: one winning name.",
+    "weak_constraints": "n<=35",
+    "strong_constraints": "n<=200000 (explicit L2 extension from source n<=1000)",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  },
+  "cf_1003_c": {
+    "source_id": "cf_1003_c",
+    "source_name": "1003_C. Intense Heat",
+    "source_row_index": 1363,
+    "canonical_raw": "Output the maximum arithmetic-mean temperature over all contiguous segments of length AT LEASTk. Absolute output error must be less than10^-6.\n\nInput: n k with1<=k<=n; n integer temperatures in[1,5000]. Output: one real number with absolute error<10^-6.\n\nBenchmark constraints: n<=25. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l2": "Output the maximum arithmetic-mean temperature over all contiguous segments of length AT LEASTk. Absolute output error must be less than10^-6.\n\nInput: n k with1<=k<=n; n integer temperatures in[1,5000]. Output: one real number with absolute error<10^-6.\n\nBenchmark constraints: n<=5000. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "canonical_l3": "Output the maximum arithmetic mean among contiguous segments of length EXACTLYk. Required absolute error is less than10^-6.\n\nInput: n k with1<=k<=n; n integer temperatures in[1,5000]. Output: one real number with absolute error<10^-6.\n\nBenchmark constraints: n<=25. All counts and indices are integers. Input satisfies the stated structural promises.\n",
+    "io_protocol": "Input: n k with1<=k<=n; n integer temperatures in[1,5000]. Output: one real number with absolute error<10^-6.",
+    "weak_constraints": "n<=25",
+    "strong_constraints": "n<=5000",
+    "provenance_note": "This is an explicitly weakened, independently restated experimental seed derived from one distinct public original. Raw retains the original semantics and token protocol; L2 changes only the experimental bounds. Source-original wording and native bounds are archived separately. L3 text above is self-contained and uses weak bounds."
+  }
+}

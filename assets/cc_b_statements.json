@@ -1,0 +1,583 @@
+{
+  "codenet_p02260": {
+    "template": "Given an integer array A, execute selection sort. For i=0..n-1 set best=i, scan j=i..n-1, and replace best by j exactly when {rule}. If best differs from i, swap A[i],A[best] and increment the swap counter.",
+    "raw_rule": "A[j]<A[best]",
+    "l3_rule": "A[j]>A[best]",
+    "input_output": "Input: n, then n integers. Output: final array on one line, then the number of nontrivial swaps. Ties never replace best.",
+    "invariant_constraints": "Array values are signed integers in[-10^9,10^9]."
+  },
+  "codechef_walk": {
+    "template": "A route has n ordered segments with minimum acceptable integer speeds W_i. Choose speeds V_i>=W_i such that V_i-V_(i+1)>={rule}. Minimize V_1.",
+    "raw_rule": "1",
+    "l3_rule": "2",
+    "input_output": "Input: test count T; each case has n and n positive W values. Output: minimum initial speed per case.",
+    "invariant_constraints": "1<=W_i<=10^6."
+  },
+  "cf_1155_a": {
+    "template": "Reverse exactly one substring of a lowercase string, using distinct endpoints, to obtain a string lexicographically {rule} than the input.",
+    "raw_rule": "smaller",
+    "l3_rule": "larger",
+    "input_output": "Input: n and length-n string. Output NO if impossible; otherwise YES and any 1-based l,r with l<r that achieve the objective.",
+    "invariant_constraints": "n>=2; characters are lowercase English letters."
+  },
+  "cf_339_a": {
+    "template": "Rearrange the summands of a plus-separated expression into {rule} order. Summands are individual digits1,2,3.",
+    "raw_rule": "nondecreasing",
+    "l3_rule": "nonincreasing",
+    "input_output": "Input: one expression such as3+1+2, without spaces. Output the reordered expression with plus separators.",
+    "invariant_constraints": "Only digits1,2,3 and single separating plus signs are permitted."
+  },
+  "cf_433_a": {
+    "template": "Partition all indivisible apples into two groups such that {rule}. Each apple weighs100 or200.",
+    "raw_rule": "their total weights are equal",
+    "l3_rule": "their total weights and their numbers of apples are both equal",
+    "input_output": "Input: n and n weights. Output YES if such a partition exists, otherwise NO.",
+    "invariant_constraints": "Every weight is exactly100 or200."
+  },
+  "cf_500_c": {
+    "template": "There are n distinct books of weights w_i. Choose an initial stack ordering; then perform m requested reads. To read a book, lift all books above it, paying their total weight, and move the requested book to the top. {rule} total paid weight over all initial stack orders.",
+    "raw_rule": "Minimize",
+    "l3_rule": "Maximize",
+    "input_output": "Input: n m; n positive weights; m book IDs in1..n. Output the optimal total weight.",
+    "invariant_constraints": "n>=2;1<=w_i<=100; every read ID is in1..n."
+  },
+  "cf_5_a": {
+    "template": "Maintain an initially empty participant set. +name joins, -name leaves, name:message sends a message. A send delivers its message to {rule}; each delivery contributes the number of message characters to outgoing traffic. Membership commands contribute zero.",
+    "raw_rule": "every current participant, including the sender",
+    "l3_rule": "every current participant except the sender",
+    "input_output": "Input: commands through EOF, one per line. Names are alphanumeric; a sender is present; messages may contain spaces and may be empty. Joins/removals are valid. Output total traffic.",
+    "invariant_constraints": "Each command has at most100 ASCII characters. Names are nonempty alphanumeric strings. Messages use only alphanumeric characters and spaces, without leading/trailing spaces."
+  },
+  "cf_670_b": {
+    "template": "Robots have distinct identifiers a_1..a_n. Form rounds r=1..n. In round r append identifiers in order {rule}. Return the identifier at 1-based position k in the concatenation.",
+    "raw_rule": "a_1,a_2,...,a_r",
+    "l3_rule": "a_r,a_(r-1),...,a_1",
+    "input_output": "Input: n k and n identifiers; k lies within the finite concatenation. Output one identifier.",
+    "invariant_constraints": "Identifiers are distinct integers in1..10^9;1<=k<=min(2*10^9,n*(n+1)/2)."
+  },
+  "cf_691_d": {
+    "template": "Given a permutation and m allowed pairs of positions, swap either allowed pair any number of times. Find the lexicographically {rule} reachable permutation.",
+    "raw_rule": "largest",
+    "l3_rule": "smallest",
+    "input_output": "Input: n m; permutation1..n; m pairs of1-based positions. Output the resulting permutation.",
+    "invariant_constraints": "m>=1; the array is a permutation of1..n; edge endpoints are1-based. Self-loops/repeated edges are permitted."
+  },
+  "cf_977_b": {
+    "template": "Count all overlapping length-two substrings of an uppercase string. Return an occurring two-gram with {rule} occurrence count.",
+    "raw_rule": "maximum",
+    "l3_rule": "minimum positive",
+    "input_output": "Input: n and length-n uppercase string, n>=2. Output any optimal two-gram; absent two-grams are ineligible.",
+    "invariant_constraints": "n>=2; characters are uppercase English letters."
+  },
+  "hackerearth_the_competitive_class_3": {
+    "template": "For every student i define rank_i as one plus the number of students whose mark is strictly {rule} than mark_i. Equal marks receive equal ranks.",
+    "raw_rule": "greater",
+    "l3_rule": "smaller",
+    "input_output": "Input: n then n marks in1..1000. Output the n ranks in input order.",
+    "invariant_constraints": "1<=mark_i<=1000."
+  },
+  "hackerearth_xenny_range_sums": {
+    "template": "For each queried inclusive interval[L,R], report its arithmetic sum and the subtraction fold {rule}. A single-element fold equals that element.",
+    "raw_rule": "a_R-a_(R-1)-...-a_L",
+    "l3_rule": "a_L-a_(L+1)-...-a_R",
+    "input_output": "Input: n q; n signed integers; q pairs1<=L<=R<=n. Output sum and fold on one line per query.",
+    "invariant_constraints": "-10^6<=a_i<=10^6;1<=L<=R<=n."
+  },
+  "atcoder_abc154_e": {
+    "template": "Count positive integers x<=N whose decimal representation contains {rule} K nonzero digits. Zero is excluded.",
+    "raw_rule": "exactly",
+    "l3_rule": "at most",
+    "input_output": "Input: positive decimal N and K in1..3. Output the exact integer count without a modulus.",
+    "invariant_constraints": "N>=1,1<=K<=3, and N has no leading zero."
+  },
+  "atcoder_abc140_b": {
+    "template": "Eat all n dishes in the given permutation. Dish i grants base satisfaction B_i; bonus C_i is granted when {rule}. Return total satisfaction.",
+    "raw_rule": "dish i+1 is eaten immediately after dish i",
+    "l3_rule": "dish i is eaten immediately after dish i+1",
+    "input_output": "Input: n; permutation A of1..n; n base values B; n-1 bonus values C. Output total satisfaction.",
+    "invariant_constraints": "n>=2; A is a permutation1..n; every B_i,C_i is in1..50."
+  },
+  "hackerearth_new_world_11": {
+    "template": "Stones have strictly increasing integer coordinates. Travel from first to last using exactly K forward jumps between stones. {rule}.",
+    "raw_rule": "Minimize the largest jump length",
+    "l3_rule": "Maximize the smallest jump length",
+    "input_output": "Input: T; each case n K and n coordinates,1<=K<n. Output the optimum length per case.",
+    "invariant_constraints": "1<=K<n; coordinates are distinct increasing integers in1..10^9."
+  },
+  "codenet_p02327": {
+    "template": "In a binary rectangular grid, find the largest axis-aligned contiguous rectangle consisting entirely of {rule}.",
+    "raw_rule": "zeros",
+    "l3_rule": "ones",
+    "input_output": "Input: height width followed by the grid as whitespace-separated bits. Output area, or0 when no qualifying cell exists.",
+    "invariant_constraints": "Every cell is0 or1."
+  },
+  "cf_1011_a": {
+    "template": "Choose exactly k letters from n supplied stage instances. In sorted order every adjacent chosen letter must differ by at least two alphabet positions. Letter a has weight1,...,z has weight26. {rule} total chosen weight.",
+    "raw_rule": "Minimize",
+    "l3_rule": "Maximize",
+    "input_output": "Input: n k then a lowercase string of length n. Output optimum weight, or-1 if impossible.",
+    "invariant_constraints": "1<=k<=n; stage letters are lowercase English letters; repeated letters are separate instances."
+  },
+  "cf_1121_a": {
+    "template": "Every school selects its student with {rule} power. Powers are distinct. Reassign students to newly created schools, paying one per new school, so that every one of the k chosen students is selected. Minimize new schools.",
+    "raw_rule": "largest",
+    "l3_rule": "smallest",
+    "input_output": "Input: n m k; permutation powers1..n; school IDs of n students; k distinct chosen student IDs. All m schools are initially nonempty. Output minimum required new schools.",
+    "invariant_constraints": "1<=m,k<=n. Powers are a permutation1..n. All school IDs1..m occur. Chosen student IDs are distinct."
+  },
+  "cf_1225_b1": {
+    "template": "Among all contiguous length-d windows of a show sequence, return the {rule} number of distinct show IDs.",
+    "raw_rule": "minimum",
+    "l3_rule": "maximum",
+    "input_output": "Input: T; each case n k d and n IDs in1..k,1<=d<=n. Output one optimum count per case.",
+    "invariant_constraints": "1<=k<=100,1<=d<=n; show IDs lie in1..k; T<=100."
+  },
+  "cf_166_a": {
+    "template": "Rank teams by solved count descending, breaking ties by penalty {rule}. Teams with identical pairs share their rank group. Count teams whose pair equals the kth team after sorting.",
+    "raw_rule": "ascending",
+    "l3_rule": "descending",
+    "input_output": "Input: n k and n pairs of solved count and penalty. Output the size of the kth pair group.",
+    "invariant_constraints": "1<=k<=n; solved counts and penalties each lie in1..50."
+  },
+  "cf_46_c": {
+    "template": "The characters H and T describe two species in an arrangement interpreted as {rule}. Swap any two positions at unit cost to make the positions of each species one contiguous block. Minimize swaps.",
+    "raw_rule": "a circle with adjacent first and last positions",
+    "l3_rule": "a fixed line whose first and last positions are not adjacent",
+    "input_output": "Input: n and a length-n string containing both H and T. Output minimum swaps.",
+    "invariant_constraints": "n>=2; the string contains only H,T and contains both species."
+  },
+  "cf_633_a": {
+    "template": "Two guns deal damage a and b per shot. Determine whether total damage c can be obtained with integer shot counts x,y satisfying {rule}.",
+    "raw_rule": "x>=0 and y>=0",
+    "l3_rule": "x>=1 and y>=1",
+    "input_output": "Input: positive a b c. Output Yes if a*x+b*y=c is feasible, otherwise No.",
+    "invariant_constraints": "a,b,c are positive integers."
+  },
+  "cf_865_d": {
+    "template": "A stock has positive prices on n days. Make at most one buy, sell, or idle action each day; every transaction is one share. Inventory starts and ends at zero and must remain {rule}. Maximize cash profit.",
+    "raw_rule": "nonnegative, so selling before owning is forbidden",
+    "l3_rule": "nonpositive, so buying is allowed only to cover a short position",
+    "input_output": "Input: n and n prices. Output maximum profit; doing nothing is allowed.",
+    "invariant_constraints": "n>=2;1<=price_i<=10^6."
+  },
+  "atcoder_abc130_e": {
+    "template": "From sequences S and T independently select subsequences by increasing index sets. Count ordered pairs with equal value sequences and {rule}. Distinct index sets count separately.",
+    "raw_rule": "any length, including the empty pair",
+    "l3_rule": "odd positive length",
+    "input_output": "Input: n m, n integers S, m integers T. Output count modulo1000000007.",
+    "invariant_constraints": "Every sequence value lies in1..100000."
+  },
+  "atcoder_abc105_d": {
+    "template": "Count nonempty contiguous intervals whose sum modulo M equals {rule}.",
+    "raw_rule": "0",
+    "l3_rule": "1",
+    "input_output": "Input: n M, with M>=2; n positive integers. Output the interval count.",
+    "invariant_constraints": "2<=M<=10^9 and1<=a_i<=10^9."
+  },
+  "atcoder_abc171_d": {
+    "template": "For each operation(B,C), simultaneously replace every current occurrence of value B by C. After each operation report the {rule} of all array elements.",
+    "raw_rule": "arithmetic sum",
+    "l3_rule": "bitwise XOR",
+    "input_output": "Input: n and n positive values; q; q pairs B C with B!=C. Output one aggregate after each replacement.",
+    "invariant_constraints": "Array values and replacement values lie in1..100000; B!=C."
+  },
+  "atcoder_dp_m": {
+    "template": "Distribute identical candies among n distinct children. Child i receives an integer in[0,a_i]. Count allocations with total candies distributed {rule} K.",
+    "raw_rule": "equal to",
+    "l3_rule": "at most",
+    "input_output": "Input: n K and n bounds a_i in[0,K]. Output count modulo1000000007. An allocation is determined by all children counts.",
+    "invariant_constraints": "K>=0 and0<=a_i<=K."
+  },
+  "cf_1152_a": {
+    "template": "A chest can be unlocked by a key exactly when their two integer labels have {rule} sum. Each chest and each key can be used at most once. Maximize unlocked chests.",
+    "raw_rule": "odd",
+    "l3_rule": "even",
+    "input_output": "Input: n m; n chest labels; m key labels. Output maximum matching size.",
+    "invariant_constraints": "Chest and key labels lie in1..10^9."
+  },
+  "cf_1165_e": {
+    "template": "Keep a fixed and permute b. For every interval[l,r], define f(l,r)=sum_(i=l..r)(a_i*b_i). {rule} the integer total over all intervals; take the modulus only after choosing the optimal permutation.",
+    "raw_rule": "Minimize",
+    "l3_rule": "Maximize",
+    "input_output": "Input: n; n positive a values; n positive b values. Output optimal integer total modulo998244353.",
+    "invariant_constraints": "Every a_i,b_i lies in1..10^6."
+  },
+  "cf_372_a": {
+    "template": "A kangaroo can hide at most one other kangaroo. A hidden kangaroo cannot itself hide another. A holder size must be {rule} twice the held size. Minimize the number visible.",
+    "raw_rule": "at least",
+    "l3_rule": "strictly greater than",
+    "input_output": "Input: n and n positive sizes. Output minimum visible count.",
+    "invariant_constraints": "Every size lies in1..100000."
+  },
+  "cf_489_b": {
+    "template": "Pair boys with girls with each person used at most once. A pair is valid when {rule}. Maximize pairs.",
+    "raw_rule": "their integer skills differ by at most one",
+    "l3_rule": "their integer skills are equal",
+    "input_output": "Input: number of boys and their skills; number of girls and their skills. Output maximum pairs.",
+    "invariant_constraints": "Every skill lies in1..100."
+  },
+  "cf_1000_c": {
+    "template": "Interval i covers integer x under the predicate {rule}. For each k=1..n count integer coordinates covered by exactly k intervals.",
+    "raw_rule": "l_i<=x<=r_i",
+    "l3_rule": "l_i<=x<r_i",
+    "input_output": "Input: n and n endpoint pairs0<=l_i<=r_i. Output n counts.",
+    "invariant_constraints": "0<=l_i<=r_i<=coordinate_limit; endpoints are integers."
+  },
+  "cf_1215_b": {
+    "template": "For every nonempty contiguous interval of a nonzero integer array, compute its {rule}. Count negative results and positive results, excluding zero results.",
+    "raw_rule": "product",
+    "l3_rule": "sum",
+    "input_output": "Input: n and n nonzero signed integers. Output negative count then positive count.",
+    "invariant_constraints": "-10^9<=a_i<=10^9 and a_i!=0."
+  },
+  "cf_740_b": {
+    "template": "Each suggested interval contributes the sum of its array elements. Choose any subset of suggestions; overlapping intervals contribute independently, including repeated elements. {rule} total contribution; choosing no intervals is allowed.",
+    "raw_rule": "Maximize",
+    "l3_rule": "Minimize",
+    "input_output": "Input: n m; n signed values; m inclusive1-based intervals. Output optimum contribution.",
+    "invariant_constraints": "-100<=a_i<=100;1<=l<=r<=n."
+  },
+  "cf_451_d": {
+    "template": "For each substring of a binary-alphabet string, {rule} and test whether the result is a palindrome. Count successful substrings by their original length parity.",
+    "raw_rule": "merge every maximal run of identical characters into one character",
+    "l3_rule": "keep its characters exactly as they are",
+    "input_output": "Input: a nonempty string using a,b. Output the count with even original length, then the count with odd original length.",
+    "invariant_constraints": "Only characters a,b are permitted."
+  },
+  "cf_1157_e": {
+    "template": "Permute b arbitrarily and define c_i=(a_i+b_i) modulo n. Output the lexicographically {rule} possible c.",
+    "raw_rule": "smallest",
+    "l3_rule": "largest",
+    "input_output": "Input: n, n integers a, n integers b, each in0..n-1. Output n residues.",
+    "invariant_constraints": "0<=a_i,b_i<n."
+  },
+  "cf_1392_b": {
+    "template": "Perform k simultaneous transformations of an integer array. In each transformation set d to the {rule} of the current array, then replace every a_i by d-a_i.",
+    "raw_rule": "maximum",
+    "l3_rule": "minimum",
+    "input_output": "Input: T; each case n k and n signed integers, k>=1. Output the final array per case.",
+    "invariant_constraints": "T<=100; total n across cases<=200000;1<=k<=10^18 and-10^9<=a_i<=10^9."
+  },
+  "cf_658_b": {
+    "template": "Friends have distinct friendship values and are initially offline. When a friend comes online they stay online. Display up to k online friends with the {rule} friendship values. Queries ask whether a friend is displayed.",
+    "raw_rule": "largest",
+    "l3_rule": "smallest",
+    "input_output": "Input: n k q; n distinct values; q commands(1,id) to come online once or(2,id) to query. Output YES/NO for each type2. k<=6.",
+    "invariant_constraints": "1<=k<=min(6,n); friendship values are distinct integers in1..10^9. Type1 IDs have not appeared in an earlier type1. At least one type2 query is present."
+  },
+  "cf_747_c": {
+    "template": "There are n servers numbered1..n. A task(t,k,d) arrives at integer time t and needs k idle servers for[t,t+d). If fewer than k are idle reject it; otherwise select the k idle servers with {rule} IDs.",
+    "raw_rule": "smallest",
+    "l3_rule": "largest",
+    "input_output": "Input: n q; q triples with strictly increasing t. Output-1 for rejected tasks, otherwise sum of assigned server IDs.",
+    "invariant_constraints": "Times are strictly increasing integers in1..10^6;1<=k<=n and1<=d<=1000. A server released at time t is available to a task arriving at t."
+  },
+  "cf_90_b": {
+    "template": "Read a lowercase letter grid in row-major order and retain a cell exactly when its letter occurs {rule}. Concatenate the retained letters in that order.",
+    "raw_rule": "exactly once in its row and exactly once in its column",
+    "l3_rule": "at least twice in its row and at least twice in its column",
+    "input_output": "Input: height width and height letter strings. The input has at least one row-and-column-unique letter. Output the retained string; an empty output is allowed.",
+    "invariant_constraints": "Letters are lowercase English letters. At least one cell is unique in both its row and its column."
+  },
+  "atcoder_abc176_c": {
+    "template": "Raise each integer height by a nonnegative integer amount until the resulting sequence is {rule}. Minimize the sum of all increases.",
+    "raw_rule": "nondecreasing",
+    "l3_rule": "nonincreasing",
+    "input_output": "Input: n and n positive heights. Output minimum total increase.",
+    "invariant_constraints": "1<=height_i<=10^9."
+  },
+  "atcoder_abc147_d": {
+    "template": "Sum A_i {rule} A_j over all i<j.",
+    "raw_rule": "bitwise XOR",
+    "l3_rule": "bitwise AND",
+    "input_output": "Input: n>=2 and n integers0<=A_i<2^60. Output the sum modulo1000000007.",
+    "invariant_constraints": "n>=2;0<=A_i<2^60."
+  },
+  "atcoder_abc075_b": {
+    "template": "A grid contains bombs(#) and empty cells(.). Replace each empty cell by the number of bombs in its {rule}; preserve every bomb.",
+    "raw_rule": "eight surrounding cells, including diagonals",
+    "l3_rule": "four side-adjacent cells, excluding diagonals",
+    "input_output": "Input: height width and the grid. Output transformed grid; cells outside the grid contribute nothing.",
+    "invariant_constraints": "Cells are only . or #."
+  },
+  "codenet_p00451": {
+    "template": "For every pair of uppercase strings, output the length of a longest common {rule}.",
+    "raw_rule": "contiguous substring",
+    "l3_rule": "subsequence, formed by deleting characters without reordering",
+    "input_output": "Input: pairs of whitespace-separated nonempty uppercase strings through EOF. Output one integer for each pair.",
+    "invariant_constraints": "Each string contains only uppercase English letters; the number of strings is even."
+  },
+  "cf_215_a": {
+    "template": "A front gear a_i and rear gear b_j are eligible when b_j is divisible by a_i. Count eligible pairs attaining the {rule} integral ratio b_j/a_i.",
+    "raw_rule": "maximum",
+    "l3_rule": "minimum",
+    "input_output": "Input: n, increasing distinct positive front sizes; m, increasing distinct positive rear sizes. Every size<=10000 and an eligible pair exists. Output pair count.",
+    "invariant_constraints": "Front sizes and rear sizes are separately strictly increasing and lie in1..10000. At least one integral ratio exists."
+  },
+  "cf_191_a": {
+    "template": "Choose a nonempty chronological subsequence of names so each name final character equals the next name first character. Additionally require the first and final characters of the whole dynasty to {rule}. Maximize total name length.",
+    "raw_rule": "coincide",
+    "l3_rule": "differ",
+    "input_output": "Input: n and n lowercase names. Output maximum length, or0 if no valid dynasty exists.",
+    "invariant_constraints": "Names are lowercase English strings of length1..10."
+  },
+  "codechef_cielrcpt": {
+    "template": "There are twelve menu prices1,2,4,...,2048. Order menus totaling exactly p, with each menu price usable {rule}. Minimize the number ordered.",
+    "raw_rule": "arbitrarily many times",
+    "l3_rule": "at most once",
+    "input_output": "Input: T and T positive amounts p. Output minimum number, or-1 if the exact amount is impossible.",
+    "invariant_constraints": "All amounts are positive integers."
+  },
+  "cf_1097_b": {
+    "template": "Starting at angle0 degrees, perform every given rotation in sequence, independently choosing clockwise or counterclockwise direction. Determine whether the final angle modulo360 can be {rule}.",
+    "raw_rule": "0",
+    "l3_rule": "180",
+    "input_output": "Input: n and n angles in1..180. Output YES if feasible, otherwise NO.",
+    "invariant_constraints": "1<=angle_i<=180."
+  },
+  "cf_1031_b": {
+    "template": "Find t_1..t_n in0..3 such that a_i=t_i {rule} t_(i+1) and b_i=t_i AND t_(i+1), for every adjacent pair.",
+    "raw_rule": "OR",
+    "l3_rule": "XOR",
+    "input_output": "Input: n; n-1 values a; n-1 values b. Output NO if impossible; otherwise YES and any valid n-value sequence.",
+    "invariant_constraints": "n>=2; all supplied relation values lie in0..3."
+  },
+  "cf_1203_a": {
+    "template": "Students numbered1..n stand in a circle in the given clockwise order. Accept if their order is a cyclic rotation of {rule}.",
+    "raw_rule": "either1,2,...,n or n,n-1,...,1",
+    "l3_rule": "1,2,...,n",
+    "input_output": "Input: q; each case n and a permutation1..n. Output YES/NO per case.",
+    "invariant_constraints": "Each circle is a permutation of1..n."
+  },
+  "codenet_p02398": {
+    "template": "Among integers d in[a,b] dividing c exactly, output their {rule}.",
+    "raw_rule": "count",
+    "l3_rule": "sum",
+    "input_output": "Input: positive a b c with a<=b. Output one integer.",
+    "invariant_constraints": "1<=a<=b and c>=1."
+  },
+  "atcoder_abc128_c": {
+    "template": "There are n binary switches. Bulb i is on exactly when the sum of connected switch states modulo2 equals p_i. Count assignments for which every bulb is {rule}.",
+    "raw_rule": "on",
+    "l3_rule": "off",
+    "input_output": "Input: n m; each of m lines gives count k_i then distinct1-based connected switch IDs; then m bits p_i. Output exact assignment count.",
+    "invariant_constraints": "Each bulb connects to a nonempty subset of distinct switches1..n; every p_i is0 or1."
+  },
+  "codechef_prime1": {
+    "template": "For each inclusive interval[l,r], list all {rule} integers in increasing order. The integer1 belongs to neither class.",
+    "raw_rule": "prime",
+    "l3_rule": "composite",
+    "input_output": "Input: T and T interval pairs,1<=l<=r<=10^9 and r-l<=100000. Output one integer per line, with optional blank separators between cases.",
+    "invariant_constraints": "1<=l<=r and r-l<=width_limit; all intervals are inclusive."
+  },
+  "codechef_frgtnlng": {
+    "template": "For each dictionary word, answer YES exactly when it occurs in {rule} supplied modern phrases. Multiple occurrences inside one phrase count once.",
+    "raw_rule": "at least one of the",
+    "l3_rule": "every one of the",
+    "input_output": "Input: T; each case N K, N dictionary words, then K phrases each given by L and L words. Output N YES/NO tokens per case in dictionary order.",
+    "invariant_constraints": "Words are nonempty strings of length<=5; dictionary duplicates are allowed. Every phrase contains at least one word."
+  },
+  "cf_239_a": {
+    "template": "List all positive integers x with x+y<=n and(x+y) modulo k equal to {rule}.",
+    "raw_rule": "0",
+    "l3_rule": "1",
+    "input_output": "Input: positive y k n. Output all solutions in increasing order, or-1 if absent. When k=1 no number has remainder1.",
+    "invariant_constraints": "y,k,n are positive integers; the possible absence of positive x is valid input."
+  },
+  "cf_846_a": {
+    "template": "From a binary sequence delete any entries without reordering the rest. Retain the maximum number such that the retained sequence is {rule}.",
+    "raw_rule": "nondecreasing",
+    "l3_rule": "nonincreasing",
+    "input_output": "Input: n and n bits. Output the maximum retained length.",
+    "invariant_constraints": "Every value is0 or1."
+  },
+  "atcoder_abc103_b": {
+    "template": "Determine whether T can be obtained from S by {rule}.",
+    "raw_rule": "any number of cyclic rotations",
+    "l3_rule": "any number of cyclic rotations, optionally after reversing S",
+    "input_output": "Input: equal-length lowercase strings S and T, length>=2. Output Yes or No.",
+    "invariant_constraints": "S,T have equal length>=2 and consist of lowercase English letters."
+  },
+  "atcoder_abc087_c": {
+    "template": "Travel in a two-row grid from top-left to bottom-right, moving only right or down. Collect every visited cell value including endpoints. {rule} collected sum.",
+    "raw_rule": "Maximize",
+    "l3_rule": "Minimize",
+    "input_output": "Input: N; N top-row values; N bottom-row values. All values are positive. Output optimum sum.",
+    "invariant_constraints": "1<=cell value<=100."
+  },
+  "cf_1066_a": {
+    "template": "Lanterns occupy positive positions divisible by v on the path1..L. Count visible lanterns when positions satisfying {rule} are blocked.",
+    "raw_rule": "l<=position<=r",
+    "l3_rule": "l<position<r",
+    "input_output": "Input: T; each query L v l r with1<=l<=r<=L. Output visible count per query.",
+    "invariant_constraints": "1<=v<=10^9;1<=l<=r<=L."
+  },
+  "cf_1213_b": {
+    "template": "Day i is bad exactly when a later day has price {rule} a_i. Count bad days.",
+    "raw_rule": "strictly less than",
+    "l3_rule": "less than or equal to",
+    "input_output": "Input: T; each case n and n positive prices. Output bad-day count per case.",
+    "invariant_constraints": "1<=price_i<=10^6; T<=10000; total n<=150000."
+  },
+  "cf_1278_a": {
+    "template": "Determine whether some permutation of password p occurs in h as a {rule}. Every password letter must be used exactly once.",
+    "raw_rule": "contiguous substring",
+    "l3_rule": "subsequence selected by increasing indices",
+    "input_output": "Input: T; each case nonempty lowercase p and h. Output YES or NO per case.",
+    "invariant_constraints": "p,h are nonempty lowercase English strings."
+  },
+  "cf_1321_b": {
+    "template": "Choose a nonempty increasing sequence of city indices c_1<...<c_k. For every adjacent selected pair i<j require j-i={rule}. Maximize the sum of selected positive beauty values.",
+    "raw_rule": "b_j-b_i",
+    "l3_rule": "b_i-b_j",
+    "input_output": "Input: n and n positive beauty values b. Output maximum beauty sum.",
+    "invariant_constraints": "1<=b_i<=400000."
+  },
+  "cf_1547_e": {
+    "template": "At cell i of a line1..n define temperature as {rule}_j(t_j+abs(a_j-i)) across all air conditioners.",
+    "raw_rule": "min",
+    "l3_rule": "max",
+    "input_output": "Input: T; each case n k, k distinct positions a, k positive temperatures t. Output all n cell temperatures.",
+    "invariant_constraints": "1<=k<=n; conditioner positions are distinct and lie in1..n;1<=t_i<=10^9; total n<=300000."
+  },
+  "cf_242_e": {
+    "template": "Maintain an integer array with type2 operations(l,r,x) XORing every entry of inclusive[l,r] by x. A type1 query(l,r) returns the {rule} of entries in that range.",
+    "raw_rule": "arithmetic sum",
+    "l3_rule": "bitwise XOR",
+    "input_output": "Input: n; n values in0..10^6; q; q lines1 l r or2 l r x,1<=x<=10^6. Output one answer for each type1 query.",
+    "invariant_constraints": "0<=a_i<=10^6; update masks1<=x<=10^6;1<=l<=r<=n."
+  },
+  "cf_5_c": {
+    "template": "Interpret {rule}. A regular substring has nonnegative balance in every prefix and total balance zero. Find the maximum positive regular substring length and the number of substrings attaining it.",
+    "raw_rule": "( as+1 and) as-1",
+    "l3_rule": "( as-1 and) as+1",
+    "input_output": "Input: a nonempty parenthesis string. Output maximum length and count; if no regular nonempty substring exists output0 1.",
+    "invariant_constraints": "Only characters ( and ) are permitted; the string is nonempty."
+  },
+  "cf_670_d1": {
+    "template": "A cookie requires a_i grams of each of n ingredients, and current stock is b_i. Powder {rule}. Maximize whole cookies.",
+    "raw_rule": "is a shared budget of k grams, each convertible to any one ingredient",
+    "l3_rule": "provides a separate budget of k grams for each ingredient, with no transfers between these budgets",
+    "input_output": "Input: n k; n positive requirements a; n positive stocks b. Output maximum cookie count.",
+    "invariant_constraints": "1<=a_i,b_i<=1000 and k>=1."
+  },
+  "atcoder_agc009_a": {
+    "template": "Button i {rule} each of the first i entries of A by one. Press buttons until every A_i is an integer multiple of B_i; final multiples may be negative or zero. Minimize total presses.",
+    "raw_rule": "increments",
+    "l3_rule": "decrements",
+    "input_output": "Input: N followed by N pairs A_i B_i with A_i>=0 and B_i>=1. Output minimum presses.",
+    "invariant_constraints": "A_i>=0,B_i>=1. The applicable profile additionally caps values; final values need not remain nonnegative."
+  },
+  "codechef_sumpair": {
+    "template": "Choose disjoint index pairs from a positive integer array. A pair is good when its absolute value difference is {rule} D. Maximize the sum of all elements in chosen good pairs.",
+    "raw_rule": "strictly less than",
+    "l3_rule": "at most",
+    "input_output": "Input: T; each case N D and N positive integers. Output optimum sum; using no pairs is allowed.",
+    "invariant_constraints": "1<=D,a_i<=100000; T<=100000 and total N<=500000."
+  },
+  "cf_1538_c": {
+    "template": "Count index pairs i<j whose sum satisfies {rule}.",
+    "raw_rule": "l<=a_i+a_j<=r",
+    "l3_rule": "l<a_i+a_j<r",
+    "input_output": "Input: T; each case n l r and n positive integers. Output one pair count per case.",
+    "invariant_constraints": "1<=l<=r<=10^9;1<=a_i<=10^9; T<=10000 and total n<=200000."
+  },
+  "hackerearth_roy_coin_boxes": {
+    "template": "Initially all N boxes have zero coins. For each of M inclusive intervals[L,R], add one coin to every covered box. Each query X asks how many boxes have {rule} X coins.",
+    "raw_rule": "at least",
+    "l3_rule": "exactly",
+    "input_output": "Input: N; M; M interval pairs; Q; Q positive query values X. Output one count per query.",
+    "invariant_constraints": "1<=L<=R<=N and1<=X<=N."
+  },
+  "atcoder_abc088_b": {
+    "template": "Alice and Bob alternately take one remaining card; Alice starts. Their score is the sum of their chosen card values. Both optimally {rule} their own final score. Return Alice score minus Bob score.",
+    "raw_rule": "maximize",
+    "l3_rule": "minimize",
+    "input_output": "Input: N and N positive card values. Output the score difference under optimal play.",
+    "invariant_constraints": "1<=card value<=100."
+  },
+  "codenet_p02240": {
+    "template": "Given an undirected graph, answer whether each queried pair s,t is connected by {rule}.",
+    "raw_rule": "a walk of any length",
+    "l3_rule": "an even-length walk; revisiting vertices and edges is allowed, and the empty walk has length0",
+    "input_output": "Input: n m; m edges with IDs0..n-1; q; q vertex pairs. Output yes/no per pair.",
+    "invariant_constraints": "n>=2; edge and query endpoints lie in0..n-1. Self-loops/repeated edges are allowed. The empty walk witnesses reachability of a vertex to itself."
+  },
+  "cf_302_a": {
+    "template": "For each query[l,r], independently rearrange the entire array of values+1 and-1. Determine whether the sum in positions[l,r] can equal {rule}.",
+    "raw_rule": "0",
+    "l3_rule": "1",
+    "input_output": "Input: n q; n values each+1 or-1; q inclusive1-based intervals. Output1 if feasible, otherwise0, per query.",
+    "invariant_constraints": "Every value is exactly-1 or1;1<=l<=r<=n."
+  },
+  "cf_467_c": {
+    "template": "Choose exactly k pairwise disjoint contiguous intervals of length m. {rule} the total sum of all chosen elements.",
+    "raw_rule": "Maximize",
+    "l3_rule": "Minimize",
+    "input_output": "Input: n m k with m*k<=n; n nonnegative integers. Output optimum total.",
+    "invariant_constraints": "m,k>=1,m*k<=n;0<=p_i<=10^9."
+  },
+  "cf_705_c": {
+    "template": "Initially there are no notifications. Type1 x appends an unread notification from application x. Type2 x reads all notifications generated so far by application x. Type3 t reads the {rule} t notifications generated so far, including already read notifications.",
+    "raw_rule": "first",
+    "l3_rule": "last",
+    "input_output": "Input: n q; q commands, each type and argument. Each type3 t is no greater than total generated notifications. Output the total unread count after every command.",
+    "invariant_constraints": "Application IDs lie in1..n; type3 arguments are positive and no greater than the number of prior type1 events."
+  },
+  "cf_911_d": {
+    "template": "For each query[l,r], {rule} the permutation segment. After each operation report whether total inversions is odd or even. An inversion is i<j with a_i>a_j.",
+    "raw_rule": "reverse",
+    "l3_rule": "cyclically rotate left by one position",
+    "input_output": "Input: n; permutation1..n; q; q inclusive1-based intervals. Output odd/even per query.",
+    "invariant_constraints": "The array is a permutation1..n;1<=l<=r<=n."
+  },
+  "atcoder_agc047_a": {
+    "template": "Count i<j such that the exact decimal product A_i*A_j is {rule}.",
+    "raw_rule": "an integer",
+    "l3_rule": "an even integer",
+    "input_output": "Input: N and N positive decimal values below10000, with at most9 fractional digits. Output exact pair count; do not round floating-point values.",
+    "invariant_constraints": "2<=N;0<A_i<10000; each decimal has at most9 fractional digits and an explicit integer part."
+  },
+  "codenet_p02233": {
+    "template": "Define f(0)=1, f(1)={rule}, and f(n)=f(n-1)+f(n-2) for n>=2. Return f(n).",
+    "raw_rule": "1",
+    "l3_rule": "2",
+    "input_output": "Input: integer n>=0. Output exact integer f(n).",
+    "invariant_constraints": "n is nonnegative."
+  },
+  "codechef_twtclose": {
+    "template": "N tweets are initially closed. CLICK X toggles tweet X. CLOSEALL {rule} every tweet. Report open count after each command.",
+    "raw_rule": "closes",
+    "l3_rule": "opens",
+    "input_output": "Input: N K and K command lines, CLICK X or CLOSEALL. Tweet IDs are1..N. Output K counts.",
+    "invariant_constraints": "CLICK IDs lie in1..N; commands are exactly CLICK X or CLOSEALL."
+  },
+  "cf_863_b": {
+    "template": "Seat2n people in exactly two single kayaks and n-1 tandem kayaks. A single has instability0; a tandem has the absolute difference of its occupants weights. {rule} total instability.",
+    "raw_rule": "Minimize",
+    "l3_rule": "Maximize",
+    "input_output": "Input: n>=2 and2n positive weights. Output optimum total instability.",
+    "invariant_constraints": "n>=2; every weight lies in1..1000."
+  },
+  "atcoder_abc118_c": {
+    "template": "While at least two monsters are alive, choose an alive attacker and a different alive target; decrease target health by attacker health. Health<=0 means dead. Find the {rule} possible final survivor health.",
+    "raw_rule": "minimum",
+    "l3_rule": "maximum",
+    "input_output": "Input: N>=2 and N positive integer health values. Output the optimal final health.",
+    "invariant_constraints": "N>=2; every initial health is positive."
+  },
+  "hackerearth_xsquare_balanced": {
+    "template": "A nonempty string is balanced exactly when each character occurs an even number of times. Partition the entire string into nonempty contiguous balanced pieces, {rule} their count.",
+    "raw_rule": "minimizing",
+    "l3_rule": "maximizing",
+    "input_output": "Input: T and T nonempty lowercase strings. Output optimum count, or-1 if no valid partition exists.",
+    "invariant_constraints": "Strings are nonempty and consist of lowercase English letters; total length<=1000000; T<=100000."
+  },
+  "atcoder_abc160_d": {
+    "template": "Graph vertices1..N have undirected unit edges(i,i+1). Add an undirected edge(X,Y) of weight {rule}. For k=1..N-1 count unordered pairs at shortest-path distance k.",
+    "raw_rule": "1",
+    "l3_rule": "2",
+    "input_output": "Input: N X Y with X+1<Y. Output N-1 counts, one per distance.",
+    "invariant_constraints": "N>=3 and1<=X<X+1<Y<=N."
+  }
+}

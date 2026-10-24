@@ -1,0 +1,21 @@
+{
+  "range_add_range_min": {
+    "raw_fast": {
+      "path": "../library_work/strict_programs/range_add_range_min/fast.cpp",
+      "args": [
+        "raw"
+      ]
+    },
+    "l3_fast": {
+      "path": "../library_work/strict_programs/range_add_range_min/fast.cpp",
+      "args": [
+        "l3"
+      ]
+    },
+    "repair_reason": "Original authored shared segment tree maintained an unused range sum; full native range-add sequences could overflow that unused 64-bit sum. This independent strict implementation stores only min/max and lazy additions; these are bounded by (Q+1)*10^9, below signed64 at native and expanded caps."
+  },
+  "maximum_independent_set": {
+    "raw_fast": "../library_work/strict_programs/maximum_independent_set/raw_fast.cpp",
+    "repair_reason": "Raw/L2 clique-complement algorithm is unchanged; its fixed bitset capacity is increased from40 to42 to support the expanded original N bound. Native L3 remains at original N<=40."
+  }
+}
