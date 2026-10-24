@@ -1,0 +1,34 @@
+.DS_Store
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# —— 项目运行产生的数据 / 中间工作产物（不属于发布数据）——
+
+# judge.py 每次评测写入的运行日志
+/runs/
+
+# 沙箱与 runner 试运行输出、临时 seeds.jsonl 副本
+/preflight/
+
+# 构建过程中的审计、筛选、审阅、变异草稿等中间产物
+/cc_audit/
+/curation/
+/l1_work/
+/mutations/
+/review/
+
+# 导出打包产物（由 tools/package_release.py 生成）
+/PACKAGE_FILES.jsonl
+*.zip
+*.tar.zst
+
+# —— validation/：只纳入结构化核验证据 ——
+# 保留：report.json、根级审计与汇总 json
+# 排除：程序输出、运行元数据与中间输入（均为试验运行副产物，可由工具重放）
+/validation/**/*.stdout
+/validation/**/*.stderr
+/validation/**/*.run.json
+/validation/**/*.txt
