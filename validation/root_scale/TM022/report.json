@@ -1,0 +1,313 @@
+{
+  "seed_id": "TM022",
+  "status": "complete",
+  "scope": "Separate Python implementation on original-maximum and strictly expanded inputs; no universal correctness guarantee or algorithm-separation claim.",
+  "budget_seconds": 5,
+  "oracle_budget_seconds": 45,
+  "memory_mb": 2048,
+  "programs": {
+    "raw_fast": {
+      "source_path": "assets/root_batch2/fast.cpp",
+      "source_sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "agency",
+        "0"
+      ],
+      "include_dirs": [],
+      "header_sha256": {
+        "assets/root_batch2/fast.cpp": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+        "assets/root_batch2/oracle.cpp": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+        "assets/root_batch2/slow.cpp": "8e7e5169b8f2c656a836d527a02c635f6ca32d0f1ddaaa28aba8f7f2dca39cda"
+      },
+      "compile": {
+        "status": "OK",
+        "returncode": 0,
+        "wall_seconds": 4.554325600000084,
+        "cpu_user_seconds": 0.0013319999999999999,
+        "cpu_system_seconds": 0.0013319999999999999,
+        "cpu_seconds": 1.1,
+        "sampled_process_tree_cpu_seconds": 1.1,
+        "timeout_reason": null,
+        "cpu_budget_seconds": 60.0,
+        "wall_watchdog_seconds": 241.0,
+        "cpu_affinity": 0,
+        "memory_limit_mb": 2048,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "validation/root_scale/TM022/compile/raw_fast.stdout",
+        "stderr_path": "validation/root_scale/TM022/compile/raw_fast.stderr",
+        "sandbox": "bubblewrap-unshare-all-no-network",
+        "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+      },
+      "binary_sha256": "0e31c21f0383083f8b780dea579a45f0394aa0e18cad2bc0b369b2b7836e929f",
+      "command": [
+        "/program",
+        "agency",
+        "0"
+      ],
+      "mounts": [
+        "--ro-bind",
+        "validation/root_scale/TM022/build/raw_fast/program",
+        "/program"
+      ]
+    },
+    "l3_fast": {
+      "source_path": "assets/root_batch2/fast.cpp",
+      "source_sha256": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+      "args": [
+        "agency",
+        "1"
+      ],
+      "include_dirs": [],
+      "header_sha256": {
+        "assets/root_batch2/fast.cpp": "12c82157ced67d0b88e607053e01e03843deb431095f9614537377311979b5b8",
+        "assets/root_batch2/oracle.cpp": "bda7e2b4dfae32645924b02cb78fd583112acda03b7878ba63a66dfe77c1dbb8",
+        "assets/root_batch2/slow.cpp": "8e7e5169b8f2c656a836d527a02c635f6ca32d0f1ddaaa28aba8f7f2dca39cda"
+      },
+      "compile": {
+        "status": "OK",
+        "returncode": 0,
+        "wall_seconds": 4.594163948999267,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0025580000000000047,
+        "cpu_seconds": 1.11,
+        "sampled_process_tree_cpu_seconds": 1.11,
+        "timeout_reason": null,
+        "cpu_budget_seconds": 60.0,
+        "wall_watchdog_seconds": 241.0,
+        "cpu_affinity": 0,
+        "memory_limit_mb": 2048,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "validation/root_scale/TM022/compile/l3_fast.stdout",
+        "stderr_path": "validation/root_scale/TM022/compile/l3_fast.stderr",
+        "sandbox": "bubblewrap-unshare-all-no-network",
+        "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+      },
+      "binary_sha256": "0e31c21f0383083f8b780dea579a45f0394aa0e18cad2bc0b369b2b7836e929f",
+      "command": [
+        "/program",
+        "agency",
+        "1"
+      ],
+      "mounts": [
+        "--ro-bind",
+        "validation/root_scale/TM022/build/l3_fast/program",
+        "/program"
+      ]
+    },
+    "scale_raw_oracle": {
+      "source_path": "native/root_scale_oracle.py",
+      "source_sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "22",
+        "0"
+      ],
+      "include_dirs": [],
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/code/root_scale_oracle.py",
+        "22",
+        "0"
+      ],
+      "mounts": [
+        "--ro-bind",
+        "native",
+        "/code"
+      ]
+    },
+    "scale_l3_oracle": {
+      "source_path": "native/root_scale_oracle.py",
+      "source_sha256": "4a425d80adc9752fdccaad18fdfbb61f1a55b10313ef8cc766ca8c6a5702bfa0",
+      "args": [
+        "22",
+        "1"
+      ],
+      "include_dirs": [],
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/code/root_scale_oracle.py",
+        "22",
+        "1"
+      ],
+      "mounts": [
+        "--ro-bind",
+        "native",
+        "/code"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "name": "native",
+      "input_path": "validation/root_scale/TM022/native/input.txt",
+      "input_sha256": "367785912b376cab9572c04c92d2de8565564a1956a41f308fe20b2e38264792",
+      "validity": {
+        "valid": true,
+        "axis": "n per test case",
+        "observed": 1000,
+        "original_upper": 1000,
+        "l2_upper": 2000,
+        "outside_original": false
+      },
+      "runs": {
+        "raw_fast": {
+          "status": "OK",
+          "returncode": 0,
+          "wall_seconds": 0.045206093998785946,
+          "cpu_user_seconds": 0.0009850000000000067,
+          "cpu_system_seconds": 0.0019699999999999718,
+          "cpu_seconds": 0.0029549999999999785,
+          "sampled_process_tree_cpu_seconds": 0.0,
+          "timeout_reason": null,
+          "cpu_budget_seconds": 5,
+          "wall_watchdog_seconds": 21.0,
+          "cpu_affinity": 0,
+          "memory_limit_mb": 2048,
+          "stdout_bytes": 10,
+          "stdout_sha256": "9ed0c92e5f3ef289986be368a777e0adf3f4af4533390b70c72a790e419fadd0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "validation/root_scale/TM022/native/raw_fast.stdout",
+          "stderr_path": "validation/root_scale/TM022/native/raw_fast.stderr",
+          "sandbox": "bubblewrap-unshare-all-no-network",
+          "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+        },
+        "scale_raw_oracle": {
+          "status": "OK",
+          "returncode": 0,
+          "wall_seconds": 0.09256801700030337,
+          "cpu_user_seconds": 0.0,
+          "cpu_system_seconds": 0.0023450000000000415,
+          "cpu_seconds": 0.01,
+          "sampled_process_tree_cpu_seconds": 0.01,
+          "timeout_reason": null,
+          "cpu_budget_seconds": 45,
+          "wall_watchdog_seconds": 181.0,
+          "cpu_affinity": 0,
+          "memory_limit_mb": 2048,
+          "stdout_bytes": 10,
+          "stdout_sha256": "9ed0c92e5f3ef289986be368a777e0adf3f4af4533390b70c72a790e419fadd0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "validation/root_scale/TM022/native/scale_raw_oracle.stdout",
+          "stderr_path": "validation/root_scale/TM022/native/scale_raw_oracle.stderr",
+          "sandbox": "bubblewrap-unshare-all-no-network",
+          "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+        },
+        "l3_fast": {
+          "status": "OK",
+          "returncode": 0,
+          "wall_seconds": 0.04730386699884548,
+          "cpu_user_seconds": 0.0,
+          "cpu_system_seconds": 0.002805000000000002,
+          "cpu_seconds": 0.002805000000000002,
+          "sampled_process_tree_cpu_seconds": 0.0,
+          "timeout_reason": null,
+          "cpu_budget_seconds": 5,
+          "wall_watchdog_seconds": 21.0,
+          "cpu_affinity": 0,
+          "memory_limit_mb": 2048,
+          "stdout_bytes": 10,
+          "stdout_sha256": "9ed0c92e5f3ef289986be368a777e0adf3f4af4533390b70c72a790e419fadd0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "validation/root_scale/TM022/native/l3_fast.stdout",
+          "stderr_path": "validation/root_scale/TM022/native/l3_fast.stderr",
+          "sandbox": "bubblewrap-unshare-all-no-network",
+          "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+        },
+        "scale_l3_oracle": {
+          "status": "OK",
+          "returncode": 0,
+          "wall_seconds": 0.09458021099999314,
+          "cpu_user_seconds": 0.000902,
+          "cpu_system_seconds": 0.0018039999999999723,
+          "cpu_seconds": 0.0027059999999999723,
+          "sampled_process_tree_cpu_seconds": 0.0,
+          "timeout_reason": null,
+          "cpu_budget_seconds": 45,
+          "wall_watchdog_seconds": 181.0,
+          "cpu_affinity": 0,
+          "memory_limit_mb": 2048,
+          "stdout_bytes": 10,
+          "stdout_sha256": "9ed0c92e5f3ef289986be368a777e0adf3f4af4533390b70c72a790e419fadd0",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "validation/root_scale/TM022/native/scale_l3_oracle.stdout",
+          "stderr_path": "validation/root_scale/TM022/native/scale_l3_oracle.stderr",
+          "sandbox": "bubblewrap-unshare-all-no-network",
+          "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+        }
+      },
+      "checks": {
+        "raw_fast": true,
+        "l3_fast": true
+      }
+    },
+    {
+      "name": "l2",
+      "input_path": "validation/root_scale/TM022/l2/input.txt",
+      "input_sha256": "22df5f21a6ce094933815174dac9bff354704b5f2f543e5cbe12cd50f58d9198",
+      "validity": {
+        "valid": true,
+        "axis": "n per test case",
+        "observed": 2000,
+        "original_upper": 1000,
+        "l2_upper": 2000,
+        "outside_original": true
+      },
+      "runs": {
+        "raw_fast": {
+          "status": "OK",
+          "returncode": 0,
+          "wall_seconds": 0.05900141100028122,
+          "cpu_user_seconds": 0.0,
+          "cpu_system_seconds": 0.003188000000000024,
+          "cpu_seconds": 0.003188000000000024,
+          "sampled_process_tree_cpu_seconds": 0.0,
+          "timeout_reason": null,
+          "cpu_budget_seconds": 5,
+          "wall_watchdog_seconds": 21.0,
+          "cpu_affinity": 0,
+          "memory_limit_mb": 2048,
+          "stdout_bytes": 9,
+          "stdout_sha256": "1379837933058e8eec13f19567749045d54546996f8e1a54fdb582c40c7d7402",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "validation/root_scale/TM022/l2/raw_fast.stdout",
+          "stderr_path": "validation/root_scale/TM022/l2/raw_fast.stderr",
+          "sandbox": "bubblewrap-unshare-all-no-network",
+          "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+        },
+        "scale_raw_oracle": {
+          "status": "OK",
+          "returncode": 0,
+          "wall_seconds": 0.09842023000055633,
+          "cpu_user_seconds": 0.0,
+          "cpu_system_seconds": 0.002646999999999955,
+          "cpu_seconds": 0.002646999999999955,
+          "sampled_process_tree_cpu_seconds": 0.0,
+          "timeout_reason": null,
+          "cpu_budget_seconds": 45,
+          "wall_watchdog_seconds": 181.0,
+          "cpu_affinity": 0,
+          "memory_limit_mb": 2048,
+          "stdout_bytes": 9,
+          "stdout_sha256": "1379837933058e8eec13f19567749045d54546996f8e1a54fdb582c40c7d7402",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "validation/root_scale/TM022/l2/scale_raw_oracle.stdout",
+          "stderr_path": "validation/root_scale/TM022/l2/scale_raw_oracle.stderr",
+          "sandbox": "bubblewrap-unshare-all-no-network",
+          "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+        }
+      },
+      "checks": {
+        "raw_fast": true
+      }
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

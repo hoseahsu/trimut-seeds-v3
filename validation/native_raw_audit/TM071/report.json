@@ -1,0 +1,92 @@
+{
+  "seed_id": "TM071",
+  "source_identity": "codecontests:1:tf01",
+  "status": "complete",
+  "admitted": false,
+  "scope": "Diagnostic replay of existing reference on upstream tests. Not final qualification; native-domain validator and statement audit are separate.",
+  "started_at_utc": "2026-10-22T13:36:32.919779+00:00",
+  "tests_sha256": "758d3ca4c9333c04938c660b9d3937c5b062ad6a182475434ff558645a83f5cd",
+  "budget_seconds": 5.0,
+  "memory_mb": 2048,
+  "upstream_test_count": 1,
+  "runs": [
+    {
+      "name": "public_tests_0000",
+      "input_sha256": "0f2741648d7a55ed5af96b14d8a0348d5f81aadad1d98c13d96dd367353faf7c",
+      "upstream_expected_sha256": "4ea2ed1420659bf15773230715e87b4408625eaf88869b7e8bb51c42889579d6",
+      "legacy_native_validator": "accepted",
+      "run": {
+        "status": "OK",
+        "returncode": 0,
+        "wall_seconds": 0.007542920000560116,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0022130000000011307,
+        "cpu_seconds": 0.0022130000000011307,
+        "sampled_process_tree_cpu_seconds": 0.0,
+        "timeout_reason": null,
+        "cpu_budget_seconds": 5.0,
+        "wall_watchdog_seconds": 21.0,
+        "cpu_affinity": 0,
+        "memory_limit_mb": 2048,
+        "stdout_bytes": 4,
+        "stdout_sha256": "5d90ef7fc0d040fd56a1e48697cfa99e0dfaf4fd803aefefc3b5053ec1d36aea",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "validation/native_raw_audit/TM071/cases/public_tests_0000.stdout",
+        "stderr_path": "validation/native_raw_audit/TM071/cases/public_tests_0000.stderr",
+        "sandbox": "bubblewrap-unshare-all-no-network",
+        "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+      },
+      "verdict": "MATCH"
+    }
+  ],
+  "findings": [],
+  "program": {
+    "source_path": "assets/codecontests_batch/codechef_tf01/raw_fast.cpp",
+    "source_sha256": "1b5de264eb37ad369737ace214dd47b5b0af926e978af4b13b4bbb9aca12592f",
+    "args": [],
+    "include_dirs": [],
+    "header_sha256": {
+      "assets/codecontests_batch/codechef_tf01/l3_fast.cpp": "2a241d4c548fdae838fa4b87765b1d06a1c39b18249809bee5ef481636845406",
+      "assets/codecontests_batch/codechef_tf01/l3_slow.cpp": "2ab252fba15b5eb6056eb07c398a1bfd775aa8cf41c4ee325a81ebbf5ef49d68",
+      "assets/codecontests_batch/codechef_tf01/raw_fast.cpp": "1b5de264eb37ad369737ace214dd47b5b0af926e978af4b13b4bbb9aca12592f",
+      "assets/codecontests_batch/codechef_tf01/raw_slow.cpp": "fa7ee05e51a01d3be75bdfa0951d3a50cf00377e79ce23cc112a48c524b06b5f"
+    },
+    "compile": {
+      "status": "OK",
+      "returncode": 0,
+      "wall_seconds": 0.5049359750009899,
+      "cpu_user_seconds": 0.0007559999999999789,
+      "cpu_system_seconds": 0.0012119999999988806,
+      "cpu_seconds": 0.47,
+      "sampled_process_tree_cpu_seconds": 0.47,
+      "timeout_reason": null,
+      "cpu_budget_seconds": 60.0,
+      "wall_watchdog_seconds": 241.0,
+      "cpu_affinity": 0,
+      "memory_limit_mb": 2048,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "validation/native_raw_audit/TM071/compile/raw_fast.stdout",
+      "stderr_path": "validation/native_raw_audit/TM071/compile/raw_fast.stderr",
+      "sandbox": "bubblewrap-unshare-all-no-network",
+      "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+    },
+    "binary_sha256": "4b7331163e2c88a1fdfdd2c943c462ccdd719f66a28185a6b4ddadcee5b421eb",
+    "command": [
+      "/program"
+    ],
+    "mounts": [
+      "--ro-bind",
+      "validation/native_raw_audit/TM071/build/raw_fast/program",
+      "/program"
+    ]
+  },
+  "summary": {
+    "MATCH": 1
+  },
+  "all_upstream_cases_executed": true,
+  "native_validator_summary": {
+    "accepted": 1
+  }
+}

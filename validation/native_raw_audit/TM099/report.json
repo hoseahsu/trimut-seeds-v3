@@ -1,0 +1,150 @@
+{
+  "seed_id": "TM099",
+  "source_identity": "codecontests:3:give-me-my-test-monk",
+  "status": "complete",
+  "admitted": false,
+  "scope": "Diagnostic replay of existing reference on upstream tests. Not final qualification; native-domain validator and statement audit are separate.",
+  "started_at_utc": "2026-10-22T13:37:07.753151+00:00",
+  "tests_sha256": "029bfd30b3f23f22a5a75f04cf9589c9cdfda5cbbc691f2869e3c29a3d613aa1",
+  "budget_seconds": 5.0,
+  "memory_mb": 2048,
+  "upstream_test_count": 3,
+  "runs": [
+    {
+      "name": "public_tests_0000",
+      "input_sha256": "24ed11960115734e4dd67b3c3d2af94527459b027516555deb7a30636f56eba8",
+      "upstream_expected_sha256": "0044aed661dabe70d50735c353b2cf964ac895f1ea84ca69f3804e74183737d8",
+      "legacy_native_validator": "error",
+      "validator_error": "ValueError(\"invalid literal for int() with base 10: 'SAMPLE'\")",
+      "run": {
+        "status": "OK",
+        "returncode": 0,
+        "wall_seconds": 0.007698727000388317,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0023550000000014393,
+        "cpu_seconds": 0.0023550000000014393,
+        "sampled_process_tree_cpu_seconds": 0.0,
+        "timeout_reason": null,
+        "cpu_budget_seconds": 5.0,
+        "wall_watchdog_seconds": 21.0,
+        "cpu_affinity": 0,
+        "memory_limit_mb": 2048,
+        "stdout_bytes": 10,
+        "stdout_sha256": "5b04186cbde37e4b9a793dca74b6b7ee05f3e69e611eb0dddec2a5aee0db938b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "validation/native_raw_audit/TM099/cases/public_tests_0000.stdout",
+        "stderr_path": "validation/native_raw_audit/TM099/cases/public_tests_0000.stderr",
+        "sandbox": "bubblewrap-unshare-all-no-network",
+        "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+      },
+      "verdict": "MATCH"
+    },
+    {
+      "name": "private_tests_0000",
+      "input_sha256": "3fb812b7711760a5901c47b12af3f1f8078b499d0f594728030790dd37b33cac",
+      "upstream_expected_sha256": "22ea85310581ae940ca65c5ae4844e5ed88c53105a5867a62f1c051408dc9491",
+      "legacy_native_validator": "accepted",
+      "run": {
+        "status": "OK",
+        "returncode": 0,
+        "wall_seconds": 0.007164409000324667,
+        "cpu_user_seconds": 0.0,
+        "cpu_system_seconds": 0.0020319999999998117,
+        "cpu_seconds": 0.0020319999999998117,
+        "sampled_process_tree_cpu_seconds": 0.0,
+        "timeout_reason": null,
+        "cpu_budget_seconds": 5.0,
+        "wall_watchdog_seconds": 21.0,
+        "cpu_affinity": 0,
+        "memory_limit_mb": 2048,
+        "stdout_bytes": 10,
+        "stdout_sha256": "c063f7ad31c16f445120bbb52ac46e759b12b76308ff9e17ddb0f05952986b1a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "validation/native_raw_audit/TM099/cases/private_tests_0000.stdout",
+        "stderr_path": "validation/native_raw_audit/TM099/cases/private_tests_0000.stderr",
+        "sandbox": "bubblewrap-unshare-all-no-network",
+        "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+      },
+      "verdict": "MATCH"
+    },
+    {
+      "name": "private_tests_0001",
+      "input_sha256": "a95740031dfb01d62ed550b85504682117d3f167adc3327cb6ff9bcdd05e5756",
+      "upstream_expected_sha256": "06de6c23abd0e075c57947040b3b9764e44c51281287fe6bfd3601ac0f03a1e7",
+      "legacy_native_validator": "accepted",
+      "run": {
+        "status": "OK",
+        "returncode": 0,
+        "wall_seconds": 0.007157879999795114,
+        "cpu_user_seconds": 0.0005099999999997884,
+        "cpu_system_seconds": 0.0013719999999999288,
+        "cpu_seconds": 0.0018819999999997172,
+        "sampled_process_tree_cpu_seconds": 0.0,
+        "timeout_reason": null,
+        "cpu_budget_seconds": 5.0,
+        "wall_watchdog_seconds": 21.0,
+        "cpu_affinity": 0,
+        "memory_limit_mb": 2048,
+        "stdout_bytes": 10,
+        "stdout_sha256": "6367868d159166cc2c487252faf5ddea65f4624f9715af9cb2d0eba56b3d9819",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_path": "validation/native_raw_audit/TM099/cases/private_tests_0001.stdout",
+        "stderr_path": "validation/native_raw_audit/TM099/cases/private_tests_0001.stderr",
+        "sandbox": "bubblewrap-unshare-all-no-network",
+        "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+      },
+      "verdict": "MATCH"
+    }
+  ],
+  "findings": [],
+  "program": {
+    "source_path": "assets/cc_a_batch3/hackerearth_give_me_my_test/raw_fast.cpp",
+    "source_sha256": "bd56c22631cc38e10ccc286a793a75f11ea7fe57cd48a5276925deb00c26dd5c",
+    "args": [],
+    "include_dirs": [],
+    "header_sha256": {
+      "assets/cc_a_batch3/hackerearth_give_me_my_test/l3_fast.cpp": "06625be28116168b706e383f04e5aa04fca947f2f1f4b5da8450e3934af3b357",
+      "assets/cc_a_batch3/hackerearth_give_me_my_test/l3_oracle.cpp": "a32c043e6c9893f282a07ea4bae25ca3bd2a2a479af39d15d6b12935813bc6a2",
+      "assets/cc_a_batch3/hackerearth_give_me_my_test/raw_fast.cpp": "bd56c22631cc38e10ccc286a793a75f11ea7fe57cd48a5276925deb00c26dd5c",
+      "assets/cc_a_batch3/hackerearth_give_me_my_test/raw_oracle.cpp": "d530cbbeb3f054fa9202db47c886b7a71f6a6be4c702ace72fea51610efe5be2"
+    },
+    "compile": {
+      "status": "OK",
+      "returncode": 0,
+      "wall_seconds": 0.5131405899992387,
+      "cpu_user_seconds": 0.0,
+      "cpu_system_seconds": 0.0019969999999993604,
+      "cpu_seconds": 0.47,
+      "sampled_process_tree_cpu_seconds": 0.47,
+      "timeout_reason": null,
+      "cpu_budget_seconds": 60.0,
+      "wall_watchdog_seconds": 241.0,
+      "cpu_affinity": 0,
+      "memory_limit_mb": 2048,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_path": "validation/native_raw_audit/TM099/compile/raw_fast.stdout",
+      "stderr_path": "validation/native_raw_audit/TM099/compile/raw_fast.stderr",
+      "sandbox": "bubblewrap-unshare-all-no-network",
+      "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+    },
+    "binary_sha256": "ec9dea2c0b8424ee223c4540a328dca2f45488ee38702eb075c9ff52bb203ebf",
+    "command": [
+      "/program"
+    ],
+    "mounts": [
+      "--ro-bind",
+      "validation/native_raw_audit/TM099/build/raw_fast/program",
+      "/program"
+    ]
+  },
+  "summary": {
+    "MATCH": 3
+  },
+  "all_upstream_cases_executed": true,
+  "native_validator_summary": {
+    "error": 1,
+    "accepted": 2
+  }
+}

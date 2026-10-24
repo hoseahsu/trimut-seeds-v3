@@ -1,0 +1,75 @@
+{
+  "seed_id": "TM103",
+  "adjudicated": true,
+  "resolution": "Source reference uses Windows %I64d format. Under Linux it prints an incorrect 32-bit value with width64. Replacing only this format with portable %lld recovers the mathematical value. Original source and original failing run retained.",
+  "original_source_sha256": "5e328fd40cbc1544afd8126f325792bae61236c7fbabd2c2ee592075a94bfcc0",
+  "portable_source_sha256": "eccd84873543015af82fc0e7be6dda45ae415195c47b63c9781adb51ad14cd9b",
+  "portable_program": {
+    "source_path": "native/assets/tm103_source_portable_printf.cpp",
+    "source_sha256": "eccd84873543015af82fc0e7be6dda45ae415195c47b63c9781adb51ad14cd9b",
+    "args": [],
+    "include_dirs": [],
+    "header_sha256": {
+      "native/assets/selection_sort.cpp": "4e93572804b9cd89a9688817b7f929bd9f4abf9dd1b4935cb7f0f473b6c38e61",
+      "native/assets/selection_sort_l3.cpp": "83f22d872befab2bded903c0155c0062ff122b377e5f08796be9730a0629fd15",
+      "native/assets/source_TM162_corrected.cpp": "b51b0d83cbbd25bca646c107ef27c7a6caddf01bd96f1a52410c2e90722ecb75",
+      "native/assets/source_TM163_corrected.cpp": "7eab20dc1c48c20360f8730f7f65384c37f1ea3ab53b5f94cc58980fb949c44f",
+      "native/assets/source_TM201_corrected.cpp": "f5668ebcf92ab7fe68d2022617ec5a6c4f9b2dc07a36a68534483ef3b2c451a4",
+      "native/assets/tm103_source_portable_printf.cpp": "eccd84873543015af82fc0e7be6dda45ae415195c47b63c9781adb51ad14cd9b"
+    },
+    "compile": {
+      "status": "OK",
+      "returncode": 0,
+      "wall_seconds": 0.7585342229976959,
+      "cpu_user_seconds": 0.0,
+      "cpu_system_seconds": 0.0018880000000000004,
+      "cpu_seconds": 0.7,
+      "sampled_process_tree_cpu_seconds": 0.7,
+      "timeout_reason": null,
+      "cpu_budget_seconds": 60.0,
+      "wall_watchdog_seconds": 241.0,
+      "cpu_affinity": 2,
+      "memory_limit_mb": 2048,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6e115148b53cb5011983bbc1a3c485842432df990d8887199d12358401c1fc2e",
+      "stdout_path": "validation/strict_cc_a/TM103/portable_reference_audit/compile/portable_reference.stdout",
+      "stderr_path": "validation/strict_cc_a/TM103/portable_reference_audit/compile/portable_reference.stderr",
+      "sandbox": "bubblewrap-unshare-all-no-network",
+      "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+    },
+    "binary_sha256": "0ca58e4dc1532ac3d101a239837a6daa31381236290ec58700726799e27eb16c",
+    "command": [
+      "/program"
+    ],
+    "mounts": [
+      "--ro-bind",
+      "validation/strict_cc_a/TM103/portable_reference_audit/build/portable_reference/program",
+      "/program"
+    ]
+  },
+  "run": {
+    "status": "OK",
+    "returncode": 0,
+    "wall_seconds": 0.018766926001262618,
+    "cpu_user_seconds": 0.0,
+    "cpu_system_seconds": 0.0020869999999999994,
+    "cpu_seconds": 0.0020869999999999994,
+    "sampled_process_tree_cpu_seconds": 0.0,
+    "timeout_reason": null,
+    "cpu_budget_seconds": 5,
+    "wall_watchdog_seconds": 21.0,
+    "cpu_affinity": 2,
+    "memory_limit_mb": 2048,
+    "stdout_bytes": 18,
+    "stdout_sha256": "d1982c6fe35d18087f5a834a407e8aa60d7eacb00ec4fb2e4ca9bf2b7263621c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_path": "validation/strict_cc_a/TM103/portable_reference_audit/native_upper.stdout",
+    "stderr_path": "validation/strict_cc_a/TM103/portable_reference_audit/native_upper.stderr",
+    "sandbox": "bubblewrap-unshare-all-no-network",
+    "measurement_note": "CPU is max(reaped child usage, cumulative /proc process-tree samples), including sandbox overhead. /proc sampling preserves evidence when namespace processes are killed. Sampling interval 5ms, clock-tick precision; peak RSS not measured."
+  },
+  "expected": "40000000000000000\n",
+  "passed": true,
+  "independent_scale_check": "validation/cc_a_scale_audit.json"
+}
